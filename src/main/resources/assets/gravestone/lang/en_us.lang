@@ -77,7 +77,7 @@ enchantment.gravestone-extended.gs_pain_mirror.desc=Reflects all blocked damage 
 enchantment.bone_rain=Bone Rain
 enchantment.gravestone-extended.gs_bone_rain.desc=Uses bone meal on a block
 enchantment.hellish_angling=Hellish Angling
-enchantment.gravestone-extended.gs_hellish_angling.desc=Allows to fishing in lava
+enchantment.gravestone-extended.gs_hellish_angling.desc=Allows one to fish in lava
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Curse of Starvation
