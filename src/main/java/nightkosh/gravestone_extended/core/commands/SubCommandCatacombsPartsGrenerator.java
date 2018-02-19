@@ -121,7 +121,14 @@ public class SubCommandCatacombsPartsGrenerator implements ISubCommand {
                 case "WitherHall":
                     generateComponent(sender.getEntityWorld(), WitherHall.class, rand, x, y, z, facing, level);
                     break;
+                case "CatacombsEntrance":
+                    generateComponent(sender.getEntityWorld(), CatacombsEntrance.class, rand, x, y, z, facing, level);
+                    break;
                 case "MausoleumPortal":
+                    generateComponent(sender.getEntityWorld(), MausoleumPortal.class, rand, x, y, z, facing, level);
+                    break;
+                case "CatacombsPortal":
+                    //TODO !!!!
                     generateComponent(sender.getEntityWorld(), MausoleumPortal.class, rand, x, y, z, facing, level);
                     break;
                 default:

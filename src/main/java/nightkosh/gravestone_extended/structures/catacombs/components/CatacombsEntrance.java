@@ -20,39 +20,21 @@ public class CatacombsEntrance extends CatacombsBaseComponent {
     private int stairsLength;
     private int corridorLength;
 
+    public CatacombsEntrance(EnumFacing direction, int level, Random random, int x, int y, int z) {
+        this(direction, random, x, y, z);
+    }
+
     public CatacombsEntrance(EnumFacing direction, Random random, int x, int y, int z) {
         super(0, direction);
         stairsLength = 4 + random.nextInt(4);
-        corridorLength = 2 + random.nextInt(2);
+        corridorLength = 2;
 
         Passage entrance = new Passage(this, 0, 0, 0);
         this.setEntrance(entrance);
 
-        int exitZ;
-        switch (direction) {
-            case SOUTH:
-                exitZ = (stairsLength + corridorLength) * 3;
-                this.addRequiredExit(new Passage(this, 3, 0, exitZ, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 0, exitZ, ComponentSide.RIGHT, true));
-                break;
-            case NORTH:
-                exitZ = (stairsLength + corridorLength) * 3 + 4;
-                this.addRequiredExit(new Passage(this, 0, 0, exitZ, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 3, 0, exitZ, ComponentSide.RIGHT, true));
-                break;
-            case EAST:
-                exitZ = (stairsLength + corridorLength) * 3;
-                this.addRequiredExit(new Passage(this, 0, 0, exitZ, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 3, 0, exitZ, ComponentSide.RIGHT, true));
-                break;
-            case WEST:
-                exitZ = (stairsLength + corridorLength) * 3 + 4;
-                this.addRequiredExit(new Passage(this, 3, 0, exitZ, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 0, exitZ, ComponentSide.RIGHT, true));
-                break;
-        }
+        this.addExit(new Passage(this, 0, 0, stairsLength * 3 + 3, ComponentSide.FRONT));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(direction, x, y - stairsLength * 3, z, X_LENGTH, stairsLength * 3, (stairsLength + corridorLength) * 3 + 5, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(direction, x, y - stairsLength * 3, z, X_LENGTH, stairsLength * 3, stairsLength * 3 + 3, entrance);
     }
 
     /**
@@ -97,33 +79,30 @@ public class CatacombsEntrance extends CatacombsBaseComponent {
 
         shiftY += 1;
         shiftZ += 3;
-        int zLength = corridorLength * 3;
+        int zLength = 3;
         this.fillWithAir(world, boundingBox, 1, shiftY - 2, shiftZ, 2, shiftY - 1, shiftZ);
-        this.fillWithAir(world, boundingBox, 1, shiftY - 3, shiftZ + 1, 2, shiftY - 1, shiftZ + zLength + 4);
+        this.fillWithAir(world, boundingBox, 1, shiftY - 3, shiftZ + 1, 2, shiftY - 1, shiftZ + zLength);
         this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 0, shiftY, shiftZ, boundingBox);
         this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 3, shiftY, shiftZ, boundingBox);
 
         // ceiling
-        this.fillWithBlocks(world, boundingBox, 0, shiftY, shiftZ + 1, 3, shiftY, shiftZ + zLength + 4, StateHelper.NETHER_BRICK);
+        this.fillWithBlocks(world, boundingBox, 0, shiftY, shiftZ + 1, 3, shiftY, shiftZ + zLength, StateHelper.NETHER_BRICK);
 
         // trap floor
-        this.fillWithBlocks(world, boundingBox, 0, shiftY - 4, shiftZ, 3, shiftY - 4, shiftZ + zLength + 4, StateHelper.NIGHTSTONE);
+        this.fillWithBlocks(world, boundingBox, 0, shiftY - 4, shiftZ, 3, shiftY - 4, shiftZ + zLength, StateHelper.NIGHTSTONE);
 
-        for (int j = 0; j < corridorLength; j++) {
-            // nether walls
-            this.fillWithBlocks(world, boundingBox, 0, shiftY - 3, shiftZ, 0, shiftY - 1, shiftZ, StateHelper.NETHER_BRICK);
-            this.fillWithBlocks(world, boundingBox, 3, shiftY - 3, shiftZ, 3, shiftY - 1, shiftZ, StateHelper.NETHER_BRICK);
+        // nether walls
+        this.fillWithBlocks(world, boundingBox, 0, shiftY - 3, shiftZ, 0, shiftY - 1, shiftZ, StateHelper.NETHER_BRICK);
+        this.fillWithBlocks(world, boundingBox, 3, shiftY - 3, shiftZ, 3, shiftY - 1, shiftZ, StateHelper.NETHER_BRICK);
 
-            // block walls
-            this.fillWithRandomizedBlocks(world, boundingBox, 0, shiftY - 3, shiftZ + 1, 0, shiftY - 1, shiftZ + 2, false, random, stoneBricks);
-            this.fillWithRandomizedBlocks(world, boundingBox, 3, shiftY - 3, shiftZ + 1, 3, shiftY - 1, shiftZ + 2, false, random, stoneBricks);
+        // block walls
+        this.fillWithRandomizedBlocks(world, boundingBox, 0, shiftY - 3, shiftZ + 1, 0, shiftY - 1, shiftZ + 2, false, random, stoneBricks);
+        this.fillWithRandomizedBlocks(world, boundingBox, 3, shiftY - 3, shiftZ + 1, 3, shiftY - 1, shiftZ + 2, false, random, stoneBricks);
 
-            // web
-            this.randomlyFillWithBlocks(world, boundingBox, random, this.WEB_GENERATION_CHANCE, 1, shiftY - 3, shiftZ, 2, shiftY - 1, shiftZ + 2, StateHelper.WEB, false);
-            shiftZ += 3;
-        }
+        // web
+        this.randomlyFillWithBlocks(world, boundingBox, random, this.WEB_GENERATION_CHANCE, 1, shiftY - 3, shiftZ, 2, shiftY - 1, shiftZ + 2, StateHelper.WEB, false);
+        shiftZ += 3;
 
-        shiftZ += 4;
         this.fillWithRandomizedBlocks(world, boundingBox, 1, shiftY - 3, shiftZ, 2, shiftY - 1, shiftZ, false, random, stoneBricks);
 
         return true;

@@ -23,12 +23,11 @@ public class MausoleumPortal extends CatacombsBaseComponent {
 
     public MausoleumPortal(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
-        Passage entrance = new Passage(this, 9, 7, 0);
+        Passage entrance = new Passage(this, 9, 0, 0);
 
         this.setEntrance(entrance);
-//        this.addRequiredExit(new Passage(this, 0, 0, Z_LENGTH, ComponentSide.FRONT, true));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT + 7, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
     }
 
     @Override
@@ -171,7 +170,7 @@ public class MausoleumPortal extends CatacombsBaseComponent {
 
         // portal
         this.fillWithBlocks(world, boundingBox, 9, 7, 13, 12, 12, 13, StateHelper.NETHER_BRICK);
-        this.fillWithBlocks(world, boundingBox, 10, 8, 13, 11, 11, 13, StateHelper.getCatacombsPortal(this.getCoordBaseMode()));
+        this.fillWithBlocks(world, boundingBox, 10, 8, 13, 11, 11, 13, StateHelper.getCatacombsPortal(EnumFacing.EAST));
         this.fillWithBlocks(world, boundingBox, 10, 8, 14, 11, 11, 14, StateHelper.SEA_LANTERN);
         this.fillWithAir(world, boundingBox, 10, 8, 0, 11, 10, 1);
 
