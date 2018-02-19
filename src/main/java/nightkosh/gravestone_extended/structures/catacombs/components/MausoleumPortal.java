@@ -176,10 +176,10 @@ public class MausoleumPortal extends CatacombsBaseComponent {
         this.fillWithAir(world, boundingBox, 10, 8, 0, 11, 10, 1);
 
         //
-        this.fillWithBlocks(world, boundingBox, 5, 12, 3, 5, 12, 11, StateHelper.NETHERBRICK_SLAB_TOP);
-        this.fillWithBlocks(world, boundingBox, 16, 12, 3, 16, 12, 11, StateHelper.NETHERBRICK_SLAB_TOP);
-        this.fillWithBlocks(world, boundingBox, 3, 12, 5, 18, 12, 5, StateHelper.NETHERBRICK_SLAB_TOP);
-        this.fillWithBlocks(world, boundingBox, 3, 12, 9, 18, 12, 9, StateHelper.NETHERBRICK_SLAB_TOP);
+        this.fillWithBlocks(world, boundingBox, 5, 12, 4, 5, 12, 10, StateHelper.NETHERBRICK_SLAB_TOP);
+        this.fillWithBlocks(world, boundingBox, 16, 12, 4, 16, 12, 10, StateHelper.NETHERBRICK_SLAB_TOP);
+        this.fillWithBlocks(world, boundingBox, 4, 12, 5, 17, 12, 5, StateHelper.NETHERBRICK_SLAB_TOP);
+        this.fillWithBlocks(world, boundingBox, 4, 12, 9, 17, 12, 9, StateHelper.NETHERBRICK_SLAB_TOP);
 
         this.placeBlockAtCurrentPosition(world, StateHelper.AIR, 5, 12, 5, boundingBox);
         this.placeBlockAtCurrentPosition(world, StateHelper.AIR, 5, 12, 9, boundingBox);
@@ -195,6 +195,40 @@ public class MausoleumPortal extends CatacombsBaseComponent {
         this.fillWithBlocks(world, boundingBox, 3, 12, 2, 18, 12, 2, stairsTopF);
         this.fillWithBlocks(world, boundingBox, 2, 12, 3, 2, 12, 11, stairsRight);
         this.fillWithBlocks(world, boundingBox, 19, 12, 3, 19, 12, 11, stairsLeft);
+
+        this.placeBlockAtCurrentPosition(world, stairsRight, 2, 11, 5, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsRight, 3, 12, 5, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 2, 12, 5, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsRight, 2, 11, 9, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsRight, 3, 12, 9, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 2, 12, 9, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsLeft, 19, 11, 5, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsLeft, 18, 12, 5, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 19, 12, 5, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsLeft, 19, 11, 9, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsLeft, 18, 12, 9, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 19, 12, 9, boundingBox);
+
+
+        this.placeBlockAtCurrentPosition(world, stairsTopF, 5, 11, 2, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsTopF, 5, 12, 3, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 5, 12, 2, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsTopF, 16, 11, 2, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsTopF, 16, 12, 3, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 16, 12, 2, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsTopB, 5, 11, 12, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsTopB, 5, 12, 11, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 5, 12, 12, boundingBox);
+
+        this.placeBlockAtCurrentPosition(world, stairsTopB, 16, 11, 12, boundingBox);
+        this.placeBlockAtCurrentPosition(world, stairsTopB, 16, 12, 11, boundingBox);
+        this.placeBlockAtCurrentPosition(world, StateHelper.NETHER_BRICK, 16, 12, 12, boundingBox);
+
 
         // bridge
         this.fillWithBlocks(world, boundingBox, 10, 7, 2, 11, 7, 12, StateHelper.NETHER_BRICK);
@@ -235,6 +269,12 @@ public class MausoleumPortal extends CatacombsBaseComponent {
         this.fillWithBlocks(world, boundingBox, 10, 5, 3, 11, 5, 3, stairsTopF);
         this.fillWithBlocks(world, boundingBox, 10, 6, 8, 11, 6, 9, stairsTopF);
         this.fillWithBlocks(world, boundingBox, 10, 5, 8, 11, 5, 8, stairsTopF);
+
+
+        this.fillWithBlocks(world, boundingBox, 2, 8, 7, 8, 8, 7, stairsRight);
+        this.fillWithBlocks(world, boundingBox, 13, 8, 7, 19, 8, 7, stairsLeft);
+        this.fillWithBlocks(world, boundingBox, 2, 7, 7, 8, 7, 7, StateHelper.NETHERBRICK_SLAB_TOP);
+        this.fillWithBlocks(world, boundingBox, 13, 7, 7, 19, 7, 7, StateHelper.NETHERBRICK_SLAB_TOP);
 
         this.fillWithBlocks(world, boundingBox, 10, 12, 3, 11, 12, 11, StateHelper.NETHERBRICK_SLAB_TOP);
 
