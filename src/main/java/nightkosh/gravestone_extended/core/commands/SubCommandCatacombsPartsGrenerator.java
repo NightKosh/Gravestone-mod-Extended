@@ -128,8 +128,7 @@ public class SubCommandCatacombsPartsGrenerator implements ISubCommand {
                     generateComponent(sender.getEntityWorld(), MausoleumPortal.class, rand, x, y, z, facing, level);
                     break;
                 case "CatacombsPortal":
-                    //TODO !!!!
-                    generateComponent(sender.getEntityWorld(), MausoleumPortal.class, rand, x, y, z, facing, level);
+                    generateComponent(sender.getEntityWorld(), CatacombsPortal.class, rand, x, y, z, facing, level);
                     break;
                 default:
                     sender.sendMessage(new TextComponentTranslation("commands.generate.unknown_structure").setStyle(new Style().setColor(TextFormatting.RED)));
