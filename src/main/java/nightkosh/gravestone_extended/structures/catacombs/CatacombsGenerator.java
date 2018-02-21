@@ -27,8 +27,7 @@ public class CatacombsGenerator implements GSStructureGenerator {
     public static final byte CATACOMBS_RANGE = 100;
     public static final int CATACOMBS_DISTANCE = 1500;
     public static final int DISTANCE_FROM_SPAWN = 1000;
-    public static final double DEFAULT_GENERATION_CHANCE = 0.00025D;
-    public static final int MINIMAL_SURFACE_HEIGHT = 55;
+    public static final double DEFAULT_GENERATION_CHANCE = 0.00025;
 
     protected static List<ChunkPos> structuresList = new ArrayList<>();
 
@@ -39,9 +38,7 @@ public class CatacombsGenerator implements GSStructureGenerator {
             GSLogger.logInfo("Generate catacombs at " + x + "x" + z);
             CatacombsSurface surface = new CatacombsSurface(world, rand, x, z, direction);
 
-            if (isCommand || surface.getMausoleumY() > MINIMAL_SURFACE_HEIGHT) {//TODO !!!!!!!!!!!!!!!!!!!!!!!!!!
-                CatacombsUnderground.build(world, rand, direction, surface.getMausoleumX(), surface.getMausoleumY(), surface.getMausoleumZ());
-            }
+            CatacombsUnderground.build(world, rand, direction, surface.getPortalX(), surface.getPortalZ());
 
             GSLogger.logInfo("Catacombs was successfully generated!");
 

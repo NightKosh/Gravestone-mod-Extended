@@ -18,7 +18,7 @@ public class CatacombsSurface {
 
     private final EnumFacing DIRECTION;
     private final int X, Z;
-    private int mausoleumX, mausoleumY, mausoleumZ;
+    private int portalX, portalY, portalZ;
 
     public CatacombsSurface(World world, Random rand, int x, int z, EnumFacing direction) {
         DIRECTION = direction;
@@ -53,7 +53,7 @@ public class CatacombsSurface {
 
         new MausoleumEntrance(DIRECTION, rand,
                 new StructureBoundingBox(xCoord, 60, zCoord, 13 + xCoord, 90, 13 + zCoord),
-                mausoleumY).addComponentParts(world, rand);
+                portalY).addComponentParts(world, rand);
 
         buildCatacombsGraveyard(world, rand, xCoord, zCoord);
     }
@@ -62,9 +62,17 @@ public class CatacombsSurface {
         CatacombsBaseComponent mausoleum = new Mausoleum(DIRECTION, rand, new StructureBoundingBox(X, 60, Z, 13 + X, 90, 13 + Z));
         mausoleum.addComponentParts(world, rand);
         CatacombsBaseComponent.Passage exit = mausoleum.getExitList().get(0);
-        mausoleumX = mausoleum.getXEnd(exit);
-        mausoleumY = mausoleum.getYEnd(exit);
-        mausoleumZ = mausoleum.getZEnd(exit);
+
+        CatacombsBaseComponent entrance = new CatacombsEntrance(DIRECTION, rand, mausoleum.getXEnd(exit), mausoleum.getYEnd(exit), mausoleum.getZEnd(exit));
+        entrance.addComponentParts(world, rand);
+        exit = entrance.getExitList().get(0);
+        CatacombsBaseComponent portal = new MausoleumPortal(entrance.getDirection(), 1, rand, entrance.getXEnd(exit), entrance.getYEnd(exit), entrance.getZEnd(exit));
+        portal.addComponentParts(world, rand);
+
+
+        portalX = portal.getXEnd(exit);
+        portalY = portal.getYEnd(exit);
+        portalZ = portal.getZEnd(exit);
     }
 
     private void buildGraveYard(World world, Random rand, int x, int z) {
@@ -150,15 +158,15 @@ public class CatacombsSurface {
         }
     }
 
-    public int getMausoleumX() {
-        return mausoleumX;
+    public int getPortalX() {
+        return portalX;
     }
 
-    public int getMausoleumY() {
-        return mausoleumY;
+    public int getPortalY() {
+        return portalY;
     }
 
-    public int getMausoleumZ() {
-        return mausoleumZ;
+    public int getPortalZ() {
+        return portalZ;
     }
 }

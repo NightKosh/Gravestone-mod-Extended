@@ -3,9 +3,10 @@ package nightkosh.gravestone_extended.structures.catacombs;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.structures.catacombs.components.CatacombsBaseComponent;
-import nightkosh.gravestone_extended.structures.catacombs.components.CatacombsEntrance;
-import nightkosh.gravestone_extended.structures.catacombs.components.MausoleumPortal;
+import nightkosh.gravestone_extended.structures.catacombs.components.CatacombsPortal;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -18,18 +19,15 @@ public class CatacombsUnderground {
 
     public static final int LEVELS_COUNT = 4;
 
-    public static void build(World world, Random rand, EnumFacing direction, int x, int y, int z) {
-        CatacombsBaseComponent entrance = new CatacombsEntrance(direction, rand, x, y, z);
-        entrance.addComponentParts(world, rand);
-        CatacombsBaseComponent.Passage exit = entrance.getExitList().get(0);
-        CatacombsBaseComponent portal = new MausoleumPortal(entrance.getDirection(), 1, rand, entrance.getXEnd(exit), entrance.getYEnd(exit), entrance.getZEnd(exit));
+    public static void build(World world, Random rand, EnumFacing direction, int x, int z) {
+        CatacombsBaseComponent portal = new CatacombsPortal(direction, 1, rand, x, 100, z);
         portal.addComponentParts(world, rand);
 
-//        List<CatacombsBaseComponent> startComponents = new ArrayList<>();
-//        startComponents.add(portal);
-//        CatacombsLevel level = null;
-//        for (int levelNum = 1; levelNum <= LEVELS_COUNT; levelNum++) {
-//            level = new CatacombsLevel((levelNum == 1) ? startComponents : level.getEndParts(), levelNum, world, rand);
-//        }
+        List<CatacombsBaseComponent> startComponents = new ArrayList<>();
+        startComponents.add(portal);
+        CatacombsLevel level = null;
+        for (int levelNum = 1; levelNum <= LEVELS_COUNT; levelNum++) {
+            level = new CatacombsLevel((levelNum == 1) ? startComponents : level.getEndParts(), levelNum, world, rand);
+        }
     }
 }
