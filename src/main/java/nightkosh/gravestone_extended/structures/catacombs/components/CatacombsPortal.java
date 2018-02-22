@@ -23,7 +23,7 @@ public class CatacombsPortal extends CatacombsBaseComponent {
 
     public CatacombsPortal(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
-        Passage entrance = new Passage(this, 9, 0, 0);
+        Passage entrance = new Passage(this, 9, 7, 0);
 
         this.setEntrance(entrance);
         this.addRequiredExit(new Passage(this, 9, 7, Z_LENGTH - 1, ComponentSide.FRONT));
@@ -47,7 +47,7 @@ public class CatacombsPortal extends CatacombsBaseComponent {
                 break;
         }
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT + 7, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
     }
 
     @Override

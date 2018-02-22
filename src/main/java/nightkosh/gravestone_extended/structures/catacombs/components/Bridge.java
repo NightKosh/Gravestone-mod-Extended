@@ -25,8 +25,8 @@ public class Bridge extends CatacombsBaseComponent {
     public Bridge(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
 
-        Passage entrance = new Passage(this, 4, 0, 0);
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT + 6, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        Passage entrance = new Passage(this, 4, 6, 0);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
 
         this.setEntrance(entrance);
         this.addExit(new Passage(this, 4, 8, Z_LENGTH, ComponentSide.FRONT));

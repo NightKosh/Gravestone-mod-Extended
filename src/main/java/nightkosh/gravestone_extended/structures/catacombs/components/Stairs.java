@@ -23,12 +23,12 @@ public class Stairs extends CatacombsBaseComponent {
 
     public Stairs(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
-        Passage entrance = new Passage(this, 0, 0, 0);
+        Passage entrance = new Passage(this, 0, 4, 0);
 
         this.setEntrance(entrance);
         this.addRequiredExit(new Passage(this, 0, 0, Z_LENGTH, ComponentSide.FRONT, true));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT + 4, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
     }
 
     /**

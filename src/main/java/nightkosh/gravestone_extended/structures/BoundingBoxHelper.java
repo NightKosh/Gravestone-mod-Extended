@@ -33,13 +33,14 @@ public class BoundingBoxHelper {
     }
 
     public static StructureBoundingBox getCorrectBox(EnumFacing direction, int x, int y, int z, int xLength, int height, int zLength, CatacombsBaseComponent.Passage entrance) {
+        int xShift = (entrance == null) ? 0 : entrance.getX();
+        int yShift = (entrance == null) ? 0 : entrance.getY();
         int minX = 0;
         int maxX = 0;
-        int minY = y;
-        int maxY = y + height;
+        int minY = y + yShift;
+        int maxY = y + height + yShift;
         int minZ = 0;
         int maxZ = 0;
-        int xShift = (entrance == null) ? 0 : entrance.getX();
 
         switch (direction) {
             case SOUTH:

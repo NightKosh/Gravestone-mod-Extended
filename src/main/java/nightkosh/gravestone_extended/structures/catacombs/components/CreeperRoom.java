@@ -26,7 +26,7 @@ public class CreeperRoom extends CatacombsBaseComponent {
     public CreeperRoom(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
 
-        Passage entrance = new Passage(this, 3, 0, 0);
+        Passage entrance = new Passage(this, 3, 6, 0);
         this.setEntrance(entrance);
 
         this.addRequiredExit(new Passage(this, 3, 8, 10, ComponentSide.FRONT, true));
@@ -49,7 +49,7 @@ public class CreeperRoom extends CatacombsBaseComponent {
                 break;
         }
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT + 6, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
     }
 
     /**
