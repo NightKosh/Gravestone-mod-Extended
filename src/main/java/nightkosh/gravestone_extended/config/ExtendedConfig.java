@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.config;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import nightkosh.gravestone.config.Config;
+import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.GraveStoneWorldGenerator;
@@ -77,6 +78,7 @@ public class ExtendedConfig {
     public static int catacombsMinRoomsCountAt4Level;
     public static int catacombsMaxRoomsCountAt4Level;
     public static boolean generatePilesOfBones;
+    public static int catacombsDimensionId;
     // other structures
     public static double gravesGenerationChance;
     public static double memorialsGenerationChance;
@@ -112,6 +114,8 @@ public class ExtendedConfig {
         catacombsGenerationChance = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsGenerationChance", CatacombsGenerator.DEFAULT_GENERATION_CHANCE).getDouble();
         generateCatacombsGraveyard = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombsGraveyard", true).getBoolean(true);
         generatePilesOfBones = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GeneratePilesOfBones", true).getBoolean(true);
+
+        catacombsDimensionId = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsDimensionId", GSDimensions.CATACOMBS_DEFAULT_DIMENSION_ID).getInt();
 
         catacombsMinRoomsCountAt1Level = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsMinRoomsCountAt1Level", CatacombsLevel.DEFAULT_MIN_ROOMS_COUNT_AT_1_LEVEL).getInt();
         catacombsMaxRoomsCountAt1Level = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsMaxRoomsCountAt1Level", CatacombsLevel.DEFAULT_MAX_ROOMS_COUNT_AT_1_LEVEL).getInt();

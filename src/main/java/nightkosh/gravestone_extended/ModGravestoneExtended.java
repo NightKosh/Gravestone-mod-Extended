@@ -62,6 +62,8 @@ public class ModGravestoneExtended {
         GSTileEntity.registration();
 
         CapabilityManager.INSTANCE.register(IChoke.class, new ChokeStorage(), Choke.class);
+
+        GSDimensions.registration();
     }
 
     @Mod.EventHandler
