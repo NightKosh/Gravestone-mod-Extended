@@ -15,7 +15,7 @@ import nightkosh.gravestone_extended.dimension.catacombs.WorldProviderCatacombs;
 public class GSDimensions {
     public static final int CATACOMBS_DEFAULT_DIMENSION_ID = 1486248640;
 
-    public static final DimensionType CATACOMBS = DimensionType.register("CATACOMBS", "_catacombs", ExtendedConfig.catacombsDimensionId, WorldProviderCatacombs.class, false);
+    public static final DimensionType CATACOMBS = DimensionType.register("catacombs", "_catacombs", ExtendedConfig.catacombsDimensionId, WorldProviderCatacombs.class, false);
 
     private static WorldProvider PROVIDER_CATACOMBS;
 

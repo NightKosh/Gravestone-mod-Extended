@@ -5,8 +5,10 @@ import net.minecraft.block.BlockPortal;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
@@ -14,8 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.dimension.catacombs.TeleporterCatacombs;
 
 import java.util.Random;
 
@@ -47,7 +51,25 @@ public class BlockCatacombsPortal extends BlockPortal {
     @Override
     public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
         if (!entity.isRiding() && !entity.isBeingRidden() && entity.isNonBoss()) {
-            entity.setPortal(pos);//TODO!!!
+            if (!entity.world.isRemote && entity instanceof EntityPlayerMP) {
+                EntityPlayerMP player = (EntityPlayerMP) entity;
+                MinecraftServer minecraftServer = player.getServer();
+                int dimensionId = world.provider.getDimension();
+                int dimensionIn;
+
+                if (player.timeUntilPortal > 0) {
+                    player.timeUntilPortal = 10;
+                } else {
+                    if (dimensionId == GSDimensions.CATACOMBS.getId()) {
+                        dimensionIn = 0;
+                    } else {
+                        dimensionIn = GSDimensions.CATACOMBS.getId();
+                    }
+
+                    player.timeUntilPortal = 10;
+                    minecraftServer.getPlayerList().transferPlayerToDimension(player, dimensionIn, new TeleporterCatacombs(minecraftServer.getWorld(dimensionIn)));
+                }
+            }
         }
     }
 
