@@ -26,7 +26,7 @@ public class GraveHall extends CatacombsBaseComponent {
         super(0, facing, level);
 
         xLength = 16;
-        height = 5;
+        height = 6;
         zLength = 18;
 
         Passage entrance = new Passage(this, 6, 0, 0);

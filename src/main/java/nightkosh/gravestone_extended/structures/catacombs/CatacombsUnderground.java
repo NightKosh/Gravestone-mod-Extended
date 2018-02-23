@@ -20,7 +20,7 @@ public class CatacombsUnderground {
     public static final int LEVELS_COUNT = 4;
 
     public static void build(World world, Random rand, EnumFacing direction, int x, int z) {
-        CatacombsBaseComponent portal = new CatacombsPortal(direction, 1, rand, x, 100, z);
+        CatacombsBaseComponent portal = new CatacombsPortal(direction, 1, rand, x, 150, z);
         portal.addComponentParts(world, rand);
 
         List<CatacombsBaseComponent> startComponents = new ArrayList<>();

@@ -32,7 +32,7 @@ public class MausoleumPortal extends CatacombsBaseComponent {
 
         this.setEntrance(entrance);
 
-        this.addRequiredExit(Passage.getFrontExit(this, 9, 7, zLength));
+        this.addRequiredExit(Passage.getFrontExit(this, 9, 7, zLength - 3));
 
         boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
     }
