@@ -23,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.block.enums.EnumTrap;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
@@ -89,17 +90,19 @@ public class BlockTrap extends Block {
             IBlockState state = world.getBlockState(pos);
             if (state.getValue(VARIANT) == EnumTrap.NIGHT_STONE) {
                 if (ExtendedConfig.enableNightStone) {
-                    long time = world.getWorldTime();
-                    long dayTime = TimeHelper.getDayTime(time);
-                    if (dayTime < TimeHelper.PRE_NIGHT || dayTime > TimeHelper.PRE_MORNING) {
-                        time = time - dayTime + TimeHelper.PRE_NIGHT;
-                        world.setWorldTime(time);
-                        if (ExtendedConfig.showNightStoneMessage) {
-                            ((EntityPlayer) entity).sendMessage(new TextComponentTranslation(ModGravestoneExtended.proxy.getLocalizedString(NIGHT_STONE_CURSE_TEXT)));
+                    if (world.provider.getDimension() != GSDimensions.CATACOMBS.getId()) {
+                        long time = world.getWorldTime();
+                        long dayTime = TimeHelper.getDayTime(time);
+                        if (dayTime < TimeHelper.PRE_NIGHT || dayTime > TimeHelper.PRE_MORNING) {
+                            time = time - dayTime + TimeHelper.PRE_NIGHT;
+                            world.setWorldTime(time);
+                            if (ExtendedConfig.showNightStoneMessage) {
+                                entity.sendMessage(new TextComponentTranslation(ModGravestoneExtended.proxy.getLocalizedString(NIGHT_STONE_CURSE_TEXT)));
+                            }
+                        } else if (dayTime > 20000 && dayTime < TimeHelper.PRE_MORNING) {
+                            time = time - dayTime + TimeHelper.NIGHT;
+                            world.setWorldTime(time);
                         }
-                    } else if (dayTime > 20000 && dayTime < TimeHelper.PRE_MORNING) {
-                        time = time - dayTime + TimeHelper.NIGHT;
-                        world.setWorldTime(time);
                     }
                     ((EntityPlayer) entity).addPotionEffect(new PotionEffect(GSPotion.CURSE, 1200));
                 }
