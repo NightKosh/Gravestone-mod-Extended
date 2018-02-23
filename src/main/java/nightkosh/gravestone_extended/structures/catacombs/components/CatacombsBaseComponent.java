@@ -26,6 +26,10 @@ import java.util.Random;
  */
 public abstract class CatacombsBaseComponent extends ComponentGraveStone {
 
+    protected int xLength;
+    protected int height;
+    protected int zLength;
+
     public static final float WEB_GENERATION_CHANCE = 0.05F;
     protected static final StructureComponent.BlockSelector catacombsPileOfBones = new CatacombsPileOfBonesSelector();
 
@@ -103,6 +107,7 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
     public int getXEnd(Passage exit) {
         return this.getXWithOffset(exit.getX(), exit.getZ());
     }
+
     public int getZEnd(Passage exit) {
         return this.getZWithOffset(exit.getX(), exit.getZ());
     }
@@ -199,6 +204,7 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
     }
 
     protected void addRequiredExit(Passage exit) {
+        exit.setRequired(true);
         this.requiredExitList.add(exit);
     }
 
@@ -228,6 +234,10 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
             this(component, x, y, z);
             this.required = required;
             this.side = side;
+        }
+
+        public void setRequired(boolean required) {
+            this.required = required;
         }
 
         public int getX() {
@@ -261,6 +271,52 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
         public void setState(PassageState state) {
             this.state = state;
         }
+
+        public static Passage getFrontExit(CatacombsBaseComponent component, int x, int y, int z) {
+            return getSideExit(component, x, y, z, ComponentSide.FRONT, null);
+        }
+
+        public static Passage getSideExit(CatacombsBaseComponent component, int x, int y, int z, ComponentSide side, EnumFacing facing) {
+            switch (side) {
+                case LEFT:
+                    switch (facing) {
+                        case SOUTH:
+                            return new Passage(component, component.getXLength() - 1 - x, y, z, ComponentSide.LEFT);
+                        case NORTH:
+                            return new Passage(component, x, y, component.getZLength() - 1 - z, ComponentSide.LEFT);
+                        case WEST:
+                            return new Passage(component, component.getXLength() - 1 - x, y, component.getZLength() - 1 - z, ComponentSide.LEFT);
+                        case EAST:
+                            return new Passage(component, x, y, z, ComponentSide.LEFT);
+                    }
+                case RIGHT:
+                    switch (facing) {
+                        case SOUTH:
+                            return new Passage(component, component.getXLength() - 1 - x, y, z, ComponentSide.RIGHT);
+                        case NORTH:
+                            return new Passage(component, x, y, component.getZLength() - 1 - z, ComponentSide.RIGHT);
+                        case WEST:
+                            return new Passage(component, component.getXLength() - 1 - x, y, component.getZLength() - 1 - z, ComponentSide.RIGHT);
+                        case EAST:
+                            return new Passage(component, x, y, z, ComponentSide.RIGHT);
+                    }
+                case FRONT:
+                default:
+                    return new Passage(component, x, y, z, ComponentSide.FRONT);
+            }
+        }
+    }
+
+    public int getXLength() {
+        return xLength;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getZLength() {
+        return zLength;
     }
 
     public static enum ComponentSide {

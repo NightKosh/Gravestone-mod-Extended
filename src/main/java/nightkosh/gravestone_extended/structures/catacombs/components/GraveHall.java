@@ -22,18 +22,19 @@ import java.util.Random;
  */
 public class GraveHall extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 16;
-    public static final int HEIGHT = 6;
-    public static final int Z_LENGTH = 18;
-
     public GraveHall(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 16;
+        height = 5;
+        zLength = 18;
+
         Passage entrance = new Passage(this, 6, 0, 0);
 
         this.setEntrance(entrance);
-        this.addExit(new Passage(this, 6, 0, Z_LENGTH, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 6, 0, zLength));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

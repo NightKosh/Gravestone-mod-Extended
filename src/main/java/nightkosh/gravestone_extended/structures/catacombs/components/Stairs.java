@@ -17,18 +17,19 @@ import java.util.Random;
  */
 public class Stairs extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 5;
-    public static final int HEIGHT = 16;
-    public static final int Z_LENGTH = 13;
-
     public Stairs(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 5;
+        height = 16;
+        zLength = 13;
+
         Passage entrance = new Passage(this, 0, 4, 0);
 
         this.setEntrance(entrance);
-        this.addRequiredExit(new Passage(this, 0, 0, Z_LENGTH, ComponentSide.FRONT, true));
+        this.addRequiredExit(Passage.getFrontExit(this, 0, 0, zLength));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
     }
 
     /**
@@ -85,10 +86,10 @@ public class Stairs extends CatacombsBaseComponent {
             this.randomlyFillWithBlocks(world, boundingBox, random, 0.2F, 3, shiftY - 5, shiftZ + 3, 3, shiftY - 5, shiftZ + 3, StateHelper.WEB, false);
         }
 
-        this.fillWithRandomizedBlocks(world, boundingBox, 0, 0, Z_LENGTH - 1, 0, 4, Z_LENGTH - 1, false, random, stoneBricks);
-        this.fillWithRandomizedBlocks(world, boundingBox, 4, 0, Z_LENGTH - 1, 4, 4, Z_LENGTH - 1, false, random, stoneBricks);
-        this.fillWithRandomizedBlocks(world, boundingBox, 0, 0, Z_LENGTH , 4, 4, Z_LENGTH, false, random, stoneBricks);
-        this.fillWithBlocks(world, boundingBox, 0, 0, Z_LENGTH - 1, 4, 0, Z_LENGTH, StateHelper.NETHER_BRICK);
+        this.fillWithRandomizedBlocks(world, boundingBox, 0, 0, zLength - 1, 0, 4, zLength - 1, false, random, stoneBricks);
+        this.fillWithRandomizedBlocks(world, boundingBox, 4, 0, zLength - 1, 4, 4, zLength - 1, false, random, stoneBricks);
+        this.fillWithRandomizedBlocks(world, boundingBox, 0, 0, zLength, 4, 4, zLength, false, random, stoneBricks);
+        this.fillWithBlocks(world, boundingBox, 0, 0, zLength - 1, 4, 0, zLength, StateHelper.NETHER_BRICK);
         return true;
     }
 }

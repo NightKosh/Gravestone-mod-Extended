@@ -19,18 +19,19 @@ import java.util.Random;
  */
 public class EnderHall extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 12;
-    public static final int HEIGHT = 5;
-    public static final int Z_LENGTH = 18;
-
     public EnderHall(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 12;
+        height = 5;
+        zLength = 18;
+
         Passage entrance = new Passage(this, 4, 0, 0);
         this.setEntrance(entrance);
 
-        this.addExit(new Passage(this, 4, 0, Z_LENGTH, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 4, 0, zLength));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

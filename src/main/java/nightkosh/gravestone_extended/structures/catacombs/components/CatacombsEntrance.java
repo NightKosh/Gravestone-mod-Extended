@@ -24,6 +24,10 @@ public class CatacombsEntrance extends CatacombsBaseComponent {
         this(direction, random, x, y, z);
     }
 
+    public CatacombsEntrance(EnumFacing direction, Random random, CatacombsBaseComponent component, CatacombsBaseComponent.Passage previousExit) {
+        this(direction, random, component.getXEnd(previousExit), component.getYEnd(previousExit), component.getZEnd(previousExit));
+    }
+
     public CatacombsEntrance(EnumFacing direction, Random random, int x, int y, int z) {
         super(0, direction);
         stairsLength = 4 + random.nextInt(4);
@@ -32,7 +36,7 @@ public class CatacombsEntrance extends CatacombsBaseComponent {
         Passage entrance = new Passage(this, 0, 0, 0);
         this.setEntrance(entrance);
 
-        this.addExit(new Passage(this, 0, 0, stairsLength * 3 + 3, ComponentSide.FRONT));
+        this.addRequiredExit(Passage.getFrontExit(this, 0, 0, stairsLength * 3 + 3));
 
         boundingBox = BoundingBoxHelper.getCorrectBox(direction, x, y - stairsLength * 3, z, X_LENGTH, stairsLength * 3, stairsLength * 3 + 3, entrance);
     }

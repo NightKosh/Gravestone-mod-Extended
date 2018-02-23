@@ -61,15 +61,14 @@ public class CatacombsSurface {
     private void buildMausoleum(World world, Random rand) {
         CatacombsBaseComponent mausoleum = new Mausoleum(DIRECTION, rand, new StructureBoundingBox(X, 60, Z, 13 + X, 90, 13 + Z));
         mausoleum.addComponentParts(world, rand);
-        CatacombsBaseComponent.Passage exit = mausoleum.getExitList().get(0);
 
-        CatacombsBaseComponent entrance = new CatacombsEntrance(DIRECTION, rand, mausoleum.getXEnd(exit), mausoleum.getYEnd(exit), mausoleum.getZEnd(exit));
+        CatacombsBaseComponent entrance = new CatacombsEntrance(DIRECTION, rand, mausoleum, mausoleum.getRequiredExitList().get(0));
         entrance.addComponentParts(world, rand);
-        exit = entrance.getExitList().get(0);
-        CatacombsBaseComponent portal = new MausoleumPortal(entrance.getDirection(), 1, rand, entrance.getXEnd(exit), entrance.getYEnd(exit), entrance.getZEnd(exit));
+
+        CatacombsBaseComponent portal = new MausoleumPortal(entrance.getDirection(), rand, entrance, entrance.getRequiredExitList().get(0));
         portal.addComponentParts(world, rand);
 
-
+        CatacombsBaseComponent.Passage exit = portal.getRequiredExitList().get(0);
         portalX = portal.getXEnd(exit);
         portalY = portal.getYEnd(exit);
         portalZ = portal.getZEnd(exit);

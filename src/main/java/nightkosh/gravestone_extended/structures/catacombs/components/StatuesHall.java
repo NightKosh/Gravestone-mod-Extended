@@ -22,18 +22,20 @@ import java.util.Random;
  */
 public class StatuesHall extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 11;
-    public static final int HEIGHT = 6;
-    public static final int Z_LENGTH = 19;
 
     public StatuesHall(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 11;
+        height = 6;
+        zLength = 19;
+
         Passage entrance = new Passage(this, 3, 0, 0);
 
         this.setEntrance(entrance);
-        this.addExit(new Passage(this, 3, 0, Z_LENGTH - 1, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 3, 0, zLength - 1));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

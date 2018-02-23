@@ -17,19 +17,24 @@ import java.util.Random;
  */
 public class MausoleumPortal extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 22;
-    public static final int HEIGHT = 14;
-    public static final int Z_LENGTH = 15;
+    public MausoleumPortal(EnumFacing direction, Random random, CatacombsBaseComponent component, CatacombsBaseComponent.Passage previousExit) {
+        this(direction, 1, random, component.getXEnd(previousExit), component.getYEnd(previousExit), component.getZEnd(previousExit));
+    }
 
     public MausoleumPortal(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 22;
+        height = 14;
+        zLength = 15;
+
         Passage entrance = new Passage(this, 9, 7, 0);
 
         this.setEntrance(entrance);
 
-        this.addExit(new Passage(this, 9, 7, Z_LENGTH, ComponentSide.FRONT));
+        this.addRequiredExit(Passage.getFrontExit(this, 9, 7, zLength));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
     }
 
     @Override

@@ -19,37 +19,21 @@ import java.util.Random;
  */
 public class CreeperRoom extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 11;
-    public static final int HEIGHT = 14;
-    public static final int Z_LENGTH = 11;
-
     public CreeperRoom(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 11;
+        height = 14;
+        zLength = 11;
 
         Passage entrance = new Passage(this, 3, 6, 0);
         this.setEntrance(entrance);
 
-        this.addRequiredExit(new Passage(this, 3, 8, 10, ComponentSide.FRONT, true));
-        switch (facing) {
-            case SOUTH:
-                this.addRequiredExit(new Passage(this, 10, 8, 3, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 8, 3, ComponentSide.RIGHT, true));
-                break;
-            case NORTH:
-                this.addRequiredExit(new Passage(this, 0, 8, 7, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 10, 8, 7, ComponentSide.RIGHT, true));
-                break;
-            case WEST:
-                this.addRequiredExit(new Passage(this, 10, 8, 7, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 8, 7, ComponentSide.RIGHT, true));
-                break;
-            case EAST:
-                this.addRequiredExit(new Passage(this, 0, 8, 3, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 10, 8, 3, ComponentSide.RIGHT, true));
-                break;
-        }
+        this.addRequiredExit(Passage.getFrontExit(this, 3, 8, 10));
+        this.addRequiredExit(Passage.getSideExit(this, 0, 8, 3, ComponentSide.LEFT, facing));
+        this.addRequiredExit(Passage.getSideExit(this, xLength - 1, 8, 3, ComponentSide.RIGHT, facing));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
     }
 
     /**

@@ -20,18 +20,20 @@ import java.util.Random;
  */
 public class WitherHall extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 23;
-    public static final int HEIGHT = 10;
-    public static final int Z_LENGTH = 24;
     private IBlockState netherBrickStairsTopState, netherBrickStairsBotState, netherBrickStairsLeftState, netherBrickStairsRightState;
     private IBlockState netherBrickStairsTopUPState, netherBrickStairsBotUPState, netherBrickStairsLeftUPState, netherBrickStairsRightUPState;
 
     public WitherHall(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 23;
+        height = 10;
+        zLength = 24;
+
         Passage entrance = new Passage(this, 9, 0, 0);
         this.setEntrance(entrance);
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

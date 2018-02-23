@@ -17,18 +17,18 @@ import java.util.Random;
  */
 public class SpidersCorridor extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 5;
-    public static final int HEIGHT = 5;
-    public static final int Z_LENGTH = 13;
-
     public SpidersCorridor(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
 
+        xLength = 5;
+        height = 5;
+        zLength = 13;
+
         Passage entrance = new Passage(this, 0, 0, 0);
         this.setEntrance(entrance);
-        this.addExit(new Passage(this, 0, 0, Z_LENGTH - 1, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 0, 0, zLength - 1));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**
@@ -37,9 +37,9 @@ public class SpidersCorridor extends CatacombsBaseComponent {
     @Override
     public boolean addComponentParts(World world, Random random) {
         BlockSelector stoneBricks = getCemeteryCatacombsStones();
-        this.fillWithAir(world, boundingBox, 1, 1, 0, 3, 3, Z_LENGTH - 1);
+        this.fillWithAir(world, boundingBox, 1, 1, 0, 3, 3, zLength - 1);
         // web
-        this.randomlyFillWithBlocks(world, boundingBox, random, WEB_GENERATION_CHANCE + 0.3F, 1, 1, 0, 3, 3, Z_LENGTH - 1, StateHelper.WEB, false);
+        this.randomlyFillWithBlocks(world, boundingBox, random, WEB_GENERATION_CHANCE + 0.3F, 1, 1, 0, 3, 3, zLength - 1, StateHelper.WEB, false);
 
         for (int i = 0; i < 3; i++) {
             int z = i * 4;

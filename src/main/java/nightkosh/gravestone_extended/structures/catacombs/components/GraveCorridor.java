@@ -21,17 +21,18 @@ import java.util.Random;
  */
 public class GraveCorridor extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 7;
-    public static final int HEIGHT = 5;
-    public static final int Z_LENGTH = 5;
-
     public GraveCorridor(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 7;
+        height = 5;
+        zLength = 5;
+
         Passage entrance = new Passage(this, 1, 0, 0);
         this.setEntrance(entrance);
-        this.addExit(new Passage(this, 1, 0, Z_LENGTH - 1, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 1, 0, zLength - 1));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

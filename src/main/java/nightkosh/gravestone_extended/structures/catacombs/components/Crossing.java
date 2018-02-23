@@ -18,37 +18,21 @@ import java.util.Random;
  */
 public class Crossing extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 13;
-    public static final int HEIGHT = 6;
-    public static final int Z_LENGTH = 13;
-
     public Crossing(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 13;
+        height = 6;
+        zLength = 13;
 
         Passage entrance = new Passage(this, 4, 0, 0);
         this.setEntrance(entrance);
 
-        this.addRequiredExit(new Passage(this, 4, 0, 12, ComponentSide.FRONT, true));
-        switch (facing) {
-            case SOUTH:
-                this.addRequiredExit(new Passage(this, 12, 0, 4, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 0, 4, ComponentSide.RIGHT, true));
-                break;
-            case NORTH:
-                this.addRequiredExit(new Passage(this, 0, 0, 8, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 12, 0, 8, ComponentSide.RIGHT, true));
-                break;
-            case WEST:
-                this.addRequiredExit(new Passage(this, 12, 0, 8, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 0, 8, ComponentSide.RIGHT, true));
-                break;
-            case EAST:
-                this.addRequiredExit(new Passage(this, 0, 0, 4, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 12, 0, 4, ComponentSide.RIGHT, true));
-                break;
-        }
+        this.addRequiredExit(Passage.getFrontExit(this, 4, 0, 12));
+        this.addRequiredExit(Passage.getSideExit(this, 0, 0, 4, ComponentSide.LEFT, facing));
+        this.addRequiredExit(Passage.getSideExit(this, xLength - 1, 0, 4, ComponentSide.RIGHT, facing));
 
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y, z, xLength, height, zLength, entrance);
     }
 
     /**

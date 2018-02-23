@@ -17,37 +17,21 @@ import java.util.Random;
  */
 public class CatacombsPortal extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 23;
-    public static final int HEIGHT = 14;
-    public static final int Z_LENGTH = 23;
-
     public CatacombsPortal(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
+
+        xLength = 23;
+        height = 14;
+        zLength = 23;
+
         Passage entrance = new Passage(this, 9, 7, 0);
 
         this.setEntrance(entrance);
-        this.addRequiredExit(new Passage(this, 9, 7, Z_LENGTH - 1, ComponentSide.FRONT));
+        this.addRequiredExit(Passage.getFrontExit(this, 9, 7, zLength - 1));
+        this.addRequiredExit(Passage.getSideExit(this, 0, 7, 9, ComponentSide.LEFT, facing));
+        this.addRequiredExit(Passage.getSideExit(this, xLength - 1, 7, 9, ComponentSide.RIGHT, facing));
 
-        switch (facing) {
-            case SOUTH:
-                this.addRequiredExit(new Passage(this, X_LENGTH - 1, 7, 9, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 7, 9, ComponentSide.RIGHT, true));
-                break;
-            case NORTH:
-                this.addRequiredExit(new Passage(this, 0, 7, 13, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, X_LENGTH - 1, 7, 13, ComponentSide.RIGHT, true));
-                break;
-            case WEST:
-                this.addRequiredExit(new Passage(this, X_LENGTH - 1, 7, 13, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, 0, 7, 13, ComponentSide.RIGHT, true));
-                break;
-            case EAST:
-                this.addRequiredExit(new Passage(this, 0, 7, 9, ComponentSide.LEFT, true));
-                this.addRequiredExit(new Passage(this, X_LENGTH - 1, 7, 9, ComponentSide.RIGHT, true));
-                break;
-        }
-
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
     }
 
     @Override

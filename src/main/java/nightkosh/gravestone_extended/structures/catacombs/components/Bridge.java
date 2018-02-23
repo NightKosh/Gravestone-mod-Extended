@@ -18,18 +18,18 @@ import java.util.Random;
  */
 public class Bridge extends CatacombsBaseComponent {
 
-    public static final int X_LENGTH = 13;
-    public static final int HEIGHT = 14;
-    public static final int Z_LENGTH = 7;
-
     public Bridge(EnumFacing facing, int level, Random random, int x, int y, int z) {
         super(0, facing, level);
 
+        xLength = 13;
+        height = 14;
+        zLength = 7;
+
         Passage entrance = new Passage(this, 4, 6, 0);
-        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - HEIGHT, z, X_LENGTH, HEIGHT, Z_LENGTH, entrance);
+        boundingBox = BoundingBoxHelper.getCorrectBox(facing, x, y - height, z, xLength, height, zLength, entrance);
 
         this.setEntrance(entrance);
-        this.addExit(new Passage(this, 4, 8, Z_LENGTH, ComponentSide.FRONT));
+        this.addExit(Passage.getFrontExit(this, 4, 8, zLength));
     }
 
     /**
