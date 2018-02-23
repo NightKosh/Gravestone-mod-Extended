@@ -70,7 +70,7 @@ import org.lwjgl.opengl.GL11;
 public class GSEventsHandler {
 
     // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness
-    @SubscribeEvent(priority = EventPriority.HIGH)
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onEntityLivingDeath(LivingDeathEvent event) {
         if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
             if (ExtendedConfig.spawnSkullCrawlersAtMobsDeath) {
