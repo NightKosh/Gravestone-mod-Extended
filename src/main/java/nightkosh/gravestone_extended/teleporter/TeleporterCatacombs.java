@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.dimension.catacombs;
+package nightkosh.gravestone_extended.teleporter;
 
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;

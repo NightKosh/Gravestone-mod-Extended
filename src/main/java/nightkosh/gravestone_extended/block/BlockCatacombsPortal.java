@@ -19,7 +19,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.dimension.catacombs.TeleporterCatacombs;
+import nightkosh.gravestone_extended.teleporter.TeleporterCatacombs;
 
 import java.util.Random;
 
