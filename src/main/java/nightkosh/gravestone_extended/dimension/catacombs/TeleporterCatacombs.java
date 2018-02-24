@@ -19,7 +19,7 @@ import nightkosh.gravestone_extended.core.GSBlock;
 public class TeleporterCatacombs extends Teleporter {
 
     private final WorldServer worldServerInstance;
-    private final Long2ObjectMap<Teleporter.PortalPosition> destinationCoordinateCache = new Long2ObjectOpenHashMap<>(4096);
+    private final Long2ObjectMap<Teleporter.PortalPosition> destinationCache = new Long2ObjectOpenHashMap<>(4096);
 
     public TeleporterCatacombs(WorldServer world) {
         super(world);
@@ -33,53 +33,45 @@ public class TeleporterCatacombs extends Teleporter {
 
     @Override
     public boolean placeInExistingPortal(Entity entity, float rotationYaw) {
-        double d0 = -1;
-        boolean flag = true;
-        BlockPos pos = entity.getPosition();
+        double distance = -1;
+        BlockPos entityPos = entity.getPosition();
         long chunkPos = ChunkPos.asLong(MathHelper.floor(entity.posX), MathHelper.floor(entity.posZ));
 
-        if (this.destinationCoordinateCache.containsKey(chunkPos)) {
-            Teleporter.PortalPosition portalPosition = this.destinationCoordinateCache.get(chunkPos);
-            d0 = 0;
-            pos = portalPosition;
+        if (this.destinationCache.containsKey(chunkPos)) {
+            Teleporter.PortalPosition portalPosition = this.destinationCache.get(chunkPos);
+            distance = 0;
+            entityPos = portalPosition;
             portalPosition.lastUpdateTime = this.worldServerInstance.getTotalWorldTime();
-            flag = false;
         } else {
-            BlockPos pos4 = new BlockPos(entity);
-
-            for (int x = -128; x <= 128; ++x) {
-                BlockPos pos1;
-
-                for (int z = -128; z <= 128; ++z) {
-                    for (BlockPos blockpos = pos4.add(x, this.worldServerInstance.getActualHeight() - 1 - pos4.getY(), z);
-                         blockpos.getY() >= 0; blockpos = pos1) {
-                        pos1 = blockpos.down();
+            for (int x = -16; x <= 16; x++) {
+                BlockPos portalPos;
+                for (int z = -16; z <= 16; z++) {
+                    for (BlockPos blockpos = entityPos.add(x, this.worldServerInstance.getActualHeight() - 1 - entityPos.getY(), z); blockpos.getY() >= 0; blockpos = portalPos) {
+                        portalPos = blockpos.down();
 
                         if (this.worldServerInstance.getBlockState(blockpos).getBlock() == GSBlock.CATACOMBS_PORTAL) {
-                            while (this.worldServerInstance.getBlockState(pos1 = blockpos.down()).getBlock() == GSBlock.CATACOMBS_PORTAL) {
-                                blockpos = pos1;
+                            while (this.worldServerInstance.getBlockState(portalPos = blockpos.down()).getBlock() == GSBlock.CATACOMBS_PORTAL) {
+                                blockpos = portalPos;
                             }
-                            double d1 = blockpos.distanceSq(pos4);
-
-                            if (d0 < 0 || d1 < d0) {
-                                d0 = d1;
-                                pos = blockpos;
+                            double newDistance = blockpos.distanceSq(entityPos);
+                            if (distance < 0 || newDistance < distance) {
+                                distance = newDistance;
+                                entityPos = blockpos;
                             }
                         }
                     }
                 }
             }
+            if (distance >= 0) {
+                this.destinationCache.put(chunkPos, new Teleporter.PortalPosition(entityPos, this.worldServerInstance.getTotalWorldTime()));
+            }
         }
 
-        if (d0 >= 0) {
-            if (flag) {
-                this.destinationCoordinateCache.put(chunkPos, new Teleporter.PortalPosition(pos, this.worldServerInstance.getTotalWorldTime()));
-            }
-
+        if (distance >= 0) {
             entity.motionX = 0;
             entity.motionZ = 0;
 
-            entity.setLocationAndAngles(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, entity.rotationYaw, entity.rotationPitch);
+            entity.setLocationAndAngles(entityPos.getX() + 0.5, entityPos.getY() + 0.5, entityPos.getZ() + 0.5, entity.rotationYaw, entity.rotationPitch);
             return true;
         } else {
             return false;
