@@ -7,6 +7,7 @@ import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone.tileentity.ISpawnerEntity;
 import nightkosh.gravestone.tileentity.TileEntityGraveStone;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.MobSpawn;
 import nightkosh.gravestone_extended.helper.TimeHelper;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
@@ -110,7 +111,7 @@ public class GraveStoneSpawn extends Spawner {
      */
     @Override
     protected boolean canSpawnMobs(World world) {
-        return TimeHelper.isGraveSpawnTime();
+        return world.provider.getDimension() == GSDimensions.CATACOMBS.getId() || TimeHelper.isGraveSpawnTime();
     }
 
     @Override
