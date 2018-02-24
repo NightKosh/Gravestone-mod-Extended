@@ -18,12 +18,10 @@ import nightkosh.gravestone_extended.core.GSBlock;
  */
 public class TeleporterCatacombs extends Teleporter {
 
-    private final WorldServer worldServerInstance;
     private final Long2ObjectMap<Teleporter.PortalPosition> destinationCache = new Long2ObjectOpenHashMap<>(4096);
 
     public TeleporterCatacombs(WorldServer world) {
         super(world);
-        this.worldServerInstance = world;
     }
 
     @Override
@@ -41,16 +39,16 @@ public class TeleporterCatacombs extends Teleporter {
             Teleporter.PortalPosition portalPosition = this.destinationCache.get(chunkPos);
             distance = 0;
             entityPos = portalPosition;
-            portalPosition.lastUpdateTime = this.worldServerInstance.getTotalWorldTime();
+            portalPosition.lastUpdateTime = this.world.getTotalWorldTime();
         } else {
             for (int x = -16; x <= 16; x++) {
                 BlockPos portalPos;
                 for (int z = -16; z <= 16; z++) {
-                    for (BlockPos blockpos = entityPos.add(x, this.worldServerInstance.getActualHeight() - 1 - entityPos.getY(), z); blockpos.getY() >= 0; blockpos = portalPos) {
+                    for (BlockPos blockpos = entityPos.add(x, this.world.getActualHeight() - 1 - entityPos.getY(), z); blockpos.getY() >= 0; blockpos = portalPos) {
                         portalPos = blockpos.down();
 
-                        if (this.worldServerInstance.getBlockState(blockpos).getBlock() == GSBlock.CATACOMBS_PORTAL) {
-                            while (this.worldServerInstance.getBlockState(portalPos = blockpos.down()).getBlock() == GSBlock.CATACOMBS_PORTAL) {
+                        if (this.world.getBlockState(blockpos).getBlock() == GSBlock.CATACOMBS_PORTAL) {
+                            while (this.world.getBlockState(portalPos = blockpos.down()).getBlock() == GSBlock.CATACOMBS_PORTAL) {
                                 blockpos = portalPos;
                             }
                             double newDistance = blockpos.distanceSq(entityPos);
@@ -63,7 +61,7 @@ public class TeleporterCatacombs extends Teleporter {
                 }
             }
             if (distance >= 0) {
-                this.destinationCache.put(chunkPos, new Teleporter.PortalPosition(entityPos, this.worldServerInstance.getTotalWorldTime()));
+                this.destinationCache.put(chunkPos, new Teleporter.PortalPosition(entityPos, this.world.getTotalWorldTime()));
             }
         }
 
