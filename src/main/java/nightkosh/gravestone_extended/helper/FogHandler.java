@@ -6,6 +6,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nightkosh.gravestone.helper.IFog;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.event.RenderEventHandler;
 import nightkosh.gravestone_extended.core.event.TickEventHandler;
 
@@ -21,9 +22,11 @@ public class FogHandler implements IFog {
 
     public void addFog(World world, BlockPos pos) {
         if (world.isRemote && ExtendedConfig.isFogEnabled && TickEventHandler.getFogTicCount() == 0) {
-            EntityPlayer player = world.getClosestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, FOG_RANGE, false);
-            if (player != null && player.getCommandSenderEntity().equals(Minecraft.getMinecraft().player) && TimeHelper.isFogTime(world)) {
-                RenderEventHandler.addFog();
+            if (world.provider.getDimension() != GSDimensions.CATACOMBS.getId() && TimeHelper.isFogTime(world)) {
+                EntityPlayer player = world.getClosestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, FOG_RANGE, false);
+                if (player != null && player.getCommandSenderEntity().equals(Minecraft.getMinecraft().player)) {
+                    RenderEventHandler.addFog();
+                }
             }
         }
     }
