@@ -42,7 +42,7 @@ public class WorldProviderCatacombs extends WorldProvider {
     @Override
     @SideOnly(Side.CLIENT)
     public Vec3d getFogColor(float p_76562_1_, float p_76562_2_) {
-        return new Vec3d(0.627F * 0.15F, 0.502F * 0.15F, 0.627F * 0.15F);
+        return new Vec3d(1, 1, 1);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class WorldProviderCatacombs extends WorldProvider {
 
     @Override
     public int getAverageGroundLevel() {
-        return 0;
+        return 150;
     }
 
     @Override
