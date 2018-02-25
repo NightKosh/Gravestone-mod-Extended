@@ -294,11 +294,13 @@ public class ExtendedConfig {
     }
 
 
+    public static int particleCatacombsPortalId;
     public static int particleToxicWaterSplashId;
     public static int particleToxicWaterBubbleId;
     public static int particleToxicWaterWakeId;
 
     private static void particlesConfigs() {
+        particleCatacombsPortalId = config.get(CATEGORY_PARTICLES, "ParticleCatacombsPortalId", GSParticles.CATACOMBS_PORTAL_DEFAULT_ID).getInt();
         particleToxicWaterSplashId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterSplashId", GSParticles.TOXIC_WATER_SPLASH_DEFAULT_ID).getInt();
         particleToxicWaterBubbleId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterBubbleId", GSParticles.TOXIC_WATER_BUBBLE_DEFAULT_ID).getInt();
         particleToxicWaterWakeId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterWakeId", GSParticles.TOXIC_WATER_WAKE_DEFAULT_ID).getInt();

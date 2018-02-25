@@ -36,6 +36,7 @@ import nightkosh.gravestone_extended.gui.GSGraveTextGui;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.models.entity.ModelDamnedWarrior;
 import nightkosh.gravestone_extended.models.entity.ModelUndeadCat;
+import nightkosh.gravestone_extended.particle.ParticleCatacombsPortal;
 import nightkosh.gravestone_extended.particle.ParticleToxicWaterBubble;
 import nightkosh.gravestone_extended.particle.ParticleToxicWaterSplash;
 import nightkosh.gravestone_extended.particle.ParticleToxicWaterWake;
@@ -224,6 +225,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void registerParticles() {
+        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.CATACOMBS_PORTAL.getParticleID(), new ParticleCatacombsPortal.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_SPLASH.getParticleID(), new ParticleToxicWaterSplash.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_BUBBLE.getParticleID(), new ParticleToxicWaterBubble.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_WAKE.getParticleID(), new ParticleToxicWaterWake.Factory());

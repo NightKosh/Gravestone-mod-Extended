@@ -10,13 +10,13 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.core.GSDimensions;
+import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.teleporter.TeleporterCatacombs;
@@ -102,7 +102,7 @@ public class BlockCatacombsPortal extends BlockPortal {
                 d5 = rand.nextFloat() * 2 * j;
             }
 
-            world.spawnParticle(EnumParticleTypes.PORTAL, x, y, z, d3, d4, d5);//TODO!!!!
+            world.spawnParticle(GSParticles.CATACOMBS_PORTAL, x, y, z, d3, d4, d5);//TODO!!!!
         }
     }
 }
