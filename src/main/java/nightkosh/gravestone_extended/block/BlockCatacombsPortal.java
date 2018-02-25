@@ -102,7 +102,7 @@ public class BlockCatacombsPortal extends BlockPortal {
                 d5 = rand.nextFloat() * 2 * j;
             }
 
-            world.spawnParticle(GSParticles.CATACOMBS_PORTAL, x, y, z, d3, d4, d5);//TODO!!!!
+            world.spawnParticle(GSParticles.CATACOMBS_PORTAL, x, y, z, d3, d4, d5);
         }
     }
 }
