@@ -1,8 +1,8 @@
-# GraveStone mod - Extended [![Curseforge](http://cf.way2muchnoise.eu/full_gravestone-mod-extended_downloads.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_gravestone-mod-extended_all.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended)
+# [GraveStone mod - Extended](http://gravestone.nightkosh.com/) [![Curseforge](http://cf.way2muchnoise.eu/full_gravestone-mod-extended_downloads.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_gravestone-mod-extended_all.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended)
 
-This module add additional features, blocks, mobs and structures to the original mod.
+This is an addition to the [Gravestone mod - Graves](https://github.com/NightKosh/Gravestone-mod-Graves).  In minecraft 1.7.10 and earlier it was a standalone mod, but I decide ti split it on two parts in next versions of minecraft. This module adds additional features to the graves, new blocks, items, mobs, potions, enchantments and structures to the original mod.
 
-Read more on [official site](http://gravestone.nightkosh.com/) or on [minecraft forum](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1288082-gravestone-mod-v2-9-7)
+For more information visit [official site](http://gravestone.nightkosh.com/) or [minecraft forum](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1288082-gravestone-mod)
 
 
 --------------------------------This information doesn't updated--------------------------------
