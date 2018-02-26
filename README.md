@@ -1,4 +1,4 @@
-# GraveStone mod - Extended
+# GraveStone mod - Extended [![Curseforge](http://cf.way2muchnoise.eu/full_gravestone-mod-extended_downloads.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended) [![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_gravestone-mod-extended_all.svg)](https://minecraft.curseforge.com/projects/gravestone-mod-extended)
 
 This module add additional features, blocks, mobs and structures to the original mod.
 
