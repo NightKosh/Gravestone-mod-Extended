@@ -60,6 +60,7 @@ public class BlockCatacombsPortal extends BlockPortal {
                 if (player.timeUntilPortal > 0) {
                     player.timeUntilPortal = 10;
                 } else {
+                    player.invulnerableDimensionChange = true;
                     if (dimensionId == GSDimensions.CATACOMBS.getId()) {
                         dimensionIn = 0;
                     } else {

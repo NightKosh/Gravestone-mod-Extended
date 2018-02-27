@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.teleporter;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
@@ -69,7 +70,11 @@ public class TeleporterCatacombs extends Teleporter {
             entity.motionX = 0;
             entity.motionZ = 0;
 
-            entity.setLocationAndAngles(entityPos.getX() + 0.5, entityPos.getY() + 0.5, entityPos.getZ() + 0.5, entity.rotationYaw, entity.rotationPitch);
+            if (entity instanceof EntityPlayerMP) {
+                ((EntityPlayerMP) entity).connection.setPlayerLocation(entityPos.getX() + 0.5, entityPos.getY() + 0.5, entityPos.getZ() + 0.5, entity.rotationYaw, entity.rotationPitch);
+            } else {
+                entity.setLocationAndAngles(entityPos.getX() + 0.5, entityPos.getY() + 0.5, entityPos.getZ() + 0.5, entity.rotationYaw, entity.rotationPitch);
+            }
             return true;
         } else {
             return false;
