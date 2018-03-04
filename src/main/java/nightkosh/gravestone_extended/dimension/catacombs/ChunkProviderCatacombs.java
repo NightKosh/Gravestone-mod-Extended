@@ -68,8 +68,7 @@ public class ChunkProviderCatacombs implements IChunkGenerator {
 
     @Override
     public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-        List<Biome.SpawnListEntry> list = new ArrayList();
-        return list;
+        return new ArrayList();
     }
 
     @Nullable

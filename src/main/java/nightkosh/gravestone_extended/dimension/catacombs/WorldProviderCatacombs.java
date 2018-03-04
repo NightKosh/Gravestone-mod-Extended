@@ -5,6 +5,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -96,6 +97,16 @@ public class WorldProviderCatacombs extends WorldProvider {
     @Override
     public void onWorldUpdateEntities() {
 
+    }
+
+    @Override
+    public boolean canDoRainSnowIce(Chunk chunk) {
+        return false;
+    }
+
+    @Override
+    public boolean canDoLightning(Chunk chunk) {
+        return false;
     }
 
     @Override
