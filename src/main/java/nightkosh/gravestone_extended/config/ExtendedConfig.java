@@ -109,11 +109,11 @@ public class ExtendedConfig {
             structuresDimensionIds.add(GraveStoneWorldGenerator.DEFAULT_DIMENSION_ID);
         }
 
-        generateCatacombs = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombs", true).getBoolean(true);
+        generateCatacombs = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombs", true).getBoolean();
         maxCatacombsHeight = config.get(CATEGORY_STRUCTURES_CATACOMBS, "MaximumCatacombsGenerationHeight", 75).getInt();
         catacombsGenerationChance = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsGenerationChance", CatacombsGenerator.DEFAULT_GENERATION_CHANCE).getDouble();
-        generateCatacombsGraveyard = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombsGraveyard", true).getBoolean(true);
-        generatePilesOfBones = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GeneratePilesOfBones", true).getBoolean(true);
+        generateCatacombsGraveyard = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombsGraveyard", true).getBoolean();
+        generatePilesOfBones = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GeneratePilesOfBones", true).getBoolean();
 
         catacombsDimensionId = config.get(CATEGORY_STRUCTURES_CATACOMBS, "CatacombsDimensionId", GSDimensions.CATACOMBS_DEFAULT_DIMENSION_ID).getInt();
 
@@ -133,13 +133,13 @@ public class ExtendedConfig {
         gravesGenerationChance = config.get(CATEGORY_STRUCTURES_OTHER, "GravesGenerationChance", SingleGraveGenerator.DEFAULT_GENERATION_CHANCE).getDouble();
         memorialsGenerationChance = config.get(CATEGORY_STRUCTURES_OTHER, "MemorialsGenerationChance", MemorialGenerator.DEFAULT_GENERATION_CHANCE).getDouble();
 
-        generateGravesInMushroomBiomes = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateGravesInMushroomBiomes", true).getBoolean(true);
-        generateMemorials = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateMemorials", true).getBoolean(true);
-        generateSingleGraves = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateSingleGraves", true).getBoolean(true);
+        generateGravesInMushroomBiomes = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateGravesInMushroomBiomes", true).getBoolean();
+        generateMemorials = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateMemorials", true).getBoolean();
+        generateSingleGraves = config.get(CATEGORY_STRUCTURES_OTHER, "GenerateSingleGraves", true).getBoolean();
         // village
-        generateCemeteries = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateCemeteries", false).getBoolean(false);
-        generateVillageMemorials = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateVillageMemorials", true).getBoolean(true);
-        generateUndertaker = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateUndertaker", true).getBoolean(true);
+        generateCemeteries = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateCemeteries", false).getBoolean();
+        generateVillageMemorials = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateVillageMemorials", true).getBoolean();
+        generateUndertaker = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateUndertaker", true).getBoolean();
     }
 
     // graves for entities
@@ -159,18 +159,18 @@ public class ExtendedConfig {
             graveSpawnRate = 600;
         }
 
-        spawnMobsByGraves = config.get(Config.CATEGORY_GRAVES, "SpawnMobsByGraves", true).getBoolean(true);
-        spawnMobAtGraveDestruction = config.get(Config.CATEGORY_GRAVES, "SpawnMobAtGraveDestruction", true).getBoolean(true);
+        spawnMobsByGraves = config.get(Config.CATEGORY_GRAVES, "SpawnMobsByGraves", true).getBoolean();
+        spawnMobAtGraveDestruction = config.get(Config.CATEGORY_GRAVES, "SpawnMobAtGraveDestruction", true).getBoolean();
         spawnChance = config.get(Config.CATEGORY_GRAVES, "GravesMobsSpawnChance", 80).getInt();
 
-        isFogEnabled = config.get(Config.CATEGORY_GRAVES, "CemeteryFogEnabled", true).getBoolean(true);
+        isFogEnabled = config.get(Config.CATEGORY_GRAVES, "CemeteryFogEnabled", true).getBoolean();
     }
 
 
     public static boolean infernoDealsDamageToPlayers;
 
     private static void potionsConfigs() {
-        infernoDealsDamageToPlayers = config.get(CATEGORY_POTIONS, "InfernoDealsDamageToPlayers", false).getBoolean(false);
+        infernoDealsDamageToPlayers = config.get(CATEGORY_POTIONS, "InfernoDealsDamageToPlayers", false).getBoolean();
     }
 
     // disable/enable time changing by night stone
@@ -189,12 +189,12 @@ public class ExtendedConfig {
 
     private static void otherConfigs() {
         // trap blocks
-        enableNightStone = config.get(Configuration.CATEGORY_GENERAL, "EnableNightStone", true).getBoolean(true);
-        enableThunderStone = config.get(Configuration.CATEGORY_GENERAL, "EnableThunderStone", true).getBoolean(true);
-        showNightStoneMessage = config.get(Configuration.CATEGORY_GENERAL, "ShowNightStoneMessage", true).getBoolean(true);
+        enableNightStone = config.get(Configuration.CATEGORY_GENERAL, "EnableNightStone", true).getBoolean();
+        enableThunderStone = config.get(Configuration.CATEGORY_GENERAL, "EnableThunderStone", true).getBoolean();
+        showNightStoneMessage = config.get(Configuration.CATEGORY_GENERAL, "ShowNightStoneMessage", true).getBoolean();
 
         // haunted chest
-        replaceHauntedChest = config.get(Configuration.CATEGORY_GENERAL, "ReplaceHauntedChest", false).getBoolean(false);
+        replaceHauntedChest = config.get(Configuration.CATEGORY_GENERAL, "ReplaceHauntedChest", false).getBoolean();
 
         createCorpsesForModdedNotVanillaVillagers = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaVillagers", false).getBoolean();
         createCorpsesForModdedNotVanillaDogs = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaDogs", true).getBoolean();
@@ -202,10 +202,10 @@ public class ExtendedConfig {
         createCorpsesForModdedNotVanillaHorses = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaHorses", true).getBoolean();
 
         // override fishing
-        overrideVanillaFishing = config.get(Configuration.CATEGORY_GENERAL, "OverrideVanillaFishing", true).getBoolean(true);
+        overrideVanillaFishing = config.get(Configuration.CATEGORY_GENERAL, "OverrideVanillaFishing", true).getBoolean();
 
-        spreadToxicWater = config.get(Configuration.CATEGORY_GENERAL, "SpreadToxicWater", true).getBoolean(true);
-        removeToxicWater = config.get(Configuration.CATEGORY_GENERAL, "RemoveToxicWater", false).getBoolean(false);
+        spreadToxicWater = config.get(Configuration.CATEGORY_GENERAL, "SpreadToxicWater", true).getBoolean();
+        removeToxicWater = config.get(Configuration.CATEGORY_GENERAL, "RemoveToxicWater", false).getBoolean();
     }
 
     // recipes
@@ -218,15 +218,15 @@ public class ExtendedConfig {
 
     private static void recipesConfigs() {
         // creeper statues
-        craftableCreeperStatues = config.get(CATEGORY_RECIPES, "CraftableCreeperStatues", false).getBoolean(false);
+        craftableCreeperStatues = config.get(CATEGORY_RECIPES, "CraftableCreeperStatues", false).getBoolean();
 
         // spawners recipes
-        craftableWitherSpawner = config.get(CATEGORY_RECIPES, "CraftableWitherSpawner", true).getBoolean(true);
-        craftableSpawners = config.get(CATEGORY_RECIPES, "CraftableSpawners", true).getBoolean(true);
+        craftableWitherSpawner = config.get(CATEGORY_RECIPES, "CraftableWitherSpawner", true).getBoolean();
+        craftableSpawners = config.get(CATEGORY_RECIPES, "CraftableSpawners", true).getBoolean();
 
-        craftableNightStone = config.get(CATEGORY_RECIPES, "CraftableNightStone", true).getBoolean(true);
-        craftableThunderStone = config.get(CATEGORY_RECIPES, "CraftableThunderStone", true).getBoolean(true);
-        hardAltarRecipe = config.get(CATEGORY_RECIPES, "HardAltarRecipe", false).getBoolean(false);
+        craftableNightStone = config.get(CATEGORY_RECIPES, "CraftableNightStone", true).getBoolean();
+        craftableThunderStone = config.get(CATEGORY_RECIPES, "CraftableThunderStone", true).getBoolean();
+        hardAltarRecipe = config.get(CATEGORY_RECIPES, "HardAltarRecipe", false).getBoolean();
     }
 
     // mobs
@@ -254,33 +254,33 @@ public class ExtendedConfig {
 
     private static void entityConfig() {
         //mob spawn
-        spawnZombieDogs = config.get(CATEGORY_MOBS, "SpawnZombieDogsInTheWorld", true).getBoolean(true);
-        spawnZombieCats = config.get(CATEGORY_MOBS, "SpawnZombieCatsInTheWorld", true).getBoolean(true);
-        spawnSkeletonDogs = config.get(CATEGORY_MOBS, "SpawnSkeletonDogsInTheWorld", true).getBoolean(true);
-        spawnSkeletonCats = config.get(CATEGORY_MOBS, "SpawnSkeletonCatsInTheWorld", true).getBoolean(true);
-        spawnUndeadHorses = config.get(CATEGORY_MOBS, "SpawnUndeadHorses", true).getBoolean(true);
-        spawnSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnSkeletonRaidersInTheWorld", true).getBoolean(true);
-        spawnZombieRaiders = config.get(CATEGORY_MOBS, "SpawnZombieRaidersInTheWorld", true).getBoolean(true);
-        spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean(true);
-        spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean(true);
-        spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean(true);
-        spawnPhantomDiver = config.get(CATEGORY_MOBS, "SpawnPhantomDiverInTheWorld", true).getBoolean(true);
-        spawnVampireBat = config.get(CATEGORY_MOBS, "SpawnVampireBatInTheWorld", true).getBoolean(true);
-        spawnBarghest = config.get(CATEGORY_MOBS, "SpawnBarghestInTheWorld", true).getBoolean(true);
-        spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean(true);
+        spawnZombieDogs = config.get(CATEGORY_MOBS, "SpawnZombieDogsInTheWorld", true).getBoolean();
+        spawnZombieCats = config.get(CATEGORY_MOBS, "SpawnZombieCatsInTheWorld", true).getBoolean();
+        spawnSkeletonDogs = config.get(CATEGORY_MOBS, "SpawnSkeletonDogsInTheWorld", true).getBoolean();
+        spawnSkeletonCats = config.get(CATEGORY_MOBS, "SpawnSkeletonCatsInTheWorld", true).getBoolean();
+        spawnUndeadHorses = config.get(CATEGORY_MOBS, "SpawnUndeadHorses", true).getBoolean();
+        spawnSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnSkeletonRaidersInTheWorld", true).getBoolean();
+        spawnZombieRaiders = config.get(CATEGORY_MOBS, "SpawnZombieRaidersInTheWorld", true).getBoolean();
+        spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean();
+        spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean();
+        spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean();
+        spawnPhantomDiver = config.get(CATEGORY_MOBS, "SpawnPhantomDiverInTheWorld", true).getBoolean();
+        spawnVampireBat = config.get(CATEGORY_MOBS, "SpawnVampireBatInTheWorld", true).getBoolean();
+        spawnBarghest = config.get(CATEGORY_MOBS, "SpawnBarghestInTheWorld", true).getBoolean();
+        spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean();
 
         phantomDiverSpawnWeight = config.get(CATEGORY_MOBS, "PhantomDiverSpawnWeight", 5).getInt();
 
 
-        spawnSkullCrawlersAtMobsDeath = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtMobsDeath", true).getBoolean(true);
-        spawnSkullCrawlersAtBoneBlockDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAnBoneBlockDestruction", true).getBoolean(true);
-        spawnSkullCrawlersAtPileBonesDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtPileBonesDestruction", true).getBoolean(true);
+        spawnSkullCrawlersAtMobsDeath = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtMobsDeath", true).getBoolean();
+        spawnSkullCrawlersAtBoneBlockDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAnBoneBlockDestruction", true).getBoolean();
+        spawnSkullCrawlersAtPileBonesDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtPileBonesDestruction", true).getBoolean();
 
-        zombiePetsAttackAnimals = config.get(CATEGORY_MOBS, "ZombiePetsAttackAnimals", true).getBoolean(true);
-        zombiePetsAttackPets = config.get(CATEGORY_MOBS, "ZombiePetsAttackPets", true).getBoolean(true);
+        zombiePetsAttackAnimals = config.get(CATEGORY_MOBS, "ZombiePetsAttackAnimals", true).getBoolean();
+        zombiePetsAttackPets = config.get(CATEGORY_MOBS, "ZombiePetsAttackPets", true).getBoolean();
 
         // toxic sludge and water
-        toxicSludgeAndWaterChangeBlocks = config.get(CATEGORY_MOBS, "ToxicSludgeAndWaterChangeBlocks", true).getBoolean(true);
+        toxicSludgeAndWaterChangeBlocks = config.get(CATEGORY_MOBS, "ToxicSludgeAndWaterChangeBlocks", true).getBoolean();
     }
 
     // COMPATIBILITY
@@ -290,13 +290,13 @@ public class ExtendedConfig {
     public static boolean disableInfernalMobs;
 
     private static void compatibilityConfigs() {
-        spawnMoCreaturesMobs = config.get(Config.CATEGORY_COMPATIBILITY, "SpawnMoCreaturesMobs", true).getBoolean(true);
+        spawnMoCreaturesMobs = config.get(Config.CATEGORY_COMPATIBILITY, "SpawnMoCreaturesMobs", true).getBoolean();
 
-        enableForestryBackpacks = config.get(Config.CATEGORY_COMPATIBILITY, "EnableForestryBackpacks", true).getBoolean(true);
+        enableForestryBackpacks = config.get(Config.CATEGORY_COMPATIBILITY, "EnableForestryBackpacks", true).getBoolean();
 
-        enableAntiqueAtlasDeathMarkers = config.get(Config.CATEGORY_COMPATIBILITY, "EnableAntiqueAtlasDeathMarkers", true).getBoolean(true);
+        enableAntiqueAtlasDeathMarkers = config.get(Config.CATEGORY_COMPATIBILITY, "EnableAntiqueAtlasDeathMarkers", true).getBoolean();
 
-        disableInfernalMobs = config.get(Config.CATEGORY_COMPATIBILITY, "DisableInfernalMobs", true).getBoolean(true);
+        disableInfernalMobs = config.get(Config.CATEGORY_COMPATIBILITY, "DisableInfernalMobs", true).getBoolean();
     }
 
 
@@ -318,6 +318,6 @@ public class ExtendedConfig {
     public static boolean debugMode;
 
     private static void debugConfigs() {
-        debugMode = config.get(CATEGORY_DEBUG, "DebugMode", false).getBoolean(false);
+        debugMode = config.get(CATEGORY_DEBUG, "DebugMode", false).getBoolean();
     }
 }
