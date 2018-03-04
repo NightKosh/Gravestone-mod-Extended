@@ -190,7 +190,7 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
                 double y = pos.getY() - 1.05;
                 double z = pos.getZ() + rand.nextFloat();
 
-                world.spawnParticle(EnumParticleTypes.DRIP_WATER, x, y, z, 0, 0, 0);
+                world.spawnParticle(GSParticles.TOXIC_WATER_DRIP, x, y, z, 0, 0, 0);
                 world.playSound(x, y, z, GSSound.DROP_OF_ACID, SoundCategory.BLOCKS, 0.2F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
             }
         }
