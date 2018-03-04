@@ -86,7 +86,7 @@ public class HorseCorpseHelper extends CorpseHelper {
         nbt.setInteger("HorseType", horseType.ordinal());
 
         int variant = 0;
-        if (horseType == EnumHorseType.HORSE) {
+        if (horseType == EnumHorseType.HORSE && horse instanceof EntityHorse) {
             variant = ((EntityHorse) horse).getHorseVariant();
         }
         nbt.setInteger("Variant", variant);
