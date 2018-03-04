@@ -1,6 +1,6 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.entity.passive.*;
 import nightkosh.gravestone.api.GraveStoneAPI;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
@@ -49,8 +49,34 @@ public class GraveGenerationHelper extends nightkosh.gravestone.helper.GraveGene
                 return new ArrayList<>(0);
             }
         });
-        GraveStoneAPI.graveGenerationAtDeath.addDogItemsHandler((dog, source) -> CorpseHelper.getCorpse(dog, EnumCorpse.DOG));
-        GraveStoneAPI.graveGenerationAtDeath.addCatItemsHandler((cat, source) -> CorpseHelper.getCorpse(cat, EnumCorpse.CAT));
-        GraveStoneAPI.graveGenerationAtDeath.addHorseItemsHandler((horse, source) -> CorpseHelper.getCorpse(horse, EnumCorpse.HORSE));
+        GraveStoneAPI.graveGenerationAtDeath.addDogItemsHandler((dog, source) -> {
+            if (ExtendedConfig.createCorpsesForModdedNotVanillaDogs || dog.getClass().equals(EntityOcelot.class)) {
+                return CorpseHelper.getCorpse(dog, EnumCorpse.DOG);
+            } else {
+                return new ArrayList<>(0);
+            }
+        });
+        GraveStoneAPI.graveGenerationAtDeath.addCatItemsHandler((cat, source) -> {
+            if (ExtendedConfig.createCorpsesForModdedNotVanillaCats || cat.getClass().equals(EntityWolf.class)) {
+                return CorpseHelper.getCorpse(cat, EnumCorpse.CAT);
+            } else {
+                return new ArrayList<>(0);
+            }
+        });
+        GraveStoneAPI.graveGenerationAtDeath.addHorseItemsHandler((horse, source) -> {
+            if (ExtendedConfig.createCorpsesForModdedNotVanillaHorses ||
+                    horse.getClass().equals(EntityHorse.class) ||
+                    horse.getClass().equals(EntityMule.class) ||
+                    horse.getClass().equals(EntityDonkey.class) ||
+                    horse.getClass().equals(EntityLlama.class) ||
+                    horse.getClass().equals(EntityZombieHorse.class) ||
+                    horse.getClass().equals(EntitySkeletonHorse.class) ||
+                    horse.getClass().equals(nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse.class) ||
+                    horse.getClass().equals(nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse.class)) {
+                return CorpseHelper.getCorpse(horse, EnumCorpse.HORSE);
+            } else {
+                return new ArrayList<>(0);
+            }
+        });
     }
 }

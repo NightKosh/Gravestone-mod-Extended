@@ -180,6 +180,9 @@ public class ExtendedConfig {
     // haunted chest
     public static boolean replaceHauntedChest;
     public static boolean createCorpsesForModdedNotVanillaVillagers;
+    public static boolean createCorpsesForModdedNotVanillaDogs;
+    public static boolean createCorpsesForModdedNotVanillaCats;
+    public static boolean createCorpsesForModdedNotVanillaHorses;
     public static boolean overrideVanillaFishing;
     public static boolean spreadToxicWater;
     public static boolean removeToxicWater;
@@ -193,7 +196,10 @@ public class ExtendedConfig {
         // haunted chest
         replaceHauntedChest = config.get(Configuration.CATEGORY_GENERAL, "ReplaceHauntedChest", false).getBoolean(false);
 
-        createCorpsesForModdedNotVanillaVillagers = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaVillagers", false).getBoolean(false);
+        createCorpsesForModdedNotVanillaVillagers = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaVillagers", false).getBoolean();
+        createCorpsesForModdedNotVanillaDogs = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaDogs", true).getBoolean();
+        createCorpsesForModdedNotVanillaCats = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaCats", true).getBoolean();
+        createCorpsesForModdedNotVanillaHorses = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaHorses", true).getBoolean();
 
         // override fishing
         overrideVanillaFishing = config.get(Configuration.CATEGORY_GENERAL, "OverrideVanillaFishing", true).getBoolean(true);
