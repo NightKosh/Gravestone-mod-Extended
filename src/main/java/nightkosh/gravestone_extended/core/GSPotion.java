@@ -7,6 +7,8 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
+import net.minecraft.potion.PotionUtils;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -63,10 +65,13 @@ public class GSPotion {
         PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GOLDEN_KOI.ordinal())), PURIFICATION_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BONE_FISH.ordinal())), BONE_SKIN_TYPE);
-        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPECULAR_FISH.ordinal())), RECALL_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MAGMA_JELLYFISH.ordinal())), BURNING_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.PIRANHA.ordinal())), BLEEDING_TYPE);
         PotionHelper.addMix(BURNING_TYPE, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FLAREFIN_KOI.ordinal())), INFERNO_TYPE);
+
+        BrewingRecipeRegistry.addRecipe(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), PotionTypes.AWKWARD),
+                new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPECULAR_FISH.ordinal()),
+                PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), RECALL_TYPE));
 
         // vanilla potions
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(Items.FISH, 1, 2)), PotionType.getPotionTypeForName("luck"));

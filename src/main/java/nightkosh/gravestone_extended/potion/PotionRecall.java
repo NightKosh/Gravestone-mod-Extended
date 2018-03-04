@@ -2,11 +2,10 @@ package nightkosh.gravestone_extended.potion;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.server.MinecraftServer;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.teleporter.TeleporterRecall;
 
 import javax.annotation.Nullable;
 
@@ -26,22 +25,16 @@ public class PotionRecall extends PotionInstant {
 
     @Override
     public void affectEntity(@Nullable Entity source, @Nullable Entity indirectSource, EntityLivingBase entity, int amplifier, double health) {
-        if (!entity.world.isRemote && entity instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) entity;
-
-            if (player.getSpawnDimension() != player.world.provider.getDimension()) {
-                player.changeDimension(0);
-            }
-            if (player.getServer() != null) {
-                World world = player.world;
-                int dimensionId = world.provider.getDimension();
-                WorldServer currentWorld = player.getServer().getWorld(dimensionId);
-
-                BlockPos pos = player.getBedLocation();
-                if (pos == null) {
-                    pos = currentWorld.getTopSolidOrLiquidBlock(currentWorld.getSpawnPoint());
-                }
-                player.setPositionAndUpdate(pos.getX(), pos.getY(), pos.getZ());
+        if (!entity.world.isRemote && entity instanceof EntityPlayerMP) {
+            EntityPlayerMP player = (EntityPlayerMP) entity;
+            MinecraftServer minecraftServer = player.getServer();
+            if (player.world.provider.getDimension() != 0) {
+                player.invulnerableDimensionChange = true;
+                minecraftServer.getPlayerList().transferPlayerToDimension(player, 0, new TeleporterRecall(minecraftServer.getWorld(0)));
+                TeleporterRecall.changePosition(player);
+            } else {
+                player.invulnerableDimensionChange = true;
+                TeleporterRecall.changePosition(player);
             }
         }
     }
