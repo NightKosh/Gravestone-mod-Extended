@@ -4,6 +4,7 @@ import net.minecraft.entity.passive.*;
 import nightkosh.gravestone.api.GraveStoneAPI;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.entity.monster.horse.EntityUndeadHorse;
 import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
 
 import java.util.ArrayList;
@@ -71,8 +72,7 @@ public class GraveGenerationHelper extends nightkosh.gravestone.helper.GraveGene
                     horse.getClass().equals(EntityLlama.class) ||
                     horse.getClass().equals(EntityZombieHorse.class) ||
                     horse.getClass().equals(EntitySkeletonHorse.class) ||
-                    horse.getClass().equals(nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse.class) ||
-                    horse.getClass().equals(nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse.class)) {
+                    horse instanceof EntityUndeadHorse) {
                 return CorpseHelper.getCorpse(horse, EnumCorpse.HORSE);
             } else {
                 return new ArrayList<>(0);
