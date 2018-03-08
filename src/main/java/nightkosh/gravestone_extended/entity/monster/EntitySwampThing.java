@@ -140,6 +140,6 @@ public class EntitySwampThing extends EntityMob {
 
     @Override
     public boolean getCanSpawnHere() {
-        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world) && MobsHelper.isChunkPopulated(this);
     }
 }

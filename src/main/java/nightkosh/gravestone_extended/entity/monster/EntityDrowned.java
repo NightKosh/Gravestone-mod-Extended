@@ -139,7 +139,8 @@ public class EntityDrowned extends EntityMob {
 
     @Override
     public boolean getCanSpawnHere() {
-        return this.posY < this.world.getSeaLevel() && super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
+        return this.posY < this.world.getSeaLevel() && super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world) &&
+                MobsHelper.isChunkPopulated(this);
     }
 
     @Override
