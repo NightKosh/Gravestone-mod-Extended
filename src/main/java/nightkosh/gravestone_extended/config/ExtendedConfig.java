@@ -5,7 +5,6 @@ import net.minecraftforge.common.config.Property;
 import nightkosh.gravestone.config.Config;
 import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSParticles;
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.GraveStoneWorldGenerator;
 import nightkosh.gravestone_extended.structures.catacombs.CatacombsGenerator;
 import nightkosh.gravestone_extended.structures.catacombs.CatacombsLevel;
@@ -13,7 +12,6 @@ import nightkosh.gravestone_extended.structures.graves.SingleGraveGenerator;
 import nightkosh.gravestone_extended.structures.memorials.MemorialGenerator;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -92,22 +90,8 @@ public class ExtendedConfig {
 
     private static void structures() {
         // catacombs
-        Property structuresDimensionIdProperty = config.get(CATEGORY_STRUCTURES_CATACOMBS, "StructuresDimensionIds", GraveStoneWorldGenerator.DEFAULT_DIMENSION_ID);
-        structuresDimensionIdProperty.setComment("List of dimension id in which structures generation is allowed. \"dimension_id_1;dimension_id_2;.....\".");
-        String ar = structuresDimensionIdProperty.getString();
-        String[] ids = ar.split(";");
-        structuresDimensionIds = new ArrayList<>(ids.length);
-        for (String id : ids) {
-            try {
-                structuresDimensionIds.add(Integer.parseInt(id));
-            } catch (NumberFormatException e) {
-                GSLogger.logError("Can't parse StructuresDimensionIds!!!");
-                e.printStackTrace();
-            }
-        }
-        if (structuresDimensionIds.isEmpty()) {
-            structuresDimensionIds.add(GraveStoneWorldGenerator.DEFAULT_DIMENSION_ID);
-        }
+        structuresDimensionIds = ConfigsHelper.getDimensionList(config, CATEGORY_STRUCTURES_CATACOMBS, "StructuresDimensionIds", GraveStoneWorldGenerator.DEFAULT_DIMENSION_ID,
+                "List of dimension id in which structures generation is allowed. \"dimension_id_1;dimension_id_2;.....\".");
 
         generateCatacombs = config.get(CATEGORY_STRUCTURES_CATACOMBS, "GenerateCatacombs", true).getBoolean();
         maxCatacombsHeight = config.get(CATEGORY_STRUCTURES_CATACOMBS, "MaximumCatacombsGenerationHeight", 75).getInt();
@@ -251,6 +235,7 @@ public class ExtendedConfig {
     public static boolean zombiePetsAttackAnimals;
     public static boolean zombiePetsAttackPets;
     public static int phantomDiverSpawnWeight;
+    public static List<Integer> mobsDimensionWhiteList;
 
     private static void entityConfig() {
         //mob spawn
@@ -271,6 +256,8 @@ public class ExtendedConfig {
 
         phantomDiverSpawnWeight = config.get(CATEGORY_MOBS, "PhantomDiverSpawnWeight", 5).getInt();
 
+        mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
+                "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");
 
         spawnSkullCrawlersAtMobsDeath = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtMobsDeath", true).getBoolean();
         spawnSkullCrawlersAtBoneBlockDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAnBoneBlockDestruction", true).getBoolean();

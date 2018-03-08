@@ -30,6 +30,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.entity.ai.EntityUndeadHorseAINearestAttackableTarget;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 import java.util.Iterator;
 import java.util.UUID;
@@ -344,7 +345,8 @@ public abstract class EntityUndeadHorse extends AbstractHorse {
     @Override
     public boolean getCanSpawnHere() {
         return this.getEntityWorld().getDifficulty() != EnumDifficulty.PEACEFUL && this.isValidLightLevel() &&
-                this.getBlockPathWeight(new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ)) >= 0.0F;
+                this.getBlockPathWeight(new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ)) >= 0 &&
+                MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 
     protected boolean isValidLightLevel() {

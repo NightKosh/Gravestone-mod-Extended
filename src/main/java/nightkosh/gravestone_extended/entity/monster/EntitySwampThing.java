@@ -19,6 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableTargetInWater;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -135,5 +136,10 @@ public class EntitySwampThing extends EntityMob {
     @Override
     public int getMaxSpawnedInChunk() {
         return 3;
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

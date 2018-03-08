@@ -9,6 +9,7 @@ import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSEntity;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -63,5 +64,10 @@ public class EntityGSSkeleton extends EntitySkeleton {
     @Override
     protected boolean canDespawn() {
         return !this.hasCustomName();
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

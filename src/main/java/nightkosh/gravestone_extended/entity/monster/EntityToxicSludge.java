@@ -28,6 +28,7 @@ import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSPotion;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 import nightkosh.gravestone_extended.helper.StateHelper;
 import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
 
@@ -219,6 +220,8 @@ public class EntityToxicSludge extends EntitySlime {
 
     @Override
     public boolean getCanSpawnHere() {
-        return this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.posY <= 30 && this.isValidLightLevel() && this.world.getBlockState((new BlockPos(this)).down()).canEntitySpawn(this);
+        return this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.posY <= 30 && this.isValidLightLevel() &&
+                this.world.getBlockState((new BlockPos(this)).down()).canEntitySpawn(this) &&
+                MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

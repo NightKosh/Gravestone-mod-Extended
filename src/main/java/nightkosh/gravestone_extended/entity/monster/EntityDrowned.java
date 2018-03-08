@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.GSSound;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -138,7 +139,7 @@ public class EntityDrowned extends EntityMob {
 
     @Override
     public boolean getCanSpawnHere() {
-        return this.posY < this.world.getSeaLevel() && super.getCanSpawnHere();
+        return this.posY < this.world.getSeaLevel() && super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 
     @Override

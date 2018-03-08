@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -53,5 +54,10 @@ public class EntitySkeletonRaider extends EntityGSSkeleton {
     @Override
     protected boolean canDespawn() {
         return !this.hasCustomName();
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

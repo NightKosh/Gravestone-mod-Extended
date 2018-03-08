@@ -25,6 +25,7 @@ import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.entity.ai.AIBarghestInvisible;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityUndeadDog;
 import nightkosh.gravestone_extended.entity.monster.pet.EnumUndeadMobType;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -144,5 +145,10 @@ public class EntityBarghest extends EntityUndeadDog {
     @Override
     protected float getSoundVolume() {
         return 0.4F;
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

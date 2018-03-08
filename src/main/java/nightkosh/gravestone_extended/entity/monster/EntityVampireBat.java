@@ -26,6 +26,7 @@ import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.entity.ai.AIBatFly;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 import javax.annotation.Nullable;
 
@@ -219,5 +220,10 @@ public class EntityVampireBat extends EntityMob {
     @Override
     protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
         this.dropItem(this.getDropItem(),  this.rand.nextInt(3));
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

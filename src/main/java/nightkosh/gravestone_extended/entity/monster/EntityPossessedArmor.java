@@ -20,6 +20,7 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSEnchantment;
 import nightkosh.gravestone_extended.core.GSSound;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -158,5 +159,10 @@ public class EntityPossessedArmor extends EntityMob {
     @Override
     protected void playStepSound(BlockPos pos, Block block) {
         this.playSound(GSSound.ENTITY_POSSESSED_ARMOR_STEP, 0.15F, 1);
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }

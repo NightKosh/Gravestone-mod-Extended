@@ -11,6 +11,7 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityUndeadHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
+import nightkosh.gravestone_extended.helper.MobsHelper;
 
 /**
  * GraveStone mod
@@ -57,5 +58,10 @@ public class EntityZombieRaider extends EntityZombie {
     @Override
     protected boolean canDespawn() {
         return !this.hasCustomName();
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
     }
 }
