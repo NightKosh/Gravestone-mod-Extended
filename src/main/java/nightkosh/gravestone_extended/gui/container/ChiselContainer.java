@@ -86,7 +86,7 @@ public class ChiselContainer extends Container {
             items.add(inventory.getStackInSlot(i));
         }
 
-//        this.craftResult.setInventorySlotContents(0, GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, material, isEnchanted, isMossy));
+        this.craftResult.setInventorySlotContents(0, GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, material, isEnchanted, isMossy));
     }
 
     @Override

@@ -5,6 +5,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 
+import java.util.Arrays;
+
 /**
  * GraveStone mod
  *
@@ -19,6 +21,7 @@ public class GraveRecipeInventory implements IInventory {
     public GraveRecipeInventory(int slotsCount) {
         this.slotsCount = slotsCount;
         stackList = new ItemStack[slotsCount];
+        Arrays.fill(stackList, ItemStack.EMPTY);
     }
 
     @Override
