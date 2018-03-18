@@ -40,7 +40,7 @@ sourceSets {
 
 dependencies {
 //    compile fileTree(include: ['*.jar'], dir: 'external_libs')
-    compile files("external_libs/GraveStone-1.12-Graves-1.0.13.jar")
+    compile files("external_libs/GraveStone-1.12.2-Graves-1.0.15.jar")
     compile files("external_libs/forestry_1.12.2-5.7.0.218.jar")
 }
 

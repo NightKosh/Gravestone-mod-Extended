@@ -77,23 +77,6 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
 
     }
 
-    public void renderMemorialInGui(float x, float y, EnumMemorials memorial, boolean isEnchanted, boolean isMossy, float partialTicks) {
-        GL11.glPushMatrix();
-
-        GL11.glTranslatef(x, y, 80);
-
-        float time = Minecraft.getMinecraft().world.getTotalWorldTime() + partialTicks;
-        GL11.glRotatef(time % 360, 0, 1, 0);
-
-        float scale = 75 / 4;
-        GL11.glScaled(scale, scale, scale);
-
-
-        renderMemorial(null, memorial, memorial.getMemorialType(), isEnchanted, isMossy);
-
-        GL11.glPopMatrix();
-    }
-
     private void renderMemorial(TileEntityMemorial te, double x, double y, double z, World world, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType,
                                 boolean isEnchanted, boolean isMossy, EnumFacing facing) {
         GL11.glPushMatrix();
@@ -136,7 +119,7 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
         GL11.glPopMatrix();
     }
 
-    private void renderMemorial(TileEntityMemorial te, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted,
+    public void renderMemorial(TileEntityMemorial te, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted,
                                 boolean isMossy) {
         ModelGraveStone model = getModel(memorialType);
         model.setPedestalTexture(getPedestalTexture(memorial, isMossy));
