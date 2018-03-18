@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
+import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.crafting.GravesCraftingManager;
 import nightkosh.gravestone_extended.inventory.GraveRecipeInventory;
 
@@ -33,17 +34,19 @@ public class ChiselContainer extends Container {
     private EntityPlayer player;
     private World world;
 
-    public static final boolean IS_GRAVESTONE = true;
-    public static final EnumGraveType TYPE = EnumGraveType.VERTICAL_PLATE;
-    public static final EnumGraveMaterial MATERIAL = EnumGraveMaterial.WOOD;
-    public static final boolean IS_ENCHANTED = false;
-    public static final boolean IS_MOSSY = false;
+    public static final boolean DEFAULT_IS_GRAVESTONE = true;
+    public static final EnumGraveType DEFAULT_GRAVE_TYPE = EnumGraveType.VERTICAL_PLATE;
+    public static final EnumMemorials.EnumMemorialType DEFAULT_MEMORIAL_TYPE = EnumMemorials.EnumMemorialType.CROSS;
+    public static final EnumGraveMaterial DEFAULT_MATERIAL = EnumGraveMaterial.WOOD;
+    public static final boolean DEFAULT_IS_ENCHANTED = false;
+    public static final boolean DEFAULT_IS_MOSSY = false;
 
-    public boolean isGravestone = IS_GRAVESTONE;
-    public EnumGraveType graveType = TYPE;
-    public EnumGraveMaterial material = MATERIAL;
-    public boolean isEnchanted = IS_ENCHANTED;
-    public boolean isMossy = IS_MOSSY;
+    public boolean isGravestone = DEFAULT_IS_GRAVESTONE;
+    public EnumGraveType graveType = DEFAULT_GRAVE_TYPE;
+    public EnumMemorials.EnumMemorialType memorialType = DEFAULT_MEMORIAL_TYPE;
+    public EnumGraveMaterial material = DEFAULT_MATERIAL;
+    public boolean isEnchanted = DEFAULT_IS_ENCHANTED;
+    public boolean isMossy = DEFAULT_IS_MOSSY;
     //TODO sword;
 
     public ChiselContainer(EntityPlayer player, InventoryPlayer inventoryPlayer) {
@@ -107,45 +110,45 @@ public class ChiselContainer extends Container {
 
     @Override
     public ItemStack transferStackInSlot(EntityPlayer player, int index) {
-        ItemStack itemstack = ItemStack.EMPTY;
+        ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = this.inventorySlots.get(index);
 
         if (slot != null && slot.getHasStack()) {
-            ItemStack itemstack1 = slot.getStack();
-            itemstack = itemstack1.copy();
+            ItemStack itemStack1 = slot.getStack();
+            itemStack = itemStack1.copy();
 
             if (index == 0) {
-                if (!this.mergeItemStack(itemstack1, 10, 46, true)) {
+                if (!this.mergeItemStack(itemStack1, 10, 46, true)) {
                     return ItemStack.EMPTY;
                 }
 
-                slot.onSlotChange(itemstack1, itemstack);
+                slot.onSlotChange(itemStack1, itemStack);
             } else if (index >= 9 && index < 36) {
-                if (!this.mergeItemStack(itemstack1, 36, 45, false)) {
+                if (!this.mergeItemStack(itemStack1, 36, 45, false)) {
                     return ItemStack.EMPTY;
                 }
             } else if (index >= 36 && index < 45) {
-                if (!this.mergeItemStack(itemstack1, 9, 36, false)) {
+                if (!this.mergeItemStack(itemStack1, 9, 36, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!this.mergeItemStack(itemstack1, 9, 45, false)) {
+            } else if (!this.mergeItemStack(itemStack1, 9, 45, false)) {
                 return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty()) {
+            if (itemStack1.isEmpty()) {
                 slot.putStack(ItemStack.EMPTY);
             } else {
                 slot.onSlotChanged();
             }
 
-            if (itemstack1.getCount() == itemstack.getCount()) {
+            if (itemStack1.getCount() == itemStack.getCount()) {
                 return ItemStack.EMPTY;
             }
 
-            slot.onTake(player, itemstack1);
+            slot.onTake(player, itemStack1);
         }
 
-        return itemstack;
+        return itemStack;
     }
 
     @Override

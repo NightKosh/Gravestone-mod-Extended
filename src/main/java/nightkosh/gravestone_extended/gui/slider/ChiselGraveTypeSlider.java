@@ -15,15 +15,19 @@ import nightkosh.gravestone_extended.gui.GSChiselCraftingGui;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @SideOnly(Side.CLIENT)
-public class ChiselTypeSlider extends AbstractSlider {
-    GSChiselCraftingGui gui;
+public class ChiselGraveTypeSlider extends AbstractSlider {
 
-    public ChiselTypeSlider(int id, int xPos, int yPos, int width, int height, double currentVal, GSChiselCraftingGui gui) {
-        super(id, xPos, yPos, width, height, "", "", 0, EnumGraveType.values().length - 2, currentVal, false, false, (slider) -> {
+    protected GSChiselCraftingGui gui;
 
-            gui.setType(EnumGraveType.values()[slider.getValueInt()]);
+    public ChiselGraveTypeSlider(int id, int xPos, int yPos, int width, int height, double currentVal, GSChiselCraftingGui gui) {
+        this(id, xPos, yPos, width, height, EnumGraveType.values().length - 4, currentVal, gui, slider -> {
+            gui.setGraveType(EnumGraveType.values()[slider.getValueInt()]);
             gui.sendMessage();
         });
+    }
+
+    public ChiselGraveTypeSlider(int id, int xPos, int yPos, int width, int height, int maxVal, double currentVal, GSChiselCraftingGui gui, ISlider slider) {
+        super(id, xPos, yPos, width, height, "", "", 0, maxVal, currentVal, false, false, slider);
 
         this.gui = gui;
     }
@@ -34,6 +38,10 @@ public class ChiselTypeSlider extends AbstractSlider {
         if (this.gui != null) {
             num += this.gui.getMaterial().ordinal();
         }
-        return ModGravestoneExtended.proxy.getLocalizedString(EnumGraves.getById(num).getUnLocalizedName() + ".name");
+        return ModGravestoneExtended.proxy.getLocalizedString(getName(num) + ".name");
+    }
+
+    protected String getName(int num) {
+        return EnumGraves.getById(num).getUnLocalizedName();
     }
 }

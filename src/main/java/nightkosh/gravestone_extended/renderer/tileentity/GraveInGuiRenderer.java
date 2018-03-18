@@ -23,13 +23,6 @@ public class GraveInGuiRenderer {
 
         scaleAndRotate(x, y, SCALE_GRAVE, partialTicks);
 
-//        GL11.glTranslatef(x, y, 80);
-//
-//        float time = Minecraft.getMinecraft().world.getTotalWorldTime() + partialTicks;
-//        GL11.glRotatef(time % 360, 0, 1, 0);
-//
-//        GL11.glScaled(SCALE_GRAVE, SCALE_GRAVE, SCALE_GRAVE);
-
         TileEntityGraveStoneRenderer.instance.renderGrave(null, grave, isEnchanted, isMossy, false, ItemStack.EMPTY, false, ItemStack.EMPTY);
 
         GL11.glPopMatrix();
@@ -39,12 +32,6 @@ public class GraveInGuiRenderer {
         GL11.glPushMatrix();
 
         scaleAndRotate(x, y, SCALE_MEMORIAL, partialTicks);
-//        GL11.glTranslatef(x, y, 80);
-//
-//        float time = Minecraft.getMinecraft().world.getTotalWorldTime() + partialTicks;
-//        GL11.glRotatef(time % 360, 0, 1, 0);
-//
-//        GL11.glScaled(SCALE_MEMORIAL, SCALE_MEMORIAL, SCALE_MEMORIAL);
 
         TileEntityMemorialRenderer.instance.renderMemorial(null, memorial, memorial.getMemorialType(), isEnchanted, isMossy);
 
