@@ -21,7 +21,7 @@ public class GraveRecipeInventory implements IInventory {
     public GraveRecipeInventory(int slotsCount) {
         this.slotsCount = slotsCount;
         stackList = new ItemStack[slotsCount];
-        Arrays.fill(stackList, ItemStack.EMPTY);
+        this.clear();
     }
 
     @Override
@@ -101,7 +101,7 @@ public class GraveRecipeInventory implements IInventory {
 
     @Override
     public void clear() {
-
+        Arrays.fill(stackList, ItemStack.EMPTY);
     }
 
     @Override
