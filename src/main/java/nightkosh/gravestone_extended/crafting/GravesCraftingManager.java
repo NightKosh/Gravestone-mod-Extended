@@ -3,6 +3,8 @@ package nightkosh.gravestone_extended.crafting;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
+import nightkosh.gravestone.api.grave.IEnumGraveMaterial;
+import nightkosh.gravestone.api.grave.IEnumGraveType;
 import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
@@ -50,18 +52,29 @@ public class GravesCraftingManager {
 
     private static void addGravesRecipesForAllMaterials(EnumGraveType graveType) {
         for (int i = 0; i <= EnumGraveMaterial.ICE.ordinal(); i++) {
-            RECIPES.add(new GravestoneRecipe(true, graveType, EnumGraveMaterial.values()[i],
-                    new ArrayList<>(Arrays.asList(new ItemStack(EnumGraveMaterial.values()[i].getBlock(), 1))),
-                    getStackWithNTB(GSBlock.GRAVE_STONE, EnumGraves.getByTypeAndMaterial(graveType, EnumGraveMaterial.values()[i]).ordinal())));
+            EnumGraveMaterial material = EnumGraveMaterial.values()[i];
+            addRecipeForAllMaterials(graveType, EnumGraves.getByTypeAndMaterial(graveType, material).ordinal(), material, 1);
         }
     }
 
     private static void addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType memorialType, int amountOfBlocks) {
         for (int i = 0; i <= EnumGraveMaterial.ICE.ordinal(); i++) {
-            RECIPES.add(new GravestoneRecipe(true, memorialType, EnumGraveMaterial.values()[i],
-                    new ArrayList<>(Arrays.asList(new ItemStack(EnumGraveMaterial.values()[i].getBlock(), amountOfBlocks))),
-                    getStackWithNTB(GSBlock.MEMORIAL, EnumMemorials.getByTypeAndMaterial(memorialType, EnumGraveMaterial.values()[i]).ordinal())));
+            EnumGraveMaterial material = EnumGraveMaterial.values()[i];
+            addRecipeForAllMaterials(memorialType, EnumMemorials.getByTypeAndMaterial(memorialType, material).ordinal(), material, amountOfBlocks);
         }
+    }
+
+    private static void addRecipeForAllMaterials(IEnumGraveType type, int graveType, EnumGraveMaterial material, int amountOfBlocks) {
+        int meta = 0;
+        if (material == EnumGraveMaterial.DIORITE) {
+            meta = IEnumGraveMaterial.DIORITE_META;
+        } else if (material == EnumGraveMaterial.ANDESITE) {
+            meta = IEnumGraveMaterial.DIORITE_META;
+        } else if (material == EnumGraveMaterial.GRANITE) {
+            meta = IEnumGraveMaterial.DIORITE_META;
+        }
+
+        RECIPES.add(new GravestoneRecipe(true, type, material, Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)), getStackWithNTB(GSBlock.MEMORIAL, graveType)));
     }
 
     public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
@@ -73,9 +86,11 @@ public class GravesCraftingManager {
         return null;
     }
 
-    public ItemStack findMatchingRecipe(List<ItemStack> requiredItems, boolean isGravestone, EnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
+    public ItemStack findMatchingRecipe(List<ItemStack> requiredItems, boolean isGravestone, EnumGraveType graveType,
+                                        EnumMemorials.EnumMemorialType memorialType, EnumGraveMaterial material,
+                                        boolean isEnchanted, boolean isMossy) {
         for (GravestoneRecipe recipe : RECIPES) {
-            if (recipe.match(isGravestone, graveType, material, isEnchanted, isMossy, requiredItems)) {
+            if (recipe.match(isGravestone, (isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, requiredItems)) {
                 return recipe.getResultItem(requiredItems);
             }
         }
