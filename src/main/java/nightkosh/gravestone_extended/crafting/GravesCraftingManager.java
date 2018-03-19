@@ -31,15 +31,19 @@ public class GravesCraftingManager {
         addGravesRecipesForAllMaterials(EnumGraveType.VERTICAL_PLATE);
         addGravesRecipesForAllMaterials(EnumGraveType.CROSS);
         addGravesRecipesForAllMaterials(EnumGraveType.OBELISK);
+        addGravesRecipesForAllMaterials(EnumGraveType.CELTIC_CROSS);
         addGravesRecipesForAllMaterials(EnumGraveType.HORIZONTAL_PLATE);
+        addGravesRecipesForAllMaterials(EnumGraveType.VILLAGER_STATUE);
         addGravesRecipesForAllMaterials(EnumGraveType.DOG_STATUE);
         addGravesRecipesForAllMaterials(EnumGraveType.CAT_STATUE);
         addGravesRecipesForAllMaterials(EnumGraveType.HORSE_STATUE);
+        addGravesRecipesForAllMaterials(EnumGraveType.CREEPER_STATUE);
         //TODO EnumGraves.EnumGraveType.SWORD
 
         // Memorials
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.CROSS, 6);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.OBELISK, 6);
+        addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.CELTIC_CROSS, 5);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.STEVE_STATUE, 3);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.VILLAGER_STATUE, 3);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.ANGEL_STATUE, 3);
