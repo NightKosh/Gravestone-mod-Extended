@@ -12,6 +12,7 @@ import nightkosh.gravestone_extended.core.GSBlock;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -77,20 +78,21 @@ public class GravesCraftingManager {
         RECIPES.add(new GravestoneRecipe(true, type, material, Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)), getStackWithNTB(GSBlock.MEMORIAL, graveType)));
     }
 
-    public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
+    public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumMemorials.EnumMemorialType memorialType,
+                                              EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
         for (GravestoneRecipe recipe : RECIPES) {
-            if (recipe.match(isGravestone, graveType, material, isEnchanted, isMossy)) {
+            if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy)) {
                 return recipe.getRequiredItems(isEnchanted, isMossy);
             }
         }
-        return null;
+        return Collections.EMPTY_LIST;
     }
 
     public ItemStack findMatchingRecipe(List<ItemStack> requiredItems, boolean isGravestone, EnumGraveType graveType,
                                         EnumMemorials.EnumMemorialType memorialType, EnumGraveMaterial material,
                                         boolean isEnchanted, boolean isMossy) {
         for (GravestoneRecipe recipe : RECIPES) {
-            if (recipe.match(isGravestone, (isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, requiredItems)) {
+            if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, requiredItems)) {
                 return recipe.getResultItem(requiredItems);
             }
         }

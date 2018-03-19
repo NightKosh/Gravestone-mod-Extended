@@ -96,17 +96,16 @@ public class GravestoneRecipe {
         return material;
     }
 
-    public boolean match(GravestoneRecipe recipe) {
-        return this.match(recipe.isGravestone(), recipe.getGraveType(), recipe.getMaterial(), false, false, recipe.getRequiredItems());
+//    public boolean match(GravestoneRecipe recipe) {
+//        return this.match(recipe.isGravestone(), recipe.getGraveType(), recipe.getMaterial(), false, false, recipe.getRequiredItems());
+//    }
+
+    public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
+        return  this.getGraveType() == graveType && this.getMaterial() == material && (this.canBeMossy || !isMossy);
     }
 
-    public boolean match(boolean isGravestone, IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
-        return  this.isGravestone() == isGravestone && this.getGraveType() == graveType &&
-                this.getMaterial() == material && (this.canBeMossy || !isMossy);
-    }
-
-    public boolean match(boolean isGravestone, IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy, List<ItemStack> requiredItems) {
-        return  this.match(isGravestone, graveType, material, isEnchanted, isMossy) && this.containItems(requiredItems);
+    public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy, List<ItemStack> requiredItems) {
+        return  this.match(graveType, material, isEnchanted, isMossy) && this.containItems(requiredItems);
     }
 
     public boolean containItems(List<ItemStack> items) {

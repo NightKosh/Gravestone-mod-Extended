@@ -176,7 +176,7 @@ public class ChiselContainer extends Container {
             }
         }
 
-        List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, material, isEnchanted, isMossy);
+        List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
         this.recipeMatrix.clear();
         if (items != null) {
             int slot = 0;
