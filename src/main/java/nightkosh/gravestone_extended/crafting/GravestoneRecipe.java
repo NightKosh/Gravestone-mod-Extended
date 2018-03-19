@@ -54,12 +54,17 @@ public class GravestoneRecipe {
         ItemStack item = this.getResultItem();
         if (item != null) {
             NBTTagCompound nbt = item.getTagCompound();
+            if (nbt == null) {
+                nbt = new NBTTagCompound();
+            }
             if (isEnchanted) {
                 nbt.setBoolean("Enchanted", isEnchanted);
             }
             if (isMossy) {
                 nbt.setBoolean("Mossy", isMossy);
             }
+
+            item.setTagCompound(nbt);
         }
         return item;
     }
