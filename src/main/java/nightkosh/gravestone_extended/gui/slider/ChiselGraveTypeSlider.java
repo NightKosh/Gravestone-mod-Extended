@@ -44,4 +44,8 @@ public class ChiselGraveTypeSlider extends AbstractSlider {
     protected String getName(int num) {
         return EnumGraves.getById(num).getUnLocalizedName();
     }
+
+    public EnumGraveType getGraveType() {
+        return EnumGraveType.values()[this.getValueInt()];
+    }
 }

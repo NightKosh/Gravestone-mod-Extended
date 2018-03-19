@@ -27,4 +27,8 @@ public class ChiselMemorialTypeSlider extends ChiselGraveTypeSlider {
     protected String getName(int num) {
         return EnumMemorials.getById(num).getUnLocalizedName();
     }
+
+    public EnumMemorials.EnumMemorialType getMemorialType() {
+        return EnumMemorials.EnumMemorialType.values()[this.getValueInt()];
+    }
 }

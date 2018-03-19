@@ -31,4 +31,8 @@ public class ChiselMaterialSlider extends AbstractSlider {
                 .append(ModGraveStone.proxy.getLocalizedMaterial(EnumGraveMaterial.values()[this.getValueInt()]))
                 .toString();
     }
+
+    public EnumGraveMaterial getMaterial() {
+        return EnumGraveMaterial.values()[this.getValueInt()];
+    }
 }

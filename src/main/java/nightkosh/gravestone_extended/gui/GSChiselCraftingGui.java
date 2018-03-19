@@ -4,7 +4,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraftforge.fml.client.config.GuiCheckBox;
-import net.minecraftforge.fml.client.config.GuiSlider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
@@ -13,11 +12,13 @@ import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone.gui.GuiContainerBase;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials.EnumMemorialType;
+import nightkosh.gravestone_extended.core.MessageHandler;
 import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.gui.container.ChiselContainer;
 import nightkosh.gravestone_extended.gui.slider.ChiselGraveTypeSlider;
 import nightkosh.gravestone_extended.gui.slider.ChiselMaterialSlider;
 import nightkosh.gravestone_extended.gui.slider.ChiselMemorialTypeSlider;
+import nightkosh.gravestone_extended.packets.ChiselMessageToServer;
 import nightkosh.gravestone_extended.renderer.tileentity.GraveInGuiRenderer;
 import org.lwjgl.opengl.GL11;
 
@@ -34,7 +35,6 @@ public class GSChiselCraftingGui extends GuiContainerBase {
 
     private final int GRAVE_BUTTON_ID = 0;
     private final int MEMORIAL_BUTTON_ID = 1;
-    //TODO id == 2 may be needed for additional types
     private final int GRAVE_TYPE_SLIDER_ID = 3;
     private final int MEMORIAL_TYPE_SLIDER_ID = 4;
     private final int MATERIAL_SLIDER_ID = 5;
@@ -51,10 +51,10 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     private GuiButton graveButton;
     private GuiButton memorialButton;
 
-    private GuiSlider graveTypeSlider;
-    private GuiSlider memorialTypeSlider;
+    private ChiselGraveTypeSlider graveTypeSlider;
+    private ChiselMemorialTypeSlider memorialTypeSlider;
 
-    private GuiSlider materialSlider;
+    private ChiselMaterialSlider materialSlider;
 
     private GuiButton isEnchantedButton;
     private GuiButton isMossyButton;
@@ -97,16 +97,16 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         GL11.glColor4f(1, 1, 1, 1);
         this.mc.renderEngine.bindTexture(Resources.CHISEL_GUI);
         int x = (width - xSize) / 2;
-        int y = (height - ySize) / 2 + 30;
+        int y = (height - ySize) / 2;
 
-        this.drawTexturedModalRect(x, y, 0, 0, 256, ySize);
+        this.drawTexturedModalRect(x, y + 30, 0, 0, 256, ySize);
 
-        this.drawString(this.fontRenderer, this.REQUIRED_ITEMS_STR, 310, 170, 16777215);
+        this.drawString(this.fontRenderer, this.REQUIRED_ITEMS_STR, x + 185, y + 133, 16777215);
 
         if (isGravestone) {
-            GraveInGuiRenderer.renderGraveInGui(340, 30, EnumGraves.getByTypeAndMaterial(graveType, material), isEnchanted, isMossy, par1);
+            GraveInGuiRenderer.renderGraveInGui(x + 215, y - 7, EnumGraves.getByTypeAndMaterial(graveType, material), isEnchanted, isMossy, par1);
         } else {
-            GraveInGuiRenderer.renderMemorialInGui(340, 80, EnumMemorials.getByTypeAndMaterial(memorialType, material), isEnchanted, isMossy, par1);
+            GraveInGuiRenderer.renderMemorialInGui(x + 215, y + 43, EnumMemorials.getByTypeAndMaterial(memorialType, material), isEnchanted, isMossy, par1);
         }
     }
 
@@ -142,27 +142,16 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     }
 
     public void sendMessage() {
-//        NBTTagCompound playerNbt = new NBTTagCompound();// = player.getEntityData();
-//        player.writeEntityToNBT(playerNbt);
-//        NBTTagCompound nbt = new NBTTagCompound();
-//        NBTTagCompound graveNbt = new NBTTagCompound();
-//        graveNbt.setBoolean("IsGravestone", isGravestone);
-//        graveNbt.setInteger("GraveType", graveType.ordinal());
-//        graveNbt.setInteger("Material", material.ordinal());
-//        graveNbt.setBoolean("IsEnchanted", isEnchanted);
-//        graveNbt.setBoolean("IsMossy", isMossy);
-//        playerNbt.setTag("GraveCrafting", graveNbt);
-////            player.writeToNBT(nbt);
-//        player.readEntityFromNBT(playerNbt);
-//
-//        GSMessageHandler.networkWrapper.sendToServer(new ChiselMessageToServer(player, isGravestone, graveType.ordinal(), material.ordinal(), isEnchanted, isMossy));
-
         ((ChiselContainer) this.inventorySlots).isGravestone = isGravestone;
         ((ChiselContainer) this.inventorySlots).graveType = graveType;
         ((ChiselContainer) this.inventorySlots).memorialType = memorialType;
         ((ChiselContainer) this.inventorySlots).material = material;
         ((ChiselContainer) this.inventorySlots).isEnchanted = isEnchanted;
         ((ChiselContainer) this.inventorySlots).isMossy = isMossy;
+
+        if (this.player.world.isRemote) {
+            MessageHandler.networkWrapper.sendToServer(new ChiselMessageToServer(player, isGravestone, graveType.ordinal(), memorialType.ordinal(), material.ordinal(), isEnchanted, isMossy));
+        }
     }
 
     public void setGraveType(EnumGraveType graveType) {

@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
@@ -98,13 +99,17 @@ public class ChiselContainer extends Container {
 
         if (!this.world.isRemote) {
             for (int i = 0; i < CRAFTING_SLOTS_COUNT; i++) {
-                ItemStack itemstack = this.craftMatrix.getStackInSlot(i);
+                ItemStack itemStack = this.craftMatrix.getStackInSlot(i);
 
-                if (itemstack != null && itemstack != ItemStack.EMPTY) {
-//                    player.dropPlayerItemWithRandomChoice(itemstack, false); //TODO
-                    player.dropItem(itemstack, false);
+                if (itemStack != null && itemStack != ItemStack.EMPTY) {
+                    player.dropItem(itemStack, false);
                 }
             }
+        }
+
+        NBTTagCompound nbt = player.getEntityData();
+        if (nbt != null && nbt.hasKey("GraveCrafting")) {
+            nbt.removeTag("GraveCrafting");
         }
     }
 
@@ -158,6 +163,19 @@ public class ChiselContainer extends Container {
 
     @Override
     public void detectAndSendChanges() {
+        if (player != null) {
+            NBTTagCompound nbt = player.getEntityData();
+            if (nbt != null && nbt.hasKey("GraveCrafting")) {
+                NBTTagCompound graveNbt = nbt.getCompoundTag("GraveCrafting");
+                isGravestone = graveNbt.getBoolean("IsGravestone");
+                graveType = EnumGraveType.values()[graveNbt.getInteger("GraveType")];
+                memorialType = EnumMemorials.EnumMemorialType.values()[graveNbt.getInteger("MemorialType")];
+                material = EnumGraveMaterial.values()[graveNbt.getInteger("Material")];
+                isEnchanted = graveNbt.getBoolean("IsEnchanted");
+                isMossy = graveNbt.getBoolean("IsMossy");
+            }
+        }
+
         List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, material, isEnchanted, isMossy);
         this.recipeMatrix.clear();
         if (items != null) {
@@ -170,18 +188,5 @@ public class ChiselContainer extends Container {
             }
         }
         super.detectAndSendChanges();
-
-//        if (player != null) {
-//            NBTTagCompound nbt = new NBTTagCompound();// = player.getEntityData();
-//            player.writeEntityToNBT(nbt);// = player.getEntityData().hasKey("GraveCrafting");
-//            if (nbt != null && nbt.hasKey("GraveCrafting")) {
-//                NBTTagCompound graveNbt = nbt.getCompoundTag("GraveCrafting");
-//                isGravestone = graveNbt.getBoolean("IsGravestone");
-//                graveType = EnumGraves.EnumGraveType.values()[graveNbt.getInteger("GraveType")];
-//                material = EnumGraveMaterial.values()[graveNbt.getInteger("Material")];
-//                isEnchanted = graveNbt.getBoolean("IsEnchanted");
-//                isMossy = graveNbt.getBoolean("IsMossy");
-//            }
-//        }
     }
 }
