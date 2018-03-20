@@ -96,10 +96,6 @@ public class GravestoneRecipe {
         return material;
     }
 
-//    public boolean match(GravestoneRecipe recipe) {
-//        return this.match(recipe.isGravestone(), recipe.getGraveType(), recipe.getMaterial(), false, false, recipe.getRequiredItems());
-//    }
-
     public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
         return  this.getGraveType() == graveType && this.getMaterial() == material && (this.canBeMossy || !isMossy);
     }

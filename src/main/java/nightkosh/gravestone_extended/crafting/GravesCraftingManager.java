@@ -58,18 +58,18 @@ public class GravesCraftingManager {
     private static void addGravesRecipesForAllMaterials(EnumGraveType graveType) {
         for (int i = 0; i <= EnumGraveMaterial.ICE.ordinal(); i++) {
             EnumGraveMaterial material = EnumGraveMaterial.values()[i];
-            addRecipeForAllMaterials(graveType, EnumGraves.getByTypeAndMaterial(graveType, material).ordinal(), material, 1);
+            addRecipeForAllMaterials(true, graveType, EnumGraves.getByTypeAndMaterial(graveType, material).ordinal(), material, 1);
         }
     }
 
     private static void addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType memorialType, int amountOfBlocks) {
         for (int i = 0; i <= EnumGraveMaterial.ICE.ordinal(); i++) {
             EnumGraveMaterial material = EnumGraveMaterial.values()[i];
-            addRecipeForAllMaterials(memorialType, EnumMemorials.getByTypeAndMaterial(memorialType, material).ordinal(), material, amountOfBlocks);
+            addRecipeForAllMaterials(false, memorialType, EnumMemorials.getByTypeAndMaterial(memorialType, material).ordinal(), material, amountOfBlocks);
         }
     }
 
-    private static void addRecipeForAllMaterials(IEnumGraveType type, int graveType, EnumGraveMaterial material, int amountOfBlocks) {
+    private static void addRecipeForAllMaterials(boolean isGravestone, IEnumGraveType type, int graveType, EnumGraveMaterial material, int amountOfBlocks) {
         int meta = 0;
         if (material == EnumGraveMaterial.DIORITE) {
             meta = IEnumGraveMaterial.DIORITE_META;
@@ -79,7 +79,7 @@ public class GravesCraftingManager {
             meta = IEnumGraveMaterial.DIORITE_META;
         }
 
-        RECIPES.add(new GravestoneRecipe(true, type, material, Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)), getStackWithNTB(GSBlock.MEMORIAL, graveType)));
+        RECIPES.add(new GravestoneRecipe(isGravestone, type, material, Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)), getStackWithNTB(GSBlock.MEMORIAL, graveType)));
     }
 
     public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumMemorials.EnumMemorialType memorialType,

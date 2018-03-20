@@ -11,6 +11,7 @@ import nightkosh.gravestone.api.grave.EnumGraveType;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.crafting.GravesCraftingManager;
 import nightkosh.gravestone_extended.inventory.GraveRecipeInventory;
+import nightkosh.gravestone_extended.packets.ChiselMessageToServer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,8 +109,8 @@ public class ChiselContainer extends Container {
         }
 
         NBTTagCompound nbt = player.getEntityData();
-        if (nbt != null && nbt.hasKey("GraveCrafting")) {
-            nbt.removeTag("GraveCrafting");
+        if (nbt != null && nbt.hasKey(ChiselMessageToServer.DATA_GROUP)) {
+            nbt.removeTag(ChiselMessageToServer.DATA_GROUP);
         }
     }
 
@@ -163,30 +164,38 @@ public class ChiselContainer extends Container {
 
     @Override
     public void detectAndSendChanges() {
+        boolean changed = false;
         if (player != null) {
             NBTTagCompound nbt = player.getEntityData();
-            if (nbt != null && nbt.hasKey("GraveCrafting")) {
-                NBTTagCompound graveNbt = nbt.getCompoundTag("GraveCrafting");
-                isGravestone = graveNbt.getBoolean("IsGravestone");
-                graveType = EnumGraveType.values()[graveNbt.getInteger("GraveType")];
-                memorialType = EnumMemorials.EnumMemorialType.values()[graveNbt.getInteger("MemorialType")];
-                material = EnumGraveMaterial.values()[graveNbt.getInteger("Material")];
-                isEnchanted = graveNbt.getBoolean("IsEnchanted");
-                isMossy = graveNbt.getBoolean("IsMossy");
+            if (nbt != null && nbt.hasKey(ChiselMessageToServer.DATA_GROUP)) {
+                NBTTagCompound graveNbt = nbt.getCompoundTag(ChiselMessageToServer.DATA_GROUP);
+                isGravestone = graveNbt.getBoolean(ChiselMessageToServer.IS_GRAVESTONE);
+                graveType = EnumGraveType.values()[graveNbt.getInteger(ChiselMessageToServer.GRAVE_TYPE)];
+                memorialType = EnumMemorials.EnumMemorialType.values()[graveNbt.getInteger(ChiselMessageToServer.MEMORIAL_TYPE)];
+                material = EnumGraveMaterial.values()[graveNbt.getInteger(ChiselMessageToServer.MATERIAL)];
+                isEnchanted = graveNbt.getBoolean(ChiselMessageToServer.IS_ENCHANTED);
+                isMossy = graveNbt.getBoolean(ChiselMessageToServer.IS_MOSSY);
+                nbt.removeTag(ChiselMessageToServer.DATA_GROUP);
+                changed = true;
             }
         }
 
-        List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
-        this.recipeMatrix.clear();
-        if (items != null) {
-            int slot = 0;
-            for (ItemStack stack : items) {
-                if (stack != null && stack != ItemStack.EMPTY) {
-                    this.recipeMatrix.setInventorySlotContents(slot, stack.copy());
+        if (changed) {
+            List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
+            this.recipeMatrix.clear();
+            if (items != null) {
+                int slot = 0;
+                for (ItemStack stack : items) {
+                    if (stack != null && stack != ItemStack.EMPTY) {
+                        this.recipeMatrix.setInventorySlotContents(slot, stack.copy());
+                    }
+                    slot++;
                 }
-                slot++;
             }
+
+            this.onCraftMatrixChanged(this.craftMatrix);
         }
+
         super.detectAndSendChanges();
     }
 }

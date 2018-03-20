@@ -42,6 +42,7 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     private final int IS_ENCHANTED_CHECKBOX_ID = 6;
     private final int IS_MOSSY_CHECKBOX_ID = 7;
 
+    //TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     private final String GRAVE_BUTTON_STR = "Gravestone";//ModGraveStone.proxy.getLocalizedString("gui.edit_grave.title");
     private final String MEMORIAL_BUTTON_STR = "Memorial";//ModGraveStone.proxy.getLocalizedString("gui.edit_grave.close");
     private final String ENCHANTED_BUTTON_STR = "Enchanted";
@@ -90,6 +91,8 @@ public class GSChiselCraftingGui extends GuiContainerBase {
 
         this.buttonList.add(isEnchantedButton = new GuiCheckBox(IS_ENCHANTED_CHECKBOX_ID, 125, 95, ENCHANTED_BUTTON_STR, false));
         this.buttonList.add(isMossyButton = new GuiCheckBox(IS_MOSSY_CHECKBOX_ID, 200, 95, MOSSY_BUTTON_STR, false));
+
+        this.sendMessage();
     }
 
     @Override
@@ -114,11 +117,11 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     public void actionPerformed(GuiButton button) {
         switch (button.id) {
             case GRAVE_BUTTON_ID:
-                this.updateSlidersState(true);
+                this.updateSlidersAndButtonsState(true);
                 this.sendMessage();
                 break;
             case MEMORIAL_BUTTON_ID:
-                this.updateSlidersState(false);
+                this.updateSlidersAndButtonsState(false);
                 this.sendMessage();
                 break;
 
@@ -133,7 +136,7 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         }
     }
 
-    private void updateSlidersState(boolean isGravestone) {
+    private void updateSlidersAndButtonsState(boolean isGravestone) {
         this.isGravestone = isGravestone;
         this.graveButton.enabled = !this.isGravestone;
         this.memorialButton.enabled = this.isGravestone;

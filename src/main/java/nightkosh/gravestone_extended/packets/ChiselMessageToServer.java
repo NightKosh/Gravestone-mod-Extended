@@ -17,6 +17,14 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
  */
 public class ChiselMessageToServer implements IMessage, IMessageHandler<ChiselMessageToServer, IMessage> {
 
+    public static final String DATA_GROUP = "GraveCrafting";
+    public static final String IS_GRAVESTONE = "IsGravestone";
+    public static final String GRAVE_TYPE = "GraveType";
+    public static final String MEMORIAL_TYPE = "MemorialType";
+    public static final String MATERIAL = "Material";
+    public static final String IS_ENCHANTED = "IsEnchanted";
+    public static final String IS_MOSSY = "IsMossy";
+
     private int playerID;
     private int dimensionID;
     private boolean isGravestone;
@@ -68,20 +76,18 @@ public class ChiselMessageToServer implements IMessage, IMessageHandler<ChiselMe
     public IMessage onMessage(ChiselMessageToServer message, MessageContext ctx) {
         if (ctx.side.isServer()) {
             World world = DimensionManager.getWorld(message.dimensionID);
-            if (world == null || ((ctx.getServerHandler().player != null) && (ctx.getServerHandler().player.getEntityId() != message.playerID))) {
-                return null;
+            if (world != null && ctx.getServerHandler().player != null && ctx.getServerHandler().player.getEntityId() == message.playerID) {
+                EntityPlayer player = (EntityPlayer) world.getEntityByID(message.playerID);
+                NBTTagCompound playerNbt = player.getEntityData();
+                NBTTagCompound graveNbt = new NBTTagCompound();
+                graveNbt.setBoolean(IS_GRAVESTONE, message.isGravestone);
+                graveNbt.setInteger(GRAVE_TYPE, message.graveType);
+                graveNbt.setInteger(MEMORIAL_TYPE, message.memorialType);
+                graveNbt.setInteger(MATERIAL, message.material);
+                graveNbt.setBoolean(IS_ENCHANTED, message.isEnchanted);
+                graveNbt.setBoolean(IS_MOSSY, message.isMossy);
+                playerNbt.setTag(DATA_GROUP, graveNbt);
             }
-            EntityPlayer player = (EntityPlayer) world.getEntityByID(message.playerID);
-            NBTTagCompound playerNbt = player.getEntityData();
-            NBTTagCompound graveNbt = new NBTTagCompound();
-            graveNbt.setBoolean("IsGravestone", message.isGravestone);
-            graveNbt.setInteger("GraveType", message.graveType);
-            graveNbt.setInteger("MemorialType", message.memorialType);
-            graveNbt.setInteger("Material", message.material);
-            graveNbt.setBoolean("IsEnchanted", message.isEnchanted);
-            graveNbt.setBoolean("IsMossy", message.isMossy);
-            playerNbt.setTag("GraveCrafting", graveNbt);
-
         }
         return null;
     }
