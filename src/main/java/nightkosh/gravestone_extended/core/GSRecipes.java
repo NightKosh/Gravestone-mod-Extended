@@ -250,6 +250,69 @@ public class GSRecipes {
                 'b', GSBlock.BONE_BLOCK,
                 'c', Items.SHIELD);
 
+
+        // alternative recipes
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_pickaxe_iron_2"), GROUP, new ItemStack(GSItem.BONE_PICKAXE_IRON),
+                "bi", "ii",
+                'b', GSItem.BONE_PICKAXE,
+                'i', Items.IRON_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_pickaxe_golden_2"), GROUP, new ItemStack(GSItem.BONE_PICKAXE_GOLDEN),
+                "bg", "gg",
+                'b', GSItem.BONE_PICKAXE,
+                'g', Items.GOLD_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_pickaxe_diamond_2"), GROUP, new ItemStack(GSItem.BONE_PICKAXE_DIAMOND),
+                "bd", "dd",
+                'b', GSItem.BONE_PICKAXE,
+                'd', Items.DIAMOND);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_axe_iron_2"), GROUP, new ItemStack(GSItem.BONE_AXE_IRON),
+                "bi", "ii",
+                'b', GSItem.BONE_AXE,
+                'i', Items.IRON_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_axe_golden_2"), GROUP, new ItemStack(GSItem.BONE_AXE_GOLDEN),
+                "bg", "gg",
+                'b', GSItem.BONE_AXE,
+                'g', Items.GOLD_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_axe_diamond_2"), GROUP, new ItemStack(GSItem.BONE_AXE_DIAMOND),
+                "bd", "dd",
+                'b', GSItem.BONE_AXE,
+                'd', Items.DIAMOND);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_hoe_iron_2"), GROUP, new ItemStack(GSItem.BONE_HOE_IRON),
+                "b ", "ii",
+                'b', GSItem.BONE_HOE,
+                'i', Items.IRON_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_hoe_golden_2"), GROUP, new ItemStack(GSItem.BONE_HOE_GOLDEN),
+                "b ", "gg",
+                'b', GSItem.BONE_HOE,
+                'g', Items.GOLD_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_hoe_diamond_2"), GROUP, new ItemStack(GSItem.BONE_HOE_DIAMOND),
+                "b ", "dd",
+                'b', GSItem.BONE_HOE,
+                'd', Items.DIAMOND);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_sword_iron_2"), GROUP, new ItemStack(GSItem.BONE_SWORD_IRON),
+                "b ", "ii",
+                'b', GSItem.BONE_SWORD,
+                'i', Items.IRON_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_sword_golden_2"), GROUP, new ItemStack(GSItem.BONE_SWORD_GOLDEN),
+                "b ", "gg",
+                'b', GSItem.BONE_SWORD,
+                'g', Items.GOLD_INGOT);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_sword_diamond_2"), GROUP, new ItemStack(GSItem.BONE_SWORD_DIAMOND),
+                "b ", "dd",
+                'b', GSItem.BONE_SWORD,
+                'd', Items.DIAMOND);
+
+
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "withered_glass"), GROUP, new ItemStack(GSBlock.WITHERED_GLASS, 6),
                 "ggg", "sos", "ggg",
                 'g', Blocks.GLASS,
