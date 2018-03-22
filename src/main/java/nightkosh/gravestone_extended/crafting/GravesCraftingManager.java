@@ -79,7 +79,9 @@ public class GravesCraftingManager {
             meta = IEnumGraveMaterial.DIORITE_META;
         }
 
-        RECIPES.add(new GravestoneRecipe(isGravestone, type, material, Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)), getStackWithNTB(GSBlock.MEMORIAL, graveType)));
+        RECIPES.add(new GravestoneRecipe(isGravestone, type, material,
+                Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)),
+                getStackWithNTB((isGravestone) ? GSBlock.GRAVE_STONE : GSBlock.MEMORIAL, graveType)));
     }
 
     public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumMemorials.EnumMemorialType memorialType,
