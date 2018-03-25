@@ -1,7 +1,6 @@
 package nightkosh.gravestone_extended.dimension.catacombs;
 
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -11,7 +10,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.IChunkGenerator;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -20,11 +19,11 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ChunkProviderCatacombs implements IChunkGenerator {
+public class ChunkGeneratorCatacombs implements IChunkGenerator {
 
     private final World world;
 
-    public ChunkProviderCatacombs(World world) {
+    public ChunkGeneratorCatacombs(World world) {
         super();
         this.world = world;
         this.world.setSeaLevel(150);
@@ -35,15 +34,7 @@ public class ChunkProviderCatacombs implements IChunkGenerator {
         ChunkPrimer chunkprimer = new ChunkPrimer();
         this.setBlocksInChunk(x, z, chunkprimer);
 
-        Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
-        byte[] abyte = chunk.getBiomeArray();
-
-        for (int l = 0; l < abyte.length; ++l) {
-            abyte[l] = (byte) Biome.getIdForBiome(Biomes.VOID);
-        }
-
-        chunk.generateSkylightMap();
-        return chunk;
+        return new Chunk(this.world, chunkprimer, x, z);
     }
 
     public void setBlocksInChunk(int x, int z, ChunkPrimer primer) {
@@ -68,7 +59,7 @@ public class ChunkProviderCatacombs implements IChunkGenerator {
 
     @Override
     public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-        return new ArrayList();
+        return Collections.emptyList();
     }
 
     @Nullable

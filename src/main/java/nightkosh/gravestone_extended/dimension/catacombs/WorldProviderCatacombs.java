@@ -19,14 +19,21 @@ import nightkosh.gravestone_extended.core.GSDimensions;
  */
 public class WorldProviderCatacombs extends WorldProvider {
 
-    public void createBiomeProvider() {
+    private static final Vec3d FOG_COLOR = new Vec3d(1, 1, 1);
+
+    public WorldProviderCatacombs() {
+        this.setDimension(GSDimensions.CATACOMBS.getId());
+    }
+
+    @Override
+    public void init() {
         this.biomeProvider = new BiomeProviderSingle(Biomes.VOID);
         this.hasSkyLight = false;
     }
 
     @Override
     public IChunkGenerator createChunkGenerator() {
-        return new ChunkProviderCatacombs(this.world);
+        return new ChunkGeneratorCatacombs(this.world);
     }
 
     @Override
@@ -43,7 +50,7 @@ public class WorldProviderCatacombs extends WorldProvider {
     @Override
     @SideOnly(Side.CLIENT)
     public Vec3d getFogColor(float p_76562_1_, float p_76562_2_) {
-        return new Vec3d(1, 1, 1);
+        return FOG_COLOR;
     }
 
     @Override
@@ -65,7 +72,7 @@ public class WorldProviderCatacombs extends WorldProvider {
     @Override
     @SideOnly(Side.CLIENT)
     public float getCloudHeight() {
-        return 8;
+        return 250;
     }
 
     @Override
@@ -117,10 +124,5 @@ public class WorldProviderCatacombs extends WorldProvider {
     @Override
     public int getActualHeight() {
         return 256;
-    }
-
-    @Override
-    public long getSeed() {
-        return 0;//this.world.getSeed();
     }
 }
