@@ -51,11 +51,11 @@ public class GSGraveTextGui extends GuiScreen {
     public void actionPerformed(GuiButton button) {
         switch (button.id) {
             case 0:
-                mc.displayGuiScreen((GuiScreen) null);
+                mc.displayGuiScreen(null);
                 break;
             case 1:
                 isRandomTextButtonClicked = true;
-                mc.displayGuiScreen((GuiScreen) null);
+                mc.displayGuiScreen(null);
                 break;
         }
         MessageHandler.networkWrapper.sendToServer(new GraveDeathMessageToServer(teGrave.getWorld(), teGrave.getPos().getX(), teGrave.getPos().getY(), teGrave.getPos().getZ(), this.textField.getText(), isRandomTextButtonClicked));

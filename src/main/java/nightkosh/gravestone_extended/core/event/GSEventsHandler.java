@@ -194,9 +194,9 @@ public class GSEventsHandler {
                 }
 
                 world.spawnEntity(hook);
-            }
 
-            event.setCanceled(true);
+                event.setCanceled(true);
+            }
         }
     }
 

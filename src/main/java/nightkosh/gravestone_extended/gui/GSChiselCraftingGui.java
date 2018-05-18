@@ -83,6 +83,7 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         graveButton.enabled = false;
         //type
         this.buttonList.add(graveTypeSlider = new ChiselGraveTypeSlider(GRAVE_TYPE_SLIDER_ID, HALF_W, 45, 176, 20, 0, this));
+
         this.buttonList.add(memorialTypeSlider = new ChiselMemorialTypeSlider(MEMORIAL_TYPE_SLIDER_ID, HALF_W, 45, 176, 20, 0, this));
         memorialTypeSlider.visible = false;
 
@@ -118,13 +119,10 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         switch (button.id) {
             case GRAVE_BUTTON_ID:
                 this.updateSlidersAndButtonsState(true);
-                this.sendMessage();
                 break;
             case MEMORIAL_BUTTON_ID:
                 this.updateSlidersAndButtonsState(false);
-                this.sendMessage();
                 break;
-
             case IS_ENCHANTED_CHECKBOX_ID:
                 this.isEnchanted = !this.isEnchanted;
                 this.sendMessage();
@@ -142,6 +140,7 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         this.memorialButton.enabled = this.isGravestone;
         this.graveTypeSlider.visible = this.isGravestone;
         this.memorialTypeSlider.visible = !this.isGravestone;
+        this.sendMessage();
     }
 
     public void sendMessage() {
