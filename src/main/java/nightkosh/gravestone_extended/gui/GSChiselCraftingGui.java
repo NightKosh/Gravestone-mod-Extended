@@ -78,12 +78,24 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         super.initGui();
         final int HALF_W = (width - xSize) / 2;
 
-        this.buttonList.add(graveButton = new GuiButton(GRAVE_BUTTON_ID, HALF_W, 20, 75, 20, this.GRAVE_BUTTON_STR));
-        this.buttonList.add(memorialButton = new GuiButton(MEMORIAL_BUTTON_ID, HALF_W + 100, 20, 75, 20, this.MEMORIAL_BUTTON_STR));
+        this.buttonList.add(graveButton = new GuiButton(GRAVE_BUTTON_ID, HALF_W, 20, 75, 20, this.GRAVE_BUTTON_STR) {
+            @Override
+            public void mouseReleased(int mouseX, int mouseY) {
+                super.mouseReleased(mouseX, mouseY);
+                updateSlidersAndButtonsState(true);
+            }
+        });
+        this.buttonList.add(memorialButton = new GuiButton(MEMORIAL_BUTTON_ID, HALF_W + 100, 20, 75, 20, this.MEMORIAL_BUTTON_STR) {
+            @Override
+            public void mouseReleased(int mouseX, int mouseY) {
+                super.mouseReleased(mouseX, mouseY);
+                updateSlidersAndButtonsState(false);
+            }
+        });
         graveButton.enabled = false;
+
         //type
         this.buttonList.add(graveTypeSlider = new ChiselGraveTypeSlider(GRAVE_TYPE_SLIDER_ID, HALF_W, 45, 176, 20, 0, this));
-
         this.buttonList.add(memorialTypeSlider = new ChiselMemorialTypeSlider(MEMORIAL_TYPE_SLIDER_ID, HALF_W, 45, 176, 20, 0, this));
         memorialTypeSlider.visible = false;
 
@@ -117,12 +129,6 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     @Override
     public void actionPerformed(GuiButton button) {
         switch (button.id) {
-            case GRAVE_BUTTON_ID:
-                this.updateSlidersAndButtonsState(true);
-                break;
-            case MEMORIAL_BUTTON_ID:
-                this.updateSlidersAndButtonsState(false);
-                break;
             case IS_ENCHANTED_CHECKBOX_ID:
                 this.isEnchanted = !this.isEnchanted;
                 this.sendMessage();
@@ -144,13 +150,6 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     }
 
     public void sendMessage() {
-        ((ChiselContainer) this.inventorySlots).isGravestone = isGravestone;
-        ((ChiselContainer) this.inventorySlots).graveType = graveType;
-        ((ChiselContainer) this.inventorySlots).memorialType = memorialType;
-        ((ChiselContainer) this.inventorySlots).material = material;
-        ((ChiselContainer) this.inventorySlots).isEnchanted = isEnchanted;
-        ((ChiselContainer) this.inventorySlots).isMossy = isMossy;
-
         if (this.player.world.isRemote) {
             MessageHandler.networkWrapper.sendToServer(new ChiselMessageToServer(player, isGravestone, graveType.ordinal(), memorialType.ordinal(), material.ordinal(), isEnchanted, isMossy));
         }
@@ -158,14 +157,17 @@ public class GSChiselCraftingGui extends GuiContainerBase {
 
     public void setGraveType(EnumGraveType graveType) {
         this.graveType = graveType;
+        this.sendMessage();
     }
 
     public void setMemorialType(EnumMemorialType memorialType) {
         this.memorialType = memorialType;
+        this.sendMessage();
     }
 
     public void setMaterial(EnumGraveMaterial material) {
         this.material = material;
+        this.sendMessage();
     }
 
     public EnumGraveMaterial getMaterial() {

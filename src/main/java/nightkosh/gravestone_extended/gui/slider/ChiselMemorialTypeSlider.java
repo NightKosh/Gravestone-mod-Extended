@@ -12,11 +12,8 @@ import nightkosh.gravestone_extended.gui.GSChiselCraftingGui;
 public class ChiselMemorialTypeSlider extends ChiselGraveTypeSlider {
 
     public ChiselMemorialTypeSlider(int id, int xPos, int yPos, int width, int height, double currentVal, GSChiselCraftingGui gui) {
-        this(id, xPos, yPos, width, height, EnumMemorials.EnumMemorialType.values().length - 1, currentVal, gui, slider -> {
-                    gui.setMemorialType(EnumMemorials.EnumMemorialType.values()[slider.getValueInt()]);
-                    gui.sendMessage();
-                }
-        );
+        this(id, xPos, yPos, width, height, EnumMemorials.EnumMemorialType.values().length - 1, currentVal, gui,
+                slider -> gui.setMemorialType(EnumMemorials.EnumMemorialType.values()[slider.getValueInt()]));
     }
 
     public ChiselMemorialTypeSlider(int id, int xPos, int yPos, int width, int height, int maxVal, double currentVal, GSChiselCraftingGui gui, ISlider slider) {

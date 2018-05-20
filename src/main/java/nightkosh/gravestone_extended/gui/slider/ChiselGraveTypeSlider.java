@@ -20,10 +20,8 @@ public class ChiselGraveTypeSlider extends AbstractSlider {
     protected GSChiselCraftingGui gui;
 
     public ChiselGraveTypeSlider(int id, int xPos, int yPos, int width, int height, double currentVal, GSChiselCraftingGui gui) {
-        this(id, xPos, yPos, width, height, EnumGraveType.values().length - 4, currentVal, gui, slider -> {
-            gui.setGraveType(EnumGraveType.values()[slider.getValueInt()]);
-            gui.sendMessage();
-        });
+        this(id, xPos, yPos, width, height, EnumGraveType.values().length - 4, currentVal, gui,
+                slider -> gui.setGraveType(EnumGraveType.values()[slider.getValueInt()]));
     }
 
     public ChiselGraveTypeSlider(int id, int xPos, int yPos, int width, int height, int maxVal, double currentVal, GSChiselCraftingGui gui, ISlider slider) {

@@ -70,7 +70,7 @@ public class GravestoneRecipe {
     }
 
     public List<ItemStack> getRequiredItems() {
-        return new ArrayList<ItemStack>(requiredItems);
+        return new ArrayList<>(requiredItems);
     }
 
     public List<ItemStack> getRequiredItems(boolean isEnchanted, boolean isMossy) {
@@ -109,12 +109,12 @@ public class GravestoneRecipe {
             return false;
         } else {
             for (ItemStack requiredItem : requiredItems) {
-                if (!items.stream().anyMatch((item) -> item != null && requiredItem.getItem().equals(item.getItem()) &&
+                if (items.stream().anyMatch((item) -> item != null && requiredItem.getItem().equals(item.getItem()) &&
                         requiredItem.getMetadata() == item.getMetadata() && requiredItem.getCount() <= item.getCount())) {
-                    return false;
+                    return true;
                 }
             }
         }
-        return true;
+        return false;
     }
 }

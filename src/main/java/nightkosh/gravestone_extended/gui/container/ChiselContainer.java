@@ -28,6 +28,7 @@ public class ChiselContainer extends Container {
     public static final int COLUMNS_COUNT = 9;
     public static final int SLOT_WIDTH = 18;
     public static final int CRAFTING_SLOTS_COUNT = 4;
+    public static final int RECIPE_SLOTS_COUNT = 4;
 
     public InventoryCrafting craftMatrix = new InventoryCrafting(this, CRAFTING_SLOTS_COUNT, 1);
     public IInventory recipeMatrix = new GraveRecipeInventory(CRAFTING_SLOTS_COUNT);
@@ -86,12 +87,14 @@ public class ChiselContainer extends Container {
 
     @Override
     public void onCraftMatrixChanged(IInventory inventory) {
-        List<ItemStack> items = new ArrayList<>(inventory.getSizeInventory());
-        for (int i = 0; i < inventory.getSizeInventory(); i++) {
-            items.add(inventory.getStackInSlot(i));
-        }
+//        if (!this.world.isRemote) {
+            List<ItemStack> items = new ArrayList<>(inventory.getSizeInventory());
+            for (int i = 0; i < inventory.getSizeInventory(); i++) {
+                items.add(inventory.getStackInSlot(i));
+            }
 
-        this.craftResult.setInventorySlotContents(0, GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy));
+            this.craftResult.setInventorySlotContents(0, GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy));
+//        }
     }
 
     @Override
@@ -183,7 +186,7 @@ public class ChiselContainer extends Container {
         if (changed) {
             List<ItemStack> items = GravesCraftingManager.INSTANCE.findMatchingRecipe(isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
             this.recipeMatrix.clear();
-            if (items != null) {
+            if (!items.isEmpty()) {
                 int slot = 0;
                 for (ItemStack stack : items) {
                     if (stack != null && stack != ItemStack.EMPTY) {
@@ -194,8 +197,16 @@ public class ChiselContainer extends Container {
             }
 
             this.onCraftMatrixChanged(this.craftMatrix);
-        }
 
+            for (int i = CRAFTING_SLOTS_COUNT; i <= CRAFTING_SLOTS_COUNT + RECIPE_SLOTS_COUNT; i++) {
+                ItemStack itemstack = this.inventorySlots.get(i).getStack();
+                itemstack = itemstack.isEmpty() ? ItemStack.EMPTY : itemstack.copy();
+                this.inventoryItemStacks.set(i, itemstack);
+                for (int j = 0; j < this.listeners.size(); j++) {
+                    this.listeners.get(j).sendSlotContents(this, i, itemstack);
+                }
+            }
+        }
         super.detectAndSendChanges();
     }
 }

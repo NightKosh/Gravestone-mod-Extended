@@ -17,11 +17,8 @@ import nightkosh.gravestone_extended.gui.GSChiselCraftingGui;
 public class ChiselMaterialSlider extends AbstractSlider {
 
     public ChiselMaterialSlider(int id, int xPos, int yPos, int width, int height, double currentVal, GSChiselCraftingGui gui) {
-        super(id, xPos, yPos, width, height, "", "", 0, EnumGraveMaterial.values().length - 2, currentVal, false, false, (slider) -> {
-
-            gui.setMaterial(EnumGraveMaterial.values()[slider.getValueInt()]);
-            gui.sendMessage();
-        });
+        super(id, xPos, yPos, width, height, "", "", 0, EnumGraveMaterial.values().length - 2, currentVal, false, false,
+                (slider) -> gui.setMaterial(EnumGraveMaterial.values()[slider.getValueInt()]));
     }
 
     @Override
