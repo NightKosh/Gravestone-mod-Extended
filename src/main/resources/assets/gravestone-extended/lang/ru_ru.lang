@@ -219,6 +219,7 @@ item.gravestone.enchanted_skull_withered.name=Зачарованный чере�
 item.gravestone.slime_chunk.name=Кусок слизи
 item.gravestone.imp_skull.name=Череп беса
 item.gravestone.ender_skull.name=Череп края
+item.gravestone.frozen_mirror.name=Ледяное зеркало
 
 ## Fish
 item.gravestone.blue_jellyfish.name=Медуза

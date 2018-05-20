@@ -66,6 +66,8 @@ public class GSItem {
     public static final Item IMP_SKULL = new ItemImpSkull();
     public static final Item ENDER_SKULL = new ItemEnderSkull();
 
+    public static final Item FROZEN_MIRROR = new ItemFrozenMirror();
+
     public static final Item TOXIC_SLIME = new ItemToxicSlime();
     public static final Item BAT_WING = new ItemBatWing();
     public static final Item FISH = new ItemFish();
@@ -82,7 +84,7 @@ public class GSItem {
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
-            registry.registerAll(DIVING_HELMET, SLIME_CHUNK, IMP_SKULL, ENDER_SKULL);
+            registry.registerAll(DIVING_HELMET, SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
             registry.registerAll(TOXIC_SLIME, BAT_WING, FISH);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
             if (Loader.isModLoaded(Compatibility.FORESTRY_ID)) {

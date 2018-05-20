@@ -225,6 +225,7 @@ item.gravestone.enchanted_skull_withered.name=Зачарований череп 
 item.gravestone.slime_chunk.name=Slime Chunk
 item.gravestone.imp_skull.name=Imp Skull
 item.gravestone.ender_skull.name=Ender Skull
+item.gravestone.frozen_mirror.name=Frozen Mirror
 
 ## Fish
 item.gravestone.blue_jellyfish.name=Медуза

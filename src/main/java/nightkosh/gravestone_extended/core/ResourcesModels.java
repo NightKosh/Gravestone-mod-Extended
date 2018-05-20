@@ -90,6 +90,8 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation IMP_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/imp_skull/" + GSItem.IMP_SKULL.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation ENDER_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/ender_skull/" + GSItem.ENDER_SKULL.getRegistryName().getResourcePath(), "inventory");
 
+    public static final ModelResourceLocation FROZEN_MIRROR = new ModelResourceLocation(GSItem.FROZEN_MIRROR.getRegistryName(), "inventory");
+
     public static final ModelResourceLocation MEMORIAL = new ModelResourceLocation(MOD_NAME + ":gsmemorial", "inventory");
     public static final ModelResourceLocation EXECUTION = new ModelResourceLocation(MOD_NAME + ":gsexecution", "inventory");
     public static final ModelResourceLocation SPAWNER = new ModelResourceLocation(MOD_NAME + ":gsspawner", "inventory");

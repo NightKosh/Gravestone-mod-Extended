@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidUtil;
@@ -145,6 +146,13 @@ public class GSRecipes {
                 's', new ItemStack(Items.SKULL, 1, 1),
                 'g', Items.GLOWSTONE_DUST,
                 'c', Items.COMPASS);
+
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "frozen_mirror"), GROUP, new ItemStack(GSItem.FROZEN_MIRROR),
+                "ipi", "psp", "imi",
+                'i', Blocks.PACKED_ICE,
+                'p', PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), GSPotion.RECALL_TYPE),
+                's', Items.NETHER_STAR,
+                'm', Items.IRON_INGOT);
 
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "chisel"), GROUP, new ItemStack(GSItem.CHISEL),
                 "   ", "s  ", " i ",
