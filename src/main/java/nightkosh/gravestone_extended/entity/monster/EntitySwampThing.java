@@ -8,7 +8,6 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
@@ -17,6 +16,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableTargetInWater;
 import nightkosh.gravestone_extended.helper.MobsHelper;
@@ -90,7 +90,7 @@ public class EntitySwampThing extends EntityMob {
 
     @Override
     protected Item getDropItem() {
-        return Item.getItemFromBlock(Blocks.VINE);
+        return GSItem.OOZE;
     }
 
     @Override

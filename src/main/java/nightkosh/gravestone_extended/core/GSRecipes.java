@@ -38,6 +38,10 @@ public class GSRecipes {
                 'f', GSItem.RAVEN_FEATHER,
                 'm', new ItemStack(Items.DYE, 1, EnumDyeColor.WHITE.getDyeDamage()));
 
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "ooze_to_vine"), GROUP, new ItemStack(Blocks.VINE),
+                "o",
+                'o', GSItem.OOZE);
+
         // fishes
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_bones"), GROUP, new ItemStack(GSBlock.PILE_OF_BONES),
                 "f",
