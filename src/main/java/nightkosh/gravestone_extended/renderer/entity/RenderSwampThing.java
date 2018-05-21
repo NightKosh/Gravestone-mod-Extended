@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.entity.monster.EntitySwampThing;
+import nightkosh.gravestone_extended.renderer.entity.layers.LayerSwampThing;
 
 /**
  * GraveStone mod
@@ -18,7 +19,7 @@ public class RenderSwampThing extends RenderBiped<EntitySwampThing> {
     public RenderSwampThing(RenderManager renderManager) {
         super(renderManager, new ModelZombie(0, true), 0.5F);
 
-//        this.addLayer(new LayerMummy(this));
+        this.addLayer(new LayerSwampThing(this));
     }
 
     @Override
