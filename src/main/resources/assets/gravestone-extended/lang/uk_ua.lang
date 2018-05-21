@@ -218,6 +218,8 @@ item.gravestone.diving_helmet.tooltip=Дозволяє дихати під во�
 
 ## Other Items
 item.gravestone.toxic_slime.name=Токсичний слиз
+## TODO !!!!!!!!!!
+item.gravestone.raven_feather.name=Raven Feather
 item.gravestone.bat_wing.name=Крило кажана
 item.gravestone.enchanted_skull.name=Зачарований череп
 item.gravestone.enchanted_skull_withered.name=Зачарований череп висушувача

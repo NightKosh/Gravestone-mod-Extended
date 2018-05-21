@@ -121,6 +121,8 @@ public class GSModels {
 
             ModelLoader.setCustomModelResourceLocation(GSItem.TOXIC_SLIME, 0, ResourcesModels.TOXIC_SLIME);
 
+            ModelLoader.setCustomModelResourceLocation(GSItem.RAVEN_FEATHER, 0, ResourcesModels.RAVEN_FEATHER);
+
             ModelLoader.setCustomModelResourceLocation(GSItem.BAT_WING, 0, ResourcesModels.BAT_WING);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.BLUE_JELLYFISH.ordinal(), ResourcesModels.BLUE_JELLYFISH);

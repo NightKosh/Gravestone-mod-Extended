@@ -70,6 +70,7 @@ public class GSItem {
 
     public static final Item TOXIC_SLIME = new ItemToxicSlime();
     public static final Item BAT_WING = new ItemBatWing();
+    public static final Item RAVEN_FEATHER = new ItemRavenFeather();
     public static final Item FISH = new ItemFish();
     public static final Item ENCHANTED_SKULL = new ItemEnchantedSkull();
 
@@ -85,7 +86,7 @@ public class GSItem {
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
             registry.registerAll(DIVING_HELMET, SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
-            registry.registerAll(TOXIC_SLIME, BAT_WING, FISH);
+            registry.registerAll(TOXIC_SLIME, BAT_WING, RAVEN_FEATHER, FISH);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
             if (Loader.isModLoaded(Compatibility.FORESTRY_ID)) {
                 CompatibilityForestry.addBackpack(registry);

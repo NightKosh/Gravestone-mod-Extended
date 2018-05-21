@@ -33,6 +33,11 @@ public class GSRecipes {
                 'w', Items.BUCKET,
                 's', GSItem.TOXIC_SLIME);
 
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "raven_feather_to_chicken"), GROUP, new ItemStack(Items.FEATHER),
+                "fm",
+                'f', GSItem.RAVEN_FEATHER,
+                'm', new ItemStack(Items.DYE, 1, EnumDyeColor.WHITE.getDyeDamage()));
+
         // fishes
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_bones"), GROUP, new ItemStack(GSBlock.PILE_OF_BONES),
                 "f",
