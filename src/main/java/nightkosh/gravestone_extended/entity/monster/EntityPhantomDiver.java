@@ -1,5 +1,6 @@
 package nightkosh.gravestone_extended.entity.monster;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSItem;
@@ -23,5 +24,10 @@ public class EntityPhantomDiver extends EntityDrowned {
         if (wasRecentlyHit && (this.rand.nextInt(200) <= lootingModifier)) {
             this.entityDropItem(new ItemStack(GSItem.DIVING_HELMET), 0);
         }
+    }
+
+    @Override
+    protected Item getDropItem() {
+        return GSItem.PIECE_OF_DIVING_SUIT;
     }
 }
