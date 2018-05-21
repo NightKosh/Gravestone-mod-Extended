@@ -24,7 +24,8 @@ import java.util.List;
 public class GravesCraftingManager {
 
 
-    private static final List<GravestoneRecipe> RECIPES = new ArrayList<>();
+    private static final List<GravestoneRecipe> GRAVES_RECIPES = new ArrayList<>();
+    private static final List<GravestoneRecipe> MEMORIALS_RECIPES = new ArrayList<>();
     public static final GravesCraftingManager INSTANCE = new GravesCraftingManager();
 
     private GravesCraftingManager() {
@@ -79,14 +80,14 @@ public class GravesCraftingManager {
             meta = IEnumGraveMaterial.DIORITE_META;
         }
 
-        RECIPES.add(new GravestoneRecipe(isGravestone, type, material,
+        (isGravestone ? GRAVES_RECIPES : MEMORIALS_RECIPES).add(new GravestoneRecipe(isGravestone, type, material,
                 Arrays.asList(new ItemStack(material.getBlock(), amountOfBlocks, meta)),
                 getStackWithNTB((isGravestone) ? GSBlock.GRAVE_STONE : GSBlock.MEMORIAL, graveType)));
     }
 
     public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumMemorials.EnumMemorialType memorialType,
                                               EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
-        for (GravestoneRecipe recipe : RECIPES) {
+        for (GravestoneRecipe recipe : (isGravestone ? GRAVES_RECIPES : MEMORIALS_RECIPES)) {
             if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy)) {
                 return recipe.getRequiredItems(isEnchanted, isMossy);
             }
@@ -97,7 +98,7 @@ public class GravesCraftingManager {
     public ItemStack findMatchingRecipe(List<ItemStack> requiredItems, boolean isGravestone, EnumGraveType graveType,
                                         EnumMemorials.EnumMemorialType memorialType, EnumGraveMaterial material,
                                         boolean isEnchanted, boolean isMossy) {
-        for (GravestoneRecipe recipe : RECIPES) {
+        for (GravestoneRecipe recipe : (isGravestone ? GRAVES_RECIPES : MEMORIALS_RECIPES)) {
             if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, requiredItems)) {
                 return recipe.getResultItem(requiredItems);
             }
@@ -105,8 +106,11 @@ public class GravesCraftingManager {
         return ItemStack.EMPTY;
     }
 
-    public List<GravestoneRecipe> getRecipes() {
-        return RECIPES;
+    public List<GravestoneRecipe> getGravesRecipes() {
+        return GRAVES_RECIPES;
+    }
+    public List<GravestoneRecipe> getMemorialsRecipes() {
+        return MEMORIALS_RECIPES;
     }
 
     private static ItemStack getStackWithNTB(net.minecraft.block.Block block, int graveType) {
