@@ -10,7 +10,10 @@ import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.item.*;
-import nightkosh.gravestone_extended.item.armor.ItemDivingHelmet;
+import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingBoots;
+import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingChestplate;
+import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingHelmet;
+import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingLeggings;
 import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
 import nightkosh.gravestone_extended.item.tools.ItemChisel;
 import nightkosh.gravestone_extended.item.tools.axe.ItemBoneAxe;
@@ -61,6 +64,9 @@ public class GSItem {
     public static final Item BONE_PICKAXE_DIAMOND = new ItemDiamondBonePickaxe();
 
     public static final Item DIVING_HELMET = new ItemDivingHelmet();
+    public static final Item DIVING_CHESTPLATE = new ItemDivingChestplate();
+    public static final Item DIVING_LEGGINGS = new ItemDivingLeggings();
+    public static final Item DIVING_BOOTS = new ItemDivingBoots();
 
     public static final Item SLIME_CHUNK = new ItemSlimeChunk();
     public static final Item IMP_SKULL = new ItemImpSkull();
@@ -82,13 +88,14 @@ public class GSItem {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             final IForgeRegistry<Item> registry = event.getRegistry();
-            registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
+            registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, RAVEN_FEATHER, PIECE_OF_DIVING_SUIT, FISH);
+            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
             registry.registerAll(CHISEL, BONE_FISHING_POLE,
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
-            registry.registerAll(DIVING_HELMET, SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
-            registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, RAVEN_FEATHER, PIECE_OF_DIVING_SUIT, FISH);
+            registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
+            registry.registerAll(DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
             if (Loader.isModLoaded(Compatibility.FORESTRY_ID)) {
                 CompatibilityForestry.addBackpack(registry);

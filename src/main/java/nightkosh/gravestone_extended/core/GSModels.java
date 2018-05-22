@@ -178,6 +178,9 @@ public class GSModels {
             ModelLoader.setCustomModelResourceLocation(GSItem.FROZEN_MIRROR, 0, ResourcesModels.FROZEN_MIRROR);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.DIVING_HELMET, 0, ResourcesModels.DIVING_HELMET);
+            ModelLoader.setCustomModelResourceLocation(GSItem.DIVING_CHESTPLATE, 0, ResourcesModels.DIVING_CHESTPLATE);
+            ModelLoader.setCustomModelResourceLocation(GSItem.DIVING_LEGGINGS, 0, ResourcesModels.DIVING_LEGGINGS);
+            ModelLoader.setCustomModelResourceLocation(GSItem.DIVING_BOOTS, 0, ResourcesModels.DIVING_BOOTS);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SWORD, 0, ResourcesModels.BONE_SWORD);
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SWORD_IRON, 0, ResourcesModels.BONE_SWORD_IRON);

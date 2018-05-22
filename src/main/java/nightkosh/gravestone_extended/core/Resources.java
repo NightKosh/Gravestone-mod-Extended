@@ -30,7 +30,10 @@ public class Resources extends nightkosh.gravestone.core.Resources{
     public static final ResourceLocation PILE_OF_BONES = new ResourceLocation(BLOCK_LOCATION + "pileofbones.png");
 
     // armor
-    public static final String DIVING_HELMET = EXT_MOD_NAME + ":textures/items/armor/diving_helmet.png";
+    public static final String DIVING_HELMET = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/helmet.png";
+    public static final String PHANTOM_DIVER_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/chestplate.png";
+    public static final String PHANTOM_DIVER_LEGS = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/leggings.png";
+    public static final String PHANTOM_DIVER_BOOTS = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/boots.png";
 
     // gui
     public static final ResourceLocation ALTAR_GUI = new ResourceLocation(GUI_LOCATION + "altar_gui.png");

@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.models.armor;
+package nightkosh.gravestone_extended.models.armor.phantom_diver_costume;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
@@ -35,7 +35,7 @@ public class ModelDivingHelmet extends ModelBiped {
         this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entity);
         GlStateManager.pushMatrix();
         if (entity.isSneaking()) {
-            GlStateManager.translate(0.0F, 0.2F, 0.0F);
+            GlStateManager.translate(0, 0.2F, 0);
         }
         helmetBase.render(scale);
         rim.render(scale);

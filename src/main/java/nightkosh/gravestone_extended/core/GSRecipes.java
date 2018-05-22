@@ -329,7 +329,21 @@ public class GSRecipes {
                 'b', GSItem.BONE_SWORD,
                 'd', Items.DIAMOND);
 
+        //armor
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "diving_chestplate"), GROUP, new ItemStack(GSItem.DIVING_CHESTPLATE),
+                "pcp", "ppp", "ppp",
+                'p', GSItem.PIECE_OF_DIVING_SUIT,
+                'c', Items.LEATHER_CHESTPLATE);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "diving_leggings"), GROUP, new ItemStack(GSItem.DIVING_LEGGINGS),
+                "ppp", "plp", "p p",
+                'p', GSItem.PIECE_OF_DIVING_SUIT,
+                'l', Items.LEATHER_LEGGINGS);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "diving_boots"), GROUP, new ItemStack(GSItem.DIVING_BOOTS),
+                "p p", "pbp",
+                'p', GSItem.PIECE_OF_DIVING_SUIT,
+                'b', Items.LEATHER_BOOTS);
 
+        // blocks
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "withered_glass"), GROUP, new ItemStack(GSBlock.WITHERED_GLASS, 6),
                 "ggg", "sos", "ggg",
                 'g', Blocks.GLASS,

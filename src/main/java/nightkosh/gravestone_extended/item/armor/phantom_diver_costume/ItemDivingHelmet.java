@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.item.armor;
+package nightkosh.gravestone_extended.item.armor.phantom_diver_costume;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.util.ITooltipFlag;

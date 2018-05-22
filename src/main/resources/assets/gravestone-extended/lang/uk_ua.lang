@@ -215,6 +215,10 @@ item.gravestone.bone_shield.name=Кістяний щит
 ## Armor
 item.gravestone.diving_helmet.name=Водолазний шолом
 item.gravestone.diving_helmet.tooltip=Дозволяє дихати під водою
+## TODO !!!!!!!!!!
+item.gravestone.diving_chestplate.name=Diving Chestplate
+item.gravestone.diving_leggings.name=Diving Leggings
+item.gravestone.diving_boots.name=Diving Boots
 
 ## Other Items
 item.gravestone.toxic_slime.name=Токсичний слиз

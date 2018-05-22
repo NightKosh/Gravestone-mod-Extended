@@ -225,6 +225,9 @@ item.gravestone.bone_shield.name=Bone Shield
 ## TODO !!!!!!!!!!
 item.gravestone.diving_helmet.name=Diving Helmet
 item.gravestone.diving_helmet.tooltip=Provides unlimited breath under the water
+item.gravestone.diving_chestplate.name=Diving Chestplate
+item.gravestone.diving_leggings.name=Diving Leggings
+item.gravestone.diving_boots.name=Diving Boots
 
 ## Other Items
 ## TODO !!!!!!!!!!
