@@ -54,6 +54,7 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation TOXIC_SLIME = new ModelResourceLocation(GSItem.TOXIC_SLIME.getRegistryName(), "inventory");
 
     public static final ModelResourceLocation RAVEN_FEATHER = new ModelResourceLocation(GSItem.RAVEN_FEATHER.getRegistryName(), "inventory");
+    public static final ModelResourceLocation RAVEN_CLAWS = new ModelResourceLocation(GSItem.RAVEN_CLAWS.getRegistryName(), "inventory");
 
     public static final ModelResourceLocation BAT_WING = new ModelResourceLocation(GSItem.BAT_WING.getRegistryName(), "inventory");
 
