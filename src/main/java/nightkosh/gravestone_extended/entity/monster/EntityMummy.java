@@ -91,7 +91,7 @@ public class EntityMummy extends EntityMob {
 
     @Override
     protected Item getDropItem() {
-        return Items.ROTTEN_FLESH;
+        return Items.ROTTEN_FLESH;//PIECE_OF_MUMMY_CLOTH
     }
 
     @Override

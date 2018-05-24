@@ -128,6 +128,8 @@ public class GSModels {
 
             ModelLoader.setCustomModelResourceLocation(GSItem.OOZE, 0, ResourcesModels.OOZE);
 
+            ModelLoader.setCustomModelResourceLocation(GSItem.PIECE_OF_MUMMY_CLOTH, 0, ResourcesModels.PIECE_OF_MUMMY_CLOTH);
+
             ModelLoader.setCustomModelResourceLocation(GSItem.PIECE_OF_DIVING_SUIT, 0, ResourcesModels.PIECE_OF_DIVING_SUIT);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.BLUE_JELLYFISH.ordinal(), ResourcesModels.BLUE_JELLYFISH);

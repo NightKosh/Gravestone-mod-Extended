@@ -60,6 +60,8 @@ public class ResourcesModels extends Resources {
 
     public static final ModelResourceLocation OOZE = new ModelResourceLocation(GSItem.OOZE.getRegistryName(), "inventory");
 
+    public static final ModelResourceLocation PIECE_OF_MUMMY_CLOTH = new ModelResourceLocation(GSItem.PIECE_OF_MUMMY_CLOTH.getRegistryName(), "inventory");
+
     public static final ModelResourceLocation PIECE_OF_DIVING_SUIT = new ModelResourceLocation(GSItem.PIECE_OF_DIVING_SUIT.getRegistryName(), "inventory");
 
     public static final ModelResourceLocation BLUE_JELLYFISH = new ModelResourceLocation(ModInfo.ID + ":fish/" + ItemFish.EnumFishType.BLUE_JELLYFISH.getName(), "inventory");
