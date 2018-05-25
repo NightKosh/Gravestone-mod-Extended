@@ -193,7 +193,6 @@ public class ExtendedConfig {
     }
 
     // recipes
-    public static boolean craftableCreeperStatues;
     public static boolean craftableWitherSpawner;
     public static boolean craftableSpawners;
     public static boolean craftableNightStone;
@@ -201,9 +200,6 @@ public class ExtendedConfig {
     public static boolean hardAltarRecipe;
 
     private static void recipesConfigs() {
-        // creeper statues
-        craftableCreeperStatues = config.get(CATEGORY_RECIPES, "CraftableCreeperStatues", false).getBoolean();
-
         // spawners recipes
         craftableWitherSpawner = config.get(CATEGORY_RECIPES, "CraftableWitherSpawner", true).getBoolean();
         craftableSpawners = config.get(CATEGORY_RECIPES, "CraftableSpawners", true).getBoolean();

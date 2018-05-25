@@ -7,7 +7,6 @@ import nightkosh.gravestone.api.grave.IEnumGraveMaterial;
 import nightkosh.gravestone.api.grave.IEnumGraveType;
 import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.GSBlock;
 
 import java.util.ArrayList;
@@ -50,10 +49,7 @@ public class GravesCraftingManager {
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.ANGEL_STATUE, 3);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.DOG_STATUE, 2);
         addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.CAT_STATUE, 2);
-        // CREEPER_STATUE
-        if (ExtendedConfig.craftableCreeperStatues) {
-            addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.CREEPER_STATUE, 3);
-        }
+        addMemorialsRecipesForAllMaterials(EnumMemorials.EnumMemorialType.CREEPER_STATUE, 3);
     }
 
     private static void addGravesRecipesForAllMaterials(EnumGraveType graveType) {
@@ -109,6 +105,7 @@ public class GravesCraftingManager {
     public List<GravestoneRecipe> getGravesRecipes() {
         return GRAVES_RECIPES;
     }
+
     public List<GravestoneRecipe> getMemorialsRecipes() {
         return MEMORIALS_RECIPES;
     }
