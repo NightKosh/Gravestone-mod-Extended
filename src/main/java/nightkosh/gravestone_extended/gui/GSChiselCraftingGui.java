@@ -6,6 +6,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraftforge.fml.client.config.GuiCheckBox;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nightkosh.gravestone.ModGraveStone;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
 import nightkosh.gravestone.block.enums.EnumGraves;
@@ -42,12 +43,11 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     private final int IS_ENCHANTED_CHECKBOX_ID = 6;
     private final int IS_MOSSY_CHECKBOX_ID = 7;
 
-    //TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    private final String GRAVE_BUTTON_STR = "Gravestone";//ModGraveStone.proxy.getLocalizedString("gui.edit_grave.title");
-    private final String MEMORIAL_BUTTON_STR = "Memorial";//ModGraveStone.proxy.getLocalizedString("gui.edit_grave.close");
-    private final String ENCHANTED_BUTTON_STR = "Enchanted";
-    private final String MOSSY_BUTTON_STR = "Mossy";
-    private final String REQUIRED_ITEMS_STR = "Required items";//ModGraveStone.proxy.getLocalizedString("gui.edit_grave.close");
+    private final String GRAVE_BUTTON_STR = ModGraveStone.proxy.getLocalizedString("gui.chisel_crafting.grave_btn");
+    private final String MEMORIAL_BUTTON_STR = ModGraveStone.proxy.getLocalizedString("gui.chisel_crafting.memorial_btn");
+    private final String ENCHANTED_BUTTON_STR = ModGraveStone.proxy.getLocalizedString("gui.chisel_crafting.enchanted_btn");
+    private final String MOSSY_BUTTON_STR = ModGraveStone.proxy.getLocalizedString("gui.chisel_crafting.mossy_btn");
+    private final String REQUIRED_ITEMS_STR = ModGraveStone.proxy.getLocalizedString("gui.chisel_crafting.recipe");
 
     private GuiButton graveButton;
     private GuiButton memorialButton;

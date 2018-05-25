@@ -361,6 +361,12 @@ gui.edit_grave.close=Fertig
 gui.edit_grave.randomText=Zufälligen Text auswählen
 gui.altar.resurrect=Wiederauferstehen
 gui.altar.requirements=%d Level benötigt
+##TODO !!!!!!!!!!
+gui.chisel_crafting.grave_btn=Gravestone
+gui.chisel_crafting.memorial_btn=Memorial
+gui.chisel_crafting.enchanted_btn=Enchanted
+gui.chisel_crafting.mossy_btn=Mossy
+gui.chisel_crafting.recipe=Required items
 
 
 # Entity

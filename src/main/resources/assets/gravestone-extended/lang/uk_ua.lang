@@ -355,6 +355,12 @@ gui.edit_grave.close=Готово
 gui.edit_grave.randomText=Ввести випадковий текст
 gui.altar.resurrect=Воскресити
 gui.altar.requirements=Потрібно %d рівнів
+##TODO !!!!!!!!!!
+gui.chisel_crafting.grave_btn=Gravestone
+gui.chisel_crafting.memorial_btn=Memorial
+gui.chisel_crafting.enchanted_btn=Enchanted
+gui.chisel_crafting.mossy_btn=Mossy
+gui.chisel_crafting.recipe=Required items
 
 
 # Entity
