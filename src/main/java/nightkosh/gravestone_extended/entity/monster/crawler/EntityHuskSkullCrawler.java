@@ -20,6 +20,7 @@ import javax.annotation.Nullable;
 public class EntityHuskSkullCrawler extends EntityZombieSkullCrawler {
     public EntityHuskSkullCrawler(World world) {
         super(world);
+        this.isImmuneToFire = true;
     }
 
     @Override

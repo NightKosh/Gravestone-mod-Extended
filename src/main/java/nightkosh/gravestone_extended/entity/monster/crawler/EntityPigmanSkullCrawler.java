@@ -18,6 +18,7 @@ import javax.annotation.Nullable;
 public class EntityPigmanSkullCrawler extends EntityZombieSkullCrawler {
     public EntityPigmanSkullCrawler(World world) {
         super(world);
+        this.isImmuneToFire = true;
     }
 
     @Override
