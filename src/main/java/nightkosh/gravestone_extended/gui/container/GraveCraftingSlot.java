@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.gui.container;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.SlotCrafting;
@@ -35,7 +36,8 @@ public class GraveCraftingSlot extends SlotCrafting {
             ItemStack itemstack = this.craftMatrix.getStackInSlot(slot);
             ItemStack recipeStack = recipeMatrix.getStackInSlot(slot).copy();
 
-            if (!itemstack.isEmpty() && ItemStack.areItemsEqual(itemstack, recipeStack) && ItemStack.areItemStackTagsEqual(itemstack, recipeStack)) {
+            if (!itemstack.isEmpty() && ((itemstack.getItem() == Items.ENCHANTED_BOOK && recipeStack.getItem() == Items.ENCHANTED_BOOK) ||
+                    ItemStack.areItemsEqual(itemstack, recipeStack) && ItemStack.areItemStackTagsEqual(itemstack, recipeStack))) {
                 this.craftMatrix.decrStackSize(slot, recipeStack.getCount());
             }
         }
