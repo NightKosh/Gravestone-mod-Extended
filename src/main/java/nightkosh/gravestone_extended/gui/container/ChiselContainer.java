@@ -55,7 +55,7 @@ public class ChiselContainer extends Container {
     public ChiselContainer(EntityPlayer player, InventoryPlayer inventoryPlayer) {
         this.player = player;
         this.world = player.getEntityWorld();
-        this.addSlotToContainer(new SlotCrafting(inventoryPlayer.player, this.craftMatrix, this.craftResult, 0, 135, 90));
+        this.addSlotToContainer(new GraveCraftingSlot(inventoryPlayer.player, this.craftMatrix, this.craftResult, this.recipeMatrix, 0, 135, 90));
 
         for (int column = 0; column < CRAFTING_SLOTS_COUNT; column++) {
             this.addSlotToContainer(new Slot(this.craftMatrix, column, 23 + column * SLOT_WIDTH, 90));
@@ -197,15 +197,6 @@ public class ChiselContainer extends Container {
             }
 
             this.onCraftMatrixChanged(this.craftMatrix);
-
-            for (int i = CRAFTING_SLOTS_COUNT; i <= CRAFTING_SLOTS_COUNT + RECIPE_SLOTS_COUNT; i++) {
-                ItemStack itemstack = this.inventorySlots.get(i).getStack();
-                itemstack = itemstack.isEmpty() ? ItemStack.EMPTY : itemstack.copy();
-                this.inventoryItemStacks.set(i, itemstack);
-                for (int j = 0; j < this.listeners.size(); j++) {
-                    this.listeners.get(j).sendSlotContents(this, i, itemstack);
-                }
-            }
         }
         super.detectAndSendChanges();
     }

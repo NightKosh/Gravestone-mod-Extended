@@ -55,11 +55,6 @@ public class GSChiselCraftingGui extends GuiContainerBase {
     private ChiselGraveTypeSlider graveTypeSlider;
     private ChiselMemorialTypeSlider memorialTypeSlider;
 
-    private ChiselMaterialSlider materialSlider;
-
-    private GuiButton isEnchantedButton;
-    private GuiButton isMossyButton;
-
     private boolean isGravestone = ChiselContainer.DEFAULT_IS_GRAVESTONE;
     private EnumGraveType graveType = ChiselContainer.DEFAULT_GRAVE_TYPE;
     private EnumMemorialType memorialType = ChiselContainer.DEFAULT_MEMORIAL_TYPE;
@@ -81,14 +76,12 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         this.buttonList.add(graveButton = new GuiButton(GRAVE_BUTTON_ID, HALF_W, 20, 75, 20, this.GRAVE_BUTTON_STR) {
             @Override
             public void mouseReleased(int mouseX, int mouseY) {
-                super.mouseReleased(mouseX, mouseY);
                 updateSlidersAndButtonsState(true);
             }
         });
         this.buttonList.add(memorialButton = new GuiButton(MEMORIAL_BUTTON_ID, HALF_W + 100, 20, 75, 20, this.MEMORIAL_BUTTON_STR) {
             @Override
             public void mouseReleased(int mouseX, int mouseY) {
-                super.mouseReleased(mouseX, mouseY);
                 updateSlidersAndButtonsState(false);
             }
         });
@@ -100,10 +93,10 @@ public class GSChiselCraftingGui extends GuiContainerBase {
         memorialTypeSlider.visible = false;
 
         //material
-        this.buttonList.add(materialSlider = new ChiselMaterialSlider(MATERIAL_SLIDER_ID, HALF_W, 70, 176, 20, 0, this));
+        this.buttonList.add(new ChiselMaterialSlider(MATERIAL_SLIDER_ID, HALF_W, 70, 176, 20, 0, this));
 
-        this.buttonList.add(isEnchantedButton = new GuiCheckBox(IS_ENCHANTED_CHECKBOX_ID, 125, 95, ENCHANTED_BUTTON_STR, false));
-        this.buttonList.add(isMossyButton = new GuiCheckBox(IS_MOSSY_CHECKBOX_ID, 200, 95, MOSSY_BUTTON_STR, false));
+        this.buttonList.add(new GuiCheckBox(IS_ENCHANTED_CHECKBOX_ID, HALF_W, 95, ENCHANTED_BUTTON_STR, false));
+        this.buttonList.add(new GuiCheckBox(IS_MOSSY_CHECKBOX_ID, HALF_W + 75, 95, MOSSY_BUTTON_STR, false));
 
         this.sendMessage();
     }
