@@ -96,7 +96,7 @@ public class ChiselContainer extends Container {
             }
 
             EntityPlayerMP entityplayermp = (EntityPlayerMP) this.player;
-            ItemStack stack = GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
+            ItemStack stack = GravesCraftingManager.INSTANCE.findCraftingResult(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
 
 
             this.craftResult.setInventorySlotContents(0, stack);

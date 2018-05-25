@@ -29,16 +29,17 @@ public class GraveCraftingSlot extends SlotCrafting {
     @Override
     public ItemStack onTake(EntityPlayer thePlayer, ItemStack stack) {
         this.onCrafting(stack);
-        net.minecraftforge.common.ForgeHooks.setCraftingPlayer(thePlayer);
-        net.minecraftforge.common.ForgeHooks.setCraftingPlayer(null);
 
         for (int slot = 0; slot < recipeMatrix.getSizeInventory(); slot++) {
-            ItemStack itemstack = this.craftMatrix.getStackInSlot(slot);
             ItemStack recipeStack = recipeMatrix.getStackInSlot(slot).copy();
 
-            if (!itemstack.isEmpty() && ((itemstack.getItem() == Items.ENCHANTED_BOOK && recipeStack.getItem() == Items.ENCHANTED_BOOK) ||
-                    ItemStack.areItemsEqual(itemstack, recipeStack) && ItemStack.areItemStackTagsEqual(itemstack, recipeStack))) {
-                this.craftMatrix.decrStackSize(slot, recipeStack.getCount());
+            for (int craftSlot = 0; craftSlot < craftMatrix.getSizeInventory(); craftSlot++) {
+                ItemStack itemstack = this.craftMatrix.getStackInSlot(craftSlot);
+                if (!itemstack.isEmpty() && ((itemstack.getItem() == Items.ENCHANTED_BOOK && recipeStack.getItem() == Items.ENCHANTED_BOOK) ||
+                        ItemStack.areItemsEqual(itemstack, recipeStack) && ItemStack.areItemStackTagsEqual(itemstack, recipeStack))) {
+                    this.craftMatrix.decrStackSize(craftSlot, recipeStack.getCount());
+                    break;
+                }
             }
         }
 

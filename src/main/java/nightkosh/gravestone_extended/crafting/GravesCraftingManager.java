@@ -84,19 +84,19 @@ public class GravesCraftingManager {
     public List<ItemStack> findMatchingRecipe(boolean isGravestone, EnumGraveType graveType, EnumMemorials.EnumMemorialType memorialType,
                                               EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
         for (GravestoneRecipe recipe : (isGravestone ? GRAVES_RECIPES : MEMORIALS_RECIPES)) {
-            if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy)) {
+            if (recipe.match((isGravestone) ? graveType : memorialType, material, isMossy)) {
                 return recipe.getRequiredItems(isEnchanted, isMossy);
             }
         }
         return Collections.EMPTY_LIST;
     }
 
-    public ItemStack findMatchingRecipe(List<ItemStack> requiredItems, boolean isGravestone, EnumGraveType graveType,
+    public ItemStack findCraftingResult(List<ItemStack> items, boolean isGravestone, EnumGraveType graveType,
                                         EnumMemorials.EnumMemorialType memorialType, EnumGraveMaterial material,
                                         boolean isEnchanted, boolean isMossy) {
         for (GravestoneRecipe recipe : (isGravestone ? GRAVES_RECIPES : MEMORIALS_RECIPES)) {
-            if (recipe.match((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, requiredItems)) {
-                return recipe.getResultItem(requiredItems);
+            if (recipe.matchCrafting((isGravestone) ? graveType : memorialType, material, isEnchanted, isMossy, items)) {
+                return recipe.getResultItem(items, isEnchanted, isMossy);
             }
         }
         return ItemStack.EMPTY;

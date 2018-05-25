@@ -27,6 +27,9 @@ public class GravestoneRecipe {
     private EnumGraveMaterial material;
     private boolean canBeMossy;
 
+    private static final ItemStack ENCHANTED_BOOK = new ItemStack(Items.ENCHANTED_BOOK, 1);
+    private static final ItemStack VINE = new ItemStack(Blocks.VINE, 1);
+
     public GravestoneRecipe(boolean isGravestone, IEnumGraveType graveType, EnumGraveMaterial material, List<ItemStack> requiredItems, ItemStack resultItem) {
         this(isGravestone, graveType, material, true, requiredItems, resultItem);
     }
@@ -44,9 +47,9 @@ public class GravestoneRecipe {
         return resultItem.copy();
     }
 
-    public ItemStack getResultItem(List<ItemStack> requiredItems) {
-        boolean isEnchanted = requiredItems.stream().anyMatch((item) -> item != null && item.getItem() instanceof ItemEnchantedBook);
-        boolean isMossy = requiredItems.stream().anyMatch((item) -> item != null && Block.getBlockFromItem(item.getItem()) instanceof BlockVine);
+    public ItemStack getResultItem(List<ItemStack> requiredItems, boolean isEnchanted, boolean isMossy) {
+        isEnchanted = isEnchanted && requiredItems.stream().anyMatch((item) -> item != null && item.getItem() instanceof ItemEnchantedBook);
+        isMossy = isMossy && requiredItems.stream().anyMatch((item) -> item != null && Block.getBlockFromItem(item.getItem()) instanceof BlockVine);
         return this.getResultItem(isEnchanted, isMossy);
     }
 
@@ -76,10 +79,10 @@ public class GravestoneRecipe {
     public List<ItemStack> getRequiredItems(boolean isEnchanted, boolean isMossy) {
         List<ItemStack> items = this.getRequiredItems();
         if (isEnchanted) {
-            items.add(new ItemStack(Items.ENCHANTED_BOOK, 1));
+            items.add(ENCHANTED_BOOK);
         }
         if (isMossy) {
-            items.add(new ItemStack(Blocks.VINE, 1));
+            items.add(VINE);
         }
         return items;
     }
@@ -96,25 +99,39 @@ public class GravestoneRecipe {
         return material;
     }
 
-    public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy) {
-        return  this.getGraveType() == graveType && this.getMaterial() == material && (this.canBeMossy || !isMossy);
+    public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isMossy) {
+        return this.getGraveType() == graveType && this.getMaterial() == material && (this.canBeMossy || !isMossy);
     }
 
-    public boolean match(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy, List<ItemStack> requiredItems) {
-        return  this.match(graveType, material, isEnchanted, isMossy) && this.containItems(requiredItems);
+    public boolean matchCrafting(IEnumGraveType graveType, EnumGraveMaterial material, boolean isEnchanted, boolean isMossy, List<ItemStack> items) {
+        return this.match(graveType, material, isMossy) && this.containItems(items, isEnchanted, isMossy);
     }
 
-    public boolean containItems(List<ItemStack> items) {
-        if (items == null || requiredItems.size() > items.size()) {
-            return false;
-        } else {
-            for (ItemStack requiredItem : requiredItems) {
-                if (items.stream().anyMatch((item) -> item != null && requiredItem.getItem().equals(item.getItem()) &&
-                        requiredItem.getMetadata() == item.getMetadata() && requiredItem.getCount() <= item.getCount())) {
-                    return true;
+    protected boolean containItems(List<ItemStack> items, boolean isEnchanted, boolean isMossy) {
+        if (items != null && this.requiredItems.size() <= items.size()) {
+            int count =  0;
+
+            for (ItemStack recipeItem : this.requiredItems) {
+                if (compareItems(items, recipeItem)) {
+                    count++;
                 }
+            }
+            if (count == this.requiredItems.size()) {
+                boolean match = true;
+                if (isEnchanted) {
+                    match = match && compareItems(items, ENCHANTED_BOOK);
+                }
+                if (isMossy) {
+                    match = match && compareItems(items, VINE);
+                }
+                return match;
             }
         }
         return false;
+    }
+
+    protected boolean compareItems(List<ItemStack> items, ItemStack recipeItem) {
+        return items.stream().anyMatch((item) -> item != null && recipeItem.getItem().equals(item.getItem()) &&
+                recipeItem.getMetadata() == item.getMetadata() && recipeItem.getCount() <= item.getCount());
     }
 }
