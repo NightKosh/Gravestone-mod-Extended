@@ -8,9 +8,13 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSLootTables;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -70,6 +74,7 @@ public class EntityDamnedWarrior extends EntityMob {
         return EnumCreatureAttribute.UNDEAD;
     }
 
+    //TODO REMOVE!!!
     @Override
     protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
         int l = this.rand.nextInt(3 + lootingModifier);
@@ -77,6 +82,11 @@ public class EntityDamnedWarrior extends EntityMob {
         for (int j1 = 0; j1 < l; ++j1) {
             this.dropItem(Items.BONE, 1);
         }
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.DAMNED_WARRIOR;
     }
 //
 //    @Override

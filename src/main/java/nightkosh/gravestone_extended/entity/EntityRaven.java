@@ -2,7 +2,9 @@ package nightkosh.gravestone_extended.entity;
 
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.entity.ai.EntityRavenMoveHelper;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,6 +16,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.pathfinding.PathNavigateGround;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -120,5 +124,10 @@ public class EntityRaven extends EntityAnimal {
 
     public boolean isFlying() {
         return false;
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.RAVEN;
     }
 }

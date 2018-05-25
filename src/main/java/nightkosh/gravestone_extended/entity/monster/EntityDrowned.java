@@ -7,18 +7,20 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.helper.MobsHelper;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -93,9 +95,9 @@ public class EntityDrowned extends EntityMob {
         return 1.9F;
     }
 
-    @Override
-    protected Item getDropItem() {
-        return Items.ROTTEN_FLESH;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.DROWNED;
     }
 
     @Override

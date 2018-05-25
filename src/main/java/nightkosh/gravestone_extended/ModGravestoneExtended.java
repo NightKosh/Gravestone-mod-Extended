@@ -63,6 +63,8 @@ public class ModGravestoneExtended {
 
         CapabilityManager.INSTANCE.register(IChoke.class, new ChokeStorage(), Choke.class);
 
+        GSLootTables.registration();
+
         GSDimensions.registration();
     }
 

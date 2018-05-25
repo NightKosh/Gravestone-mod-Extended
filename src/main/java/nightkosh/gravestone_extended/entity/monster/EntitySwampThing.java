@@ -10,16 +10,18 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import nightkosh.gravestone_extended.core.GSItem;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableTargetInWater;
 import nightkosh.gravestone_extended.helper.MobsHelper;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -88,9 +90,9 @@ public class EntitySwampThing extends EntityMob {
         return 1.9F;
     }
 
-    @Override
-    protected Item getDropItem() {
-        return GSItem.OOZE;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.SWAMP_THING;
     }
 
     @Override

@@ -14,11 +14,13 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSEnchantment;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.helper.MobsHelper;
 
@@ -164,5 +166,10 @@ public class EntityPossessedArmor extends EntityMob {
     @Override
     public boolean getCanSpawnHere() {
         return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.POSSESSED_ARMOR;
     }
 }

@@ -10,24 +10,25 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSBlock;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.entity.ai.AIHideInBones;
 import nightkosh.gravestone_extended.entity.ai.AIHideInPilesOfBones;
 import nightkosh.gravestone_extended.entity.ai.AISummonSkullCrawler;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -156,30 +157,11 @@ public class EntitySkullCrawler extends EntityMob {
         return this.getEntityWorld().getBlockState(new BlockPos(pos.down())).getBlock().equals(GSBlock.BONE_BLOCK) ? 10 : super.getBlockPathWeight(pos);
     }
 
-    /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    @Override
-    protected Item getDropItem() {
-        return Items.BONE;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.SKULL_CRAWLER;
     }
 
-    protected ItemStack getRareDrop() {
-        return new ItemStack(Items.SKULL, 1, 0);
-    }
-
-    @Override
-    protected void dropFewItems(boolean p_70628_1_, int lootAttr) {
-        super.dropFewItems(p_70628_1_, lootAttr);
-
-        if (p_70628_1_ && (this.rand.nextInt(100) <= (lootAttr * 10))) {
-            this.entityDropItem(getRareDrop(), 0);
-        }
-    }
-
-    /**
-     * returns true if this entity is by a ladder, false otherwise
-     */
     @Override
     public boolean isOnLadder() {
         return this.isBesideClimbableBlock();

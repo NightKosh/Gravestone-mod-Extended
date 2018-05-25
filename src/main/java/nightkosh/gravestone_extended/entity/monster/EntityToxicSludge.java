@@ -23,10 +23,12 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
+import net.minecraft.world.storage.loot.LootTableList;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSItem;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.helper.MobsHelper;
 import nightkosh.gravestone_extended.helper.StateHelper;
@@ -215,7 +217,7 @@ public class EntityToxicSludge extends EntitySlime {
 
     @Nullable
     protected ResourceLocation getLootTable() {
-        return null;
+        return this.getSlimeSize() == 1 ? GSLootTables.TOXIC_SLUDGE : LootTableList.EMPTY;
     }
 
     @Override

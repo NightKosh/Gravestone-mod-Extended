@@ -8,9 +8,7 @@ import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.pathfinding.PathNavigateGround;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
@@ -23,6 +21,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableHorse;
 
@@ -94,9 +93,6 @@ public class EntityZombieDog extends EntityUndeadDog {
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
     }
 
-    /**
-     * Returns the sound this mob makes while it's alive.
-     */
     @Override
     protected SoundEvent getAmbientSound() {
         return (this.rand.nextInt(3) == 0) ? SoundEvents.ENTITY_WOLF_AMBIENT : SoundEvents.ENTITY_WOLF_GROWL;
@@ -112,27 +108,18 @@ public class EntityZombieDog extends EntityUndeadDog {
         return SoundEvents.ENTITY_WOLF_DEATH;
     }
 
-    /**
-     * Plays step sound at given x, y, z for the entity
-     */
     @Override
     protected void playStepSound(BlockPos pos, Block block) {
         this.playSound(SoundEvents.ENTITY_WOLF_STEP, 0.15F, 1);
     }
 
-    /**
-     * Returns the volume for the sounds this mob makes.
-     */
     @Override
     protected float getSoundVolume() {
         return 0.4F;
     }
 
-    /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    @Override
-    protected Item getDropItem() {
-        return Items.ROTTEN_FLESH;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.ZOMBIE_DOG;
     }
 }

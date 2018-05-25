@@ -12,18 +12,18 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import nightkosh.gravestone_extended.core.GSItem;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.entity.ai.AIBatFly;
 import nightkosh.gravestone_extended.helper.MobsHelper;
@@ -212,14 +212,9 @@ public class EntityVampireBat extends EntityMob {
         return this.height / 2F;
     }
 
-    @Override
-    protected Item getDropItem() {
-        return GSItem.BAT_WING;
-    }
-
-    @Override
-    protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
-        this.dropItem(this.getDropItem(),  this.rand.nextInt(3));
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.VAMPIRE_BAT;
     }
 
     @Override

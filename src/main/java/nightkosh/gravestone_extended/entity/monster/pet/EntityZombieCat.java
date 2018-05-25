@@ -8,9 +8,7 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.pathfinding.PathNavigateGround;
 import net.minecraft.util.DamageSource;
@@ -24,6 +22,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableHorse;
 
@@ -121,9 +120,6 @@ public class EntityZombieCat extends EntityUndeadCat {
         }
     }
 
-    /**
-     * (abstract) Protected helper method to write subclass entity data to NBT.
-     */
     @Override
     public void writeEntityToNBT(NBTTagCompound nbt) {
         super.writeEntityToNBT(nbt);
@@ -131,9 +127,6 @@ public class EntityZombieCat extends EntityUndeadCat {
         nbt.setInteger("ZombieCatType", this.getSkin());
     }
 
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
     @Override
     public void readEntityFromNBT(NBTTagCompound nbt) {
         super.readEntityFromNBT(nbt);
@@ -141,58 +134,40 @@ public class EntityZombieCat extends EntityUndeadCat {
         this.setSkin(nbt.getInteger("ZombieCatType"));
     }
 
-    /**
-     * Returns the sound this mob makes while it's alive.
-     */
     @Override
     protected SoundEvent getAmbientSound() {
         return (this.rand.nextInt(4) == 0) ? SoundEvents.ENTITY_CAT_PURREOW : SoundEvents.ENTITY_CAT_AMBIENT;
     }
 
-    /**
-     * Returns the sound this mob makes when it is hurt.
-     */
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
         return SoundEvents.ENTITY_CAT_HURT;
     }
 
-    /**
-     * Returns the sound this mob makes on death.
-     */
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_CAT_DEATH;
     }
 
-    /**
-     * Plays step sound at given x, y, z for the entity
-     */
     @Override
     protected void playStepSound(BlockPos pos, Block block) {
     }
 
-    /**
-     * Returns the volume for the sounds this mob makes.
-     */
     @Override
     protected float getSoundVolume() {
         return 0.4F;
     }
 
-    /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    @Override
-    protected Item getDropItem() {
-        return Items.ROTTEN_FLESH;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.ZOMBIE_CAT;
     }
 
     public int getSkin() {
-        return this.dataManager.get(OCELOT_VARIANT).intValue();
+        return this.dataManager.get(OCELOT_VARIANT);
     }
 
     public void setSkin(int skinId) {
-        this.dataManager.set(OCELOT_VARIANT, Integer.valueOf(skinId));
+        this.dataManager.set(OCELOT_VARIANT, skinId);
     }
 }

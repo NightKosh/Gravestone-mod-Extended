@@ -4,9 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -14,7 +12,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.Resources;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -51,43 +52,28 @@ public class EntitySkeletonDog extends EntityUndeadDog {
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5);
     }
 
-    /**
-     * Returns the sound this mob makes while it's alive.
-     */
     @Override
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ENTITY_SKELETON_AMBIENT;
     }
 
-    /**
-     * Returns the sound this mob makes when it is hurt.
-     */
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
         return SoundEvents.ENTITY_SKELETON_HURT;
     }
 
-    /**
-     * Returns the sound this mob makes on death.
-     */
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_SKELETON_DEATH;
     }
 
-    /**
-     * Plays step sound at given x, y, z for the entity
-     */
     @Override
     protected void playStepSound(BlockPos pos, Block block) {
         this.playSound(SoundEvents.ENTITY_SKELETON_STEP, 0.15F, 1);
     }
 
-    /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    @Override
-    protected Item getDropItem() {
-        return Items.BONE;
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.SKELETON_DOG;
     }
 }

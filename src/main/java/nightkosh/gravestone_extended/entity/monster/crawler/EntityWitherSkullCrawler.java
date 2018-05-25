@@ -1,11 +1,13 @@
 package nightkosh.gravestone_extended.entity.monster.crawler;
 
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSLootTables;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -26,9 +28,9 @@ public class EntityWitherSkullCrawler extends EntitySkullCrawler {
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(2);
     }
 
-    @Override
-    protected ItemStack getRareDrop() {
-        return new ItemStack(Items.SKULL, 1, 1);
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.WITHER_SKULL_CRAWLER;
     }
 
     @Override

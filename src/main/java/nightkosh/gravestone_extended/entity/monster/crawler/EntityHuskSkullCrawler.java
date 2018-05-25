@@ -4,8 +4,12 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSLootTables;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -36,5 +40,10 @@ public class EntityHuskSkullCrawler extends EntityZombieSkullCrawler {
     @Override
     protected PotionEffect getPotionEffect() {
         return new PotionEffect(MobEffects.HUNGER, 200);
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.HUSK_SKULL_CRAWLER;
     }
 }

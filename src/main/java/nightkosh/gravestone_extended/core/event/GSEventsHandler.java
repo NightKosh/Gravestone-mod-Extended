@@ -24,6 +24,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
@@ -38,10 +39,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.capability.ChokeProvider;
 import nightkosh.gravestone_extended.capability.IChoke;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.GSPotion;
-import nightkosh.gravestone_extended.core.MobSpawn;
+import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.enchantment.EnchantmentBloodyReplication;
 import nightkosh.gravestone_extended.enchantment.EnchantmentNecroticCorrosion;
 import nightkosh.gravestone_extended.enchantment.EnchantmentPainMirror;
@@ -240,6 +238,11 @@ public class GSEventsHandler {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    public void lootLoad(LootTableLoadEvent event) {
+        GSLootTables.inject(event);
     }
 
     @SubscribeEvent

@@ -20,12 +20,15 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.entity.ai.AIBarghestInvisible;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityUndeadDog;
 import nightkosh.gravestone_extended.entity.monster.pet.EnumUndeadMobType;
 import nightkosh.gravestone_extended.helper.MobsHelper;
+
+import javax.annotation.Nullable;
 
 /**
  * GraveStone mod
@@ -150,5 +153,10 @@ public class EntityBarghest extends EntityUndeadDog {
     @Override
     public boolean getCanSpawnHere() {
         return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
+    }
+
+    @Nullable
+    protected ResourceLocation getLootTable() {
+        return GSLootTables.BARGHEST;
     }
 }
