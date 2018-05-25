@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.gui.container;
+package nightkosh.gravestone_extended.gui.container.slot;
 
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;

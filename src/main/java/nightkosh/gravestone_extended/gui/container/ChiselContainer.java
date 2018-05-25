@@ -12,6 +12,8 @@ import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.crafting.GravesCraftingManager;
+import nightkosh.gravestone_extended.gui.container.slot.GraveCraftingSlot;
+import nightkosh.gravestone_extended.gui.container.slot.GraveRecipeSlot;
 import nightkosh.gravestone_extended.inventory.GraveRecipeInventory;
 import nightkosh.gravestone_extended.packets.ChiselMessageToServer;
 
