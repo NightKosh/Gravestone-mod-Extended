@@ -255,6 +255,7 @@ public class BlockMemorial extends BlockContainer {
 
                 tileEntity.setGraveType(itemStack.getItemDamage());
                 tileEntity.setMossy(nbt.getBoolean("Mossy"));
+                tileEntity.setEnchanted(nbt.getBoolean("Enchanted"));
 
                 tileEntity.setPlayerProfile(nbt);
 

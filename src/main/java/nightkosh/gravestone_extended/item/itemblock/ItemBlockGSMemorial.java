@@ -81,7 +81,7 @@ public class ItemBlockGSMemorial extends ItemBlock {
                 list.add(deathText);
             }
 
-            if (nbt != null && nbt.hasKey("Owner", 10)) {
+            if (nbt.hasKey("Owner", 10)) {
                 GameProfile playerProfile = NBTUtil.readGameProfileFromNBT(nbt.getCompoundTag("Owner"));
                 if (playerProfile != null) {
                     list.add(playerProfile.getName());
@@ -100,6 +100,11 @@ public class ItemBlockGSMemorial extends ItemBlock {
                 }
                 list.add(materialStr.toString());
             }
+
+            if (nbt.hasKey("Enchanted")) {
+                list.add("Enchanted");//TODO
+            }
+
         }
     }
 
