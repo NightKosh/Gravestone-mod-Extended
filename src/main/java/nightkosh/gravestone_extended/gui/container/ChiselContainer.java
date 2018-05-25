@@ -1,10 +1,12 @@
 package nightkosh.gravestone_extended.gui.container;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.play.server.SPacketSetSlot;
 import net.minecraft.world.World;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.api.grave.EnumGraveType;
@@ -87,14 +89,19 @@ public class ChiselContainer extends Container {
 
     @Override
     public void onCraftMatrixChanged(IInventory inventory) {
-//        if (!this.world.isRemote) {
+        if (!this.world.isRemote) {
             List<ItemStack> items = new ArrayList<>(inventory.getSizeInventory());
             for (int i = 0; i < inventory.getSizeInventory(); i++) {
                 items.add(inventory.getStackInSlot(i));
             }
 
-            this.craftResult.setInventorySlotContents(0, GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy));
-//        }
+            EntityPlayerMP entityplayermp = (EntityPlayerMP) this.player;
+            ItemStack stack = GravesCraftingManager.INSTANCE.findMatchingRecipe(items, isGravestone, graveType, memorialType, material, isEnchanted, isMossy);
+
+
+            this.craftResult.setInventorySlotContents(0, stack);
+            entityplayermp.connection.sendPacket(new SPacketSetSlot(this.windowId, 0, stack));
+        }
     }
 
     @Override
