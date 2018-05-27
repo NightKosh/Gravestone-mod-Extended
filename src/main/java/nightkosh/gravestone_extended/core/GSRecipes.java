@@ -346,7 +346,7 @@ public class GSRecipes {
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_helmet"), GROUP, new ItemStack(GSItem.SWAMP_THING_HELMET),
                 "ooo", "oho",
                 'o', GSItem.OOZE,
-                'h', Items.LEATHER_CHESTPLATE);
+                'h', Items.LEATHER_HELMET);
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_chestplate"), GROUP, new ItemStack(GSItem.SWAMP_THING_CHESTPLATE),
                 "oco", "ooo", "ooo",
                 'o', GSItem.OOZE,
@@ -360,19 +360,19 @@ public class GSRecipes {
                 'o', GSItem.OOZE,
                 'b', Items.LEATHER_BOOTS);
 
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_helmet"), GROUP, new ItemStack(GSItem.MUMMY_HELMET),
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "mummy_helmet"), GROUP, new ItemStack(GSItem.MUMMY_HELMET),
                 "ppp", "php",
                 'p', GSItem.PIECE_OF_MUMMY_CLOTH,
-                'h', Items.LEATHER_CHESTPLATE);
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_chestplate"), GROUP, new ItemStack(GSItem.MUMMY_CHESTPLATE),
+                'h', Items.LEATHER_HELMET);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "mummy_chestplate"), GROUP, new ItemStack(GSItem.MUMMY_CHESTPLATE),
                 "pcp", "ppp", "ppp",
                 'p', GSItem.PIECE_OF_MUMMY_CLOTH,
                 'c', Items.LEATHER_CHESTPLATE);
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_leggings"), GROUP, new ItemStack(GSItem.MUMMY_LEGGINGS),
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "mummy_leggings"), GROUP, new ItemStack(GSItem.MUMMY_LEGGINGS),
                 "ppp", "plp", "p p",
                 'p', GSItem.PIECE_OF_MUMMY_CLOTH,
                 'l', Items.LEATHER_LEGGINGS);
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_boots"), GROUP, new ItemStack(GSItem.MUMMY_BOOTS),
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "mummy_boots"), GROUP, new ItemStack(GSItem.MUMMY_BOOTS),
                 "p p", "pbp",
                 'p', GSItem.PIECE_OF_MUMMY_CLOTH,
                 'b', Items.LEATHER_BOOTS);
