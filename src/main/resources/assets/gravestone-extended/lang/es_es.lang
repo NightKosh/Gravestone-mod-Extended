@@ -238,6 +238,10 @@ item.gravestone.diving_helmet.tooltip=Provides unlimited breath under the water
 item.gravestone.diving_chestplate.name=Diving Chestplate
 item.gravestone.diving_leggings.name=Diving Leggings
 item.gravestone.diving_boots.name=Diving Boots
+item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
+item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
+item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
+item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
 
 ## Other Items
 ## TODO !!!!!!!!!!

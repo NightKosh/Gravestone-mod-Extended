@@ -213,6 +213,10 @@ item.gravestone.diving_helmet.tooltip=Позволяет дышать под в�
 item.gravestone.diving_chestplate.name=Водолазный нагрудник
 item.gravestone.diving_leggings.name=Водолазные штаны
 item.gravestone.diving_boots.name=Водолазные ботинки
+item.gravestone.swamp_thing_helmet.name=Маска болотной твари
+item.gravestone.swamp_thing_chestplate.name=Рубашка болотной твари
+item.gravestone.swamp_thing_leggings.name=Штаны болотной твари
+item.gravestone.swamp_thing_boots.name=Ботинки болотной твари
 
 ## Other Items
 item.gravestone.toxic_slime.name=Токсичная слизь

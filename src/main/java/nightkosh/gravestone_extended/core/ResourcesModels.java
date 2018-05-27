@@ -16,12 +16,18 @@ public class ResourcesModels extends Resources {
 
     public static final String MOD_NAME = ModInfo.ID.toLowerCase();
 
-    // MODEL RESOURCES
+    // armor
     public static final ModelResourceLocation DIVING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_HELMET.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation DIVING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation DIVING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation DIVING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_BOOTS.getRegistryName().getResourcePath(), "inventory");
 
+    public static final ModelResourceLocation SWAMP_THING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_HELMET.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation SWAMP_THING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation SWAMP_THING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation SWAMP_THING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_BOOTS.getRegistryName().getResourcePath(), "inventory");
+
+    // tools
     public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/" + GSItem.CHISEL.getRegistryName().getResourcePath(), "inventory");
 
     public static final ModelResourceLocation BONE_SWORD = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SWORD.getRegistryName().getResourcePath(), "inventory");
