@@ -50,6 +50,12 @@ public class GSSound {
     @GameRegistry.ObjectHolder("entity.swamp_thing.growl")
     public static SoundEvent ENTITY_SWAMP_THING_GROWL = createSoundEvent("entity.swamp_thing.growl");
 
+    // RAVEN
+    @GameRegistry.ObjectHolder("entity.raven.ambient")
+    public static SoundEvent ENTITY_RAVEN_AMBIENT = createSoundEvent("entity.raven.ambient");
+    @GameRegistry.ObjectHolder("entity.raven.hurt")
+    public static SoundEvent ENTITY_RAVEN_HURT = createSoundEvent("entity.raven.hurt");
+
     private static SoundEvent createSoundEvent(final String soundName) {
         final ResourceLocation soundID = new ResourceLocation(ModInfo.ID, soundName);
         return new SoundEvent(soundID).setRegistryName(soundID);

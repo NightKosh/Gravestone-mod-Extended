@@ -94,5 +94,29 @@
             "name" : "gravestone-extended:entity/swamp_thing/growl",
             "stream" : true
         }]
+    },
+    "entity.raven.ambient" : {
+        "category": "entity",
+        "subtitle": "entity.raven.ambient",
+        "sounds" : [{
+            "name" : "gravestone-extended:entity/raven/ambient_1",
+            "stream" : true
+        },
+        {
+            "name" : "gravestone-extended:entity/raven/ambient_2",
+            "stream" : true
+        },
+        {
+            "name" : "gravestone-extended:entity/raven/ambient_3",
+            "stream" : true
+        }]
+    },
+    "entity.raven.hurt" : {
+        "category": "entity",
+        "subtitle": "entity.raven.hurt",
+        "sounds" : [{
+            "name" : "gravestone-extended:entity/raven/hurt",
+            "stream" : true
+        }]
     }
 }
