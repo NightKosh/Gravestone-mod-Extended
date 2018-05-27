@@ -10,6 +10,10 @@ import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.item.*;
+import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyBoots;
+import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyChestplate;
+import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyHelmet;
+import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyLeggings;
 import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingBoots;
 import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingChestplate;
 import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingHelmet;
@@ -77,6 +81,11 @@ public class GSItem {
     public static final Item SWAMP_THING_LEGGINGS = new ItemSwampThingLeggings();
     public static final Item SWAMP_THING_BOOTS = new ItemSwampThingBoots();
 
+    public static final Item MUMMY_HELMET = new ItemMummyHelmet();
+    public static final Item MUMMY_CHESTPLATE = new ItemMummyChestplate();
+    public static final Item MUMMY_LEGGINGS = new ItemMummyLeggings();
+    public static final Item MUMMY_BOOTS = new ItemMummyBoots();
+
     public static final Item SLIME_CHUNK = new ItemSlimeChunk();
     public static final Item IMP_SKULL = new ItemImpSkull();
     public static final Item ENDER_SKULL = new ItemEnderSkull();
@@ -107,7 +116,8 @@ public class GSItem {
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
             registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
             registry.registerAll(DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
-                    SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS);
+                    SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,
+                    MUMMY_HELMET, MUMMY_CHESTPLATE, MUMMY_LEGGINGS, MUMMY_BOOTS);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
             if (Loader.isModLoaded(Compatibility.FORESTRY_ID)) {
                 CompatibilityForestry.addBackpack(registry);

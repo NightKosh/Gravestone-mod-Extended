@@ -232,6 +232,10 @@ item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
 item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
 item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
 item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
+item.gravestone.mummy_helmet.name=Mummy Mask
+item.gravestone.mummy_chestplate.name=Mummy Shirt
+item.gravestone.mummy_leggings.name=Mummy Pants
+item.gravestone.mummy_boots.name=Mummy Boots
 
 ## Other Items
 ## TODO !!!!!!!!!!

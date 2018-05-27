@@ -40,6 +40,11 @@ public class Resources extends nightkosh.gravestone.core.Resources{
     public static final String SWAMP_THING_LEGS = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/leggings.png";
     public static final String SWAMP_THING_BOOTS = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/boots.png";
 
+    public static final String MUMMY_HELMET = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/helmet.png";
+    public static final String MUMMY_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/chestplate.png";
+    public static final String MUMMY_LEGS = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/leggings.png";
+    public static final String MUMMY_BOOTS = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/boots.png";
+
     // gui
     public static final ResourceLocation ALTAR_GUI = new ResourceLocation(GUI_LOCATION + "altar_gui.png");
     public static final ResourceLocation CHISEL_GUI = new ResourceLocation(GUI_LOCATION + "chisel_gui.png");

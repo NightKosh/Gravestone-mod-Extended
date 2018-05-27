@@ -217,6 +217,10 @@ item.gravestone.swamp_thing_helmet.name=Маска болотной твари
 item.gravestone.swamp_thing_chestplate.name=Рубашка болотной твари
 item.gravestone.swamp_thing_leggings.name=Штаны болотной твари
 item.gravestone.swamp_thing_boots.name=Ботинки болотной твари
+item.gravestone.mummy_helmet.name=Маска мумии
+item.gravestone.mummy_chestplate.name=Рубашка мумии
+item.gravestone.mummy_leggings.name=Штаны мумии
+item.gravestone.mummy_boots.name=Ботинки мумии
 
 ## Other Items
 item.gravestone.toxic_slime.name=Токсичная слизь

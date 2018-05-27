@@ -27,6 +27,11 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation SWAMP_THING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation SWAMP_THING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_BOOTS.getRegistryName().getResourcePath(), "inventory");
 
+    public static final ModelResourceLocation MUMMY_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_HELMET.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation MUMMY_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation MUMMY_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation MUMMY_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_BOOTS.getRegistryName().getResourcePath(), "inventory");
+
     // tools
     public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/" + GSItem.CHISEL.getRegistryName().getResourcePath(), "inventory");
 

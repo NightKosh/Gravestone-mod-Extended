@@ -360,6 +360,23 @@ public class GSRecipes {
                 'o', GSItem.OOZE,
                 'b', Items.LEATHER_BOOTS);
 
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_helmet"), GROUP, new ItemStack(GSItem.MUMMY_HELMET),
+                "ppp", "php",
+                'p', GSItem.PIECE_OF_MUMMY_CLOTH,
+                'h', Items.LEATHER_CHESTPLATE);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_chestplate"), GROUP, new ItemStack(GSItem.MUMMY_CHESTPLATE),
+                "pcp", "ppp", "ppp",
+                'p', GSItem.PIECE_OF_MUMMY_CLOTH,
+                'c', Items.LEATHER_CHESTPLATE);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_leggings"), GROUP, new ItemStack(GSItem.MUMMY_LEGGINGS),
+                "ppp", "plp", "p p",
+                'p', GSItem.PIECE_OF_MUMMY_CLOTH,
+                'l', Items.LEATHER_LEGGINGS);
+        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "swamp_thing_boots"), GROUP, new ItemStack(GSItem.MUMMY_BOOTS),
+                "p p", "pbp",
+                'p', GSItem.PIECE_OF_MUMMY_CLOTH,
+                'b', Items.LEATHER_BOOTS);
+
         // blocks
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "withered_glass"), GROUP, new ItemStack(GSBlock.WITHERED_GLASS, 6),
                 "ggg", "sos", "ggg",
