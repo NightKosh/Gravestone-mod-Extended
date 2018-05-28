@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.models.entity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import nightkosh.gravestone_extended.entity.EntityRaven;
 
 /**
  * GraveStone mod
@@ -60,17 +61,14 @@ public class ModelRaven extends ModelBase {
         beakBottom.addBox("beakBottom", 0, 0, 0, 1, 1, 2);
         head.addChild(beakBottom);
 
-        leftWing = new ModelRenderer(this, 0, 12);
-        leftWing.addBox(0, 0, 0, 1, 3, 8);
-        leftWing.setRotationPoint(1.5F, 17, -1);
-        leftWing.setTextureSize(32, 32);
-        setRotation(leftWing, -0.4014257F, 0, 0);
 
-        rightWing = new ModelRenderer(this, 0, 12);
-        rightWing.addBox(0, 0, 0, 1, 3, 8);
-        rightWing.setRotationPoint(-2.5F, 17, -1);
-        rightWing.setTextureSize(32, 32);
-        setRotation(rightWing, -0.4014257F, 0, 0);
+        this.leftWing = new ModelRenderer(this, 0, 12);
+        this.leftWing.setRotationPoint(2, 18.5F, -1);
+        this.leftWing.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
+
+        this.rightWing = new ModelRenderer(this, 0, 12);
+        this.rightWing.setRotationPoint(-2, 18.5F, -1);
+        this.rightWing.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 
         tail = new ModelRenderer(this, 18, 12);
         tail.addBox(0, 0, 0, 3, 1, 4);
@@ -126,21 +124,15 @@ public class ModelRaven extends ModelBase {
     }
 
     @Override
-    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity) {
-        super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float f3, float f4, float f5, Entity entity) {
+        super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, f3, f4, f5, entity);
 
-        float skullRotation  = f4 / (180 / (float) Math.PI);
-
-        this.head.rotateAngleX = skullRotation;
-        this.head.rotateAngleY = skullRotation;
-
-//        float wingRotationY = -(MathHelper.cos(f * 0.6662F) * 0.1F) * f1;
-//        this.rightWing.rotateAngleY += wingRotationY;
-//        this.rightWing.rotateAngleX = -90;
-//        this.rightWing.rotateAngleZ = -105;
-
-//        this.leftWing.rotateAngleY -= wingRotationY;
-//        this.leftWing.rotateAngleY = 90;
-//        this.leftWing.rotateAngleZ = 105;
+        if (((EntityRaven) entity).isFlying()) {
+            this.setRotation(this.leftWing, 0, 0, -0.0873F - ageInTicks);
+            this.setRotation(this.rightWing, 0, 0, 0.0873F + ageInTicks);
+        } else {
+            this.setRotation(this.leftWing, 1.16937F, 0, 0);
+            this.setRotation(this.rightWing, 1.16937F, 0, 0);
+        }
     }
 }
