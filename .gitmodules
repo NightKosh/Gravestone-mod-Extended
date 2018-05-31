@@ -1,3 +1,6 @@
 [submodule "api/sophisticated_wolves"]
 	path = api/sophisticated_wolves
 	url = https://github.com/NightKosh/Sophisticated-wolves-API.git
+[submodule "thaumcraft6"]
+	path = api/thaumcraft/thaumcraft/api
+	url = https://github.com/Azanor/thaumcraft-api
