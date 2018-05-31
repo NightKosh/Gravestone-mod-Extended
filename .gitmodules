@@ -3,4 +3,4 @@
 	url = https://github.com/NightKosh/Sophisticated-wolves-API.git
 [submodule "api/thaumcraft/thaumcraft/api"]
 	path = api/thaumcraft/thaumcraft/api
-	url = https://github.com/Azanor/thaumcraft-api.git
+	url = https://github.com/Azanor/thaumcraft-api
