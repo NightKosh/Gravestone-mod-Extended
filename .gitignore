@@ -12,10 +12,6 @@ idea
 gradle
 build
 #api
-src/main/java/mariculture
-src/main/java/micdoodle8
-src/main/java/tconstruct
-src/main/java/thaumcraft
 
 # Package Files #
 *.jar
