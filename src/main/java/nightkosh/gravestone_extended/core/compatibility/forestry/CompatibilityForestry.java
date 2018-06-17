@@ -76,6 +76,15 @@ public class CompatibilityForestry {
 
 
             registry.registerAll(CompatibilityForestry.backpackItemT1, CompatibilityForestry.backpackItemT2);
+
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.BAT_WING));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.TOXIC_SLIME));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.OOZE));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.PIECE_OF_MUMMY_CLOTH));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.RAVEN_FEATHER));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.RAVEN_CLAWS));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.PIECE_OF_DIVING_SUIT));
+            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.FISH));
         }
     }
 }
