@@ -17,7 +17,7 @@ public class ConfigsHelper {
 
 
     public static List<Integer> getDimensionList(Configuration config, String category, String ConfigID, int defaultValue, String comment) {
-        Property dimensionIdProperty = config.get(category, ConfigID, defaultValue);
+        Property dimensionIdProperty = config.get(category, ConfigID, Integer.toString(defaultValue));
         dimensionIdProperty.setComment(comment);
         String ar = dimensionIdProperty.getString();
         String[] ids = ar.split(";");
