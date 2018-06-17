@@ -5,7 +5,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.entity.monster.EntityPhantomDiver;
+import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
 import nightkosh.gravestone_extended.renderer.entity.RenderPhantomDiver;
 
 /**

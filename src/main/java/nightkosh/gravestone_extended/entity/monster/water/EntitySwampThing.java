@@ -1,23 +1,24 @@
-package nightkosh.gravestone_extended.entity.monster;
+package nightkosh.gravestone_extended.entity.monster.water;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSLootTables;
-import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.GSSound;
+import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableTargetInWater;
+import nightkosh.gravestone_extended.entity.monster.water.EntityWaterWalkingMob;
 import nightkosh.gravestone_extended.helper.MobsHelper;
 
 import javax.annotation.Nullable;
@@ -28,9 +29,9 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EntityDrowned extends EntityMob {
+public class EntitySwampThing extends EntityWaterWalkingMob {
 
-    public EntityDrowned(World world) {
+    public EntitySwampThing(World world) {
         super(world);
     }
 
@@ -42,7 +43,7 @@ public class EntityDrowned extends EntityMob {
         this.tasks.addTask(8, new EntityAILookIdle(this));
 
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTargetInWater(this, EntityPlayer.class, true));
     }
 
     @Override
@@ -50,7 +51,7 @@ public class EntityDrowned extends EntityMob {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(35);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.25);
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(4);
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30);
     }
 
@@ -69,20 +70,14 @@ public class EntityDrowned extends EntityMob {
             }
         }
 
-        if (this.world.isRemote && this.isInWater()) {
-            for (int i = 0; i < 2; i++) {
-                this.world.spawnParticle(EnumParticleTypes.WATER_BUBBLE, this.posX, this.posY + this.getEyeHeight(), this.posZ, 0, 0, 0);
-            }
-        }
-
         super.onLivingUpdate();
     }
 
     @Override
     public boolean attackEntityAsMob(Entity entity) {
         if (super.attackEntityAsMob(entity)) {
-            if (entity instanceof EntityPlayer) {
-                ((EntityPlayer) entity).addPotionEffect(new PotionEffect(GSPotion.CHOKE, 400));
+            if (entity instanceof EntityLivingBase) {
+                ((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 300));
             }
             return true;
         } else {
@@ -97,16 +92,12 @@ public class EntityDrowned extends EntityMob {
 
     @Nullable
     protected ResourceLocation getLootTable() {
-        return GSLootTables.DROWNED;
+        return GSLootTables.SWAMP_THING;
     }
 
     @Override
     protected SoundEvent getAmbientSound() {
-        if (this.isInWater()) {
-            return this.rand.nextBoolean() ? GSSound.ENTITY_DROWNED_BUBBLES : GSSound.ENTITY_DROWNED_AMBIENT;
-        } else {
-            return GSSound.ENTITY_DROWNED_AMBIENT;
-        }
+        return GSSound.ENTITY_SWAMP_THING_GROWL;
     }
 
     @Override
@@ -140,18 +131,17 @@ public class EntityDrowned extends EntityMob {
     }
 
     @Override
-    public boolean getCanSpawnHere() {
-        return this.posY < this.world.getSeaLevel() && super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world) &&
-                MobsHelper.isChunkPopulated(this);
-    }
-
-    @Override
     public boolean isNotColliding() {
         return this.world.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.world.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty();
     }
 
     @Override
     public int getMaxSpawnedInChunk() {
-        return 1;
+        return 3;
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world) && MobsHelper.isChunkPopulated(this);
     }
 }

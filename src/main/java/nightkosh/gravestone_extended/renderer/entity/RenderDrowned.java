@@ -5,7 +5,7 @@ import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.entity.monster.EntityDrowned;
+import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
 
 /**
  * GraveStone mod

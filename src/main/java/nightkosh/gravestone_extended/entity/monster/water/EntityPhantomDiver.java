@@ -1,8 +1,9 @@
-package nightkosh.gravestone_extended.entity.monster;
+package nightkosh.gravestone_extended.entity.monster.water;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSLootTables;
+import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
 
 import javax.annotation.Nullable;
 

@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.entity.monster.EntitySwampThing;
+import nightkosh.gravestone_extended.entity.monster.water.EntitySwampThing;
 import nightkosh.gravestone_extended.renderer.entity.RenderSwampThing;
 
 /**
