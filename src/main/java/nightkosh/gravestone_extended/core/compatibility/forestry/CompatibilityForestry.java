@@ -24,8 +24,6 @@ import nightkosh.gravestone_extended.core.ModInfo;
  */
 public class CompatibilityForestry {
 
-    public static boolean isInstalled = false;
-
     public static final String BACKPACK_UID = "gravestone.undertaker";
 
     public static Item backpackItemT1;

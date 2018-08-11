@@ -1,7 +1,6 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
 import net.minecraftforge.fml.common.Loader;
-import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 
 /**
  * GraveStone mod
@@ -15,6 +14,7 @@ public class Compatibility {
 
     public static final String FORESTRY_ID = "forestry";
 
+    //This fields should be out of their compatibility modules to prevent "ClassNotFoundException" or some other similar bugs in case of API lack
     public static boolean sophisticatedWolvesInstalled;
     public static boolean forestryInstalled;
 
@@ -31,13 +31,11 @@ public class Compatibility {
         }
 
         if (Loader.isModLoaded(FORESTRY_ID)) {
-            forestryInstalled = true;//TODO
-            CompatibilityForestry.isInstalled = true;
+            forestryInstalled = true;
         }
 
         if (Loader.isModLoaded("sophisticatedwolves")) {
-            sophisticatedWolvesInstalled = true;//TODO
-            CompatibilitySophisticatedWolves.isInstalled = true;
+            sophisticatedWolvesInstalled = true;
         }
 
         if (Loader.isModLoaded(CompatibilityInfernalMobs.ID)) {
