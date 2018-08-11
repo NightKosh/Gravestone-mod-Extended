@@ -17,8 +17,6 @@ import java.util.Random;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class CompatibilitySophisticatedWolves {
-    //TODO !!!
-    protected static boolean isInstalled = false;
 
     private CompatibilitySophisticatedWolves() {
     }
@@ -54,10 +52,6 @@ public class CompatibilitySophisticatedWolves {
     }
 
     public static String getSpeciesStr(int speciesNum) {
-        return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.dog_type") + " " + EnumWolfSpecies.getSpeciesByNum(speciesNum).name().toLowerCase();
-    }
-
-    public static boolean isInstalled() {
-        return isInstalled;
+        return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.dog_type") + " " + EnumWolfSpecies.getSpeciesName(EnumWolfSpecies.getSpeciesByNum(speciesNum));
     }
 }
