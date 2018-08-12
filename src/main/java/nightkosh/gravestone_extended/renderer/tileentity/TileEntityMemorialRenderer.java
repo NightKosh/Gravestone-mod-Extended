@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
 import com.google.common.collect.Maps;
+import com.mojang.authlib.GameProfile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.LayeredTexture;
 import net.minecraft.tileentity.TileEntity;
@@ -114,12 +115,12 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
                 break;
         }
 
-        renderMemorial(te, memorial, memorialType, isEnchanted, isMossy);
+        renderMemorial(memorial, memorialType, isEnchanted, isMossy, (te == null) ? null : te.getPlayerProfile());
 
         GL11.glPopMatrix();
     }
 
-    public void renderMemorialAsItem(EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy) {
+    public void renderMemorialAsItem(EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy, GameProfile profile) {
         GL11.glPushMatrix();
 
         GL11.glRotatef(-35, 0, 1, 0);
@@ -135,27 +136,12 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
                 break;
         }
 
-        switch (EnumFacing.values()[0]) {//TODO 0
-            case SOUTH:
-                GL11.glRotatef(0, 0, 1, 0);
-                break;
-            case WEST:
-                GL11.glRotatef(90, 0, 1, 0);
-                break;
-            case NORTH:
-                GL11.glRotatef(180, 0, 1, 0);
-                break;
-            case EAST:
-                GL11.glRotatef(270, 0, 1, 0);
-                break;
-        }
-
-        renderMemorial(null, memorial, memorialType, isEnchanted, isMossy);//TODO null
+        renderMemorial(memorial, memorialType, isEnchanted, isMossy, profile);
 
         GL11.glPopMatrix();
     }
 
-    public void renderMemorial(TileEntityMemorial te, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy) {
+    public void renderMemorial(EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy, GameProfile profile) {
         ModelGraveStone model = getModel(memorialType);
         model.setPedestalTexture(getPedestalTexture(memorial, isMossy));
         switch (memorialType) {
@@ -164,8 +150,8 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
                 model.customRender(isEnchanted);
                 break;
             case STEVE_STATUE:
-                if (te != null && te.getPlayerProfile() != null) {
-                    GameProfileHelper.bindPlayerTexture(te.getPlayerProfile());
+                if (profile != null) {
+                    GameProfileHelper.bindPlayerTexture(profile);
                 } else {
                     bindTextureByName(getTexture(memorial, memorial.getTexture(), isMossy));
                 }

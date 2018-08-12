@@ -33,7 +33,7 @@ public class GraveInGuiRenderer {
 
         scaleAndRotate(x, y, SCALE_MEMORIAL, partialTicks);
 
-        TileEntityMemorialRenderer.instance.renderMemorial(null, memorial, memorial.getMemorialType(), isEnchanted, isMossy);
+        TileEntityMemorialRenderer.instance.renderMemorial(memorial, memorial.getMemorialType(), isEnchanted, isMossy, null);
 
         GL11.glPopMatrix();
     }

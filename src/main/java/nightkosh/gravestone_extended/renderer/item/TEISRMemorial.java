@@ -1,9 +1,11 @@
 package nightkosh.gravestone_extended.renderer.item;
 
+import com.mojang.authlib.GameProfile;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
+import nightkosh.gravestone_extended.helper.GameProfileHelper;
 import nightkosh.gravestone_extended.renderer.tileentity.TileEntityMemorialRenderer;
 
 /**
@@ -22,7 +24,9 @@ public class TEISRMemorial extends TileEntityItemStackRenderer {
             boolean isEnchanted = nbt.hasKey("Enchanted") && nbt.getBoolean("Enchanted");
             boolean isMossy = nbt.hasKey("Mossy") && nbt.getBoolean("Mossy");
 
-            TileEntityMemorialRenderer.instance.renderMemorialAsItem(memorial, memorial.getMemorialType(), isEnchanted, isMossy);
+            GameProfile profile = memorial.getMemorialType() == EnumMemorials.EnumMemorialType.STEVE_STATUE ? GameProfileHelper.getProfile(nbt) : null;
+
+            TileEntityMemorialRenderer.instance.renderMemorialAsItem(memorial, memorial.getMemorialType(), isEnchanted, isMossy, profile);
         }
     }
 }
