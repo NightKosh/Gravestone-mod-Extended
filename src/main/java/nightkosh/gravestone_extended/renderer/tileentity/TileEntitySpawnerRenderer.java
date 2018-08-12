@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone.models.ModelRendererSkull;
@@ -35,19 +36,22 @@ public class TileEntitySpawnerRenderer extends TileEntityRenderer {
         instance = this;
     }
 
-    /**
-     * Render a skull tile entity.
-     */
-    public void renderSpawnerPentagramAt(TileEntitySpawner tileEntity, float x, float y, float z, float par8) {
-
+    public void renderSpawnerPentagramAt(TileEntitySpawner tileEntity, float x, float y, float z) {
         if (tileEntity == null) {
-            tileEntity = getDefaultTE();
+            tileEntity = SPAWNER_TE;
         }
-        byte type = (byte) tileEntity.getBlockMetadata();
-        EnumSpawner spawnerType = EnumSpawner.getById(type);
+        EnumSpawner spawnerType = EnumSpawner.getById((byte) tileEntity.getBlockMetadata());
 
+        renderSpawner(spawnerType, tileEntity.getWorld(), x, y, z);
+    }
+
+    public void renderSpawnerAsItem(EnumSpawner spawnerType) {
+        renderSpawner(spawnerType, null, 0, 0, 0);
+    }
+
+    private void renderSpawner(EnumSpawner spawnerType, World world, float x, float y, float z) {
         GL11.glPushMatrix();
-        if (tileEntity.getWorld() != null) {
+        if (world != null) {
             if (spawnerType == EnumSpawner.SPIDER_SPAWNER) {
                 GL11.glTranslatef(x + 0.5F, y + 0.75F, z + 0.5F);
                 GL11.glScalef(0.5F, -0.5F, -0.5F);
@@ -78,7 +82,7 @@ public class TileEntitySpawnerRenderer extends TileEntityRenderer {
 
     @Override
     public void render(TileEntity te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
-        this.renderSpawnerPentagramAt((TileEntitySpawner) te, (float) x, (float) y, (float) z, alpha);
+        this.renderSpawnerPentagramAt((TileEntitySpawner) te, (float) x, (float) y, (float) z);
     }
 
     private static ModelSpawnerBase getSpawnerModel(EnumSpawner spawnerType) {
@@ -92,37 +96,6 @@ public class TileEntitySpawnerRenderer extends TileEntityRenderer {
             case ZOMBIE_SPAWNER:
             default:
                 return zombieSpawnerModel;
-        }
-    }
-
-    protected TileEntitySpawner getDefaultTE() {
-        return SPAWNER_TE;
-    }
-
-    public static class Skeleton extends TileEntitySpawnerRenderer {
-        private static final TileEntitySpawner SPAWNER_TE = new TileEntitySpawner.Skeleton();
-
-        @Override
-        protected TileEntitySpawner getDefaultTE() {
-            return SPAWNER_TE;
-        }
-    }
-
-    public static class Zombie extends TileEntitySpawnerRenderer {
-        private static final TileEntitySpawner SPAWNER_TE = new TileEntitySpawner.Zombie();
-
-        @Override
-        protected TileEntitySpawner getDefaultTE() {
-            return SPAWNER_TE;
-        }
-    }
-
-    public static class Spider extends TileEntitySpawnerRenderer {
-        private static final TileEntitySpawner SPAWNER_TE = new TileEntitySpawner.Spider();
-
-        @Override
-        protected TileEntitySpawner getDefaultTE() {
-            return SPAWNER_TE;
         }
     }
 }

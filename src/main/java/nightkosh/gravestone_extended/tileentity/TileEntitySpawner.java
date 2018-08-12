@@ -22,11 +22,6 @@ public class TileEntitySpawner extends TileEntityBase implements ITickable, ISpa
         spawner = new MobSpawner(this);
     }
 
-    /**
-     * Allows the entity to update its state. Overridden in most subclasses,
-     * e.g. the mob spawner uses this to count ticks and creates a new spawn
-     * inside its implementation.
-     */
     @Override
     public void update() {
         spawner.update();
@@ -58,27 +53,6 @@ public class TileEntitySpawner extends TileEntityBase implements ITickable, ISpa
             return super.getBlockMetadata();
         } else {
             return EnumSpawner.WITHER_SPAWNER.ordinal();
-        }
-    }
-
-    public static class Skeleton extends TileEntitySpawner {
-        @Override
-        public int getBlockMetadata() {
-            return EnumSpawner.SKELETON_SPAWNER.ordinal();
-        }
-    }
-
-    public static class Zombie extends TileEntitySpawner {
-        @Override
-        public int getBlockMetadata() {
-            return EnumSpawner.ZOMBIE_SPAWNER.ordinal();
-        }
-    }
-
-    public static class Spider extends TileEntitySpawner {
-        @Override
-        public int getBlockMetadata() {
-            return EnumSpawner.SPIDER_SPAWNER.ordinal();
         }
     }
 }

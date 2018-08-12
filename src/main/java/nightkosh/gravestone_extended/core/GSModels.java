@@ -19,6 +19,7 @@ import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
 import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
 import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
+import nightkosh.gravestone_extended.renderer.item.TEISRSpawner;
 import nightkosh.gravestone_extended.tileentity.*;
 
 /**
@@ -39,14 +40,11 @@ public class GSModels {
             registerModelsForTEBlocks2(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
                     GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.class);
             //executions
-
             registerModelsForTEBlocks2(EnumExecution.GALLOWS.ordinal(), EnumExecution.BURNING_STAKE.ordinal(),
                     GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.class);
             //spawners
-            registerModelsForTEBlocks(EnumSpawner.WITHER_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.class);
-            registerModelsForTEBlocks(EnumSpawner.SKELETON_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.Skeleton.class);
-            registerModelsForTEBlocks(EnumSpawner.ZOMBIE_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.Zombie.class);
-            registerModelsForTEBlocks(EnumSpawner.SPIDER_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.Spider.class);
+            registerModelsForTEBlocks2(EnumSpawner.WITHER_SPAWNER.ordinal(), EnumSpawner.SPIDER_SPAWNER.ordinal(),
+                    GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.class);
             //piles of bones
             registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.class);
             registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.Skull.class);
