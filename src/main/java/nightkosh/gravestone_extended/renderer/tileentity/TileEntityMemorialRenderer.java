@@ -63,7 +63,7 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
         TileEntityMemorial tileEntity = (TileEntityMemorial) te;
 
         if (tileEntity == null) {
-            tileEntity = getDefaultTE();
+            tileEntity = MEMORIAL_TE;
         }
         EnumMemorials memorial = tileEntity.getMemorialType();
         int meta = 0;
@@ -119,8 +119,43 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
         GL11.glPopMatrix();
     }
 
-    public void renderMemorial(TileEntityMemorial te, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted,
-                                boolean isMossy) {
+    public void renderMemorialAsItem(EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy) {
+        GL11.glPushMatrix();
+
+        GL11.glRotatef(-35, 0, 1, 0);
+        switch (memorialType) {
+            case CROSS:
+            case OBELISK:
+                GL11.glTranslatef(0.9F, 0.3F, 0.5F);
+                GL11.glScalef(0.2F, -0.2F, -0.2F);
+                break;
+            default:
+                GL11.glTranslatef(0.9F, 0.6F, 0.5F);
+                GL11.glScalef(0.4F, -0.4F, -0.4F);
+                break;
+        }
+
+        switch (EnumFacing.values()[0]) {//TODO 0
+            case SOUTH:
+                GL11.glRotatef(0, 0, 1, 0);
+                break;
+            case WEST:
+                GL11.glRotatef(90, 0, 1, 0);
+                break;
+            case NORTH:
+                GL11.glRotatef(180, 0, 1, 0);
+                break;
+            case EAST:
+                GL11.glRotatef(270, 0, 1, 0);
+                break;
+        }
+
+        renderMemorial(null, memorial, memorialType, isEnchanted, isMossy);//TODO null
+
+        GL11.glPopMatrix();
+    }
+
+    public void renderMemorial(TileEntityMemorial te, EnumMemorials memorial, EnumMemorials.EnumMemorialType memorialType, boolean isEnchanted, boolean isMossy) {
         ModelGraveStone model = getModel(memorialType);
         model.setPedestalTexture(getPedestalTexture(memorial, isMossy));
         switch (memorialType) {
@@ -294,119 +329,6 @@ public class TileEntityMemorialRenderer extends TileEntityRenderer {
                 return catStatue;
             case CREEPER_STATUE:
                 return creeperStatue;
-        }
-    }
-
-//    @Override
-//    public boolean forceTileEntityRender() {
-//        return true;
-//    }
-
-    protected TileEntityMemorial getDefaultTE() {
-        return MEMORIAL_TE;
-    }
-
-    public static class Obelisk extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.QUARTZ_OBELISK.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class CelticCross extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_CELTIC_CROSS.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class SteveStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_STEVE_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class VillagerStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_VILLAGER_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class AngelStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_ANGEL_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class DogStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_DOG_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class CatStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_CAT_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
-        }
-    }
-
-    public static class CreeperStatue extends TileEntityMemorialRenderer {
-        private static final TileEntityMemorial MEMORIAL_TE = new TileEntityMemorial();
-
-        static {
-            MEMORIAL_TE.setGraveType(EnumMemorials.STONE_CREEPER_STATUE.ordinal());
-        }
-
-        @Override
-        protected TileEntityMemorial getDefaultTE() {
-            return MEMORIAL_TE;
         }
     }
 }

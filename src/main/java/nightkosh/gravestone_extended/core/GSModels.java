@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -15,6 +16,7 @@ import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.block.enums.*;
 import nightkosh.gravestone_extended.item.ItemFish;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
+import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
 import nightkosh.gravestone_extended.tileentity.*;
 
 /**
@@ -32,15 +34,8 @@ public class GSModels {
         @SubscribeEvent
         public static void registerModels(final ModelRegistryEvent event) {
             //memorials
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CROSS.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_OBELISK.ordinal(), EnumMemorials.ICE_OBELISK.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.Obelisk.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_CELTIC_CROSS.ordinal(), EnumMemorials.ICE_CELTIC_CROSS.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.CelticCross.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_STEVE_STATUE.ordinal(), EnumMemorials.ICE_STEVE_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.SteveStatue.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_VILLAGER_STATUE.ordinal(), EnumMemorials.ICE_VILLAGER_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.VillagerStatue.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_ANGEL_STATUE.ordinal(), EnumMemorials.ICE_ANGEL_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.AngelStatue.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_DOG_STATUE.ordinal(), EnumMemorials.ICE_DOG_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.DogStatue.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_CAT_STATUE.ordinal(), EnumMemorials.ICE_CAT_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.CatStatue.class);
-            registerModelsForTEBlocks(EnumMemorials.WOODEN_CREEPER_STATUE.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.CreeperStatue.class);
+            registerModelsForTEBlocks2(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
+                    GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.class);
             //executions
             registerModelsForTEBlocks(EnumExecution.GALLOWS.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.class);
             registerModelsForTEBlocks(EnumExecution.GIBBET.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.Gibbet.class);
@@ -231,14 +226,23 @@ public class GSModels {
             ModGravestoneExtended.proxy.registerFluidRenderers(block, modelResourceLocation);
         }
 
+        //TODO rename!
+        private static void registerModelsForTEBlocks2(int startMeta, int endMeta, Item item, TileEntityItemStackRenderer renderer, Block block, ModelResourceLocation model, Class TEClass) {
+            item.setTileEntityItemStackRenderer(renderer);
+            for (int meta = startMeta; meta <= endMeta; meta++) {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
+            }
+        }
+
+        //TODO remove !
         private static void registerModelsForTEBlocks(int startMeta, int endMeta, Block block, ModelResourceLocation model, Class TEClass) {
             for (int meta = startMeta; meta <= endMeta; meta++) {
                 registerModelsForTEBlocks(meta, block, model, TEClass);
             }
         }
 
+        //TODO remove !
         private static void registerModelsForTEBlocks(int meta, Block block, ModelResourceLocation model, Class TEClass) {
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
             ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(block), meta, TEClass);
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
         }
