@@ -41,13 +41,13 @@ public class TileEntityExecutionRenderer extends TileEntityRenderer {
         TileEntityExecution tileEntity = (TileEntityExecution) te;
 
         if (tileEntity == null) {
-            tileEntity = getDefaultTE();
+            tileEntity = EXECUTION_TE;
         }
         EnumExecution execution = EnumExecution.getById(tileEntity.getBlockMetadata());
         renderExecution(x, y, z, tileEntity.getWorld(), execution, tileEntity.getCorpse(), tileEntity.getCorpseType(), tileEntity.getHangedVillagerProfession(), EnumFacing.values()[tileEntity.getDirection()]);
     }
 
-    private void renderExecution(double x, double y, double z, World world, EnumExecution execution,
+    public void renderExecution(double x, double y, double z, World world, EnumExecution execution,
                                  ItemStack corpse, EnumCorpse corpseType, int hangedVillagerProfession, EnumFacing facing) {
         GL11.glPushMatrix();
 
@@ -97,43 +97,6 @@ public class TileEntityExecutionRenderer extends TileEntityRenderer {
                 return stocks;
             case BURNING_STAKE:
                 return burningStake;
-        }
-    }
-
-//    @Override
-//    public boolean forceTileEntityRender()
-//    {
-//        return true;
-//    }
-
-    protected TileEntityExecution getDefaultTE() {
-        return EXECUTION_TE;
-    }
-
-    public static class Gibbet extends TileEntityExecutionRenderer {
-        private static final TileEntityExecution EXECUTION_TE = new TileEntityExecution.Gibbet();
-
-        @Override
-        protected TileEntityExecution getDefaultTE() {
-            return EXECUTION_TE;
-        }
-    }
-
-    public static class Stocks extends TileEntityExecutionRenderer {
-        private static final TileEntityExecution EXECUTION_TE = new TileEntityExecution.Stocks();
-
-        @Override
-        protected TileEntityExecution getDefaultTE() {
-            return EXECUTION_TE;
-        }
-    }
-
-    public static class BurningStake extends TileEntityExecutionRenderer {
-        private static final TileEntityExecution EXECUTION_TE = new TileEntityExecution.BurningStake();
-
-        @Override
-        protected TileEntityExecution getDefaultTE() {
-            return EXECUTION_TE;
         }
     }
 }

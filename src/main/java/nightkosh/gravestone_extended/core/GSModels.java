@@ -17,6 +17,7 @@ import nightkosh.gravestone_extended.block.enums.*;
 import nightkosh.gravestone_extended.item.ItemFish;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
+import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
 import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
 import nightkosh.gravestone_extended.tileentity.*;
 
@@ -38,10 +39,9 @@ public class GSModels {
             registerModelsForTEBlocks2(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
                     GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.class);
             //executions
-            registerModelsForTEBlocks(EnumExecution.GALLOWS.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.class);
-            registerModelsForTEBlocks(EnumExecution.GIBBET.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.Gibbet.class);
-            registerModelsForTEBlocks(EnumExecution.STOCKS.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.Stocks.class);
-            registerModelsForTEBlocks(EnumExecution.BURNING_STAKE.ordinal(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.BurningStake.class);
+
+            registerModelsForTEBlocks2(EnumExecution.GALLOWS.ordinal(), EnumExecution.BURNING_STAKE.ordinal(),
+                    GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.class);
             //spawners
             registerModelsForTEBlocks(EnumSpawner.WITHER_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.class);
             registerModelsForTEBlocks(EnumSpawner.SKELETON_SPAWNER.ordinal(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.Skeleton.class);
