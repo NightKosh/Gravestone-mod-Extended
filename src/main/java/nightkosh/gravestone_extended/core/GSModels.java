@@ -90,8 +90,6 @@ public class GSModels {
 
             //candle
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CANDLE), 0, ResourcesModels.CANDLE);
-            ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(GSBlock.CANDLE), 0, TileEntityCandle.class);
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CANDLE), 0, ResourcesModels.CANDLE);
 
             //portal
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CATACOMBS_PORTAL), 0, ResourcesModels.CATACOMBS_PORTAL);

@@ -1,3 +1,60 @@
 {
-    "parent": "builtin/entity"
+	"textures": {
+		"texture0": "gravestone-extended:blocks/candle",
+		"particle": "gravestone-extended:blocks/candle"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 5, 9],
+			"faces": {
+				"north": {"uv": [0, 2, 2, 7], "texture": "#texture0"},
+				"east": {"uv": [6, 2, 8, 7], "texture": "#texture0"},
+				"south": {"uv": [4, 2, 6, 7], "texture": "#texture0"},
+				"west": {"uv": [2, 2, 4, 7], "texture": "#texture0"},
+				"up": {"uv": [2, 0, 4, 2], "texture": "#texture0"},
+				"down": {"uv": [4, 0, 6, 2], "texture": "#texture0"}
+			}
+		},
+		{
+			"from": [7.75, 5, 7.75],
+			"to": [8.25, 6, 8.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.45, 0, -0.25]},
+			"faces": {
+				"north": {"uv": [12, 1, 13, 3], "texture": "#texture0"},
+				"east": {"uv": [15, 1, 16, 3], "texture": "#texture0"},
+				"south": {"uv": [14, 1, 15, 3], "texture": "#texture0"},
+				"west": {"uv": [13, 1, 14, 3], "texture": "#texture0"},
+				"up": {"uv": [13, 0, 14, 1], "texture": "#texture0"},
+				"down": {"uv": [14, 0, 15, 1], "texture": "#texture0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 6.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 6.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"translation": [3, 5.5, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [3, 5.5, 0]
+		},
+		"ground": {
+			"translation": [0, 2.5, 0]
+		},
+		"fixed": {
+			"rotation": [0, 0, 0],
+			"translation": [0, 6, 0],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"gui": {
+			"translation": [0, 6, 0],
+			"rotation": [15, 45, 0],
+			"scale": [1.5, 1.5, 1.5]
+		}
+	}
 }

@@ -1,14 +1,12 @@
 package nightkosh.gravestone_extended.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -21,7 +19,6 @@ import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.TimeHelper;
 import nightkosh.gravestone_extended.particle.ParticleGreenFlameFX;
-import nightkosh.gravestone_extended.tileentity.TileEntityCandle;
 
 import java.util.Random;
 
@@ -31,7 +28,7 @@ import java.util.Random;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class BlockCandle extends BlockContainer {
+public class BlockCandle extends Block {
 
     public BlockCandle() {
         super(Material.CARPET);
@@ -44,10 +41,6 @@ public class BlockCandle extends BlockContainer {
         this.setRegistryName(ModInfo.ID, "gscandle");
     }
 
-    /**
-     * A randomly called display update to be able to add particles or other
-     * items for display
-     */
     @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random random) {
@@ -65,20 +58,11 @@ public class BlockCandle extends BlockContainer {
         world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xPos, yPos, zPos, 0, 0, 0);
     }
 
-    /**
-     * Returns a bounding box from the pool of bounding boxes (this means this
-     * box can change after the pool has been cleared to be reused)
-     */
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
         return null;
     }
 
-    /**
-     * Is this block (a) opaque and (b) a full 1m cube? This determines whether
-     * or not to render the shared face of two adjacent blocks and also whether
-     * the player can attach torches, redstone wire, etc to this block.
-     */
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
@@ -96,20 +80,11 @@ public class BlockCandle extends BlockContainer {
         return BB;
     }
 
-    /**
-     * Checks to see if its valid to put this block at the specified
-     * coordinates. Args: world, x, y, z
-     */
     @Override
     public boolean canPlaceBlockAt(World world, BlockPos pos) {
         return canPlaceCandleOn(world, pos.down());
     }
 
-    /**
-     * Lets the block know when one of its neighbor changes. Doesn't know which
-     * neighbor changed (coordinates passed are their own) Args: x, y, z,
-     * neighbor blockID
-     */
     @Override
     public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block,  BlockPos fromPos) {
         if (!this.canPlaceCandleOn(world, pos.down())) {
@@ -118,22 +93,13 @@ public class BlockCandle extends BlockContainer {
         }
     }
 
-    /**
-     * Gets if we can place a torch on a block.
-     */
     private boolean canPlaceCandleOn(World world, BlockPos pos) {
         if (world.isSideSolid(pos, EnumFacing.UP)) {
-//        if (world.doesBlockHaveSolidTopSurface(world, pos)) {
             return true;
         } else {
             IBlockState state = world.getBlockState(pos);
             return (state.getBlock() != null && state.getBlock().canPlaceTorchOnTop(state, world, pos));
         }
-    }
-
-    @Override
-    public TileEntity createNewTileEntity(World world, int var2) {
-        return new TileEntityCandle();
     }
 
     @Override
