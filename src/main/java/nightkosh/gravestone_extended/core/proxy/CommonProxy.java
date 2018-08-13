@@ -46,7 +46,6 @@ public class CommonProxy {
         GameRegistry.registerTileEntity(TileEntitySkullCandle.class, "GSSkull Candle");
         GameRegistry.registerTileEntity(TileEntityPileOfBones.class, "GSTEPileOfBones");
         GameRegistry.registerTileEntity(TileEntityAltar.class, "GSAltarTE");
-        GameRegistry.registerTileEntity(TileEntityCorpse.class, "GSTECorpse");//TODO ?????
     }
 
     public void registerParticles() {

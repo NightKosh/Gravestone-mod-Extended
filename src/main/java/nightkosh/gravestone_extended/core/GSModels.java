@@ -38,13 +38,13 @@ public class GSModels {
         public static void registerModels(final ModelRegistryEvent event) {
             //memorials
             registerModelsForTEBlocks2(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
-                    GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL, TileEntityMemorial.class);
+                    GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL);
             //executions
             registerModelsForTEBlocks2(EnumExecution.GALLOWS.ordinal(), EnumExecution.BURNING_STAKE.ordinal(),
-                    GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION, TileEntityExecution.class);
+                    GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION);
             //spawners
             registerModelsForTEBlocks2(EnumSpawner.WITHER_SPAWNER.ordinal(), EnumSpawner.SPIDER_SPAWNER.ordinal(),
-                    GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER, TileEntitySpawner.class);
+                    GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER);
             //piles of bones
             registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.class);
             registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.Skull.class);
@@ -60,7 +60,7 @@ public class GSModels {
 
             //corpses
             registerModelsForTEBlocks2(EnumCorpse.STEVE.ordinal(), EnumCorpse.WITCH.ordinal(),
-                    GSBlock.CORPSE_IB, new TEISRCorpse(), GSBlock.CORPSE, ResourcesModels.CORPSE, TileEntityCorpse.class);
+                    GSBlock.CORPSE_IB, new TEISRCorpse(), GSBlock.CORPSE, ResourcesModels.CORPSE);
 
             //traps
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.TRAP), EnumTrap.NIGHT_STONE.ordinal(), ResourcesModels.NIGHT_STONE);
@@ -217,7 +217,7 @@ public class GSModels {
         }
 
         //TODO rename!
-        private static void registerModelsForTEBlocks2(int startMeta, int endMeta, Item item, TileEntityItemStackRenderer renderer, Block block, ModelResourceLocation model, Class TEClass) {
+        private static void registerModelsForTEBlocks2(int startMeta, int endMeta, Item item, TileEntityItemStackRenderer renderer, Block block, ModelResourceLocation model) {
             item.setTileEntityItemStackRenderer(renderer);
             for (int meta = startMeta; meta <= endMeta; meta++) {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);

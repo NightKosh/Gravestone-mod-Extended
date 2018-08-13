@@ -1,13 +1,12 @@
 package nightkosh.gravestone_extended.block;
 
-import net.minecraft.block.BlockContainer;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -19,7 +18,6 @@ import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-import nightkosh.gravestone_extended.tileentity.TileEntityCorpse;
 
 /**
  * GraveStone mod
@@ -27,7 +25,7 @@ import nightkosh.gravestone_extended.tileentity.TileEntityCorpse;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class BlockCorpse extends BlockContainer {
+public class BlockCorpse extends Block {
 
     public BlockCorpse() {
         super(Material.CARPET);
@@ -55,11 +53,6 @@ public class BlockCorpse extends BlockContainer {
     @Override
     public boolean canPlaceBlockAt(World world, BlockPos pos) {
         return false;
-    }
-
-    @Override
-    public TileEntity createNewTileEntity(World world, int var2) {
-        return new TileEntityCorpse();
     }
 
     @Override
