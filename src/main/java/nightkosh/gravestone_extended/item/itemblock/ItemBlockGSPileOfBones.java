@@ -20,7 +20,12 @@ public class ItemBlockGSPileOfBones extends ItemBlock {
     }
 
     @Override
+    public int getMetadata(int damageValue) {
+        return damageValue;
+    }
+
+    @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        return EnumPileOfBones.values()[itemStack.getItemDamage()].getUnLocalizedName();
+        return EnumPileOfBones.values()[itemStack.getItemDamage() / 4].getUnLocalizedName();
     }
 }

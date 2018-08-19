@@ -1,10 +1,10 @@
 package nightkosh.gravestone_extended.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
@@ -14,7 +14,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -30,7 +29,6 @@ import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler;
-import nightkosh.gravestone_extended.tileentity.TileEntityPileOfBones;
 
 import java.util.Random;
 
@@ -40,9 +38,10 @@ import java.util.Random;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class BlockPileOfBones extends BlockContainer {
+public class BlockPileOfBones extends Block {
 
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", EnumPileOfBones.class);
+    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     public BlockPileOfBones() {
         super(Material.CIRCUITS);
@@ -51,11 +50,6 @@ public class BlockPileOfBones extends BlockContainer {
         this.setResistance(0);
         this.setCreativeTab(GSTabs.otherItemsTab);
         this.setRegistryName(ModInfo.ID, "gspileofbones");
-    }
-
-    @Override
-    public TileEntity createNewTileEntity(World world, int p_149915_2_) {
-        return new TileEntityPileOfBones();
     }
 
     @Override
@@ -78,7 +72,7 @@ public class BlockPileOfBones extends BlockContainer {
         return BlockFaceShape.UNDEFINED;
     }
 
-    private static final AxisAlignedBB BB = new AxisAlignedBB(0.1F, 0, 0.1F, 0.9F, 0.2F, 0.9F);
+    private static final AxisAlignedBB BB = new AxisAlignedBB(0.1, 0, 0.1, 0.9, 0.2, 0.9);
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess access, BlockPos pos) {
@@ -107,35 +101,33 @@ public class BlockPileOfBones extends BlockContainer {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(VARIANT, EnumPileOfBones.getById((byte) meta));
+        IBlockState state = this.getDefaultState().withProperty(VARIANT, EnumPileOfBones.getById((byte) meta / 4));
+        return state.withProperty(FACING, EnumFacing.getHorizontal(meta % 4));
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return ((EnumPileOfBones) state.getValue(VARIANT)).ordinal();
+        return ((EnumPileOfBones) state.getValue(VARIANT)).ordinal() * 4 + state.getValue(FACING).getIndex();
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[]{VARIANT});
+        return new BlockStateContainer(this, new IProperty[]{VARIANT, FACING});
     }
 
     public boolean isSkullCrawlerBlock(IBlockState state) {
-        return (EnumPileOfBones) state.getValue(VARIANT) == EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER;
+        return state.getValue(VARIANT) == EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER;
     }
 
     public static IBlockState getCrawlerBlockState() {
         return GSBlock.PILE_OF_BONES.getDefaultState().withProperty(BlockPileOfBones.VARIANT, EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER);
     }
 
-    /**
-     * Called right before the block is destroyed by a player. Args: world, x, y, z, metaData
-     */
     @Override
     public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
         if (!world.isRemote && isSkullCrawlerBlock(state) && ExtendedConfig.spawnSkullCrawlersAtPileBonesDestruction) {
             EntitySkullCrawler skullCrawler = new EntitySkullCrawler(world);
-            skullCrawler.setLocationAndAngles(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, 0, 0);
+            skullCrawler.setLocationAndAngles(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 0, 0);
             world.spawnEntity(skullCrawler);
             skullCrawler.spawnExplosionParticle();
         }
@@ -143,18 +135,11 @@ public class BlockPileOfBones extends BlockContainer {
         super.onBlockDestroyedByPlayer(world, pos, state);
     }
 
-    protected ItemStack createStackedBlock(int meta) {
-        return new ItemStack(GSBlock.PILE_OF_BONES, 1, meta);
-    }
-
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack) {
-        world.setBlockState(pos, getStateFromMeta(stack.getItemDamage()), 2);
-
-        TileEntityPileOfBones te = (TileEntityPileOfBones) world.getTileEntity(pos);
-        if (te != null) {
-            te.setDirection((byte) (MathHelper.floor((double) (entity.rotationYaw * 4 / 360F) + 0.5D) & 3));
-        }
+        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor(entity.rotationYaw * 4 / 360F + 0.5) & 3);
+//        state = getStateFromMeta(stack.getItemDamage()).withProperty(FACING, enumfacing);//TODO REMOVE!!!!!
+        world.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
     }
 
     @Override
@@ -162,13 +147,12 @@ public class BlockPileOfBones extends BlockContainer {
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
         Item item = Item.getItemFromBlock(this);
         for (byte i = 0; i < EnumPileOfBones.values().length; i++) {
-            list.add(new ItemStack(item, 1, i));
+            list.add(new ItemStack(item, 1, i * 4));
         }
     }
 
     @Override
     public boolean canPlaceBlockAt(World world, BlockPos pos) {
-//        return world.doesBlockHaveSolidTopSurface(world, pos.down());
         return world.isSideSolid(pos.down(), EnumFacing.UP);
     }
 

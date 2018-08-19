@@ -1,7 +1,49 @@
 {
      "variants": {
-         "variant=pile_of_bones": { "model": "gravestone-extended:gspileofbones" },
-         "variant=pile_of_bones_with_skull": { "model": "gravestone-extended:gspileofbones" },
-         "variant=pile_of_bones_with_skull_crawler": { "model": "gravestone-extended:gspileofbones" }
+         "variant=pile_of_bones,facing=north": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones"
+         },
+         "variant=pile_of_bones,facing=east": {
+            "model": "gravestone-extended:pile_of_bones/pile_of_bones",
+            "y": 90
+         },
+         "variant=pile_of_bones,facing=south": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones",
+             "y": 180
+         },
+         "variant=pile_of_bones,facing=west": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones",
+             "y": 270
+         },
+         "variant=pile_of_bones_with_skull,facing=north": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull"
+         },
+         "variant=pile_of_bones_with_skull,facing=east": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 90
+         },
+         "variant=pile_of_bones_with_skull,facing=south": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 180
+         },
+         "variant=pile_of_bones_with_skull,facing=west": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 270
+         },
+         "variant=pile_of_bones_with_skull_crawler,facing=north": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull"
+         },
+         "variant=pile_of_bones_with_skull_crawler,facing=east": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 90
+         },
+         "variant=pile_of_bones_with_skull_crawler",facing=south: {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 180
+         },
+         "variant=pile_of_bones_with_skull_crawler,facing=west": {
+             "model": "gravestone-extended:pile_of_bones/pile_of_bones_with_skull",
+             "y": 270
+         }
      }
 }

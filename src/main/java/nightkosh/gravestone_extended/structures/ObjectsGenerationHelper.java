@@ -10,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.LootTableList;
+import nightkosh.gravestone_extended.block.BlockPileOfBones;
 import nightkosh.gravestone_extended.block.BlockSpawner;
 import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
 import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
@@ -17,7 +18,6 @@ import nightkosh.gravestone_extended.block.enums.EnumSpawner;
 import nightkosh.gravestone_extended.helper.PotionHelper;
 import nightkosh.gravestone_extended.helper.StateHelper;
 import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
-import nightkosh.gravestone_extended.tileentity.TileEntityPileOfBones;
 
 import java.util.Random;
 
@@ -32,21 +32,18 @@ public class ObjectsGenerationHelper {
     private ObjectsGenerationHelper() {
     }
 
-    public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, byte facing, IBlockState state) {
+    public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, EnumFacing facing, IBlockState state) {
         BlockPos pos = new BlockPos(component.getXWithOffset(xCoord, zCoord), component.getYWithOffset(yCoord), component.getZWithOffset(xCoord, zCoord));
+        state.withProperty(BlockPileOfBones.FACING, facing);
         world.setBlockState(pos, state, 2);
-        TileEntityPileOfBones te = (TileEntityPileOfBones) world.getTileEntity(pos);
-        if (te != null) {
-            te.setDirection(facing);
-        }
     }
 
     public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, IBlockState state) {
-        generatePileOfBones(component, world, xCoord, yCoord, zCoord, (byte) world.rand.nextInt(4), state);
+        generatePileOfBones(component, world, xCoord, yCoord, zCoord, EnumFacing.getHorizontal(world.rand.nextInt(4)), state);
     }
 
     public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, EnumFacing facing, EnumPileOfBones type) {
-        generatePileOfBones(component, world, xCoord, yCoord, zCoord, (byte) facing.getHorizontalIndex(), StateHelper.getPileOfBones(type));
+        generatePileOfBones(component, world, xCoord, yCoord, zCoord, facing, StateHelper.getPileOfBones(type));
     }
 
     /**
@@ -64,10 +61,6 @@ public class ObjectsGenerationHelper {
      * Generate chest with random loot type
      */
     public static void generateVanillaChest(ComponentGraveStone component, World world, Random random, int xCoord, int yCoord, int zCoord, EnumFacing facing, boolean defaultChest, EnumChestTypes chestType) {
-        int y = component.getYWithOffset(yCoord);
-        int x = component.getXWithOffset(xCoord, zCoord);
-        int z = component.getZWithOffset(xCoord, zCoord);
-
         ResourceLocation loot = getChest(random, chestType);
         if (defaultChest) {
             generateChestContents(component, world, random, xCoord, yCoord, zCoord, facing, loot, false);

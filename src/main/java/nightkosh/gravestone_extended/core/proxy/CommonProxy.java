@@ -44,7 +44,6 @@ public class CommonProxy {
         GameRegistry.registerTileEntity(TileEntitySpawner.class, "GS Spawner");
         GameRegistry.registerTileEntity(TileEntityHauntedChest.class, "GSHaunted Chest");
         GameRegistry.registerTileEntity(TileEntitySkullCandle.class, "GSSkull Candle");
-        GameRegistry.registerTileEntity(TileEntityPileOfBones.class, "GSTEPileOfBones");
         GameRegistry.registerTileEntity(TileEntityAltar.class, "GSAltarTE");
     }
 
