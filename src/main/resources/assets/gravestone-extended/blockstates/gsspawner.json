@@ -1,8 +1,8 @@
 {
     "variants": {
-        "variant=wither_spawner": { "model": "gravestone-extended:gsspawner" },
-        "variant=skeleton_spawner": { "model": "gravestone-extended:gsspawner" },
-        "variant=zombie_spawner": { "model": "gravestone-extended:gsspawner" },
-        "variant=spider_spawner": { "model": "gravestone-extended:gsspawner" }
+        "variant=wither_spawner": { "model": "gravestone-extended:spawner" },
+        "variant=skeleton_spawner": { "model": "gravestone-extended:spawner" },
+        "variant=zombie_spawner": { "model": "gravestone-extended:spawner" },
+        "variant=spider_spawner": { "model": "gravestone-extended:spawner" }
     }
 }

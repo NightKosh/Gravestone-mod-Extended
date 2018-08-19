@@ -1,6 +1,6 @@
 {
     "variants": {
-        "half=bottom": { "model": "gravestone-extended:gsboneslab_half_slab" },
-        "half=top":    { "model": "gravestone-extended:gsboneslab_upper_slab" }
+        "half=bottom": { "model": "gravestone-extended:bone_slab/bone_slab_half_slab" },
+        "half=top":    { "model": "gravestone-extended:bone_slab/bone_slab_upper_slab" }
     }
 }

@@ -46,9 +46,17 @@ public class GSModels {
             registerModelsForTEBlocks2(EnumSpawner.WITHER_SPAWNER.ordinal(), EnumSpawner.SPIDER_SPAWNER.ordinal(),
                     GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER);
             //piles of bones
-            registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.class);
-            registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.Skull.class);
-            registerModelsForTEBlocks(EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER.ordinal(), GSBlock.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, TileEntityPileOfBones.Crawler.class);
+            for (int i = EnumPileOfBones.PILE_OF_BONES.ordinal(); i < EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal() * 4 - 1; i++) {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES);
+            }
+            for (int i = EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal() * 4; i <= EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER.ordinal() * 4; i++) {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
+            }
+            ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
+                    //, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
+//                    ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
+//                    ResourcesModels.PILE_OF_BONES_WITH_SKULL, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
+//                    ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES);
 
             //haunted chest
             registerModelsForTEBlocks(0, EnumHauntedChest.values().length - 1, GSBlock.HAUNTED_CHEST, ResourcesModels.HAUNTED_CHEST, TileEntityHauntedChest.class);

@@ -1,5 +1,5 @@
 {
-    "parent": "gravestone-extended:block/gstrap_night_stone",
+    "parent": "gravestone-extended:block/altar",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

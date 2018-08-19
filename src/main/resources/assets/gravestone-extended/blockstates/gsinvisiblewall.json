@@ -1,5 +1,5 @@
 {
      "variants": {
-         "normal": { "model": "gravestone-extended:gsinvisiblewall" }
+         "normal": { "model": "gravestone-extended:invisible_wall" }
      }
 }

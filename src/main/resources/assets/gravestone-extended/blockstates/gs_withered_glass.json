@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "gravestone-extended:gs_withered_glass" }
+        "normal": { "model": "gravestone-extended:withered_glass/withered_glass" }
     }
 }

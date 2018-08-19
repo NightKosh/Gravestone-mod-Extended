@@ -1,5 +1,5 @@
 {
-    "parent": "gravestone-extended:block/gsboneslab_half_slab",
+    "parent": "gravestone-extended:block/trap/thunder_stone",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

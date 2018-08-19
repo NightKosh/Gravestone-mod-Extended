@@ -1,5 +1,5 @@
 {
-    "parent": "gravestone-extended:block/gs_catacombs_portal",
+    "parent": "gravestone-extended:block/catacombs_portal/catacombs_portal",
     "elements": [
         {   "from": [ 0, 0, 6 ],
             "to": [ 16, 16, 10 ],

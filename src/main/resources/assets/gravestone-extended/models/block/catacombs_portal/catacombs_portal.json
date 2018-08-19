@@ -1,7 +1,7 @@
 {
 	"textures": {
-        "particle": "gravestone-extended:blocks/catacombs_portal",
-        "portal": "gravestone-extended:blocks/catacombs_portal"
+        "particle": "gravestone-extended:blocks/catacombs_portal/catacombs_portal",
+        "portal": "gravestone-extended:blocks/catacombs_portal/catacombs_portal"
 	},
 	"display": {
 		"thirdperson_righthand": {"scale": [0.5, 0.5, 0.5]},

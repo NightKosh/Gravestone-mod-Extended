@@ -55,7 +55,7 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation BONE_PICKAXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE_GOLDEN.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation BONE_PICKAXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE_DIAMOND.getRegistryName().getResourcePath(), "inventory");
 
-    public static final ModelResourceLocation CORPSE = new ModelResourceLocation(ModInfo.ID + ":gscorpse", "inventory");
+    public static final ModelResourceLocation CORPSE = new ModelResourceLocation(ModInfo.ID + ":corpse", "inventory");
 
     public static final ModelResourceLocation SPAWN_EGG_MODEL = new ModelResourceLocation(GSItem.SPAWN_EGG.getRegistryName(), "inventory");
 
@@ -112,29 +112,29 @@ public class ResourcesModels extends Resources {
 
     public static final ModelResourceLocation FROZEN_MIRROR = new ModelResourceLocation(GSItem.FROZEN_MIRROR.getRegistryName(), "inventory");
 
-    public static final ModelResourceLocation MEMORIAL = new ModelResourceLocation(GSBlock.MEMORIAL.getRegistryName(), "inventory");
-    public static final ModelResourceLocation EXECUTION = new ModelResourceLocation(GSBlock.EXECUTION.getRegistryName(), "inventory");
-    public static final ModelResourceLocation SPAWNER = new ModelResourceLocation(GSBlock.SPAWNER.getRegistryName(), "inventory");
-    //trap
-    public static final ModelResourceLocation NIGHT_STONE = new ModelResourceLocation(ModInfo.ID + ":gstrap_night_stone", "inventory");
-    public static final ModelResourceLocation THUNDER_STONE = new ModelResourceLocation(ModInfo.ID + ":gstrap_thunder_stone", "inventory");
+    public static final ModelResourceLocation MEMORIAL = new ModelResourceLocation(ModInfo.ID + ":block/memorial", "inventory");
+    public static final ModelResourceLocation EXECUTION = new ModelResourceLocation(ModInfo.ID + ":block/execution", "inventory");
+    public static final ModelResourceLocation SPAWNER = new ModelResourceLocation(ModInfo.ID + ":block/spawner", "inventory");
 
-    public static final ModelResourceLocation WITHERED_GLASS = new ModelResourceLocation(GSBlock.WITHERED_GLASS.getRegistryName(), "inventory");
-    public static final ModelResourceLocation WITHERED_GLASS_PANE = new ModelResourceLocation(GSBlock.WITHERED_GLASS_PANE.getRegistryName(), "inventory");
+    public static final ModelResourceLocation NIGHT_STONE = new ModelResourceLocation(ModInfo.ID + ":block/trap/night_stone", "inventory");
+    public static final ModelResourceLocation THUNDER_STONE = new ModelResourceLocation(ModInfo.ID + ":block/trap/thunder_stone", "inventory");
+
+    public static final ModelResourceLocation WITHERED_GLASS = new ModelResourceLocation(ModInfo.ID + ":block/withered_glass/withered_glass", "inventory");
+    public static final ModelResourceLocation WITHERED_GLASS_PANE = new ModelResourceLocation(ModInfo.ID + ":block/withered_glass/withered_glass_pane", "inventory");
 
     public static final ModelResourceLocation PILE_OF_BONES = new ModelResourceLocation(ModInfo.ID + ":block/pile_of_bones/pile_of_bones", "inventory");
     public static final ModelResourceLocation PILE_OF_BONES_WITH_SKULL = new ModelResourceLocation(ModInfo.ID + ":block/pile_of_bones/pile_of_bones_with_skull", "inventory");
-    //bone blocks
-    public static final ModelResourceLocation BONE_BLOCK = new ModelResourceLocation(GSBlock.BONE_BLOCK.getRegistryName(), "inventory");
-    public static final ModelResourceLocation BONE_BLOCK_WITH_SKULL = new ModelResourceLocation(ModInfo.ID + ":gsboneblock_with_skull", "inventory");
 
-    public static final ModelResourceLocation BONE_SLAB = new ModelResourceLocation(GSBlock.BONE_SLAB.getRegistryName(), "inventory");
-    public static final ModelResourceLocation BONE_STAIRS = new ModelResourceLocation(GSBlock.BONE_STAIRS.getRegistryName(), "inventory");
+    public static final ModelResourceLocation BONE_BLOCK = new ModelResourceLocation(ModInfo.ID + ":block/bone_block/bone_block", "inventory");
+    public static final ModelResourceLocation BONE_BLOCK_WITH_SKULL = new ModelResourceLocation(ModInfo.ID + ":block/bone_block/bone_block_with_skull", "inventory");
 
-    public static final ModelResourceLocation HAUNTED_CHEST = new ModelResourceLocation(GSBlock.HAUNTED_CHEST.getRegistryName(), "inventory");
-    public static final ModelResourceLocation CANDLE = new ModelResourceLocation(GSBlock.CANDLE.getRegistryName(), "inventory");
-    public static final ModelResourceLocation SKULL_CANDLE = new ModelResourceLocation(GSBlock.SKULL_CANDLE.getRegistryName(), "inventory");
-    public static final ModelResourceLocation ALTAR = new ModelResourceLocation(GSBlock.ALTAR.getRegistryName(), "inventory");
+    public static final ModelResourceLocation BONE_SLAB = new ModelResourceLocation(ModInfo.ID + ":block/bone_slab", "inventory");
+    public static final ModelResourceLocation BONE_STAIRS = new ModelResourceLocation(ModInfo.ID + ":block/bone_stairs", "inventory");
 
-    public static final ModelResourceLocation CATACOMBS_PORTAL = new ModelResourceLocation(GSBlock.CATACOMBS_PORTAL.getRegistryName(), "inventory");
+    public static final ModelResourceLocation HAUNTED_CHEST = new ModelResourceLocation(ModInfo.ID + ":block/haunted_chest", "inventory");
+    public static final ModelResourceLocation CANDLE = new ModelResourceLocation(ModInfo.ID + ":block/candle", "inventory");
+    public static final ModelResourceLocation SKULL_CANDLE = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle", "inventory");
+    public static final ModelResourceLocation ALTAR = new ModelResourceLocation(ModInfo.ID + ":block/altar", "inventory");
+
+    public static final ModelResourceLocation CATACOMBS_PORTAL = new ModelResourceLocation(ModInfo.ID + ":block/catacombs_portal", "inventory");
 }

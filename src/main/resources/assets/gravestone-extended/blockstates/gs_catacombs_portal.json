@@ -1,6 +1,6 @@
 {
     "variants": {
-        "axis=z": { "model": "gravestone-extended:gs_catacombs_portal_ew" },
-        "axis=x": { "model": "gravestone-extended:gs_catacombs_portal_ns" }
+        "axis=z": { "model": "gravestone-extended:catacombs_portal/catacombs_portal_ew" },
+        "axis=x": { "model": "gravestone-extended:catacombs_portal/catacombs_portal_ns" }
     }
 }

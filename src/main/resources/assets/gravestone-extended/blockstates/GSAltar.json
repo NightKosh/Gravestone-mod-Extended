@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "gravestone-extended:GSAltar" }
+        "normal": { "model": "gravestone-extended:altar" }
     }
 }

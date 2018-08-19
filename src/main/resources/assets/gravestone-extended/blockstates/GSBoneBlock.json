@@ -1,8 +1,8 @@
 {
     "variants": {
-        "variant=bone_block":                        { "model": "gravestone-extended:gsboneblock" },
-        "variant=bone_block_with_skull":             { "model": "gravestone-extended:gsboneblock_with_skull" },
-        "variant=bone_block_with_crawler":           { "model": "gravestone-extended:gsboneblock" },
-        "variant=bone_block_with_skull_and_crawler": { "model": "gravestone-extended:gsboneblock_with_skull" }
+        "variant=bone_block":                        { "model": "gravestone-extended:bone_block/bone_block" },
+        "variant=bone_block_with_skull":             { "model": "gravestone-extended:bone_block/bone_block_with_skull" },
+        "variant=bone_block_with_crawler":           { "model": "gravestone-extended:bone_block/bone_block" },
+        "variant=bone_block_with_skull_and_crawler": { "model": "gravestone-extended:bone_block/bone_block_with_skull" }
     }
 }

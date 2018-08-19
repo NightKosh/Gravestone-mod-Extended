@@ -1,7 +1,7 @@
 {
      "variants": {
-         "variant=skeleton_skull_candle": { "model": "gravestone-extended:gsskullcandle" },
-         "variant=wither_skull_candle": { "model": "gravestone-extended:gsskullcandle" },
-         "variant=zombie_skull_candle": { "model": "gravestone-extended:gsskullcandle" }
+         "variant=skeleton_skull_candle": { "model": "gravestone-extended:skull_candle" },
+         "variant=wither_skull_candle": { "model": "gravestone-extended:skull_candle" },
+         "variant=zombie_skull_candle": { "model": "gravestone-extended:skull_candle" }
      }
 }
