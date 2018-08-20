@@ -55,173 +55,8 @@ public class BlockMemorial extends BlockContainer {
 
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public static final int[] TAB_MEMORIALS = {
-            EnumMemorials.WOODEN_CROSS.ordinal(),
-            EnumMemorials.SANDSTONE_CROSS.ordinal(),
-            EnumMemorials.RED_SANDSTONE_CROSS.ordinal(),
-            EnumMemorials.STONE_CROSS.ordinal(),
-            EnumMemorials.DIORITE_CROSS.ordinal(),
-            EnumMemorials.ANDESITE_CROSS.ordinal(),
-            EnumMemorials.GRANITE_CROSS.ordinal(),
-            EnumMemorials.IRON_CROSS.ordinal(),
-            EnumMemorials.GOLDEN_CROSS.ordinal(),
-            EnumMemorials.DIAMOND_CROSS.ordinal(),
-            EnumMemorials.EMERALD_CROSS.ordinal(),
-            EnumMemorials.LAPIS_CROSS.ordinal(),
-            EnumMemorials.REDSTONE_CROSS.ordinal(),
-            EnumMemorials.OBSIDIAN_CROSS.ordinal(),
-            EnumMemorials.QUARTZ_CROSS.ordinal(),
-            EnumMemorials.PRIZMARINE_CROSS.ordinal(),
-            EnumMemorials.ICE_CROSS.ordinal(),
-            // obelisks
-            EnumMemorials.WOODEN_OBELISK.ordinal(),
-            EnumMemorials.SANDSTONE_OBELISK.ordinal(),
-            EnumMemorials.RED_SANDSTONE_OBELISK.ordinal(),
-            EnumMemorials.STONE_OBELISK.ordinal(),
-            EnumMemorials.DIORITE_OBELISK.ordinal(),
-            EnumMemorials.ANDESITE_OBELISK.ordinal(),
-            EnumMemorials.GRANITE_OBELISK.ordinal(),
-            EnumMemorials.IRON_OBELISK.ordinal(),
-            EnumMemorials.GOLDEN_OBELISK.ordinal(),
-            EnumMemorials.DIAMOND_OBELISK.ordinal(),
-            EnumMemorials.EMERALD_OBELISK.ordinal(),
-            EnumMemorials.LAPIS_OBELISK.ordinal(),
-            EnumMemorials.REDSTONE_OBELISK.ordinal(),
-            EnumMemorials.OBSIDIAN_OBELISK.ordinal(),
-            EnumMemorials.QUARTZ_OBELISK.ordinal(),
-            EnumMemorials.PRIZMARINE_OBELISK.ordinal(),
-            EnumMemorials.ICE_OBELISK.ordinal(),
-            // celtic cross
-            EnumMemorials.WOODEN_CELTIC_CROSS.ordinal(),
-            EnumMemorials.SANDSTONE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.RED_SANDSTONE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.STONE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.DIORITE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.ANDESITE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.GRANITE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.IRON_CELTIC_CROSS.ordinal(),
-            EnumMemorials.GOLDEN_CELTIC_CROSS.ordinal(),
-            EnumMemorials.DIAMOND_CELTIC_CROSS.ordinal(),
-            EnumMemorials.EMERALD_CELTIC_CROSS.ordinal(),
-            EnumMemorials.LAPIS_CELTIC_CROSS.ordinal(),
-            EnumMemorials.REDSTONE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.OBSIDIAN_CELTIC_CROSS.ordinal(),
-            EnumMemorials.QUARTZ_CELTIC_CROSS.ordinal(),
-            EnumMemorials.PRIZMARINE_CELTIC_CROSS.ordinal(),
-            EnumMemorials.ICE_CELTIC_CROSS.ordinal(),
-            // ANGEL memorials
-            EnumMemorials.WOODEN_STEVE_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_STEVE_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_STEVE_STATUE.ordinal(),
-            EnumMemorials.STONE_STEVE_STATUE.ordinal(),
-            EnumMemorials.DIORITE_STEVE_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_STEVE_STATUE.ordinal(),
-            EnumMemorials.GRANITE_STEVE_STATUE.ordinal(),
-            EnumMemorials.IRON_STEVE_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_STEVE_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_STEVE_STATUE.ordinal(),
-            EnumMemorials.EMERALD_STEVE_STATUE.ordinal(),
-            EnumMemorials.LAPIS_STEVE_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_STEVE_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_STEVE_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_STEVE_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_STEVE_STATUE.ordinal(),
-            EnumMemorials.ICE_STEVE_STATUE.ordinal(),
-            // villager memorials
-            EnumMemorials.WOODEN_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.STONE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.DIORITE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.GRANITE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.IRON_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.EMERALD_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.LAPIS_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_VILLAGER_STATUE.ordinal(),
-            EnumMemorials.ICE_VILLAGER_STATUE.ordinal(),
-            // angel memorials
-            EnumMemorials.WOODEN_ANGEL_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.STONE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.DIORITE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.GRANITE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.IRON_ANGEL_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_ANGEL_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_ANGEL_STATUE.ordinal(),
-            EnumMemorials.EMERALD_ANGEL_STATUE.ordinal(),
-            EnumMemorials.LAPIS_ANGEL_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_ANGEL_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_ANGEL_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_ANGEL_STATUE.ordinal(),
-            EnumMemorials.ICE_ANGEL_STATUE.ordinal(),
-            // dog memorials
-            EnumMemorials.WOODEN_DOG_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_DOG_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_DOG_STATUE.ordinal(),
-            EnumMemorials.STONE_DOG_STATUE.ordinal(),
-            EnumMemorials.DIORITE_DOG_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_DOG_STATUE.ordinal(),
-            EnumMemorials.GRANITE_DOG_STATUE.ordinal(),
-            EnumMemorials.IRON_DOG_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_DOG_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_DOG_STATUE.ordinal(),
-            EnumMemorials.EMERALD_DOG_STATUE.ordinal(),
-            EnumMemorials.LAPIS_DOG_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_DOG_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_DOG_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_DOG_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_DOG_STATUE.ordinal(),
-            EnumMemorials.ICE_DOG_STATUE.ordinal(),
-            // cat memorials
-            EnumMemorials.WOODEN_CAT_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_CAT_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_CAT_STATUE.ordinal(),
-            EnumMemorials.STONE_CAT_STATUE.ordinal(),
-            EnumMemorials.DIORITE_CAT_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_CAT_STATUE.ordinal(),
-            EnumMemorials.GRANITE_CAT_STATUE.ordinal(),
-            EnumMemorials.IRON_CAT_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_CAT_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_CAT_STATUE.ordinal(),
-            EnumMemorials.EMERALD_CAT_STATUE.ordinal(),
-            EnumMemorials.LAPIS_CAT_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_CAT_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_CAT_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_CAT_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_CAT_STATUE.ordinal(),
-            EnumMemorials.ICE_CAT_STATUE.ordinal(),
-            // creeper memorials
-            EnumMemorials.WOODEN_CREEPER_STATUE.ordinal(),
-            EnumMemorials.SANDSTONE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.RED_SANDSTONE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.STONE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.DIORITE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.ANDESITE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.GRANITE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.IRON_CREEPER_STATUE.ordinal(),
-            EnumMemorials.GOLDEN_CREEPER_STATUE.ordinal(),
-            EnumMemorials.DIAMOND_CREEPER_STATUE.ordinal(),
-            EnumMemorials.EMERALD_CREEPER_STATUE.ordinal(),
-            EnumMemorials.LAPIS_CREEPER_STATUE.ordinal(),
-            EnumMemorials.REDSTONE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.OBSIDIAN_CREEPER_STATUE.ordinal(),
-            EnumMemorials.QUARTZ_CREEPER_STATUE.ordinal(),
-            EnumMemorials.PRIZMARINE_CREEPER_STATUE.ordinal(),
-            EnumMemorials.ICE_CREEPER_STATUE.ordinal()
-    };
-
     public BlockMemorial() {
         super(Material.ROCK);
-//        this.isBlockContainer = true; //TODO ?????
         this.setSoundType(SoundType.STONE);
         this.setHardness(1);
         this.setResistance(5);
@@ -231,7 +66,7 @@ public class BlockMemorial extends BlockContainer {
 
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase player, ItemStack itemStack) {
-        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double) (player.rotationYaw * 4 / 360F) + 0.5D) & 3).getOpposite();
+        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double) (player.rotationYaw * 4 / 360F) + 0.5) & 3).getOpposite();
         state = state.withProperty(FACING, enumfacing);
         world.setBlockState(pos, state, 2);
 
@@ -369,10 +204,9 @@ public class BlockMemorial extends BlockContainer {
     }
 
     private static final AxisAlignedBB CROSS_BB = new AxisAlignedBB(-1, 0, -1, 2, 5, 2);
-    private static final AxisAlignedBB STEVE_BB = new AxisAlignedBB(0.125F, 0, 0.125F, 0.875F, 3F, 0.875F);
-    private static final AxisAlignedBB PET_BB = new AxisAlignedBB(0.125F, 0, 0.125F, 0.875F, 2, 0.875F);
-    private static final AxisAlignedBB CREEPER_BB = new AxisAlignedBB(0.125F, 0, 0.125F, 0.875F, 2.5F, 0.875F);
-    private static final AxisAlignedBB ITEM_BB = new AxisAlignedBB(0, 0, 0, 1, 1, 2);
+    private static final AxisAlignedBB STEVE_BB = new AxisAlignedBB(0.125, 0, 0.125, 0.875, 3, 0.875);
+    private static final AxisAlignedBB PET_BB = new AxisAlignedBB(0.125, 0, 0.125, 0.875, 2, 0.875);
+    private static final AxisAlignedBB CREEPER_BB = new AxisAlignedBB(0.125, 0, 0.125, 0.875, 2.5, 0.875);
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess access, BlockPos pos) {
@@ -402,12 +236,6 @@ public class BlockMemorial extends BlockContainer {
                 return CREEPER_BB;
         }
     }
-
-//TODO ????????
-//    @Override
-//    public AxisAlignedBB setBlockBoundsForItemRender() {
-//        return ITEM_BB;
-//    }
 
     @Override
     public boolean isOpaqueCube(IBlockState state) {
@@ -493,8 +321,8 @@ public class BlockMemorial extends BlockContainer {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
         Item item = Item.getItemFromBlock(this);
-        for (int index : TAB_MEMORIALS) {
-            list.add(getMemorialItemForCreativeInventory(item, index));
+        for (EnumMemorials memorial : EnumMemorials.values()) {
+            list.add(getMemorialItemForCreativeInventory(item, memorial.ordinal()));
         }
     }
 
@@ -566,16 +394,10 @@ public class BlockMemorial extends BlockContainer {
         return itemStack;
     }
 
-    /**
-     * Called when the player destroys a block with an item that can harvest it.
-     */
     @Override
     public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, @Nullable ItemStack stack) {
     }
 
-    /*
-     * Drop sword as item
-     */
     public void dropCreeperMemorial(World world, BlockPos pos) {
         ItemStack itemStack = new ItemStack(this, 1, MemorialGenerationHelper.getMemorialTypeByBiomes(world, pos, MemorialGenerationHelper.GENERATED_CREEPER_STATUES_MEMORIALS_TYPES, null, true).ordinal());
         GraveInventory.dropItem(itemStack, world, pos);
