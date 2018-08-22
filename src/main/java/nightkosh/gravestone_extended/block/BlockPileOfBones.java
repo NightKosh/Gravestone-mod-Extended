@@ -137,8 +137,7 @@ public class BlockPileOfBones extends Block {
 
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack) {
-        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor(entity.rotationYaw * 4 / 360F + 0.5) & 3);
-//        state = getStateFromMeta(stack.getItemDamage()).withProperty(FACING, enumfacing);//TODO REMOVE!!!!!
+        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor(entity.rotationYaw * 4 / 360F + 0.5) & 3).getOpposite();
         world.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
     }
 

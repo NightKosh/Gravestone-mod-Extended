@@ -53,10 +53,6 @@ public class GSModels {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
             }
             ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
-                    //, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
-//                    ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
-//                    ResourcesModels.PILE_OF_BONES_WITH_SKULL, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES,
-//                    ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES);
 
             //haunted chest
             registerModelsForTEBlocks(0, EnumHauntedChest.values().length - 1, GSBlock.HAUNTED_CHEST, ResourcesModels.HAUNTED_CHEST, TileEntityHauntedChest.class);
