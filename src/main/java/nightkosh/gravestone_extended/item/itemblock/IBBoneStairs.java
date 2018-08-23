@@ -10,11 +10,11 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockGSCandle extends ItemBlock {
+public class IBBoneStairs extends ItemBlock {
 
-    public ItemBlockGSCandle(Block block) {
+    public IBBoneStairs(Block block) {
         super(block);
-        this.setUnlocalizedName("Candle");
-        this.setRegistryName(GSBlock.CANDLE.getRegistryName());
+        this.setHasSubtypes(true);
+        this.setRegistryName(GSBlock.BONE_STAIRS.getRegistryName());
     }
 }

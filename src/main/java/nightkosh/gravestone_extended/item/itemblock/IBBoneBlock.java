@@ -1,6 +1,10 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package nightkosh.gravestone_extended.item.itemblock;
 
-import nightkosh.gravestone_extended.block.enums.EnumSpawner;
+import nightkosh.gravestone_extended.block.enums.EnumBoneBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -12,12 +16,12 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockGSSpawner extends ItemBlock {
+public class IBBoneBlock extends ItemBlock {
 
-    public ItemBlockGSSpawner(Block block) {
+    public IBBoneBlock(Block block) {
         super(block);
         this.setHasSubtypes(true);
-        this.setRegistryName(GSBlock.SPAWNER.getRegistryName());
+        this.setRegistryName(GSBlock.BONE_BLOCK.getRegistryName());
     }
 
     @Override
@@ -27,6 +31,6 @@ public class ItemBlockGSSpawner extends ItemBlock {
 
     @Override
     public String getUnlocalizedName(ItemStack itemstack) {
-        return EnumSpawner.values()[itemstack.getItemDamage()].getUnLocalizedName();
+        return EnumBoneBlock.values()[itemstack.getItemDamage()].getUnLocalizedName();
     }
 }

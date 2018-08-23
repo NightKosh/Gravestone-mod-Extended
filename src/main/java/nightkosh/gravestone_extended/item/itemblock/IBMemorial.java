@@ -30,9 +30,9 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockGSMemorial extends ItemBlock {
+public class IBMemorial extends ItemBlock {
 
-    public ItemBlockGSMemorial(Block block) {
+    public IBMemorial(Block block) {
         super(block);
         this.setHasSubtypes(true);
         this.setRegistryName(GSBlock.MEMORIAL.getRegistryName());

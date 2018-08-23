@@ -22,9 +22,9 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockCorpse extends ItemBlock {
+public class IBCorpse extends ItemBlock {
 
-    public ItemBlockCorpse(Block block) {
+    public IBCorpse(Block block) {
         super(block);
         this.setUnlocalizedName("Corpse");
         this.setRegistryName(GSBlock.CORPSE.getRegistryName());

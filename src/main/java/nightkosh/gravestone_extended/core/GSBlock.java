@@ -28,39 +28,39 @@ import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleZo
 public class GSBlock extends nightkosh.gravestone.core.GSBlock {
 
     public static final BlockMemorial MEMORIAL = new BlockMemorial();
-    public static final ItemBlock MEMORIAL_IB = new ItemBlockGSMemorial(MEMORIAL);
+    public static final ItemBlock MEMORIAL_IB = new IBMemorial(MEMORIAL);
 
     public static final BlockExecution EXECUTION = new BlockExecution();
-    public static final ItemBlock EXECUTION_IB = new ItemBlockExecution(EXECUTION);
+    public static final ItemBlock EXECUTION_IB = new IBExecution(EXECUTION);
 
     public static final BlockSpawner SPAWNER = new BlockSpawner();
-    public static final ItemBlock SPAWNER_IB = new ItemBlockGSSpawner(SPAWNER);
+    public static final ItemBlock SPAWNER_IB = new IBSpawner(SPAWNER);
 
     public static final BlockTrap TRAP = new BlockTrap();
-    public static final ItemBlock TRAP_IB = new ItemBlockGSTrap(TRAP);
+    public static final ItemBlock TRAP_IB = new IBTrap(TRAP);
 
     public static final Block WITHERED_GLASS = new BlockWitheredGlass();
-    public static final ItemBlock WITHERED_GLASS_IB = new ItemBlockWitheredGlass(WITHERED_GLASS);
+    public static final ItemBlock WITHERED_GLASS_IB = new IBWitheredGlass(WITHERED_GLASS);
 
     public static final Block WITHERED_GLASS_PANE = new BlockWitheredPane();
-    public static final ItemBlock WITHERED_GLASS_PANE_IB = new ItemBlockWitheredPane(WITHERED_GLASS_PANE);
+    public static final ItemBlock WITHERED_GLASS_PANE_IB = new IBWitheredPane(WITHERED_GLASS_PANE);
 
     public static final BlockPileOfBones PILE_OF_BONES = new BlockPileOfBones();
-    public static final ItemBlock PILE_OF_BONES_IB = new ItemBlockGSPileOfBones(PILE_OF_BONES);
+    public static final ItemBlock PILE_OF_BONES_IB = new IBPileOfBones(PILE_OF_BONES);
 
     public static final BlockBoneBlock BONE_BLOCK = new BlockBoneBlock();
-    public static final ItemBlock BONE_BLOCK_IB = new ItemBlockGSBoneBlock(BONE_BLOCK);
+    public static final ItemBlock BONE_BLOCK_IB = new IBBoneBlock(BONE_BLOCK);
     public static final BlockBoneSlab BONE_SLAB = new BlockBoneSlab();
-    public static final ItemBlockBoneSlab BONE_SLAB_IB = new ItemBlockBoneSlab(BONE_SLAB);
+    public static final IBBoneSlab BONE_SLAB_IB = new IBBoneSlab(BONE_SLAB);
 
     public static final BlockBoneStairs BONE_STAIRS = new BlockBoneStairs();
-    public static final ItemBlockBoneStairs BONE_STAIRS_IB = new ItemBlockBoneStairs(BONE_STAIRS);
+    public static final IBBoneStairs BONE_STAIRS_IB = new IBBoneStairs(BONE_STAIRS);
 
     public static final BlockHauntedChest HAUNTED_CHEST = new BlockHauntedChest();
-    public static final ItemBlock HAUNTED_CHEST_IB = new ItemBlockGSHauntedChest(HAUNTED_CHEST);
+    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
 
     public static final BlockCandle CANDLE = new BlockCandle();
-    public static final ItemBlock CANDLE_IB = new ItemBlockGSCandle(CANDLE);
+    public static final ItemBlock CANDLE_IB = new IBCandle(CANDLE);
 
     public static final BlockSkullCandleSkeleton SKULL_CANDLE_SKELETON = new BlockSkullCandleSkeleton();
     public static final ItemBlock SKULL_CANDLE_SKELETON_IB = new IBSkullCandleSkeleton(SKULL_CANDLE_SKELETON);
@@ -70,15 +70,15 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
     public static final ItemBlock SKULL_CANDLE_WITHER_IB = new IBSkullCandleWither(SKULL_CANDLE_WITHER);
 
     public static final BlockAltar ALTAR = new BlockAltar();
-    public static final ItemBlock ALTAR_IB = new ItemBlockAltar(ALTAR);
+    public static final ItemBlock ALTAR_IB = new IBAltar(ALTAR);
 
     public static final BlockInvisibleWall INVISIBLE_WALL = new BlockInvisibleWall();
 
     public static final BlockCorpse CORPSE = new BlockCorpse();
-    public static final ItemBlock CORPSE_IB = new ItemBlockCorpse(CORPSE);
+    public static final ItemBlock CORPSE_IB = new IBCorpse(CORPSE);
 
     public static final Block CATACOMBS_PORTAL = new BlockCatacombsPortal();
-    public static final ItemBlock CATACOMBS_PORTAL_IB = new ItemBlockCatacombsPortal(CATACOMBS_PORTAL);
+    public static final ItemBlock CATACOMBS_PORTAL_IB = new IBCatacombsPortal(CATACOMBS_PORTAL);
 
     public static final BlockFluidToxicWater TOXIC_WATER = new BlockFluidToxicWater();
 

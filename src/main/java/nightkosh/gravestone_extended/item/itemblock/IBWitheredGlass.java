@@ -10,11 +10,10 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockBoneStairs extends ItemBlock {
+public class IBWitheredGlass extends ItemBlock {
 
-    public ItemBlockBoneStairs(Block block) {
+    public IBWitheredGlass(Block block) {
         super(block);
-        this.setHasSubtypes(true);
-        this.setRegistryName(GSBlock.BONE_STAIRS.getRegistryName());
+        this.setRegistryName(GSBlock.WITHERED_GLASS.getRegistryName());
     }
 }

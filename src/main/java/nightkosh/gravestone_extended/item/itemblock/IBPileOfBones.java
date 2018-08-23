@@ -1,11 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package nightkosh.gravestone_extended.item.itemblock;
 
-import nightkosh.gravestone_extended.block.enums.EnumTrap;
+import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -17,12 +12,11 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockGSTrap extends ItemBlock {
+public class IBPileOfBones extends ItemBlock {
 
-    public ItemBlockGSTrap(Block block) {
+    public IBPileOfBones(Block block) {
         super(block);
-        this.setHasSubtypes(true);
-        this.setRegistryName(GSBlock.TRAP.getRegistryName());
+        this.setRegistryName(GSBlock.PILE_OF_BONES.getRegistryName());
     }
 
     @Override
@@ -31,8 +25,7 @@ public class ItemBlockGSTrap extends ItemBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack itemstack) {
-        return EnumTrap.values()[itemstack.getItemDamage()].getUnLocalizedName();
+    public String getUnlocalizedName(ItemStack itemStack) {
+        return EnumPileOfBones.values()[itemStack.getItemDamage() / 4].getUnLocalizedName();
     }
-
 }

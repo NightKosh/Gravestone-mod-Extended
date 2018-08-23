@@ -20,9 +20,9 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockGSHauntedChest extends ItemBlock {
+public class IBHauntedChest extends ItemBlock {
 
-    public ItemBlockGSHauntedChest(Block block) {
+    public IBHauntedChest(Block block) {
         super(block);
         this.setHasSubtypes(true);
         this.setRegistryName(GSBlock.HAUNTED_CHEST.getRegistryName());

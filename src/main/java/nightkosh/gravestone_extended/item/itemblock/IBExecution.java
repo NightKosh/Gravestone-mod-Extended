@@ -21,9 +21,9 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockExecution extends ItemBlock {
+public class IBExecution extends ItemBlock {
 
-    public ItemBlockExecution(Block block) {
+    public IBExecution(Block block) {
         super(block);
         this.setHasSubtypes(true);
         this.setRegistryName(GSBlock.EXECUTION.getRegistryName());

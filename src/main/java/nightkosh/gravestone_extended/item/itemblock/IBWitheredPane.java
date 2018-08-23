@@ -10,10 +10,10 @@ import nightkosh.gravestone_extended.core.GSBlock;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBlockAltar extends ItemBlock {
+public class IBWitheredPane extends ItemBlock {
 
-    public ItemBlockAltar(Block block) {
+    public IBWitheredPane(Block block) {
         super(block);
-        this.setRegistryName(GSBlock.ALTAR.getRegistryName());
+        this.setRegistryName(GSBlock.WITHERED_GLASS_PANE.getRegistryName());
     }
 }
