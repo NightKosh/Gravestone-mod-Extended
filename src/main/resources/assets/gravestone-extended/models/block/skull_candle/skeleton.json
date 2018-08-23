@@ -1,0 +1,96 @@
+{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"ambientocclusion": false,
+	"textures": {
+		"texture_skull": "gravestone-extended:blocks/skull_candle/skeleton_skull",
+		"particle": "gravestone-extended:blocks/skull_candle/skeleton_skull",
+		"texture_candle": "gravestone-extended:blocks/candle"
+	},
+	"elements": [
+		{
+			"from": [4, -1.65, 4],
+			"to": [12, 4.35, 12],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -1.65, 12]},
+			"faces": {
+				"north": {"uv": [4, 4, 8, 7], "texture": "#texture_skull"},
+				"east": {"uv": [0, 4, 4, 7], "texture": "#texture_skull"},
+				"south": {"uv": [12, 4, 16, 7], "texture": "#texture_skull"},
+				"west": {"uv": [8, 4, 12, 7], "texture": "#texture_skull"},
+				"up": {"uv": [4, 0, 8, 4], "texture": "#texture_skull"},
+				"down": {"uv": [8, 0, 12, 4], "texture": "#texture_skull"}
+			}
+		},
+		{
+			"from": [6, -0.4, 4],
+			"to": [10, 1.1, 5],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, -0.4, 5]},
+			"faces": {
+				"north": {"uv": [0, 7, 4, 8.5], "texture": "#texture_skull"},
+				"east": {"uv": [0, 7, 1.5, 8.5], "texture": "#texture_skull"},
+				"south": {"uv": [0, 7, 4, 8.5], "texture": "#texture_skull"},
+				"west": {"uv": [0, 7, 1.5, 8.5], "texture": "#texture_skull"},
+				"up": {"uv": [0, 7, 4, 8.5], "texture": "#texture_skull"},
+				"down": {"uv": [0, 7, 4, 8], "texture": "#texture_skull"}
+			}
+		},
+		{
+			"from": [7, 5, 8.5],
+			"to": [9, 10, 10.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.5, 9.5]},
+			"faces": {
+				"north": {"uv": [0, 2, 2, 7], "texture": "#texture_candle"},
+				"east": {"uv": [6, 2, 8, 7], "texture": "#texture_candle"},
+				"south": {"uv": [4, 2, 6, 7], "texture": "#texture_candle"},
+				"west": {"uv": [2, 2, 4, 7], "texture": "#texture_candle"},
+				"up": {"uv": [2, 0, 4, 2], "texture": "#texture_candle"},
+				"down": {"uv": [4, 0, 6, 2], "texture": "#texture_candle"}
+			}
+		},
+		{
+			"from": [7.75, 10, 9.25],
+			"to": [8.25, 11, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.45, 5, 0.75]},
+			"faces": {
+				"north": {"uv": [12, 1, 13, 3], "texture": "#texture_candle"},
+				"east": {"uv": [15, 1, 16, 3], "texture": "#texture_candle"},
+				"south": {"uv": [14, 1, 15, 3], "texture": "#texture_candle"},
+				"west": {"uv": [13, 1, 14, 3], "texture": "#texture_candle"},
+				"up": {"uv": [13, 0, 14, 1], "texture": "#texture_candle"},
+				"down": {"uv": [14, 0, 15, 1], "texture": "#texture_candle"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"translation": [-1.5, 2, 1.5],
+			"rotation": [50, 28, 0]
+		},
+		"ground": {
+			"translation": [0, 3.5, 0]
+		},
+		"fixed": {
+			"rotation": [-16, -25, 0],
+			"translation": [0, 2, -1.5]
+		},
+		"gui": {
+			"rotation": [25, 140, 0],
+			"translation": [0, 3.5, 0]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"rotation": [0, 50, 0],
+			"translation": [3, 4.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"rotation": [50, 28, 0],
+			"translation": [-1.5, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"translation": [3, 4.5, 0],
+			"rotation": [0, 50, 0]
+		}
+	}
+}

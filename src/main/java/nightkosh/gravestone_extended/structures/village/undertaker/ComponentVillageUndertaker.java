@@ -14,6 +14,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureVillagePieces;
 import nightkosh.gravestone.helper.GraveGenerationHelper.EnumGraveTypeByEntity;
+import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleSkeleton;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
@@ -22,7 +23,6 @@ import nightkosh.gravestone_extended.structures.BoundingBoxHelper;
 import nightkosh.gravestone_extended.structures.GraveGenerationHelper;
 import nightkosh.gravestone_extended.structures.IComponentGraveStone;
 import nightkosh.gravestone_extended.structures.village.VillagersHandler;
-import nightkosh.gravestone_extended.tileentity.TileEntitySkullCandle;
 
 import java.util.List;
 import java.util.Random;
@@ -310,12 +310,10 @@ public class ComponentVillageUndertaker extends StructureVillagePieces.Village i
 
     protected void generateSkullCandle(World world, StructureBoundingBox boundingBox, int x, int y, int z, EnumFacing direction) {
         BlockPos pos = new BlockPos(this.getXWithOffset(x, z), this.getYWithOffset(y), this.getZWithOffset(x, z));
-        if (world.getBlockState(pos).getBlock() != GSBlock.SKULL_CANDLE) {
-            this.setBlockState(world, StateHelper.SKELETON_SKULL_CANDLE, x, y, z, boundingBox);
-            TileEntitySkullCandle tileEntity = (TileEntitySkullCandle) world.getTileEntity(pos);
-            if (tileEntity != null) {
-                tileEntity.setRotation(getSkullCandleDirection(direction));
-            }
+        if (world.getBlockState(pos).getBlock() != GSBlock.SKULL_CANDLE_SKELETON) {
+            this.setBlockState(world, StateHelper.SKELETON_SKULL_CANDLE.withProperty(GSBlock.SKULL_CANDLE_SKELETON.FACING,
+                    BlockSkullCandleSkeleton.EnumAdvancedFacing.getById(getSkullCandleDirection(direction))), x, y, z, boundingBox);
+
         }
     }
 

@@ -10,7 +10,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.fluid.BlockFluidToxicWater;
+import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleSkeleton;
+import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleWither;
+import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleZombie;
 import nightkosh.gravestone_extended.item.itemblock.*;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleSkeleton;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleWither;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleZombie;
 
 /**
  * GraveStone mod
@@ -56,8 +62,12 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
     public static final BlockCandle CANDLE = new BlockCandle();
     public static final ItemBlock CANDLE_IB = new ItemBlockGSCandle(CANDLE);
 
-    public static final BlockSkullCandle SKULL_CANDLE = new BlockSkullCandle();
-    public static final ItemBlock SKULL_CANDLE_IB = new ItemBlockGSSkullCandle(SKULL_CANDLE);
+    public static final BlockSkullCandleSkeleton SKULL_CANDLE_SKELETON = new BlockSkullCandleSkeleton();
+    public static final ItemBlock SKULL_CANDLE_SKELETON_IB = new IBSkullCandleSkeleton(SKULL_CANDLE_SKELETON);
+    public static final BlockSkullCandleSkeleton SKULL_CANDLE_ZOMBIE = new BlockSkullCandleZombie();
+    public static final ItemBlock SKULL_CANDLE_ZOMBIE_IB = new IBSkullCandleZombie(SKULL_CANDLE_ZOMBIE);
+    public static final BlockSkullCandleSkeleton SKULL_CANDLE_WITHER = new BlockSkullCandleWither();
+    public static final ItemBlock SKULL_CANDLE_WITHER_IB = new IBSkullCandleWither(SKULL_CANDLE_WITHER);
 
     public static final BlockAltar ALTAR = new BlockAltar();
     public static final ItemBlock ALTAR_IB = new ItemBlockAltar(ALTAR);
@@ -79,15 +89,16 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
         public static void registerBlocks(final RegistryEvent.Register<Block> event) {
             final IForgeRegistry<Block> registry = event.getRegistry();
             registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP, WITHERED_GLASS, PILE_OF_BONES, WITHERED_GLASS_PANE,
-                    BONE_BLOCK, BONE_SLAB, BONE_STAIRS, HAUNTED_CHEST, CANDLE, SKULL_CANDLE, ALTAR,
-                    INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL);
+                    BONE_BLOCK, BONE_SLAB, BONE_STAIRS, HAUNTED_CHEST, CANDLE, SKULL_CANDLE_SKELETON, SKULL_CANDLE_ZOMBIE, SKULL_CANDLE_WITHER,
+                    ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL);
         }
 
         @SubscribeEvent
         public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
             final IForgeRegistry<Item> registry = event.getRegistry();
             registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB, WITHERED_GLASS_IB, WITHERED_GLASS_PANE_IB,
-                    PILE_OF_BONES_IB, BONE_BLOCK_IB, BONE_SLAB_IB, BONE_STAIRS_IB, HAUNTED_CHEST_IB, CANDLE_IB, SKULL_CANDLE_IB,
+                    PILE_OF_BONES_IB, BONE_BLOCK_IB, BONE_SLAB_IB, BONE_STAIRS_IB, HAUNTED_CHEST_IB, CANDLE_IB,
+                    SKULL_CANDLE_SKELETON_IB, SKULL_CANDLE_ZOMBIE_IB, SKULL_CANDLE_WITHER_IB,
                     ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB);
         }
     }

@@ -3,11 +3,13 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelRotation;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -20,7 +22,7 @@ import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
 import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
 import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
 import nightkosh.gravestone_extended.renderer.item.TEISRSpawner;
-import nightkosh.gravestone_extended.tileentity.*;
+import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
 
 /**
  * GraveStone mod
@@ -30,6 +32,27 @@ import nightkosh.gravestone_extended.tileentity.*;
  */
 @GameRegistry.ObjectHolder(ModInfo.ID)
 public class GSModels {
+
+    public static ModelRotation X0_Y45;
+    public static ModelRotation X0_Y135;
+    public static ModelRotation X0_Y225;
+    public static ModelRotation X0_Y315;
+
+    public static void addModelRotations() {
+
+        Class<?>[] rotationParams = {
+            int.class, int.class
+        };
+        X0_Y45 = EnumHelper.addEnum(ModelRotation.class, "X0_Y45", rotationParams, 0, 45);
+        X0_Y135 = EnumHelper.addEnum(ModelRotation.class, "X0_Y135", rotationParams, 0, 135);
+        X0_Y225 = EnumHelper.addEnum(ModelRotation.class, "X0_Y225", rotationParams, 0, 225);
+        X0_Y315 = EnumHelper.addEnum(ModelRotation.class, "X0_Y315", rotationParams, 0, 315);
+
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y45.combinedXY), X0_Y45);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y135.combinedXY), X0_Y135);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y225.combinedXY), X0_Y225);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y315.combinedXY), X0_Y315);
+    }
 
     @Mod.EventBusSubscriber(modid = ModInfo.ID)
     public static class RegistrationHandler {
@@ -58,9 +81,12 @@ public class GSModels {
             registerModelsForTEBlocks(0, EnumHauntedChest.values().length - 1, GSBlock.HAUNTED_CHEST, ResourcesModels.HAUNTED_CHEST, TileEntityHauntedChest.class);
 
             //skull candle
-            registerModelsForTEBlocks(EnumSkullCandle.SKELETON_SKULL.ordinal(), GSBlock.SKULL_CANDLE, ResourcesModels.SKULL_CANDLE, TileEntitySkullCandle.class);
-            registerModelsForTEBlocks(EnumSkullCandle.WITHER_SKULL.ordinal(), GSBlock.SKULL_CANDLE, ResourcesModels.SKULL_CANDLE, TileEntitySkullCandle.Wither.class);
-            registerModelsForTEBlocks(EnumSkullCandle.ZOMBIE_SKULL.ordinal(), GSBlock.SKULL_CANDLE, ResourcesModels.SKULL_CANDLE, TileEntitySkullCandle.Zombie.class);
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_SKELETON), 0, ResourcesModels.SKULL_CANDLE_SKELETON);
+            ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_SKELETON), ResourcesModels.SKULL_CANDLE_SKELETON);
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_ZOMBIE), 0, ResourcesModels.SKULL_CANDLE_ZOMBIE);
+            ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_ZOMBIE), ResourcesModels.SKULL_CANDLE_ZOMBIE);
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_WITHER), 0, ResourcesModels.SKULL_CANDLE_WITHER);
+            ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_WITHER), ResourcesModels.SKULL_CANDLE_WITHER);
 
             //corpses
             registerModelsForTEBlocks2(EnumCorpse.STEVE.ordinal(), EnumCorpse.WITCH.ordinal(),

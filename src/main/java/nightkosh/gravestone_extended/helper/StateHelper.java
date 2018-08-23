@@ -12,7 +12,6 @@ import nightkosh.gravestone.block.BlockGraveStone;
 import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.enums.EnumBoneBlock;
 import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
-import nightkosh.gravestone_extended.block.enums.EnumSkullCandle;
 import nightkosh.gravestone_extended.block.enums.EnumSpawner;
 import nightkosh.gravestone_extended.core.GSBlock;
 
@@ -95,8 +94,7 @@ public class StateHelper {
 
     public static final IBlockState NIGHTSTONE = GSBlock.TRAP.getDefaultState();
     public static final IBlockState CANDLE = GSBlock.CANDLE.getDefaultState();
-    public static final IBlockState SKULL_CANDLE = GSBlock.SKULL_CANDLE.getDefaultState();
-    public static final IBlockState SKELETON_SKULL_CANDLE = SKULL_CANDLE.withProperty(BlockSkullCandle.VARIANT, EnumSkullCandle.SKELETON_SKULL);
+    public static final IBlockState SKELETON_SKULL_CANDLE = GSBlock.SKULL_CANDLE_SKELETON.getDefaultState();
     public static final IBlockState BONE_BLOCK = GSBlock.BONE_BLOCK.getDefaultState();
     public static final IBlockState BONE_BLOCK_SKULL = BONE_BLOCK.withProperty(BlockBoneBlock.VARIANT, EnumBoneBlock.SKULL_BONE_BLOCK);
     public static final IBlockState BONE_BLOCK_CRAWLER = BONE_BLOCK.withProperty(BlockBoneBlock.VARIANT, EnumBoneBlock.CRAWLER_BONE_BLOCK);

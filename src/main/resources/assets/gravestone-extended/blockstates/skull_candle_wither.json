@@ -1,0 +1,35 @@
+{
+     "variants": {
+         "facing=north": {
+            "model": "gravestone-extended:skull_candle/wither"
+         },
+         "facing=north_east": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 45
+         },
+         "facing=east": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 90
+         },
+         "facing=east_south": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 135
+         },
+         "facing=south": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 180
+         },
+         "facing=south_west": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 225
+         },
+         "facing=west": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 270
+         },
+         "facing=west_north": {
+            "model": "gravestone-extended:skull_candle/wither",
+            "y": 315
+         }
+     }
+}

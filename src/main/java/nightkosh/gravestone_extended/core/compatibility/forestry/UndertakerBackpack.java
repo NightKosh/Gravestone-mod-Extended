@@ -26,7 +26,7 @@ public class UndertakerBackpack implements IBackpackDefinition {
             GSBlock.MEMORIAL,
             GSBlock.CORPSE,
             GSBlock.CANDLE,
-            GSBlock.SKULL_CANDLE
+            GSBlock.SKULL_CANDLE_SKELETON
     );
     protected static final List<Item> allowedItems = Arrays.asList(
             GSItem.CHISEL,

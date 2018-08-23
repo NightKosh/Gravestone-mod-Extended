@@ -54,6 +54,8 @@ public class ModGravestoneExtended {
     public void preInit(FMLPreInitializationEvent event) {
         ExtendedConfig.getInstance(event.getModConfigurationDirectory().getAbsolutePath() + "/GraveStoneMod/", "GraveStone.cfg");
 
+        GSModels.addModelRotations();
+
         GSStructures.preInit();
 
         MessageHandler.init();

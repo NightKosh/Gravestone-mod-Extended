@@ -1,0 +1,8 @@
+{
+    "parent": "gravestone-extended:block/skull_candle/skeleton",
+	"textures": {
+		"texture_skull": "gravestone-extended:blocks/skull_candle/wither_skull",
+		"particle": "gravestone-extended:blocks/skull_candle/wither_skull",
+		"texture_candle": "gravestone-extended:blocks/candle"
+	}
+}

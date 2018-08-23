@@ -133,7 +133,11 @@ public class ResourcesModels extends Resources {
 
     public static final ModelResourceLocation HAUNTED_CHEST = new ModelResourceLocation(ModInfo.ID + ":block/haunted_chest", "inventory");
     public static final ModelResourceLocation CANDLE = new ModelResourceLocation(ModInfo.ID + ":block/candle", "inventory");
-    public static final ModelResourceLocation SKULL_CANDLE = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle", "inventory");
+
+    public static final ModelResourceLocation SKULL_CANDLE_SKELETON = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/skeleton", "inventory");
+    public static final ModelResourceLocation SKULL_CANDLE_WITHER = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/wither", "inventory");
+    public static final ModelResourceLocation SKULL_CANDLE_ZOMBIE = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/zombie", "inventory");
+
     public static final ModelResourceLocation ALTAR = new ModelResourceLocation(ModInfo.ID + ":block/altar", "inventory");
 
     public static final ModelResourceLocation CATACOMBS_PORTAL = new ModelResourceLocation(ModInfo.ID + ":block/catacombs_portal", "inventory");

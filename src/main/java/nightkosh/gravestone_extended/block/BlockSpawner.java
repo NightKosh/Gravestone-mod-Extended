@@ -172,12 +172,12 @@ public class BlockSpawner extends BlockMobSpawner {
     public ItemStack getCustomItemsDropped(int meta) {
         switch (meta) {
             case 1:
-                return new ItemStack(GSBlock.SKULL_CANDLE, 1, 0);
+                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 0);
             case 2:
-                return new ItemStack(GSBlock.SKULL_CANDLE, 1, 2);
+                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 2);
             case 0:
             default:
-                return new ItemStack(GSBlock.SKULL_CANDLE, 1, 1);
+                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 1);
         }
     }
 
