@@ -28,15 +28,14 @@ block.trap.thunder.name=Pedra do Trovão
 block.trap.curse=A escuridão está vindo!
 
 ## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
+tile.withered_glass.name=Vidro Withered
+tile.withered_glass_pane.name=Painel de Vidro Withered
 
 ## Spawners
-block.spawner.wither.name=Spawner de Wither
-block.spawner.skeleton.name=Spawner de Esqueleto
-block.spawner.zombie.name=Spawner de Zumbi
-block.spawner.spider.name=Spawner de Aranha
+block.spawner.wither.name=Gerador de Wither
+block.spawner.skeleton.name=Gerador de Esqueleto
+block.spawner.zombie.name=Gerador de Zumbi
+block.spawner.spider.name=Gerador de Aranha
 
 ## Bone Blocks
 block.bone_block.default.name=Bloco de Ossos
@@ -59,9 +58,9 @@ block.haunted_chest.ghost_chest.name=Baú com Fantasma
 
 ## Candles
 tile.candle.name=Vela
-block.skull_candle.skeleton.name=Vela de Crânio
-block.skull_candle.wither_skeleton.name=Vela de Crânio de Esqueleto Wither
-block.skull_candle.zombie.name=Vela de Cabeça de Zumbi
+block.skull_candle.skeleton.name=Crânio com Vela
+block.skull_candle.wither_skeleton.name=Crânio de Esqueleto Wither com Vela
+block.skull_candle.zombie.name=Cabeça de Zumbi com vela
 
 ## Altar
 tile.altar.name=Altar
@@ -90,10 +89,9 @@ enchantment.bloody_replication=Replicação Sangrenta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
 
 ## Enchantments - Curses
-## TODO !!!!!!!!!!
 enchantment.starvation_curse=Maldição da Fome
 enchantment.gravestone-extended.gs_starvation_curse.desc=Aplica fome por 10 segundos por item
-enchantment.awkward_curse=Curse of Awkwardness
+enchantment.awkward_curse=Maldição da Inabilidade 
 enchantment.gravestone-extended.gs_awkward_curse.desc=Causa dano a você mesmo ao invés do inimigo com 10% de chance
 enchantment.fragility_curse=Maldição de Fragilidade
 enchantment.gravestone-extended.gs_fragility_curse.desc=O item recebe dano adicional no uso
@@ -101,52 +99,51 @@ enchantment.broken_hook_curse=Maldição do Anzol Quebrado
 enchantment.gravestone-extended.gs_broken_hook_curse.desc=Adiciona 30% de chance de perder sua captura
 
 # Potions
-## TODO !!!!!!!!!!!!
 potion.purification.title=Remove todos os efeitos negativos
 potion.effect.gs_purification_type=Poção de Purificação
 splash_potion.effect.gs_purification_type=Poção Arremessável de Purificação
 lingering_potion.effect.gs_purification_type=Poção Prolongada de Purificação
 tipped_arrow.effect.gs_purification_type=Flecha de Purificação
-potion.bone_skin.title=Bone Skin
-potion.effect.gs_bone_skin_type=Potion of Bone Skin
-splash_potion.effect.gs_bone_skin_type=Splash Potion of Bone Skin
-lingering_potion.effect.gs_bone_skin_type=Lingering Potion of Bone Skin
-tipped_arrow.effect.gs_bone_skin_type=Arrow of Bone Skin
+potion.bone_skin.title=Camada Óssea
+potion.effect.gs_bone_skin_type=Poção de Camada Óssea
+splash_potion.effect.gs_bone_skin_type=Poção Arremessável de Camada Óssea
+lingering_potion.effect.gs_bone_skin_type=Poção Prolongada de Camada Óssea
+tipped_arrow.effect.gs_bone_skin_type=Flecha de Camada Óssea
 potion.rust.title=Ferrugem
 potion.effect.gs_rust_type=Poção de Ferrugem
 splash_potion.effect.gs_rust_type=Poção Arremessável de Ferrugem
 lingering_potion.effect.gs_rust_type=Poção Prolongada de Ferrugem
 tipped_arrow.effect.gs_rust_type=Flecha de Ferrugem
-potion.recall.title=Return back to home
-potion.effect.gs_recall_type=Recall Potion
-splash_potion.effect.gs_recall_type=Splash Recall Potion
-lingering_potion.effect.gs_recall_type=Lingering Recall Potion
-tipped_arrow.effect.gs_recall_type=Arrow of Recall
+potion.recall.title=Retonar para casa
+potion.effect.gs_recall_type=Poção de Retorno
+splash_potion.effect.gs_recall_type=Poção Arremessável de Retorno
+lingering_potion.effect.gs_recall_type=Poção Prolongada de Retorno
+tipped_arrow.effect.gs_recall_type=Flecha de Retorno
 potion.burning.title=Incendeia o alvo
 potion.effect.gs_burning_type=Poção de Combustão
 splash_potion.effect.gs_burning_type=Poção Arremessável de Combustão
 lingering_potion.effect.gs_burning_type=Poção Prolongada de Combustão
 tipped_arrow.effect.gs_burning_type=Flecha de Combustão
-potion.bleeding.title=Hemorragia 
-potion.effect.gs_bleeding_type=Poção de Hemorragia
-splash_potion.effect.gs_bleeding_type=Poção Arremessável de Hemorragia
-lingering_potion.effect.gs_bleeding_type=Poção Arremessável de Hemorragia
-tipped_arrow.effect.gs_bleeding_type=Flecha de Hemorragia
+potion.bleeding.title=Sangramento 
+potion.effect.gs_bleeding_type=Poção de Sangramento
+splash_potion.effect.gs_bleeding_type=Poção Arremessável de Sangramente
+lingering_potion.effect.gs_bleeding_type=Poção Arremessável de Sangramento
+tipped_arrow.effect.gs_bleeding_type=Flecha de Sangramento
 potion.choke.title=Falta de Ar
 potion.effect.gs_choke_type=Poção de Falta de Ar
 splash_potion.effect.gs_choke_type=Poção Arremessável de Falta de Ar
 lingering_potion.effect.gs_choke_type=Poção Prolongada de Falta de Ar
 tipped_arrow.effect.gs_choke_type=Flecha de Falta de ar
 potion.inferno.title=Inferno
-potion.effect.gs_inferno_type=Potion of Inferno
-splash_potion.effect.gs_inferno_type=Splash Potion of Inferno
-lingering_potion.effect.gs_inferno_type=Lingering Potion of Inferno
-tipped_arrow.effect.gs_inferno_type=Arrow of Inferno
-potion.cursed_inferno.title=Cursed Inferno
-potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
-splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno
-lingering_potion.effect.gs_cursed_inferno_type=Lingering Potion of Cursed Inferno
-tipped_arrow.effect.gs_cursed_inferno_type=Arrow of Cursed Inferno
+potion.effect.gs_inferno_type=Poção de Inferno
+splash_potion.effect.gs_inferno_type=Poção Arremessável de Inferno
+lingering_potion.effect.gs_inferno_type=Poção Arremessável de Inferno
+tipped_arrow.effect.gs_inferno_type=Flecha de Inferno
+potion.cursed_inferno.title=Inferno Maldito
+potion.effect.gs_cursed_inferno_type=Poção de Inferno Maldito
+splash_potion.effect.gs_cursed_inferno_type=Poção Arremessável de Inferno Maldito
+lingering_potion.effect.gs_cursed_inferno_type=Poção Prolongada de Inferno Maldito
+tipped_arrow.effect.gs_cursed_inferno_type=Flecha de Inferno Maldito
 potion.cursed_flame.title=Chama Amaldiçoada
 potion.effect.gs_cursed_flame_type=Poção de Chama Amaldiçoada
 splash_potion.effect.gs_cursed_flame_type=Poção Arremessável de Chama Amaldiçoada
@@ -181,8 +178,7 @@ tipped_arrow.effect.gs_levitation_type=Flecha de Levitação
 item.gravestone.chisel.name=Formão de Lápide
 
 ## Fishing Pole
-## TODO !!!!!!!!!!
-item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
+item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso
 
 ## Pickaxe
 item.gravestone.bone_pickaxe.name=Picareta de Osso
@@ -227,26 +223,25 @@ item.gravestone.mummy_leggings.name=Calças de Múmia
 item.gravestone.mummy_boots.name=Bota de Múmia
 
 ## Other Items
-## TODO !!!!!!!!!!
-item.gravestone.toxic_slime.name=Toxic Slime
+item.gravestone.toxic_slime.name=Gosma Tóxica
 item.gravestone.raven_feather.name=Pena de Corvo
 item.gravestone.raven_claws.name=Garras de Corvo
-item.gravestone.ooze.name=Ooze
+item.gravestone.ooze.name=Lodo
 item.gravestone.piece_of_mummy_cloth.name=Pedaço de Pano de Múmia 
 item.gravestone.piece_of_diving_suit.name=Pedaço de Traje de mergulho
 item.gravestone.bat_wing.name=Asa de Morcego
 item.gravestone.enchanted_skull.name=Crânio Encantado
 item.gravestone.enchanted_skull_withered.name=Crânio de Esqueleto Wither Encantado
-item.gravestone.slime_chunk.name=Slime Chunk
-item.gravestone.imp_skull.name=Crânio de Imp
+item.gravestone.slime_chunk.name=Pedaço de Gosma
+item.gravestone.imp_skull.name=Crânio de Diabrete 
 item.gravestone.ender_skull.name=Cranio do Ender
 item.gravestone.frozen_mirror.name=Espelho Congelado
 
 ## Fish
 ## TODO !!!!!!!!!!
-item.gravestone.blue_jellyfish.name=Jellyfish
-item.gravestone.green_jellyfish.name=Green Jellyfish
-item.gravestone.magma_jellyfish.name=Magma Jellyfish
+item.gravestone.blue_jellyfish.name=Água-Viva
+item.gravestone.green_jellyfish.name=Água-Viva Verde
+item.gravestone.magma_jellyfish.name=Água-Viva de Magma
 item.gravestone.bone_fish.name=Bonefish
 item.gravestone.mud_tuna.name=Mud Tuna
 item.gravestone.frost_minnow.name=Frost Minnow
@@ -257,7 +252,7 @@ item.gravestone.cavefish.name=Cavefish
 item.gravestone.cursed_koi.name=Cursed Koi
 item.gravestone.spookyfin.name=Spookyfin
 item.gravestone.obsidifish.name=Obsidifish
-item.gravestone.nether_salmon.name=Nether Salmon
+item.gravestone.nether_salmon.name=Salmão do Nether
 item.gravestone.quartz_cod.name=Quartz Cod
 item.gravestone.flarefin_koi.name=Flarefin Koi
 item.gravestone.blaze_cod.name=Blaze Cod
@@ -271,7 +266,7 @@ item.gravestone.angelfish.name=Angelfish
 item.gravestone.angler_fish.name=Angler Fish
 item.gravestone.sponge_eater.name=Sponge Eater
 item.gravestone.snowy_crucian.name=Snowy Crucian
-item.gravestone.squid.name=Squid
+item.gravestone.squid.name=Lula
 item.gravestone.withered_crucian.name=Withered Crucian
 item.gravestone.sandy_bass.name=Sandy Bass
 
@@ -366,7 +361,7 @@ gui.altar.requirements=Níveis requeridos %d
 gui.chisel_crafting.grave_btn=Lápide
 gui.chisel_crafting.memorial_btn=Memorial
 gui.chisel_crafting.enchanted_btn=Encantado
-gui.chisel_crafting.mossy_btn=com Musgo
+gui.chisel_crafting.mossy_btn=Musgosa
 gui.chisel_crafting.recipe=Itens requeridos
 
 
