@@ -13,7 +13,9 @@ import net.minecraft.entity.passive.EntityMule;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
+import net.minecraftforge.registries.ForgeRegistry;
 import nightkosh.gravestone.models.ModelRendererSkull;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.core.Resources;
@@ -244,11 +246,8 @@ public class CorpseRendererHelper {
                 } else if (!isExecuted) {
                     GL11.glTranslatef(0, -1.3F, -0.85F);
                 }
-
-                switch (ZombieVillagerCorpseHelper.getProfession(nbt)) {
-                    case -1:
-                        Minecraft.getMinecraft().renderEngine.bindTexture(Resources.ZOMBIE_VILLAGER);
-                        break;
+                int prof = ZombieVillagerCorpseHelper.getProfession(nbt);
+                switch (prof) {
                     case 0:
                         Minecraft.getMinecraft().renderEngine.bindTexture(Resources.ZOMBIE_FARMER);
                         break;
@@ -264,6 +263,13 @@ public class CorpseRendererHelper {
                     case 4:
                         Minecraft.getMinecraft().renderEngine.bindTexture(Resources.ZOMBIE_BUTCHER);
                         break;
+                    default:
+                        VillagerRegistry.VillagerProfession corpseProfession = ((VillagerRegistry.VillagerProfession) ((ForgeRegistry) ForgeRegistries.VILLAGER_PROFESSIONS).getValue(prof));
+                        if (corpseProfession == null) {
+                            Minecraft.getMinecraft().renderEngine.bindTexture(Resources.ZOMBIE_VILLAGER);
+                        } else {
+                            Minecraft.getMinecraft().renderEngine.bindTexture(corpseProfession.getZombieSkin());
+                        }
                 }
                 if (isInStocks) {
                     zombieVillagerInStocksModel.renderAll();
