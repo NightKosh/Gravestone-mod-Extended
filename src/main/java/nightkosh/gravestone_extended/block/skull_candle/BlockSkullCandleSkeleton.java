@@ -121,7 +121,9 @@ public class BlockSkullCandleSkeleton extends Block {
     public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack stack) {
         double skullRotation = entity.rotationYaw - 180 - 22.5;
         if (skullRotation < 0) {
-            skullRotation = 360 + skullRotation;
+            skullRotation = 360 + skullRotation % 360;
+        } else if (skullRotation > 360) {
+            skullRotation = skullRotation % 360;
         }
         int id = MathHelper.ceil(skullRotation * 8 / 360D);
         if (id == EnumAdvancedFacing.values().length) {
@@ -137,7 +139,7 @@ public class BlockSkullCandleSkeleton extends Block {
         double yPos = pos.getY() + 0.85;
         double zPos = pos.getZ() + 0.5;
         double rotation = Math.toRadians(((EnumAdvancedFacing) state.getValue(FACING)).ordinal() * 360 / 8D);
-        double d = 0.07;
+        double d = -0.1;
         double dx = -Math.sin(rotation) * d;
         double dz = Math.cos(rotation) * d;
 
