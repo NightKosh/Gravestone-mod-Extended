@@ -52,11 +52,11 @@ public class CompatibilityThaumcraft {
 //                    .add(Aspect.TREE, 3).add(Aspect.VOID, 4));
 //            // candle
 //            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.candle), new int[]{0}, new AspectList().add(Aspect.LIGHT, 4));
-//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE), new int[]{0}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
+//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE_SKELETON), new int[]{0}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
 //                    .add(Aspect.UNDEAD, 4).add(Aspect.LIGHT, 4));
-//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE), new int[]{1}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
+//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE_WITHER), new int[]{0}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
 //                    .add(Aspect.UNDEAD, 4).add(Aspect.LIGHT, 4).add(Aspect.POISON, 4));
-//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE), new int[]{2}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
+//            ThaumcraftApi.registerObjectTag(new ItemStack(GSBlock.SKULL_CANDLE_ZOMBIE), new int[]{0}, new AspectList().add(Aspect.SOUL, 4).add(Aspect.DEATH, 4)
 //                    .add(Aspect.FLESH, 4).add(Aspect.LIGHT, 4));
 //
 //            // items
@@ -93,7 +93,8 @@ public class CompatibilityThaumcraft {
     }
 
     public static void addSwords() {
-//        ModGraveStone.gravestoneHelper.addSwordToSwordsList(ItemApi.getItem("itemSwordThaumium", 0).getItem());
-//        ModGraveStone.gravestoneHelper.addSwordToSwordsList(ItemApi.getItem("itemSwordElemental", 0).getItem());
+//                GraveStoneAPI.GRAVE_STONE.addSwordToSwordsList(GameRegistry.findItem(MOD_ID, "thaumium_sword"));
+//                GraveStoneAPI.GRAVE_STONE.addSwordToSwordsList(GameRegistry.findItem(MOD_ID, "elemental_sword"));
+//                GraveStoneAPI.GRAVE_STONE.addSwordToSwordsList(GameRegistry.findItem(MOD_ID, "void_sword"));
     }
 }
