@@ -40,6 +40,7 @@ import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.MemorialGenerationHelper;
 import nightkosh.gravestone_extended.tileentity.TileEntityMemorial;
 
@@ -378,17 +379,22 @@ public class BlockMemorial extends BlockContainer {
 
     private ItemStack getBlockItemStackWithoutInfo(World world, BlockPos pos) {
         ItemStack itemStack = new ItemStack(Item.getItemFromBlock(this), 1);
-        TileEntityMemorial tileEntity = (TileEntityMemorial) world.getTileEntity(pos);
+        TileEntity te = world.getTileEntity(pos);
+        if (te instanceof TileEntityMemorial) {
+            TileEntityMemorial tileEntity = (TileEntityMemorial) te;
 
-        if (tileEntity != null) {
-            itemStack.setItemDamage(tileEntity.getGraveTypeNum());
-            NBTTagCompound nbt = new NBTTagCompound();
-            nbt.setBoolean("Mossy", tileEntity.isMossy());
-            if (tileEntity.getPlayerProfile() != null) {
-                nbt.setTag("Owner", NBTUtil.writeGameProfile(new NBTTagCompound(), tileEntity.getPlayerProfile()));
+            if (tileEntity != null) {
+                itemStack.setItemDamage(tileEntity.getGraveTypeNum());
+                NBTTagCompound nbt = new NBTTagCompound();
+                nbt.setBoolean("Mossy", tileEntity.isMossy());
+                if (tileEntity.getPlayerProfile() != null) {
+                    nbt.setTag("Owner", NBTUtil.writeGameProfile(new NBTTagCompound(), tileEntity.getPlayerProfile()));
+                }
+
+                itemStack.setTagCompound(nbt);
             }
-
-            itemStack.setTagCompound(nbt);
+        } else {
+            GSLogger.logError("Can't create memorial item stack - wrong tileentity!");
         }
 
         return itemStack;
