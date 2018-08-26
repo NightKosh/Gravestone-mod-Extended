@@ -18,15 +18,18 @@ public class TEISRMemorial extends TileEntityItemStackRenderer {
 
     @Override
     public void renderByItem(ItemStack stack) {
+        EnumMemorials memorial = EnumMemorials.getById(stack.getItemDamage());
+        boolean isEnchanted = false;
+        boolean isMossy = false;
+        GameProfile profile = null;
         if (stack.hasTagCompound()) {
             NBTTagCompound nbt = stack.getTagCompound();
-            EnumMemorials memorial = EnumMemorials.getById(stack.getItemDamage());
-            boolean isEnchanted = nbt.hasKey("Enchanted") && nbt.getBoolean("Enchanted");
-            boolean isMossy = nbt.hasKey("Mossy") && nbt.getBoolean("Mossy");
+            isEnchanted = nbt.hasKey("Enchanted") && nbt.getBoolean("Enchanted");
+            isMossy = nbt.hasKey("Mossy") && nbt.getBoolean("Mossy");
 
-            GameProfile profile = memorial.getMemorialType() == EnumMemorials.EnumMemorialType.STEVE_STATUE ? GameProfileHelper.getProfile(nbt) : null;
-
-            TileEntityMemorialRenderer.instance.renderMemorialAsItem(memorial, memorial.getMemorialType(), isEnchanted, isMossy, profile);
+            profile = memorial.getMemorialType() == EnumMemorials.EnumMemorialType.STEVE_STATUE ? GameProfileHelper.getProfile(nbt) : null;
         }
+
+        TileEntityMemorialRenderer.instance.renderMemorialAsItem(memorial, memorial.getMemorialType(), isEnchanted, isMossy, profile);
     }
 }
