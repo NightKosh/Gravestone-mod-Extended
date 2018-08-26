@@ -4,6 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.entity.monster.pet.EnumUndeadMobType;
@@ -44,7 +45,10 @@ public class ZombieVillagerCorpseHelper extends CorpseHelper {
 
         List<VillagerRegistry.VillagerProfession> villagers = ForgeRegistries.VILLAGER_PROFESSIONS.getValues();
         for (VillagerRegistry.VillagerProfession villagerProfession : villagers) {
-            list.add(createCorpse(VillagerRegistry.getId(villagerProfession), villagerProfession.getRandomCareer(RANDOM)));
+            List<VillagerRegistry.VillagerCareer> careersList = ReflectionHelper.getPrivateValue(VillagerRegistry.VillagerProfession.class, villagerProfession, "careers");
+            if (!careersList.isEmpty()) {
+                list.add(createCorpse(VillagerRegistry.getId(villagerProfession), villagerProfession.getRandomCareer(RANDOM)));
+            }
         }
 
         return list;

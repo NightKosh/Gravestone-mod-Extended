@@ -8,6 +8,7 @@ import net.minecraft.village.MerchantRecipeList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.core.GSBlock;
@@ -59,7 +60,10 @@ public class VillagerCorpseHelper extends CorpseHelper {
 
         List<VillagerRegistry.VillagerProfession> villagers = ForgeRegistries.VILLAGER_PROFESSIONS.getValues();
         for (VillagerRegistry.VillagerProfession villagerProfession : villagers) {
-            list.add(getDefaultVillagerCorpse(VillagerRegistry.getId(villagerProfession), villagerProfession.getRandomCareer(RANDOM)));
+            List<VillagerRegistry.VillagerCareer> careersList = ReflectionHelper.getPrivateValue(VillagerRegistry.VillagerProfession.class, villagerProfession, "careers");
+            if (!careersList.isEmpty()) {
+                list.add(getDefaultVillagerCorpse(VillagerRegistry.getId(villagerProfession), villagerProfession.getRandomCareer(RANDOM)));
+            }
         }
 
         return list;
