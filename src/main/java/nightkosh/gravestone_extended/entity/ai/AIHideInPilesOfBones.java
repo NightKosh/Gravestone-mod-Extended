@@ -19,7 +19,7 @@ import java.util.Random;
 public class AIHideInPilesOfBones extends EntityAIWander {
     private EntitySkullCrawler crawler;
     private EnumFacing enumFacing;
-    private boolean field_179484_c;
+    private boolean doHide;
     private int ticks;
 
     public AIHideInPilesOfBones(EntitySkullCrawler crawler) {
@@ -40,16 +40,18 @@ public class AIHideInPilesOfBones extends EntityAIWander {
                 if (random.nextInt(10) == 0) {
                     this.enumFacing = EnumFacing.random(random);
 
-                    BlockPos blockPos = (new BlockPos(crawler.posX, crawler.posY + 0.5, crawler.posZ)).offset(this.enumFacing);
+                    BlockPos blockPos = new BlockPos(crawler.posX, crawler.posY + 0.5, crawler.posZ).offset(this.enumFacing);
                     IBlockState blockState = crawler.getEntityWorld().getBlockState(blockPos);
 
                     if (blockState.getBlock().isAir(blockState, crawler.getEntityWorld(), blockPos)) {
-                        this.field_179484_c = true;
-                        return true;
+                        if (crawler.getEntityWorld().isSideSolid(blockPos.down(), EnumFacing.UP)) {
+                            this.doHide = true;
+                            return true;
+                        }
                     }
                 }
 
-                this.field_179484_c = false;
+                this.doHide = false;
                 return super.shouldExecute();
             }
         } else {
@@ -59,17 +61,17 @@ public class AIHideInPilesOfBones extends EntityAIWander {
 
     @Override
     public boolean shouldContinueExecuting() {
-        return !this.field_179484_c && super.shouldContinueExecuting();
+        return !this.doHide && super.shouldContinueExecuting();
     }
 
     @Override
     public void startExecuting() {
         if (crawler.canHideInBones()) {
-            if (!this.field_179484_c) {
+            if (!this.doHide) {
                 super.startExecuting();
             } else {
                 World world = crawler.getEntityWorld();
-                BlockPos blockPos = (new BlockPos(crawler.posX, crawler.posY + 0.5D, crawler.posZ)).offset(this.enumFacing);
+                BlockPos blockPos = new BlockPos(crawler.posX, crawler.posY + 0.5, crawler.posZ).offset(this.enumFacing);
                 world.setBlockState(blockPos, GSBlock.PILE_OF_BONES.getCrawlerBlockState(), 3);
                 crawler.spawnExplosionParticle();
                 crawler.setDead();

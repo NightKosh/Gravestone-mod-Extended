@@ -20,7 +20,7 @@ import java.util.Random;
 public class AIHideInBones extends EntityAIWander {
     private EntitySkullCrawler crawler;
     private EnumFacing enumFacing;
-    private boolean field_179484_c;
+    private boolean doMerge;
     private boolean isExecuting = false;
     private int ticks;
 
@@ -45,12 +45,12 @@ public class AIHideInBones extends EntityAIWander {
                     IBlockState blockState = crawler.getEntityWorld().getBlockState(blockPos);
 
                     if (BlockBoneBlock.canContainCrawler(blockState)) {
-                        this.field_179484_c = true;
+                        this.doMerge = true;
                         return true;
                     }
                 }
 
-                this.field_179484_c = false;
+                this.doMerge = false;
                 return super.shouldExecute();
             }
         } else {
@@ -60,7 +60,7 @@ public class AIHideInBones extends EntityAIWander {
 
     @Override
     public boolean shouldContinueExecuting() {
-        boolean continueExecuting = !this.field_179484_c && super.shouldContinueExecuting();
+        boolean continueExecuting = !this.doMerge && super.shouldContinueExecuting();
         if (!continueExecuting) {
             isExecuting = false;
         }
@@ -71,7 +71,7 @@ public class AIHideInBones extends EntityAIWander {
     @Override
     public void startExecuting() {
         if (crawler.canHideInBones()) {
-            if (!this.field_179484_c) {
+            if (!this.doMerge) {
                 super.startExecuting();
             } else {
                 isExecuting = true;
