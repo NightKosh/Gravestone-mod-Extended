@@ -68,6 +68,8 @@ public class ModGravestoneExtended {
         GSLootTables.registration();
 
         GSDimensions.registration();
+
+        GSEntity.registration();
     }
 
     @Mod.EventHandler
@@ -84,9 +86,6 @@ public class ModGravestoneExtended {
 
         // register structures
         GSStructures.registration();
-
-        // register entities
-        GSEntity.registration();
 
         GSParticles.registration();
 
