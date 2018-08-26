@@ -26,9 +26,7 @@ import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.entity.projectile.EntityCustomFishHook;
 import nightkosh.gravestone_extended.entity.projectile.EntityObsidianFishHook;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * GraveStone mod
@@ -271,7 +269,14 @@ public class GSEntity {
                                  EnumCreatureType mobType, int spawnProbability, int spawnMinCount, int spawnMaxCount) {
         List<Biome> biomes = new ArrayList<>();
         for (BiomeDictionary.Type biomeType : biomeTypes) {
-            biomes.addAll(BiomeDictionary.getBiomes(biomeType));
+            Set<Biome> bSet = BiomeDictionary.getBiomes(biomeType);
+            Iterator<Biome> it = bSet.iterator();
+            while (it.hasNext()) {
+                Biome biome = it.next();
+                if (!BiomeDictionary.hasType(biome, BiomeDictionary.Type.MUSHROOM)) {
+                    biomes.add(biome);
+                }
+            }
         }
         Biome[] biomeArray = new Biome[biomes.size()];
         biomes.toArray(biomeArray);
