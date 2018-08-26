@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.config;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import nightkosh.gravestone.config.Config;
+import nightkosh.gravestone.config.ConfigsHelper;
 import nightkosh.gravestone_extended.core.GSDimensions;
 import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.structures.GraveStoneWorldGenerator;
