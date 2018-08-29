@@ -1,27 +1,22 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.block.model.ModelRotation;
-import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
-import nightkosh.gravestone_extended.block.enums.*;
+import nightkosh.gravestone_extended.block.enums.EnumBoneBlock;
+import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
+import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
+import nightkosh.gravestone_extended.block.enums.EnumTrap;
 import nightkosh.gravestone_extended.item.ItemFish;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
-import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
-import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
-import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
-import nightkosh.gravestone_extended.renderer.item.TEISRSpawner;
 import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
 
 /**
@@ -33,41 +28,13 @@ import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
 @GameRegistry.ObjectHolder(ModInfo.ID)
 public class GSModels {
 
-    public static ModelRotation X0_Y45;
-    public static ModelRotation X0_Y135;
-    public static ModelRotation X0_Y225;
-    public static ModelRotation X0_Y315;
-
-    public static void addModelRotations() {
-
-        Class<?>[] rotationParams = {
-            int.class, int.class
-        };
-        X0_Y45 = EnumHelper.addEnum(ModelRotation.class, "X0_Y45", rotationParams, 0, 45);
-        X0_Y135 = EnumHelper.addEnum(ModelRotation.class, "X0_Y135", rotationParams, 0, 135);
-        X0_Y225 = EnumHelper.addEnum(ModelRotation.class, "X0_Y225", rotationParams, 0, 225);
-        X0_Y315 = EnumHelper.addEnum(ModelRotation.class, "X0_Y315", rotationParams, 0, 315);
-
-        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y45.combinedXY), X0_Y45);
-        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y135.combinedXY), X0_Y135);
-        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y225.combinedXY), X0_Y225);
-        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y315.combinedXY), X0_Y315);
-    }
-
     @Mod.EventBusSubscriber(modid = ModInfo.ID)
     public static class RegistrationHandler {
 
         @SubscribeEvent
         public static void registerModels(final ModelRegistryEvent event) {
-            //memorials
-            registerModelsForTEBlocks2(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
-                    GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL);
-            //executions
-            registerModelsForTEBlocks2(EnumExecution.GALLOWS.ordinal(), EnumExecution.BURNING_STAKE.ordinal(),
-                    GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION);
-            //spawners
-            registerModelsForTEBlocks2(EnumSpawner.WITHER_SPAWNER.ordinal(), EnumSpawner.SPIDER_SPAWNER.ordinal(),
-                    GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER);
+            ModGravestoneExtended.proxy.addModelRotationsAndTEISR();
+
             //piles of bones
             for (int i = EnumPileOfBones.PILE_OF_BONES.ordinal(); i < EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal() * 4 - 1; i++) {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES);
@@ -78,7 +45,10 @@ public class GSModels {
             ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
 
             //haunted chest
-            registerModelsForTEBlocks(0, EnumHauntedChest.values().length - 1, GSBlock.HAUNTED_CHEST, ResourcesModels.HAUNTED_CHEST, TileEntityHauntedChest.class);
+            for (int meta = 0; meta <= EnumHauntedChest.values().length - 1; meta++) {
+                ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(GSBlock.HAUNTED_CHEST), meta, TileEntityHauntedChest.class);
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.HAUNTED_CHEST), meta, ResourcesModels.HAUNTED_CHEST);
+            }
 
             //skull candle
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_SKELETON), 0, ResourcesModels.SKULL_CANDLE_SKELETON);
@@ -87,10 +57,6 @@ public class GSModels {
             ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_ZOMBIE), ResourcesModels.SKULL_CANDLE_ZOMBIE);
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_WITHER), 0, ResourcesModels.SKULL_CANDLE_WITHER);
             ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.SKULL_CANDLE_WITHER), ResourcesModels.SKULL_CANDLE_WITHER);
-
-            //corpses
-            registerModelsForTEBlocks2(EnumCorpse.STEVE.ordinal(), EnumCorpse.WITCH.ordinal(),
-                    GSBlock.CORPSE_IB, new TEISRCorpse(), GSBlock.CORPSE, ResourcesModels.CORPSE);
 
             //traps
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.TRAP), EnumTrap.NIGHT_STONE.ordinal(), ResourcesModels.NIGHT_STONE);
@@ -244,27 +210,6 @@ public class GSModels {
             final ModelResourceLocation modelResourceLocation = new ModelResourceLocation(ModInfo.ID + ":fluid", block.getFluid().getName());
             ModelLoader.setCustomMeshDefinition(item, stack -> modelResourceLocation);
             ModGravestoneExtended.proxy.registerFluidRenderers(block, modelResourceLocation);
-        }
-
-        //TODO rename!
-        private static void registerModelsForTEBlocks2(int startMeta, int endMeta, Item item, TileEntityItemStackRenderer renderer, Block block, ModelResourceLocation model) {
-            item.setTileEntityItemStackRenderer(renderer);
-            for (int meta = startMeta; meta <= endMeta; meta++) {
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
-            }
-        }
-
-        //TODO remove !
-        private static void registerModelsForTEBlocks(int startMeta, int endMeta, Block block, ModelResourceLocation model, Class TEClass) {
-            for (int meta = startMeta; meta <= endMeta; meta++) {
-                registerModelsForTEBlocks(meta, block, model, TEClass);
-            }
-        }
-
-        //TODO remove !
-        private static void registerModelsForTEBlocks(int meta, Block block, ModelResourceLocation model, Class TEClass) {
-            ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(block), meta, TEClass);
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
         }
     }
 }

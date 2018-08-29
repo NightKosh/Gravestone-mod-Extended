@@ -5,18 +5,28 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelRotation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.entity.RenderFish;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
+import net.minecraft.item.Item;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import nightkosh.gravestone.tileentity.TileEntityGrave;
+import nightkosh.gravestone_extended.block.enums.EnumCorpse;
+import nightkosh.gravestone_extended.block.enums.EnumExecution;
+import nightkosh.gravestone_extended.block.enums.EnumMemorials;
+import nightkosh.gravestone_extended.block.enums.EnumSpawner;
+import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSParticles;
+import nightkosh.gravestone_extended.core.ResourcesModels;
 import nightkosh.gravestone_extended.core.event.RenderEventHandler;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
@@ -43,6 +53,10 @@ import nightkosh.gravestone_extended.particle.*;
 import nightkosh.gravestone_extended.renderer.entity.*;
 import nightkosh.gravestone_extended.renderer.entity.item.RendererFireproofItem;
 import nightkosh.gravestone_extended.renderer.entity.projectile.RendererBoneFishHook;
+import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
+import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
+import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
+import nightkosh.gravestone_extended.renderer.item.TEISRSpawner;
 import nightkosh.gravestone_extended.renderer.tileentity.*;
 import nightkosh.gravestone_extended.tileentity.*;
 
@@ -191,5 +205,43 @@ public class ClientProxy extends CommonProxy {
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_SPLASH.getParticleID(), new ParticleToxicWaterSplash.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_BUBBLE.getParticleID(), new ParticleToxicWaterBubble.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_WAKE.getParticleID(), new ParticleToxicWaterWake.Factory());
+    }
+
+    @Override
+    public void addModelRotationsAndTEISR() {
+        Class<?>[] rotationParams = {
+                int.class, int.class
+        };
+        ModelRotation X0_Y45 = EnumHelper.addEnum(ModelRotation.class, "X0_Y45", rotationParams, 0, 45);
+        ModelRotation X0_Y135 = EnumHelper.addEnum(ModelRotation.class, "X0_Y135", rotationParams, 0, 135);
+        ModelRotation X0_Y225 = EnumHelper.addEnum(ModelRotation.class, "X0_Y225", rotationParams, 0, 225);
+        ModelRotation X0_Y315 = EnumHelper.addEnum(ModelRotation.class, "X0_Y315", rotationParams, 0, 315);
+
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y45.combinedXY), X0_Y45);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y135.combinedXY), X0_Y135);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y225.combinedXY), X0_Y225);
+        ModelRotation.MAP_ROTATIONS.put(Integer.valueOf(X0_Y315.combinedXY), X0_Y315);
+
+
+        //memorials
+        registerTEISR(EnumMemorials.WOODEN_CROSS.ordinal(), EnumMemorials.ICE_CREEPER_STATUE.ordinal(),
+                GSBlock.MEMORIAL_IB, new TEISRMemorial(), GSBlock.MEMORIAL, ResourcesModels.MEMORIAL);
+        //executions
+        registerTEISR(EnumExecution.GALLOWS.ordinal(), EnumExecution.BURNING_STAKE.ordinal(),
+                GSBlock.EXECUTION_IB, new TEISRExecution(), GSBlock.EXECUTION, ResourcesModels.EXECUTION);
+        //spawners
+        registerTEISR(EnumSpawner.WITHER_SPAWNER.ordinal(), EnumSpawner.SPIDER_SPAWNER.ordinal(),
+                GSBlock.SPAWNER_IB, new TEISRSpawner(), GSBlock.SPAWNER, ResourcesModels.SPAWNER);
+        //corpses
+        registerTEISR(EnumCorpse.STEVE.ordinal(), EnumCorpse.WITCH.ordinal(),
+                GSBlock.CORPSE_IB, new TEISRCorpse(), GSBlock.CORPSE, ResourcesModels.CORPSE);
+    }
+
+
+    private static void registerTEISR(int startMeta, int endMeta, Item item, TileEntityItemStackRenderer renderer, Block block, ModelResourceLocation model) {
+        item.setTileEntityItemStackRenderer(renderer);
+        for (int meta = startMeta; meta <= endMeta; meta++) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, model);
+        }
     }
 }
