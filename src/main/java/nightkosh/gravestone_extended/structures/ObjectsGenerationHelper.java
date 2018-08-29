@@ -34,8 +34,7 @@ public class ObjectsGenerationHelper {
 
     public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, EnumFacing facing, IBlockState state) {
         BlockPos pos = new BlockPos(component.getXWithOffset(xCoord, zCoord), component.getYWithOffset(yCoord), component.getZWithOffset(xCoord, zCoord));
-        state.withProperty(BlockPileOfBones.FACING, facing);
-        world.setBlockState(pos, state, 2);
+        world.setBlockState(pos, state.withProperty(BlockPileOfBones.FACING, facing), 2);
     }
 
     public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, IBlockState state) {

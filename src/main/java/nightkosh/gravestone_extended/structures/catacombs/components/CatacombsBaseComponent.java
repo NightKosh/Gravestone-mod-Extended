@@ -7,7 +7,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-import net.minecraft.world.gen.structure.StructureComponent;
 import nightkosh.gravestone_extended.core.GSStructures;
 import nightkosh.gravestone_extended.structures.ComponentGraveStone;
 import nightkosh.gravestone_extended.structures.ObjectsGenerationHelper;
@@ -31,7 +30,7 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
     protected int zLength;
 
     public static final float WEB_GENERATION_CHANCE = 0.05F;
-    protected static final StructureComponent.BlockSelector catacombsPileOfBones = new CatacombsPileOfBonesSelector();
+    protected static final CatacombsPileOfBonesSelector catacombsPileOfBones = new CatacombsPileOfBonesSelector();
 
     protected int level = 0;
     protected CatacombsBaseComponent prevComponent;
@@ -120,7 +119,7 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
         return CatacombsLevel.getCatacombsStones(this.level);
     }
 
-    public static BlockSelector getPileOfBonesSelector() {
+    public static CatacombsPileOfBonesSelector getPileOfBonesSelector() {
         return catacombsPileOfBones;
     }
 
@@ -164,10 +163,11 @@ public abstract class CatacombsBaseComponent extends ComponentGraveStone {
                 for (int z = startZ; z <= endZ; ++z) {
                     if (!p_74882_9_) {
                         IBlockState state = this.getBlockStateFromPos(world, x, y, z, box);
-                        if (state.getBlock().getMaterial(state) != Material.AIR) {
+                        if (state.getBlock().getMaterial(state) == Material.AIR) {
                             //TODO wtf ??? y == startY || y == endY || x == startX || x == endX || z == startZ || z == endZ
-                            getPileOfBonesSelector().selectBlocks(random, x, y, z, y == startY || y == endY || x == startX || x == endX || z == startZ || z == endZ);
-                            ObjectsGenerationHelper.generatePileOfBones(this, world, x, y, z, getPileOfBonesSelector().getBlockState());
+                            if (getPileOfBonesSelector().selectBlocks(random, y == startY || y == endY || x == startX || x == endX || z == startZ || z == endZ)) {
+                                ObjectsGenerationHelper.generatePileOfBones(this, world, x, y, z, getPileOfBonesSelector().getBlockState());
+                            }
                         }
                     }
                 }

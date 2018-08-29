@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -41,7 +42,7 @@ import java.util.Random;
 public class BlockPileOfBones extends Block {
 
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", EnumPileOfBones.class);
-    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+    public static final PropertyDirection FACING = BlockHorizontal.FACING;
 
     public BlockPileOfBones() {
         super(Material.CIRCUITS);
