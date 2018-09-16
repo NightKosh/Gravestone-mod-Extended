@@ -7,10 +7,7 @@ import net.minecraft.client.model.ModelOcelot;
 import net.minecraft.client.model.ModelWolf;
 import net.minecraft.client.renderer.texture.LayeredTexture;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.passive.EntityDonkey;
-import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityMule;
-import net.minecraft.entity.passive.EntityWolf;
+import net.minecraft.entity.passive.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -189,21 +186,25 @@ public class CorpseRendererHelper {
                         if (donkey == null) {
                             donkey = new EntityDonkey(Minecraft.getMinecraft().world);
                         }
+                        renderHorse(horseType, donkey);
                         break;
                     case MULE:
                         if (mule == null) {
                             mule = new EntityMule(Minecraft.getMinecraft().world);
                         }
+                        renderHorse(horseType, mule);
                         break;
                     case ZOMBIE:
                         if (zombieHorse == null) {
                             zombieHorse = new EntityZombieHorse(Minecraft.getMinecraft().world);
                         }
+                        renderHorse(horseType, zombieHorse);
                         break;
                     case SKELETON:
                         if (skeletonHorse == null) {
                             skeletonHorse = new EntitySkeletonHorse(Minecraft.getMinecraft().world);
                         }
+                        renderHorse(horseType, skeletonHorse);
                         break;
                     case HORSE:
                     default:
@@ -211,13 +212,9 @@ public class CorpseRendererHelper {
                             horse = new EntityHorse(Minecraft.getMinecraft().world);
                         }
                         horse.setHorseVariant((nbt == null) ? 0 : HorseCorpseHelper.getHorseVariant(nbt));
+                        renderHorse(horseType, horse);
                         break;
                 }
-
-                bindHorseTexture(horseType.ordinal());
-
-                horseModel.setLivingAnimations(horse, 0, 0, 0);
-                horseModel.render(horse, xz, xz, xz, xz, xz, xz);
                 break;
             case ZOMBIE:
                 if (atAltar) {
@@ -525,6 +522,13 @@ public class CorpseRendererHelper {
 //            case STRAY:
 //            case WITHER:
         }
+    }
+
+    private static void renderHorse(HorseCorpseHelper.EnumHorseType horseType, AbstractHorse horse) {
+        float xz = 0.0625F;
+        bindHorseTexture(horseType.ordinal());
+        horseModel.setLivingAnimations(horse, 0, 0, 0);
+        horseModel.render(horse, xz, xz, xz, xz, xz, xz);
     }
 
     private static void bindHorseTexture(int horseType) {
