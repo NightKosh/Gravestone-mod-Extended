@@ -30,7 +30,6 @@ import nightkosh.gravestone_extended.core.ResourcesModels;
 import nightkosh.gravestone_extended.core.event.RenderEventHandler;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
-import nightkosh.gravestone_extended.entity.item.EntityFireproofItem;
 import nightkosh.gravestone_extended.entity.monster.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler.SkullCrawlerType;
@@ -44,14 +43,12 @@ import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
 import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
 import nightkosh.gravestone_extended.entity.monster.water.EntitySwampThing;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
-import nightkosh.gravestone_extended.entity.projectile.EntityCustomFishHook;
 import nightkosh.gravestone_extended.gui.GSGraveTextGui;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.models.entity.ModelDamnedWarrior;
 import nightkosh.gravestone_extended.models.entity.ModelUndeadCat;
 import nightkosh.gravestone_extended.particle.*;
 import nightkosh.gravestone_extended.renderer.entity.*;
-import nightkosh.gravestone_extended.renderer.entity.item.RendererFireproofItem;
 import nightkosh.gravestone_extended.renderer.entity.projectile.RendererBoneFishHook;
 import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
 import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
@@ -171,10 +168,7 @@ public class ClientProxy extends CommonProxy {
         // Spawner Helper
         RenderingRegistry.registerEntityRenderingHandler(EntityGroupOfGravesMobSpawnerHelper.class, new RenderSpawnerHelper(renderManager));
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityCustomFishHook.class, new RenderFish(renderManager));
         RenderingRegistry.registerEntityRenderingHandler(EntityBoneFishHook.class, new RendererBoneFishHook(renderManager));
-
-        RenderingRegistry.registerEntityRenderingHandler(EntityFireproofItem.class, new RendererFireproofItem(renderManager, renderItem));
     }
 
     @Override

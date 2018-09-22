@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import nightkosh.gravestone_extended.entity.item.EntityFireproofItem;
 
 /**
  * GraveStone mod
@@ -34,7 +33,7 @@ public class EntityObsidianFishHook extends EntityBoneFishHook {
 
     @Override
     protected EntityItem getCatchEntityItem(ItemStack stack) {
-        return new EntityFireproofItem(this.world, this.posX, this.posY + 0.5, this.posZ, stack);
+        return getFireproofCatchEntityItem(stack);
     }
 
     @Override

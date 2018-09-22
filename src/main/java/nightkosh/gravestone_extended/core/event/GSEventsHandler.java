@@ -3,29 +3,23 @@ package nightkosh.gravestone_extended.core.event;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.AbstractSkeleton;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityFishHook;
 import net.minecraft.entity.projectile.EntityPotion;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.potion.PotionType;
 import net.minecraft.potion.PotionUtils;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.LootTableLoadEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
@@ -51,7 +45,6 @@ import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityStraySkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityWitherSkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityZombieSkullCrawler;
-import nightkosh.gravestone_extended.entity.projectile.EntityCustomFishHook;
 import nightkosh.gravestone_extended.item.weapon.IBoneShiled;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
 import nightkosh.gravestone_extended.item.weapon.ItemBoneShield;
@@ -162,38 +155,6 @@ public class GSEventsHandler {
                     }
                     break;
                 }
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void entityJoinWorldEvent(EntityJoinWorldEvent event) {
-        Entity entity = event.getEntity();
-
-        if (ExtendedConfig.overrideVanillaFishing && entity instanceof EntityFishHook && entity.getClass().equals(EntityFishHook.class)) {
-            World world = event.getWorld();
-            if (!world.isRemote) {
-                EntityPlayer player = ((EntityFishHook) entity).getAngler();
-                ItemStack stack = player.getHeldItem(EnumHand.MAIN_HAND);
-                if (stack.getItem() != Items.FISHING_ROD) {
-                    stack = player.getHeldItem(EnumHand.OFF_HAND);
-                }
-                entity.setDead();
-
-                EntityCustomFishHook hook = new EntityCustomFishHook(world, player);
-
-                int speed = EnchantmentHelper.getFishingSpeedBonus(stack);
-                if (speed > 0) {
-                    hook.setLureSpeed(speed);
-                }
-                int luck = EnchantmentHelper.getFishingLuckBonus(stack);
-                if (luck > 0) {
-                    hook.setLuck(luck);
-                }
-
-                world.spawnEntity(hook);
-
-                event.setCanceled(true);
             }
         }
     }

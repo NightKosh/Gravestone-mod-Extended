@@ -50,89 +50,6 @@ public class GSRecipes {
                 "f",
                 'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GREEN_JELLYFISH.ordinal()));
 
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_magma_cream"), GROUP, new ItemStack(Items.MAGMA_CREAM),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MAGMA_JELLYFISH.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_lava"), GROUP, new ItemStack(Items.LAVA_BUCKET),
-                "fb",
-                'b', Items.BUCKET,
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MAGMA_JELLYFISH.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_obsidian"), GROUP, new ItemStack(Blocks.OBSIDIAN),
-                "ff",
-                "ff",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.OBSIDIFISH.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_netherrack"), GROUP, new ItemStack(Blocks.NETHERRACK),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.NETHER_SALMON.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_quartz"), GROUP, new ItemStack(Items.QUARTZ, 4),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.QUARTZ_COD.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_glowstone_dust"), GROUP, new ItemStack(Items.GLOWSTONE_DUST, 2),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FLAREFIN_KOI.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_blaze_rod"), GROUP, new ItemStack(Items.BLAZE_ROD),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BLAZE_COD.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_end_stone"), GROUP, new ItemStack(Blocks.END_STONE),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.ENDERFIN.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_ender_pearl"), GROUP, new ItemStack(Items.ENDER_PEARL),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.PEARL_BASS.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_chorus_fruit"), GROUP, new ItemStack(Items.CHORUS_FRUIT),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.CHORUS_KOI.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_sand"), GROUP, new ItemStack(Blocks.SAND),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SANDY_BASS.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_clay"), GROUP, new ItemStack(Items.CLAY_BALL, 4),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MUD_TUNA.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_snow"), GROUP, new ItemStack(Items.SNOWBALL, 4),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SNOWY_CRUCIAN.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_ice"), GROUP, new ItemStack(Blocks.ICE, 1),
-                "ff",
-                "ff",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FROST_MINNOW.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_packed_ice"), GROUP, new ItemStack(Blocks.PACKED_ICE, 2),
-                "fi",
-                "if",
-                'i', Blocks.ICE,
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FROST_MINNOW.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_gunpowder"), GROUP, new ItemStack(Items.GUNPOWDER, 3),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.EXPLOSIVE_CRUCIAN.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_sponge"), GROUP, new ItemStack(Blocks.SPONGE, 1),
-                "ff",
-                "ff",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPONGE_EATER.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_soul_sand"), GROUP, new ItemStack(Blocks.SOUL_SAND, 1),
-                "ff",
-                "ff",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.WITHERED_CRUCIAN.ordinal()));
-
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_black_dye"), GROUP, new ItemStack(Items.DYE, 5, EnumDyeColor.BLACK.getDyeDamage()),
-                "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SQUID.ordinal()));
-
 
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "slime_chunk"), GROUP, new ItemStack(GSItem.SLIME_CHUNK),
                 "bsb", "scs", "bsb",
@@ -550,34 +467,8 @@ public class GSRecipes {
     }
 
     public static void smeltingRecipesRegistration() {
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BLUE_JELLYFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
         GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GREEN_JELLYFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MAGMA_JELLYFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.MUD_TUNA.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FROST_MINNOW.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.PIRANHA.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GOLDEN_KOI.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPECULAR_FISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.CAVEFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
         GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.CURSED_KOI.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
         GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPOOKYFIN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.OBSIDIFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.NETHER_SALMON.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 1), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.QUARTZ_COD.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.FLAREFIN_KOI.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BLAZE_COD.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.ENDERFIN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.PEARL_BASS.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.CHORUS_KOI.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.EXPLOSIVE_CRUCIAN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.RUFFE.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPARKLING_EEL.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.ANGELFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.ANGLER_FISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPONGE_EATER.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SNOWY_CRUCIAN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SQUID.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.WITHERED_CRUCIAN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SANDY_BASS.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
     }
 }

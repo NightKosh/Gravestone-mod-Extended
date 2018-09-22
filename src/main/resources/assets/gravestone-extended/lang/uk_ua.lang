@@ -246,36 +246,10 @@ item.gravestone.ender_skull.name=Ender Skull
 item.gravestone.frozen_mirror.name=Frozen Mirror
 
 ## Fish
-item.gravestone.blue_jellyfish.name=Медуза
 item.gravestone.green_jellyfish.name=Зелена медуза
-item.gravestone.magma_jellyfish.name=Лавова медуза
 item.gravestone.bone_fish.name=Кістяна риба
-item.gravestone.mud_tuna.name=Грязьовий тунець
-item.gravestone.frost_minnow.name=Крижаний гольян
-item.gravestone.piranha.name=Піранья
-item.gravestone.golden_koi.name=Золота коі
-item.gravestone.specular_fish.name=Дзеркальна риба
-item.gravestone.cavefish.name=Печерна риба
 item.gravestone.cursed_koi.name=Проклята коі
 item.gravestone.spookyfin.name=Жахливий плавник
-item.gravestone.obsidifish.name=Обсидіанова риба
-item.gravestone.nether_salmon.name=Пекельний лосось
-item.gravestone.quartz_cod.name=Кварцова тріска
-item.gravestone.flarefin_koi.name=Випромінююча світло коі
-item.gravestone.blaze_cod.name=Вогняна тріска
-item.gravestone.enderfin.name=Плавець краю
-item.gravestone.pearl_bass.name=Перловий окунь
-item.gravestone.chorus_koi.name=Коі коруса
-item.gravestone.explosive_crucian.name=Вибуховий карась
-item.gravestone.ruffe.name=Йорж
-item.gravestone.sparkling_eel.name=Іскристий вугор
-item.gravestone.angelfish.name=Скалярія
-item.gravestone.angler_fish.name=Вудильник
-item.gravestone.sponge_eater.name=Губкоїд
-item.gravestone.snowy_crucian.name=Сніговий карась
-item.gravestone.squid.name=Кальмар
-item.gravestone.withered_crucian.name=Висушений карась
-item.gravestone.sandy_bass.name=Піщаний окунь
 
 ## Corpses
 item.corpse.steve=Труп Стіва

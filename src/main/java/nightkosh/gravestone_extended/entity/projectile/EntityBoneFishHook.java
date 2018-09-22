@@ -13,6 +13,8 @@ import net.minecraft.world.storage.loot.RandomValueRange;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nightkosh.advanced_fishing.api.AdvancedFishingAPI;
+import nightkosh.advanced_fishing.entity.projectile.EntityCustomFishHook;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSParticles;
@@ -76,11 +78,11 @@ public class EntityBoneFishHook extends EntityCustomFishHook {
     }
 
     static {
-        SPLASH_PARTICLES.put(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterSplashParticles);
-        BUBBLE_PARTICLES.put(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterBubbleParticles);
-        WAKE_PARTICLES.put(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterWakeParticles);
+        AdvancedFishingAPI.PARTICLES_MANAGER.addSplashParticles(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterSplashParticles);
+        AdvancedFishingAPI.PARTICLES_MANAGER.addBubbleParticles(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterBubbleParticles);
+        AdvancedFishingAPI.PARTICLES_MANAGER.addWakeParticles(GSBlock.TOXIC_WATER, EntityBoneFishHook::spawnToxicWaterWakeParticles);
 
-        CATCH.put(GSBlock.TOXIC_WATER, EntityBoneFishHook::getToxicWaterCatch);
+        AdvancedFishingAPI.CATCH_MANAGER.addCatch(GSBlock.TOXIC_WATER, EntityBoneFishHook::getToxicWaterCatch);
     }
 
     protected static void spawnToxicWaterSplashParticles(WorldServer world, Random rand, double x, double y, double z) {

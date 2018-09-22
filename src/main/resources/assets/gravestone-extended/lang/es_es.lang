@@ -265,36 +265,10 @@ item.gravestone.frozen_mirror.name=Frozen Mirror
 
 ## Fish
 ## TODO !!!!!!!!!!
-item.gravestone.blue_jellyfish.name=Jellyfish
 item.gravestone.green_jellyfish.name=Green Jellyfish
-item.gravestone.magma_jellyfish.name=Magma Jellyfish
 item.gravestone.bone_fish.name=Bonefish
-item.gravestone.mud_tuna.name=Mud Tuna
-item.gravestone.frost_minnow.name=Frost Minnow
-item.gravestone.piranha.name=Piranha
-item.gravestone.golden_koi.name=Golden Koi
-item.gravestone.specular_fish.name=Specular Fish
-item.gravestone.cavefish.name=Cavefish
 item.gravestone.cursed_koi.name=Cursed Koi
 item.gravestone.spookyfin.name=Spookyfin
-item.gravestone.obsidifish.name=Obsidifish
-item.gravestone.nether_salmon.name=Nether Salmon
-item.gravestone.quartz_cod.name=Quartz Cod
-item.gravestone.flarefin_koi.name=Flarefin Koi
-item.gravestone.blaze_cod.name=Blaze Cod
-item.gravestone.enderfin.name=Enderfin
-item.gravestone.pearl_bass.name=Pearl Bass
-item.gravestone.chorus_koi.name=Chorus Koi
-item.gravestone.explosive_crucian.name=Explosive Crucian
-item.gravestone.ruffe.name=Ruffe
-item.gravestone.sparkling_eel.name=Sparkling Eel
-item.gravestone.angelfish.name=Angelfish
-item.gravestone.angler_fish.name=Angler Fish
-item.gravestone.sponge_eater.name=Sponge Eater
-item.gravestone.snowy_crucian.name=Snowy Crucian
-item.gravestone.squid.name=Squid
-item.gravestone.withered_crucian.name=Withered Crucian
-item.gravestone.sandy_bass.name=Sandy Bass
 
 
 ## Corpses
