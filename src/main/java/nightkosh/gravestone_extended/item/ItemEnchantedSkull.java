@@ -50,4 +50,14 @@ public class ItemEnchantedSkull extends ItemEnchantedBook {
             }
         }
     }
+
+    @Override
+    public int getItemEnchantability() {
+        return 1;
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return true;
+    }
 }
