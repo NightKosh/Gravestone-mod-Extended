@@ -10,11 +10,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import nightkosh.advanced_fishing.api.AdvancedFishingAPI;
+import nightkosh.advanced_fishing.api.EnumFishType;
 import nightkosh.gravestone_extended.block.enums.EnumExecution;
 import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
 import nightkosh.gravestone_extended.block.enums.EnumSpawner;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.item.ItemFish;
 
 /**
  * GraveStone mod
@@ -44,11 +45,11 @@ public class GSRecipes {
         // fishes
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_bones"), GROUP, new ItemStack(GSBlock.PILE_OF_BONES),
                 "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BONE_FISH.ordinal()));
+                'f', new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal()));
 
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "fish_to_toxic_slime"), GROUP, new ItemStack(GSItem.TOXIC_SLIME),
                 "f",
-                'f', new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GREEN_JELLYFISH.ordinal()));
+                'f', new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.GREEN_JELLYFISH.ordinal()));
 
 
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "slime_chunk"), GROUP, new ItemStack(GSItem.SLIME_CHUNK),
@@ -152,7 +153,6 @@ public class GSRecipes {
                 "bd",
                 'b', GSItem.BONE_HOE,
                 'd', Items.DIAMOND_HOE);
-
 
 
         GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "bone_sword"), GROUP, new ItemStack(GSItem.BONE_SWORD),
@@ -467,8 +467,5 @@ public class GSRecipes {
     }
 
     public static void smeltingRecipesRegistration() {
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.GREEN_JELLYFISH.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.CURSED_KOI.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
-        GameRegistry.addSmelting(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPOOKYFIN.ordinal()), new ItemStack(Items.COOKED_FISH, 1, 0), 1);
     }
 }

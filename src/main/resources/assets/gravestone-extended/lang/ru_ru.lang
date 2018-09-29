@@ -237,12 +237,6 @@ item.gravestone.imp_skull.name=Череп беса
 item.gravestone.ender_skull.name=Череп края
 item.gravestone.frozen_mirror.name=Ледяное зеркало
 
-## Fish
-item.gravestone.green_jellyfish.name=Зелёная медуза
-item.gravestone.bone_fish.name=Костяная рыба
-item.gravestone.cursed_koi.name=Проклятая кои
-item.gravestone.spookyfin.name=Ужасный плавник
-
 ## Corpses
 item.corpse.steve=Труп Стива
 item.corpse.player=Труп игрока

@@ -15,7 +15,6 @@ import nightkosh.gravestone_extended.block.enums.EnumBoneBlock;
 import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
 import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
 import nightkosh.gravestone_extended.block.enums.EnumTrap;
-import nightkosh.gravestone_extended.item.ItemFish;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
 
@@ -112,12 +111,6 @@ public class GSModels {
             ModelLoader.setCustomModelResourceLocation(GSItem.PIECE_OF_MUMMY_CLOTH, 0, ResourcesModels.PIECE_OF_MUMMY_CLOTH);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.PIECE_OF_DIVING_SUIT, 0, ResourcesModels.PIECE_OF_DIVING_SUIT);
-
-            ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.GREEN_JELLYFISH.ordinal(), ResourcesModels.GREEN_JELLYFISH);
-            ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.BONE_FISH.ordinal(), ResourcesModels.BONE_FISH);
-            ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.CURSED_KOI.ordinal(), ResourcesModels.CURSED_KOI);
-            ModelLoader.setCustomModelResourceLocation(GSItem.FISH, ItemFish.EnumFishType.SPOOKYFIN.ordinal(), ResourcesModels.SPOOKYFIN);
-            ModelBakery.registerItemVariants(GSItem.FISH, ResourcesModels.GREEN_JELLYFISH, ResourcesModels.BONE_FISH, ResourcesModels.CURSED_KOI, ResourcesModels.SPOOKYFIN);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.ENCHANTED_SKULL, 0, ResourcesModels.ENCHANTED_SKULL);
             ModelLoader.setCustomModelResourceLocation(GSItem.ENCHANTED_SKULL, 1, ResourcesModels.ENCHANTED_SKULL_WITHERED);

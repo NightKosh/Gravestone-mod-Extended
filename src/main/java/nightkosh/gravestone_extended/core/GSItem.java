@@ -99,7 +99,6 @@ public class GSItem {
     public static final Item RAVEN_FEATHER = new ItemRavenFeather();
     public static final Item RAVEN_CLAWS = new ItemRavenClaws();
     public static final Item PIECE_OF_DIVING_SUIT = new ItemPieceOfDivingSuit();
-    public static final Item FISH = new ItemFish();
     public static final Item ENCHANTED_SKULL = new ItemEnchantedSkull();
 
     @Mod.EventBusSubscriber(modid = ModInfo.ID)
@@ -108,7 +107,7 @@ public class GSItem {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             final IForgeRegistry<Item> registry = event.getRegistry();
-            registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT, FISH);
+            registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
             registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
             registry.registerAll(CHISEL, BONE_FISHING_POLE,
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,

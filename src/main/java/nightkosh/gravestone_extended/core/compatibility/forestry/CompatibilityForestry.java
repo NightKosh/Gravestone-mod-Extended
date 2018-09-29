@@ -82,7 +82,6 @@ public class CompatibilityForestry {
             BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.RAVEN_FEATHER));
             BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.RAVEN_CLAWS));
             BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.PIECE_OF_DIVING_SUIT));
-            BackpackManager.backpackInterface.addItemToForestryBackpack(BackpackManager.HUNTER_UID, new ItemStack(GSItem.FISH));
         }
     }
 }

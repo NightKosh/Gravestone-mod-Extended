@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import nightkosh.advanced_fishing.api.AdvancedFishingAPI;
-import nightkosh.gravestone_extended.item.ItemFish;
+import nightkosh.advanced_fishing.api.EnumFishType;
 import nightkosh.gravestone_extended.potion.*;
 import nightkosh.gravestone_extended.potion.potion_type.*;
 
@@ -64,29 +64,29 @@ public class GSPotion {
         event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE);
 
         PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
-        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.BONE_FISH.ordinal())), BONE_SKIN_TYPE);
+        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), BONE_SKIN_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.GOLDEN_KOI.ordinal())), PURIFICATION_TYPE);
+                EnumFishType.GOLDEN_KOI.ordinal())), PURIFICATION_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.MAGMA_JELLYFISH.ordinal())), BURNING_TYPE);
+                EnumFishType.MAGMA_JELLYFISH.ordinal())), BURNING_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.PIRANHA.ordinal())), BLEEDING_TYPE);
+                EnumFishType.PIRANHA.ordinal())), BLEEDING_TYPE);
         PotionHelper.addMix(BURNING_TYPE, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.FLAREFIN_KOI.ordinal())), INFERNO_TYPE);
+                EnumFishType.FLAREFIN_KOI.ordinal())), INFERNO_TYPE);
 
         BrewingRecipeRegistry.addRecipe(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), PotionTypes.AWKWARD),
-                new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, nightkosh.advanced_fishing.api.EnumFishType.SPECULAR_FISH.ordinal()),
+                new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPECULAR_SNAPPER.ordinal()),
                 PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), RECALL_TYPE));
 
         // vanilla potions
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(Items.ROTTEN_FLESH, 1)), HUNGER_TYPE);
-        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(GSItem.FISH, 1, ItemFish.EnumFishType.SPOOKYFIN.ordinal())), BLINDNESS_TYPE);
+        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPOOKYFIN.ordinal())), BLINDNESS_TYPE);
 
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.BLUE_JELLYFISH.ordinal())), NAUSEA_TYPE);
+                EnumFishType.BLUE_JELLYFISH.ordinal())), NAUSEA_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.CAVEFISH.ordinal())), RESISTANCE_TYPE);
+                EnumFishType.CAVE_TROUT.ordinal())), RESISTANCE_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
-                nightkosh.advanced_fishing.api.EnumFishType.CHORUS_KOI.ordinal())), LEVITATION_TYPE);
+                EnumFishType.CHORUS_KOI.ordinal())), LEVITATION_TYPE);
     }
 }

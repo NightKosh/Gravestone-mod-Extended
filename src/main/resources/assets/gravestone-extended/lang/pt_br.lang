@@ -237,13 +237,6 @@ item.gravestone.imp_skull.name=Crânio de Diabrete
 item.gravestone.ender_skull.name=Cranio do Ender
 item.gravestone.frozen_mirror.name=Espelho Congelado
 
-## Fish
-## TODO !!!!!!!!!!
-item.gravestone.green_jellyfish.name=Água-Viva Verde
-item.gravestone.bone_fish.name=Bonefish
-item.gravestone.cursed_koi.name=Cursed Koi
-item.gravestone.spookyfin.name=Spookyfin
-
 
 ## Corpses
 item.corpse.steve=Cadáver de Steve

@@ -37,10 +37,11 @@ public class GSLootTables {
 
 
     public static final ResourceLocation FISHING_TOXIC_WATER = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water");
-    public static final ResourceLocation FISHING_TOXIC_WATER_TIER1 = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/tier_1");
-    public static final ResourceLocation FISHING_TOXIC_WATER_TIER2 = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/tier_2");
-    public static final ResourceLocation FISHING_TOXIC_WATER_TIER3 = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/tier_3");
     public static final ResourceLocation FISHING_TOXIC_WATER_TREASURE = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
+
+    //inject
+    public static final ResourceLocation INJECT_BAT = new ResourceLocation(ModInfo.ID, "inject/bat");
+    public static final ResourceLocation INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL = new ResourceLocation(ModInfo.ID, "inject/fishing_lava_nether_enchanted_skull");
 
 
     public static void registration() {
@@ -66,21 +67,21 @@ public class GSLootTables {
         LootTableList.register(DAMNED_WARRIOR);
 
         LootTableList.register(FISHING_TOXIC_WATER);
-        LootTableList.register(FISHING_TOXIC_WATER_TIER1);
-        LootTableList.register(FISHING_TOXIC_WATER_TIER2);
-        LootTableList.register(FISHING_TOXIC_WATER_TIER3);
         LootTableList.register(FISHING_TOXIC_WATER_TREASURE);
+
+        LootTableList.register(INJECT_BAT);
+        LootTableList.register(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL);
     }
 
     public static void inject(LootTableLoadEvent event) {
         if (event.getName().toString().equals("minecraft:entities/bat")) {
-            LootEntry entry = new LootEntryTable(new ResourceLocation(ModInfo.ID, "inject/bat"), 1, 1, new LootCondition[0], "bat_wing");
+            LootEntry entry = new LootEntryTable(INJECT_BAT, 1, 1, new LootCondition[0], "bat_wing");
             LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[]{}, new RandomValueRange(1, 1), new RandomValueRange(0, 1), "bat_wing");
             event.getTable().addPool(pool);
         }
 
         if (event.getName().toString().equals("advanced-fishing:gameplay/fishing_lava_nether/treasure")) {
-            LootEntry entry = new LootEntryTable(new ResourceLocation(ModInfo.ID, "inject/fishing_lava_nether_enchanted_skull"), 1, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull");
+            LootEntry entry = new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 1, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull");
             LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[]{}, new RandomValueRange(1, 1), new RandomValueRange(0, 1), "fishing_lava_nether_enchanted_skull");
             event.getTable().addPool(pool);
         }

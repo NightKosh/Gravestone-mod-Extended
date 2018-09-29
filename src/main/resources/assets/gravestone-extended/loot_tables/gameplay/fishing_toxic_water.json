@@ -6,19 +6,19 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:gameplay/fishing_toxic_water/tier_1",
+                    "name": "advanced-fishing:gameplay/fishing/dead/tier_1",
                     "weight": 50,
                     "quality": 4
                 },
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:gameplay/fishing_toxic_water/tier_2",
+                    "name": "advanced-fishing:gameplay/fishing/dead/tier_2",
                     "weight": 30,
                     "quality": 7
                 },
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:gameplay/fishing_toxic_water/tier_3",
+                    "name": "advanced-fishing:gameplay/fishing/dead/tier_3",
                     "weight": 15,
                     "quality": 8
                 },

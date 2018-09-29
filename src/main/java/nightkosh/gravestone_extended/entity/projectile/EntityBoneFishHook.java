@@ -6,7 +6,6 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.advanced_fishing.api.AdvancedFishingAPI;
@@ -19,7 +18,6 @@ import nightkosh.gravestone_extended.item.tools.IBoneFishingPole;
 
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 /**
  * GraveStone mod
@@ -47,7 +45,7 @@ public class EntityBoneFishHook extends EntityCustomFishHook {
         return stack.getItem() instanceof IBoneFishingPole;
     }
 
-    protected static List<ItemStack> getToxicWaterCatch(World world, BlockPos pos, Set<BiomeDictionary.Type> biomeTypesList, float luck) {
+    protected static List<ItemStack> getToxicWaterCatch(World world, BlockPos pos, float luck) {
         return CatchManager.getCatch(world, GSLootTables.FISHING_TOXIC_WATER, luck);
     }
 
