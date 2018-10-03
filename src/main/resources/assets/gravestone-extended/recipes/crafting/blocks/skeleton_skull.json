@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "minecraft:skull",
+    "data": 0
+  },
+  "pattern": [
+    "c"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "c": {
+      "item": "gravestone-extended:gsskullcandle",
+      "data": 0
+    }
+  }
+}

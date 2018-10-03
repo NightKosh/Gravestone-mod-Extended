@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_withered_glass",
+    "count": 6
+  },
+  "pattern": [
+    "ggg",
+    "sos",
+    "ggg"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "minecraft:soul_sand"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    }
+  }
+}

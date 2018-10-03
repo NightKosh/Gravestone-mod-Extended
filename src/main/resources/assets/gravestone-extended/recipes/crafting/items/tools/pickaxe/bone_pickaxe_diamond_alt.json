@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_bone_pickaxe_diamond"
+  },
+  "pattern": [
+    "bd",
+    "dd"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gs_bone_pickaxe"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  }
+}

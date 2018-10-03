@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_bone_hoe_diamond"
+  },
+  "pattern": [
+    "b ",
+    "dd"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gs_bone_hoe"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  }
+}

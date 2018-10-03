@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"bsb",
+		"scs",
+		"bsb"
+	],
+	"key": {
+		"b": {
+			"item": "minecraft:bone"
+		},
+		"s": {
+			"item": "gravestone-extended:gs_toxic_slime"
+		},
+		"c": {
+			"item": "minecraft:compass"
+		}
+	},
+	"result": {
+		"item": "gravestone-extended:gs_slime_chunk"
+	}
+}

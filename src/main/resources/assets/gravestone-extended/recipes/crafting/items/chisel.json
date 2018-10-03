@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"   ",
+		"s  ",
+		" i "
+	],
+	"key": {
+		"s": {
+			"item": "minecraft:stick"
+		},
+		"i": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"item": "gravestone-extended:gschisel"
+	}
+}

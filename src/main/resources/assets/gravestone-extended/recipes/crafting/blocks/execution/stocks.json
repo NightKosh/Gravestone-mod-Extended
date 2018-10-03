@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "gravestone-extended:gsexecution",
+    "data": 2
+  },
+  "pattern": [
+    "wsw",
+    "w w"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "minecraft:wooden_slab",
+      "data": 0
+    },
+    "w": {
+      "item": "minecraft:planks",
+      "data": 0
+    }
+  }
+}

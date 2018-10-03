@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "gravestone-extended:gsboneblock",
+    "data": 1,
+    "count": 9
+  },
+  "pattern": [
+    "bbb",
+    "bsb",
+    "bbb"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gsboneblock",
+      "data": 0
+    },
+    "s": {
+      "item": "minecraft:skull",
+      "data": 0
+    }
+  }
+}

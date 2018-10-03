@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_swamp_thing_leggings"
+  },
+  "pattern": [
+    "ooo",
+    "olo",
+    "o o"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "l": {
+      "item": "minecraft:leather_leggings"
+    },
+    "o": {
+      "item": "gravestone-extended:gs_ooze"
+    }
+  }
+}

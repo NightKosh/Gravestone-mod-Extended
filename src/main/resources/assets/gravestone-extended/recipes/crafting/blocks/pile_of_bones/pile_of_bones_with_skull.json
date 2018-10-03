@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "gravestone-extended:gspileofbones",
+    "data": 1,
+    "count": 9
+  },
+  "pattern": [
+    "bbb",
+    "bsb",
+    "bbb"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gspileofbones"
+    },
+    "s": {
+      "item": "minecraft:skull",
+      "data": 0
+    }
+  }
+}

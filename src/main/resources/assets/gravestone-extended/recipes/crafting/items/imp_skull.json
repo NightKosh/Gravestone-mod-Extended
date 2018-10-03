@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"qqq",
+		"qsq",
+		"gcg"
+	],
+	"key": {
+		"q": {
+			"item": "minecraft:quartz"
+		},
+		"s": {
+			"item": "minecraft:skull",
+			"data": 0
+		},
+		"g": {
+			"item": "minecraft:glowstone_dust"
+		},
+		"c": {
+			"item": "minecraft:compass"
+		}
+	},
+	"result": {
+		"item": "gravestone-extended:gs_imp_skull"
+	}
+}

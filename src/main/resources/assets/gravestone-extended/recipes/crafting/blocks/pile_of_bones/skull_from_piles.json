@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "minecraft:skull",
+    "data": 0
+  },
+  "pattern": [
+    "ppp",
+    "ppp",
+    "ppp"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "item": "gravestone-extended:gspileofbones",
+      "data": 1
+    }
+  }
+}

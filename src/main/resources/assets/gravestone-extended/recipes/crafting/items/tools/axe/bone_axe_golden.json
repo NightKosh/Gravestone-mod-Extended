@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_bone_axe_golden"
+  },
+  "pattern": [
+    "bg"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gs_bone_axe"
+    },
+    "g": {
+      "item": "minecraft:golden_axe"
+    }
+  }
+}

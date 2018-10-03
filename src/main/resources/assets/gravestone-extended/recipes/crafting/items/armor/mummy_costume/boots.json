@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_mummy_boots"
+  },
+  "pattern": [
+    "p p",
+    "pbp"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "item": "gravestone-extended:gs_piece_of_mummy_cloth"
+    },
+    "b": {
+      "item": "minecraft:leather_boots"
+    }
+  }
+}

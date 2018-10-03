@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"fm"
+	],
+	"key": {
+		"f": {
+			"item": "gravestone-extended:gs_raven_feather"
+		},
+		"m": {
+			"item": "minecraft:dye",
+            "data": 15
+		}
+	},
+	"result": {
+		"item": "minecraft:feather"
+	}
+}

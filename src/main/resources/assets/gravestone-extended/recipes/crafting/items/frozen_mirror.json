@@ -1,0 +1,27 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_frozen_mirror"
+  },
+  "pattern": [
+    "ipi",
+    "psp",
+    "imi"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "nbt": "{Potion:\"gravestone-extended:gs_recall_type\"}",
+      "item": "minecraft:potion",
+      "type": "minecraft:item_nbt"
+    },
+    "s": {
+      "item": "minecraft:nether_star"
+    },
+    "i": {
+      "item": "minecraft:packed_ice"
+    },
+    "m": {
+      "item": "minecraft:iron_ingot"
+    }
+  }
+}

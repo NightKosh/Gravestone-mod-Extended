@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_bone_axe_diamond"
+  },
+  "pattern": [
+    "bd"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gs_bone_axe"
+    },
+    "d": {
+      "item": "minecraft:diamond_axe"
+    }
+  }
+}

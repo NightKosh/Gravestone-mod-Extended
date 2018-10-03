@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_diving_leggings"
+  },
+  "pattern": [
+    "ppp",
+    "plp",
+    "p p"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "item": "gravestone-extended:gs_piece_of_diving_suit"
+    },
+    "l": {
+      "item": "minecraft:leather_leggings"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "gravestone-extended:gsexecution",
+    "data": 1
+  },
+  "pattern": [
+    "ww ",
+    "wr ",
+    "wi "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "r": {
+      "item": "minecraft:lead"
+    },
+    "w": {
+      "item": "minecraft:planks",
+      "data": 0
+    },
+    "i": {
+      "item": "minecraft:iron_block"
+    }
+  }
+}

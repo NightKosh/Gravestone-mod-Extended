@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "gravestone-extended:gspileofbones"
+  },
+  "pattern": [
+    "bb",
+    "bb"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "minecraft:bone"
+    }
+  }
+}

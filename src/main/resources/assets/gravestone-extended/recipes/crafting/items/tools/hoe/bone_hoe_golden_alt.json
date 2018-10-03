@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_bone_hoe_golden"
+  },
+  "pattern": [
+    "b ",
+    "gg"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gs_bone_hoe"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  }
+}

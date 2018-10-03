@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_swamp_thing_boots"
+  },
+  "pattern": [
+    "o o",
+    "obo"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "b": {
+      "item": "minecraft:leather_boots"
+    },
+    "o": {
+      "item": "gravestone-extended:gs_ooze"
+    }
+  }
+}

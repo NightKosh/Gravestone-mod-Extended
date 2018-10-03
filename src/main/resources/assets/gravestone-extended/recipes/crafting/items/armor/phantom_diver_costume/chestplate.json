@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_diving_chestplate"
+  },
+  "pattern": [
+    "pcp",
+    "ppp",
+    "ppp"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "p": {
+      "item": "gravestone-extended:gs_piece_of_diving_suit"
+    },
+    "c": {
+      "item": "minecraft:leather_chestplate"
+    }
+  }
+}

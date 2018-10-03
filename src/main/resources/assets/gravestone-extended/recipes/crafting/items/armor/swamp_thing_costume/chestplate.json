@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "gravestone-extended:gs_swamp_thing_chestplate"
+  },
+  "pattern": [
+    "oco",
+    "ooo",
+    "ooo"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "c": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "o": {
+      "item": "gravestone-extended:gs_ooze"
+    }
+  }
+}

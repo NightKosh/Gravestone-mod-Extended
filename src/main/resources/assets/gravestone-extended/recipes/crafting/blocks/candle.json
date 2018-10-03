@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "gravestone-extended:gscandle"
+  },
+  "pattern": [
+    "t",
+    "m",
+    "s"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "minecraft:slime_ball"
+    },
+    "t": {
+      "item": "minecraft:string"
+    },
+    "m": {
+      "item": "minecraft:dye",
+      "data": 15
+    }
+  }
+}

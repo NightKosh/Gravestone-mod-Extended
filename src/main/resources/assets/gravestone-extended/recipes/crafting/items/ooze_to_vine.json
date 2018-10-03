@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"o"
+	],
+	"key": {
+		"o": {
+			"item": "gravestone-extended:gs_ooze"
+		}
+	},
+	"result": {
+		"item": "minecraft:vine"
+	}
+}

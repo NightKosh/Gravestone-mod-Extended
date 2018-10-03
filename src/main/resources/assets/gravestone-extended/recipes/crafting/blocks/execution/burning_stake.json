@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "gravestone-extended:gsexecution",
+    "data": 3
+  },
+  "pattern": [
+    " w ",
+    "www",
+    "hwh"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "w": {
+      "item": "minecraft:planks",
+      "data": 0
+    },
+    "h": {
+      "item": "minecraft:hay_block"
+    }
+  }
+}

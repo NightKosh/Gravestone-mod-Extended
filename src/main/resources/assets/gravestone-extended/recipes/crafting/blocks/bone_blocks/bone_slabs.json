@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "gravestone-extended:gsboneslab",
+    "data": 0,
+    "count": 6
+  },
+  "pattern": [
+    "xxx"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": {
+      "item": "gravestone-extended:gsboneblock",
+      "data": 0
+    }
+  }
+}

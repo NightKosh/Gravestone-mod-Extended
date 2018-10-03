@@ -1,0 +1,20 @@
+{
+  "result": {
+    "nbt": "{FluidName:\"gs_toxic_water\",Amount:1000}",
+    "item": "forge:bucketfilled",
+    "type": "minecraft:item_nbt"
+  },
+  "pattern": [
+    "ws",
+    "ss"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "s": {
+      "item": "gravestone-extended:gs_toxic_slime"
+    },
+    "w": {
+      "item": "minecraft:bucket"
+    }
+  }
+}
