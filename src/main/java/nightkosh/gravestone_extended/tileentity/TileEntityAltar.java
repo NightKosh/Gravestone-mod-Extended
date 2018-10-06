@@ -8,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import nightkosh.gravestone.inventory.GraveInventory;
 import nightkosh.gravestone_extended.inventory.AltarCorpseInventory;
 import nightkosh.gravestone_extended.inventory.AltarDisenchantmentInventory;
+import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
 
 /**
  * GraveStone mod
@@ -18,15 +19,21 @@ import nightkosh.gravestone_extended.inventory.AltarDisenchantmentInventory;
 public class TileEntityAltar extends TileEntity {
 
     private AltarCorpseInventory corpseInventory;
+    private AltarEnchantmentInventory enchantmentInventory;
     private AltarDisenchantmentInventory disenchantmentInventory;
 
     public TileEntityAltar() {
         this.corpseInventory = new AltarCorpseInventory(this);
+        this.enchantmentInventory = new AltarEnchantmentInventory(this);
         this.disenchantmentInventory = new AltarDisenchantmentInventory(this);
     }
 
     public AltarCorpseInventory getCorpseInventory() {
         return corpseInventory;
+    }
+
+    public AltarEnchantmentInventory getEnchantmentInventory() {
+        return enchantmentInventory;
     }
 
     public AltarDisenchantmentInventory getDisenchantmentInventory() {
@@ -35,6 +42,7 @@ public class TileEntityAltar extends TileEntity {
 
     public void dropItems() {
         dropItems(corpseInventory);
+        dropItems(enchantmentInventory);
         dropItems(disenchantmentInventory);
     }
 
@@ -50,6 +58,7 @@ public class TileEntityAltar extends TileEntity {
         super.readFromNBT(nbtTag);
 
         corpseInventory.readItems(nbtTag);
+        enchantmentInventory.readItems(nbtTag);
         disenchantmentInventory.readItems(nbtTag);
     }
 
@@ -58,6 +67,7 @@ public class TileEntityAltar extends TileEntity {
         nbtTag = super.writeToNBT(nbtTag);
 
         corpseInventory.saveItems(nbtTag);
+        enchantmentInventory.saveItems(nbtTag);
         disenchantmentInventory.saveItems(nbtTag);
 
         return nbtTag;

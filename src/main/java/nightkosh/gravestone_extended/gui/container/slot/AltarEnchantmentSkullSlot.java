@@ -1,9 +1,9 @@
 package nightkosh.gravestone_extended.gui.container.slot;
 
-import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import nightkosh.gravestone_extended.core.GSItem;
 
 /**
  * GraveStone mod
@@ -11,15 +11,15 @@ import net.minecraft.item.ItemStack;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarDisenchantmentSkullSlot extends Slot {
+public class AltarEnchantmentSkullSlot extends Slot {
 
-    public AltarDisenchantmentSkullSlot(IInventory inventory, int slotNum, int xPos, int yPos) {
+    public AltarEnchantmentSkullSlot(IInventory inventory, int slotNum, int xPos, int yPos) {
         super(inventory, slotNum, xPos, yPos);
     }
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        return stack.getItem() == Items.SKULL && (stack.getMetadata() == 0 || stack.getMetadata() == 1);
+        return stack.getItem() == GSItem.ENCHANTED_SKULL;
     }
 
     @Override
