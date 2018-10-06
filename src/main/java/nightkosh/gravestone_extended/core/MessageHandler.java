@@ -26,6 +26,6 @@ public class MessageHandler {
         networkWrapper.registerMessage(NetherFortressMessageToClient.class, NetherFortressMessageToClient.class, 8, Side.CLIENT);
         networkWrapper.registerMessage(AltarDisenchantmentMessageToServer.class, AltarDisenchantmentMessageToServer.class, 9, Side.SERVER);
         networkWrapper.registerMessage(AltarEnchantmentMessageToServer.class, AltarEnchantmentMessageToServer.class, 10, Side.SERVER);
-//        networkWrapper.registerMessage(AltarGuiMessageToServer.class, AltarGuiMessageToServer.class, 9, Side.SERVER);
+        networkWrapper.registerMessage(AltarSwitchGuiMessageToServer.class, AltarSwitchGuiMessageToServer.class, 11, Side.SERVER);
     }
 }

@@ -352,6 +352,9 @@ gui.altar.enchant=Enchant
 gui.altar.disenchant=Disenchant
 gui.altar.requirements=需要%d级
 ##TODO !!!!!!!!!!
+gui.altar.tab.resurrection=Resurrection
+gui.altar.tab.enchanting=Enchanting
+gui.altar.tab.disenchanting=Disenchanting
 gui.chisel_crafting.grave_btn=Gravestone
 gui.chisel_crafting.memorial_btn=Memorial
 gui.chisel_crafting.enchanted_btn=Enchanted

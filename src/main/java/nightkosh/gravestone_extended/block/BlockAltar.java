@@ -42,17 +42,12 @@ public class BlockAltar extends BlockContainer {
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (world.getTileEntity(pos) != null && !player.isSneaking()) {
-            player.openGui(ModGravestoneExtended.instance, GuiHandler.ALTAR_GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
+            player.openGui(ModGravestoneExtended.instance, GuiHandler.ALTAR_RESURRECTION_GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
             return true;
         }
         return false;
     }
 
-    /**
-     * Is this block (a) opaque and (b) a full 1m cube? This determines whether
-     * or not to render the shared face of two adjacent blocks and also whether
-     * the player can attach torches, redstone wire, etc to this block.
-     */
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
@@ -85,7 +80,7 @@ public class BlockAltar extends BlockContainer {
         TileEntityAltar tileEntity = (TileEntityAltar) world.getTileEntity(pos);
 
         if (tileEntity != null) {
-            tileEntity.dropCorpse();
+            tileEntity.dropItems();
         }
 
         super.breakBlock(world, pos, state);
