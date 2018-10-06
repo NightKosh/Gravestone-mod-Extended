@@ -335,6 +335,9 @@ gui.edit_grave.title=Grabtext festlegen
 gui.edit_grave.close=Fertig
 gui.edit_grave.randomText=Zufälligen Text auswählen
 gui.altar.resurrect=Wiederauferstehen
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=%d Level benötigt
 ##TODO !!!!!!!!!!
 gui.chisel_crafting.grave_btn=Gravestone

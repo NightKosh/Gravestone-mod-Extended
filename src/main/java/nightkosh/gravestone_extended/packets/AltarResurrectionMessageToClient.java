@@ -12,9 +12,9 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarMessageToClient implements IMessage, IMessageHandler<AltarMessageToClient, IMessage> {
+public class AltarResurrectionMessageToClient implements IMessage, IMessageHandler<AltarResurrectionMessageToClient, IMessage> {
 
-    public AltarMessageToClient() {
+    public AltarResurrectionMessageToClient() {
 
     }
 
@@ -27,7 +27,7 @@ public class AltarMessageToClient implements IMessage, IMessageHandler<AltarMess
     }
 
     @Override
-    public IMessage onMessage(AltarMessageToClient message, MessageContext ctx) {
+    public IMessage onMessage(AltarResurrectionMessageToClient message, MessageContext ctx) {
         if (ctx.side.isClient()) {
             Minecraft.getMinecraft().displayGuiScreen(null);
         }

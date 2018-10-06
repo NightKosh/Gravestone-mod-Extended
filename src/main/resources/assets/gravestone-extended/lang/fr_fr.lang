@@ -353,6 +353,9 @@ gui.edit_grave.title=Changer l'épitaphe
 gui.edit_grave.close=Fait
 gui.edit_grave.randomText=texte aléatoire
 gui.altar.resurrect=Ressusciter
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=%d niveau demandé
 ##TODO !!!!!!!!!!
 gui.chisel_crafting.grave_btn=Gravestone

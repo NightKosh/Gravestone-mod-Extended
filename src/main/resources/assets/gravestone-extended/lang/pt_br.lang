@@ -324,6 +324,9 @@ gui.edit_grave.title=Defina o texto do túmulo
 gui.edit_grave.close=Concluído
 gui.edit_grave.randomText=Definir texto aleatório
 gui.altar.resurrect=Ressuscitar
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=Níveis requeridos %d
 gui.chisel_crafting.grave_btn=Lápide
 gui.chisel_crafting.memorial_btn=Memorial

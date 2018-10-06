@@ -23,7 +23,7 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarMessageToServer implements IMessage, IMessageHandler<AltarMessageToServer, IMessage> {
+public class AltarResurrectionMessageToServer implements IMessage, IMessageHandler<AltarResurrectionMessageToServer, IMessage> {
 
     private int playerID;
     private int dimensionID;
@@ -47,11 +47,11 @@ public class AltarMessageToServer implements IMessage, IMessageHandler<AltarMess
         }
     }
 
-    public AltarMessageToServer() {
+    public AltarResurrectionMessageToServer() {
 
     }
 
-    public AltarMessageToServer(EntityPlayer player, int x, int y, int z, MOB_TYPE mobType) {
+    public AltarResurrectionMessageToServer(EntityPlayer player, int x, int y, int z, MOB_TYPE mobType) {
         this.playerID = player.getEntityId();
         this.dimensionID = player.getEntityWorld().provider.getDimension();
         this.x = x;
@@ -81,7 +81,7 @@ public class AltarMessageToServer implements IMessage, IMessageHandler<AltarMess
     }
 
     @Override
-    public IMessage onMessage(AltarMessageToServer message, MessageContext ctx) {
+    public IMessage onMessage(AltarResurrectionMessageToServer message, MessageContext ctx) {
         if (ctx.side.isServer()) {
             World world = DimensionManager.getWorld(message.dimensionID);
             if (world == null || ((ctx.getServerHandler().player != null) && (ctx.getServerHandler().player.getEntityId() != message.playerID))) {
@@ -91,13 +91,13 @@ public class AltarMessageToServer implements IMessage, IMessageHandler<AltarMess
             TileEntity te = world.getTileEntity(new BlockPos(message.x, message.y, message.z));
             if (te != null && te instanceof TileEntityAltar) {
                 TileEntityAltar tileEntity = (TileEntityAltar) te;
-                if (tileEntity.hasCorpse()) {
-                    ItemStack corpse = tileEntity.getCorpse();
+                if (!tileEntity.getCorpseInventory().isEmpty()) {
+                    ItemStack corpse = tileEntity.getCorpseInventory().getStackInSlot(0);
                     if (corpse != null && !corpse.isEmpty() && Block.getBlockFromItem(corpse.getItem()) instanceof BlockCorpse && CorpseHelper.canSpawnMob(player, corpse)) {
                         CorpseHelper.spawnMob(corpse.getItemDamage(), tileEntity.getWorld(), tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ(), corpse.getTagCompound(), player);
                         CorpseHelper.getExperience(player, corpse.getItemDamage());
-                        MessageHandler.networkWrapper.sendTo(new AltarMessageToClient(), (EntityPlayerMP) player);
-                        tileEntity.setCorpse(ItemStack.EMPTY);
+                        MessageHandler.networkWrapper.sendTo(new AltarResurrectionMessageToClient(), (EntityPlayerMP) player);
+                        tileEntity.getCorpseInventory().setInventorySlotContents(0, ItemStack.EMPTY);
                     }
                 }
             }

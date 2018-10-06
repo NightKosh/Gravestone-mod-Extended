@@ -1,17 +1,13 @@
 package nightkosh.gravestone_extended.tileentity;
 
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-
-import java.util.Random;
+import nightkosh.gravestone.inventory.GraveInventory;
+import nightkosh.gravestone_extended.inventory.AltarCorpseInventory;
+import nightkosh.gravestone_extended.inventory.AltarDisenchantmentInventory;
 
 /**
  * GraveStone mod
@@ -19,79 +15,54 @@ import java.util.Random;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class TileEntityAltar extends TileEntity implements IInventory {
-    private ItemStack corpse = ItemStack.EMPTY;
+public class TileEntityAltar extends TileEntity {
 
-    public boolean hasCorpse() {
-        return !corpse.isEmpty();
+    private AltarCorpseInventory corpseInventory;
+    private AltarDisenchantmentInventory disenchantmentInventory;
+
+    public TileEntityAltar() {
+        this.corpseInventory = new AltarCorpseInventory(this);
+        this.disenchantmentInventory = new AltarDisenchantmentInventory(this);
     }
 
-    public ItemStack getCorpse() {
-        return this.corpse;
+    public AltarCorpseInventory getCorpseInventory() {
+        return corpseInventory;
     }
 
-    public void setCorpse(ItemStack corpse) {
-        this.corpse = corpse;
+    public AltarDisenchantmentInventory getDisenchantmentInventory() {
+        return disenchantmentInventory;
     }
 
-    public void dropCorpse() {
-        if (!corpse.isEmpty()) {
-            Random random = new Random();
-            float x = random.nextFloat() * 0.8F + 0.1F;
-            float y = random.nextFloat() * 0.8F + 1.1F;
-            EntityItem entityItem;
+    public void dropItems() {
+        dropItems(corpseInventory);
+        dropItems(disenchantmentInventory);
+    }
 
-            for (float z = random.nextFloat() * 0.8F + 0.1F; corpse.getCount() > 0; this.getWorld().spawnEntity(entityItem)) {
-                int stackSize = random.nextInt(21) + 10;
-
-                if (stackSize > corpse.getCount()) {
-                    stackSize = corpse.getCount();
-                }
-
-                corpse.setCount(corpse.getCount() - stackSize);
-                entityItem = new EntityItem(this.getWorld(), this.pos.getX() + x, this.pos.getY() + y, this.pos.getZ() + z,
-                        new ItemStack(corpse.getItem(), stackSize, corpse.getItemDamage()));
-                entityItem.motionX = random.nextGaussian() * 0.05;
-                entityItem.motionY = random.nextGaussian() * 0.15;
-                entityItem.motionZ = random.nextGaussian() * 0.05;
-
-                if (corpse.hasTagCompound()) {
-                    entityItem.getItem().setTagCompound(corpse.getTagCompound().copy());
-                }
-            }
-            corpse = ItemStack.EMPTY;
+    private void dropItems(IInventory inventory) {
+        for (int i = 0; i < inventory.getSizeInventory(); i++) {
+            GraveInventory.dropItem(inventory.getStackInSlot(i), this.world, this.pos);
         }
+        inventory.clear();
     }
 
     @Override
     public void readFromNBT(NBTTagCompound nbtTag) {
         super.readFromNBT(nbtTag);
 
-        if (nbtTag.hasKey("Corpse")) {
-            corpse = new ItemStack(nbtTag.getCompoundTag("Corpse"));
-        }
+        corpseInventory.readItems(nbtTag);
+        disenchantmentInventory.readItems(nbtTag);
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound nbtTag) {
         nbtTag = super.writeToNBT(nbtTag);
 
-        if (!corpse.isEmpty()) {
-            nbtTag.setTag("Corpse", corpse.writeToNBT(new NBTTagCompound()));
-        }
+        corpseInventory.saveItems(nbtTag);
+        disenchantmentInventory.saveItems(nbtTag);
 
         return nbtTag;
     }
 
-    /**
-     * Called when you receive a TileEntityData packet for the location this
-     * TileEntity is currently in. On the client, the NetworkManager will always
-     * be the remote server. On the server, it will be whomever is responsible for
-     * sending the packet.
-     *
-     * @param net    The NetworkManager the packet originated from
-     * @param packet The data packet
-     */
     @Override
     public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity packet) {
         readFromNBT(packet.getNbtCompound());
@@ -105,111 +76,5 @@ public class TileEntityAltar extends TileEntity implements IInventory {
     @Override
     public NBTTagCompound getUpdateTag() {
         return this.writeToNBT(new NBTTagCompound());
-    }
-
-    @Override
-    public void openInventory(EntityPlayer player) {
-
-    }
-
-    @Override
-    public void closeInventory(EntityPlayer player) {
-
-    }
-
-    @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        return false;
-    }
-
-    @Override
-    public int getField(int id) {
-        return 0;
-    }
-
-    @Override
-    public void setField(int id, int value) {
-
-    }
-
-    @Override
-    public int getFieldCount() {
-        return 0;
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
-    public String getName() {
-        return "";
-    }
-
-    @Override
-    public boolean hasCustomName() {
-        return false;
-    }
-
-    @Override
-    public ITextComponent getDisplayName() {
-        return null;
-    }
-
-    @Override
-    public int getSizeInventory() {
-        return 1;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return corpse == null || corpse == ItemStack.EMPTY;
-    }
-
-    @Override
-    public ItemStack getStackInSlot(int slot) {
-        return corpse;
-    }
-
-    @Override
-    public void setInventorySlotContents(int slot, ItemStack stack) {
-        corpse = stack;
-    }
-
-    @Override
-    public ItemStack decrStackSize(int slot, int amt) {
-        ItemStack stack = getStackInSlot(slot);
-        if (stack != null && !stack.isEmpty()) {
-            if (stack.getCount() <= amt) {
-                setInventorySlotContents(slot, ItemStack.EMPTY);
-            } else {
-                stack = stack.splitStack(amt);
-                if (stack.isEmpty()) {
-                    setInventorySlotContents(slot, ItemStack.EMPTY);
-                }
-            }
-        }
-        return stack;
-    }
-
-    @Override
-    public ItemStack removeStackFromSlot(int index) {
-        ItemStack stack = getStackInSlot(index);
-        if (stack != null && !stack.isEmpty()) {
-            setInventorySlotContents(index, ItemStack.EMPTY);
-        }
-        return stack;
-    }
-
-    @Override
-    public int getInventoryStackLimit() {
-        return 1;
-    }
-
-    @Override
-    public boolean isUsableByPlayer(EntityPlayer player) {
-        return this.getWorld().getTileEntity(this.pos) == this &&
-                player.getDistanceSq(new BlockPos(this.pos.getX() + 0.5, this.pos.getY() + 0.5, this.pos.getZ() + 0.5)) < 64;
     }
 }

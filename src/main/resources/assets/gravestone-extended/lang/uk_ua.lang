@@ -330,6 +330,9 @@ gui.edit_grave.title=Введіть напис
 gui.edit_grave.close=Готово
 gui.edit_grave.randomText=Ввести випадковий текст
 gui.altar.resurrect=Воскресити
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=Потрібно %d рівнів
 ##TODO !!!!!!!!!!
 gui.chisel_crafting.grave_btn=Gravestone

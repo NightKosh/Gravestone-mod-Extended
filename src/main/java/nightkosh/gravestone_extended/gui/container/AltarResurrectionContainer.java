@@ -5,9 +5,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import nightkosh.gravestone_extended.gui.container.slot.AltarSlot;
+import nightkosh.gravestone_extended.gui.container.slot.AltarCorpseSlot;
+import nightkosh.gravestone_extended.inventory.AltarCorpseInventory;
 import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 
 /**
  * GraveStone mod
@@ -15,17 +15,17 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarContainer extends Container {
+public class AltarResurrectionContainer extends Container {
 
-    protected TileEntityAltar tileEntity;
+    protected AltarCorpseInventory inventory;
     public static final int PLAYER_INVENTORY_ROWS_COUNT = 3;
     public static final int COLUMNS_COUNT = 9;
     public static final int SLOT_WIDTH = 18;
 
-    public AltarContainer(InventoryPlayer inventoryPlayer, TileEntityAltar te) {
-        tileEntity = te;
+    public AltarResurrectionContainer(InventoryPlayer inventoryPlayer, AltarCorpseInventory inventory) {
+        this.inventory = inventory;
 
-        this.addSlotToContainer(new AltarSlot(tileEntity, 0, 27, 27));
+        this.addSlotToContainer(new AltarCorpseSlot(inventory, 0, 27, 27));
 
         for (int row = 0; row < PLAYER_INVENTORY_ROWS_COUNT; ++row) {
             for (int column = 0; column < COLUMNS_COUNT; ++column) {
@@ -41,7 +41,7 @@ public class AltarContainer extends Container {
 
     @Override
     public boolean canInteractWith(EntityPlayer player) {
-        return tileEntity.isUsableByPlayer(player);
+        return inventory.isUsableByPlayer(player);
     }
 
     @Override
@@ -90,6 +90,6 @@ public class AltarContainer extends Container {
     }
 
     public int getResurrectionLevel() {
-        return CorpseHelper.getRequiredLevel(tileEntity.getCorpse());
+        return CorpseHelper.getRequiredLevel(inventory.getStackInSlot(0));
     }
 }

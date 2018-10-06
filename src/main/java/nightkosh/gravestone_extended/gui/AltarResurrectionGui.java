@@ -8,8 +8,8 @@ import nightkosh.gravestone.gui.GuiContainerBase;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.MessageHandler;
 import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.gui.container.AltarContainer;
-import nightkosh.gravestone_extended.packets.AltarMessageToServer;
+import nightkosh.gravestone_extended.gui.container.AltarResurrectionContainer;
+import nightkosh.gravestone_extended.packets.AltarResurrectionMessageToServer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 import org.lwjgl.opengl.GL11;
 
@@ -19,21 +19,22 @@ import org.lwjgl.opengl.GL11;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSAltarGui extends GuiContainerBase {
+public class AltarResurrectionGui extends GuiContainerBase {
 
     private final String requirementsStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.requirements");
     private final String resurrectionButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.resurrect");
-    private AltarContainer container;
+    private AltarResurrectionContainer container;
     private GuiButton resurrectionButton;
+    private GuiButton switchGuiButton;
     private TileEntityAltar tileEntity = null;
     private EntityPlayer player = null;
     private boolean isCreative = false;
 
-    public GSAltarGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
-        super(new AltarContainer(inventoryPlayer, tileEntity));
+    public AltarResurrectionGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
+        super(new AltarResurrectionContainer(inventoryPlayer, tileEntity.getCorpseInventory()));
         this.tileEntity = tileEntity;
         this.player = inventoryPlayer.player;
-        this.container = (AltarContainer) this.inventorySlots;
+        this.container = (AltarResurrectionContainer) this.inventorySlots;
         isCreative = player.getEntityWorld().getWorldInfo().getGameType().equals(GameType.CREATIVE);
     }
 
@@ -42,13 +43,21 @@ public class GSAltarGui extends GuiContainerBase {
         super.initGui();
         this.buttonList.add(resurrectionButton = new GuiButton(0, (width - xSize) / 2 + 100, (height - ySize) / 2 + 25, 70, 20, resurrectionButtonStr));
         resurrectionButton.enabled = false;
+        this.buttonList.add(switchGuiButton = new GuiButton(1, (width - xSize) / 2 + 100, (height - ySize) / 2 + 45, 70, 20, "Enchantment"));
     }
 
     @Override
     public void actionPerformed(GuiButton button) {
         switch (button.id) {
             case 0:
-                MessageHandler.networkWrapper.sendToServer(new AltarMessageToServer(this.player, tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ(), AltarMessageToServer.MOB_TYPE.LIVED));
+                MessageHandler.networkWrapper.sendToServer(new AltarResurrectionMessageToServer(this.player, tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ(), AltarResurrectionMessageToServer.MOB_TYPE.LIVED));
+                break;
+            case 1:
+//                MessageHandler.networkWrapper.sendToServer(new AltarGuiMessageToServer(this.player, GuiHandler.ALTAR_DISENCHANTMENT_GUI_ID));
+
+//                this.mc.displayGuiScreen(null);
+//                player.openGui(ModGravestoneExtended.instance, GuiHandler.ALTAR_DISENCHANTMENT_GUI_ID, player.getEntityWorld(), player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
+//
                 break;
         }
     }

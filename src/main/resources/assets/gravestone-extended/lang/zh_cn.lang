@@ -347,6 +347,9 @@ gui.edit_grave.title=更改墓碑文字
 gui.edit_grave.close=已完成
 gui.edit_grave.randomText=设定随机文本
 gui.altar.resurrect=复活
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=需要%d级
 ##TODO !!!!!!!!!!
 gui.chisel_crafting.grave_btn=Gravestone

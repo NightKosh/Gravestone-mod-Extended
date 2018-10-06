@@ -348,6 +348,9 @@ gui.edit_grave.title=Nastav text náhrobku
 gui.edit_grave.close=Hotovo
 gui.edit_grave.randomText=Nastav náhodný text
 gui.altar.resurrect=Vzkřísit
+##TODO !!!!!!!!!!
+gui.altar.enchant=Enchant
+gui.altar.disenchant=Disenchant
 gui.altar.requirements=%d levelů je potřeba
 ##TODO !!!!!!!!!!
 gui.chisel_crafting.grave_btn=Gravestone

@@ -4,10 +4,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.gui.AltarDisenchantmentGui;
+import nightkosh.gravestone_extended.gui.AltarResurrectionGui;
 import nightkosh.gravestone_extended.gui.ExecutionGui;
-import nightkosh.gravestone_extended.gui.GSAltarGui;
 import nightkosh.gravestone_extended.gui.GSChiselCraftingGui;
-import nightkosh.gravestone_extended.gui.container.AltarContainer;
+import nightkosh.gravestone_extended.gui.container.AltarDisenchantmentContainer;
+import nightkosh.gravestone_extended.gui.container.AltarResurrectionContainer;
 import nightkosh.gravestone_extended.gui.container.ChiselContainer;
 import nightkosh.gravestone_extended.gui.container.ExecutionContainer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
@@ -21,18 +23,25 @@ import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
  */
 public class GuiHandler extends nightkosh.gravestone.core.GuiHandler {
 
-    public static final int ALTAR_GUI_ID = 1;
+    public static final int ALTAR_RESURRECTION_GUI_ID = 1;
     public static final int CHISEL_CRAFTING_GUI_ID = 2;
     public static final int EXECUTION_GUI_ID = 3;
+    public static final int ALTAR_DISENCHANTMENT_GUI_ID = 4;
 
     @Override
     public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity;
         switch (id) {
-            case ALTAR_GUI_ID:
+            case ALTAR_RESURRECTION_GUI_ID:
                 tileEntity = world.getTileEntity(new BlockPos(x, y, z));
                 if (tileEntity instanceof TileEntityAltar) {
-                    return new AltarContainer(player.inventory, (TileEntityAltar) tileEntity);
+                    return new AltarResurrectionContainer(player.inventory, ((TileEntityAltar) tileEntity).getCorpseInventory());
+                }
+                break;
+            case ALTAR_DISENCHANTMENT_GUI_ID:
+                tileEntity = world.getTileEntity(new BlockPos(x, y, z));
+                if (tileEntity instanceof TileEntityAltar) {
+                    return new AltarDisenchantmentContainer(player.inventory, ((TileEntityAltar) tileEntity).getDisenchantmentInventory());
                 }
                 break;
             case CHISEL_CRAFTING_GUI_ID:
@@ -51,10 +60,16 @@ public class GuiHandler extends nightkosh.gravestone.core.GuiHandler {
     public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity;
         switch (id) {
-            case ALTAR_GUI_ID:
+            case ALTAR_RESURRECTION_GUI_ID:
                 tileEntity = world.getTileEntity(new BlockPos(x, y, z));
                 if (tileEntity instanceof TileEntityAltar) {
-                    return new GSAltarGui(player.inventory, (TileEntityAltar) tileEntity);
+                    return new AltarResurrectionGui(player.inventory, (TileEntityAltar) tileEntity);
+                }
+                break;
+            case ALTAR_DISENCHANTMENT_GUI_ID:
+                tileEntity = world.getTileEntity(new BlockPos(x, y, z));
+                if (tileEntity instanceof TileEntityAltar) {
+                    return new AltarDisenchantmentGui(player.inventory, (TileEntityAltar) tileEntity);
                 }
                 break;
             case CHISEL_CRAFTING_GUI_ID:
