@@ -2,9 +2,11 @@ package nightkosh.gravestone_extended.gui;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.GameType;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.MessageHandler;
+import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.gui.container.AltarDisenchantmentContainer;
 import nightkosh.gravestone_extended.packets.AltarDisenchantmentMessageToServer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
@@ -17,10 +19,8 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
  */
 public class AltarDisenchantmentGui extends AltarGui {
 
-    private final String requirementsStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.requirements");
     private final String disenchantButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.disenchant");
     private AltarDisenchantmentContainer container;
-    private GuiButton disenchantButton;
 
     public AltarDisenchantmentGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
         super(new AltarDisenchantmentContainer(inventoryPlayer, tileEntity.getDisenchantmentInventory()));
@@ -33,8 +33,6 @@ public class AltarDisenchantmentGui extends AltarGui {
     @Override
     public void initGui() {
         super.initGui();
-        this.buttonList.add(disenchantButton = new GuiButton(0, (width - xSize) / 2 + 100, (height - ySize) / 2 + 25, 70, 20, disenchantButtonStr));
-        disenchantButton.enabled = false;
         guiDisenchantmentButton.enabled = false;
     }
 
@@ -51,13 +49,18 @@ public class AltarDisenchantmentGui extends AltarGui {
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+    protected String getButtonStr() {
+        return disenchantButtonStr;
+    }
 
+    @Override
+    protected ResourceLocation getGuiTexture() {
+        return Resources.ALTAR_DISENCHANTMENT_GUI;
+    }
+
+    @Override
+    protected int getLevel() {
         //TODO level!!
-        this.drawString(this.fontRenderer, String.format(requirementsStr, container.getDisenchantmentLevel()), this.width / 2 - 40, (height - ySize) / 2 + 55, 16777215);
-        if (player != null) {
-            disenchantButton.enabled = isCreative || player.experienceLevel >= container.getDisenchantmentLevel();
-        }
+        return container.getDisenchantmentLevel();
     }
 }

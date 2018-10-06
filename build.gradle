@@ -47,6 +47,7 @@ dependencies {
 
 jar {
     exclude('**/*.db')
+    exclude('**/*.psd')
     exclude('assets/gravestone-extended/techne_models/**')
     exclude('assets/gravestone-extended/obj_models/**')
 

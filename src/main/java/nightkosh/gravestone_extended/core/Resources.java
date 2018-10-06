@@ -46,7 +46,9 @@ public class Resources extends nightkosh.gravestone.core.Resources{
     public static final String MUMMY_BOOTS = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/boots.png";
 
     // gui
-    public static final ResourceLocation ALTAR_GUI = new ResourceLocation(GUI_LOCATION + "altar_gui.png");
+    public static final ResourceLocation ALTAR_RESURRECTION_GUI = new ResourceLocation(GUI_LOCATION + "altar/resurrection.png");
+    public static final ResourceLocation ALTAR_ENCHANTMENT_GUI = new ResourceLocation(GUI_LOCATION + "altar/enchanting.png");
+    public static final ResourceLocation ALTAR_DISENCHANTMENT_GUI = new ResourceLocation(GUI_LOCATION + "altar/disenchanting.png");
     public static final ResourceLocation CHISEL_GUI = new ResourceLocation(GUI_LOCATION + "chisel_gui.png");
 
     //potions

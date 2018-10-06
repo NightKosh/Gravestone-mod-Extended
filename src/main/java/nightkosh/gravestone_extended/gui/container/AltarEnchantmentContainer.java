@@ -24,8 +24,8 @@ public class AltarEnchantmentContainer extends Container {
     public AltarEnchantmentContainer(InventoryPlayer inventoryPlayer, AltarEnchantmentInventory inventory) {
         this.inventory = inventory;
 
-        this.addSlotToContainer(new Slot(inventory, 0, 27, 27));
-        this.addSlotToContainer(new AltarEnchantmentSkullSlot(inventory, 1, 27, 50));
+        this.addSlotToContainer(new Slot(inventory, 0, 37, 35));
+        this.addSlotToContainer(new AltarEnchantmentSkullSlot(inventory, 1, 68, 35));
 
         for (int row = 0; row < PLAYER_INVENTORY_ROWS_COUNT; row++) {
             for (int column = 0; column < COLUMNS_COUNT; column++) {

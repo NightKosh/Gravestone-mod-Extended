@@ -2,9 +2,11 @@ package nightkosh.gravestone_extended.gui;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.GameType;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.MessageHandler;
+import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.gui.container.AltarEnchantmentContainer;
 import nightkosh.gravestone_extended.packets.AltarEnchantmentMessageToServer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
@@ -17,10 +19,8 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
  */
 public class AltarEnchantmentGui extends AltarGui {
 
-    private final String requirementsStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.requirements");
     private final String enchantButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.enchant");
     private AltarEnchantmentContainer container;
-    private GuiButton enchantButton;
 
     public AltarEnchantmentGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
         super(new AltarEnchantmentContainer(inventoryPlayer, tileEntity.getEnchantmentInventory()));
@@ -33,8 +33,6 @@ public class AltarEnchantmentGui extends AltarGui {
     @Override
     public void initGui() {
         super.initGui();
-        this.buttonList.add(enchantButton = new GuiButton(0, (width - xSize) / 2 + 100, (height - ySize) / 2 + 25, 70, 20, enchantButtonStr));
-        enchantButton.enabled = false;
         guiEnchantmentButton.enabled = false;
     }
 
@@ -51,13 +49,18 @@ public class AltarEnchantmentGui extends AltarGui {
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+    protected String getButtonStr() {
+        return enchantButtonStr;
+    }
 
+    @Override
+    protected ResourceLocation getGuiTexture() {
+        return Resources.ALTAR_ENCHANTMENT_GUI;
+    }
+
+    @Override
+    protected int getLevel() {
         //TODO level!!
-        this.drawString(this.fontRenderer, String.format(requirementsStr, container.getEnchantmentLevel()), this.width / 2 - 40, (height - ySize) / 2 + 55, 16777215);
-        if (player != null) {
-            enchantButton.enabled = isCreative || player.experienceLevel >= container.getEnchantmentLevel();
-        }
+        return container.getEnchantmentLevel();
     }
 }

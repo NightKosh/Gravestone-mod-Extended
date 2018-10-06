@@ -25,7 +25,7 @@ public class AltarResurrectionContainer extends Container {
     public AltarResurrectionContainer(InventoryPlayer inventoryPlayer, AltarCorpseInventory inventory) {
         this.inventory = inventory;
 
-        this.addSlotToContainer(new AltarCorpseSlot(inventory, 0, 27, 27));
+        this.addSlotToContainer(new AltarCorpseSlot(inventory, 0, 37, 35));
 
         for (int row = 0; row < PLAYER_INVENTORY_ROWS_COUNT; ++row) {
             for (int column = 0; column < COLUMNS_COUNT; ++column) {

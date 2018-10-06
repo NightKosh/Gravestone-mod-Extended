@@ -25,12 +25,12 @@ public class AltarDisenchantmentContainer extends Container {
     public AltarDisenchantmentContainer(InventoryPlayer inventoryPlayer, AltarDisenchantmentInventory inventory) {
         this.inventory = inventory;
 
-        this.addSlotToContainer(new AltarDisenchantmentSlot(inventory, 0, 27, 27));
-        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 1, 0, 50));
-        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 2, 25, 50));
-        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 3, 50, 50));
-        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 4, 75, 50));
-        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 5, 100, 50));
+        this.addSlotToContainer(new AltarDisenchantmentSlot(inventory, 0, 37, 35));
+        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 1, 19, 10));
+        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 2, 55, 10));
+        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 3, 8, 45));
+        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 4, 65, 45));
+        this.addSlotToContainer(new AltarDisenchantmentSkullSlot(inventory, 5, 37, 63));
 
         for (int row = 0; row < PLAYER_INVENTORY_ROWS_COUNT; ++row) {
             for (int column = 0; column < COLUMNS_COUNT; ++column) {

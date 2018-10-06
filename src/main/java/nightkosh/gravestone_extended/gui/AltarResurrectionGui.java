@@ -2,9 +2,11 @@ package nightkosh.gravestone_extended.gui;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.GameType;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.MessageHandler;
+import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.gui.container.AltarResurrectionContainer;
 import nightkosh.gravestone_extended.packets.AltarResurrectionMessageToServer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
@@ -17,10 +19,8 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
  */
 public class AltarResurrectionGui extends AltarGui {
 
-    private final String requirementsStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.requirements");
     private final String resurrectionButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.resurrect");
     private AltarResurrectionContainer container;
-    private GuiButton resurrectionButton;
 
     public AltarResurrectionGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
         super(new AltarResurrectionContainer(inventoryPlayer, tileEntity.getCorpseInventory()));
@@ -33,8 +33,6 @@ public class AltarResurrectionGui extends AltarGui {
     @Override
     public void initGui() {
         super.initGui();
-        this.buttonList.add(resurrectionButton = new GuiButton(0, (width - xSize) / 2 + 100, (height - ySize) / 2 + 25, 70, 20, resurrectionButtonStr));
-        resurrectionButton.enabled = false;
         guiResurrectionButton.enabled = false;
     }
 
@@ -51,12 +49,17 @@ public class AltarResurrectionGui extends AltarGui {
     }
 
     @Override
-    protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+    protected String getButtonStr() {
+        return resurrectionButtonStr;
+    }
 
-        this.drawString(this.fontRenderer, String.format(requirementsStr, container.getResurrectionLevel()), this.width / 2 - 40, (height - ySize) / 2 + 55, 16777215);
-        if (player != null) {
-            resurrectionButton.enabled = isCreative || player.experienceLevel >= container.getResurrectionLevel();
-        }
+    @Override
+    protected ResourceLocation getGuiTexture() {
+        return Resources.ALTAR_RESURRECTION_GUI;
+    }
+
+    @Override
+    protected int getLevel() {
+        return container.getResurrectionLevel();
     }
 }
