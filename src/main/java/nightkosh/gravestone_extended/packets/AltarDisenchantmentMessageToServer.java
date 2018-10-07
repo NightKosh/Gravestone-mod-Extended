@@ -79,10 +79,8 @@ public class AltarDisenchantmentMessageToServer implements IMessage, IMessageHan
                 TileEntityAltar tileEntity = (TileEntityAltar) te;
                 AltarDisenchantmentInventory inventory = tileEntity.getDisenchantmentInventory();
                 if (!inventory.isEmpty()) {
-                    ItemStack item = inventory.getEnchItem();
-                    NBTTagList enchantmenstList = item.getEnchantmentTagList();
                     List<NBTBase> enchantments = new ArrayList<>();
-                    for (NBTBase nbt : enchantmenstList) {
+                    for (NBTBase nbt : inventory.getEnchItem().getEnchantmentTagList()) {
                         enchantments.add(nbt);
                     }
                     if (!enchantments.isEmpty()) {

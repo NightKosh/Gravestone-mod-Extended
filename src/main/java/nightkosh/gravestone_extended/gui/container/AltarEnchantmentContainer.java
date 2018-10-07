@@ -1,12 +1,19 @@
 package nightkosh.gravestone_extended.gui.container;
 
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
+import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSkullSlot;
+import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
+
+import java.util.Map;
 
 /**
  * GraveStone mod
@@ -90,6 +97,59 @@ public class AltarEnchantmentContainer extends Container {
     }
 
     public int getEnchantmentLevel() {
-        return 5;
+        int requiredLevels = 0;
+
+        if (!inventory.isEmpty()) {
+            ItemStack enchItem = inventory.getEnchItem();
+            ItemStack skull = inventory.getEnchSkull();
+            Map<Enchantment, Integer> itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
+
+            if (skull.getItem() == GSItem.ENCHANTED_SKULL && !ItemEnchantedBook.getEnchantments(skull).hasNoTags()) {
+                Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
+
+                for (Enchantment skullEnchantment : skullEnchantments.keySet()) {
+                    if (skullEnchantment != null) {
+                        int itemEnchLvl = itemEnchantments.containsKey(skullEnchantment) ? itemEnchantments.get(skullEnchantment) : 0;
+                        if (itemEnchLvl < skullEnchantment.getMaxLevel()) {
+                            int skullEnchLvl = skullEnchantments.get(skullEnchantment);
+                            if (skullEnchLvl >= itemEnchLvl) {
+                                if (itemEnchLvl == skullEnchLvl) {
+                                    skullEnchLvl = skullEnchLvl + 1;
+                                } else {
+                                    skullEnchLvl = Math.max(skullEnchLvl, itemEnchLvl);
+                                }
+
+                                if (skullEnchantment.canApply(enchItem)) {
+                                    boolean canApply = true;
+                                    for (Enchantment enchantment : itemEnchantments.keySet()) {
+                                        if (enchantment != skullEnchantment && !skullEnchantment.isCompatibleWith(enchantment)) {
+                                            canApply = false;
+                                            break;
+                                        }
+                                    }
+                                    if (canApply) {
+                                        switch (skullEnchantment.getRarity()) {
+                                            case COMMON:
+                                                requiredLevels += 2;
+                                                break;
+                                            case UNCOMMON:
+                                                requiredLevels += 4;
+                                                break;
+                                            case RARE:
+                                                requiredLevels += 8;
+                                                break;
+                                            case VERY_RARE:
+                                                requiredLevels += 15;
+                                        }
+                                        requiredLevels += skullEnchLvl - itemEnchLvl;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return requiredLevels;
     }
 }

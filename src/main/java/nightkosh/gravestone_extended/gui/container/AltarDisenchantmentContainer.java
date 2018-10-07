@@ -2,12 +2,18 @@ package nightkosh.gravestone_extended.gui.container;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTBase;
+import net.minecraft.nbt.NBTTagCompound;
 import nightkosh.gravestone_extended.gui.container.slot.AltarDisenchantmentSkullSlot;
 import nightkosh.gravestone_extended.gui.container.slot.AltarDisenchantmentSlot;
 import nightkosh.gravestone_extended.inventory.AltarDisenchantmentInventory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GraveStone mod
@@ -95,6 +101,28 @@ public class AltarDisenchantmentContainer extends Container {
     }
 
     public int getDisenchantmentLevel() {
-        return 5;
+        int requiredLevels = 0;
+        if (!inventory.isEmpty()) {
+            List<NBTBase> enchantments = new ArrayList<>();
+            for (NBTBase nbt : inventory.getEnchItem().getEnchantmentTagList()) {
+                enchantments.add(nbt);
+            }
+            if (!enchantments.isEmpty()) {
+                int skullNum = 0;
+                for (int i = 1; i < inventory.getSizeInventory(); i++) {
+                    ItemStack skull = inventory.getStackInSlot(i);
+                    if (skull != ItemStack.EMPTY && skull.getItem() == Items.SKULL) {
+                        requiredLevels += 10;
+                        requiredLevels += ((NBTTagCompound) enchantments.get(skullNum)).getShort("lvl");
+
+                        skullNum++;
+                        if (skullNum >= enchantments.size()) {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return requiredLevels;
     }
 }

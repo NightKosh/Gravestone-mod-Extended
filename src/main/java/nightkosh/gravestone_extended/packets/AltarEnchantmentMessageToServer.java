@@ -8,8 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameType;
@@ -19,10 +17,10 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import nightkosh.gravestone_extended.core.GSItem;
+import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -85,20 +83,6 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
         return null;
     }
 
-
-    private Map<Enchantment, Integer> getSkullEnchantments(ItemStack skull) {
-        Map<Enchantment, Integer> map = new HashMap<>();
-        if (skull.hasTagCompound()) {
-            NBTTagList nbttaglist = skull.getTagCompound().getTagList("StoredEnchantments", 10);
-            for (int i = 0; i < nbttaglist.tagCount(); i++) {
-                NBTTagCompound nbttagcompound = nbttaglist.getCompoundTagAt(i);
-                map.put(Enchantment.getEnchantmentByID(nbttagcompound.getShort("id")), (int) nbttagcompound.getShort("lvl"));
-            }
-        }
-
-        return map;
-    }
-
     public void transferEnchantments(EntityPlayer player, AltarEnchantmentInventory inventory) {
         if (!inventory.isEmpty()) {
             ItemStack enchItem = inventory.getEnchItem();
@@ -107,7 +91,7 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
 
             if (skull.getItem() == GSItem.ENCHANTED_SKULL && !ItemEnchantedBook.getEnchantments(skull).hasNoTags()) {
                 int requiredLevels = 0;
-                Map<Enchantment, Integer> skullEnchantments = getSkullEnchantments(skull);
+                Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
 
                 for (Enchantment skullEnchantment : skullEnchantments.keySet()) {
                     if (skullEnchantment != null) {
