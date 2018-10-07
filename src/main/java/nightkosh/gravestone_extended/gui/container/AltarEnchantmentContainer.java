@@ -6,7 +6,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
-import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSkullSlot;
@@ -104,7 +103,7 @@ public class AltarEnchantmentContainer extends Container {
             ItemStack skull = inventory.getEnchSkull();
             Map<Enchantment, Integer> itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
 
-            if (skull.getItem() == GSItem.ENCHANTED_SKULL && !ItemEnchantedBook.getEnchantments(skull).hasNoTags()) {
+            if (skull.getItem() == GSItem.ENCHANTED_SKULL) {
                 Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
 
                 for (Enchantment skullEnchantment : skullEnchantments.keySet()) {

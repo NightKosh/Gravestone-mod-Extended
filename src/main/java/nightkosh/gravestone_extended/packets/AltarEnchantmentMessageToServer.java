@@ -89,7 +89,7 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
             ItemStack skull = inventory.getEnchSkull();
             Map<Enchantment, Integer> itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
 
-            if (skull.getItem() == GSItem.ENCHANTED_SKULL && !ItemEnchantedBook.getEnchantments(skull).hasNoTags()) {
+            if (skull.getItem() == GSItem.ENCHANTED_SKULL) {
                 int requiredLevels = 0;
                 Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
 

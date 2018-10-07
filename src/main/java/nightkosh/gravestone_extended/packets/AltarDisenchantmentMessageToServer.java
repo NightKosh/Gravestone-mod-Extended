@@ -92,7 +92,7 @@ public class AltarDisenchantmentMessageToServer implements IMessage, IMessageHan
                                 ItemStack enchantedSkull = new ItemStack(GSItem.ENCHANTED_SKULL, 1, skull.getMetadata());
                                 NBTTagList nbt = new NBTTagList();
                                 nbt.appendTag(enchantments.get(skullNum));
-                                enchantedSkull.setTagInfo("ench", nbt);
+                                enchantedSkull.setTagInfo("StoredEnchantments", nbt);
 
                                 requiredLevels += 10;
                                 requiredLevels += ((NBTTagCompound) enchantments.get(skullNum)).getShort("lvl");
