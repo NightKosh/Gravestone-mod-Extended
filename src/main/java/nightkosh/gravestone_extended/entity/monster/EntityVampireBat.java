@@ -93,7 +93,7 @@ public class EntityVampireBat extends EntityMob {
     public boolean attackEntityAsMob(Entity entity) {
         if (super.attackEntityAsMob(entity)) {
             if (entity instanceof EntityLivingBase) {
-                ((EntityLivingBase) entity).addPotionEffect(new PotionEffect(GSPotion.BLEEDING, 1200));
+                ((EntityLivingBase) entity).addPotionEffect(new PotionEffect(GSPotion.BLEEDING, 600));
             }
             return true;
         } else {
