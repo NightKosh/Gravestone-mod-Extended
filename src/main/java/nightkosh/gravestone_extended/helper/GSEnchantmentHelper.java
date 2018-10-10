@@ -19,13 +19,18 @@ public class GSEnchantmentHelper extends nightkosh.gravestone.helper.Enchantment
     public static Map<Enchantment, Integer> getSkullEnchantments(ItemStack skull) {
         Map<Enchantment, Integer> map = new HashMap<>();
         if (skull.hasTagCompound()) {
-            NBTTagList nbttaglist = skull.getTagCompound().getTagList("StoredEnchantments", 10);
-            for (int i = 0; i < nbttaglist.tagCount(); i++) {
-                NBTTagCompound nbttagcompound = nbttaglist.getCompoundTagAt(i);
-                map.put(Enchantment.getEnchantmentByID(nbttagcompound.getShort("id")), (int) nbttagcompound.getShort("lvl"));
-            }
+            addEnchantmentsToMap(map, skull.getTagCompound(), "StoredEnchantments");
+            addEnchantmentsToMap(map, skull.getTagCompound(), "ench");
         }
 
         return map;
+    }
+
+    private static void addEnchantmentsToMap(Map<Enchantment, Integer> map, NBTTagCompound nbt, String tagName) {
+        NBTTagList list = nbt.getTagList(tagName, 10);
+        for (int i = 0; i < list.tagCount(); i++) {
+            NBTTagCompound enchantmentTag = list.getCompoundTagAt(i);
+            map.put(Enchantment.getEnchantmentByID(enchantmentTag.getShort("id")), (int) enchantmentTag.getShort("lvl"));
+        }
     }
 }
