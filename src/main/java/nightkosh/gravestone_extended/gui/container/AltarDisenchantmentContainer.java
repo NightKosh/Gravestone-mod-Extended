@@ -55,46 +55,36 @@ public class AltarDisenchantmentContainer extends AltarContainer {
     }
 
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int slot) {
+    public ItemStack transferStackInSlot(EntityPlayer player, int index) {
         ItemStack stack = ItemStack.EMPTY;
-        Slot slotObject = inventorySlots.get(slot);
+        Slot slot = inventorySlots.get(index);
 
-        if (slotObject != null && slotObject.getHasStack()) {
-            ItemStack stackInSlot = slotObject.getStack();
+        if (slot != null && slot.getHasStack()) {
+            ItemStack stackInSlot = slot.getStack();
             stack = stackInSlot.copy();
 
-            if (slot == 0) {
-                if (!this.mergeItemStack(stackInSlot, 0, inventorySlots.size(), true)) {
+            if (index >= 0 && index <= 6) {
+                if (!this.mergeItemStack(stackInSlot, 7, inventorySlots.size(), false)) {
                     return ItemStack.EMPTY;
                 }
-            } else {
-                if (this.inventorySlots.get(0).getHasStack() || !this.inventorySlots.get(0).isItemValid(stackInSlot)) {
+            } else if (stackInSlot.getItem() == Items.SKULL) {
+                if (!this.mergeItemStack(stackInSlot, 1, 6, false)) {
                     return ItemStack.EMPTY;
                 }
-
-                if (stackInSlot.hasTagCompound() && stackInSlot.getCount() == 1) {
-                    this.inventorySlots.get(0).putStack(stackInSlot.copy());
-                    stackInSlot.setCount(0);
-                } else if (stackInSlot.getCount() >= 1) {
-                    ItemStack newStack = new ItemStack(stackInSlot.getItem(), 1, stackInSlot.getItemDamage());
-                    if (stackInSlot.hasTagCompound()) {
-                        newStack.setTagCompound(stackInSlot.getTagCompound().copy());
-                    }
-                    this.inventorySlots.get(0).putStack(newStack);
-                    stackInSlot.setCount(stackInSlot.getCount() - 1);
-                }
+            } else if (!this.mergeItemStack(stackInSlot, 0, 1, false)) {
+                return ItemStack.EMPTY;
             }
 
             if (stackInSlot.isEmpty()) {
-                slotObject.putStack(ItemStack.EMPTY);
+                slot.putStack(ItemStack.EMPTY);
             } else {
-                slotObject.onSlotChanged();
+                slot.onSlotChanged();
             }
 
             if (stackInSlot.getCount() == stack.getCount()) {
                 return ItemStack.EMPTY;
             }
-            slotObject.onTake(player, stackInSlot);
+            slot.onTake(player, stackInSlot);
         }
         return stack;
     }

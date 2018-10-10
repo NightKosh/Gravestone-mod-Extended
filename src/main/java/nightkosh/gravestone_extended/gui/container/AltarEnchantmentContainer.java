@@ -4,10 +4,12 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSkullSlot;
+import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSlot;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
 
@@ -29,7 +31,7 @@ public class AltarEnchantmentContainer extends AltarContainer {
     public AltarEnchantmentContainer(InventoryPlayer inventoryPlayer, AltarEnchantmentInventory inventory) {
         this.inventory = inventory;
 
-        this.addSlotToContainer(new Slot(inventory, 0, 37, 35));
+        this.addSlotToContainer(new AltarEnchantmentSlot(inventory, 0, 37, 35));
         this.addSlotToContainer(new AltarEnchantmentSkullSlot(inventory, 1, 68, 35));
 
         for (int row = 0; row < PLAYER_INVENTORY_ROWS_COUNT; row++) {
@@ -50,46 +52,36 @@ public class AltarEnchantmentContainer extends AltarContainer {
     }
 
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int slot) {
+    public ItemStack transferStackInSlot(EntityPlayer player, int index) {
         ItemStack stack = ItemStack.EMPTY;
-        Slot slotObject = inventorySlots.get(slot);
+        Slot slot = inventorySlots.get(index);
 
-        if (slotObject != null && slotObject.getHasStack()) {
-            ItemStack stackInSlot = slotObject.getStack();
+        if (slot != null && slot.getHasStack()) {
+            ItemStack stackInSlot = slot.getStack();
             stack = stackInSlot.copy();
 
-            if (slot == 0) {
-                if (!this.mergeItemStack(stackInSlot, 0, inventorySlots.size(), true)) {
+            if (index == 0 || index == 1) {
+                if (!this.mergeItemStack(stackInSlot, 2, inventorySlots.size(), false)) {
                     return ItemStack.EMPTY;
                 }
-            } else {
-                if (this.inventorySlots.get(0).getHasStack() || !this.inventorySlots.get(0).isItemValid(stackInSlot)) {
+            } else if (stackInSlot.getItem() == GSItem.ENCHANTED_SKULL) {
+                if (!this.mergeItemStack(stackInSlot, 1, 2, false)) {
                     return ItemStack.EMPTY;
                 }
-
-                if (stackInSlot.hasTagCompound() && stackInSlot.getCount() == 1) {
-                    this.inventorySlots.get(0).putStack(stackInSlot.copy());
-                    stackInSlot.setCount(0);
-                } else if (stackInSlot.getCount() >= 1) {
-                    ItemStack newStack = new ItemStack(stackInSlot.getItem(), 1, stackInSlot.getItemDamage());
-                    if (stackInSlot.hasTagCompound()) {
-                        newStack.setTagCompound(stackInSlot.getTagCompound().copy());
-                    }
-                    this.inventorySlots.get(0).putStack(newStack);
-                    stackInSlot.setCount(stackInSlot.getCount() - 1);
-                }
+            } else if (!this.mergeItemStack(stackInSlot, 0, 1, false)) {
+                return ItemStack.EMPTY;
             }
 
             if (stackInSlot.isEmpty()) {
-                slotObject.putStack(ItemStack.EMPTY);
+                slot.putStack(ItemStack.EMPTY);
             } else {
-                slotObject.onSlotChanged();
+                slot.onSlotChanged();
             }
 
             if (stackInSlot.getCount() == stack.getCount()) {
                 return ItemStack.EMPTY;
             }
-            slotObject.onTake(player, stackInSlot);
+            slot.onTake(player, stackInSlot);
         }
         return stack;
     }
@@ -103,7 +95,7 @@ public class AltarEnchantmentContainer extends AltarContainer {
             ItemStack skull = inventory.getEnchSkull();
             Map<Enchantment, Integer> itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
 
-            if (skull.getItem() == GSItem.ENCHANTED_SKULL) {
+            if (enchItem.getItem() != Items.SKULL && skull.getItem() == GSItem.ENCHANTED_SKULL) {
                 Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
 
                 for (Enchantment skullEnchantment : skullEnchantments.keySet()) {
