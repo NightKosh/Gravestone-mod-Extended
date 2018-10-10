@@ -7,6 +7,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.potion.PotionRecall;
@@ -29,5 +31,10 @@ public class ItemFrozenMirror extends Item {
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
         PotionRecall.teleport(entity);
         return new ActionResult(EnumActionResult.PASS, entity.getHeldItem(hand));
+    }
+
+    @SideOnly(Side.CLIENT)
+    public boolean hasEffect(ItemStack stack) {
+        return true;
     }
 }
