@@ -2,12 +2,15 @@ package nightkosh.gravestone_extended.gui;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.GameType;
 import nightkosh.gravestone.gui.GuiContainerBase;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.GuiHandler;
 import nightkosh.gravestone_extended.core.MessageHandler;
+import nightkosh.gravestone_extended.gui.container.AltarContainer;
 import nightkosh.gravestone_extended.packets.AltarSwitchGuiMessageToServer;
 import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 import org.lwjgl.opengl.GL11;
@@ -33,9 +36,14 @@ public abstract class AltarGui extends GuiContainerBase {
     protected boolean isCreative = false;
     protected EntityPlayer player = null;
     protected TileEntityAltar tileEntity = null;
+    protected AltarContainer container;
 
-    public AltarGui(Container container) {
+    public AltarGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity, Container container) {
         super(container);
+        this.tileEntity = tileEntity;
+        this.player = inventoryPlayer.player;
+        this.container = (AltarContainer) this.inventorySlots;
+        this.isCreative = player.getEntityWorld().getWorldInfo().getGameType().equals(GameType.CREATIVE);
     }
 
     @Override
@@ -64,6 +72,9 @@ public abstract class AltarGui extends GuiContainerBase {
     @Override
     public void actionPerformed(GuiButton button) {
         switch (button.id) {
+            case 0:
+                sendMessage();
+                break;
             case -1:
                 switchGui(GuiHandler.ALTAR_RESURRECTION_GUI_ID);
                 break;
@@ -81,7 +92,8 @@ public abstract class AltarGui extends GuiContainerBase {
         super.drawGuiContainerForegroundLayer(mouseX, mouseY);
 
         if (player != null) {
-            button.enabled = isCreative || player.experienceLevel >= getLevel();
+            int requiredLevel = getLevel();
+            button.enabled = requiredLevel > 0  && (isCreative || player.experienceLevel >= requiredLevel);
         }
     }
 
@@ -89,9 +101,13 @@ public abstract class AltarGui extends GuiContainerBase {
         MessageHandler.networkWrapper.sendToServer(new AltarSwitchGuiMessageToServer(this.player, id, tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ()));
     }
 
+    protected abstract void sendMessage();
+
     protected abstract String getButtonStr();
 
     protected abstract ResourceLocation getGuiTexture();
 
-    protected abstract int getLevel();
+    protected int getLevel() {
+        return container.getRequiredLevel();
+    }
 }

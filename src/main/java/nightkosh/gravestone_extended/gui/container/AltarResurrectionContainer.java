@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.gui.container;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.gui.container.slot.AltarCorpseSlot;
@@ -15,7 +14,7 @@ import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarResurrectionContainer extends Container {
+public class AltarResurrectionContainer extends AltarContainer {
 
     protected AltarCorpseInventory inventory;
     public static final int PLAYER_INVENTORY_ROWS_COUNT = 3;
@@ -89,7 +88,8 @@ public class AltarResurrectionContainer extends Container {
         return stack;
     }
 
-    public int getResurrectionLevel() {
+    @Override
+    public int getRequiredLevel() {
         return CorpseHelper.getRequiredLevel(inventory.getStackInSlot(0));
     }
 }

@@ -3,7 +3,6 @@ package nightkosh.gravestone_extended.gui.container;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
@@ -21,7 +20,7 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarDisenchantmentContainer extends Container {
+public class AltarDisenchantmentContainer extends AltarContainer {
 
     protected AltarDisenchantmentInventory inventory;
     public static final int PLAYER_INVENTORY_ROWS_COUNT = 3;
@@ -100,7 +99,8 @@ public class AltarDisenchantmentContainer extends Container {
         return stack;
     }
 
-    public int getDisenchantmentLevel() {
+    @Override
+    public int getRequiredLevel() {
         int requiredLevels = 0;
         if (!inventory.isEmpty()) {
             List<NBTBase> enchantments = new ArrayList<>();

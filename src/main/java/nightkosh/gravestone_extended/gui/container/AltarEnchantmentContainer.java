@@ -4,7 +4,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSItem;
@@ -20,7 +19,7 @@ import java.util.Map;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarEnchantmentContainer extends Container {
+public class AltarEnchantmentContainer extends AltarContainer {
 
     protected AltarEnchantmentInventory inventory;
     public static final int PLAYER_INVENTORY_ROWS_COUNT = 3;
@@ -95,7 +94,8 @@ public class AltarEnchantmentContainer extends Container {
         return stack;
     }
 
-    public int getEnchantmentLevel() {
+    @Override
+    public int getRequiredLevel() {
         int requiredLevels = 0;
 
         if (!inventory.isEmpty()) {

@@ -1,9 +1,7 @@
 package nightkosh.gravestone_extended.gui;
 
-import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.GameType;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.core.MessageHandler;
 import nightkosh.gravestone_extended.core.Resources;
@@ -20,14 +18,9 @@ import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 public class AltarResurrectionGui extends AltarGui {
 
     private final String resurrectionButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.resurrect");
-    private AltarResurrectionContainer container;
 
     public AltarResurrectionGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
-        super(new AltarResurrectionContainer(inventoryPlayer, tileEntity.getCorpseInventory()));
-        this.tileEntity = tileEntity;
-        this.player = inventoryPlayer.player;
-        this.container = (AltarResurrectionContainer) this.inventorySlots;
-        isCreative = player.getEntityWorld().getWorldInfo().getGameType().equals(GameType.CREATIVE);
+        super(inventoryPlayer,  tileEntity, new AltarResurrectionContainer(inventoryPlayer, tileEntity.getCorpseInventory()));
     }
 
     @Override
@@ -37,15 +30,8 @@ public class AltarResurrectionGui extends AltarGui {
     }
 
     @Override
-    public void actionPerformed(GuiButton button) {
-        switch (button.id) {
-            case 0:
-                MessageHandler.networkWrapper.sendToServer(new AltarResurrectionMessageToServer(this.player, tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ(), AltarResurrectionMessageToServer.MOB_TYPE.LIVED));
-                break;
-            default:
-                super.actionPerformed(button);
-                break;
-        }
+    protected void sendMessage() {
+        MessageHandler.networkWrapper.sendToServer(new AltarResurrectionMessageToServer(this.player, tileEntity.getPos().getX(), tileEntity.getPos().getY(), tileEntity.getPos().getZ(), AltarResurrectionMessageToServer.MOB_TYPE.LIVED));
     }
 
     @Override
@@ -56,10 +42,5 @@ public class AltarResurrectionGui extends AltarGui {
     @Override
     protected ResourceLocation getGuiTexture() {
         return Resources.ALTAR_RESURRECTION_GUI;
-    }
-
-    @Override
-    protected int getLevel() {
-        return container.getResurrectionLevel();
     }
 }
