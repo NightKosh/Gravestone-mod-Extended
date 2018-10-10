@@ -32,7 +32,8 @@ public class BlockAltar extends BlockContainer {
         this.setLightOpacity(0);
         this.setUnlocalizedName("altar");
         this.setCreativeTab(GSTabs.otherItemsTab);
-        this.setHarvestLevel("pickaxe", 2);
+        this.setHardness(5);
+        this.setResistance(2000);
         this.setRegistryName(ModInfo.ID, "gsaltar");
     }
 
