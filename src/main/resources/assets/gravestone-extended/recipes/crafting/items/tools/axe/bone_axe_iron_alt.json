@@ -1,18 +1,20 @@
 {
-  "result": {
-    "item": "gravestone-extended:gs_bone_axe_iron"
-  },
-  "pattern": [
-    "bi",
-    "ii"
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "b": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "gravestone-extended:gs_bone_axe"
     },
-    "i": {
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
       "item": "minecraft:iron_ingot"
     }
+  ],
+  "result": {
+    "item": "gravestone-extended:gs_bone_axe_iron"
   }
 }

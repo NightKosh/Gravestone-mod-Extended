@@ -1,18 +1,17 @@
 {
-  "result": {
-    "item": "gravestone-extended:gs_bone_sword_diamond"
-  },
-  "pattern": [
-    "b ",
-    "dd"
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "b": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "gravestone-extended:gs_bone_sword"
     },
-    "d": {
+    {
+      "item": "minecraft:diamond"
+    },
+    {
       "item": "minecraft:diamond"
     }
+  ],
+  "result": {
+    "item": "gravestone-extended:gs_bone_sword_diamond"
   }
 }
