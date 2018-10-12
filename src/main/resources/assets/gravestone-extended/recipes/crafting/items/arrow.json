@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"pattern": [
+		"f",
+		"s",
+		"r"
+	],
+	"key": {
+		"f": {
+			"item": "minecraft:flint"
+		},
+		"s": {
+			"item": "minecraft:stick"
+		},
+		"r": {
+			"item": "gravestone-extended:gs_raven_feather"
+		}
+	},
+	"result": {
+		"item": "minecraft:arrow"
+	}
+}
