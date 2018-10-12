@@ -13,7 +13,7 @@
                             "data": 0
                         }
                     ],
-                    "weight": 35,
+                    "weight": 45,
                     "entryName": "SKELETON SKULL"
                 },
                 {
@@ -25,7 +25,7 @@
                             "data": 2
                         }
                     ],
-                    "weight": 35,
+                    "weight": 45,
                     "entryName": "ZOMBIE SKULL"
                 },
                 {
@@ -42,7 +42,7 @@
                             "treasure": true
                         }
                     ],
-                    "weight": 30,
+                    "weight": 10,
                     "entryName": "ENCHANTED SKULL"
                 }
             ]
