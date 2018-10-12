@@ -1,15 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-	"pattern": [
-		"f"
-	],
-	"key": {
-		"f": {
+    "type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
 			"item": "advanced-fishing:fish",
             "data": 40,
             "fish_name": "BONE_FISH"
 		}
-	},
+	],
 	"result": {
 		"item": "gravestone-extended:gspileofbones",
         "data": 0

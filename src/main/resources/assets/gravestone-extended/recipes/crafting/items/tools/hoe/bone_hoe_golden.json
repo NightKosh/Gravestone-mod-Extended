@@ -1,17 +1,14 @@
 {
-  "result": {
-    "item": "gravestone-extended:gs_bone_hoe_golden"
-  },
-  "pattern": [
-    "bg"
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "b": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "gravestone-extended:gs_bone_hoe"
     },
-    "g": {
+    {
       "item": "minecraft:golden_hoe"
     }
+  ],
+  "result": {
+    "item": "gravestone-extended:gs_bone_hoe_golden"
   }
 }

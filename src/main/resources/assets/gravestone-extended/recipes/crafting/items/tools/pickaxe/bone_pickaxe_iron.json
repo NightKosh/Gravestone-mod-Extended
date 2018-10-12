@@ -1,17 +1,14 @@
 {
-  "result": {
-    "item": "gravestone-extended:gs_bone_pickaxe_iron"
-  },
-  "pattern": [
-    "bi"
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "b": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "gravestone-extended:gs_bone_pickaxe"
     },
-    "i": {
+    {
       "item": "minecraft:iron_pickaxe"
     }
+  ],
+  "result": {
+    "item": "gravestone-extended:gs_bone_pickaxe_iron"
   }
 }

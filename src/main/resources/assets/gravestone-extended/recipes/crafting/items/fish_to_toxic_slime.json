@@ -1,15 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-	"pattern": [
-		"f"
-	],
-	"key": {
-		"f": {
+    "type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
 			"item": "advanced-fishing:fish",
             "data": 39,
             "fish_name": "GREEN_JELLYFISH"
 		}
-	},
+	],
 	"result": {
 		"item": "gravestone-extended:gs_toxic_slime"
 	}

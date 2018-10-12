@@ -1,17 +1,14 @@
 {
-  "result": {
-    "item": "gravestone-extended:gs_bone_sword_golden"
-  },
-  "pattern": [
-    "bs"
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "b": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "gravestone-extended:gs_bone_sword"
     },
-    "s": {
+    {
       "item": "minecraft:golden_sword"
     }
+  ],
+  "result": {
+    "item": "gravestone-extended:gs_bone_sword_golden"
   }
 }

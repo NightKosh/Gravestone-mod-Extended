@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "gravestone-extended:gsboneblock",
+      "item": "gravestone-extended:gsskullcandle",
       "data": 0
     }
   ],
   "result": {
-    "item": "gravestone-extended:gspileofbones",
-    "count": 9
+    "item": "minecraft:skull",
+    "data": 0
   }
 }
