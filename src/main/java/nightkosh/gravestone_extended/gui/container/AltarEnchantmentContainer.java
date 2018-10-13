@@ -93,7 +93,12 @@ public class AltarEnchantmentContainer extends AltarContainer {
         if (!inventory.isEmpty()) {
             ItemStack enchItem = inventory.getEnchItem();
             ItemStack skull = inventory.getEnchSkull();
-            Map<Enchantment, Integer> itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
+            Map<Enchantment, Integer> itemEnchantments;
+            if (enchItem.getItem() == GSItem.ENCHANTED_SKULL) {
+                itemEnchantments = GSEnchantmentHelper.getSkullEnchantments(enchItem);
+            } else {
+                itemEnchantments = EnchantmentHelper.getEnchantments(enchItem);
+            }
 
             if (enchItem.getItem() != Items.SKULL && skull.getItem() == GSItem.ENCHANTED_SKULL) {
                 Map<Enchantment, Integer> skullEnchantments = GSEnchantmentHelper.getSkullEnchantments(skull);
