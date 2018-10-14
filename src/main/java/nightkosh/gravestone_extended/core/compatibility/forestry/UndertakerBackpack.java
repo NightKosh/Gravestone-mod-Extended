@@ -30,7 +30,9 @@ public class UndertakerBackpack implements IBackpackDefinition {
     );
     protected static final List<Item> allowedItems = Arrays.asList(
             GSItem.CHISEL,
+            GSItem.ENCHANTED_SKULL,
             Items.SKULL
+
     );
 
     @Override
