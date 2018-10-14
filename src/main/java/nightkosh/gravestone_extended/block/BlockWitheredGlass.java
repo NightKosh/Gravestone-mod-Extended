@@ -22,8 +22,9 @@ public class BlockWitheredGlass extends BlockGlass {
 
     public BlockWitheredGlass() {
         super(Material.GLASS, false);
-        this.setHardness(10);
+        this.setHardness(30);
         this.setResistance(2000);
+        this.setHarvestLevel("pickaxe", 3);
         this.setUnlocalizedName("withered_glass");
         this.setRegistryName(ModInfo.ID, "gs_withered_glass");
         this.setCreativeTab(GSTabs.otherItemsTab);
