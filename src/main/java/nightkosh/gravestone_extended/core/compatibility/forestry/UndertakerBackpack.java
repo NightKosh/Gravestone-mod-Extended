@@ -32,7 +32,6 @@ public class UndertakerBackpack implements IBackpackDefinition {
             GSItem.CHISEL,
             GSItem.ENCHANTED_SKULL,
             Items.SKULL
-
     );
 
     @Override
