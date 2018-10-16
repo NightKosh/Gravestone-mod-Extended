@@ -6,6 +6,7 @@ import net.minecraft.world.World;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import sophisticated_wolves.api.EnumWolfSpecies;
 import sophisticated_wolves.api.ISophisticatedWolf;
+import sophisticated_wolves.api.IVillagerHandler;
 import sophisticated_wolves.api.SophisticatedWolvesAPI;
 
 import java.util.Random;
@@ -53,5 +54,14 @@ public class CompatibilitySophisticatedWolves {
 
     public static String getSpeciesStr(int speciesNum) {
         return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.dog_type") + " " + EnumWolfSpecies.getSpeciesName(EnumWolfSpecies.getSpeciesByNum(speciesNum));
+    }
+
+    public static String getPetSellerVillagerID() {
+        return IVillagerHandler.PETS_SELLER_ID;
+    }
+
+    public static String getPetSellerVillagerName() {
+        IVillagerHandler villagerHandler = SophisticatedWolvesAPI.villagerHandler;
+        return (villagerHandler == null) ? "Pet Seller" : villagerHandler.getPetsSellerName();
     }
 }

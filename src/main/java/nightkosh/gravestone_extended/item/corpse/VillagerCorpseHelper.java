@@ -13,6 +13,7 @@ import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
+import nightkosh.gravestone_extended.core.compatibility.CompatibilitySophisticatedWolves;
 import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.village.VillagersHandler;
@@ -270,6 +271,8 @@ public class VillagerCorpseHelper extends CorpseHelper {
             return "item.corpse.villager_type.beekeeper";
         } else if (Compatibility.forestryInstalled && professionName.equals(CompatibilityForestry.getArboricultureVillagerID())) {
             return "item.corpse.villager_type.lumberjack";
+        } else if (Compatibility.sophisticatedWolvesInstalled && professionName.equals(CompatibilitySophisticatedWolves.getPetSellerVillagerID())) {
+            return CompatibilitySophisticatedWolves.getPetSellerVillagerName();
         }
 //        else if (type == 10) {
 //            return "item.corpse.villager_type.brewer";
