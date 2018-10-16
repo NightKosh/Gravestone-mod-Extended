@@ -50,7 +50,7 @@ public class EnchantmentStarvationCurse extends EnchantmentCurse {
                     }
                 }
                 if (duration < curseDuration) {
-                    player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, curseDuration + 5));
+                    player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, curseDuration + 100));
                 }
             }
         }
