@@ -222,6 +222,7 @@ public class ExtendedConfig {
     public static boolean spawnDrowned;
     public static boolean spawnPhantomDiver;
     public static boolean spawnVampireBat;
+    public static boolean spawnWitheredBat;
     public static boolean spawnBarghest;
     public static boolean spawnSwampThing;
     public static boolean toxicSludgeAndWaterChangeBlocks;
@@ -244,6 +245,7 @@ public class ExtendedConfig {
         spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean();
         spawnPhantomDiver = config.get(CATEGORY_MOBS, "SpawnPhantomDiverInTheWorld", true).getBoolean();
         spawnVampireBat = config.get(CATEGORY_MOBS, "SpawnVampireBatInTheWorld", true).getBoolean();
+        spawnWitheredBat = config.get(CATEGORY_MOBS, "SpawnWitheredBatInTheWorld", true).getBoolean();
         spawnBarghest = config.get(CATEGORY_MOBS, "SpawnBarghestInTheWorld", true).getBoolean();
         spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean();
 

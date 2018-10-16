@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.entity.monster.bat.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityWitheredBat;
 import nightkosh.gravestone_extended.models.entity.ModelHostileBat;
 
 /**
@@ -15,19 +15,19 @@ import nightkosh.gravestone_extended.models.entity.ModelHostileBat;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class RenderVampireBat extends RenderLiving<EntityVampireBat> {
+public class RenderWitheredBat extends RenderLiving<EntityWitheredBat> {
 
-    public RenderVampireBat(RenderManager renderManagerIn) {
+    public RenderWitheredBat(RenderManager renderManagerIn) {
         super(renderManagerIn, new ModelHostileBat(), 0.25F);
     }
 
     @Override
-    protected void preRenderCallback(EntityVampireBat entity, float partialTickTime) {
+    protected void preRenderCallback(EntityWitheredBat entity, float partialTickTime) {
         GlStateManager.scale(0.35F, 0.35F, 0.35F);
     }
 
     @Override
-    protected void applyRotations(EntityVampireBat entityLiving, float p_77043_2_, float rotationYaw, float partialTicks) {
+    protected void applyRotations(EntityWitheredBat entityLiving, float p_77043_2_, float rotationYaw, float partialTicks) {
         if (entityLiving.getIsBatHanging()) {
             GlStateManager.translate(0, -0.1F, 0);
         } else {
@@ -37,7 +37,7 @@ public class RenderVampireBat extends RenderLiving<EntityVampireBat> {
         super.applyRotations(entityLiving, p_77043_2_, rotationYaw, partialTicks);
     }
 
-    protected ResourceLocation getEntityTexture(EntityVampireBat entity) {
-        return Resources.VAMPIRE_BAT;
+    protected ResourceLocation getEntityTexture(EntityWitheredBat entity) {
+        return Resources.WITHERED_BAT;
     }
 }

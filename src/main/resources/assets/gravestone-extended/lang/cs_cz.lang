@@ -389,6 +389,7 @@ entity.GSMummy.name=Mummy
 entity.GSDrowned.name=Drowned
 entity.GSPhantomDiver.name=Phantom Diver
 entity.GSVampireBat.name=Vampire Bat
+entity.GSWitheredBat.name=Withered Bat
 entity.GSBarghest.name=Barghest
 entity.GSSwampThing.name=Swamp Thing
 

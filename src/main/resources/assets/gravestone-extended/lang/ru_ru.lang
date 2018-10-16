@@ -357,6 +357,7 @@ entity.GSMummy.name=Мумия
 entity.GSDrowned.name=Утопленник
 entity.GSPhantomDiver.name=Фантомный дайвер
 entity.GSVampireBat.name=Летучая мышь-вампир
+entity.GSWitheredBat.name=Иссушённая летучая мышь
 entity.GSBarghest.name=Баргест
 entity.GSSwampThing.name=Болотная тварь
 

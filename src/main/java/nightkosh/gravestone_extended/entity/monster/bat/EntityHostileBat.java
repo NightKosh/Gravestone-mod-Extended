@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.entity.monster;
+package nightkosh.gravestone_extended.entity.monster.bat;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -16,17 +16,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import nightkosh.gravestone_extended.core.GSLootTables;
-import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.entity.ai.AIBatFly;
-import nightkosh.gravestone_extended.helper.MobsHelper;
 
 import javax.annotation.Nullable;
 
@@ -36,13 +31,13 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EntityVampireBat extends EntityMob {
+public abstract class EntityHostileBat extends EntityMob {
 
-    private static final DataParameter<Byte> HANGING = EntityDataManager.createKey(EntityVampireBat.class, DataSerializers.BYTE);
-    private BlockPos spawnPosition;
+    protected static final DataParameter<Byte> HANGING = EntityDataManager.createKey(EntityVampireBat.class, DataSerializers.BYTE);
+    protected BlockPos spawnPosition;
 
-    public EntityVampireBat(World worldIn) {
-        super(worldIn);
+    public EntityHostileBat(World world) {
+        super(world);
         this.setSize(0.5F, 0.9F);
         this.setIsBatHanging(true);
     }
@@ -93,7 +88,7 @@ public class EntityVampireBat extends EntityMob {
     public boolean attackEntityAsMob(Entity entity) {
         if (super.attackEntityAsMob(entity)) {
             if (entity instanceof EntityLivingBase) {
-                ((EntityLivingBase) entity).addPotionEffect(new PotionEffect(GSPotion.BLEEDING, 600));
+                applyEffect((EntityLivingBase) entity);
             }
             return true;
         } else {
@@ -212,13 +207,6 @@ public class EntityVampireBat extends EntityMob {
         return this.height / 2F;
     }
 
-    @Nullable
-    protected ResourceLocation getLootTable() {
-        return GSLootTables.VAMPIRE_BAT;
-    }
-
-    @Override
-    public boolean getCanSpawnHere() {
-        return super.getCanSpawnHere() && MobsHelper.isDimensionAllowedForSpawn(this.world);
+    protected void applyEffect(EntityLivingBase entity) {
     }
 }

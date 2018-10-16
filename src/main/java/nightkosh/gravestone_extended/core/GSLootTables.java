@@ -29,6 +29,7 @@ public class GSLootTables {
     public static final ResourceLocation DROWNED = new ResourceLocation(ModInfo.ID, "entities/drowned");
     public static final ResourceLocation PHANTOM_DIVER = new ResourceLocation(ModInfo.ID, "entities/phantom_diver");
     public static final ResourceLocation VAMPIRE_BAT = new ResourceLocation(ModInfo.ID, "entities/vampire_bat");
+    public static final ResourceLocation WITHERED_BAT = new ResourceLocation(ModInfo.ID, "entities/withered_bat");
     public static final ResourceLocation BARGHEST = new ResourceLocation(ModInfo.ID, "entities/barghest");
     public static final ResourceLocation SWAMP_THING = new ResourceLocation(ModInfo.ID, "entities/swamp_thing");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");

@@ -3,7 +3,7 @@ package nightkosh.gravestone_extended.entity.ai;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import nightkosh.gravestone_extended.entity.monster.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityHostileBat;
 
 import java.util.Random;
 
@@ -15,10 +15,10 @@ import java.util.Random;
  */
 public class AIBatFly extends EntityAIBase {
 
-    private final EntityVampireBat bat;
+    private final EntityHostileBat bat;
     private Random rand;
 
-    public AIBatFly(EntityVampireBat bat) {
+    public AIBatFly(EntityHostileBat bat) {
         this.bat = bat;
         rand = bat.getRNG();
     }

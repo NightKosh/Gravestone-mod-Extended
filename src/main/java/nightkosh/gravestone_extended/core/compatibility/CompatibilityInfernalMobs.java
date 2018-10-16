@@ -2,7 +2,8 @@ package nightkosh.gravestone_extended.core.compatibility;
 
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
-import nightkosh.gravestone_extended.entity.monster.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityWitheredBat;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonCat;
 import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonDog;
@@ -41,6 +42,7 @@ public class CompatibilityInfernalMobs {
                 classesAllowedMap.put(EntitySkeletonDog.class.getSimpleName(), false);
                 classesAllowedMap.put(EntityZombieDog.class.getSimpleName(), false);
                 classesAllowedMap.put(EntityVampireBat.class.getSimpleName(), false);
+                classesAllowedMap.put(EntityWitheredBat.class.getSimpleName(), false);
                 classesAllowedMap.put(EntitySkullCrawler.class.getSimpleName(), false);
                 classesAllowedMap.put(EntityWitherSkullCrawler.class.getSimpleName(), false);
                 classesAllowedMap.put(EntityStraySkullCrawler.class.getSimpleName(), false);

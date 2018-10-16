@@ -360,6 +360,8 @@ entity.GSMummy.name=Múmia
 entity.GSDrowned.name=Afogado
 entity.GSPhantomDiver.name=Mergulhador Fantasma
 entity.GSVampireBat.name=Morcego Vampiro
+## TODO !!!!!!!!!!
+entity.GSWitheredBat.name=Withered Bat
 entity.GSBarghest.name=Barghest
 entity.GSSwampThing.name=Coisa do Pântano
 

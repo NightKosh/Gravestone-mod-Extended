@@ -7,7 +7,6 @@ import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.model.ModelRotation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
-import net.minecraft.client.renderer.entity.RenderFish;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.item.Item;
@@ -31,6 +30,8 @@ import nightkosh.gravestone_extended.core.event.RenderEventHandler;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
 import nightkosh.gravestone_extended.entity.monster.*;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityWitheredBat;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler.SkullCrawlerType;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
@@ -153,8 +154,9 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityDrowned.class, new RenderDrowned(renderManager));
         RenderingRegistry.registerEntityRenderingHandler(EntityPhantomDiver.class, new RenderPhantomDiver(renderManager));
 
-        // Vampire Bat
+        // Bats
         RenderingRegistry.registerEntityRenderingHandler(EntityVampireBat.class, new RenderVampireBat(renderManager));
+        RenderingRegistry.registerEntityRenderingHandler(EntityWitheredBat.class, new RenderWitheredBat(renderManager));
 
         // Barghest
         RenderingRegistry.registerEntityRenderingHandler(EntityBarghest.class, new RenderBarghest(renderManager));

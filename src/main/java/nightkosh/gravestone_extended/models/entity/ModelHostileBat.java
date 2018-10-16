@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBat;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
-import nightkosh.gravestone_extended.entity.monster.EntityVampireBat;
+import nightkosh.gravestone_extended.entity.monster.bat.EntityHostileBat;
 
 /**
  * GraveStone mod
@@ -12,7 +12,7 @@ import nightkosh.gravestone_extended.entity.monster.EntityVampireBat;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ModelVampireBat extends ModelBat {
+public class ModelHostileBat extends ModelBat {
 
     protected final ModelRenderer batHead;
     protected final ModelRenderer batBody;
@@ -21,7 +21,7 @@ public class ModelVampireBat extends ModelBat {
     protected final ModelRenderer batOuterRightWing;
     protected final ModelRenderer batOuterLeftWing;
 
-    public ModelVampireBat() {
+    public ModelHostileBat() {
         this.textureWidth = 64;
         this.textureHeight = 64;
         this.batHead = new ModelRenderer(this, 0, 0);
@@ -64,7 +64,7 @@ public class ModelVampireBat extends ModelBat {
     }
 
     public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
-        if (((EntityVampireBat) entityIn).getIsBatHanging()) {
+        if (((EntityHostileBat) entityIn).getIsBatHanging()) {
             this.batHead.rotateAngleX = headPitch * 0.017453292F;
             this.batHead.rotateAngleY = (float) Math.PI - netHeadYaw * 0.017453292F;
             this.batHead.rotateAngleZ = (float) Math.PI;
