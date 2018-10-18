@@ -180,6 +180,12 @@ item.gravestone.chisel.name=Gravestone Chisel
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
 
+## Shovel
+item.gravestone.bone_shovel.name=Bone Shovel
+item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
+item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
+item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+
 ## Pickaxe
 item.gravestone.bone_pickaxe.name=Bone Pickaxe
 item.gravestone.bone_pickaxe_iron.name=Iron Bone Pickaxe

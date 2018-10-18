@@ -150,6 +150,11 @@ public class GSModels {
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_HOE_GOLDEN, 0, ResourcesModels.BONE_HOE_GOLDEN);
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_HOE_DIAMOND, 0, ResourcesModels.BONE_HOE_DIAMOND);
 
+            ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SHOVEL, 0, ResourcesModels.BONE_SHOVEL);
+            ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SHOVEL_IRON, 0, ResourcesModels.BONE_SHOVEL_IRON);
+            ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SHOVEL_GOLDEN, 0, ResourcesModels.BONE_SHOVEL_GOLDEN);
+            ModelLoader.setCustomModelResourceLocation(GSItem.BONE_SHOVEL_DIAMOND, 0, ResourcesModels.BONE_SHOVEL_DIAMOND);
+
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_AXE, 0, ResourcesModels.BONE_AXE);
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_AXE_IRON, 0, ResourcesModels.BONE_AXE_IRON);
             ModelLoader.setCustomModelResourceLocation(GSItem.BONE_AXE_GOLDEN, 0, ResourcesModels.BONE_AXE_GOLDEN);

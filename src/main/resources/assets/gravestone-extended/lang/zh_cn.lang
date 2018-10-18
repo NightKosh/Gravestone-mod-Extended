@@ -191,6 +191,13 @@ item.gravestone.chisel.name=墓碑凿
 ## TODO !!!!!!!!!!
 item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
 
+## Shovel
+## TODO !!!!!!!!!!
+item.gravestone.bone_shovel.name=Bone Shovel
+item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
+item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
+item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+
 ## Pickaxe
 ## TODO !!!!!!!!!!
 item.gravestone.bone_pickaxe.name=Bone Pickaxe

@@ -180,6 +180,13 @@ item.gravestone.chisel.name=Formão de Lápide
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso
 
+## Shovel
+## TODO !!!!!!!!!!
+item.gravestone.bone_shovel.name=Bone Shovel
+item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
+item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
+item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+
 ## Pickaxe
 item.gravestone.bone_pickaxe.name=Picareta de Osso
 item.gravestone.bone_pickaxe_iron.name=Picareta de Osso de Ferro

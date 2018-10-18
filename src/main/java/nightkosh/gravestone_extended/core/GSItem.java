@@ -36,6 +36,10 @@ import nightkosh.gravestone_extended.item.tools.pickaxe.ItemBonePickaxe;
 import nightkosh.gravestone_extended.item.tools.pickaxe.ItemDiamondBonePickaxe;
 import nightkosh.gravestone_extended.item.tools.pickaxe.ItemGoldenBonePickaxe;
 import nightkosh.gravestone_extended.item.tools.pickaxe.ItemIronBonePickaxe;
+import nightkosh.gravestone_extended.item.tools.shovel.ItemBoneShovel;
+import nightkosh.gravestone_extended.item.tools.shovel.ItemDiamondBoneShovel;
+import nightkosh.gravestone_extended.item.tools.shovel.ItemGoldenBoneShovel;
+import nightkosh.gravestone_extended.item.tools.shovel.ItemIronBoneShovel;
 import nightkosh.gravestone_extended.item.weapon.*;
 
 /**
@@ -60,6 +64,11 @@ public class GSItem {
     public static final Item BONE_HOE_IRON = new ItemIronBoneHoe();
     public static final Item BONE_HOE_GOLDEN = new ItemGoldenBoneHoe();
     public static final Item BONE_HOE_DIAMOND = new ItemDiamondBoneHoe();
+
+    public static final Item BONE_SHOVEL = new ItemBoneShovel();
+    public static final Item BONE_SHOVEL_IRON = new ItemIronBoneShovel();
+    public static final Item BONE_SHOVEL_GOLDEN = new ItemGoldenBoneShovel();
+    public static final Item BONE_SHOVEL_DIAMOND = new ItemDiamondBoneShovel();
 
     public static final Item BONE_AXE = new ItemBoneAxe();
     public static final Item BONE_AXE_IRON = new ItemIronBoneAxe();
@@ -112,6 +121,7 @@ public class GSItem {
             registry.registerAll(CHISEL, BONE_FISHING_POLE,
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
+                    BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
             registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
             registry.registerAll(DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,

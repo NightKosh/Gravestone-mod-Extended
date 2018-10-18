@@ -44,6 +44,11 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation BONE_HOE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE_GOLDEN.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation BONE_HOE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE_DIAMOND.getRegistryName().getResourcePath(), "inventory");
 
+    public static final ModelResourceLocation BONE_SHOVEL = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/bone", "inventory");
+    public static final ModelResourceLocation BONE_SHOVEL_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/iron", "inventory");
+    public static final ModelResourceLocation BONE_SHOVEL_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/golden", "inventory");
+    public static final ModelResourceLocation BONE_SHOVEL_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/diamond", "inventory");
+
     public static final ModelResourceLocation BONE_AXE = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation BONE_AXE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE_IRON.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation BONE_AXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE_GOLDEN.getRegistryName().getResourcePath(), "inventory");

@@ -180,6 +180,12 @@ item.gravestone.chisel.name=Резец для надгробий
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Костяная удочка
 
+## Shovel
+item.gravestone.bone_shovel.name=Костяная лопата
+item.gravestone.bone_shovel_iron.name=Железная костяная лопата
+item.gravestone.bone_shovel_golden.name=Золотая костяная лопата
+item.gravestone.bone_shovel_diamond.name=Алмазная костяная лопата
+
 ## Pickaxe
 item.gravestone.bone_pickaxe.name=Костяная кирка
 item.gravestone.bone_pickaxe_iron.name=Железная костяная кирка
