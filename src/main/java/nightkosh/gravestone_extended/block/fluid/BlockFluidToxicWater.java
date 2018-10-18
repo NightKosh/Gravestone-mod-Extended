@@ -135,7 +135,7 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
         if (!world.isRemote) {
             if (ExtendedConfig.removeToxicWater) {
                 world.setBlockState(pos, StateHelper.FLOWING_WATER);
-            } else if (ExtendedConfig.spreadToxicWater && rand.nextInt(10) == 0) {
+            } else if (ExtendedConfig.spreadToxicWater && rand.nextInt(10) == 0 && state.getValue(LEVEL) == 0) {
                 List<BlockPos> replacePos = new ArrayList<>();
                 if (isWaterBlock(world, pos.up())) {
                     replacePos.add(pos.up());
@@ -197,7 +197,8 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
     }
 
     private static boolean isWaterBlock(World world, BlockPos pos) {
-        Block block = world.getBlockState(pos).getBlock();
-        return block == Blocks.WATER || block == Blocks.FLOWING_WATER;
+        IBlockState state = world.getBlockState(pos);
+        Block block = state.getBlock();
+        return (block == Blocks.WATER || block == Blocks.FLOWING_WATER) && state.getValue(LEVEL) == 0;
     }
 }
