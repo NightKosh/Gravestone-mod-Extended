@@ -29,35 +29,35 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation MUMMY_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_BOOTS.getRegistryName().getResourcePath(), "inventory");
 
     // tools
-    public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/" + GSItem.CHISEL.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/chisel", "inventory");
 
-    public static final ModelResourceLocation BONE_SWORD = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SWORD.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_SWORD_IRON = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SWORD_IRON.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_SWORD_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SWORD_GOLDEN.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_SWORD_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SWORD_DIAMOND.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation BONE_SWORD = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/bone", "inventory");
+    public static final ModelResourceLocation BONE_SWORD_IRON = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/iron", "inventory");
+    public static final ModelResourceLocation BONE_SWORD_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/golden", "inventory");
+    public static final ModelResourceLocation BONE_SWORD_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/diamond", "inventory");
     public static final ModelResourceLocation BONE_SHIELD = new ModelResourceLocation(ModInfo.ID + ":weapon/" + GSItem.BONE_SHIELD.getRegistryName().getResourcePath(), "inventory");
 
-    public static final ModelResourceLocation BONE_FISHING_POLE = new ModelResourceLocation(ModInfo.ID + ":tools/" + GSItem.BONE_FISHING_POLE.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation BONE_FISHING_POLE = new ModelResourceLocation(ModInfo.ID + ":tools/bone_fishing_pole", "inventory");
 
-    public static final ModelResourceLocation BONE_HOE = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_HOE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE_IRON.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_HOE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE_GOLDEN.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_HOE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/" + GSItem.BONE_HOE_DIAMOND.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation BONE_HOE = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/bone", "inventory");
+    public static final ModelResourceLocation BONE_HOE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/iron", "inventory");
+    public static final ModelResourceLocation BONE_HOE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/golden", "inventory");
+    public static final ModelResourceLocation BONE_HOE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/hoe/diamond", "inventory");
 
     public static final ModelResourceLocation BONE_SHOVEL = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/bone", "inventory");
     public static final ModelResourceLocation BONE_SHOVEL_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/iron", "inventory");
     public static final ModelResourceLocation BONE_SHOVEL_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/golden", "inventory");
     public static final ModelResourceLocation BONE_SHOVEL_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/shovel/diamond", "inventory");
 
-    public static final ModelResourceLocation BONE_AXE = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_AXE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE_IRON.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_AXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE_GOLDEN.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_AXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/axe/" + GSItem.BONE_AXE_DIAMOND.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation BONE_AXE = new ModelResourceLocation(ModInfo.ID + ":tools/axe/bone", "inventory");
+    public static final ModelResourceLocation BONE_AXE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/axe/iron", "inventory");
+    public static final ModelResourceLocation BONE_AXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/axe/golden", "inventory");
+    public static final ModelResourceLocation BONE_AXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/axe/diamond", "inventory");
 
-    public static final ModelResourceLocation BONE_PICKAXE = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_PICKAXE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE_IRON.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_PICKAXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE_GOLDEN.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation BONE_PICKAXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/" + GSItem.BONE_PICKAXE_DIAMOND.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation BONE_PICKAXE = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/bone", "inventory");
+    public static final ModelResourceLocation BONE_PICKAXE_IRON = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/iron", "inventory");
+    public static final ModelResourceLocation BONE_PICKAXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/golden", "inventory");
+    public static final ModelResourceLocation BONE_PICKAXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/diamond", "inventory");
 
     public static final ModelResourceLocation CORPSE = new ModelResourceLocation(ModInfo.ID + ":corpse", "inventory");
 

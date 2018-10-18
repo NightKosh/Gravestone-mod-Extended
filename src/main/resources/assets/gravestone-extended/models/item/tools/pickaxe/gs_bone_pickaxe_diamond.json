@@ -1,7 +1,0 @@
-{
-    "parent": "gravestone-extended:item/tools/pickaxe/gs_bone_pickaxe",
-	"textures": {
-		"0": "gravestone-extended:items/tools/pickaxe/bone_pickaxe_diamond",
-		"particle": "gravestone-extended:items/tools/pickaxe/bone_pickaxe_diamond"
-	}
-}

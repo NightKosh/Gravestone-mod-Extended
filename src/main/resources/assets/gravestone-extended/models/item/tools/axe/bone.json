@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"0": "gravestone-extended:items/tools/axe/bone_axe",
-		"particle": "gravestone-extended:items/tools/axe/bone_axe"
+		"0": "gravestone-extended:items/tools/axe/bone",
+		"particle": "gravestone-extended:items/tools/axe/bone"
 	},
 	"elements": [
 		{

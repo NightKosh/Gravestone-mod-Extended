@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"0": "gravestone-extended:items/tools/hoe/bone_hoe",
-		"particle": "gravestone-extended:items/tools/hoe/bone_hoe"
+		"0": "gravestone-extended:items/tools/hoe/bone",
+		"particle": "gravestone-extended:items/tools/hoe/bone"
 	},
 	"elements": [
 		{

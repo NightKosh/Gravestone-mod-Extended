@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone-extended:item/weapon/sword/bone",
+	"textures": {
+		"0": "gravestone-extended:items/weapon/sword/diamond",
+		"particle": "gravestone-extended:items/weapon/sword/diamond"
+	}
+}

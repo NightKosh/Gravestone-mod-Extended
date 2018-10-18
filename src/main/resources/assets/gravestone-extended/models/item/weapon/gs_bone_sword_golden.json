@@ -1,7 +1,0 @@
-{
-    "parent": "gravestone-extended:item/weapon/gs_bone_sword",
-	"textures": {
-		"0": "gravestone-extended:items/weapon/bone_sword_golden",
-		"particle": "gravestone-extended:items/weapon/bone_sword_golden"
-	}
-}

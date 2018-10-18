@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone-extended:item/tools/axe/bone",
+	"textures": {
+		"0": "gravestone-extended:items/tools/axe/golden",
+		"particle": "gravestone-extended:items/tools/axe/golden"
+	}
+}

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"0": "gravestone-extended:items/weapon/bone_sword",
-		"particle": "gravestone-extended:items/weapon/bone_sword"
+		"0": "gravestone-extended:items/weapon/sword/bone",
+		"particle": "gravestone-extended:items/weapon/sword/bone"
 	},
 	"elements": [
 		{

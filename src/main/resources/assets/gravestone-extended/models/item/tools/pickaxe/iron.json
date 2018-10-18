@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone-extended:item/tools/pickaxe/bone",
+	"textures": {
+		"0": "gravestone-extended:items/tools/pickaxe/iron",
+		"particle": "gravestone-extended:items/tools/pickaxe/iron"
+	}
+}
