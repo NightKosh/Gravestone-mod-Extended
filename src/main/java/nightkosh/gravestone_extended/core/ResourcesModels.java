@@ -13,20 +13,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class ResourcesModels extends Resources {
     // armor
-    public static final ModelResourceLocation DIVING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_HELMET.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation DIVING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation DIVING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation DIVING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/" + GSItem.DIVING_BOOTS.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation DIVING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/helmet", "inventory");
+    public static final ModelResourceLocation DIVING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/chestplate", "inventory");
+    public static final ModelResourceLocation DIVING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/leggings", "inventory");
+    public static final ModelResourceLocation DIVING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/boots", "inventory");
 
-    public static final ModelResourceLocation SWAMP_THING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_HELMET.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation SWAMP_THING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation SWAMP_THING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation SWAMP_THING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/" + GSItem.SWAMP_THING_BOOTS.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation SWAMP_THING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/helmet", "inventory");
+    public static final ModelResourceLocation SWAMP_THING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/chestplate", "inventory");
+    public static final ModelResourceLocation SWAMP_THING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/leggings", "inventory");
+    public static final ModelResourceLocation SWAMP_THING_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/swamp_thing_costume/boots", "inventory");
 
-    public static final ModelResourceLocation MUMMY_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_HELMET.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation MUMMY_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_CHESTPLATE.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation MUMMY_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_LEGGINGS.getRegistryName().getResourcePath(), "inventory");
-    public static final ModelResourceLocation MUMMY_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/" + GSItem.MUMMY_BOOTS.getRegistryName().getResourcePath(), "inventory");
+    public static final ModelResourceLocation MUMMY_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/helmet", "inventory");
+    public static final ModelResourceLocation MUMMY_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/chestplate", "inventory");
+    public static final ModelResourceLocation MUMMY_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/leggings", "inventory");
+    public static final ModelResourceLocation MUMMY_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/boots", "inventory");
 
     // tools
     public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/chisel", "inventory");
@@ -59,6 +59,7 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation BONE_PICKAXE_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/golden", "inventory");
     public static final ModelResourceLocation BONE_PICKAXE_DIAMOND = new ModelResourceLocation(ModInfo.ID + ":tools/pickaxe/diamond", "inventory");
 
+    // items
     public static final ModelResourceLocation CORPSE = new ModelResourceLocation(ModInfo.ID + ":corpse", "inventory");
 
     public static final ModelResourceLocation SPAWN_EGG_MODEL = new ModelResourceLocation(GSItem.SPAWN_EGG.getRegistryName(), "inventory");
@@ -85,6 +86,7 @@ public class ResourcesModels extends Resources {
 
     public static final ModelResourceLocation FROZEN_MIRROR = new ModelResourceLocation(GSItem.FROZEN_MIRROR.getRegistryName(), "inventory");
 
+    // blocks
     public static final ModelResourceLocation MEMORIAL = new ModelResourceLocation(ModInfo.ID + ":block/memorial", "inventory");
     public static final ModelResourceLocation EXECUTION = new ModelResourceLocation(ModInfo.ID + ":block/execution", "inventory");
     public static final ModelResourceLocation SPAWNER = new ModelResourceLocation(ModInfo.ID + ":block/spawner", "inventory");
