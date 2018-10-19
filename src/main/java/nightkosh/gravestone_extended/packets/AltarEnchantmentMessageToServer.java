@@ -110,7 +110,7 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
                                     skullEnchLvl = Math.max(skullEnchLvl, itemEnchLvl);
                                 }
 
-                                if (skullEnchantment.canApply(enchItem)) {
+                                if (skullEnchantment.canApply(enchItem) || enchItem.getItem() == Items.BOOK) {
                                     boolean canApply = true;
                                     for (Enchantment enchantment : itemEnchantments.keySet()) {
                                         if (enchantment != skullEnchantment && !skullEnchantment.isCompatibleWith(enchantment)) {
@@ -151,6 +151,12 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
                                 ItemEnchantedBook.addEnchantment(enchItem, new EnchantmentData(enchantment, entry.getValue()));
                             }
                         }
+                    } else if (enchItem.getItem() == Items.BOOK) {
+                        ItemStack enchantedBook = new ItemStack(Items.ENCHANTED_BOOK);
+
+                        EnchantmentHelper.setEnchantments(itemEnchantments, enchantedBook);
+//                        ItemEnchantedBook.addEnchantment(enchantedBook, new EnchantmentData(enchantment, entry.getValue()));
+                        enchItem = enchantedBook;
                     } else {
                         EnchantmentHelper.setEnchantments(itemEnchantments, enchItem);
                     }

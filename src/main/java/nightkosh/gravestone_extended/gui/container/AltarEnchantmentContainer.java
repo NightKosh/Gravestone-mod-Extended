@@ -115,7 +115,7 @@ public class AltarEnchantmentContainer extends AltarContainer {
                                     skullEnchLvl = Math.max(skullEnchLvl, itemEnchLvl);
                                 }
 
-                                if (skullEnchantment.canApply(enchItem)) {
+                                if (skullEnchantment.canApply(enchItem) || enchItem.getItem() == Items.BOOK) {
                                     boolean canApply = true;
                                     for (Enchantment enchantment : itemEnchantments.keySet()) {
                                         if (enchantment != skullEnchantment && !skullEnchantment.isCompatibleWith(enchantment)) {
