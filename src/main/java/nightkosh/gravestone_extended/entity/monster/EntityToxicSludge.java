@@ -222,8 +222,14 @@ public class EntityToxicSludge extends EntitySlime {
 
     @Override
     public boolean getCanSpawnHere() {
-        return this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.posY <= 30 && this.isValidLightLevel() &&
-                this.world.getBlockState((new BlockPos(this)).down()).canEntitySpawn(this) &&
-                MobsHelper.isDimensionAllowedForSpawn(this.world);
+        if (this.world.getDifficulty() != EnumDifficulty.PEACEFUL && this.posY <= 30 && this.isValidLightLevel() &&
+                MobsHelper.isDimensionAllowedForSpawn(this.world)) {
+            IBlockState state = this.world.getBlockState((new BlockPos(this)).down());
+            Block block = state.getBlock();
+            return state.canEntitySpawn(this) &&
+                    !(block == Blocks.STONE || block == Blocks.COBBLESTONE || block == Blocks.DIRT || block == Blocks.GRAVEL);
+        } else {
+            return false;
+        }
     }
 }
