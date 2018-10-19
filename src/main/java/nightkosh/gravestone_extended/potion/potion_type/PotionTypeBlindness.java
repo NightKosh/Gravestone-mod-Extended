@@ -1,6 +1,6 @@
 package nightkosh.gravestone_extended.potion.potion_type;
 
-import net.minecraft.potion.Potion;
+import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
 import nightkosh.gravestone_extended.core.ModInfo;
@@ -24,7 +24,7 @@ public class PotionTypeBlindness extends PotionType {
     @Override
     public List<PotionEffect> getEffects() {
         List<PotionEffect> effectList = new ArrayList<>(1);
-        effectList.add(new PotionEffect(Potion.getPotionFromResourceLocation("blindness"), 600));
+        effectList.add(new PotionEffect(MobEffects.BLINDNESS, 600));
         return effectList;
     }
 }
