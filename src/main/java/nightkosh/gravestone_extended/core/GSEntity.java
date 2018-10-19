@@ -222,7 +222,7 @@ public class GSEntity {
 
         registerModEntity(WITHERED_BAT_ID, EntityWitheredBat.class, WITHERED_BAT_NAME);
         if (ExtendedConfig.spawnWitheredBat) {
-            addSpawn(BiomeDictionary.Type.NETHER, EntityWitheredBat.class, 10, 1, 3);
+            addSpawn(BiomeDictionary.Type.NETHER, EntityWitheredBat.class, 30, 1, 3);
         }
 
         registerModEntity(BARGHEST_ID, EntityBarghest.class, BARGHEST_NAME);
