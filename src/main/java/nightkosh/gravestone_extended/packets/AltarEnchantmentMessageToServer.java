@@ -153,9 +153,7 @@ public class AltarEnchantmentMessageToServer implements IMessage, IMessageHandle
                         }
                     } else if (enchItem.getItem() == Items.BOOK) {
                         ItemStack enchantedBook = new ItemStack(Items.ENCHANTED_BOOK);
-
                         EnchantmentHelper.setEnchantments(itemEnchantments, enchantedBook);
-//                        ItemEnchantedBook.addEnchantment(enchantedBook, new EnchantmentData(enchantment, entry.getValue()));
                         enchItem = enchantedBook;
                     } else {
                         EnchantmentHelper.setEnchantments(itemEnchantments, enchItem);
