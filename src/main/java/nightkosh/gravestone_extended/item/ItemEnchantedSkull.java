@@ -36,6 +36,11 @@ public class ItemEnchantedSkull extends ItemEnchantedBook {
     }
 
     @Override
+    public boolean getHasSubtypes() {
+        return true;
+    }
+
+    @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
         if (this.isInCreativeTab(tab)) {
             for (Enchantment enchantment : Enchantment.REGISTRY) {
