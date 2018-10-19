@@ -227,7 +227,7 @@ public class EntityToxicSludge extends EntitySlime {
             IBlockState state = this.world.getBlockState((new BlockPos(this)).down());
             Block block = state.getBlock();
             return state.canEntitySpawn(this) &&
-                    !(block == Blocks.STONE || block == Blocks.COBBLESTONE || block == Blocks.DIRT || block == Blocks.GRAVEL);
+                    (block == Blocks.STONE || block == Blocks.COBBLESTONE || block == Blocks.DIRT || block == Blocks.GRAVEL);
         } else {
             return false;
         }
