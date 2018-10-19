@@ -51,6 +51,7 @@ public class GSPotion {
     public static final PotionType NAUSEA_TYPE = new PotionTypeNausea();
     public static final PotionType RESISTANCE_TYPE = new PotionTypeResistance();
     public static final PotionType LEVITATION_TYPE = new PotionTypeLevitation();
+    public static final PotionType WITHER_TYPE = new PotionTypeWither();
 
     @SubscribeEvent
     public static void registerPotions(final RegistryEvent.Register<Potion> event) {
@@ -61,7 +62,7 @@ public class GSPotion {
     public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
         event.getRegistry().registerAll(PURIFICATION_TYPE, RUST_TYPE, BONE_SKIN_TYPE, RECALL_TYPE, BURNING_TYPE, BLEEDING_TYPE,
                 INFERNO_TYPE);
-        event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE);
+        event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE, WITHER_TYPE);
 
         PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), BONE_SKIN_TYPE);
@@ -88,5 +89,7 @@ public class GSPotion {
                 EnumFishType.CAVE_TROUT.ordinal())), RESISTANCE_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
                 EnumFishType.CHORUS_KOI.ordinal())), LEVITATION_TYPE);
+        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
+                EnumFishType.WITHERED_CRUCIAN.ordinal())), WITHER_TYPE);
     }
 }

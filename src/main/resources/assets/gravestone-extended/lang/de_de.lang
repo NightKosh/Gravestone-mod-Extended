@@ -177,6 +177,10 @@ potion.effect.gs_levitation_type=Potion of Levitation
 splash_potion.effect.gs_levitation_type=Splash Potion of Levitation
 lingering_potion.effect.gs_levitation_type=Lingering Potion of Levitation
 tipped_arrow.effect.gs_levitation_type=Arrow of Levitation
+potion.effect.wither_type=Potion of Withering
+splash_potion.effect.wither_type=Splash Potion of Withering
+lingering_potion.effect.wither_type=Lingering Potion of Withering
+tipped_arrow.effect.wither_type=Arrow of Withering
 
 # Items
 ## Chisel

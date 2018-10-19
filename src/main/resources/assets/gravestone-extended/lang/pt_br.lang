@@ -171,6 +171,11 @@ potion.effect.gs_levitation_type=Poção de Levitação
 splash_potion.effect.gs_levitation_type=Poção Arremessável de Levitação
 lingering_potion.effect.gs_levitation_type=Poção Prolongada de Levitação
 tipped_arrow.effect.gs_levitation_type=Flecha de Levitação
+## TODO !!!!!!!!!!
+potion.effect.wither_type=Potion of Withering
+splash_potion.effect.wither_type=Splash Potion of Withering
+lingering_potion.effect.wither_type=Lingering Potion of Withering
+tipped_arrow.effect.wither_type=Arrow of Withering
 
 
 # Items

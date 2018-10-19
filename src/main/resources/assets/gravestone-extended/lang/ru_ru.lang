@@ -171,6 +171,10 @@ potion.effect.gs_levitation_type=Зелье левитации
 splash_potion.effect.gs_levitation_type=Взрывное зелье левитации
 lingering_potion.effect.gs_levitation_type=Туманное зелье левитации
 tipped_arrow.effect.gs_levitation_type=Стрела левитации
+potion.effect.wither_type=Зелье иссушения
+splash_potion.effect.wither_type=Взрывное зелье иссушения
+lingering_potion.effect.wither_type=Туманное зелье иссушения
+tipped_arrow.effect.wither_type=Иссушающая стрела
 
 
 # Items
