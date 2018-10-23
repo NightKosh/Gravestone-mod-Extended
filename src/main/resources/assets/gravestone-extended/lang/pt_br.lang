@@ -171,11 +171,10 @@ potion.effect.gs_levitation_type=Poção de Levitação
 splash_potion.effect.gs_levitation_type=Poção Arremessável de Levitação
 lingering_potion.effect.gs_levitation_type=Poção Prolongada de Levitação
 tipped_arrow.effect.gs_levitation_type=Flecha de Levitação
-## TODO !!!!!!!!!!
-potion.effect.wither_type=Potion of Withering
-splash_potion.effect.wither_type=Splash Potion of Withering
-lingering_potion.effect.wither_type=Lingering Potion of Withering
-tipped_arrow.effect.wither_type=Arrow of Withering
+potion.effect.wither_type=Poção de Wither
+splash_potion.effect.wither_type=Poção Arremessável de Wither
+lingering_potion.effect.wither_type=Poção Prolongada de Wither
+tipped_arrow.effect.wither_type=Flecha de Wither
 
 
 # Items
@@ -186,11 +185,10 @@ item.gravestone.chisel.name=Formão de Lápide
 item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso
 
 ## Shovel
-## TODO !!!!!!!!!!
-item.gravestone.bone_shovel.name=Bone Shovel
-item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
-item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
-item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+item.gravestone.bone_shovel.name=Pá de Osso
+item.gravestone.bone_shovel_iron.name=Pá de Osso de Ferro
+item.gravestone.bone_shovel_golden.name=Pá de Osso de Ouro
+item.gravestone.bone_shovel_diamond.name=Pá de Osso de Diamante
 
 ## Pickaxe
 item.gravestone.bone_pickaxe.name=Picareta de Osso
@@ -336,13 +334,12 @@ gui.edit_grave.title=Defina o texto do túmulo
 gui.edit_grave.close=Concluído
 gui.edit_grave.randomText=Definir texto aleatório
 gui.altar.resurrect=Ressuscitar
-##TODO !!!!!!!!!!
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
+gui.altar.enchant=Encantar
+gui.altar.disenchant=Desencantar
 gui.altar.requirements=Níveis requeridos %d
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
+gui.altar.tab.resurrection=Ressurreição
+gui.altar.tab.enchanting=Encantador
+gui.altar.tab.disenchanting=Desencantado
 gui.chisel_crafting.grave_btn=Lápide
 gui.chisel_crafting.memorial_btn=Memorial
 gui.chisel_crafting.enchanted_btn=Encantado
@@ -372,8 +369,7 @@ entity.GSMummy.name=Múmia
 entity.GSDrowned.name=Afogado
 entity.GSPhantomDiver.name=Mergulhador Fantasma
 entity.GSVampireBat.name=Morcego Vampiro
-## TODO !!!!!!!!!!
-entity.GSWitheredBat.name=Withered Bat
+entity.GSWitheredBat.name=Morcego Wither
 entity.GSBarghest.name=Barghest
 entity.GSSwampThing.name=Coisa do Pântano
 
