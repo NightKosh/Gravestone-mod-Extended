@@ -8,6 +8,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntitySlime;
+import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityFishHook;
 import net.minecraft.init.Blocks;
@@ -60,23 +61,26 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
                 EntityLivingBase baseEntity = (EntityLivingBase) entity;
                 baseEntity.addPotionEffect(new PotionEffect(GSPotion.RUST, 100));
                 if (baseEntity.getCreatureAttribute() != EnumCreatureAttribute.UNDEAD) {
-                    for (PotionEffect potion : baseEntity.getActivePotionEffects()) {
-                        if (Potion.getIdFromPotion(potion.getPotion()) == Potion.getIdFromPotion(GSPotion.BONE_SKIN)) {
-                            return;
-                        }
-                    }
-
-                    if (entity instanceof EntityPlayer) {
-                        Iterable<ItemStack> equipment = entity.getArmorInventoryList();
-                        int armorParts = 0;
-                        if (equipment != null) {
-                            for (ItemStack stack : equipment) {
-                                if (!stack.isEmpty() && stack.isItemStackDamageable() && stack.getItem() instanceof IBoneArmor) {
-                                    armorParts++;
-                                }
+                    if (entity instanceof EntityPlayer || entity instanceof EntityTameable) {
+                        for (PotionEffect potion : baseEntity.getActivePotionEffects()) {
+                            if (Potion.getIdFromPotion(potion.getPotion()) == Potion.getIdFromPotion(GSPotion.BONE_SKIN)) {
+                                return;
                             }
                         }
-                        dealDamage = armorParts != 4;
+                        if (entity instanceof EntityPlayer) {
+                            Iterable<ItemStack> equipment = entity.getArmorInventoryList();
+                            int armorParts = 0;
+                            if (equipment != null) {
+                                for (ItemStack stack : equipment) {
+                                    if (!stack.isEmpty() && stack.isItemStackDamageable() && stack.getItem() instanceof IBoneArmor) {
+                                        armorParts++;
+                                    }
+                                }
+                            }
+                            dealDamage = armorParts != 4;
+                        } else {
+                            dealDamage = true;
+                        }
                     } else {
                         dealDamage = true;
                     }
@@ -92,7 +96,7 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
                 return;
             }
         }
-        if (dealDamage) {
+        if (dealDamage && world.rand.nextInt(20) == 0) {
             entity.attackEntityFrom(DamageSource.MAGIC, 1);
             meltEffect(world, entity.posX, entity.posY, entity.posZ);
         }
