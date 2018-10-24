@@ -29,8 +29,8 @@ block.trap.curse=Die Dunkelheit bricht ein!
 
 ## Withered Glass
 ## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
+tile.withered_glass.name=Verwelktes Glas
+tile.withered_glass_pane.name=Verwelkte Glasscheibe
 
 ## Spawners
 block.spawner.wither.name=Witherspawner
@@ -67,8 +67,7 @@ block.skull_candle.zombie.name=Zombie-Totenkopfkerze
 tile.altar.name=Altar
 
 ## Portal
-## TODO !!!!!!!!!!
-tile.catacombs_portal.name=Catacombs Portal
+tile.catacombs_portal.name=Portal in die Katakomben
 
 # Enchantments
 ## TODO !!!!!!!!!!
@@ -246,13 +245,14 @@ item.gravestone.mummy_leggings.name=Mummy Pants
 item.gravestone.mummy_boots.name=Mummy Boots
 
 ## Other Items
+item.gravestone.toxic_slime.name=Giftiger Schleim
 ## TODO !!!!!!!!!!
-item.gravestone.toxic_slime.name=Toxic Slime
-item.gravestone.raven_feather.name=Raven Feather
-item.gravestone.raven_claws.name=Raven Claws
+item.gravestone.raven_feather.name=Rabenfeder
+item.gravestone.raven_claws.name=Rabenklauen
 item.gravestone.ooze.name=Ooze
-item.gravestone.piece_of_mummy_cloth.name=Piece of Mummy Cloth
-item.gravestone.piece_of_diving_suit.name=Piece of Diving Suit
+item.gravestone.piece_of_mummy_cloth.name=Fetzen Mumienstoff
+item.gravestone.piece_of_diving_suit.name=Fetzen eines Taucheranzugs
+## TODO !!!!!!!!!!
 item.gravestone.bat_wing.name=Bat Wing
 item.gravestone.enchanted_skull.name=Enchanted Skull
 item.gravestone.enchanted_skull_withered.name=Enchanted Wither Skull
@@ -346,14 +346,13 @@ gui.edit_grave.title=Grabtext festlegen
 gui.edit_grave.close=Fertig
 gui.edit_grave.randomText=Zufälligen Text auswählen
 gui.altar.resurrect=Wiederauferstehen
-##TODO !!!!!!!!!!
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
+gui.altar.enchant=Verzaubern
+gui.altar.disenchant=Entzaubern
 gui.altar.requirements=%d Level benötigt
+gui.altar.tab.resurrection=Wiederbelebung
+gui.altar.tab.enchanting=Verzaubern
+gui.altar.tab.disenchanting=Enzaubern
 ##TODO !!!!!!!!!!
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
 gui.chisel_crafting.grave_btn=Gravestone
 gui.chisel_crafting.memorial_btn=Memorial
 gui.chisel_crafting.enchanted_btn=Enchanted
@@ -367,34 +366,29 @@ entity.GSSkeletonDog.name=Skeletthund
 entity.GSZombieCat.name=Zombiekatze
 entity.GSSkeletonCat.name=Skelettkatze
 entity.GSSkullCrawler.name=Skelettkriecher
-##TODO !!!!!!!!!!
-entity.GSStraySkullCrawler.name=Stray Skull Crawler
+entity.GSStraySkullCrawler.name=Streunender Skelettkriecher
 entity.GSWitherSkullCrawler.name=Wither-Skelettkriecher
 entity.GSZombieSkullCrawler.name=Zombie-Skelettkriecher
-##TODO !!!!!!!!!!
-entity.GSHuskSkullCrawler.name=Husk Skull Crawler
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
+entity.GSHuskSkullCrawler.name=Husk-Skelettkriecher
+entity.GSPigmanSkullCrawler.name=Schweinezombie-Skelettkriecher
 entity.GSRaven.name=Rabe
 entity.GSSkeletonRaider.name=Skeletträuber
 entity.GSZombieRaider.name=Zombieräuber
-##TODO !!!!!!!!!!
-entity.GSSkeleton.name=Skeleton
+entity.GSSkeleton.name=Skellett
 entity.Villager.gravestone-extended:undertaker=Totengräber
-## TODO !!!!!!!!!!
-entity.GSToxicSludge.name=Toxic Sludge
+entity.GSToxicSludge.name=Giftiger Schlamm
 entity.GSPossessedArmor.name=Possessed Armor
-entity.GSMummy.name=Mummy
-entity.GSDrowned.name=Drowned
-entity.GSPhantomDiver.name=Phantom Diver
-entity.GSVampireBat.name=Vampire Bat
-entity.GSWitheredBat.name=Withered Bat
+entity.GSMummy.name=Mumie
+entity.GSDrowned.name=Ertrunkener
+entity.GSPhantomDiver.name=Phantomfahrer
+entity.GSVampireBat.name=Vampirfledermaus
+entity.GSWitheredBat.name=Verwelkte Fledermaus
 entity.GSBarghest.name=Barghest
-entity.GSSwampThing.name=Swamp Thing
+entity.GSSwampThing.name=Sumpfding
 
 # Fluids
-## TODO !!!!!!!!!!
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
+tile.gs_toxic_water.name=Giftiges Wasser
+fluid.gs_toxic_water=Giftiges Wasser
 
 
 # Console messages
