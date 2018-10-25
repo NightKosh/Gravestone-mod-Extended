@@ -59,7 +59,6 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
         if (entity instanceof EntityLivingBase) {
             if (!(entity instanceof EntitySlime)) {
                 EntityLivingBase baseEntity = (EntityLivingBase) entity;
-                baseEntity.addPotionEffect(new PotionEffect(GSPotion.RUST, 100));
                 if (baseEntity.getCreatureAttribute() != EnumCreatureAttribute.UNDEAD) {
                     if (entity instanceof EntityPlayer || entity instanceof EntityTameable) {
                         for (PotionEffect potion : baseEntity.getActivePotionEffects()) {
@@ -68,6 +67,7 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
                             }
                         }
                         if (entity instanceof EntityPlayer) {
+                            baseEntity.addPotionEffect(new PotionEffect(GSPotion.RUST, 100));
                             Iterable<ItemStack> equipment = entity.getArmorInventoryList();
                             int armorParts = 0;
                             if (equipment != null) {
