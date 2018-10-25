@@ -10,7 +10,6 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.item.weapon.IBoneSword;
 
 /**
  * GraveStone mod
@@ -27,7 +26,7 @@ public class EnchantmentPoisonedBlade extends EnchantmentBase {
     }
 
     public boolean canApplyTogether(Enchantment ench) {
-        return !(ench instanceof EnchantmentFireAspect || ench instanceof EnchantmentPoisonedBlade);
+        return !(ench instanceof EnchantmentFireAspect || ench instanceof EnchantmentPoisonedBlade || ench instanceof EnchantmentWitheredBlade);
     }
 
     @Override
@@ -47,7 +46,7 @@ public class EnchantmentPoisonedBlade extends EnchantmentBase {
 
     @Override
     public boolean canApply(ItemStack stack) {
-        return super.canApply(stack) && stack.getItem() instanceof IBoneSword;
+        return super.canApply(stack);
     }
 
     @Override
