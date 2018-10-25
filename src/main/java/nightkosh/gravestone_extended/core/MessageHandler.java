@@ -27,5 +27,7 @@ public class MessageHandler {
         networkWrapper.registerMessage(AltarDisenchantmentMessageToServer.class, AltarDisenchantmentMessageToServer.class, 9, Side.SERVER);
         networkWrapper.registerMessage(AltarEnchantmentMessageToServer.class, AltarEnchantmentMessageToServer.class, 10, Side.SERVER);
         networkWrapper.registerMessage(AltarSwitchGuiMessageToServer.class, AltarSwitchGuiMessageToServer.class, 11, Side.SERVER);
+        networkWrapper.registerMessage(SeedMessageToServer.class, SeedMessageToServer.class, 12, Side.SERVER);
+        networkWrapper.registerMessage(SeedMessageToClient.class, SeedMessageToClient.class, 13, Side.CLIENT);
     }
 }

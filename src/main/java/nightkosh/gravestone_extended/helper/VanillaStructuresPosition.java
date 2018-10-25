@@ -6,6 +6,9 @@ import nightkosh.gravestone_extended.core.MessageHandler;
 import nightkosh.gravestone_extended.packets.NetherFortressMessageToServer;
 import nightkosh.gravestone_extended.packets.StrongholdMessageToServer;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * GraveStone mod
  *
@@ -19,6 +22,8 @@ public class VanillaStructuresPosition {
     private static BlockPos STRONGHOLD = null;
 
     private static BlockPos lastPos = null;
+
+    public static final Map<String, Long> SEEDS = new HashMap<>();
 
     public static BlockPos getNetherFortress(EntityPlayer player) {
         if (isPositionChanged(player.getPosition())) {
