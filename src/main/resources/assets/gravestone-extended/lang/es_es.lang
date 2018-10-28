@@ -1,10 +1,7 @@
 # Tabs
-##TODO !!!!!!!!!!
-itemGroup.tabGSMemorials=Memorials
-## TODO !!!!!!
+itemGroup.tabGSMemorials=Memoriales
 itemGroup.tabGSCorpse=Cadáveres
-##TODO !!!!!!!!!!
-itemGroup.tabGSOther=Gravestone mod Items
+itemGroup.tabGSOther=Items de Gravestone mod
 
 
 # Blocks
@@ -20,11 +17,10 @@ block.memorial.creeper_statue.name=Estatua de creeper
 block.memorial.celtic_cross.name=Cruz céltica
 
 ## Executions
-##TODO !!!!!!!!!!
-block.execution.gallows.name=Gallows
+block.execution.gallows.name=Horca
 block.execution.gibbet.name=Gibbet
-block.execution.stocks.name=Stocks
-block.execution.burning_stake.name=Burning Stake
+block.execution.stocks.name=Picota
+block.execution.burning_stake.name=Hoguera
 
 ## Traps
 block.trap.night.name=Piedra nocturna
@@ -32,34 +28,27 @@ block.trap.thunder.name=Piedra del trueno
 block.trap.curse=¡La oscuridad de aproxima!
 
 ## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
+tile.withered_glass.name=Vidrio marchito
+tile.withered_glass_pane.name=Panel de vidrio marchito
 
 ## Spawners
 block.spawner.wither.name=Gendrador de Wither
-##TODO !!!!!!!!!!
 block.spawner.skeleton.name=Generador de Esqueleto
-##TODO !!!!!!!!!!
 block.spawner.zombie.name=Generador de Zombi
-## TODO !!!!!
 block.spawner.spider.name=Generador de Araña
 
 ## Bone Blocks
 block.bone_block.default.name=Bloque de hueso
-block.bone_block.skull.name=Bloque de hueso con craneo
-block.bone_block.crawler.name=Bloque de hueso con craneo del arranca craneos
-block.bone_block.crawler_skull.name=Bloque de hueso con craneo de
+block.bone_block.skull.name=Bloque de hueso con cráneo
+block.bone_block.crawler.name=Bloque de hueso con craneo del arranca cráneos
+block.bone_block.crawler_skull.name=Bloque de hueso con craneo del arranca cráneos
 tile.bone_slab.name=Losa de hueso
 tile.bone_stairs.name=Escaleras de hueso
 
 ## Pile of Bones
-##TODO !!!!!!!!!!
-block.pile_of_bones.name=Pile of Bones
-##TODO !!!!!!!!!!
-block.pile_of_bones_with_skull.name=Pile of Bones with Skull
-## TODO !!!!!
-block.pile_of_bones_with_skull_crawler.name=Pile of Bones with Skull Crawler
+block.pile_of_bones.name=Montón de huesos
+block.pile_of_bones_with_skull.name=Montón de huesos con cráneo
+block.pile_of_bones_with_skull_crawler.name=Montón de uesos con cráneo del arranca cráneos
 
 ## Chests
 block.haunted_chest.bats_chest.name=Cofre con Murciélagos
@@ -68,217 +57,200 @@ block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
 ## Candles
-##TODO !!!!!!!!!!
-tile.candle.name=Candle
+tile.candle.name=Vela
 block.skull_candle.skeleton.name=Vela en Cráneo
 block.skull_candle.wither_skeleton.name=Vela en Cráneo de Wither
 block.skull_candle.zombie.name=Vela en Cabeza de Zombi
 
 ## Altar
-##TODO !!!!!!!!!!
 tile.altar.name=Altar
 
 ## Portal
-## TODO !!!!!!!!!!
-tile.catacombs_portal.name=Catacombs Portal
+tile.catacombs_portal.name=Portal de catacumbas
 
 # Enchantments
-## TODO !!!!!!!!!!
-enchantment.shadow_of_death=Shadow of Death
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.poisoned_blade=Poisoned Blade
-enchantment.gravestone-extended.gs_poisoned_blade.desc=Applies poison to a target for 10 seconds per level
-enchantment.withered_blade=Withered Blade
-enchantment.gravestone-extended.gs_withered_blade.desc=Applies wither to a target for 5 seconds per level
-enchantment.vampiric_touch=Vampiric Touch
-enchantment.gravestone-extended.gs_vampiric_touch.desc=Converts 20 percent of damage done by this weapon to health
-enchantment.necrotic_corrosion=Necrotic Corrosion
-enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 percent(per level) of damage dealt by this weapon ignores armor
-enchantment.pain_mirror=Pain Mirror
-enchantment.gravestone-extended.gs_pain_mirror.desc=Reflects all blocked damage with 10 percent chance per level
-enchantment.bone_rain=Bone Rain
-enchantment.gravestone-extended.gs_bone_rain.desc=Uses bone meal on a block
-enchantment.hellish_angling=Hellish Angling
-enchantment.gravestone-extended.gs_hellish_angling.desc=Allows one to fish in lava
-enchantment.bloody_replication=Bloody Replication
-enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
+enchantment.shadow_of_death=Sombra de la muerte
+enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos
+enchantment.poisoned_blade=Cuchilla envenenada
+enchantment.gravestone-extended.gs_poisoned_blade.desc=Aplica veneno al objetivo durante 10 segundos por nivel
+enchantment.withered_blade=Cuchilla marchita
+enchantment.gravestone-extended.gs_withered_blade.desc=Aplica marchitar al objetivo durante 5 segundos por nivel
+enchantment.vampiric_touch=Toque vampírico
+enchantment.gravestone-extended.gs_vampiric_touch.desc=Convierte le 20 por ciento del daño echo por este arma en salud
+enchantment.necrotic_corrosion=Corrosión necrótica
+enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 por ciento (por nivel) del daño hecho por este arma ignora la armadura
+enchantment.pain_mirror=Espejo de dolor
+enchantment.gravestone-extended.gs_pain_mirror.desc=Refleja todo el daño bloqueado con un 10 por ciento de probabilidad por nivel 
+enchantment.bone_rain=Lluvia de hueso
+enchantment.gravestone-extended.gs_bone_rain.desc=Usa harina de hueso  en un bloque
+enchantment.hellish_angling=Pesca infernal con caña
+enchantment.gravestone-extended.gs_hellish_angling.desc=Permite pescar en la lava
+enchantment.bloody_replication=Replicación sangrienta
+enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
 
 ## Enchantments - Curses
-## TODO !!!!!!!!!!
-enchantment.starvation_curse=Curse of Starvation
-enchantment.gravestone-extended.gs_starvation_curse.desc=Applies hunger for 10 seconds per item
-enchantment.awkward_curse=Curse of Awkwardness
-enchantment.gravestone-extended.gs_awkward_curse.desc=Deals damage to yourself instead of enemy with 10 percent chance
-enchantment.fragility_curse=Curse of Fragility
-enchantment.gravestone-extended.gs_fragility_curse.desc=Item get additional damage at usage
-enchantment.broken_hook_curse=Curse of the Broken Hook
-enchantment.gravestone-extended.gs_broken_hook_curse.desc=Adds 30 percent chance to lose your catch
+enchantment.starvation_curse=Maldición de inanición
+enchantment.gravestone-extended.gs_starvation_curse.desc=Aplica hambre durante 10 segundos por item
+enchantment.awkward_curse=Maldición de torpeza
+enchantment.gravestone-extended.gs_awkward_curse.desc=Infingir daño a tí mismo en vez de al enemigo con un 10 por ciento de probabilidad
+enchantment.fragility_curse=Maldición de fragilidad
+enchantment.gravestone-extended.gs_fragility_curse.desc=El item recibe daño adicional al usarse
+enchantment.broken_hook_curse=Maldición del anzuelo roto 
+enchantment.gravestone-extended.gs_broken_hook_curse.desc=Añade un 30 por ciento de probabilidad de perder tu pesca
 
 # Potions
-## TODO !!!!!!!!!!!!
-potion.purification.title=Remove all negative effects
-potion.effect.gs_purification_type=Potion of Purification
-splash_potion.effect.gs_purification_type=Splash Potion of Purification
-lingering_potion.effect.gs_purification_type=Lingering Potion of Purification
-tipped_arrow.effect.gs_purification_type=Arrow of Purification
-potion.bone_skin.title=Bone Skin
-potion.effect.gs_bone_skin_type=Potion of Bone Skin
-splash_potion.effect.gs_bone_skin_type=Splash Potion of Bone Skin
-lingering_potion.effect.gs_bone_skin_type=Lingering Potion of Bone Skin
-tipped_arrow.effect.gs_bone_skin_type=Arrow of Bone Skin
-potion.rust.title=Rust
-potion.effect.gs_rust_type=Potion of Rust
-splash_potion.effect.gs_rust_type=Splash Potion of Rust
-lingering_potion.effect.gs_rust_type=Lingering Potion of Rust
-tipped_arrow.effect.gs_rust_type=Arrow of Rust
-potion.recall.title=Return back to home
-potion.effect.gs_recall_type=Recall Potion
-splash_potion.effect.gs_recall_type=Splash Recall Potion
-lingering_potion.effect.gs_recall_type=Lingering Recall Potion
-tipped_arrow.effect.gs_recall_type=Arrow of Recall
-potion.burning.title=Sets Target on Fire
-potion.effect.gs_burning_type=Potion of Burning
-splash_potion.effect.gs_burning_type=Splash Potion of Burning
-lingering_potion.effect.gs_burning_type=Lingering Potion of Burning
-tipped_arrow.effect.gs_burning_type=Arrow of Burning
-potion.bleeding.title=Bleeding
-potion.effect.gs_bleeding_type=Potion of Bleeding
-splash_potion.effect.gs_bleeding_type=Splash Potion of Bleeding
-lingering_potion.effect.gs_bleeding_type=Lingering Potion of Bleeding
-tipped_arrow.effect.gs_bleeding_type=Arrow of Bleeding
-potion.choke.title=Breathlessness
-potion.effect.gs_choke_type=Potion of Breathlessness
-splash_potion.effect.gs_choke_type=Splash Potion of Breathlessness
-lingering_potion.effect.gs_choke_type=Lingering Potion of Breathlessness
-tipped_arrow.effect.gs_choke_type=Arrow of Breathlessness
-potion.inferno.title=Inferno
-potion.effect.gs_inferno_type=Potion of Inferno
-splash_potion.effect.gs_inferno_type=Splash Potion of Inferno
-lingering_potion.effect.gs_inferno_type=Lingering Potion of Inferno
-tipped_arrow.effect.gs_inferno_type=Arrow of Inferno
-potion.cursed_inferno.title=Cursed Inferno
-potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
-splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno
-lingering_potion.effect.gs_cursed_inferno_type=Lingering Potion of Cursed Inferno
-tipped_arrow.effect.gs_cursed_inferno_type=Arrow of Cursed Inferno
-potion.cursed_flame.title=Cursed Flame
-potion.effect.gs_cursed_flame_type=Potion of Cursed Flame
-splash_potion.effect.gs_cursed_flame_type=Splash Potion of Cursed Flame
-lingering_potion.effect.gs_cursed_flame_type=Lingering Potion of Cursed Flame
-tipped_arrow.effect.gs_cursed_flame_type=Arrow of Cursed Flame
+potion.purification.title=Elimina todos los efectos negativos
+potion.effect.gs_purification_type=Poción de purificación
+splash_potion.effect.gs_purification_type=Poción de área de purificación
+lingering_potion.effect.gs_purification_type=Poción persistente de purificación
+tipped_arrow.effect.gs_purification_type=Flecha de purificación
+potion.bone_skin.title=Piel de hueso
+potion.effect.gs_bone_skin_type=Poción de piel de hueso
+splash_potion.effect.gs_bone_skin_type=Poción de área de piel de hueso
+lingering_potion.effect.gs_bone_skin_type=Poción persistente de piel de hueso
+tipped_arrow.effect.gs_bone_skin_type=Flecha de piel de hueso
+potion.rust.title=Óxido
+potion.effect.gs_rust_type=Poción de óxido
+splash_potion.effect.gs_rust_type=Poción de área de óxido
+lingering_potion.effect.gs_rust_type=Poción persistente de óxido
+tipped_arrow.effect.gs_rust_type=Flecha de óxido
+potion.recall.title=Volver al inicio
+potion.effect.gs_recall_type=Poción de retorno
+splash_potion.effect.gs_recall_type=Poción de retorno de área
+lingering_potion.effect.gs_recall_type=Poción de retorno persistente
+tipped_arrow.effect.gs_recall_type=Flecha de retorno
+potion.burning.title=Prende fuego al objetivo
+potion.effect.gs_burning_type=Poción de llamas
+splash_potion.effect.gs_burning_type=Poción de área de llamas
+lingering_potion.effect.gs_burning_type=Poción persistente de llamas
+tipped_arrow.effect.gs_burning_type=Flecha de llamas
+potion.bleeding.title=Sangrar
+potion.effect.gs_bleeding_type=Poción de sangrar
+splash_potion.effect.gs_bleeding_type=Poción de área de sangrar
+lingering_potion.effect.gs_bleeding_type=Poción persistente de sangrar
+tipped_arrow.effect.gs_bleeding_type=Flecha de sangrar
+potion.choke.title=Ahogo
+potion.effect.gs_choke_type=Poción de ahogo
+splash_potion.effect.gs_choke_type=Poción de área de ahogo
+lingering_potion.effect.gs_choke_type=Poción persistente de ahogo
+tipped_arrow.effect.gs_choke_type=Flecha de ahogo
+potion.inferno.title=Infierno
+potion.effect.gs_inferno_type=Poción de infierno
+splash_potion.effect.gs_inferno_type=Poción de área de infierno
+lingering_potion.effect.gs_inferno_type=Poción persistente de infierno
+tipped_arrow.effect.gs_inferno_type=Flecha de infierno
+potion.cursed_inferno.title=Infierno maldito
+potion.effect.gs_cursed_inferno_type=Poción de infierno maldito
+splash_potion.effect.gs_cursed_inferno_type=Poción de área de infierno maldito
+lingering_potion.effect.gs_cursed_inferno_type=Poción persistente de infierno maldito
+tipped_arrow.effect.gs_cursed_inferno_type=Flecha de infierno maldito
+potion.cursed_flame.title=Llama maldita
+potion.effect.gs_cursed_flame_type=Poción de llama maldita
+splash_potion.effect.gs_cursed_flame_type=Poción de área de llama maldita
+lingering_potion.effect.gs_cursed_flame_type=Poción persistente de llama maldita
+tipped_arrow.effect.gs_cursed_flame_type=Flecha de llama maldita
 
 # Vanilla Potions
-## TODO !!!!!!!!!!!!
-potion.effect.gs_hunger_type=Potion of Hunger
-splash_potion.effect.gs_hunger_type=Splash Potion of Hunger
-lingering_potion.effect.gs_hunger_type=Lingering Potion of Hunger
-tipped_arrow.effect.gs_hunger_type=Arrow of Hunger
-potion.effect.gs_blindness_type=Potion of Blindness
-splash_potion.effect.gs_blindness_type=Splash Potion of Blindness
-lingering_potion.effect.gs_blindness_type=Lingering Potion of Blindness
-tipped_arrow.effect.gs_blindness_type=Arrow of Blindness
-potion.effect.gs_nausea_type=Potion of Nausea
-splash_potion.effect.gs_nausea_type=Splash Potion of Nausea
-lingering_potion.effect.gs_nausea_type=Lingering Potion of Nausea
-tipped_arrow.effect.gs_nausea_type=Arrow of Nausea
-potion.effect.gs_resistance_type=Potion of Resistance
-splash_potion.effect.gs_resistance_type=Splash Potion of Resistance
-lingering_potion.effect.gs_resistance_type=Lingering Potion of Resistance
-tipped_arrow.effect.gs_resistance_type=Arrow of Resistance
-potion.effect.gs_levitation_type=Potion of Levitation
-splash_potion.effect.gs_levitation_type=Splash Potion of Levitation
-lingering_potion.effect.gs_levitation_type=Lingering Potion of Levitation
-tipped_arrow.effect.gs_levitation_type=Arrow of Levitation
-potion.effect.wither_type=Potion of Withering
-splash_potion.effect.wither_type=Splash Potion of Withering
-lingering_potion.effect.wither_type=Lingering Potion of Withering
-tipped_arrow.effect.wither_type=Arrow of Withering
+potion.effect.gs_hunger_type=Poción de hambre
+splash_potion.effect.gs_hunger_type=Poción de área de hambre
+lingering_potion.effect.gs_hunger_type=Poción persistente de hambre
+tipped_arrow.effect.gs_hunger_type=Flecha de hambre
+potion.effect.gs_blindness_type=Poción de ceguera
+splash_potion.effect.gs_blindness_type=Poción de área de ceguera
+lingering_potion.effect.gs_blindness_type=Poción persistente de ceguera
+tipped_arrow.effect.gs_blindness_type=Flecha de ceguera
+potion.effect.gs_nausea_type=Poción de náusea
+splash_potion.effect.gs_nausea_type=Poción de área de náusea
+lingering_potion.effect.gs_nausea_type=Poción persistente de náusea
+tipped_arrow.effect.gs_nausea_type=Flecha de náusea
+potion.effect.gs_resistance_type=Poción de resistencia
+splash_potion.effect.gs_resistance_type=Poción de área de resistencia
+lingering_potion.effect.gs_resistance_type=Poción persistente de resistencia
+tipped_arrow.effect.gs_resistance_type=Flecha de resistencia
+potion.effect.gs_levitation_type=Poción de levitación
+splash_potion.effect.gs_levitation_type=Poción de área de levitación
+lingering_potion.effect.gs_levitation_type=Poción persistente de levitación
+tipped_arrow.effect.gs_levitation_type=Flecha de levitación
+potion.effect.wither_type=Poción de marchitamiento
+splash_potion.effect.wither_type=Poción de área de marchitamiento
+lingering_potion.effect.wither_type=Poción persistente de marchitamiento
+tipped_arrow.effect.wither_type=Flecha de marchitamiento
 
 
 # Items
 ## Chisel
-##TODO !!!!!!!!!!
-item.gravestone.chisel.name=Gravestone Chisel
+item.gravestone.chisel.name=Cincel de lápida
 
 ## Fishing Pole
-## TODO !!!!!!!!!!
-item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
+item.gravestone.bone_fishing_pole.name=Caña de pescar de hueso
 
 ## Shovel
-## TODO !!!!!!!!!!
-item.gravestone.bone_shovel.name=Bone Shovel
-item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
-item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
-item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+item.gravestone.bone_shovel.name=Pala de hueso
+item.gravestone.bone_shovel_iron.name=Pala de hueso de hierro
+item.gravestone.bone_shovel_golden.name=Pala de hueso de oro
+item.gravestone.bone_shovel_diamond.name=Pala de hueso de diamante
 
 ## Pickaxe
-## TODO !!!!!!!!!!
-item.gravestone.bone_pickaxe.name=Bone Pickaxe
-item.gravestone.bone_pickaxe_iron.name=Iron Bone Pickaxe
-item.gravestone.bone_pickaxe_golden.name=Golden Bone Pickaxe
-item.gravestone.bone_pickaxe_diamond.name=Diamond Bone Pickaxe
+item.gravestone.bone_pickaxe.name=Pico de hueso
+item.gravestone.bone_pickaxe_iron.name=Pico de hueso de hierro
+item.gravestone.bone_pickaxe_golden.name=Pico de hueso de oro
+item.gravestone.bone_pickaxe_diamond.name=Pico de hueso de diamante
 
 ## Axe
-## TODO !!!!!!!!!!
-item.gravestone.bone_axe.name=Bone Axe
-item.gravestone.bone_axe_iron.name=Iron Bone Axe
-item.gravestone.bone_axe_golden.name=Golden Bone Axe
-item.gravestone.bone_axe_diamond.name=Diamond Bone Axe
+item.gravestone.bone_axe.name=Hacha de hueso
+item.gravestone.bone_axe_iron.name=Hacha de hueso de hierro
+item.gravestone.bone_axe_golden.name=Hacha de hueso de oro
+item.gravestone.bone_axe_diamond.name=Hacha de hueso de diamante
 
 ## Hoe
-## TODO !!!!!!!!!!
-item.gravestone.bone_hoe.name=Bone Hoe
-item.gravestone.bone_hoe_iron.name=Iron Bone Hoe
-item.gravestone.bone_hoe_golden.name=Golden Bone Hoe
-item.gravestone.bone_hoe_diamond.name=Diamond Bone Hoe
+item.gravestone.bone_hoe.name=Azada de hueso
+item.gravestone.bone_hoe_iron.name=Azada de hueso de hierro
+item.gravestone.bone_hoe_golden.name=Azada de hueso de oro
+item.gravestone.bone_hoe_diamond.name=Azada de hueso de diamante
 
 ## Swords
-## TODO !!!!!!!!!!
-item.gravestone.bone_sword.name=Bone Sword
-item.gravestone.bone_sword_iron.name=Iron Bone Sword
-item.gravestone.bone_sword_golden.name=Golden Bone Sword
-item.gravestone.bone_sword_diamond.name=Diamond Bone Sword
+item.gravestone.bone_sword.name=Espada de hueso
+item.gravestone.bone_sword_iron.name=Espada de hueso de hierro
+item.gravestone.bone_sword_golden.name=Espada de hueso de oro
+item.gravestone.bone_sword_diamond.name=Espada de hueso de diamante
 
 ## Shield
-item.gravestone.bone_shield.name=Escudo Hueso
+item.gravestone.bone_shield.name=Escudo de hueso
 
 ## Armor
-## TODO !!!!!!!!!!
-item.gravestone.diving_helmet.name=Diving Helmet
-item.gravestone.diving_helmet.tooltip=Provides unlimited breath under the water
-item.gravestone.diving_chestplate.name=Diving Chestplate
-item.gravestone.diving_leggings.name=Diving Leggings
-item.gravestone.diving_boots.name=Diving Boots
-item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
-item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
-item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
-item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
-item.gravestone.mummy_helmet.name=Mummy Mask
-item.gravestone.mummy_chestplate.name=Mummy Shirt
-item.gravestone.mummy_leggings.name=Mummy Pants
-item.gravestone.mummy_boots.name=Mummy Boots
+item.gravestone.diving_helmet.name=Escafandra
+item.gravestone.diving_helmet.tooltip=Permite respirar debajo del agua
+item.gravestone.diving_chestplate.name=Traje de buceo
+item.gravestone.diving_leggings.name=Pantalones de buceo
+item.gravestone.diving_boots.name=Aletas de buceo
+item.gravestone.swamp_thing_helmet.name=Máscara de la cosa del pantano
+item.gravestone.swamp_thing_chestplate.name=Camisa de la cosa del pantano
+item.gravestone.swamp_thing_leggings.name=Pantalones de la cosa del pantano
+item.gravestone.swamp_thing_boots.name=Botas de la cosa del pantano
+item.gravestone.mummy_helmet.name=Máscara de momia
+item.gravestone.mummy_chestplate.name=Camiseta de momia
+item.gravestone.mummy_leggings.name=Pantalones de momia
+item.gravestone.mummy_boots.name=Botas de momia
 
 ## Other Items
-## TODO !!!!!!!!!!
-item.gravestone.toxic_slime.name=Toxic Slime
+item.gravestone.toxic_slime.name=Slime tóxico
 item.gravestone.raven_feather.name=Raven Feather
-item.gravestone.raven_claws.name=Raven Claws
-item.gravestone.ooze.name=Ooze
-item.gravestone.piece_of_mummy_cloth.name=Piece of Mummy Cloth
-item.gravestone.piece_of_diving_suit.name=Piece of Diving Suit
-item.gravestone.bat_wing.name=Bat Wing
-item.gravestone.enchanted_skull.name=Enchanted Skull
-item.gravestone.enchanted_skull_withered.name=Enchanted Wither Skull
-item.gravestone.slime_chunk.name=Slime Chunk
-item.gravestone.imp_skull.name=Imp Skull
-item.gravestone.ender_skull.name=Ender Skull
-item.gravestone.frozen_mirror.name=Frozen Mirror
+item.gravestone.raven_claws.name=Garras de cuervo
+item.gravestone.ooze.name=Pringue
+item.gravestone.piece_of_mummy_cloth.name=Trozo de tela de momia
+item.gravestone.piece_of_diving_suit.name=Trozo de traje de buceo
+item.gravestone.bat_wing.name=Ala de murciélago
+item.gravestone.enchanted_skull.name=Calavera encantada
+item.gravestone.enchanted_skull_withered.name=Calavera encantada marchita
+item.gravestone.slime_chunk.name=Pedazo de slime
+item.gravestone.imp_skull.name=Cráneo de Imp
+item.gravestone.ender_skull.name=Cráneo de Ender
+item.gravestone.frozen_mirror.name=Espejo congelado
 
 
 ## Corpses
 item.corpse.steve=Cadáver Steve
-## TODO !!!!!!!!!!
-item.corpse.player=Player Corpse
+item.corpse.player=Cadáver Jugador
 item.corpse.villager=Cadáver Aldeano
 item.corpse.horse=Cadáver Caballo
 item.corpse.dog=Cadáver Perro
@@ -286,34 +258,33 @@ item.corpse.cat=Cadáver Gato
 item.corpse.zombie=Cadáver Zombi
 item.corpse.zombie_villager=Cadáver Aldeano Zombi
 item.corpse.skeleton=Cadáver Esqueleto
-## TODO !!!!!!!!!!
-item.corpse.witch=Witch Corpse
+item.corpse.witch=Cadáver Bruja
 item.corpse.entity_name=Name
-item.corpse.villager_type=Profession
-item.corpse.villager_type.farmer=Farmer
-item.corpse.villager_type.librarian=Librarian
-item.corpse.villager_type.priest=Priest
-item.corpse.villager_type.smith=Smith
-item.corpse.villager_type.butcher=Butcher
-item.corpse.villager_type.undertaker=Undertaker
-item.corpse.villager_type.brewer=Brewer
-item.corpse.villager_type.thaumaturge=Thaumaturge
-item.corpse.villager_type.beekeeper=Beekeeper
-item.corpse.villager_type.lumberjack=Lumberjack
-item.corpse.villager_type.unknown=Unknown
+item.corpse.villager_type=Profesión
+item.corpse.villager_type.farmer=Granjero
+item.corpse.villager_type.librarian=Biblotecario
+item.corpse.villager_type.priest=Monje
+item.corpse.villager_type.smith=Herrero
+item.corpse.villager_type.butcher=Carnicero
+item.corpse.villager_type.undertaker=Enterrador
+item.corpse.villager_type.brewer=Licorero
+item.corpse.villager_type.thaumaturge=Taumaturgo
+item.corpse.villager_type.beekeeper=Apicultor
+item.corpse.villager_type.lumberjack=Leñador
+item.corpse.villager_type.unknown=Desconocido
 item.corpse.villager_career=Career
 item.corpse.villager_career.unknown=Unknown
-item.corpse.horse_type=Horse Type
+item.corpse.horse_type=Tipo de caballo
 item.corpse.horse_type.horse=Caballo
-item.corpse.horse_type.donkey=Donkey
-item.corpse.horse_type.mule=Mule
-item.corpse.horse_type.zombie=Zombie Horse
-item.corpse.horse_type.skeleton=Skeleton Horse
-item.corpse.horse_type.unknown=Unknown
-item.corpse.horse_variant=Horse Variant
-item.corpse.health=Max Health
-item.corpse.speed=Speed
-item.corpse.jump_strength=Jump Strength
+item.corpse.horse_type.donkey=Burro
+item.corpse.horse_type.mule=Mula
+item.corpse.horse_type.zombie=Caballo zombie
+item.corpse.horse_type.skeleton=Caballo esqueleto
+item.corpse.horse_type.unknown=Desconocido
+item.corpse.horse_variant=Variante de caballo
+item.corpse.health=Salud máxima
+item.corpse.speed=Velocidad
+item.corpse.jump_strength=Fuerza del salto
 item.corpse.collar=Collar
 item.corpse.collar.white=Blanco
 item.corpse.collar.orange=Naranja
@@ -331,49 +302,46 @@ item.corpse.collar.brown=Marrón
 item.corpse.collar.green=Verde
 item.corpse.collar.red=Rojo
 item.corpse.collar.black=Negro
-item.corpse.collar.unknown=Unknown
-item.corpse.dog_type=Dog type
-item.corpse.cat_type=Cat type
+item.corpse.collar.unknown=Desconocido
+item.corpse.dog_type=Tipo de perro
+item.corpse.cat_type=Tipo de gato
 item.corpse.cat_type.ocelot=Ocelote
 item.corpse.cat_type.black=Negro
 item.corpse.cat_type.red=Rojo
 item.corpse.cat_type.siamese=Siamés
-item.corpse.cat_type.unknown=Unknown
+item.corpse.cat_type.unknown=Desconocido
 
 ## mobs type
-mobtype.title=Mob type
+mobtype.title=Tipo de mob
 mobtype.zombie=Zombi
 mobtype.skeleton=Esqueleto
-mobtype.ghost=Ghost
+mobtype.ghost=Fantasma
 mobtype.husk=Husk Zombie
 mobtype.stray=Stray Skeleton
 mobtype.wither=Esqueleto Wither
 mobtype.pigman=Hombrecerdo zombi
 
 ##Backpacks
-##TODO !!!!!!!!!!
-item.backpack.undertaker.t1=Undertaker's Backpack
-##TODO !!!!!!!!!!
-item.backpack.undertaker.t2=Undertaker's Woven Backpack
+item.backpack.undertaker.t1=Mochila del enterrador
+item.backpack.undertaker.t2=Mochila tejida del enterrador
 
 
 # GUI
 gui.edit_grave.title=Ponga nombre a la lapida
-##TODO !!!!!!!!!!
-gui.edit_grave.close=Done
-gui.edit_grave.randomText=Set random text
-gui.altar.resurrect=Resurrect
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
-gui.altar.requirements=%d levels required
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
-gui.chisel_crafting.grave_btn=Gravestone
+gui.edit_grave.close=Hecho
+gui.edit_grave.randomText=Poner nombre aleatorio
+gui.altar.resurrect=Resucitar
+gui.altar.enchant=Encantar
+gui.altar.disenchant=Desencantar
+gui.altar.requirements=%d niveles requeridos
+gui.altar.tab.resurrection=Resurrección
+gui.altar.tab.enchanting=Encantamiento
+gui.altar.tab.disenchanting=Desencantamiento
+gui.chisel_crafting.grave_btn=Lápida
 gui.chisel_crafting.memorial_btn=Memorial
-gui.chisel_crafting.enchanted_btn=Enchanted
-gui.chisel_crafting.mossy_btn=Mossy
-gui.chisel_crafting.recipe=Required items
+gui.chisel_crafting.enchanted_btn=Encantada
+gui.chisel_crafting.mossy_btn=Musgosa
+gui.chisel_crafting.recipe=Items requeridos
 
 
 # Entity
@@ -382,41 +350,32 @@ entity.GSSkeletonDog.name=Perro Esqueleto
 entity.GSZombieCat.name=Gato Zombi
 entity.GSSkeletonCat.name=Gato Esqueleto
 entity.GSSkullCrawler.name=Arranca cráneos
-##TODO !!!!!!!!!!
-entity.GSStraySkullCrawler.name=Stray Skull Crawler
+entity.GSStraySkullCrawler.name=Arranca Cráneos Sray
 entity.GSWitherSkullCrawler.name=Arranca Cráneos Wither
 entity.GSZombieSkullCrawler.name=Arranca Cráneos Zombi
-##TODO !!!!!!!!!!
-entity.GSHuskSkullCrawler.name=Husk Skull Crawler
+entity.GSHuskSkullCrawler.name=Arranca Cráneos Husk
 entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Cuervo
-##TODO !!!!!!!!!!
-entity.GSSkeletonRaider.name=Skeleton Raider
-##TODO !!!!!!!!!!
-entity.GSZombieRaider.name=Zombie Raider
+entity.GSSkeletonRaider.name=Asaltante Esqueleto
+entity.GSZombieRaider.name=Asaltante Zombi
 entity.GSSkeleton.name=Esqueleto
-##TODO !!!!!!!!!!
-entity.Villager.gravestone-extended:undertaker=Undertaker
-## TODO !!!!!!!!!!
-entity.GSToxicSludge.name=Toxic Sludge
-entity.GSPossessedArmor.name=Possessed Armor
-entity.GSMummy.name=Mummy
-entity.GSDrowned.name=Drowned
-entity.GSPhantomDiver.name=Phantom Diver
-entity.GSVampireBat.name=Vampire Bat
-entity.GSWitheredBat.name=Withered Bat
+entity.Villager.gravestone-extended:undertaker=Enterrador
+entity.GSToxicSludge.name=Lodo tóxico
+entity.GSPossessedArmor.name=Armadura poseída
+entity.GSMummy.name=Momia
+entity.GSDrowned.name=Ahogado
+entity.GSPhantomDiver.name=Buceador fantasma
+entity.GSVampireBat.name=Murciélago vampiro
+entity.GSWitheredBat.name=Murciélago marchito
 entity.GSBarghest.name=Barghest
-entity.GSSwampThing.name=Swamp Thing
+entity.GSSwampThing.name=Cosa del pantano
 
 # Fluids
-## TODO !!!!!!!!!!
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
+tile.gs_toxic_water.name=Agua tóxica
+fluid.gs_toxic_water=Agua tóxica
 
 
 # Console messages
 ## Console commands
-##TODO !!!!!!!!!!
-commands.direction_error=Direction error!
-##TODO !!!!!!!!!!
-commands.generate.unknown_structure=Unknown structure!
+commands.direction_error=Error de dirección!
+commands.generate.unknown_structure=Estructura desconocida!
