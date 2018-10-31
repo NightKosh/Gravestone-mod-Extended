@@ -10,8 +10,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.pathfinding.PathNavigate;
-import net.minecraft.pathfinding.PathNavigateFlying;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
@@ -36,8 +34,8 @@ public class EntityRaven extends EntityShoulderRiding implements EntityFlying {
         super(worldIn);
         this.setSize(0.5F, 0.9F);
 
-        this.moveHelper = new EntityFlyHelper(this);
-//        ((PathNavigateGround) this.getNavigator()).setCanSwim(true);
+//        this.moveHelper = new EntityMoveHelper(this);//new EntityFlyHelper(this);
+//        this.moveHelper = new EntityFlyHelper(this);
 //        this.moveHelper = new EntityRavenMoveHelper(this);//TODO !!!
     }
 
@@ -47,33 +45,33 @@ public class EntityRaven extends EntityShoulderRiding implements EntityFlying {
 
         this.tasks.addTask(0, new EntityAISwimming(this));
 
-        this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 20));
-        this.tasks.addTask(1, new EntityAIAvoidEntity(this, EntityPlayer.class, 6, 1, 1.2));
 //        this.tasks.addTask(1, new EntityAIAvoidEntityNotTamed(this, EntityPlayer.class, 6, 1, 1.2));
+        this.tasks.addTask(1, new EntityAIAvoidEntity(this, EntityPlayer.class, 10, 1, 1.2));
         this.tasks.addTask(2, this.aiSit);
 //        this.tasks.addTask(2, new EntityAITempt(this, 0.9, Items.ROTTEN_FLESH, true));//TODO !!!
 
-        this.tasks.addTask(2, new EntityAIFollowOwnerFlying(this, 1, 5, 1));
-        this.tasks.addTask(2, new EntityAIWanderAvoidWaterFlying(this, 1));
-//        this.tasks.addTask(3, new EntityAILandOnOwnersShoulder(this));//TODO !!!
-        this.tasks.addTask(3, new EntityAIFollow(this, 1, 3, 7));
-        this.tasks.addTask(5, new EntityAIWander(this, 1));
-        this.tasks.addTask(7, new EntityAILookIdle(this));
+//        this.tasks.addTask(2, new EntityAIFollowOwnerFlying(this, 1, 5, 1));
+//        this.tasks.addTask(2, new EntityAIWanderAvoidWaterFlying(this, 1));
+////        this.tasks.addTask(3, new EntityAILandOnOwnersShoulder(this));//TODO !!!
+////        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 20));
+//        this.tasks.addTask(4, new EntityAIFollow(this, 1, 3, 7));
+//        this.tasks.addTask(5, new EntityAIWander(this, 1));
+//        this.tasks.addTask(7, new EntityAILookIdle(this));
 
 //        this.tasks.addTask(8, new AIRavenFly(this));//TODO !!!
 
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, new Class[]{EntityRaven.class}));
     }
 
-    @Override
-    protected PathNavigate createNavigator(World worldIn) {
-        PathNavigateFlying path = new PathNavigateFlying(this, worldIn);
-        path.setCanOpenDoors(false);
-        path.setCanFloat(true);
-        path.setCanEnterDoors(true);
-
-        return path;
-    }
+//    @Override
+//    protected PathNavigate createNavigator(World worldIn) {
+//        PathNavigateFlying path = new PathNavigateFlying(this, worldIn);
+//        path.setCanOpenDoors(false);
+//        path.setCanFloat(true);
+//        path.setCanEnterDoors(true);
+//
+//        return path;
+//    }
 
     @Override
     protected void applyEntityAttributes() {

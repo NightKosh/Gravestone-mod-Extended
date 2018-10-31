@@ -270,6 +270,8 @@ item.gravestone.enchanted_skull_withered.name=Enchanted Wither Skull
 item.gravestone.slime_chunk.name=Slime Chunk
 item.gravestone.imp_skull.name=Imp Skull
 item.gravestone.ender_skull.name=Ender Skull
+item.gravestone.cemetery_key.player=Cemetery Key
+item.gravestone.cemetery_key.server=Server Cemetery Key
 item.gravestone.frozen_mirror.name=Frozen Mirror
 
 ## Corpses
@@ -416,8 +418,15 @@ fluid.gs_toxic_water=Toxic Water
 
 
 # Console messages
+##TODO !!!!!!!!!!
+message.cemetery_key.activated=This key was activated by
+message.cemetery_key.cant_use=You can't use this key!
+message.cemetery_key.bounded=Your soul is bounded to this cemetery!
+message.cemetery_key.bounded.pet=Your pet's souls is bounded to this cemetery!
+message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
+message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
+
 ## Console commands
 ##TODO !!!!!!!!!!
 commands.direction_error=Direction error!
-##TODO !!!!!!!!!!
 commands.generate.unknown_structure=Unknown structure!

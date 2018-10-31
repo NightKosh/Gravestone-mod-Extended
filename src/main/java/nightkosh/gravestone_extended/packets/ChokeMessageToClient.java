@@ -5,8 +5,8 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
-import nightkosh.gravestone_extended.capability.ChokeProvider;
-import nightkosh.gravestone_extended.capability.IChoke;
+import nightkosh.gravestone_extended.capability.choke.ChokeProvider;
+import nightkosh.gravestone_extended.capability.choke.IChoke;
 
 /**
  * GraveStone mod

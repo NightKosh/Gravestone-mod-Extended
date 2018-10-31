@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone-extended:item/cemetery_key/player",
+	"textures": {
+		"0": "gravestone-extended:items/cemetery_key/server",
+		"particle": "gravestone-extended:items/cemetery_key/server"
+	}
+}

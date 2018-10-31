@@ -5,7 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import nightkosh.gravestone_extended.capability.ChokeProvider;
+import nightkosh.gravestone_extended.capability.choke.ChokeProvider;
 
 /**
  * GraveStone mod

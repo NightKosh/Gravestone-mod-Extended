@@ -120,6 +120,9 @@ public class GSModels {
             ModelLoader.setCustomModelResourceLocation(GSItem.IMP_SKULL, 0, ResourcesModels.IMP_SKULL);
             ModelLoader.setCustomModelResourceLocation(GSItem.ENDER_SKULL, 0, ResourcesModels.ENDER_SKULL);
 
+            ModelLoader.setCustomModelResourceLocation(GSItem.CEMETERY_KEY, 0, ResourcesModels.CEMETERY_KEY_PLAYER);
+            ModelLoader.setCustomModelResourceLocation(GSItem.CEMETERY_KEY, 1, ResourcesModels.CEMETERY_KEY_SERVER);
+
             ModelLoader.setCustomModelResourceLocation(GSItem.FROZEN_MIRROR, 0, ResourcesModels.FROZEN_MIRROR);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.DIVING_HELMET, 0, ResourcesModels.DIVING_HELMET);

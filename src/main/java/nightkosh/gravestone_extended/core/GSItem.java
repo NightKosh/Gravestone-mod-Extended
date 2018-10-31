@@ -99,6 +99,8 @@ public class GSItem {
     public static final Item IMP_SKULL = new ItemImpSkull();
     public static final Item ENDER_SKULL = new ItemEnderSkull();
 
+    public static final Item CEMETERY_KEY = new ItemCemeteryKey();
+
     public static final Item FROZEN_MIRROR = new ItemFrozenMirror();
 
     public static final Item TOXIC_SLIME = new ItemToxicSlime();
@@ -117,7 +119,7 @@ public class GSItem {
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             final IForgeRegistry<Item> registry = event.getRegistry();
             registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
-            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, FROZEN_MIRROR);
+            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY, FROZEN_MIRROR);
             registry.registerAll(CHISEL, BONE_FISHING_POLE,
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,

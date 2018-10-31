@@ -13,9 +13,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import nightkosh.gravestone.tileentity.TileEntityGraveStone;
-import nightkosh.gravestone_extended.capability.Choke;
-import nightkosh.gravestone_extended.capability.ChokeStorage;
-import nightkosh.gravestone_extended.capability.IChoke;
+import nightkosh.gravestone_extended.capability.cemetery.Cemetery;
+import nightkosh.gravestone_extended.capability.cemetery.CemeteryStorage;
+import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
+import nightkosh.gravestone_extended.capability.choke.Choke;
+import nightkosh.gravestone_extended.capability.choke.ChokeStorage;
+import nightkosh.gravestone_extended.capability.choke.IChoke;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.core.commands.ExtendedCommands;
@@ -23,6 +26,7 @@ import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.event.GSEventsHandler;
 import nightkosh.gravestone_extended.core.event.TickEventHandler;
 import nightkosh.gravestone_extended.core.proxy.CommonProxy;
+import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.FogHandler;
 import nightkosh.gravestone_extended.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveSpawnerHelper;
@@ -35,7 +39,7 @@ import nightkosh.gravestone_extended.structures.village.VillagersHandler;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION,
-        dependencies = "required-after:" + nightkosh.gravestone.api.ModInfo.ID + "@[1.2.0,);required-after:" + nightkosh.advanced_fishing.api.ModInfo.ID + "@[1.3.2,);after:forestry")
+        dependencies = "required-after:" + nightkosh.gravestone.api.ModInfo.ID + "@[1.3.1,);required-after:" + nightkosh.advanced_fishing.api.ModInfo.ID + "@[1.3.2,);after:forestry")
 public class ModGravestoneExtended {
 
     @Instance(ModInfo.ID)
@@ -63,6 +67,7 @@ public class ModGravestoneExtended {
         GSTileEntity.registration();
 
         CapabilityManager.INSTANCE.register(IChoke.class, new ChokeStorage(), Choke.class);
+        CapabilityManager.INSTANCE.register(ICemetery.class, new CemeteryStorage(), Cemetery.class);
 
         GSLootTables.registration();
 
@@ -100,6 +105,8 @@ public class ModGravestoneExtended {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         Compatibility.INSTANCE.checkMods();
+
+        CemeteryHelper.addGravePositionHandlers();
 
         GraveGenerationHelper.addMobsItemsHandlers();
 

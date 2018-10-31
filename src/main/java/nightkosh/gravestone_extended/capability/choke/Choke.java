@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.capability;
+package nightkosh.gravestone_extended.capability.choke;
 
 /**
  * GraveStone mod

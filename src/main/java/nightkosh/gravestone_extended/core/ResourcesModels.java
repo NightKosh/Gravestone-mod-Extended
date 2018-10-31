@@ -84,6 +84,9 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation IMP_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/imp_skull/" + GSItem.IMP_SKULL.getRegistryName().getResourcePath(), "inventory");
     public static final ModelResourceLocation ENDER_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/ender_skull/" + GSItem.ENDER_SKULL.getRegistryName().getResourcePath(), "inventory");
 
+    public static final ModelResourceLocation CEMETERY_KEY_PLAYER = new ModelResourceLocation(ModInfo.ID + ":cemetery_key/player", "inventory");
+    public static final ModelResourceLocation CEMETERY_KEY_SERVER = new ModelResourceLocation(ModInfo.ID + ":cemetery_key/server", "inventory");
+
     public static final ModelResourceLocation FROZEN_MIRROR = new ModelResourceLocation(GSItem.FROZEN_MIRROR.getRegistryName(), "inventory");
 
     // blocks

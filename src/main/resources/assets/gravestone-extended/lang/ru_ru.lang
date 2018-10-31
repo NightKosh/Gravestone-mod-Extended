@@ -245,6 +245,8 @@ item.gravestone.enchanted_skull_withered.name=Зачарованный чере�
 item.gravestone.slime_chunk.name=Кусок слизи
 item.gravestone.imp_skull.name=Череп беса
 item.gravestone.ender_skull.name=Череп края
+item.gravestone.cemetery_key.player=Ключ от кладбища
+item.gravestone.cemetery_key.server=Ключ от кладбища сервера
 item.gravestone.frozen_mirror.name=Ледяное зеркало
 
 ## Corpses
@@ -377,6 +379,13 @@ fluid.gs_toxic_water=Токсичная вода
 
 
 # Console messages
+message.cemetery_key.activated=Ключ был активирован игроком
+message.cemetery_key.cant_use=Ты не можешь использовать этот ключ!
+message.cemetery_key.bounded=Твоя душа привязана к этому кладбищу!
+message.cemetery_key.bounded.pet=Души твоих питомцев привязаны к этому кладбищу!
+message.cemetery_key.bounded_server=Души всех игроков на сервере привязаны к этому кладбищу!
+message.cemetery_key.bounded_server.pet=Души всех питомцев на сервере привязаны к этому кладбищу!
+
 ## Console commands
 commands.direction_error=Введено не корректное направление!
 commands.generate.unknown_structure=Введён не известный тип строения!
