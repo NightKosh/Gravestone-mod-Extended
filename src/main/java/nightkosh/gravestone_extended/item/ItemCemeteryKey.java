@@ -65,8 +65,10 @@ public class ItemCemeteryKey extends Item {
 
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
-        items.add(new ItemStack(this, 1, 0));
-        items.add(new ItemStack(this, 1, 1));
+        if (this.isInCreativeTab(tab)) {
+            items.add(new ItemStack(this, 1, 0));
+            items.add(new ItemStack(this, 1, 1));
+        }
     }
 
     @Override
@@ -83,33 +85,33 @@ public class ItemCemeteryKey extends Item {
         if (stack.getMetadata() == 0) {
             NBTTagCompound nbt = stack.getTagCompound();
             if (nbt.hasKey("Owner")) {
-                tooltip.add(I18n.translateToLocal("message.cemetery_key.activated") + " " + nbt.getString("Owner"));//TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                tooltip.add(I18n.translateToLocal("message.cemetery_key.activated") + " " + nbt.getString("Owner"));
             }
         }
     }
 
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-        ItemStack stack = player.getHeldItem(hand);
-        if (!stack.hasTagCompound()) {
-            stack.setTagCompound(new NBTTagCompound());
-        }
+        if (!world.isRemote) {
+            ItemStack stack = player.getHeldItem(hand);
+            if (!stack.hasTagCompound()) {
+                stack.setTagCompound(new NBTTagCompound());
+            }
 
-        boolean isPlayerKey = stack.getMetadata() == 0;
-        NBTTagCompound nbt = stack.getTagCompound();
-        if (!nbt.hasKey("Owner") || nbt.getString("Owner").equals(player.getName())) {
-            IBlockState state = world.getBlockState(pos);
-            if (state.getBlock().equals(GSBlock.MEMORIAL)) {
-                TileEntityMemorial te = (TileEntityMemorial) world.getTileEntity(pos);
-                if (te != null) {
-                    ICemetery cemetery;
-                    if (isPlayerKey) {
-                        cemetery = player.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                    } else {
-                        cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                    }
+            boolean isPlayerKey = stack.getMetadata() == 0;
+            NBTTagCompound nbt = stack.getTagCompound();
+            if (!nbt.hasKey("Owner") || nbt.getString("Owner").equals(player.getName())) {
+                IBlockState state = world.getBlockState(pos);
+                if (state.getBlock().equals(GSBlock.MEMORIAL)) {
+                    TileEntityMemorial te = (TileEntityMemorial) world.getTileEntity(pos);
+                    if (te != null) {
+                        ICemetery cemetery;
+                        if (isPlayerKey) {
+                            cemetery = player.getCapability(CemeteryProvider.CEMETERY_CAP, null);
+                        } else {
+                            cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
+                        }
 
-                    if (cemetery != null) {
                         EnumFacing facing = state.getValue(BlockMemorial.FACING);
                         EnumMemorials.EnumMemorialType type = te.getMemorialType().getMemorialType();
 
@@ -130,7 +132,6 @@ public class ItemCemeteryKey extends Item {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded"));
                             }
                             nbt.setString("Owner", player.getName());
-//                        stack.setTagCompound(nbt);
                         } else {
                             if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded_server.pet"));
@@ -138,13 +139,12 @@ public class ItemCemeteryKey extends Item {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded_server"));
                             }
                         }
-//                      updateChoke(entity, cemetery);
                         return EnumActionResult.SUCCESS;
                     }
                 }
+            } else {
+                player.sendMessage(new TextComponentTranslation("message.cemetery_key.cant_use").setStyle(new Style().setColor(TextFormatting.RED)));
             }
-        } else {
-            player.sendMessage(new TextComponentTranslation("message.cemetery_key.cant_use").setStyle(new Style().setColor(TextFormatting.RED)));
         }
 
         return EnumActionResult.FAIL;

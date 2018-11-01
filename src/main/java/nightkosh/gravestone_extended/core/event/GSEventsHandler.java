@@ -23,6 +23,7 @@ import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -45,6 +46,7 @@ import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityStraySkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityWitherSkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityZombieSkullCrawler;
+import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneShiled;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
 import nightkosh.gravestone_extended.item.weapon.ItemBoneShield;
@@ -59,6 +61,12 @@ import org.lwjgl.opengl.GL11;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class GSEventsHandler {
+
+    public void onPlayerClone(PlayerEvent.Clone event) {
+        if (event.isWasDeath()) {
+            CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntityPlayer());
+        }
+    }
 
     // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness
     @SubscribeEvent(priority = EventPriority.LOWEST)

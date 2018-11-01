@@ -24,6 +24,23 @@ import nightkosh.gravestone_extended.core.GSBlock;
  */
 public class CemeteryHelper {
 
+    public static void cloneCemetery(EntityPlayer playerOln, EntityPlayer playerNew) {
+        ICemetery cemeteryOld = playerOln.getCapability(CemeteryProvider.CEMETERY_CAP, null);
+        ICemetery cemeteryNew = playerNew.getCapability(CemeteryProvider.CEMETERY_CAP, null);
+
+        if (cemeteryOld.hasPlayerCemetery()) {
+            cemeteryNew.setPlayerCemetery(true);
+            cemeteryNew.setPlayerPosition(cemeteryOld.getPlayerPosition());
+            cemeteryNew.setPlayerFacing(cemeteryOld.getPlayerFacing());
+        }
+
+        if (cemeteryOld.hasPetCemetery()) {
+            cemeteryNew.setPetCemetery(true);
+            cemeteryNew.setPetPosition(cemeteryOld.getPetPosition());
+            cemeteryNew.setPetFacing(cemeteryOld.getPetFacing());
+        }
+    }
+
     public static void addGravePositionHandlers() {
         //player player cemetery
         GraveStoneAPI.graveGenerationAtDeath.addGravePositionHandler(new IGravePositionHandler() {
@@ -33,7 +50,7 @@ public class CemeteryHelper {
                 if (entity instanceof EntityPlayer) {
                     ICemetery cemetery = entity.getCapability(CemeteryProvider.CEMETERY_CAP, null);
                     if (cemetery.hasPlayerCemetery()) {
-                        if (world.getBlockState(cemetery.getPetPosition()).getBlock() == GSBlock.MEMORIAL) {
+                        if (world.getBlockState(cemetery.getPlayerPosition()).getBlock() == GSBlock.MEMORIAL) {
                             return true;
                         } else {
                             cemetery.setPlayerCemetery(false);
@@ -103,7 +120,7 @@ public class CemeteryHelper {
                 if (entity instanceof EntityPlayer) {
                     ICemetery cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
                     if (cemetery.hasPlayerCemetery()) {
-                        if (world.getBlockState(cemetery.getPetPosition()).getBlock() == GSBlock.MEMORIAL) {
+                        if (world.getBlockState(cemetery.getPlayerPosition()).getBlock() == GSBlock.MEMORIAL) {
                             return true;
                         } else {
                             cemetery.setPlayerCemetery(false);

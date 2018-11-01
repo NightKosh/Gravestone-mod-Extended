@@ -11,13 +11,15 @@ import net.minecraft.util.math.BlockPos;
  */
 public class Cemetery implements ICemetery {
 
+    private static final BlockPos DEFAULT_POS = new BlockPos(0, 0, 0);
+
     private boolean hasPlayerCemetery = false;
-    private BlockPos playerPos = null;
-    private EnumFacing playerFacing = null;
+    private BlockPos playerPos = DEFAULT_POS;
+    private EnumFacing playerFacing = EnumFacing.NORTH;
 
     private boolean hasPetCemetery = false;
-    private BlockPos petPos = null;
-    private EnumFacing petFacing = null;
+    private BlockPos petPos = DEFAULT_POS;
+    private EnumFacing petFacing = EnumFacing.NORTH;
 
     @Override
     public boolean hasPlayerCemetery() {
