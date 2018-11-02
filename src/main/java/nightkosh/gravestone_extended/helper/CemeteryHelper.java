@@ -104,12 +104,12 @@ public class CemeteryHelper {
 
             @Override
             public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return getGravePos(world, entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetPosition(), false, false);
+                return getGravePos(world, ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetPosition(), false, false);
             }
 
             @Override
             public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetFacing();
+                return ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetFacing();
             }
         });
 
