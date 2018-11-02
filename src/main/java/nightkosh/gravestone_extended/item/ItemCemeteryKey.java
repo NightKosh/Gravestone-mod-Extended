@@ -22,11 +22,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.block.BlockMemorial;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
 import nightkosh.gravestone_extended.capability.cemetery.CemeteryInfo;
-import nightkosh.gravestone_extended.capability.cemetery.CemeteryProvider;
 import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.tileentity.TileEntityMemorial;
 
 import javax.annotation.Nullable;
@@ -108,12 +108,7 @@ public class ItemCemeteryKey extends Item {
                 if (state.getBlock().equals(GSBlock.MEMORIAL)) {
                     TileEntityMemorial te = (TileEntityMemorial) world.getTileEntity(pos);
                     if (te != null) {
-                        ICemetery cemetery;
-                        if (isPlayerKey) {
-                            cemetery = player.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                        } else {
-                            cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                        }
+                        ICemetery cemetery = CemeteryHelper.getCemeteryCapability(isPlayerKey ? player : world);
 
                         EnumFacing facing = state.getValue(BlockMemorial.FACING);
                         EnumMemorials.EnumMemorialType type = te.getMemorialType().getMemorialType();
