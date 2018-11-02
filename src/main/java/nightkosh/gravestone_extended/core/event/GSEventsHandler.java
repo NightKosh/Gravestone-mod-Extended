@@ -62,6 +62,7 @@ import org.lwjgl.opengl.GL11;
  */
 public class GSEventsHandler {
 
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerClone(PlayerEvent.Clone event) {
         if (event.isWasDeath()) {
             CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntityPlayer());
