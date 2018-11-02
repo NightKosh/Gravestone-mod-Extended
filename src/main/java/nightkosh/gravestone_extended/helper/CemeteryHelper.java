@@ -19,6 +19,7 @@ import nightkosh.gravestone_extended.core.GSBlock;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * GraveStone mod
@@ -27,6 +28,8 @@ import java.util.List;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class CemeteryHelper {
+
+    private static final Random rnd = new Random();
 
     public static void cloneCemetery(EntityPlayer playerOln, EntityPlayer playerNew) {
         ICemetery cemeteryOld = playerOln.getCapability(CemeteryProvider.CEMETERY_CAP, null);
@@ -182,7 +185,7 @@ public class CemeteryHelper {
 
         int size;
         if (isServer) {
-            size = playerCemetery ? CEMETERY_SIZE_PLAYER_SERVER : CEMETERY_SIZE_PET_SERVER;//TODO server
+            size = playerCemetery ? CEMETERY_SIZE_PLAYER_SERVER : CEMETERY_SIZE_PET_SERVER;
         } else {
             size = playerCemetery ? CEMETERY_SIZE_PLAYER : CEMETERY_SIZE_PET;
         }
@@ -205,7 +208,7 @@ public class CemeteryHelper {
         if (list.isEmpty()) {
             return null;
         } else {
-            return list.get(world.rand.nextInt(list.size()));
+            return list.get(rnd.nextInt(list.size()));
         }
     }
 
@@ -213,9 +216,10 @@ public class CemeteryHelper {
         x = cemeteryPos.getX() + x;
         z = cemeteryPos.getZ() + z;
 
-        int y = GraveGenerationHelper.getGround(world, x, cemeteryPos.getY(), z);
-        if (GraveGenerationHelper.canGenerateGraveAtCoordinates(world, new BlockPos(x, y, z))) {
-            list.add(new BlockPos(x, y, z));
+        int y = GraveGenerationHelper.getGround(world, x, cemeteryPos.getY() + 10, z);
+        BlockPos pos = new BlockPos(x, y, z);
+        if (GraveGenerationHelper.canGenerateGraveAtCoordinates(world, pos)) {
+            list.add(pos);
         }
     }
 }
