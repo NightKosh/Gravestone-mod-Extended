@@ -386,7 +386,7 @@ fluid.gs_toxic_water=Água Tóxica
 message.cemetery_key.activated=This key was activated by
 message.cemetery_key.cant_use=You can't use this key!
 message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls is bounded to this cemetery!
+message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
 message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
 message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
 
