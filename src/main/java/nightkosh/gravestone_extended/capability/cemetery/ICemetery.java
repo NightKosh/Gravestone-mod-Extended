@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.capability.cemetery;
 
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
-
 /**
  * GraveStone mod
  *
@@ -11,29 +8,11 @@ import net.minecraft.util.math.BlockPos;
  */
 public interface ICemetery {
 
-    public boolean hasPlayerCemetery();
+    public CemeteryInfo getPlayerCemetery();
 
-    public void setPlayerCemetery(boolean hasCemetery);
+    public void setPlayerCemetery(CemeteryInfo cemetery);
 
-    public void setPlayerPosition(BlockPos pos);
+    public CemeteryInfo getPetCemetery();
 
-    public BlockPos getPlayerPosition();
-
-    public void setPlayerFacing(EnumFacing facing);
-
-    public EnumFacing getPlayerFacing();
-
-
-
-    public boolean hasPetCemetery();
-
-    public void setPetCemetery(boolean hasCemetery);
-
-    public void setPetPosition(BlockPos pos);
-
-    public BlockPos getPetPosition();
-
-    public void setPetFacing(EnumFacing facing);
-
-    public EnumFacing getPetFacing();
+    public void setPetCemetery(CemeteryInfo cemetery);
 }

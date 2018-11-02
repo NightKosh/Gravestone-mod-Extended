@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import nightkosh.gravestone.api.GraveStoneAPI;
 import nightkosh.gravestone.api.grave_position.IGravePositionHandler;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
+import nightkosh.gravestone_extended.capability.cemetery.CemeteryInfo;
 import nightkosh.gravestone_extended.capability.cemetery.CemeteryProvider;
 import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
 import nightkosh.gravestone_extended.core.GSBlock;
@@ -35,17 +36,8 @@ public class CemeteryHelper {
         ICemetery cemeteryOld = playerOln.getCapability(CemeteryProvider.CEMETERY_CAP, null);
         ICemetery cemeteryNew = playerNew.getCapability(CemeteryProvider.CEMETERY_CAP, null);
 
-        if (cemeteryOld.hasPlayerCemetery()) {
-            cemeteryNew.setPlayerCemetery(true);
-            cemeteryNew.setPlayerPosition(cemeteryOld.getPlayerPosition());
-            cemeteryNew.setPlayerFacing(cemeteryOld.getPlayerFacing());
-        }
-
-        if (cemeteryOld.hasPetCemetery()) {
-            cemeteryNew.setPetCemetery(true);
-            cemeteryNew.setPetPosition(cemeteryOld.getPetPosition());
-            cemeteryNew.setPetFacing(cemeteryOld.getPetFacing());
-        }
+        cemeteryNew.setPlayerCemetery(cemeteryOld.getPlayerCemetery());
+        cemeteryNew.setPetCemetery(cemeteryOld.getPetCemetery());
     }
 
     public static void addGravePositionHandlers() {
@@ -56,25 +48,19 @@ public class CemeteryHelper {
             public boolean condition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
                 if (entity instanceof EntityPlayer) {
                     ICemetery cemetery = entity.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                    if (cemetery.hasPlayerCemetery()) {
-                        if (world.getBlockState(cemetery.getPlayerPosition()).getBlock() == GSBlock.MEMORIAL) {
-                            return true;
-                        } else {
-                            cemetery.setPlayerCemetery(false);
-                        }
-                    }
+                    return checkCondition(world, cemetery, cemetery.getPlayerCemetery());
                 }
                 return false;
             }
 
             @Override
             public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return getGravePos(world, entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerPosition(), false, true);
+                return getGravePos(world, entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerCemetery().getPosition(), false, true);
             }
 
             @Override
             public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerFacing();
+                return entity.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerCemetery().getFacing();
             }
         });
 
@@ -89,13 +75,7 @@ public class CemeteryHelper {
                         EntityLivingBase owner = pet.getOwner();
                         if (owner != null && owner instanceof EntityPlayer) {
                             ICemetery cemetery = owner.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                            if (cemetery.hasPetCemetery()) {
-                                if (world.getBlockState(cemetery.getPetPosition()).getBlock() == GSBlock.MEMORIAL) {
-                                    return true;
-                                } else {
-                                    cemetery.setPetCemetery(false);
-                                }
-                            }
+                            return checkCondition(world, cemetery, cemetery.getPetCemetery());
                         }
                     }
                 }
@@ -104,12 +84,12 @@ public class CemeteryHelper {
 
             @Override
             public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return getGravePos(world, ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetPosition(), false, false);
+                return getGravePos(world, ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetCemetery().getPosition(), false, false);
             }
 
             @Override
             public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetFacing();
+                return ((EntityTameable) entity).getOwner().getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetCemetery().getFacing();
             }
         });
 
@@ -120,25 +100,19 @@ public class CemeteryHelper {
             public boolean condition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
                 if (entity instanceof EntityPlayer) {
                     ICemetery cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                    if (cemetery.hasPlayerCemetery()) {
-                        if (world.getBlockState(cemetery.getPlayerPosition()).getBlock() == GSBlock.MEMORIAL) {
-                            return true;
-                        } else {
-                            cemetery.setPlayerCemetery(false);
-                        }
-                    }
+                    return checkCondition(world, cemetery, cemetery.getPlayerCemetery());
                 }
                 return false;
             }
 
             @Override
             public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return getGravePos(world, world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerPosition(), true, true);
+                return getGravePos(world, world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerCemetery().getPosition(), true, true);
             }
 
             @Override
             public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerFacing();
+                return world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPlayerCemetery().getFacing();
             }
         });
 
@@ -149,27 +123,32 @@ public class CemeteryHelper {
             public boolean condition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
                 if (entity instanceof EntityWolf || entity instanceof EntityOcelot && ((EntityTameable) entity).isTamed()) {
                     ICemetery cemetery = world.getCapability(CemeteryProvider.CEMETERY_CAP, null);
-                    if (cemetery.hasPetCemetery()) {
-                        if (world.getBlockState(cemetery.getPetPosition()).getBlock() == GSBlock.MEMORIAL) {
-                            return true;
-                        } else {
-                            cemetery.setPetCemetery(false);
-                        }
-                    }
+                    return checkCondition(world, cemetery, cemetery.getPetCemetery());
                 }
                 return false;
             }
 
             @Override
             public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return getGravePos(world, world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetPosition(), true, false);
+                return getGravePos(world, world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetCemetery().getPosition(), true, false);
             }
 
             @Override
             public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-                return world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetFacing();
+                return world.getCapability(CemeteryProvider.CEMETERY_CAP, null).getPetCemetery().getFacing();
             }
         });
+    }
+
+    private static boolean checkCondition(World world, ICemetery cemetery, CemeteryInfo cemeteryInfo) {
+        if (cemeteryInfo != null) {
+            if (world.getBlockState(cemeteryInfo.getPosition()).getBlock() == GSBlock.MEMORIAL) {
+                return true;
+            } else {
+                cemetery.setPlayerCemetery(null);
+            }
+        }
+        return false;
     }
 
     private static final int CEMETERY_SIZE_PLAYER = 4;

@@ -18,39 +18,53 @@ public class CemeteryStorage implements Capability.IStorage<ICemetery> {
 
     @Nullable
     @Override
-    public NBTBase writeNBT(Capability<ICemetery> capability, ICemetery instance, EnumFacing side) {
+    public NBTBase writeNBT(Capability<ICemetery> capability, ICemetery cemetery, EnumFacing side) {
         NBTTagCompound nbt = new NBTTagCompound();
 
-        nbt.setBoolean("HasPlayerCemetery", instance.hasPlayerCemetery());
-        nbt.setInteger("PlayerPosX", instance.getPlayerPosition().getX());
-        nbt.setInteger("PlayerPosY", instance.getPlayerPosition().getY());
-        nbt.setInteger("PlayerPosZ", instance.getPlayerPosition().getZ());
-        nbt.setInteger("PlayerFacing", instance.getPlayerFacing().getHorizontalIndex());
+        CemeteryInfo playerCemetery = cemetery.getPlayerCemetery();
+        if (playerCemetery != null) {
+            nbt.setTag("PlayerCemetery", getCemeteryNBT(playerCemetery));
+        }
 
-        nbt.setBoolean("HasPetCemetery", instance.hasPetCemetery());
-        nbt.setInteger("PetPosX", instance.getPetPosition().getX());
-        nbt.setInteger("PetPosY", instance.getPetPosition().getY());
-        nbt.setInteger("PetPosZ", instance.getPetPosition().getZ());
-        nbt.setInteger("PetFacing", instance.getPetFacing().getHorizontalIndex());
+        CemeteryInfo petCemetery = cemetery.getPlayerCemetery();
+        if (playerCemetery != null) {
+            nbt.setTag("PetCemetery", getCemeteryNBT(petCemetery));
+        }
 
         return nbt;
     }
 
+    private static NBTTagCompound getCemeteryNBT(CemeteryInfo cemetery) {
+        NBTTagCompound cemeteryNbt = new NBTTagCompound();
+        cemeteryNbt.setInteger("Dimension", cemetery.getDimensionId());
+        cemeteryNbt.setInteger("PosX", cemetery.getPosition().getX());
+        cemeteryNbt.setInteger("PosY", cemetery.getPosition().getY());
+        cemeteryNbt.setInteger("PosZ", cemetery.getPosition().getZ());
+        cemeteryNbt.setInteger("Facing", cemetery.getFacing().getHorizontalIndex());
+        return cemeteryNbt;
+    }
+
     @Override
-    public void readNBT(Capability<ICemetery> capability, ICemetery instance, EnumFacing side, NBTBase nbt) {
+    public void readNBT(Capability<ICemetery> capability, ICemetery cemetery, EnumFacing side, NBTBase nbt) {
+        if (((NBTTagCompound) nbt).hasKey("PlayerCemetery")) {
+            cemetery.setPlayerCemetery(getCemeteryInfo((NBTTagCompound) ((NBTTagCompound) nbt).getTag("PlayerCemetery")));
 
-        instance.setPlayerCemetery(((NBTTagCompound) nbt).getBoolean("HasPlayerCemetery"));
-        instance.setPlayerPosition(new BlockPos(
-                ((NBTTagCompound) nbt).getInteger("PlayerPosX"),
-                ((NBTTagCompound) nbt).getInteger("PlayerPosY"),
-                ((NBTTagCompound) nbt).getInteger("PlayerPosZ")));
-        instance.setPlayerFacing(EnumFacing.getHorizontal(((NBTTagCompound) nbt).getInteger("PlayerFacing")));
+        }
+        if (((NBTTagCompound) nbt).hasKey("PetCemetery")) {
+            cemetery.setPetCemetery(getCemeteryInfo((NBTTagCompound) ((NBTTagCompound) nbt).getTag("PetCemetery")));
+        }
+    }
 
-        instance.setPetCemetery(((NBTTagCompound) nbt).getBoolean("HasPetCemetery"));
-        instance.setPetPosition(new BlockPos(
-                ((NBTTagCompound) nbt).getInteger("PetPosX"),
-                ((NBTTagCompound) nbt).getInteger("PetPosY"),
-                ((NBTTagCompound) nbt).getInteger("PetPosZ")));
-        instance.setPetFacing(EnumFacing.getHorizontal(((NBTTagCompound) nbt).getInteger("PetFacing")));
+    private static CemeteryInfo getCemeteryInfo(NBTTagCompound cemeteryNbt) {
+        CemeteryInfo cemeteryInfo = new CemeteryInfo();
+        cemeteryInfo.setDimension(cemeteryNbt.getInteger("Dimension"));
+        cemeteryInfo.setPosition(new BlockPos(
+                cemeteryNbt.getInteger("PosX"),
+                cemeteryNbt.getInteger("PosY"),
+                cemeteryNbt.getInteger("PosZ")
+        ));
+        cemeteryInfo.setFacing(EnumFacing.getHorizontal(cemeteryNbt.getInteger("Facing")));
+
+        return cemeteryInfo;
     }
 }

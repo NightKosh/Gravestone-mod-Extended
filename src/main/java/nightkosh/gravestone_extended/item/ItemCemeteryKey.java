@@ -21,6 +21,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.block.BlockMemorial;
 import nightkosh.gravestone_extended.block.enums.EnumMemorials;
+import nightkosh.gravestone_extended.capability.cemetery.CemeteryInfo;
 import nightkosh.gravestone_extended.capability.cemetery.CemeteryProvider;
 import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
 import nightkosh.gravestone_extended.core.GSBlock;
@@ -38,6 +39,8 @@ import java.util.List;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class ItemCemeteryKey extends Item {
+
+    private static final String OWNER = "Owner";
 
     private static final String PLAYER_KEY = "item.gravestone.cemetery_key.player";
     private static final String SERVER_KEY = "item.gravestone.cemetery_key.server";
@@ -84,8 +87,8 @@ public class ItemCemeteryKey extends Item {
 
         if (stack.getMetadata() == 0) {
             NBTTagCompound nbt = stack.getTagCompound();
-            if (nbt.hasKey("Owner")) {
-                tooltip.add(I18n.translateToLocal("message.cemetery_key.activated") + " " + nbt.getString("Owner"));
+            if (nbt.hasKey(OWNER)) {
+                tooltip.add(I18n.translateToLocal("message.cemetery_key.activated") + " " + nbt.getString(OWNER));
             }
         }
     }
@@ -100,7 +103,7 @@ public class ItemCemeteryKey extends Item {
 
             boolean isPlayerKey = stack.getMetadata() == 0;
             NBTTagCompound nbt = stack.getTagCompound();
-            if (!nbt.hasKey("Owner") || nbt.getString("Owner").equals(player.getName())) {
+            if (!nbt.hasKey(OWNER) || nbt.getString(OWNER).equals(player.getName())) {
                 IBlockState state = world.getBlockState(pos);
                 if (state.getBlock().equals(GSBlock.MEMORIAL)) {
                     TileEntityMemorial te = (TileEntityMemorial) world.getTileEntity(pos);
@@ -115,14 +118,15 @@ public class ItemCemeteryKey extends Item {
                         EnumFacing facing = state.getValue(BlockMemorial.FACING);
                         EnumMemorials.EnumMemorialType type = te.getMemorialType().getMemorialType();
 
+                        CemeteryInfo cemeteryInfo = new CemeteryInfo();
+                        cemeteryInfo.setDimension(world.provider.getDimension());
+                        cemeteryInfo.setPosition(pos);
+                        cemeteryInfo.setFacing(facing);
+
                         if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
-                            cemetery.setPetCemetery(true);
-                            cemetery.setPetPosition(pos);
-                            cemetery.setPetFacing(facing);
+                            cemetery.setPetCemetery(cemeteryInfo);
                         } else {
-                            cemetery.setPlayerCemetery(true);
-                            cemetery.setPlayerPosition(pos);
-                            cemetery.setPlayerFacing(facing);
+                            cemetery.setPlayerCemetery(cemeteryInfo);
                         }
 
                         if (isPlayerKey) {
@@ -131,7 +135,7 @@ public class ItemCemeteryKey extends Item {
                             } else {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded"));
                             }
-                            nbt.setString("Owner", player.getName());
+                            nbt.setString(OWNER, player.getName());
                         } else {
                             if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded_server.pet"));
