@@ -118,21 +118,22 @@ public class ItemCemeteryKey extends Item {
                         cemeteryInfo.setPosition(pos);
                         cemeteryInfo.setFacing(facing);
 
-                        if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
+                        boolean isPetCemetery = type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE;
+                        if (isPetCemetery) {
                             cemetery.setPetCemetery(cemeteryInfo);
                         } else {
                             cemetery.setPlayerCemetery(cemeteryInfo);
                         }
 
                         if (isPlayerKey) {
-                            if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
+                            if (isPetCemetery) {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded.pet"));
                             } else {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded"));
                             }
                             nbt.setString(OWNER, player.getName());
                         } else {
-                            if (type == EnumMemorials.EnumMemorialType.DOG_STATUE || type == EnumMemorials.EnumMemorialType.CAT_STATUE) {
+                            if (isPetCemetery) {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded_server.pet"));
                             } else {
                                 player.sendMessage(new TextComponentTranslation("message.cemetery_key.bounded_server"));
