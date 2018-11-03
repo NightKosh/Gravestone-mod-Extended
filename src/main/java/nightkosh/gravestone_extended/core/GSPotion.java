@@ -45,6 +45,7 @@ public class GSPotion {
     public static final PotionType BURNING_TYPE = new PotionTypeBurning();
     public static final PotionType BLEEDING_TYPE = new PotionTypeBleeding();
     public static final PotionType INFERNO_TYPE = new PotionTypeInferno();
+    public static final PotionType CHOKE_TYPE = new PotionTypeChoke();
     //vanilla
     public static final PotionType HUNGER_TYPE = new PotionTypeHunger();
     public static final PotionType BLINDNESS_TYPE = new PotionTypeBlindness();
@@ -61,7 +62,7 @@ public class GSPotion {
     @SubscribeEvent
     public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
         event.getRegistry().registerAll(PURIFICATION_TYPE, RUST_TYPE, BONE_SKIN_TYPE, RECALL_TYPE, BURNING_TYPE, BLEEDING_TYPE,
-                INFERNO_TYPE);
+                INFERNO_TYPE, CHOKE_TYPE);
         event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE, WITHER_TYPE);
 
         PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
@@ -74,6 +75,7 @@ public class GSPotion {
                 EnumFishType.PIRANHA.ordinal())), BLEEDING_TYPE);
         PotionHelper.addMix(BURNING_TYPE, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1,
                 EnumFishType.FLAREFIN_KOI.ordinal())), INFERNO_TYPE);
+        PotionHelper.addMix(PotionTypes.WATER_BREATHING, Ingredient.fromStacks(new ItemStack(GSItem.PIECE_OF_DIVING_SUIT, 1)), CHOKE_TYPE);
 
         BrewingRecipeRegistry.addRecipe(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), PotionTypes.AWKWARD),
                 new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPECULAR_SNAPPER.ordinal()),
