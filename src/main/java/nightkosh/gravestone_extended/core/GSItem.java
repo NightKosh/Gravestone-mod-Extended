@@ -10,6 +10,10 @@ import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.item.*;
+import nightkosh.gravestone_extended.item.armor.bone.boots.ItemBoneBoots;
+import nightkosh.gravestone_extended.item.armor.bone.chestplate.ItemBoneChestplate;
+import nightkosh.gravestone_extended.item.armor.bone.helmet.ItemBoneHelmet;
+import nightkosh.gravestone_extended.item.armor.bone.leggings.ItemBoneLeggings;
 import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyBoots;
 import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyChestplate;
 import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyHelmet;
@@ -80,6 +84,11 @@ public class GSItem {
     public static final Item BONE_PICKAXE_GOLDEN = new ItemGoldenBonePickaxe();
     public static final Item BONE_PICKAXE_DIAMOND = new ItemDiamondBonePickaxe();
 
+    public static final Item BONE_HELMET = new ItemBoneHelmet();
+    public static final Item BONE_CHESTPLATE = new ItemBoneChestplate();
+    public static final Item BONE_LEGGINGS = new ItemBoneLeggings();
+    public static final Item BONE_BOOTS = new ItemBoneBoots();
+
     public static final Item DIVING_HELMET = new ItemDivingHelmet();
     public static final Item DIVING_CHESTPLATE = new ItemDivingChestplate();
     public static final Item DIVING_LEGGINGS = new ItemDivingLeggings();
@@ -126,7 +135,8 @@ public class GSItem {
                     BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
             registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
-            registry.registerAll(DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
+            registry.registerAll(BONE_HELMET, BONE_CHESTPLATE, BONE_LEGGINGS, BONE_BOOTS,
+                    DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
                     SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,
                     MUMMY_HELMET, MUMMY_CHESTPLATE, MUMMY_LEGGINGS, MUMMY_BOOTS);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);

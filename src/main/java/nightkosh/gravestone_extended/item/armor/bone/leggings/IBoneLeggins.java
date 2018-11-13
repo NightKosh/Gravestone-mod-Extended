@@ -1,4 +1,6 @@
-package nightkosh.gravestone_extended.item.armor;
+package nightkosh.gravestone_extended.item.armor.bone.leggings;
+
+import nightkosh.gravestone_extended.item.armor.bone.IBoneArmor;
 
 /**
  * GraveStone mod

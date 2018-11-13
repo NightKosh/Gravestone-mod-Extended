@@ -30,7 +30,7 @@ import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.entity.monster.EntityToxicSludge;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.item.armor.IBoneArmor;
+import nightkosh.gravestone_extended.item.armor.bone.IBoneArmor;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -13,6 +13,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class ResourcesModels extends Resources {
     // armor
+    public static final ModelResourceLocation BONE_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/bone/helmet", "inventory");
+    public static final ModelResourceLocation BONE_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/bone/chestplate", "inventory");
+    public static final ModelResourceLocation BONE_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/bone/leggings", "inventory");
+    public static final ModelResourceLocation BONE_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/bone/boots", "inventory");
+
     public static final ModelResourceLocation DIVING_HELMET = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/helmet", "inventory");
     public static final ModelResourceLocation DIVING_CHESTPLATE = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/chestplate", "inventory");
     public static final ModelResourceLocation DIVING_LEGGINGS = new ModelResourceLocation(ModInfo.ID + ":armor/phantom_diver_costume/leggings", "inventory");
