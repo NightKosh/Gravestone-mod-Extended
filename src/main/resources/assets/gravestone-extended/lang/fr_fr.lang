@@ -255,6 +255,10 @@ item.gravestone.mummy_helmet.name=Mummy Mask
 item.gravestone.mummy_chestplate.name=Mummy Shirt
 item.gravestone.mummy_leggings.name=Mummy Pants
 item.gravestone.mummy_boots.name=Mummy Boots
+item.gravestone.bone_helmet.name=Bone Helmet
+item.gravestone.bone_chestplate.name=Bone Chestplate
+item.gravestone.bone_leggings.name=Bone Leggings
+item.gravestone.bone_boots.name=Bone Boots
 
 ## Other Items
 ## TODO !!!!!!!!!!

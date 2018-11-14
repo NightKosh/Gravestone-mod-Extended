@@ -231,6 +231,11 @@ item.gravestone.mummy_helmet.name=Máscara de Múmia
 item.gravestone.mummy_chestplate.name=Camisa de Múmia
 item.gravestone.mummy_leggings.name=Calças de Múmia
 item.gravestone.mummy_boots.name=Bota de Múmia
+## TODO !!!!!!!!!!!!!!!!!
+item.gravestone.bone_helmet.name=Bone Helmet
+item.gravestone.bone_chestplate.name=Bone Chestplate
+item.gravestone.bone_leggings.name=Bone Leggings
+item.gravestone.bone_boots.name=Bone Boots
 
 ## Other Items
 item.gravestone.toxic_slime.name=Gosma Tóxica
