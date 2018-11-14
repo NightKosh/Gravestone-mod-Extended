@@ -10,10 +10,22 @@ public class ModelBoneLeggings extends ModelBiped {
 
     public ModelRenderer legLeft;
     public ModelRenderer legRight;
+
     public ModelRenderer belt;
+    public ModelRenderer belt10;
     public ModelRenderer belt11;
     public ModelRenderer belt12;
     public ModelRenderer belt13;
+    public ModelRenderer belt21;
+    public ModelRenderer belt22;
+    public ModelRenderer belt23;
+    public ModelRenderer belt31;
+    public ModelRenderer belt32;
+    public ModelRenderer belt33;
+    public ModelRenderer belt41;
+    public ModelRenderer belt42;
+    public ModelRenderer belt43;
+
     public ModelRenderer bone11;
     public ModelRenderer bone12;
     public ModelRenderer bone21;
@@ -39,6 +51,11 @@ public class ModelBoneLeggings extends ModelBiped {
         this.belt.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.belt.addBox(-5.0F, 9.05F, -3.0F, 10, 3, 6, 0.0F);
 
+        this.belt10 = new ModelRenderer(this, 16, 12);
+        this.belt10.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt10.addBox(5.8F, 5.8F, -3.4F, 3, 3, 1, 0.0F);
+        this.setRotateAngle(belt10, 0.0F, 0.0F, 0.7853981633974483F);
+
         this.belt11 = new ModelRenderer(this, 0, 12);
         this.belt11.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.belt11.addBox(-1.0F, 11.8F, 0.1F, 2, 2, 1, 0.0F);
@@ -53,6 +70,53 @@ public class ModelBoneLeggings extends ModelBiped {
         this.belt13.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.belt13.addBox(-1.0F, 13.8F, 1.3F, 2, 2, 1, -0.2F);
         this.setRotateAngle(belt13, -0.2617993877991494F, 0.0F, 0.0F);
+
+        this.belt21 = new ModelRenderer(this, 9, 17);
+        this.belt21.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt21.addBox(1.9F, 7.2F, -10.2F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt21, 0.7853981633974483F, 0.0F, -0.17453292519943295F);
+
+        this.belt22 = new ModelRenderer(this, 9, 17);
+        this.belt22.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt22.addBox(1.4F, 8.1F, -11.0F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt22, 0.7853981633974483F, 0.0F, -0.17453292519943295F);
+
+        this.belt23 = new ModelRenderer(this, 9, 17);
+        this.belt23.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt23.addBox(0.9F, 9.0F, -11.8F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt23, 0.7853981633974483F, 0.0F, -0.17453292519943295F);
+
+        this.belt31 = new ModelRenderer(this, 9, 17);
+        this.belt31.mirror = true;
+        this.belt31.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt31.addBox(-2.9F, 7.2F, -10.2F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt31, 0.7853981633974483F, 0.0F, 0.17453292519943295F);
+
+        this.belt32 = new ModelRenderer(this, 9, 17);
+        this.belt32.mirror = true;
+        this.belt32.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt32.addBox(-2.4F, 8.1F, -11.0F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt32, 0.7853981633974483F, 0.0F, 0.17453292519943295F);
+
+        this.belt33 = new ModelRenderer(this, 9, 17);
+        this.belt33.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt33.addBox(-1.9F, 9.0F, -11.8F, 1, 3, 3, 0.0F);
+        this.setRotateAngle(belt33, 0.7853981633974483F, 0.0F, 0.17453292519943295F);
+
+        this.belt41 = new ModelRenderer(this, 25, 12);
+        this.belt41.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt41.addBox(-3.5F, 12.0F, -1.4F, 7, 2, 1, 0.0F);
+        this.setRotateAngle(belt41, 0.2617993877991494F, 0.0F, 0.0F);
+
+        this.belt42 = new ModelRenderer(this, 25, 12);
+        this.belt42.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt42.addBox(-3.5F, 13.0F, -1.7F, 7, 2, 1, -0.1F);
+        this.setRotateAngle(belt42, 0.2617993877991494F, 0.0F, 0.0F);
+
+        this.belt43 = new ModelRenderer(this, 25, 12);
+        this.belt43.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.belt43.addBox(-3.5F, 14.0F, -2.1F, 7, 2, 1, -0.2F);
+        this.setRotateAngle(belt43, 0.2617993877991494F, 0.0F, 0.0F);
 
 
         this.bone11 = new ModelRenderer(this, 8, 12);
@@ -91,9 +155,20 @@ public class ModelBoneLeggings extends ModelBiped {
         this.bone42.setRotationPoint(0.0F, 0.0F, 0.0F);
         this.bone42.addBox(-5.5F, 8.5F, 1.0F, 1, 4, 1, 0.0F);
 
+        this.belt.addChild(this.belt10);
         this.belt.addChild(this.belt11);
         this.belt.addChild(this.belt12);
         this.belt.addChild(this.belt13);
+        this.belt.addChild(this.belt21);
+        this.belt.addChild(this.belt22);
+        this.belt.addChild(this.belt23);
+        this.belt.addChild(this.belt31);
+        this.belt.addChild(this.belt32);
+        this.belt.addChild(this.belt33);
+        this.belt.addChild(this.belt41);
+        this.belt.addChild(this.belt42);
+        this.belt.addChild(this.belt43);
+
         this.belt.addChild(this.bone11);
         this.belt.addChild(this.bone12);
         this.belt.addChild(this.bone20);
