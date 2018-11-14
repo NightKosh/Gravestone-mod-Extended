@@ -143,10 +143,14 @@ public class ModelBoneBoots extends ModelBiped {
         bootLeft.rotateAngleY = bipedLeftLeg.rotateAngleY;
         bootLeft.rotateAngleX = bipedLeftLeg.rotateAngleX;
         bootLeft.rotateAngleZ = bipedLeftLeg.rotateAngleZ;
+        bootLeft.rotationPointZ = bipedLeftLeg.rotationPointZ;
+        bootLeft.rotationPointY = bipedLeftLeg.rotationPointY;
 
         bootRight.rotateAngleY = bipedRightLeg.rotateAngleY;
         bootRight.rotateAngleX = bipedRightLeg.rotateAngleX;
         bootRight.rotateAngleZ = bipedRightLeg.rotateAngleZ;
+        bootRight.rotationPointZ = bipedRightLeg.rotationPointZ;
+        bootRight.rotationPointY = bipedRightLeg.rotationPointY;
     }
 
     public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {

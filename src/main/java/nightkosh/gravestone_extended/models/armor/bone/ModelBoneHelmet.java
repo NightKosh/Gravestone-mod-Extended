@@ -129,6 +129,8 @@ public class ModelBoneHelmet extends ModelBiped {
         skull.rotateAngleY = bipedHead.rotateAngleY;
         skull.rotateAngleX = bipedHead.rotateAngleX;
         skull.rotateAngleZ = bipedHead.rotateAngleZ;
+
+        skull.rotationPointY = bipedHead.rotationPointY;
     }
 
     public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {

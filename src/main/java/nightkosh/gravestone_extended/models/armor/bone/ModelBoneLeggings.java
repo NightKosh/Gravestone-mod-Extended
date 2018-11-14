@@ -201,10 +201,14 @@ public class ModelBoneLeggings extends ModelBiped {
         legLeft.rotateAngleY = bipedLeftLeg.rotateAngleY;
         legLeft.rotateAngleX = bipedLeftLeg.rotateAngleX;
         legLeft.rotateAngleZ = bipedLeftLeg.rotateAngleZ;
+        legLeft.rotationPointZ = bipedLeftLeg.rotationPointZ;
+        legLeft.rotationPointY = bipedLeftLeg.rotationPointY;
 
         legRight.rotateAngleY = bipedRightLeg.rotateAngleY;
         legRight.rotateAngleX = bipedRightLeg.rotateAngleX;
         legRight.rotateAngleZ = bipedRightLeg.rotateAngleZ;
+        legRight.rotationPointZ = bipedRightLeg.rotationPointZ;
+        legRight.rotationPointY = bipedRightLeg.rotationPointY;
 
         belt.rotateAngleY = bipedBody.rotateAngleY;
         belt.rotateAngleX = bipedBody.rotateAngleX;
