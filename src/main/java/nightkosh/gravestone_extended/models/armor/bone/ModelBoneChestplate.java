@@ -17,6 +17,7 @@ public class ModelBoneChestplate extends ModelBiped {
     public ModelRenderer horn13;
     public ModelRenderer horn23;
     public ModelRenderer armRight;
+    public ModelRenderer gloveRight;
 
     public ModelRenderer armLeft;
     public ModelRenderer armPlate11;
@@ -25,6 +26,7 @@ public class ModelBoneChestplate extends ModelBiped {
     public ModelRenderer armPlate21;
     public ModelRenderer armPlate22;
     public ModelRenderer armPlate23;
+    public ModelRenderer gloveLeft;
 
 
     public ModelRenderer body;
@@ -114,7 +116,12 @@ public class ModelBoneChestplate extends ModelBiped {
 
         this.armRight = new ModelRenderer(this, 48, 0);
         this.armRight.setRotationPoint(0.0F, 0.0F, 0.0F);
-        this.armRight.addBox(-3.0F, -2.0F, -2.0F, 4, 12, 4, 0.15F);
+        this.armRight.addBox(-3.0F, -2.0F, -2.0F, 4, 12, 4, 0.2F);
+
+        this.gloveRight = new ModelRenderer(this, 22, 9);
+        this.gloveRight.mirror = true;
+        this.gloveRight.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.gloveRight.addBox(-3.6F, 6.0F, -2.5F, 5, 5, 5, 0.0F);
 
         this.skullRight.addChild(this.horn11);
         this.skullRight.addChild(this.horn12);
@@ -124,11 +131,12 @@ public class ModelBoneChestplate extends ModelBiped {
         this.skullRight.addChild(this.horn22);
         this.skullRight.addChild(this.horn13);
         this.skullRight.addChild(this.armRight);
+        this.skullRight.addChild(this.gloveRight);
 
 
         this.armLeft = new ModelRenderer(this, 48, 0);
         this.armLeft.setRotationPoint(5.0F, 2.0F, 0.0F);
-        this.armLeft.addBox(-1.0F, -2.0F, -2.0F, 4, 12, 4, 0.15F);
+        this.armLeft.addBox(-1.0F, -2.0F, -2.0F, 4, 12, 4, 0.20F);
 
         this.armPlate11 = new ModelRenderer(this, 0, 12);
         this.armPlate11.mirror = true;
@@ -163,12 +171,17 @@ public class ModelBoneChestplate extends ModelBiped {
         this.armPlate23.addBox(1.0F, -3.7F, -1.9F, 2, 1, 4, 0.0F);
         this.setRotateAngle(armPlate23, 0.5585053606381855F, 0.0F, 0.6981317007977318F);
 
+        this.gloveLeft = new ModelRenderer(this, 22, 9);
+        this.gloveLeft.setRotationPoint(0.0F, 0.0F, 0.0F);
+        this.gloveLeft.addBox(-1.4F, 6.0F, -2.5F, 5, 5, 5, 0.0F);
+
         this.armLeft.addChild(this.armPlate11);
         this.armLeft.addChild(this.armPlate12);
         this.armLeft.addChild(this.armPlate13);
         this.armLeft.addChild(this.armPlate21);
         this.armLeft.addChild(this.armPlate22);
         this.armLeft.addChild(this.armPlate23);
+        this.armLeft.addChild(this.gloveLeft);
 
 
 
