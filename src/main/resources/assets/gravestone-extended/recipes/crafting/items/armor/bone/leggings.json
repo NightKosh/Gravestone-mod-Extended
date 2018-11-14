@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bbb",
+    "plp",
+    "p p"
+  ],
+  "key": {
+    "b": {
+      "item": "gravestone-extended:gsboneblock",
+      "data": 0
+    },
+    "p": {
+      "item": "gravestone-extended:gspileofbones",
+      "data": 0
+    },
+    "l": {
+      "item": "minecraft:diamond_leggings"
+    }
+  },
+  "result": {
+    "item": "gravestone-extended:bone_leggings"
+  }
+}

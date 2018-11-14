@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "scb",
+    "pbp",
+    "pbp"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:skull",
+      "data": 0
+    },
+    "b": {
+      "item": "gravestone-extended:gsboneblock",
+      "data": 0
+    },
+    "p": {
+      "item": "gravestone-extended:gspileofbones",
+      "data": 0
+    },
+    "c": {
+      "item": "minecraft:diamond_chestplate"
+    }
+  },
+  "result": {
+    "item": "gravestone-extended:bone_chestplate"
+  }
+}

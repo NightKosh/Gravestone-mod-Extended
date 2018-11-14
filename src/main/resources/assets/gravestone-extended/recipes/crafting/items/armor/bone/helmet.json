@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bsb",
+    "php"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:skull",
+      "data": 0
+    },
+    "b": {
+      "item": "gravestone-extended:gsboneblock",
+      "data": 0
+    },
+    "p": {
+      "item": "gravestone-extended:gspileofbones",
+      "data": 0
+    },
+    "h": {
+      "item": "minecraft:diamond_helmet"
+    }
+  },
+  "result": {
+    "item": "gravestone-extended:bone_helmet"
+  }
+}
