@@ -4,6 +4,7 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityArmorStand;
 
 
 public class ModelBoneHelmet extends ModelBiped {
@@ -126,9 +127,17 @@ public class ModelBoneHelmet extends ModelBiped {
     @Override
     public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entity) {
         super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entity);
-        skull.rotateAngleY = bipedHead.rotateAngleY;
-        skull.rotateAngleX = bipedHead.rotateAngleX;
-        skull.rotateAngleZ = bipedHead.rotateAngleZ;
+
+        if (entity instanceof EntityArmorStand) {
+            EntityArmorStand entityarmorstand = (EntityArmorStand) entity;
+            skull.rotateAngleX = 0.017453292F * entityarmorstand.getHeadRotation().getX();
+            skull.rotateAngleY = 0.017453292F * entityarmorstand.getHeadRotation().getY();
+            skull.rotateAngleZ = 0.017453292F * entityarmorstand.getHeadRotation().getZ();
+        } else {
+            skull.rotateAngleY = bipedHead.rotateAngleY;
+            skull.rotateAngleX = bipedHead.rotateAngleX;
+            skull.rotateAngleZ = bipedHead.rotateAngleZ;
+        }
 
         skull.rotationPointY = bipedHead.rotationPointY;
     }
