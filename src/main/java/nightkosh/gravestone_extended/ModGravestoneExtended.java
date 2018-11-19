@@ -74,6 +74,8 @@ public class ModGravestoneExtended {
         GSDimensions.registration();
 
         GSEntity.registration();
+
+        GSMaterials.registration();
     }
 
     @Mod.EventHandler

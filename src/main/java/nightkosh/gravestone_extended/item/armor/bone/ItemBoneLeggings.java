@@ -21,10 +21,10 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBoneLeggings extends ItemArmor implements IBoneLeggins {
+public class ItemBoneLeggings extends AbstractBoneArmor {
 
     public ItemBoneLeggings() {
-        super(ArmorMaterial.LEATHER, 1, EntityEquipmentSlot.LEGS);//TODO material !!
+        super(EntityEquipmentSlot.LEGS);
         this.setUnlocalizedName("gravestone.bone_leggings");
         this.setRegistryName(ModInfo.ID, "bone_leggings");
         this.setCreativeTab(GSTabs.otherItemsTab);

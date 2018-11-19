@@ -21,10 +21,10 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBoneChestplate extends ItemArmor implements IBoneChestplate {
+public class ItemBoneChestplate extends AbstractBoneArmor {
 
     public ItemBoneChestplate() {
-        super(ArmorMaterial.LEATHER, 1, EntityEquipmentSlot.CHEST);//TODO material !!
+        super(EntityEquipmentSlot.CHEST);
         this.setUnlocalizedName("gravestone.bone_chestplate");
         this.setRegistryName(ModInfo.ID, "bone_chestplate");
         this.setCreativeTab(GSTabs.otherItemsTab);
