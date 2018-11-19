@@ -20,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSEnchantment;
+import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.core.GSSound;
 import nightkosh.gravestone_extended.helper.MobsHelper;
@@ -38,7 +39,7 @@ import java.util.Map;
  */
 public class EntityPossessedArmor extends EntityMob {
 
-    private static final List<Map<EntityEquipmentSlot, Item>> ARMOR_LIST = new ArrayList<>(3);
+    private static final List<Map<EntityEquipmentSlot, Item>> ARMOR_LIST = new ArrayList<>(4);
 
     static {
         Map<EntityEquipmentSlot, Item> ironArmorMap = new HashMap<>();
@@ -61,6 +62,13 @@ public class EntityPossessedArmor extends EntityMob {
         diamondArmorMap.put(EntityEquipmentSlot.LEGS, Items.DIAMOND_LEGGINGS);
         diamondArmorMap.put(EntityEquipmentSlot.FEET, Items.DIAMOND_BOOTS);
         ARMOR_LIST.add(diamondArmorMap);
+
+        Map<EntityEquipmentSlot, Item> boneArmorMap = new HashMap<>();
+        boneArmorMap.put(EntityEquipmentSlot.HEAD, GSItem.BONE_HELMET);
+        boneArmorMap.put(EntityEquipmentSlot.CHEST, GSItem.BONE_CHESTPLATE);
+        boneArmorMap.put(EntityEquipmentSlot.LEGS, GSItem.BONE_LEGGINGS);
+        boneArmorMap.put(EntityEquipmentSlot.FEET, GSItem.BONE_BOOTS);
+        ARMOR_LIST.add(boneArmorMap);
     }
 
     public EntityPossessedArmor(World world) {
