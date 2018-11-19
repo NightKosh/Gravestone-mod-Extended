@@ -16,7 +16,6 @@ public class GSMaterials {
 
 
     public static void registration() {
-        BONE_ARMOR = EnumHelper.addArmorMaterial("gs_bone_armor", "", 33, new int[]{3, 6, 8, 3}, ItemArmor.ArmorMaterial.GOLD.getEnchantability(),
-                SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, ItemArmor.ArmorMaterial.DIAMOND.getToughness());
+        BONE_ARMOR = EnumHelper.addArmorMaterial("gs_bone", "", 40, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3);
     }
 }
