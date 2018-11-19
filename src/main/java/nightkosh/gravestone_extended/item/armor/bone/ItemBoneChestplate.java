@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.item.armor.bone.chestplate;
+package nightkosh.gravestone_extended.item.armor.bone;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;

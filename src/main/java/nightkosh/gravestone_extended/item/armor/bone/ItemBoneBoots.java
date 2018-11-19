@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.item.armor.bone.helmet;
+package nightkosh.gravestone_extended.item.armor.bone;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
@@ -21,19 +21,19 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBoneHelmet extends ItemArmor implements IBoneHelmet {
+public class ItemBoneBoots extends ItemArmor implements IBoneBoots {
 
-    public ItemBoneHelmet() {
-        super(ArmorMaterial.LEATHER, 1, EntityEquipmentSlot.HEAD);//TODO material !!
-        this.setUnlocalizedName("gravestone.bone_helmet");
-        this.setRegistryName(ModInfo.ID, "bone_helmet");
+    public ItemBoneBoots() {
+        super(ArmorMaterial.LEATHER, 1, EntityEquipmentSlot.FEET);//TODO material !!
+        this.setUnlocalizedName("gravestone.bone_boots");
+        this.setRegistryName(ModInfo.ID, "bone_boots");
         this.setCreativeTab(GSTabs.otherItemsTab);
     }
 
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return Resources.BONE_HELMET;
+        return Resources.BONE_BOOTS;
     }
 
     @Nullable
@@ -41,7 +41,7 @@ public class ItemBoneHelmet extends ItemArmor implements IBoneHelmet {
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
         if (!stack.isEmpty() && stack.getItem() instanceof ItemArmor) {
-            return ArmorModelsHelper.BONE_HELMET;
+            return ArmorModelsHelper.BONE_BOOTS;
         }
         return null;
     }

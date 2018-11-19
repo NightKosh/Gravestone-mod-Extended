@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.item.armor.bone.leggings;
+package nightkosh.gravestone_extended.item.armor.bone;
 
 import nightkosh.gravestone_extended.item.armor.bone.IBoneArmor;
 
