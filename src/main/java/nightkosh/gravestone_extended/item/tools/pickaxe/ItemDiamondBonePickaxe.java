@@ -1,5 +1,7 @@
 package nightkosh.gravestone_extended.item.tools.pickaxe;
 
+import nightkosh.gravestone_extended.core.GSMaterials;
+
 /**
  * GraveStone mod
  *
@@ -9,6 +11,6 @@ package nightkosh.gravestone_extended.item.tools.pickaxe;
 public class ItemDiamondBonePickaxe extends ItemBonePickaxe {
 
     public ItemDiamondBonePickaxe() {
-        super(ToolMaterial.DIAMOND, "bone_pickaxe_diamond");
+        super(GSMaterials.BONE_TOOL, "bone_pickaxe_diamond");
     }
 }

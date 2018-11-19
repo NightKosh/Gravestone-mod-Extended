@@ -12,6 +12,7 @@ import nightkosh.gravestone_extended.core.ModInfo;
 public class ItemDiamondBoneAxe extends ItemBoneAxe {
 
     public ItemDiamondBoneAxe() {
+//        super(GSMaterials.BONE_TOOL); //TODO !!!!!!!!!!
         super(Item.ToolMaterial.DIAMOND);
         this.setUnlocalizedName("gravestone.bone_axe_diamond");
         this.setRegistryName(ModInfo.ID, "gs_bone_axe_diamond");

@@ -1,5 +1,6 @@
 package nightkosh.gravestone_extended.item.tools.hoe;
 
+import nightkosh.gravestone_extended.core.GSMaterials;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -11,7 +12,7 @@ import nightkosh.gravestone_extended.core.ModInfo;
 public class ItemDiamondBoneHoe extends ItemBoneHoe {
 
     public ItemDiamondBoneHoe() {
-        super(ToolMaterial.DIAMOND);
+        super(GSMaterials.BONE_TOOL);
         this.setUnlocalizedName("gravestone.bone_hoe_diamond");
         this.setRegistryName(ModInfo.ID, "gs_bone_hoe_diamond");
     }
