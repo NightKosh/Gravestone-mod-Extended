@@ -4,7 +4,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -23,7 +22,6 @@ public class ItemBoneSword extends ItemSword implements IBoneSword{
 
     public ItemBoneSword(ToolMaterial material) {
         super(material);
-        this.setCreativeTab(GSTabs.otherItemsTab);
     }
 
     @Override

@@ -18,7 +18,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -37,7 +36,6 @@ public class ItemBoneHoe extends ItemHoe implements IBoneHoe {
 
     public ItemBoneHoe(ToolMaterial material) {
         super(material);
-        this.setCreativeTab(GSTabs.otherItemsTab);
     }
 
     @Override

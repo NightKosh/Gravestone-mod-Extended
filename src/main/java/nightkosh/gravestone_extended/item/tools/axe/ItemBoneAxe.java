@@ -4,7 +4,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -23,7 +22,7 @@ public class ItemBoneAxe extends ItemAxe implements IBoneAxe {
 
     public ItemBoneAxe(Item.ToolMaterial material) {
         super(material);
-        this.setCreativeTab(GSTabs.otherItemsTab);
+//        this.setCreativeTab(GSTabs.otherItemsTab);
     }
 
     @Override

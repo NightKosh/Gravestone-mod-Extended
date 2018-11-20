@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.item.tools.shovel;
 
 import nightkosh.gravestone_extended.core.GSMaterials;
+import nightkosh.gravestone_extended.core.GSTabs;
 
 /**
  * GraveStone mod
@@ -12,5 +13,6 @@ public class ItemDiamondBoneShovel extends ItemBoneShovel {
 
     public ItemDiamondBoneShovel() {
         super(GSMaterials.BONE_TOOL, "bone_shovel_diamond");
+        this.setCreativeTab(GSTabs.otherItemsTab);
     }
 }

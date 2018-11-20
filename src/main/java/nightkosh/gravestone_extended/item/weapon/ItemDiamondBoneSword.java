@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.item.weapon;
 
 import nightkosh.gravestone_extended.core.GSMaterials;
+import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -15,5 +16,6 @@ public class ItemDiamondBoneSword extends ItemBoneSword {
         super(GSMaterials.BONE_TOOL);
         this.setUnlocalizedName("gravestone.bone_sword_diamond");
         this.setRegistryName(ModInfo.ID, "gs_bone_sword_diamond");
+        this.setCreativeTab(GSTabs.otherItemsTab);
     }
 }

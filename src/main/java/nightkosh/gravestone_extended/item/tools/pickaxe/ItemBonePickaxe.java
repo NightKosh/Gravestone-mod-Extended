@@ -4,7 +4,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 /**
@@ -21,7 +20,6 @@ public class ItemBonePickaxe extends ItemPickaxe implements IBonePickaxe {
 
     public ItemBonePickaxe(Item.ToolMaterial material, String str) {
         super(material);
-        this.setCreativeTab(GSTabs.otherItemsTab);
         this.setUnlocalizedName("gravestone." + str);
         this.setRegistryName(ModInfo.ID, "gs_" + str);
     }
