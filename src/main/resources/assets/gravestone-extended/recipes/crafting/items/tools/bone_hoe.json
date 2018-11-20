@@ -1,13 +1,10 @@
 {
-  "result": {
-    "item": "gravestone-extended:bone_shovel"
-  },
-  "pattern": [
-    " b ",
-    " ws",
-    " w "
-  ],
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bs ",
+    "dw ",
+    "dw "
+  ],
   "key": {
     "b": {
       "item": "gravestone-extended:gsboneblock",
@@ -17,8 +14,14 @@
       "item": "minecraft:skull",
       "data": 0
     },
+    "d": {
+        "item": "minecraft:diamond"
+    },
     "w": {
       "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "gravestone-extended:gs_bone_hoe_diamond"
   }
 }
