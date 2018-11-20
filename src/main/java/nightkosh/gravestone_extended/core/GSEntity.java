@@ -139,25 +139,25 @@ public class GSEntity {
         // zombie dog
         registerModEntity(ZOMBIE_DOG_ID, EntityZombieDog.class, ZOMBIE_DOG_NAME);
         if (ExtendedConfig.spawnZombieDogs) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntityZombieDog.class, 50, 1, 3);
+            addSpawn(BiomeDictionary.Type.FOREST, EntityZombieDog.class, ExtendedConfig.spawnWeightZombieDogs, 1, 3);
         }
 
         // zombie cat
         registerModEntity(ZOMBIE_CAT_ID, EntityZombieCat.class, ZOMBIE_CAT_NAME);
         if (ExtendedConfig.spawnZombieCats) {
-            addSpawn(BiomeDictionary.Type.JUNGLE, EntityZombieCat.class, 50, 1, 1);
+            addSpawn(BiomeDictionary.Type.JUNGLE, EntityZombieCat.class, ExtendedConfig.spawnWeightZombieCats, 1, 1);
         }
 
         // skeleton dog
         registerModEntity(SKELETON_DOG_ID, EntitySkeletonDog.class, SKELETON_DOG_NAME);
         if (ExtendedConfig.spawnSkeletonDogs) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntityZombieDog.class, 50, 1, 1);
+            addSpawn(BiomeDictionary.Type.FOREST, EntitySkeletonDog.class, ExtendedConfig.spawnWeightSkeletonDogs, 1, 1);
         }
 
         // skeleton cat
         registerModEntity(SKELETON_CAT_ID, EntitySkeletonCat.class, SKELETON_CAT_NAME);
         if (ExtendedConfig.spawnSkeletonCats) {
-            addSpawn(BiomeDictionary.Type.JUNGLE, EntityZombieCat.class, 50, 1, 1);
+            addSpawn(BiomeDictionary.Type.JUNGLE, EntitySkeletonCat.class, ExtendedConfig.spawnWeightSkeletonCats, 1, 1);
         }
 
         // skull crawlers
@@ -177,62 +177,62 @@ public class GSEntity {
         registerModEntity(ZOMBIE_HORSE_ID, EntityZombieHorse.class, ZOMBIE_HORSE_NAME);
         registerModEntity(SKELETON_HORSE_ID, EntitySkeletonHorse.class, SKELETON_HORSE_NAME);
         if (ExtendedConfig.spawnUndeadHorses) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieHorse.class, 5, 1, 3);
-            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonHorse.class, 5, 1, 3);
+            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieHorse.class, ExtendedConfig.spawnWeightUndeadHorses, 1, 3);
+            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonHorse.class, ExtendedConfig.spawnWeightUndeadHorses, 1, 3);
         }
 
         registerModEntity(ZOMBIE_RAIDER_ID, EntityZombieRaider.class, ZOMBIE_RAIDER_NAME);
         if (ExtendedConfig.spawnZombieRaiders) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieRaider.class, 2, 1, 1);
+            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieRaider.class, ExtendedConfig.spawnWeightZombieRaiders, 1, 1);
         }
         registerModEntity(SKELETON_RAIDER_ID, EntitySkeletonRaider.class, SKELETON_RAIDER_NAME);
         if (ExtendedConfig.spawnSkeletonRaiders) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonRaider.class, 2, 1, 1);
+            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonRaider.class, ExtendedConfig.spawnWeightSkeletonRaiders, 1, 1);
         }
 
         registerModEntity(TOXIC_SLUDGE_ID, EntityToxicSludge.class, TOXIC_SLUDGE_NAME);
-        addSpawn(OVERWORLD_BIOMES, EntityToxicSludge.class, 5, 1, 2);
+        addSpawn(OVERWORLD_BIOMES, EntityToxicSludge.class, ExtendedConfig.spawnWeightToxicSludge, 1, 2);
 
         registerModEntity(POSSESSED_ARMOR_ID, EntityPossessedArmor.class, POSSESSED_ARMOR_NAME);
         if (ExtendedConfig.spawnPossessedArmor) {
-            addSpawn(OVERWORLD_BIOMES, EntityPossessedArmor.class, 20, 1, 3);
+            addSpawn(OVERWORLD_BIOMES, EntityPossessedArmor.class, ExtendedConfig.spawnWeightPossessedArmor, 1, 3);
         }
 
         registerModEntity(MUMMY_ID, EntityMummy.class, MUMMY_NAME);
         if (ExtendedConfig.spawnMummy) {
-            addSpawn(BiomeDictionary.Type.SANDY, EntityMummy.class, 20, 1, 3);
+            addSpawn(BiomeDictionary.Type.SANDY, EntityMummy.class, ExtendedConfig.spawnWeightMummy, 1, 3);
         }
 
         registerModEntity(DROWNED_ID, EntityDrowned.class, DROWNED_NAME);
         if (ExtendedConfig.spawnDrowned) {
             addSpawnWater(new ArrayList<>(Arrays.asList(
                     BiomeDictionary.Type.BEACH, BiomeDictionary.Type.RIVER, BiomeDictionary.Type.SWAMP
-            )), EntityDrowned.class, 15, 1, 1);
+            )), EntityDrowned.class, ExtendedConfig.spawnWeightDrowned, 1, 1);
         }
 
         registerModEntity(PHANTOM_DIVER_ID, EntityPhantomDiver.class, PHANTOM_DIVER_NAME);
         if (ExtendedConfig.spawnPhantomDiver) {
-            addSpawnWater(BiomeDictionary.Type.OCEAN, EntityPhantomDiver.class, ExtendedConfig.phantomDiverSpawnWeight, 1, 1);
+            addSpawnWater(BiomeDictionary.Type.OCEAN, EntityPhantomDiver.class, ExtendedConfig.spawnWeightPhantomDiver, 1, 1);
         }
 
         registerModEntity(VAMPIRE_BAT_ID, EntityVampireBat.class, VAMPIRE_BAT_NAME);
         if (ExtendedConfig.spawnVampireBat) {
-            addSpawn(OVERWORLD_BIOMES, EntityVampireBat.class, 30, 1, 5);
+            addSpawn(OVERWORLD_BIOMES, EntityVampireBat.class, ExtendedConfig.spawnWeightVampireBat, 1, 5);
         }
 
         registerModEntity(WITHERED_BAT_ID, EntityWitheredBat.class, WITHERED_BAT_NAME);
         if (ExtendedConfig.spawnWitheredBat) {
-            addSpawn(BiomeDictionary.Type.NETHER, EntityWitheredBat.class, 30, 1, 3);
+            addSpawn(BiomeDictionary.Type.NETHER, EntityWitheredBat.class, ExtendedConfig.spawnWeightWitheredBat, 1, 3);
         }
 
         registerModEntity(BARGHEST_ID, EntityBarghest.class, BARGHEST_NAME);
         if (ExtendedConfig.spawnBarghest) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntityBarghest.class, 5, 1, 1);
+            addSpawn(BiomeDictionary.Type.FOREST, EntityBarghest.class, ExtendedConfig.spawnWeightBarghest, 1, 1);
         }
 
         registerModEntity(SWAMP_THING_ID, EntitySwampThing.class, SWAMP_THING_NAME);
         if (ExtendedConfig.spawnSwampThing) {
-            addSpawnWater(BiomeDictionary.Type.SWAMP, EntitySwampThing.class, 50, 1, 3);
+            addSpawnWater(BiomeDictionary.Type.SWAMP, EntitySwampThing.class, ExtendedConfig.spawnWeightSwampThing, 1, 3);
         }
 
         registerModEntity(RAVEN_ID, EntityRaven.class, RAVEN_NAME);

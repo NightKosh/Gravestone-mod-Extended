@@ -211,9 +211,6 @@ public class ExtendedConfig {
     public static boolean spawnZombieCats;
     public static boolean spawnSkeletonDogs;
     public static boolean spawnSkeletonCats;
-    public static boolean spawnSkullCrawlersAtMobsDeath;
-    public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
-    public static boolean spawnSkullCrawlersAtPileBonesDestruction;
     public static boolean spawnUndeadHorses;
     public static boolean spawnSkeletonRaiders;
     public static boolean spawnZombieRaiders;
@@ -225,10 +222,31 @@ public class ExtendedConfig {
     public static boolean spawnWitheredBat;
     public static boolean spawnBarghest;
     public static boolean spawnSwampThing;
+
+    public static int spawnWeightZombieDogs;
+    public static int spawnWeightZombieCats;
+    public static int spawnWeightSkeletonDogs;
+    public static int spawnWeightSkeletonCats;
+    public static int spawnWeightUndeadHorses;
+    public static int spawnWeightSkeletonRaiders;
+    public static int spawnWeightZombieRaiders;
+    public static int spawnWeightToxicSludge;
+    public static int spawnWeightPossessedArmor;
+    public static int spawnWeightMummy;
+    public static int spawnWeightDrowned;
+    public static int spawnWeightPhantomDiver;
+    public static int spawnWeightVampireBat;
+    public static int spawnWeightWitheredBat;
+    public static int spawnWeightBarghest;
+    public static int spawnWeightSwampThing;
+
+    public static boolean spawnSkullCrawlersAtMobsDeath;
+    public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
+    public static boolean spawnSkullCrawlersAtPileBonesDestruction;
+
     public static boolean toxicSludgeAndWaterChangeBlocks;
     public static boolean zombiePetsAttackAnimals;
     public static boolean zombiePetsAttackPets;
-    public static int phantomDiverSpawnWeight;
     public static List<Integer> mobsDimensionWhiteList;
 
     private static void entityConfig() {
@@ -249,7 +267,22 @@ public class ExtendedConfig {
         spawnBarghest = config.get(CATEGORY_MOBS, "SpawnBarghestInTheWorld", true).getBoolean();
         spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean();
 
-        phantomDiverSpawnWeight = config.get(CATEGORY_MOBS, "PhantomDiverSpawnWeight", 5).getInt();
+        spawnWeightZombieDogs = config.get(CATEGORY_MOBS, "SpawnWeightZombieDogs", 50).getInt();
+        spawnWeightZombieCats = config.get(CATEGORY_MOBS, "SpawnWeightZombieCats", 50).getInt();
+        spawnWeightSkeletonDogs = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonDogs", 50).getInt();
+        spawnWeightSkeletonCats = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonCats", 50).getInt();
+        spawnWeightUndeadHorses = config.get(CATEGORY_MOBS, "SpawnWeightUndeadHorses", 5).getInt();
+        spawnWeightSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonRaiders", 2).getInt();
+        spawnWeightZombieRaiders = config.get(CATEGORY_MOBS, "SpawnWeightZombieRaiders", 2).getInt();
+        spawnWeightToxicSludge = config.get(CATEGORY_MOBS, "SpawnWeightToxicSludge", 5).getInt();
+        spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
+        spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
+        spawnWeightDrowned = config.get(CATEGORY_MOBS, "SpawnWeightDrowned", 15).getInt();
+        spawnWeightPhantomDiver = config.get(CATEGORY_MOBS, "SpawnWeightPhantomDiver", 5).getInt();
+        spawnWeightVampireBat = config.get(CATEGORY_MOBS, "SpawnWeightVampireBat", 30).getInt();
+        spawnWeightWitheredBat = config.get(CATEGORY_MOBS, "SpawnWeightWitheredBat", 40).getInt();
+        spawnWeightBarghest = config.get(CATEGORY_MOBS, "SpawnWeightBarghest", 5).getInt();
+        spawnWeightSwampThing = config.get(CATEGORY_MOBS, "SpawnWeightSwampThing", 50).getInt();
 
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
                 "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");
