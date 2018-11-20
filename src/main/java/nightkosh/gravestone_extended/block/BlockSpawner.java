@@ -170,14 +170,17 @@ public class BlockSpawner extends BlockMobSpawner {
     }
 
     public ItemStack getCustomItemsDropped(int meta) {
-        switch (meta) {
-            case 1:
-                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 0);
-            case 2:
-                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 2);
-            case 0:
+        switch (EnumSpawner.getById((byte) meta)) {
+            case SKELETON_SPAWNER:
+                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON);
+            case ZOMBIE_SPAWNER:
+                return new ItemStack(GSBlock.SKULL_CANDLE_ZOMBIE);
+            case SPIDER_SPAWNER:
+                return new ItemStack(Blocks.WEB);
+            case WITHER_SPAWNER:
+                return new ItemStack(GSBlock.SKULL_CANDLE_WITHER);
             default:
-                return new ItemStack(GSBlock.SKULL_CANDLE_SKELETON, 1, 1);
+                return ItemStack.EMPTY;
         }
     }
 
