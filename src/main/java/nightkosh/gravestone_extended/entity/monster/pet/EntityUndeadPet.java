@@ -113,12 +113,8 @@ public abstract class EntityUndeadPet extends EntityMob {
     public void setMobType(EnumUndeadMobType mobType) {
         this.mobType = mobType;
         this.isImmuneToFire = this.mobType.fireProtected();
-        //TODO ?????????????????
-//        if (this.isImmuneToFire) {
-//            this.fireResistance = 2000000000;
-//        }
 
-        this.dataManager.set(MOB_TYPE, Byte.valueOf((byte) this.mobType.ordinal()));
+        this.dataManager.set(MOB_TYPE, (byte) this.mobType.ordinal());
     }
 
 

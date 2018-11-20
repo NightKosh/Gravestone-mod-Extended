@@ -102,7 +102,7 @@ public class IBMemorial extends ItemBlock {
             }
 
             if (nbt.hasKey("Enchanted")) {
-                list.add("Enchanted");//TODO
+                list.add("Enchanted");
             }
 
         }

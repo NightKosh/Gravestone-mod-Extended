@@ -85,7 +85,6 @@ public class GraveDeathMessageToServer implements IMessage, IMessageHandler<Grav
                     } else {
                         tileEntity.getDeathTextComponent().setDeathText(message.text);
                     }
-//                    world.markBlockForUpdate(new BlockPos(message.x, message.y, message.z));//TODO &&
                     BlockPos pos = new BlockPos(message.x, message.y, message.z);
                     IBlockState state = world.getBlockState(pos);
                     world.notifyBlockUpdate(pos, state, state, 3);

@@ -17,7 +17,6 @@ import nightkosh.gravestone_extended.core.Resources;
  */
 public class VillagersHandler {
 
-    public static final int UNDERTAKER_ID = 385; //TODO doesn't used !
     public static final String UNDERTAKER_NAME = ModInfo.ID.toLowerCase() + ":undertaker";
 
     public static VillagerRegistry.VillagerProfession undertakerProfession;

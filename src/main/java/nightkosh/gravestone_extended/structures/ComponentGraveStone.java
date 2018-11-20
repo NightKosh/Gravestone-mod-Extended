@@ -49,7 +49,6 @@ public class ComponentGraveStone extends StructureComponent implements IComponen
         super.setBlockState(world, blockState, x, y, z, boundingBox);
     }
 
-    // TODO Temporal fix
     @Override
     public void placeBlockAtCurrentPosition(World world, IBlockState blockState, int x, int y, int z, StructureBoundingBox boundingBox) {
         setBlockState(world, blockState, x, y, z, boundingBox);
@@ -73,7 +72,6 @@ public class ComponentGraveStone extends StructureComponent implements IComponen
         super.generateMaybeBox(world, boundingBox, random, chance, startX, startY, startZ, endX, endY, endZ, state1, state2, replace, 0);
     }
 
-    // TODO Temporal fix
     protected void randomlyFillWithBlocks(World world, StructureBoundingBox boundingBox, Random random, float chance, int startX, int startY, int startZ, int endX, int endY, int endZ, IBlockState state1, IBlockState state2, boolean replace) {
         fillWithBlocksRandomly(world, boundingBox, random, chance, startX, startY, startZ, endX, endY, endZ, state1, state2, replace);
     }

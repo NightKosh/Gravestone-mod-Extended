@@ -57,7 +57,6 @@ public class BlockExecution extends BlockContainer {
 
     public BlockExecution() {
         super(Material.ROCK);
-//        this.isBlockContainer = true;//TODO ????
         this.setSoundType(SoundType.WOOD);
         this.setHardness(1);
         this.setResistance(5);
@@ -107,12 +106,6 @@ public class BlockExecution extends BlockContainer {
                 }
         }
     }
-
-    //TODO ???????
-    //    @Override
-    //    public void setBlockBoundsForItemRender() {
-    //        return ITEM_BB;
-    //    }
 
     @Override
     public boolean isOpaqueCube(IBlockState state) {

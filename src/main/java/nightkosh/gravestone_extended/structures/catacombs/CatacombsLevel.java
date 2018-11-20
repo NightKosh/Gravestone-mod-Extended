@@ -62,7 +62,6 @@ public class CatacombsLevel {
                 totalComponentsCount = ExtendedConfig.catacombsMinRoomsCountAt4Level + random.nextInt(ExtendedConfig.catacombsMaxRoomsCountAt4Level - ExtendedConfig.catacombsMinRoomsCountAt4Level);
                 break;
         }
-//        totalComponentsCount = 100;////TODO !!!!!!!;
 
         componentsCount = 0;
         prepareLevel(levelComponents);
