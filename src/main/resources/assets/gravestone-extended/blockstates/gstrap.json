@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=night_stone":   { "model": "gravestone-extended:trap/night_stone" },
+        "variant=thunder_stone": { "model": "gravestone-extended:trap/thunder_stone" }
+    }
+}
