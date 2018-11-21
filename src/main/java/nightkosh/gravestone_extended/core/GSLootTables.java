@@ -36,9 +36,15 @@ public class GSLootTables {
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
     // Skeletons, undead horses, raiders ??
 
-
+    //fishing
     public static final ResourceLocation FISHING_TOXIC_WATER = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water");
     public static final ResourceLocation FISHING_TOXIC_WATER_TREASURE = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
+
+    //graves
+    public static final ResourceLocation GRAVE_SKULL = new ResourceLocation(ModInfo.ID, "graves/corpse/skull");
+    public static final ResourceLocation GRAVE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/corpse/bones_and_flesh");
+    public static final ResourceLocation GRAVE_PET_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/pet/golden");
+    public static final ResourceLocation GRAVE_PET_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/pet/diamond");
 
     //inject
     public static final ResourceLocation INJECT_BAT = new ResourceLocation(ModInfo.ID, "inject/bat");
@@ -67,9 +73,17 @@ public class GSLootTables {
         LootTableList.register(RAVEN);
         LootTableList.register(DAMNED_WARRIOR);
 
+        //fishing
         LootTableList.register(FISHING_TOXIC_WATER);
         LootTableList.register(FISHING_TOXIC_WATER_TREASURE);
 
+        //graves
+        LootTableList.register(GRAVE_SKULL);
+        LootTableList.register(GRAVE_BONES_AND_FLESH);
+        LootTableList.register(GRAVE_PET_GOLDEN);
+        LootTableList.register(GRAVE_PET_DIAMOND);
+
+        //inject
         LootTableList.register(INJECT_BAT);
         LootTableList.register(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL);
     }

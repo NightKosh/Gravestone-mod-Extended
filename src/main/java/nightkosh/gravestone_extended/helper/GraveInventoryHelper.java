@@ -4,7 +4,12 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
+import net.minecraft.world.storage.loot.LootContext;
 import nightkosh.gravestone.helper.GraveGenerationHelper.EnumGraveTypeByEntity;
+import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.item.corpse.CatCorpseHelper;
 import nightkosh.gravestone_extended.item.corpse.DogCorpseHelper;
 import nightkosh.gravestone_extended.item.corpse.HorseCorpseHelper;
@@ -75,19 +80,6 @@ public class GraveInventoryHelper {
             default:
                 itemList.add(VillagerCorpseHelper.getRandomCorpse(random));
                 break;
-        }
-    }
-
-    private static void addBonesAndFlesh(Random random, List<ItemStack> itemList) {
-        itemList.add(new ItemStack(Items.BONE, 1 + random.nextInt(5), 0));
-        itemList.add(new ItemStack(Items.ROTTEN_FLESH, 1 + random.nextInt(5), 0));
-    }
-
-    private static void addSkull(Random random, List<ItemStack> itemList) {
-        if (random.nextBoolean()) {
-            itemList.add(new ItemStack(Items.SKULL, 1, 0));//SKELETON
-        } else {
-            itemList.add(new ItemStack(Items.SKULL, 1, 2));//ZOMBIE
         }
     }
 
@@ -567,14 +559,19 @@ public class GraveInventoryHelper {
         }
     }
 
+    private static List<ItemStack> getLoot(World world, ResourceLocation lootTable) {
+        LootContext.Builder lootContextBuilder = new LootContext.Builder((WorldServer) world);
+
+        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(world.rand, lootContextBuilder.build());
+    }
+
     private static void fillPetGrave(List<ItemStack> itemList, ContentMaterials contentMaterials) {
         switch (contentMaterials) {
             case GOLDEN:
-                itemList.add(new ItemStack(Items.LEAD, 1, 0));
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PET_GOLDEN));
                 break;
             case DIAMOND:
-                itemList.add(new ItemStack(Items.LEAD, 1, 0));
-                itemList.add(new ItemStack(Items.NAME_TAG, 1, 0));
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PET_DIAMOND));
                 break;
         }
     }
@@ -630,11 +627,11 @@ public class GraveInventoryHelper {
                 GraveInventoryHelper.addCorpse(contentType, random, itemList);
                 break;
             case BONES_AND_FLESH:
-                GraveInventoryHelper.addBonesAndFlesh(random, itemList);
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_BONES_AND_FLESH));
                 break;
             case SKULL_BONES_AND_FLESH:
-                GraveInventoryHelper.addSkull(random, itemList);
-                GraveInventoryHelper.addBonesAndFlesh(random, itemList);
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_SKULL));
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_BONES_AND_FLESH));
                 break;
         }
 
@@ -642,7 +639,7 @@ public class GraveInventoryHelper {
             switch (graveTypeByEntity) {
                 case DOGS_GRAVES:
                 case CATS_GRAVES:
-                    GraveInventoryHelper.fillPetGrave(itemList, contentMaterials);
+                    GraveInventoryHelper.fillPetGrave(world, itemList, contentMaterials);
                     break;
                 case HORSE_GRAVES:
                     break;//TODO !!!!!
