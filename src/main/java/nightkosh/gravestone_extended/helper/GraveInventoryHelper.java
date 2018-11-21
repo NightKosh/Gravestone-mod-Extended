@@ -179,83 +179,24 @@ public class GraveInventoryHelper {
         }
     }
 
-    private static void fillWarriorGrave(Random random, List<ItemStack> itemList, ContentMaterials materials) {
+    private static void fillWarriorGrave(World world, List<ItemStack> itemList, ContentMaterials materials) {
+        //TODO !!!
         switch (materials) {
             case OTHER:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.LEATHER_CHESTPLATE, 1, getRandomDamage(random, 30)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.LEATHER_LEGGINGS, 1, getRandomDamage(random, 30)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.LEATHER_HELMET, 1, getRandomDamage(random, 30)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.LEATHER_BOOTS, 1, getRandomDamage(random, 30)));
-                }
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WARRIOR_LEATHER));
                 break;
             case IRON:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.IRON_CHESTPLATE, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.IRON_LEGGINGS, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.IRON_HELMET, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.IRON_BOOTS, 1, getRandomDamage(random)));
-                }
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WARRIOR_IRON));
                 break;
             case CHAINMAIL:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.CHAINMAIL_LEGGINGS, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.CHAINMAIL_HELMET, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.CHAINMAIL_BOOTS, 1, getRandomDamage(random)));
-                }
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WARRIOR_CHAINMAIL));
                 break;
             case GOLDEN:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.GOLDEN_CHESTPLATE, 1, getRandomDamage(random, 50)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.GOLDEN_LEGGINGS, 1, getRandomDamage(random, 50)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.GOLDEN_HELMET, 1, getRandomDamage(random, 30)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.GOLDEN_BOOTS, 1, getRandomDamage(random, 40)));
-                }
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WARRIOR_GOLDEN));
                 break;
             case DIAMOND:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.DIAMOND_CHESTPLATE, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.DIAMOND_LEGGINGS, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.DIAMOND_HELMET, 1, getRandomDamage(random)));
-                }
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.DIAMOND_BOOTS, 1, getRandomDamage(random)));
-                }
+                itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WARRIOR_DIAMOND));
                 break;
-        }
-
-        if (random.nextInt(3) == 0) {
-            itemList.add(new ItemStack(Items.BOW, 1, getRandomDamage(random)));
-            itemList.add(new ItemStack(Items.ARROW, 10 + random.nextInt(54), 0));
         }
     }
 
@@ -483,7 +424,7 @@ public class GraveInventoryHelper {
                             fillWizardGrave(world, random, itemList, contentMaterials);//TODO
                             break;
                         case WARRIOR:
-                            GraveInventoryHelper.fillWarriorGrave(random, itemList, contentMaterials);
+                            fillWarriorGrave(world, itemList, contentMaterials);//TODO
                             break;
                         case ADVENTURER:
                             itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_ADVENTURER));//TODO EGGS

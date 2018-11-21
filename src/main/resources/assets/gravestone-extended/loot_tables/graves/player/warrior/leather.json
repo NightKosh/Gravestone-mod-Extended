@@ -1,0 +1,125 @@
+{
+    "pools": [
+        {
+            "name": "helmet",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:leather_helmet",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "chestplate",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:leather_chestplate",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "leggings",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:leather_leggings",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "boots",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:leather_boots",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "bow",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.05
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/other/eggs",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}
