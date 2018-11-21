@@ -1,9 +1,15 @@
 package nightkosh.gravestone_extended.core;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.loot.*;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraftforge.event.LootTableLoadEvent;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  * GraveStone mod
@@ -131,5 +137,11 @@ public class GSLootTables {
             LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[]{}, new RandomValueRange(1, 1), new RandomValueRange(0, 1), "fishing_lava_nether_enchanted_skull");
             event.getTable().addPool(pool);
         }
+    }
+
+    public static List<ItemStack> getLoot(World world, Random random, ResourceLocation lootTable) {
+        LootContext.Builder lootContextBuilder = new LootContext.Builder((WorldServer) world);
+
+        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random, lootContextBuilder.build());
     }
 }
