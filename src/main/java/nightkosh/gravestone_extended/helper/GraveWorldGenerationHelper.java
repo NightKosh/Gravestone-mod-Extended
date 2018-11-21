@@ -72,7 +72,7 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
             }
         }
 
-        items = GraveInventoryHelper.getRandomGraveContent(random, graveTypeByEntity, contentType, GraveInventoryHelper.GraveCorpseContentType.RANDOM, contentMaterials);
+        items = GraveInventoryHelper.getRandomGraveContent(world, random, graveTypeByEntity, contentType, GraveInventoryHelper.GraveCorpseContentType.RANDOM, contentMaterials);
 
         boolean enchanted = isMagicDamage(deathText.getDeathText());
         boolean mossy = isMossyGrave(world, pos, grave.getMaterial());

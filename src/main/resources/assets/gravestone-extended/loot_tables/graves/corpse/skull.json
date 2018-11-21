@@ -13,7 +13,8 @@
                             "function": "set_data",
                             "data": 0
                         }
-                    ]
+                    ],
+                    "entryName": "SKELETON SKULL"
                 },
                 {
                     "type": "item",
@@ -24,7 +25,8 @@
                             "function": "set_data",
                             "data": 2
                         }
-                    ]
+                    ],
+                    "entryName": "ZOMBIE SKULL"
                 }
             ]
         }

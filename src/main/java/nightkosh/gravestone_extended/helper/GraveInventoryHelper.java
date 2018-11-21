@@ -293,7 +293,7 @@ public class GraveInventoryHelper {
         }
     }
 
-    private static void fillMinerGrave(Random random, List<ItemStack> itemList, ContentMaterials materials) {
+    private static void fillMinerGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials materials) {
         switch (materials) {
             case IRON:
                 itemList.add(new ItemStack(Items.IRON_PICKAXE, 1, getRandomDamage(random)));
@@ -309,31 +309,7 @@ public class GraveInventoryHelper {
                 break;
         }
 
-        switch (random.nextInt(10)) {
-            case 0:
-                itemList.add(new ItemStack(Items.DIAMOND, 1 + random.nextInt(3), 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.EMERALD, 1 + random.nextInt(3), 0));
-                break;
-        }
-        switch (random.nextInt(5)) {
-            case 0:
-                itemList.add(new ItemStack(Items.GOLD_INGOT, 3 + random.nextInt(5), 0));
-                break;
-            case 1:
-            case 2:
-                itemList.add(new ItemStack(Items.IRON_INGOT, 3 + random.nextInt(5), 0));
-                break;
-        }
-        switch (random.nextInt(5)) {
-            case 0:
-                itemList.add(new ItemStack(Items.REDSTONE, 3 + random.nextInt(8), 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.DYE, 3 + random.nextInt(8), 4));
-                break;
-        }
+        itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_MINER));
     }
 
     private static ContentMaterials getWizardContentType(Random random) {
@@ -350,7 +326,7 @@ public class GraveInventoryHelper {
     }
 
 
-    private static void fillWizardGrave(Random random, List<ItemStack> itemList, ContentMaterials contentMaterials) {
+    private static void fillWizardGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials contentMaterials) {
         switch (contentMaterials) {
             case REDSTONE: // enchanted book
                 itemList.add(EnchantmentHelper.addRandomEnchantment(random, new ItemStack(Items.BOOK), 5, true));
@@ -363,49 +339,7 @@ public class GraveInventoryHelper {
                 itemList.add(new ItemStack(Items.BOOK, 3 + random.nextInt(8), 0));
                 break;
         }
-        switch (random.nextInt(15)) {
-            case 0:
-                itemList.add(new ItemStack(Items.ENDER_PEARL, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.BLAZE_POWDER, 1, 0));
-                break;
-            case 2:
-                itemList.add(new ItemStack(Items.GLOWSTONE_DUST, 3 + random.nextInt(8), 0));
-                break;
-        }
-        switch (random.nextInt(6)) {
-            case 0:
-                itemList.add(new ItemStack(Items.MAGMA_CREAM, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.GUNPOWDER, 1, 0));
-                break;
-        }
-        switch (random.nextInt(10)) {
-            case 0:
-                itemList.add(new ItemStack(Items.GHAST_TEAR, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.NETHER_WART, 1, 0));
-                break;
-        }
-        switch (random.nextInt(5)) {
-            case 0:
-                itemList.add(new ItemStack(Items.SPIDER_EYE, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.FERMENTED_SPIDER_EYE, 1, 0));
-                break;
-        }
-        switch (random.nextInt(8)) {
-            case 0:
-                itemList.add(new ItemStack(Items.GOLDEN_CARROT, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.SPECKLED_MELON, 1, 0));
-                break;
-        }
+        itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_WIZARD));
     }
 
     private static ContentMaterials getWorkerContentType(Random random) {
@@ -459,44 +393,6 @@ public class GraveInventoryHelper {
         }
     }
 
-    private static void fillAdventureGrave(Random random, List<ItemStack> itemList, ContentMaterials contentMaterials) {
-        switch (random.nextInt(8)) {
-            case 0:
-                itemList.add(new ItemStack(Items.COMPASS, 1, 0));
-                break;
-            case 1:
-                itemList.add(new ItemStack(Items.CLOCK, 1, 0));
-                break;
-            case 2:
-                itemList.add(new ItemStack(Items.MAP, 1, 0));
-                break;
-        }
-
-        switch (random.nextInt(10)) {
-            case 0:
-                itemList.add(new ItemStack(Items.PAINTING, 1 + random.nextInt(5), 0));
-                break;
-            case 1:
-                itemList.add(getRandomRecord(random));
-                break;
-            case 2:
-                itemList.add(new ItemStack(Items.WRITABLE_BOOK, 1, 0));
-                break;
-        }
-
-        if (random.nextInt(4) == 0) {
-            itemList.add(new ItemStack(Items.STICK, 3 + random.nextInt(9), 0));
-        }
-
-        if (random.nextInt(5) == 0) {
-            itemList.add(new ItemStack(Items.COOKIE, 3 + random.nextInt(5), 0));
-        }
-
-        if (contentMaterials == ContentMaterials.EMERALD) {
-            itemList.add(EggHelper.getRandomEgg(random));
-        }
-    }
-
     private static ContentMaterials getTreasuryContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 10) {
@@ -509,42 +405,6 @@ public class GraveInventoryHelper {
             return ContentMaterials.IRON;//30%
         } else {
             return ContentMaterials.OTHER;//10%
-        }
-    }
-
-    private static void fillTreasuryGrave(Random random, List<ItemStack> itemList) {
-        if (random.nextInt(10) == 0) {
-            itemList.add(getRandomRecord(random));
-        }
-        if (random.nextInt(10) == 0) {
-            itemList.add(EggHelper.getRandomEgg(random));
-        }
-        if (random.nextInt(10) == 0) {// enchanted book
-            itemList.add(EnchantmentHelper.addRandomEnchantment(random, new ItemStack(Items.BOOK), 5, true));
-        }
-        if (random.nextInt(10) == 0) {
-            itemList.add(new ItemStack(Items.ENDER_PEARL, 1 + random.nextInt(5), 0));
-        }
-        if (random.nextInt(10) == 0) {
-            itemList.add(new ItemStack(Items.GHAST_TEAR, 1 + random.nextInt(5), 0));
-        }
-        if (random.nextInt(10) == 0) {
-            itemList.add(new ItemStack(Items.BLAZE_ROD, 1 + random.nextInt(5), 0));
-        }
-
-        if (random.nextInt(5) == 0) {
-            itemList.add(new ItemStack(Items.MAGMA_CREAM, 1 + random.nextInt(5), 0));
-        }
-        if (random.nextInt(5) == 0) {
-            itemList.add(new ItemStack(Items.GLOWSTONE_DUST, 3 + random.nextInt(13), 0));
-        }
-
-        if (random.nextInt(10) == 0) {
-            itemList.add(new ItemStack(Items.DIAMOND, 1 + random.nextInt(5), 0));
-        } else if (random.nextInt(10) == 0) {
-            itemList.add(new ItemStack(Items.EMERALD, 1 + random.nextInt(5), 0));
-        } else {
-            itemList.add(new ItemStack(Items.GOLD_INGOT, 3 + random.nextInt(8), 0));
         }
     }
 
@@ -565,7 +425,7 @@ public class GraveInventoryHelper {
         return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(world.rand, lootContextBuilder.build());
     }
 
-    private static void fillPetGrave(List<ItemStack> itemList, ContentMaterials contentMaterials) {
+    private static void fillPetGrave(World world, List<ItemStack> itemList, ContentMaterials contentMaterials) {
         switch (contentMaterials) {
             case GOLDEN:
                 itemList.addAll(getLoot(world, GSLootTables.GRAVE_PET_GOLDEN));
@@ -584,39 +444,7 @@ public class GraveInventoryHelper {
         return random.nextInt(maxDamage);
     }
 
-    private static ItemStack getRandomRecord(Random random) {
-        switch (random.nextInt(13)) {
-            case 1:
-                return new ItemStack(Items.RECORD_CAT, 1, 0);
-            case 2:
-                return new ItemStack(Items.RECORD_BLOCKS, 1, 0);
-            case 3:
-                return new ItemStack(Items.RECORD_CHIRP, 1, 0);
-            case 4:
-                return new ItemStack(Items.RECORD_FAR, 1, 0);
-            case 5:
-                return new ItemStack(Items.RECORD_MALL, 1, 0);
-            case 6:
-                return new ItemStack(Items.RECORD_MELLOHI, 1, 0);
-            case 7:
-                return new ItemStack(Items.RECORD_STAL, 1, 0);
-            case 8:
-                return new ItemStack(Items.RECORD_STRAD, 1, 0);
-            case 9:
-                return new ItemStack(Items.RECORD_WARD, 1, 0);
-            case 10:
-                return new ItemStack(Items.RECORD_11, 1, 0);
-            case 11:
-                return new ItemStack(Items.RECORD_WAIT, 1, 0);
-            case 12:
-                return new ItemStack(Items.RECORD_13, 1, 0);
-            case 0:
-            default:
-                return new ItemStack(Items.RECORD_CAT, 1, 0);
-        }
-    }
-
-    public static List<ItemStack> getRandomGraveContent(Random random, GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType,
+    public static List<ItemStack> getRandomGraveContent(World world, Random random, GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType,
                                                         GraveCorpseContentType corpseType, ContentMaterials contentMaterials) {
         List<ItemStack> itemList = new ArrayList<>();
         if (corpseType == GraveInventoryHelper.GraveCorpseContentType.RANDOM) {
@@ -624,7 +452,7 @@ public class GraveInventoryHelper {
         }
         switch (corpseType) {
             case CORPSE:
-                GraveInventoryHelper.addCorpse(contentType, random, itemList);
+                addCorpse(contentType, random, itemList);//TODO
                 break;
             case BONES_AND_FLESH:
                 itemList.addAll(getLoot(world, GSLootTables.GRAVE_BONES_AND_FLESH));
@@ -649,19 +477,19 @@ public class GraveInventoryHelper {
                             GraveInventoryHelper.fillWorkerGrave(random, itemList, contentMaterials);
                             break;
                         case MINER:
-                            GraveInventoryHelper.fillMinerGrave(random, itemList, contentMaterials);
+                            fillMinerGrave(world, random, itemList, contentMaterials);//TODO
                             break;
                         case WIZARD:
-                            GraveInventoryHelper.fillWizardGrave(random, itemList, contentMaterials);
+                            fillWizardGrave(world, random, itemList, contentMaterials);//TODO
                             break;
                         case WARRIOR:
                             GraveInventoryHelper.fillWarriorGrave(random, itemList, contentMaterials);
                             break;
                         case ADVENTURER:
-                            GraveInventoryHelper.fillAdventureGrave(random, itemList, contentMaterials);
+                            itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_ADVENTURER));//TODO EGGS
                             break;
                         case TREASURY:
-                            GraveInventoryHelper.fillTreasuryGrave(random, itemList);
+                            itemList.addAll(getLoot(world, GSLootTables.GRAVE_PLAYER_TREASURY));
                             break;
                     }
             }

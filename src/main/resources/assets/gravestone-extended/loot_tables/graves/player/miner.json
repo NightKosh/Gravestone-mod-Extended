@@ -1,0 +1,128 @@
+{
+    "pools": [
+        {
+            "name": "diamond_or_emerald",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.2
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "redstone_or_lapis",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.4
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:redstone",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 11
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:dye",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 11
+                            }
+                        },
+                        {
+                            "function": "set_data",
+                            "data": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "iron_or_gold",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.6
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_ingot",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:gold_ingot",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

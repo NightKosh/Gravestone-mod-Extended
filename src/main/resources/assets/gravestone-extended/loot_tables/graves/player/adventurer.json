@@ -1,0 +1,136 @@
+{
+    "pools": [
+        {
+            "name": "compass_or_clock_or_map",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.375
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:compass",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:clock",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:map",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "painting_or_record_or_book",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.3
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:painting",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:writable_book",
+                    "weight": 10
+                },
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/other/records",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "stick",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.25
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:stick",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 12
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "cookie",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.20
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:cookie",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "eggs",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.05
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/other/eggs",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}

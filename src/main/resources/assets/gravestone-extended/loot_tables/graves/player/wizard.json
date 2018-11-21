@@ -1,0 +1,128 @@
+{
+    "pools": [
+        {
+            "name": "ender_pearl_or_blaze_powder_or_glowstone_dust",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.2
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:ender_pearl",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:blaze_powder",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:glowstone_dust",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 10
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "magma_cream_or_gunpowder",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.35
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:magma_cream",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:gunpowder",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "ghast_tear_or_nether_wart",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.2
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:ghast_tear",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:nether_wart",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "spider_eyes",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.4
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:spider_eye",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:fermented_spider_eye",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "golden_carrot_or_speckled_melon",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.25
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:golden_carrot",
+                    "weight": 10
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:speckled_melon",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}
