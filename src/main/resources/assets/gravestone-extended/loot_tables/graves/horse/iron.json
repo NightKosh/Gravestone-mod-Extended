@@ -1,0 +1,26 @@
+{
+    "pools": [
+        {
+            "name": "armor",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_horse_armor",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "other",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/horse/horse",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}

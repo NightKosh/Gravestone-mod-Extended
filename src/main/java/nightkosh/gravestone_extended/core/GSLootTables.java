@@ -74,6 +74,11 @@ public class GSLootTables {
     public static final ResourceLocation GRAVE_PET_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/pet/golden");
     public static final ResourceLocation GRAVE_PET_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/pet/diamond");
 
+    public static final ResourceLocation GRAVE_HORSE = new ResourceLocation(ModInfo.ID, "graves/horse/horse");
+    public static final ResourceLocation GRAVE_HORSE_ARMOR_IRON = new ResourceLocation(ModInfo.ID, "graves/horse/iron");
+    public static final ResourceLocation GRAVE_HORSE_ARMOR_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/horse/golden");
+    public static final ResourceLocation GRAVE_HORSE_ARMOR_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/horse/diamond");
+
     public static final ResourceLocation GRAVE_OTHER_EGGS = new ResourceLocation(ModInfo.ID, "graves/other/eggs");
     public static final ResourceLocation GRAVE_OTHER_RECORDS = new ResourceLocation(ModInfo.ID, "graves/other/records");
 
@@ -136,6 +141,11 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_PET_GOLDEN);
         LootTableList.register(GRAVE_PET_DIAMOND);
+
+        LootTableList.register(GRAVE_HORSE);
+        LootTableList.register(GRAVE_HORSE_ARMOR_IRON);
+        LootTableList.register(GRAVE_HORSE_ARMOR_GOLDEN);
+        LootTableList.register(GRAVE_HORSE_ARMOR_DIAMOND);
 
         LootTableList.register(GRAVE_OTHER_EGGS);
         LootTableList.register(GRAVE_OTHER_RECORDS);
