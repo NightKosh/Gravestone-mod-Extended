@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -303,7 +302,7 @@ public class GraveInventoryHelper {
                 default:
                     switch (contentType) {
                         case WORKER:
-                            fillWorkerGrave(world, random, itemList, contentMaterials);//TODO
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER, contentMaterials));
                             break;
                         case MINER:
                             itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER, contentMaterials));
@@ -350,20 +349,6 @@ public class GraveInventoryHelper {
                 break;
             case DIAMOND:
                 itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DIAMOND, material));
-                break;
-        }
-    }
-
-    private static void fillWorkerGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials material) {
-        switch (material) {
-            case IRON:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_IRON, material));
-                break;
-            case GOLDEN:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_GOLDEN, material));
-                break;
-            case DIAMOND:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_DIAMOND, material));
                 break;
         }
     }
