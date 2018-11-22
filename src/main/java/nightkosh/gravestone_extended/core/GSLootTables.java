@@ -133,9 +133,9 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_HORSE);
 
-        LootTableList.register(GRAVE_OTHER_EGGS);//TODO
+        LootTableList.register(GRAVE_OTHER_EGGS);
         LootTableList.register(GRAVE_OTHER_RECORDS);
-        LootTableList.register(GRAVE_OTHER_POTIONS);//TODO
+        LootTableList.register(GRAVE_OTHER_POTIONS);
 
         //inject
         LootTableList.register(INJECT_BAT);
