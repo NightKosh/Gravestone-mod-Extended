@@ -1,0 +1,106 @@
+{
+    "pools": [
+        {
+            "name": "leather_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "OTHER"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/armor/leather",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "iron_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "IRON"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/armor/iron",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "chainmail_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "CHAINMAIL"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/armor/chainmail",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "golden_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "GOLDEN"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/armor/golden",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "diamond_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "DIAMOND"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/armor/diamond",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "bow",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.3
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior/bow",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}

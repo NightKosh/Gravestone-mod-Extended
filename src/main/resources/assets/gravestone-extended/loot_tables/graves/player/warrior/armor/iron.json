@@ -12,7 +12,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:diamond_helmet",
+                    "name": "minecraft:iron_helmet",
                     "weight": 10,
                     "functions": [
                         {
@@ -38,7 +38,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:diamond_chestplate",
+                    "name": "minecraft:iron_chestplate",
                     "weight": 10,
                     "functions": [
                         {
@@ -64,7 +64,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:diamond_leggings",
+                    "name": "minecraft:iron_leggings",
                     "weight": 10,
                     "functions": [
                         {
@@ -90,7 +90,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "minecraft:diamond_boots",
+                    "name": "minecraft:iron_boots",
                     "weight": 10,
                     "functions": [
                         {
@@ -101,23 +101,6 @@
                             }
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "bow",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance",
-                    "chance": 0.3
-                }
-            ],
-            "entries": [
-                {
-                    "type": "loot_table",
-                    "name": "gravestone-extended:graves/player/warrior/bow",
-                    "weight": 10
                 }
             ]
         }

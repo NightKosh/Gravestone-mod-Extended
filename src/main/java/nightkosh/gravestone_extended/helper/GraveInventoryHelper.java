@@ -311,13 +311,13 @@ public class GraveInventoryHelper {
                             itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WIZARD, contentMaterials));
                             break;
                         case WARRIOR:
-                            fillWarriorGrave(world, random, itemList, contentMaterials);//TODO//TODO
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR, contentMaterials));
                             break;
                         case ADVENTURER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, contentMaterials));//TODO EGGS
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, contentMaterials));
                             break;
                         case TREASURY:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, contentMaterials));//TODO
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, contentMaterials));
                             break;
                     }
             }
@@ -349,27 +349,6 @@ public class GraveInventoryHelper {
                 break;
             case DIAMOND:
                 itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DIAMOND, material));
-                break;
-        }
-    }
-
-    private static void fillWarriorGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials material) {
-        //TODO !!!
-        switch (material) {
-            case OTHER:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_LEATHER, material));
-                break;
-            case IRON:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_IRON, material));
-                break;
-            case CHAINMAIL:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_CHAINMAIL, material));
-                break;
-            case GOLDEN:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_GOLDEN, material));
-                break;
-            case DIAMOND:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_DIAMOND, material));
                 break;
         }
     }

@@ -103,23 +103,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "bow",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance",
-                    "chance": 0.3
-                }
-            ],
-            "entries": [
-                {
-                    "type": "loot_table",
-                    "name": "gravestone-extended:graves/player/warrior/bow",
-                    "weight": 10
-                }
-            ]
         }
     ]
 }
