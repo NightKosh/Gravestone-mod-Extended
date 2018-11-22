@@ -60,11 +60,7 @@ public class GSLootTables {
     public static final ResourceLocation GRAVE_PLAYER_WORKER_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/worker/golden");
     public static final ResourceLocation GRAVE_PLAYER_WORKER_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/worker/diamond");
 
-    public static final ResourceLocation GRAVE_PLAYER_MINER_RESOURCES = new ResourceLocation(ModInfo.ID, "graves/player/miner/resources");
-    public static final ResourceLocation GRAVE_PLAYER_MINER_STONE = new ResourceLocation(ModInfo.ID, "graves/player/miner/stone");
-    public static final ResourceLocation GRAVE_PLAYER_MINER_IRON = new ResourceLocation(ModInfo.ID, "graves/player/miner/iron");
-    public static final ResourceLocation GRAVE_PLAYER_MINER_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/miner/golden");
-    public static final ResourceLocation GRAVE_PLAYER_MINER_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/miner/diamond");
+    public static final ResourceLocation GRAVE_PLAYER_MINER = new ResourceLocation(ModInfo.ID, "graves/player/miner");
 
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_BOW = new ResourceLocation(ModInfo.ID, "graves/player/warrior/bow");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_LEATHER = new ResourceLocation(ModInfo.ID, "graves/player/warrior/leather");
@@ -126,11 +122,7 @@ public class GSLootTables {
         LootTableList.register(GRAVE_PLAYER_WORKER_GOLDEN);
         LootTableList.register(GRAVE_PLAYER_WORKER_DIAMOND);
 
-        LootTableList.register(GRAVE_PLAYER_MINER_RESOURCES);
-        LootTableList.register(GRAVE_PLAYER_MINER_STONE);
-        LootTableList.register(GRAVE_PLAYER_MINER_IRON);
-        LootTableList.register(GRAVE_PLAYER_MINER_GOLDEN);
-        LootTableList.register(GRAVE_PLAYER_MINER_DIAMOND);
+        LootTableList.register(GRAVE_PLAYER_MINER);
 
         LootTableList.register(GRAVE_PLAYER_WARRIOR_BOW);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_LEATHER);

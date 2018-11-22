@@ -295,7 +295,7 @@ public class GraveInventoryHelper {
             switch (graveTypeByEntity) {
                 case DOGS_GRAVES:
                 case CATS_GRAVES:
-                    fillPetGrave(world, random, itemList, contentMaterials);
+                    fillPetGrave(world, random, itemList, contentMaterials);//TODO
                     break;
                 case HORSE_GRAVES:
                     itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE, contentMaterials));
@@ -303,22 +303,22 @@ public class GraveInventoryHelper {
                 default:
                     switch (contentType) {
                         case WORKER:
-                            fillWorkerGrave(world, random, itemList, contentMaterials);
+                            fillWorkerGrave(world, random, itemList, contentMaterials);//TODO
                             break;
                         case MINER:
-                            fillMinerGrave(world, random, itemList, contentMaterials);//TODO
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER, contentMaterials));
                             break;
                         case WIZARD:
                             itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WIZARD, contentMaterials));
                             break;
                         case WARRIOR:
-                            fillWarriorGrave(world, random, itemList, contentMaterials);//TODO
+                            fillWarriorGrave(world, random, itemList, contentMaterials);//TODO//TODO
                             break;
                         case ADVENTURER:
                             itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, contentMaterials));//TODO EGGS
                             break;
                         case TREASURY:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, contentMaterials));//TODO
                             break;
                     }
             }
@@ -364,23 +364,6 @@ public class GraveInventoryHelper {
                 break;
             case DIAMOND:
                 itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_DIAMOND, material));
-                break;
-        }
-    }
-
-    private static void fillMinerGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials material) {
-        switch (material) {
-            case IRON:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_IRON, material));
-                break;
-            case GOLDEN:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_GOLDEN, material));
-                break;
-            case DIAMOND:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_DIAMOND, material));
-                break;
-            default:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_STONE, material));
                 break;
         }
     }

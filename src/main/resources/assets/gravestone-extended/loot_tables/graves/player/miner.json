@@ -123,6 +123,84 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "iron_pickaxe",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "IRON"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_pickaxe",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "golden_pickaxe",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "GOLDEN"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:golden_pickaxe",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "diamond_pickaxe",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "DIAMOND"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_pickaxe",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
