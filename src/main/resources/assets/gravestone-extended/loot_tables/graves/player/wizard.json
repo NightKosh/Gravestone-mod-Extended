@@ -123,6 +123,99 @@
                     "weight": 10
                 }
             ]
+        },
+        {
+            "name": "enchanted_book",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "REDSTONE"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:book",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": 10,
+                            "treasure": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dragon_breath",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "QUARTZ"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:dragon_breath",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 5,
+                                "max": 15
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "potions",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "QUARTZ"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/other/potions",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "book",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "LAPIS"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:book",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 11
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

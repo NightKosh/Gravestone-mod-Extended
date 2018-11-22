@@ -6,7 +6,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.loot.*;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
+import net.minecraft.world.storage.loot.conditions.LootConditionManager;
 import net.minecraftforge.event.LootTableLoadEvent;
+import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
+import nightkosh.gravestone_extended.loot.LootConditionGraveContentMaterial;
+import nightkosh.gravestone_extended.loot.LootContextGrave;
 
 import java.util.List;
 import java.util.Random;
@@ -81,6 +85,7 @@ public class GSLootTables {
 
     public static final ResourceLocation GRAVE_OTHER_EGGS = new ResourceLocation(ModInfo.ID, "graves/other/eggs");
     public static final ResourceLocation GRAVE_OTHER_RECORDS = new ResourceLocation(ModInfo.ID, "graves/other/records");
+    public static final ResourceLocation GRAVE_OTHER_POTIONS = new ResourceLocation(ModInfo.ID, "graves/other/potions");
 
     //inject
     public static final ResourceLocation INJECT_BAT = new ResourceLocation(ModInfo.ID, "inject/bat");
@@ -147,12 +152,17 @@ public class GSLootTables {
         LootTableList.register(GRAVE_HORSE_ARMOR_GOLDEN);
         LootTableList.register(GRAVE_HORSE_ARMOR_DIAMOND);
 
-        LootTableList.register(GRAVE_OTHER_EGGS);
+        LootTableList.register(GRAVE_OTHER_EGGS);//TODO
         LootTableList.register(GRAVE_OTHER_RECORDS);
+        LootTableList.register(GRAVE_OTHER_POTIONS);//TODO
 
         //inject
         LootTableList.register(INJECT_BAT);
         LootTableList.register(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL);
+
+
+        // conditions
+        LootConditionManager.registerCondition(new LootConditionGraveContentMaterial.Serializer());
     }
 
     public static void inject(LootTableLoadEvent event) {
@@ -169,9 +179,8 @@ public class GSLootTables {
         }
     }
 
-    public static List<ItemStack> getLoot(World world, Random random, ResourceLocation lootTable) {
-        LootContext.Builder lootContextBuilder = new LootContext.Builder((WorldServer) world);
-
-        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random, lootContextBuilder.build());
+    public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable, GraveInventoryHelper.ContentMaterials contentMaterial) {
+        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
+                new LootContextGrave.Builder((WorldServer) world).withContentMaterial(contentMaterial).build());
     }
 }
