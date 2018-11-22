@@ -298,7 +298,7 @@ public class GraveInventoryHelper {
                     fillPetGrave(world, random, itemList, contentMaterials);
                     break;
                 case HORSE_GRAVES:
-                    fillHorseGrave(world, random, itemList, contentMaterials);
+                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE, contentMaterials));
                     break;
                 default:
                     switch (contentType) {
@@ -350,24 +350,6 @@ public class GraveInventoryHelper {
                 break;
             case DIAMOND:
                 itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DIAMOND, material));
-                break;
-        }
-    }
-
-    private static void fillHorseGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials material) {
-        switch (material) {
-            case IRON:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE_ARMOR_IRON, material));
-                break;
-            case GOLDEN:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE_ARMOR_GOLDEN, material));
-                break;
-            case DIAMOND:
-            case EMERALD:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE_ARMOR_DIAMOND, material));
-                break;
-            default:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE, material));
                 break;
         }
     }

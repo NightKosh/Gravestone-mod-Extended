@@ -1,0 +1,106 @@
+{
+    "pools": [
+        {
+            "name": "lead",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:lead",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "name_tag",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.5
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:name_tag",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "saddle",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance",
+                    "chance": 0.2
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:saddle",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "iron_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "IRON"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:iron_horse_armor",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "golden_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "GOLDEN"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:golden_horse_armor",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "diamond_armor",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "DIAMOND"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_horse_armor",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}
