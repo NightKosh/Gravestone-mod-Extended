@@ -3,12 +3,6 @@
         {
             "name": "records",
             "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance",
-                    "chance": 0.375
-                }
-            ],
             "entries": [
                 {
                     "type": "item",

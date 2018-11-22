@@ -23,26 +23,8 @@ public class PotionHelper {
             PotionTypes.LONG_INVISIBILITY
     };
 
-    private static final PotionType[] GRAVE_POTION_LIST = {
-            PotionTypes.REGENERATION, PotionTypes.SWIFTNESS, PotionTypes.FIRE_RESISTANCE,
-            PotionTypes.HEALING, PotionTypes.NIGHT_VISION, PotionTypes.STRENGTH,
-            PotionTypes.INVISIBILITY, PotionTypes.WATER_BREATHING, PotionTypes.LEAPING
-    };
-
-    public static ItemStack getGravesPotion(Random random) {
-        if (random.nextBoolean()) {
-            return PotionHelper.getSplashPotion(GRAVE_POTION_LIST[random.nextInt(GRAVE_POTION_LIST.length)], 1 + random.nextInt(5));
-        } else {
-            return PotionHelper.getPotion(GRAVE_POTION_LIST[random.nextInt(GRAVE_POTION_LIST.length)], 1 + random.nextInt(5));
-        }
-    }
-
     public static ItemStack getCatacombsDispenserPotion(Random random) {
         return getSplashOrLingeringPotion(random, CATACOMBS_DISPENSER_POTIONS[random.nextInt(CATACOMBS_DISPENSER_POTIONS.length)], 1 + random.nextInt(5));
-    }
-
-    public static ItemStack getPotion(PotionType potionType, int count) {
-        return getPotion(Items.POTIONITEM, potionType, count);
     }
 
     public static ItemStack getSplashOrLingeringPotion(Random random, PotionType potionType, int count) {
