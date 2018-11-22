@@ -52,6 +52,10 @@ public class GSLootTables {
     public static final ResourceLocation GRAVE_PLAYER_ADVENTURER = new ResourceLocation(ModInfo.ID, "graves/player/adventurer");
     public static final ResourceLocation GRAVE_PLAYER_WIZARD = new ResourceLocation(ModInfo.ID, "graves/player/wizard");
 
+    public static final ResourceLocation GRAVE_PLAYER_WORKER_IRON = new ResourceLocation(ModInfo.ID, "graves/player/worker/iron");
+    public static final ResourceLocation GRAVE_PLAYER_WORKER_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/worker/golden");
+    public static final ResourceLocation GRAVE_PLAYER_WORKER_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/worker/diamond");
+
     public static final ResourceLocation GRAVE_PLAYER_MINER_RESOURCES = new ResourceLocation(ModInfo.ID, "graves/player/miner/resources");
     public static final ResourceLocation GRAVE_PLAYER_MINER_STONE = new ResourceLocation(ModInfo.ID, "graves/player/miner/stone");
     public static final ResourceLocation GRAVE_PLAYER_MINER_IRON = new ResourceLocation(ModInfo.ID, "graves/player/miner/iron");
@@ -110,6 +114,10 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_PLAYER_ADVENTURER);
         LootTableList.register(GRAVE_PLAYER_WIZARD);
+
+        LootTableList.register(GRAVE_PLAYER_WORKER_IRON);
+        LootTableList.register(GRAVE_PLAYER_WORKER_GOLDEN);
+        LootTableList.register(GRAVE_PLAYER_WORKER_DIAMOND);
 
         LootTableList.register(GRAVE_PLAYER_MINER_RESOURCES);
         LootTableList.register(GRAVE_PLAYER_MINER_STONE);

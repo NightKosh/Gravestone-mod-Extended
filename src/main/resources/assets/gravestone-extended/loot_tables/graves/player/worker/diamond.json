@@ -1,0 +1,38 @@
+{
+    "pools": [
+        {
+            "name": "axe_or_shovel",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_axe",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond_shovel",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "set_damage",
+                            "damage": {
+                                "min": 0.1,
+                                "max": 0.9
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

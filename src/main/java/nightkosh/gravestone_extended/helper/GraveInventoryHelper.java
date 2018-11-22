@@ -294,28 +294,17 @@ public class GraveInventoryHelper {
     private static void fillWorkerGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials materials) {
         switch (materials) {
             case IRON:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.IRON_AXE, 1, getRandomDamage(random)));
-                } else {
-                    itemList.add(new ItemStack(Items.IRON_SHOVEL, 1, getRandomDamage(random)));
-                }
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_IRON));
                 break;
             case GOLDEN:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.GOLDEN_AXE, 1, getRandomDamage(random, 15)));
-                } else {
-                    itemList.add(new ItemStack(Items.GOLDEN_SHOVEL, 1, getRandomDamage(random, 15)));
-                }
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_GOLDEN));
                 break;
             case DIAMOND:
-                if (random.nextBoolean()) {
-                    itemList.add(new ItemStack(Items.DIAMOND_AXE, 1, getRandomDamage(random)));
-                } else {
-                    itemList.add(new ItemStack(Items.DIAMOND_SHOVEL, 1, getRandomDamage(random)));
-                }
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER_DIAMOND));
                 break;
         }
 
+        //TODO remove!!!!
         if (random.nextInt(8) == 0) {
             itemList.add(new ItemStack(Items.SADDLE, 1, 0));
         }
