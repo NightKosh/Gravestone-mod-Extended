@@ -51,13 +51,20 @@ public class GSLootTables {
     public static final ResourceLocation GRAVE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/corpse/bones_and_flesh");
     public static final ResourceLocation GRAVE_PLAYER_ADVENTURER = new ResourceLocation(ModInfo.ID, "graves/player/adventurer");
     public static final ResourceLocation GRAVE_PLAYER_WIZARD = new ResourceLocation(ModInfo.ID, "graves/player/wizard");
-    public static final ResourceLocation GRAVE_PLAYER_MINER = new ResourceLocation(ModInfo.ID, "graves/player/miner");
+
+    public static final ResourceLocation GRAVE_PLAYER_MINER_RESOURCES = new ResourceLocation(ModInfo.ID, "graves/player/miner/resources");
+    public static final ResourceLocation GRAVE_PLAYER_MINER_STONE = new ResourceLocation(ModInfo.ID, "graves/player/miner/stone");
+    public static final ResourceLocation GRAVE_PLAYER_MINER_IRON = new ResourceLocation(ModInfo.ID, "graves/player/miner/iron");
+    public static final ResourceLocation GRAVE_PLAYER_MINER_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/miner/golden");
+    public static final ResourceLocation GRAVE_PLAYER_MINER_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/miner/diamond");
+
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_BOW = new ResourceLocation(ModInfo.ID, "graves/player/warrior/bow");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_LEATHER = new ResourceLocation(ModInfo.ID, "graves/player/warrior/leather");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_IRON = new ResourceLocation(ModInfo.ID, "graves/player/warrior/iron");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_CHAINMAIL = new ResourceLocation(ModInfo.ID, "graves/player/warrior/chainmail");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/warrior/golden");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/warrior/diamond");
+
     public static final ResourceLocation GRAVE_PLAYER_TREASURY = new ResourceLocation(ModInfo.ID, "graves/player/treasury");
 
     public static final ResourceLocation GRAVE_PET_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/pet/golden");
@@ -103,7 +110,12 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_PLAYER_ADVENTURER);
         LootTableList.register(GRAVE_PLAYER_WIZARD);
-        LootTableList.register(GRAVE_PLAYER_MINER);
+
+        LootTableList.register(GRAVE_PLAYER_MINER_RESOURCES);
+        LootTableList.register(GRAVE_PLAYER_MINER_STONE);
+        LootTableList.register(GRAVE_PLAYER_MINER_IRON);
+        LootTableList.register(GRAVE_PLAYER_MINER_GOLDEN);
+        LootTableList.register(GRAVE_PLAYER_MINER_DIAMOND);
 
         LootTableList.register(GRAVE_PLAYER_WARRIOR_BOW);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_LEATHER);

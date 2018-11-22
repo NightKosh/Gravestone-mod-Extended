@@ -234,20 +234,18 @@ public class GraveInventoryHelper {
     private static void fillMinerGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials materials) {
         switch (materials) {
             case IRON:
-                itemList.add(new ItemStack(Items.IRON_PICKAXE, 1, getRandomDamage(random)));
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_IRON));
                 break;
             case GOLDEN:
-                itemList.add(new ItemStack(Items.GOLDEN_PICKAXE, 1, getRandomDamage(random, 15)));
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_GOLDEN));
                 break;
             case DIAMOND:
-                itemList.add(new ItemStack(Items.DIAMOND_PICKAXE, 1, getRandomDamage(random)));
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_DIAMOND));
                 break;
             default:
-                itemList.add(new ItemStack(Items.STONE_PICKAXE, 1, getRandomDamage(random, 30)));
+                itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER_STONE));
                 break;
         }
-
-        itemList.addAll(GSLootTables.getLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER));
     }
 
     private static ContentMaterials getWizardContentType(Random random) {

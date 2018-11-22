@@ -110,13 +110,13 @@
             "conditions": [
                 {
                     "condition": "random_chance",
-                    "chance": 0.05
+                    "chance": 0.3
                 }
             ],
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:graves/other/eggs",
+                    "name": "gravestone-extended:graves/player/warrior/bow",
                     "weight": 10
                 }
             ]
