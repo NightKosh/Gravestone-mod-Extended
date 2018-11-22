@@ -293,11 +293,13 @@ public class GraveInventoryHelper {
         if (contentType != GraveContentType.JUNK) {
             switch (graveTypeByEntity) {
                 case DOGS_GRAVES:
+                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DOG, contentMaterials));
+                    break;
                 case CATS_GRAVES:
-                    fillPetGrave(world, random, itemList, contentMaterials);//TODO
+                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_CAT, contentMaterials));
                     break;
                 case HORSE_GRAVES:
-                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_HORSE, contentMaterials));
+                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_HORSE, contentMaterials));
                     break;
                 default:
                     switch (contentType) {
@@ -338,17 +340,6 @@ public class GraveInventoryHelper {
                 break;
             default:
                 itemList.add(VillagerCorpseHelper.getRandomCorpse(random));
-                break;
-        }
-    }
-
-    private static void fillPetGrave(World world, Random random, List<ItemStack> itemList, ContentMaterials material) {
-        switch (material) {
-            case GOLDEN:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_GOLDEN, material));
-                break;
-            case DIAMOND:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DIAMOND, material));
                 break;
         }
     }

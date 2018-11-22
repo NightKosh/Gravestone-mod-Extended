@@ -1,0 +1,55 @@
+{
+    "pools": [
+        {
+            "name": "golden_lead",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "GOLDEN"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:lead",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "diamond_lead",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "DIAMOND"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:lead",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "name_tag",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_material",
+                    "material": "DIAMOND"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:name_tag",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}
