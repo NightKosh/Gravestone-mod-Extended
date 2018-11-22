@@ -39,7 +39,8 @@ import nightkosh.gravestone_extended.structures.village.VillagersHandler;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION,
-        dependencies = "required-after:" + nightkosh.gravestone.api.ModInfo.ID + "@[1.3.1,);required-after:" + nightkosh.advanced_fishing.api.ModInfo.ID + "@[1.3.2,);after:forestry")
+        dependencies = "required-after:" + nightkosh.gravestone.api.ModInfo.ID + "@[1.3.1,);required-after:" + nightkosh.advanced_fishing.api.ModInfo.ID + "@[1.3.2,);after:forestry",
+        updateJSON = "https://raw.githubusercontent.com/NightKosh/Gravestone-mod-Extended/master/update.json")
 public class ModGravestoneExtended {
 
     @Instance(ModInfo.ID)
