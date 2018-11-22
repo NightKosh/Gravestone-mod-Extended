@@ -282,44 +282,40 @@ public class GraveInventoryHelper {
                 addCorpse(contentType, random, itemList);//TODO
                 break;
             case BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, contentMaterials));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentMaterials));
                 break;
             case SKULL_BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_SKULL, contentMaterials));
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, contentMaterials));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_SKULL, graveTypeByEntity, contentMaterials));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentMaterials));
                 break;
         }
 
         if (contentType != GraveContentType.JUNK) {
             switch (graveTypeByEntity) {
                 case DOGS_GRAVES:
-                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_DOG, contentMaterials));
-                    break;
                 case CATS_GRAVES:
-                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_CAT, contentMaterials));
-                    break;
                 case HORSE_GRAVES:
-                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PET_HORSE, contentMaterials));
+                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentMaterials));
                     break;
                 default:
                     switch (contentType) {
                         case WORKER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER, graveTypeByEntity, contentMaterials));
                             break;
                         case MINER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER, graveTypeByEntity, contentMaterials));
                             break;
                         case WIZARD:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WIZARD, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WIZARD, graveTypeByEntity, contentMaterials));
                             break;
                         case WARRIOR:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR, graveTypeByEntity, contentMaterials));
                             break;
                         case ADVENTURER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, graveTypeByEntity, contentMaterials));
                             break;
                         case TREASURY:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, contentMaterials));
+                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, graveTypeByEntity, contentMaterials));
                             break;
                     }
             }

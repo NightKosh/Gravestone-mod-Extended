@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.loot;
+package nightkosh.gravestone_extended.loot.condition;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
@@ -7,8 +7,8 @@ import net.minecraft.util.JsonUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
-import net.minecraft.world.storage.loot.conditions.RandomChance;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
+import nightkosh.gravestone_extended.loot.LootContextGrave;
 
 import java.util.Random;
 

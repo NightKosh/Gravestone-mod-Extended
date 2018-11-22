@@ -1,0 +1,79 @@
+{
+    "pools": [
+        {
+            "name": "dog",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_type",
+                    "type": "DOGS_GRAVES"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/pet/dog",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "cat",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_type",
+                    "type": "CATS_GRAVES"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/pet/cat",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "horse",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_type",
+                    "type": "HORSE_GRAVES"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/pet/horse",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "player",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_type",
+                    "type": "PLAYER_GRAVES"
+                }
+            ],
+            "entries": [
+            ]
+        },
+        {
+            "name": "villager",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "grave_type",
+                    "type": "VILLAGERS_GRAVES"
+                }
+            ],
+            "entries": [
+            ]
+        }
+    ]
+}

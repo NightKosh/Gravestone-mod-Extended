@@ -8,9 +8,11 @@ import net.minecraft.world.storage.loot.*;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraft.world.storage.loot.conditions.LootConditionManager;
 import net.minecraftforge.event.LootTableLoadEvent;
+import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
-import nightkosh.gravestone_extended.loot.LootConditionGraveContentMaterial;
 import nightkosh.gravestone_extended.loot.LootContextGrave;
+import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentMaterial;
+import nightkosh.gravestone_extended.loot.condition.LootConditionGraveTypeByEntity;
 
 import java.util.List;
 import java.util.Random;
@@ -51,6 +53,8 @@ public class GSLootTables {
     public static final ResourceLocation FISHING_TOXIC_WATER_TREASURE = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
 
     //graves
+    public static final ResourceLocation GRAVE = new ResourceLocation(ModInfo.ID, "graves/grave");
+
     public static final ResourceLocation GRAVE_SKULL = new ResourceLocation(ModInfo.ID, "graves/corpse/skull");
     public static final ResourceLocation GRAVE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/corpse/bones_and_flesh");
 
@@ -111,6 +115,8 @@ public class GSLootTables {
         LootTableList.register(FISHING_TOXIC_WATER_TREASURE);
 
         //graves
+        LootTableList.register(GRAVE);
+
         LootTableList.register(GRAVE_SKULL);
         LootTableList.register(GRAVE_BONES_AND_FLESH);
 
@@ -147,6 +153,7 @@ public class GSLootTables {
 
         // conditions
         LootConditionManager.registerCondition(new LootConditionGraveContentMaterial.Serializer());
+        LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
     }
 
     public static void inject(LootTableLoadEvent event) {
@@ -163,8 +170,10 @@ public class GSLootTables {
         }
     }
 
-    public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable, GraveInventoryHelper.ContentMaterials contentMaterial) {
+    public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable,
+                                               GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
+                                               GraveInventoryHelper.ContentMaterials contentMaterial) {
         return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
-                new LootContextGrave.Builder((WorldServer) world).withContentMaterial(contentMaterial).build());
+                new LootContextGrave.Builder((WorldServer) world).withGraveTypeByEntity(graveTypeByEntity).withContentMaterial(contentMaterial).build());
     }
 }
