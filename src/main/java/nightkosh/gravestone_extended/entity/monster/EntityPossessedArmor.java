@@ -1,7 +1,6 @@
 package nightkosh.gravestone_extended.entity.monster;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IEntityLivingData;
@@ -20,12 +19,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
-import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.core.GSLootTables;
-import nightkosh.gravestone_extended.core.GSSound;
+import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.MobsHelper;
-import nightkosh.gravestone_extended.particle.ParticleGreenFlameFX;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -150,7 +145,7 @@ public class EntityPossessedArmor extends EntityMob {
 
         super.onLivingUpdate();
 
-        if (!this.world.isRemote && ticks > 20 && Math.abs(this.rotationPitch) <= 10) {
+        if (this.world.isRemote && ticks > 20 && Math.abs(this.rotationPitch) <= 10) {
             double degree = Math.toRadians(-this.rotationYawHead);
             double sin = Math.sin(degree);
             double cos = Math.cos(degree);
@@ -160,8 +155,8 @@ public class EntityPossessedArmor extends EntityMob {
             double cos1 = 0.35 * cos;
             double cos2 = 0.15 * cos;
 
-            Minecraft.getMinecraft().effectRenderer.addEffect(new ParticleGreenFlameFX(world, posX + sin1 + cos2, posY + getEyeHeight(), posZ + cos1 - sin2, motionX, 0, motionZ));
-            Minecraft.getMinecraft().effectRenderer.addEffect(new ParticleGreenFlameFX(world, posX + sin1 - cos2, posY + getEyeHeight(), posZ + cos1 + sin2, motionX, 0, motionZ));
+            world.spawnParticle(GSParticles.GREEN_FLAME, posX + sin1 + cos2, posY + getEyeHeight(), posZ + cos1 - sin2, motionX, 0, motionZ);
+            world.spawnParticle(GSParticles.GREEN_FLAME, posX + sin1 - cos2, posY + getEyeHeight(), posZ + cos1 + sin2, motionX, 0, motionZ);
 
             ticks = 0;
         } else {

@@ -196,6 +196,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void registerParticles() {
+        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.GREEN_FLAME.getParticleID(), new ParticleGreenFlameFX.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.CATACOMBS_PORTAL.getParticleID(), new ParticleCatacombsPortal.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_DRIP.getParticleID(), new ParticleToxicWaterDrip.Factory());
         Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_SPLASH.getParticleID(), new ParticleToxicWaterSplash.Factory());

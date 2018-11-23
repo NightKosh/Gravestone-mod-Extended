@@ -7,8 +7,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
@@ -20,10 +18,10 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.TimeHelper;
-import nightkosh.gravestone_extended.particle.ParticleGreenFlameFX;
 
 import java.util.Random;
 
@@ -147,8 +145,7 @@ public class BlockSkullCandleSkeleton extends Block {
         if (dayTime < TimeHelper.SUN_SET || dayTime > TimeHelper.SUN_RISING) {
             world.spawnParticle(EnumParticleTypes.FLAME, xPos + dx, yPos, zPos + dz, 0, 0, 0);
         } else {
-            Particle entityFx = new ParticleGreenFlameFX(world, xPos + dx, yPos, zPos + dz, 0, 0, 0);
-            Minecraft.getMinecraft().effectRenderer.addEffect(entityFx);
+            world.spawnParticle(GSParticles.GREEN_FLAME, xPos + dx, yPos, zPos + dz, 0, 0, 0);
         }
 
         world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xPos + dx, yPos, zPos + dz, 0, 0, 0);

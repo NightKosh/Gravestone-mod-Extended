@@ -7,8 +7,6 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
@@ -28,9 +26,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.block.enums.EnumSpawner;
 import nightkosh.gravestone_extended.core.GSBlock;
+import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.particle.ParticleGreenFlameFX;
 import nightkosh.gravestone_extended.tileentity.TileEntitySpawner;
 
 import java.util.ArrayList;
@@ -140,8 +138,7 @@ public class BlockSpawner extends BlockMobSpawner {
                 dx = -Math.sin(rotation) * d;
                 dz = Math.cos(rotation) * d;
                 world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, xPos + dx, yPos, zPos + dz, 0, 0, 0);
-                Particle entityfx = new ParticleGreenFlameFX(world, xPos + dx, yPos, zPos + dz, 0, 0, 0);
-                Minecraft.getMinecraft().effectRenderer.addEffect(entityfx);
+                world.spawnParticle(GSParticles.GREEN_FLAME, xPos + dx, yPos, zPos + dz, 0, 0, 0);
                 rotation += dRotation;
             }
         }
