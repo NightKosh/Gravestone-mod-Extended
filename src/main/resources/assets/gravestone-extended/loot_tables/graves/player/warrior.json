@@ -30,24 +30,12 @@
                 {
                     "type": "loot_table",
                     "name": "gravestone-extended:graves/player/warrior/armor/iron",
-                    "weight": 10
-                }
-            ]
-        },
-        {
-            "name": "chainmail_armor",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "grave_material",
-                    "material": "CHAINMAIL"
-                }
-            ],
-            "entries": [
+                    "weight": 12
+                },
                 {
                     "type": "loot_table",
                     "name": "gravestone-extended:graves/player/warrior/armor/chainmail",
-                    "weight": 10
+                    "weight": 9
                 }
             ]
         },
@@ -57,7 +45,7 @@
             "conditions": [
                 {
                     "condition": "grave_material",
-                    "material": "GOLDEN"
+                    "material": "GOLD"
                 }
             ],
             "entries": [

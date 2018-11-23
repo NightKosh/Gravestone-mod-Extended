@@ -4,6 +4,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper.EnumGraveTypeByEntity;
 import nightkosh.gravestone_extended.core.GSLootTables;
 import nightkosh.gravestone_extended.item.corpse.CatCorpseHelper;
@@ -31,12 +32,12 @@ public class GraveInventoryHelper {
         RANDOM
     }
 
-    private static GraveCorpseContentType getRandomCorpseContentType(ContentMaterials contentMaterials, Random random) {
-        switch (contentMaterials) {
+    private static GraveCorpseContentType getRandomCorpseContentType(EnumGraveMaterial graveMaterial, Random random) {
+        switch (graveMaterial) {
             case DIAMOND:
             case EMERALD:
                 return random.nextBoolean() ? GraveCorpseContentType.CORPSE : GraveCorpseContentType.SKULL_BONES_AND_FLESH;//50%
-            case GOLDEN:
+            case GOLD:
             case REDSTONE:
             case QUARTZ:
             case LAPIS:
@@ -46,7 +47,6 @@ public class GraveInventoryHelper {
                     return random.nextBoolean() ? GraveCorpseContentType.CORPSE : GraveCorpseContentType.SKULL_BONES_AND_FLESH;//25%
                 }
             case IRON:
-            case CHAINMAIL:
                 if (random.nextInt(10) < 7) {
                     return GraveCorpseContentType.BONES_AND_FLESH;//70%
                 } else {
@@ -71,22 +71,7 @@ public class GraveInventoryHelper {
         ADVENTURER,
         TREASURY,
         RANDOM,
-        DOG,
-        CAT,
-        HORSE,
         OTHER
-    }
-
-    public static enum ContentMaterials {
-        OTHER,
-        IRON,
-        GOLDEN,
-        DIAMOND,
-        EMERALD,
-        REDSTONE,
-        QUARTZ,
-        LAPIS,
-        CHAINMAIL
     }
 
     public static GraveContentType getRandomContentType(EnumGraveTypeByEntity graveTypeByEntity, Random random) {
@@ -108,65 +93,60 @@ public class GraveInventoryHelper {
                     return GraveContentType.WARRIOR;//5%
                 }
             case DOGS_GRAVES:
-                return GraveContentType.DOG;
             case CATS_GRAVES:
-                return GraveContentType.CAT;
             case HORSE_GRAVES:
-                return GraveContentType.HORSE;
             default:
                 return GraveContentType.OTHER;
         }
     }
 
-    public static ContentMaterials getContentMaterial(GraveContentType contentType, Random random) {
-        switch (contentType) {
-            case WORKER:
-                return getWorkerContentType(random);
-            case MINER:
-                return getMinerContentType(random);
-            case WIZARD:
-                return getWizardContentType(random);
-            case WARRIOR:
-                return getWarriorContentType(random);
-            case ADVENTURER:
-                return getAdventureContentType(random);
-            case TREASURY:
-                return getTreasuryContentType(random);
-            default:
-            case DOG:
-            case CAT:
+    public static EnumGraveMaterial getContentMaterial(EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType, Random random) {
+        switch (graveTypeByEntity) {
+            case DOGS_GRAVES:
+            case CATS_GRAVES:
                 return getPetContentType(random);
-            case HORSE:
+            case HORSE_GRAVES:
                 return getHorseContentType(random);
-            case JUNK:
-            case OTHER:
-                return ContentMaterials.OTHER;
+            default:
+                switch (contentType) {
+                    case WORKER:
+                        return getWorkerContentType(random);
+                    case MINER:
+                        return getMinerContentType(random);
+                    case WIZARD:
+                        return getWizardContentType(random);
+                    case WARRIOR:
+                        return getWarriorContentType(random);
+                    case ADVENTURER:
+                        return getAdventureContentType(random);
+                    case TREASURY:
+                        return getTreasuryContentType(random);
+                    default:
+                        return EnumGraveMaterial.OTHER;
+                }
         }
     }
 
-    private static ContentMaterials getWarriorContentType(Random random) {
+    private static EnumGraveMaterial getWarriorContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 5) {
-            return ContentMaterials.DIAMOND;//5%
+            return EnumGraveMaterial.DIAMOND;//5%
         } else if (chance < 20) {
-            return ContentMaterials.GOLDEN;//15%
-        } else if (chance < 40) {
-            return ContentMaterials.CHAINMAIL;//20% CHAINMAIL
+            return EnumGraveMaterial.GOLD;//15%
         } else if (chance < 65) {
-            return ContentMaterials.IRON;//25%
+            return EnumGraveMaterial.IRON;//45%
         } else {
-            return ContentMaterials.OTHER;//35% LEATHER
+            return EnumGraveMaterial.OTHER;//35% LEATHER
         }
     }
 
-    public static ItemStack getWarriorSword(ContentMaterials contentMaterial, Random random) {
+    public static ItemStack getWarriorSword(EnumGraveMaterial graveMaterial, Random random) {
         Item sword;
-        switch (contentMaterial) {
+        switch (graveMaterial) {
             case IRON:
-            case CHAINMAIL:
                 sword = Items.IRON_SWORD;
                 break;
-            case GOLDEN:
+            case GOLD:
                 sword = Items.GOLDEN_SWORD;
                 break;
             case DIAMOND:
@@ -180,90 +160,90 @@ public class GraveInventoryHelper {
         return new ItemStack(sword, 1, getRandomDamage(random, 30));
     }
 
-    private static ContentMaterials getMinerContentType(Random random) {
+    private static EnumGraveMaterial getMinerContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 10) {
-            return ContentMaterials.DIAMOND;//10%
+            return EnumGraveMaterial.DIAMOND;//10%
         } else if (chance < 30) {
-            return ContentMaterials.GOLDEN;//20%
+            return EnumGraveMaterial.GOLD;//20%
         } else if (chance < 60) {
-            return ContentMaterials.IRON;//30%
+            return EnumGraveMaterial.IRON;//30%
         } else {
-            return ContentMaterials.OTHER;//40%
+            return EnumGraveMaterial.OTHER;//40%
         }
     }
 
-    private static ContentMaterials getWizardContentType(Random random) {
+    private static EnumGraveMaterial getWizardContentType(Random random) {
         int chance = random.nextInt(10);
         if (chance < 1) {
-            return ContentMaterials.REDSTONE;//10%
+            return EnumGraveMaterial.REDSTONE;//10%
         } else if (chance < 2) {
-            return ContentMaterials.QUARTZ;//10%
+            return EnumGraveMaterial.QUARTZ;//10%
         } else if (chance < 4) {
-            return ContentMaterials.LAPIS;//20%
+            return EnumGraveMaterial.LAPIS;//20%
         } else {
-            return ContentMaterials.OTHER;//60%
+            return EnumGraveMaterial.OTHER;//60%
         }
     }
 
 
-    private static ContentMaterials getWorkerContentType(Random random) {
+    private static EnumGraveMaterial getWorkerContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 10) {
-            return ContentMaterials.DIAMOND;//10%
+            return EnumGraveMaterial.DIAMOND;//10%
         } else if (chance < 30) {
-            return ContentMaterials.GOLDEN;//20%
+            return EnumGraveMaterial.GOLD;//20%
         } else if (chance < 60) {
-            return ContentMaterials.IRON;//30%
+            return EnumGraveMaterial.IRON;//30%
         } else {
-            return ContentMaterials.OTHER;//40%
+            return EnumGraveMaterial.OTHER;//40%
         }
     }
 
-    private static ContentMaterials getAdventureContentType(Random random) {
+    private static EnumGraveMaterial getAdventureContentType(Random random) {
         if (random.nextInt(10) <= 2) {
-            return ContentMaterials.EMERALD;//20%
+            return EnumGraveMaterial.EMERALD;//20%
         } else {
-            return ContentMaterials.OTHER;//80%
+            return EnumGraveMaterial.OTHER;//80%
         }
     }
 
-    private static ContentMaterials getTreasuryContentType(Random random) {
+    private static EnumGraveMaterial getTreasuryContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 10) {
-            return ContentMaterials.EMERALD;//10%
+            return EnumGraveMaterial.EMERALD;//10%
         } else if (chance < 30) {
-            return ContentMaterials.DIAMOND;//20%
+            return EnumGraveMaterial.DIAMOND;//20%
         } else if (chance < 60) {
-            return ContentMaterials.GOLDEN;//30%
+            return EnumGraveMaterial.GOLD;//30%
         } else if (chance < 90) {
-            return ContentMaterials.IRON;//30%
+            return EnumGraveMaterial.IRON;//30%
         } else {
-            return ContentMaterials.OTHER;//10%
+            return EnumGraveMaterial.OTHER;//10%
         }
     }
 
-    private static ContentMaterials getPetContentType(Random random) {
+    private static EnumGraveMaterial getPetContentType(Random random) {
         int chance = random.nextInt(10);
         if (chance == 0) {
-            return ContentMaterials.GOLDEN;//10%
+            return EnumGraveMaterial.GOLD;//10%
         } else if (chance == 1) {
-            return ContentMaterials.DIAMOND;//10%
+            return EnumGraveMaterial.DIAMOND;//10%
         } else {
-            return ContentMaterials.OTHER;//80%
+            return EnumGraveMaterial.OTHER;//80%
         }
     }
 
-    private static ContentMaterials getHorseContentType(Random random) {
+    private static EnumGraveMaterial getHorseContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 5) {
-            return ContentMaterials.DIAMOND;//5%
+            return EnumGraveMaterial.DIAMOND;//5%
         } else if (chance < 12) {
-            return ContentMaterials.GOLDEN;//7%
+            return EnumGraveMaterial.GOLD;//7%
         } else if (chance < 25) {
-            return ContentMaterials.IRON;//13%
+            return EnumGraveMaterial.IRON;//13%
         } else {
-            return ContentMaterials.OTHER;//75%
+            return EnumGraveMaterial.OTHER;//75%
         }
     }
 
@@ -272,66 +252,39 @@ public class GraveInventoryHelper {
     }
 
     public static List<ItemStack> getRandomGraveContent(World world, Random random, GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType,
-                                                        GraveCorpseContentType corpseType, ContentMaterials contentMaterials) {
+                                                        GraveCorpseContentType corpseType, EnumGraveMaterial graveMaterial) {
         List<ItemStack> itemList = new ArrayList<>();
         if (corpseType == GraveCorpseContentType.RANDOM) {
-            corpseType = getRandomCorpseContentType(contentMaterials, random);
+            corpseType = getRandomCorpseContentType(graveMaterial, random);
         }
         switch (corpseType) {
             case CORPSE:
-                addCorpse(contentType, random, itemList);//TODO
+                addCorpse(graveTypeByEntity, random, itemList);//TODO
                 break;
             case BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentMaterials));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentType, graveMaterial));
                 break;
             case SKULL_BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_SKULL, graveTypeByEntity, contentMaterials));
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentMaterials));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_SKULL, graveTypeByEntity, contentType, graveMaterial));
+                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentType, graveMaterial));
                 break;
         }
 
         if (contentType != GraveContentType.JUNK) {
-            switch (graveTypeByEntity) {
-                case DOGS_GRAVES:
-                case CATS_GRAVES:
-                case HORSE_GRAVES:
-                    itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentMaterials));
-                    break;
-                default:
-                    switch (contentType) {
-                        case WORKER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WORKER, graveTypeByEntity, contentMaterials));
-                            break;
-                        case MINER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_MINER, graveTypeByEntity, contentMaterials));
-                            break;
-                        case WIZARD:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WIZARD, graveTypeByEntity, contentMaterials));
-                            break;
-                        case WARRIOR:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR, graveTypeByEntity, contentMaterials));
-                            break;
-                        case ADVENTURER:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_ADVENTURER, graveTypeByEntity, contentMaterials));
-                            break;
-                        case TREASURY:
-                            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_TREASURY, graveTypeByEntity, contentMaterials));
-                            break;
-                    }
-            }
+            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentType, graveMaterial));
         }
         return itemList;
     }
 
-    private static void addCorpse(GraveContentType contentType, Random random, List<ItemStack> itemList) {
-        switch (contentType) {
-            case DOG:
+    private static void addCorpse(EnumGraveTypeByEntity graveTypeByEntity, Random random, List<ItemStack> itemList) {
+        switch (graveTypeByEntity) {
+            case DOGS_GRAVES:
                 itemList.add(DogCorpseHelper.getRandomCorpse(random));
                 break;
-            case CAT:
+            case CATS_GRAVES:
                 itemList.add(CatCorpseHelper.getRandomCorpse(random));
                 break;
-            case HORSE:
+            case HORSE_GRAVES:
                 itemList.add(HorseCorpseHelper.getRandomCorpse(random));
                 break;
             default:

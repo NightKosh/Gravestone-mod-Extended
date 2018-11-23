@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.loot;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.storage.loot.LootTableManager;
+import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
 
@@ -16,19 +17,26 @@ import javax.annotation.Nullable;
  */
 public class LootContextGrave extends LootContext {
 
-    private GraveInventoryHelper.ContentMaterials contentMaterial;
+    private EnumGraveMaterial graveMaterial;
+    private GraveInventoryHelper.GraveContentType graveContentType;
     private GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity;
 
     public LootContextGrave(float luck, WorldServer world, LootTableManager lootTableManager,
                             @Nullable GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
-                            @Nullable GraveInventoryHelper.ContentMaterials contentMaterial) {
+                            @Nullable GraveInventoryHelper.GraveContentType graveContentType,
+                            @Nullable EnumGraveMaterial graveMaterial) {
         super(luck, world, lootTableManager, null, null, null);
-        this.contentMaterial = contentMaterial;
+        this.graveMaterial = graveMaterial;
+        this.graveContentType = graveContentType;
         this.graveTypeByEntity = graveTypeByEntity;
     }
 
-    public GraveInventoryHelper.ContentMaterials getContentMaterial() {
-        return contentMaterial;
+    public EnumGraveMaterial getGraveMaterial() {
+        return graveMaterial;
+    }
+
+    public GraveInventoryHelper.GraveContentType getGraveContentType() {
+        return graveContentType;
     }
 
     public GraveGenerationHelper.EnumGraveTypeByEntity getGraveTypeByEntity() {
@@ -37,15 +45,21 @@ public class LootContextGrave extends LootContext {
 
     public static class Builder {
         private final WorldServer world;
-        private GraveInventoryHelper.ContentMaterials contentMaterial;
+        private EnumGraveMaterial graveMaterial;
+        private GraveInventoryHelper.GraveContentType graveContentType;
         private GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity;
 
         public Builder(WorldServer world) {
             this.world = world;
         }
 
-        public Builder withContentMaterial(GraveInventoryHelper.ContentMaterials contentMaterial) {
-            this.contentMaterial = contentMaterial;
+        public Builder withGraveMaterial(EnumGraveMaterial graveMaterial) {
+            this.graveMaterial = graveMaterial;
+            return this;
+        }
+
+        public Builder withGraveContentType(GraveInventoryHelper.GraveContentType graveContentType) {
+            this.graveContentType = graveContentType;
             return this;
         }
 
@@ -55,7 +69,7 @@ public class LootContextGrave extends LootContext {
         }
 
         public LootContextGrave build() {
-            return new LootContextGrave(0, this.world, this.world.getLootTableManager(), graveTypeByEntity, contentMaterial);
+            return new LootContextGrave(0, this.world, this.world.getLootTableManager(), graveTypeByEntity, graveContentType, graveMaterial);
         }
     }
 }

@@ -61,6 +61,11 @@
                 }
             ],
             "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player",
+                    "weight": 10
+                }
             ]
         },
         {
@@ -73,6 +78,11 @@
                 }
             ],
             "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player",
+                    "weight": 10
+                }
             ]
         }
     ]

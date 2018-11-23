@@ -8,10 +8,12 @@ import net.minecraft.world.storage.loot.*;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraft.world.storage.loot.conditions.LootConditionManager;
 import net.minecraftforge.event.LootTableLoadEvent;
+import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
 import nightkosh.gravestone_extended.loot.LootContextGrave;
-import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentMaterial;
+import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentType;
+import nightkosh.gravestone_extended.loot.condition.LootConditionGraveMaterial;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveTypeByEntity;
 
 import java.util.List;
@@ -58,6 +60,7 @@ public class GSLootTables {
     public static final ResourceLocation GRAVE_SKULL = new ResourceLocation(ModInfo.ID, "graves/corpse/skull");
     public static final ResourceLocation GRAVE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/corpse/bones_and_flesh");
 
+    public static final ResourceLocation GRAVE_PLAYER = new ResourceLocation(ModInfo.ID, "graves/player");
     public static final ResourceLocation GRAVE_PLAYER_ADVENTURER = new ResourceLocation(ModInfo.ID, "graves/player/adventurer");
     public static final ResourceLocation GRAVE_PLAYER_WIZARD = new ResourceLocation(ModInfo.ID, "graves/player/wizard");
     public static final ResourceLocation GRAVE_PLAYER_WORKER = new ResourceLocation(ModInfo.ID, "graves/player/worker");
@@ -120,6 +123,7 @@ public class GSLootTables {
         LootTableList.register(GRAVE_SKULL);
         LootTableList.register(GRAVE_BONES_AND_FLESH);
 
+        LootTableList.register(GRAVE_PLAYER);
         LootTableList.register(GRAVE_PLAYER_ADVENTURER);
         LootTableList.register(GRAVE_PLAYER_WIZARD);
         LootTableList.register(GRAVE_PLAYER_WORKER);//TODO add loot
@@ -152,7 +156,8 @@ public class GSLootTables {
 
 
         // conditions
-        LootConditionManager.registerCondition(new LootConditionGraveContentMaterial.Serializer());
+        LootConditionManager.registerCondition(new LootConditionGraveMaterial.Serializer());
+        LootConditionManager.registerCondition(new LootConditionGraveContentType.Serializer());
         LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
     }
 
@@ -172,8 +177,9 @@ public class GSLootTables {
 
     public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable,
                                                GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
-                                               GraveInventoryHelper.ContentMaterials contentMaterial) {
+                                               GraveInventoryHelper.GraveContentType graveContentType,
+                                               EnumGraveMaterial graveMaterial) {
         return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
-                new LootContextGrave.Builder((WorldServer) world).withGraveTypeByEntity(graveTypeByEntity).withContentMaterial(contentMaterial).build());
+                new LootContextGrave.Builder((WorldServer) world).withGraveTypeByEntity(graveTypeByEntity).withGraveContentType(graveContentType).withGraveMaterial(graveMaterial).build());
     }
 }

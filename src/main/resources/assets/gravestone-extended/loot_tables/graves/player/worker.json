@@ -46,7 +46,7 @@
             "conditions": [
                 {
                     "condition": "grave_material",
-                    "material": "GOLDEN"
+                    "material": "GOLD"
                 }
             ],
             "entries": [

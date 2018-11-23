@@ -1,103 +1,103 @@
 {
     "pools": [
         {
-            "name": "lead",
+            "name": "adventurer",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "random_chance",
-                    "chance": 0.5
+                    "condition": "content_type",
+                    "type": "ADVENTURER"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:lead",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/adventurer",
                     "weight": 10
                 }
             ]
         },
         {
-            "name": "name_tag",
+            "name": "miner",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "random_chance",
-                    "chance": 0.5
+                    "condition": "content_type",
+                    "type": "MINER"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:name_tag",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/miner",
                     "weight": 10
                 }
             ]
         },
         {
-            "name": "saddle",
+            "name": "treasury",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "random_chance",
-                    "chance": 0.2
+                    "condition": "content_type",
+                    "type": "TREASURY"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:saddle",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/treasury",
                     "weight": 10
                 }
             ]
         },
         {
-            "name": "iron_armor",
+            "name": "warrior",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "grave_material",
-                    "material": "IRON"
+                    "condition": "content_type",
+                    "type": "WARRIOR"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:iron_horse_armor",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/warrior",
                     "weight": 10
                 }
             ]
         },
         {
-            "name": "golden_armor",
+            "name": "wizard",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "grave_material",
-                    "material": "GOLD"
+                    "condition": "content_type",
+                    "type": "WIZARD"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:golden_horse_armor",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/wizard",
                     "weight": 10
                 }
             ]
         },
         {
-            "name": "diamond_armor",
+            "name": "worker",
             "rolls": 1,
             "conditions": [
                 {
-                    "condition": "grave_material",
-                    "material": "DIAMOND"
+                    "condition": "content_type",
+                    "type": "WORKER"
                 }
             ],
             "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:diamond_horse_armor",
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/worker",
                     "weight": 10
                 }
             ]

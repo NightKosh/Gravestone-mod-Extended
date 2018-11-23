@@ -10,7 +10,6 @@ import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone.helper.DeathTextHelper;
 import nightkosh.gravestone.tileentity.GraveStoneDeathText;
 import nightkosh.gravestone.tileentity.TileEntityGraveStone;
-import nightkosh.gravestone_extended.helper.GraveInventoryHelper.ContentMaterials;
 
 import java.util.List;
 import java.util.Random;
@@ -50,7 +49,7 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
         List<ItemStack> items;
         EnumGraveType[] graveTypes;
         ItemStack sword = null;
-        ContentMaterials contentMaterials = ContentMaterials.OTHER;
+        EnumGraveMaterial graveMaterial;
 
         if (contentType == GraveInventoryHelper.GraveContentType.JUNK) {
             if (isFireDamage(deathText.getDeathText()) || isLavaDamage(deathText.getDeathText())) {
@@ -60,48 +59,27 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
             }
         } else {
             graveTypes = getDefaultGraveTypes(graveTypeByEntity);
-            contentMaterials = GraveInventoryHelper.getContentMaterial(contentType, random);
+            graveMaterial = GraveInventoryHelper.getContentMaterial(graveTypeByEntity, contentType, random);
 
             if (contentType == GraveInventoryHelper.GraveContentType.WARRIOR) {
-                sword = GraveInventoryHelper.getWarriorSword(contentMaterials, random);
+                sword = GraveInventoryHelper.getWarriorSword(graveMaterial, random);
                 grave = EnumGraves.SWORD;
-            } else if (contentMaterials == ContentMaterials.OTHER) {
-                grave = getGraveTypeByBiomes(world, pos, graveTypeByEntity, null);
             } else {
-                grave = getGraveType(graveTypes, getGraveMaterialByContentType(contentType, contentMaterials));
+                if (graveMaterial == EnumGraveMaterial.STONE) {
+                    grave = getGraveTypeByBiomes(world, pos, graveTypeByEntity, null);
+                } else {
+                    grave = getGraveType(graveTypes, graveMaterial);
+                }
             }
         }
 
-        items = GraveInventoryHelper.getRandomGraveContent(world, random, graveTypeByEntity, contentType, GraveInventoryHelper.GraveCorpseContentType.RANDOM, contentMaterials);
+        items = GraveInventoryHelper.getRandomGraveContent(world, random, graveTypeByEntity, contentType, GraveInventoryHelper.GraveCorpseContentType.RANDOM, grave.getMaterial());
 
         boolean enchanted = isMagicDamage(deathText.getDeathText());
         boolean mossy = isMossyGrave(world, pos, grave.getMaterial());
         ItemStack flower = getRandomFlower(world, pos, random, grave);
 
         return new GraveGenerationInfo(grave, enchanted, mossy, items, sword, deathText, flower);
-    }
-
-    private static EnumGraveMaterial getGraveMaterialByContentType(GraveInventoryHelper.GraveContentType contentType, ContentMaterials contentMaterials) {
-        switch (contentMaterials) {
-            case IRON:
-            case CHAINMAIL:
-                return EnumGraveMaterial.IRON;
-            case GOLDEN:
-                return EnumGraveMaterial.GOLD;
-            case DIAMOND:
-                return EnumGraveMaterial.DIAMOND;
-            case EMERALD:
-                return EnumGraveMaterial.EMERALD;
-            case REDSTONE:
-                return EnumGraveMaterial.REDSTONE;
-            case QUARTZ:
-                return EnumGraveMaterial.QUARTZ;
-            case LAPIS:
-                return EnumGraveMaterial.LAPIS;
-            default:
-            case OTHER:
-                return EnumGraveMaterial.STONE;
-        }
     }
 
     private static ItemStack getRandomFlower(World world, BlockPos pos, Random random, EnumGraves grave) {//TODO ? - EnumGraves grave
