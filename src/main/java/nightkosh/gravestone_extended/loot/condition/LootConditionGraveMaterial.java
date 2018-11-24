@@ -26,6 +26,7 @@ public class LootConditionGraveMaterial implements LootCondition {
         this.graveMaterial = graveMaterial;
     }
 
+    @Override
     public boolean testCondition(Random rand, LootContext context) {
         return ((LootContextGrave) context).getGraveMaterial() == this.graveMaterial;
     }
@@ -35,10 +36,12 @@ public class LootConditionGraveMaterial implements LootCondition {
             super(new ResourceLocation("grave_material"), LootConditionGraveMaterial.class);
         }
 
+        @Override
         public void serialize(JsonObject json, LootConditionGraveMaterial value, JsonSerializationContext context) {
             json.addProperty("material", Float.valueOf(value.graveMaterial.name()));
         }
 
+        @Override
         public LootConditionGraveMaterial deserialize(JsonObject json, JsonDeserializationContext context) {
             return new LootConditionGraveMaterial(EnumGraveMaterial.valueOf(JsonUtils.getString(json, "material")));
         }

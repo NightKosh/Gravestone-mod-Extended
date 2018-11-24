@@ -7,12 +7,7 @@ import net.minecraft.world.World;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper.EnumGraveTypeByEntity;
 import nightkosh.gravestone_extended.core.GSLootTables;
-import nightkosh.gravestone_extended.item.corpse.CatCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.DogCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.HorseCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.VillagerCorpseHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -257,30 +252,6 @@ public class GraveInventoryHelper {
             corpseType = getRandomCorpseContentType(graveMaterial, random);
         }
 
-        List<ItemStack> itemList = new ArrayList<>();
-        if (corpseType == GraveCorpseContentType.CORPSE) {//TODO
-            addCorpse(graveTypeByEntity, random, itemList);
-        }
-
-        itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, corpseType, graveTypeByEntity, contentType, graveMaterial));
-
-        return itemList;
-    }
-
-    private static void addCorpse(EnumGraveTypeByEntity graveTypeByEntity, Random random, List<ItemStack> itemList) {
-        switch (graveTypeByEntity) {
-            case DOGS_GRAVES:
-                itemList.add(DogCorpseHelper.getRandomCorpse(random));
-                break;
-            case CATS_GRAVES:
-                itemList.add(CatCorpseHelper.getRandomCorpse(random));
-                break;
-            case HORSE_GRAVES:
-                itemList.add(HorseCorpseHelper.getRandomCorpse(random));
-                break;
-            default:
-                itemList.add(VillagerCorpseHelper.getRandomCorpse(random));
-                break;
-        }
+        return GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, corpseType, graveTypeByEntity, contentType, graveMaterial);
     }
 }

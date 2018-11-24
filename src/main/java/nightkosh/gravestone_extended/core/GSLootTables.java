@@ -7,6 +7,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.loot.*;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraft.world.storage.loot.conditions.LootConditionManager;
+import net.minecraft.world.storage.loot.functions.LootFunctionManager;
 import net.minecraftforge.event.LootTableLoadEvent;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
@@ -16,6 +17,7 @@ import nightkosh.gravestone_extended.loot.condition.LootConditionCorpseContentTy
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentType;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveMaterial;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveTypeByEntity;
+import nightkosh.gravestone_extended.loot.function.LootFunctionCorpse;
 
 import java.util.List;
 import java.util.Random;
@@ -182,6 +184,9 @@ public class GSLootTables {
         LootConditionManager.registerCondition(new LootConditionGraveContentType.Serializer());
         LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
         LootConditionManager.registerCondition(new LootConditionCorpseContentType.Serializer());
+
+        // functions
+        LootFunctionManager.registerFunction(new LootFunctionCorpse.Serializer());
     }
 
     public static void inject(LootTableLoadEvent event) {

@@ -26,6 +26,7 @@ public class LootConditionGraveTypeByEntity implements LootCondition {
         this.graveTypeByEntity = graveTypeByEntity;
     }
 
+    @Override
     public boolean testCondition(Random rand, LootContext context) {
         return ((LootContextGrave) context).getGraveTypeByEntity() == this.graveTypeByEntity;
     }
@@ -35,10 +36,12 @@ public class LootConditionGraveTypeByEntity implements LootCondition {
             super(new ResourceLocation("grave_type"), LootConditionGraveTypeByEntity.class);
         }
 
+        @Override
         public void serialize(JsonObject json, LootConditionGraveTypeByEntity value, JsonSerializationContext context) {
             json.addProperty("type", Float.valueOf(value.graveTypeByEntity.name()));
         }
 
+        @Override
         public LootConditionGraveTypeByEntity deserialize(JsonObject json, JsonDeserializationContext context) {
             return new LootConditionGraveTypeByEntity(GraveGenerationHelper.EnumGraveTypeByEntity.valueOf(JsonUtils.getString(json, "type")));
         }

@@ -26,6 +26,7 @@ public class LootConditionCorpseContentType implements LootCondition {
         this.corpseContentType = corpseContentType;
     }
 
+    @Override
     public boolean testCondition(Random rand, LootContext context) {
         return ((LootContextGrave) context).getCorpseContentType() == this.corpseContentType;
     }
@@ -35,10 +36,12 @@ public class LootConditionCorpseContentType implements LootCondition {
             super(new ResourceLocation("corpse_content_type"), LootConditionCorpseContentType.class);
         }
 
+        @Override
         public void serialize(JsonObject json, LootConditionCorpseContentType value, JsonSerializationContext context) {
             json.addProperty("type", Float.valueOf(value.corpseContentType.name()));
         }
 
+        @Override
         public LootConditionCorpseContentType deserialize(JsonObject json, JsonDeserializationContext context) {
             return new LootConditionCorpseContentType(GraveInventoryHelper.GraveCorpseContentType.valueOf(JsonUtils.getString(json, "type")));
         }
