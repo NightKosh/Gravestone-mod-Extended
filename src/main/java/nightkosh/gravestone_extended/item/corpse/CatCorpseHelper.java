@@ -34,32 +34,37 @@ public class CatCorpseHelper extends CorpseHelper {
         SIAMESE
     }
 
+    private static List<ItemStack> DEFAULT_CORPSE_LIST;
+
     public static ItemStack getRandomCorpse(Random random) {
-        return getDefaultCatCorpse(EnumCatType.values()[random.nextInt(EnumCatType.values().length)], EnumUndeadMobType.OTHER);
+        List<ItemStack> corpses = getDefaultCorpses();
+        return corpses.get(random.nextInt(corpses.size() - 1));
     }
 
     public static List<ItemStack> getDefaultCorpses() {
-        List<ItemStack> list = new ArrayList<>();
+        if (DEFAULT_CORPSE_LIST == null) {
+            DEFAULT_CORPSE_LIST = new ArrayList<>();
 
-        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.OTHER));
-        list.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.OTHER));
-        list.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.OTHER));
-        list.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.OTHER));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.OTHER));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.OTHER));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.OTHER));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.OTHER));
 
-        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.ZOMBIE));
-        list.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.ZOMBIE));
-        list.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.ZOMBIE));
-        list.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.ZOMBIE));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.ZOMBIE));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.ZOMBIE));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.ZOMBIE));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.ZOMBIE));
 
-        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.HUSK));
-        list.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.HUSK));
-        list.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.HUSK));
-        list.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.HUSK));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.HUSK));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.BLACK, EnumUndeadMobType.HUSK));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.RED, EnumUndeadMobType.HUSK));
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.SIAMESE, EnumUndeadMobType.HUSK));
 
-        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.SKELETON));
-//        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.STRAY)); //TODO
-//        list.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.WITHER));
-        return list;
+            DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.SKELETON));
+//          DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.STRAY)); //TODO
+//          DEFAULT_CORPSE_LIST.add(getDefaultCatCorpse(EnumCatType.OCELOT, EnumUndeadMobType.WITHER));
+        }
+        return DEFAULT_CORPSE_LIST;
     }
 
     private static ItemStack getDefaultCatCorpse(EnumCatType catType, EnumUndeadMobType mobType) {

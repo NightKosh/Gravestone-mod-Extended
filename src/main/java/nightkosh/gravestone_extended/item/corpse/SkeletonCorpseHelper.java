@@ -8,6 +8,7 @@ import nightkosh.gravestone_extended.entity.monster.pet.EnumUndeadMobType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * GraveStone mod
@@ -15,14 +16,23 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class SkeletonCorpseHelper extends CorpseHelper  {
+public class SkeletonCorpseHelper extends CorpseHelper {
+
+    private static List<ItemStack> DEFAULT_CORPSE_LIST;
+
+    public static ItemStack getRandomCorpse(Random random) {
+        List<ItemStack> corpses = getDefaultCorpses();
+        return corpses.get(random.nextInt(corpses.size() - 1));
+    }
 
     public static List<ItemStack> getDefaultCorpses() {
-        List<ItemStack> list = new ArrayList<>();
-        list.add(createCorpse(EnumUndeadMobType.SKELETON));
-        list.add(createCorpse(EnumUndeadMobType.STRAY));
-        list.add(createCorpse(EnumUndeadMobType.WITHER));
-        return list;
+        if (DEFAULT_CORPSE_LIST == null) {
+            DEFAULT_CORPSE_LIST = new ArrayList<>();
+            DEFAULT_CORPSE_LIST.add(createCorpse(EnumUndeadMobType.SKELETON));
+            DEFAULT_CORPSE_LIST.add(createCorpse(EnumUndeadMobType.STRAY));
+            DEFAULT_CORPSE_LIST.add(createCorpse(EnumUndeadMobType.WITHER));
+        }
+        return DEFAULT_CORPSE_LIST;
     }
 
     private static ItemStack createCorpse(EnumUndeadMobType mobType) {

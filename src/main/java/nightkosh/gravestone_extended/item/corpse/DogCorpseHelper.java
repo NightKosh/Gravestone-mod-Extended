@@ -25,32 +25,32 @@ import java.util.Random;
  */
 public class DogCorpseHelper extends CorpseHelper {
 
-    private DogCorpseHelper() {
-    }
+    private static List<ItemStack> DEFAULT_CORPSE_LIST;
 
     public static ItemStack getRandomCorpse(Random random) {
-        boolean sophisticated = Compatibility.sophisticatedWolvesInstalled && random.nextInt(5) == 0;
-        int speciesNum = sophisticated ? CompatibilitySophisticatedWolves.getRandomSpecies(random) : 0;
-        return createCorpse(sophisticated, EnumUndeadMobType.OTHER, speciesNum);
+        List<ItemStack> corpses = getDefaultCorpses();
+        return corpses.get(random.nextInt(corpses.size() - 1));
     }
 
     public static List<ItemStack> getDefaultCorpses() {
-        List<ItemStack> list = new ArrayList<>();
+        if (DEFAULT_CORPSE_LIST == null) {
+            DEFAULT_CORPSE_LIST = new ArrayList<>();
 
-        list.add(createCorpse(false, EnumUndeadMobType.OTHER, 0));
+            DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.OTHER, 0));
 
-        if (Compatibility.sophisticatedWolvesInstalled) {
-            for (int speciesNum = 0; speciesNum < CompatibilitySophisticatedWolves.getSpeciesNum(); speciesNum++) {
-                list.add(createCorpse(true, EnumUndeadMobType.OTHER, speciesNum));
+            if (Compatibility.sophisticatedWolvesInstalled) {
+                for (int speciesNum = 0; speciesNum < CompatibilitySophisticatedWolves.getSpeciesNum(); speciesNum++) {
+                    DEFAULT_CORPSE_LIST.add(createCorpse(true, EnumUndeadMobType.OTHER, speciesNum));
+                }
             }
-        }
 
-        list.add(createCorpse(false, EnumUndeadMobType.ZOMBIE, 0));
-        list.add(createCorpse(false, EnumUndeadMobType.HUSK, 0));
-        list.add(createCorpse(false, EnumUndeadMobType.SKELETON, 0));
-//        list.add(createCorpse(false, EnumUndeadMobType.STRAY, 0)); //TODO
-//        list.add(createCorpse(false, EnumUndeadMobType.WITHER, 0));
-        return list;
+            DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.ZOMBIE, 0));
+            DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.HUSK, 0));
+            DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.SKELETON, 0));
+//          DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.STRAY, 0)); //TODO
+//          DEFAULT_CORPSE_LIST.add(createCorpse(false, EnumUndeadMobType.WITHER, 0));
+        }
+        return DEFAULT_CORPSE_LIST;
     }
 
     private static ItemStack createCorpse(boolean sophisticated, EnumUndeadMobType mobType, int speciesNum) {

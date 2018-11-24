@@ -8,10 +8,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraft.world.storage.loot.functions.LootFunction;
-import nightkosh.gravestone_extended.item.corpse.CatCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.DogCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.HorseCorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.VillagerCorpseHelper;
+import nightkosh.gravestone_extended.block.enums.EnumCorpse;
+import nightkosh.gravestone_extended.core.GSBlock;
+import nightkosh.gravestone_extended.item.corpse.*;
 import nightkosh.gravestone_extended.loot.LootContextGrave;
 
 import java.util.Random;
@@ -38,9 +37,25 @@ public class LootFunctionCorpse extends LootFunction {
             case HORSE_GRAVES:
                 return HorseCorpseHelper.getRandomCorpse(rand);
             case PLAYER_GRAVES:
+                if (rand.nextInt(5) == 0) {
+                    switch (rand.nextInt(3)) {
+                        case 0:
+                            return ZombieCorpseHelper.getRandomCorpse(rand);
+                        case 1:
+                            return SkeletonCorpseHelper.getRandomCorpse(rand);
+                        case 2:
+                            return new ItemStack(GSBlock.CORPSE, 1, EnumCorpse.WITCH.ordinal());
+                    }
+                } else {
+                    return VillagerCorpseHelper.getRandomCorpse(rand);
+                }
             case VILLAGERS_GRAVES:
             default:
-                return VillagerCorpseHelper.getRandomCorpse(rand);
+                if (rand.nextInt(5) == 0) {
+                    return ZombieVillagerCorpseHelper.getRandomCorpse(rand);
+                } else {
+                    return VillagerCorpseHelper.getRandomCorpse(rand);
+                }
         }
     }
 

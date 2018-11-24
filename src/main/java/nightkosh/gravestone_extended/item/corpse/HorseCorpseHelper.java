@@ -48,21 +48,24 @@ public class HorseCorpseHelper extends CorpseHelper {
         }
     }
 
+    private static List<ItemStack> DEFAULT_CORPSE_LIST;
+
     public static ItemStack getRandomCorpse(Random random) {
-        //TODO !!! random variant, health ...
-        return getDefaultHorseCorpse(EnumHorseType.values()[random.nextInt(EnumHorseType.values().length)]);
+        List<ItemStack> corpses = getDefaultCorpses();
+        return corpses.get(random.nextInt(corpses.size() - 1));
     }
 
     public static List<ItemStack> getDefaultCorpses() {
-        List<ItemStack> list = new ArrayList<>();
+        if (DEFAULT_CORPSE_LIST == null) {
+            DEFAULT_CORPSE_LIST = new ArrayList<>();
 
-        list.add(getDefaultHorseCorpse(EnumHorseType.HORSE));
-        list.add(getDefaultHorseCorpse(EnumHorseType.DONKEY));
-        list.add(getDefaultHorseCorpse(EnumHorseType.MULE));
-        list.add(getDefaultHorseCorpse(EnumHorseType.ZOMBIE));
-        list.add(getDefaultHorseCorpse(EnumHorseType.SKELETON));
-
-        return list;
+            DEFAULT_CORPSE_LIST.add(getDefaultHorseCorpse(EnumHorseType.HORSE));
+            DEFAULT_CORPSE_LIST.add(getDefaultHorseCorpse(EnumHorseType.DONKEY));
+            DEFAULT_CORPSE_LIST.add(getDefaultHorseCorpse(EnumHorseType.MULE));
+            DEFAULT_CORPSE_LIST.add(getDefaultHorseCorpse(EnumHorseType.ZOMBIE));
+            DEFAULT_CORPSE_LIST.add(getDefaultHorseCorpse(EnumHorseType.SKELETON));
+        }
+        return DEFAULT_CORPSE_LIST;
     }
 
     private static ItemStack getDefaultHorseCorpse(EnumHorseType horseType) {
