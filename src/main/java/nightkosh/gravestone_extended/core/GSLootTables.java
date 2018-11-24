@@ -169,9 +169,8 @@ public class GSLootTables {
         }
 
         if (event.getName().toString().equals("advanced-fishing:gameplay/fishing_lava_nether/treasure")) {
-            LootEntry entry = new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 1, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull");
-            LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[]{}, new RandomValueRange(1, 1), new RandomValueRange(0, 1), "fishing_lava_nether_enchanted_skull");
-            event.getTable().addPool(pool);
+            event.getTable().getPool("fishing_lava_nether_treasure").addEntry(
+                    new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 10, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull"));
         }
     }
 
