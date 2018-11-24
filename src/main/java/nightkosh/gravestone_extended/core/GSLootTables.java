@@ -12,6 +12,7 @@ import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
 import nightkosh.gravestone_extended.loot.LootContextGrave;
+import nightkosh.gravestone_extended.loot.condition.LootConditionCorpseContentType;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentType;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveMaterial;
 import nightkosh.gravestone_extended.loot.condition.LootConditionGraveTypeByEntity;
@@ -57,10 +58,12 @@ public class GSLootTables {
     //graves
     public static final ResourceLocation GRAVE = new ResourceLocation(ModInfo.ID, "graves/grave");
 
-    public static final ResourceLocation GRAVE_SKULL = new ResourceLocation(ModInfo.ID, "graves/corpse/skull");
-    public static final ResourceLocation GRAVE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/corpse/bones_and_flesh");
-
     public static final ResourceLocation GRAVE_PLAYER = new ResourceLocation(ModInfo.ID, "graves/player");
+
+    public static final ResourceLocation GRAVE_PLAYER_SKULL = new ResourceLocation(ModInfo.ID, "graves/player/corpse/skull");
+    public static final ResourceLocation GRAVE_PLAYER_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/player/corpse/bones_and_flesh");
+    public static final ResourceLocation GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/player/corpse/skull_and_bones_and_flesh");
+
     public static final ResourceLocation GRAVE_PLAYER_ADVENTURER = new ResourceLocation(ModInfo.ID, "graves/player/adventurer");
     public static final ResourceLocation GRAVE_PLAYER_WIZARD = new ResourceLocation(ModInfo.ID, "graves/player/wizard");
     public static final ResourceLocation GRAVE_PLAYER_WORKER = new ResourceLocation(ModInfo.ID, "graves/player/worker");
@@ -76,11 +79,20 @@ public class GSLootTables {
 
     public static final ResourceLocation GRAVE_PLAYER_TREASURY = new ResourceLocation(ModInfo.ID, "graves/player/treasury");
 
-    public static final ResourceLocation GRAVE_PET_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/pet/golden");
-    public static final ResourceLocation GRAVE_PET_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/pet/diamond");
-    public static final ResourceLocation GRAVE_PET_DOG = new ResourceLocation(ModInfo.ID, "graves/pet/dog");
-    public static final ResourceLocation GRAVE_PET_CAT = new ResourceLocation(ModInfo.ID, "graves/pet/cat");
-    public static final ResourceLocation GRAVE_PET_HORSE = new ResourceLocation(ModInfo.ID, "graves/pet/horse");
+    public static final ResourceLocation GRAVE_DOG = new ResourceLocation(ModInfo.ID, "graves/dog");
+    public static final ResourceLocation GRAVE_DOG_ITEMS = new ResourceLocation(ModInfo.ID, "graves/dog/items");
+    public static final ResourceLocation GRAVE_DOG_CORPSE = new ResourceLocation(ModInfo.ID, "graves/dog/corpse/corpse");
+    public static final ResourceLocation GRAVE_DOG_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/dog/corpse/bones_and_flesh");
+
+    public static final ResourceLocation GRAVE_CAT = new ResourceLocation(ModInfo.ID, "graves/cat");
+    public static final ResourceLocation GRAVE_CAT_ITEMS = new ResourceLocation(ModInfo.ID, "graves/cat/items");
+    public static final ResourceLocation GRAVE_CAT_CORPSE = new ResourceLocation(ModInfo.ID, "graves/cat/corpse/corpse");
+    public static final ResourceLocation GRAVE_CAT_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/cat/corpse/bones_and_flesh");
+
+    public static final ResourceLocation GRAVE_HORSE = new ResourceLocation(ModInfo.ID, "graves/horse");
+    public static final ResourceLocation GRAVE_HORSE_ITEMS = new ResourceLocation(ModInfo.ID, "graves/horse/items");
+    public static final ResourceLocation GRAVE_HORSE_CORPSE = new ResourceLocation(ModInfo.ID, "graves/horse/corpse/corpse");
+    public static final ResourceLocation GRAVE_HORSE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/horse/corpse/bones_and_flesh");
 
     public static final ResourceLocation GRAVE_OTHER_EGGS = new ResourceLocation(ModInfo.ID, "graves/other/eggs");
     public static final ResourceLocation GRAVE_OTHER_RECORDS = new ResourceLocation(ModInfo.ID, "graves/other/records");
@@ -120,10 +132,12 @@ public class GSLootTables {
         //graves
         LootTableList.register(GRAVE);
 
-        LootTableList.register(GRAVE_SKULL);
-        LootTableList.register(GRAVE_BONES_AND_FLESH);
-
         LootTableList.register(GRAVE_PLAYER);
+
+        LootTableList.register(GRAVE_PLAYER_SKULL);
+        LootTableList.register(GRAVE_PLAYER_BONES_AND_FLESH);
+        LootTableList.register(GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH);
+
         LootTableList.register(GRAVE_PLAYER_ADVENTURER);
         LootTableList.register(GRAVE_PLAYER_WIZARD);
         LootTableList.register(GRAVE_PLAYER_WORKER);//TODO add loot
@@ -139,12 +153,20 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_PLAYER_TREASURY);
 
-        LootTableList.register(GRAVE_PET_GOLDEN);
-        LootTableList.register(GRAVE_PET_DIAMOND);
+        LootTableList.register(GRAVE_DOG);
+        LootTableList.register(GRAVE_DOG_ITEMS);
+        LootTableList.register(GRAVE_DOG_CORPSE);
+        LootTableList.register(GRAVE_DOG_BONES_AND_FLESH);
 
-        LootTableList.register(GRAVE_PET_DOG);
-        LootTableList.register(GRAVE_PET_CAT);
-        LootTableList.register(GRAVE_PET_HORSE);
+        LootTableList.register(GRAVE_CAT);
+        LootTableList.register(GRAVE_CAT_ITEMS);
+        LootTableList.register(GRAVE_CAT_CORPSE);
+        LootTableList.register(GRAVE_CAT_BONES_AND_FLESH);
+
+        LootTableList.register(GRAVE_HORSE);
+        LootTableList.register(GRAVE_HORSE_ITEMS);
+        LootTableList.register(GRAVE_HORSE_CORPSE);
+        LootTableList.register(GRAVE_HORSE_BONES_AND_FLESH);
 
         LootTableList.register(GRAVE_OTHER_EGGS);
         LootTableList.register(GRAVE_OTHER_RECORDS);
@@ -159,6 +181,7 @@ public class GSLootTables {
         LootConditionManager.registerCondition(new LootConditionGraveMaterial.Serializer());
         LootConditionManager.registerCondition(new LootConditionGraveContentType.Serializer());
         LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
+        LootConditionManager.registerCondition(new LootConditionCorpseContentType.Serializer());
     }
 
     public static void inject(LootTableLoadEvent event) {
@@ -175,10 +198,16 @@ public class GSLootTables {
     }
 
     public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable,
+                                               GraveInventoryHelper.GraveCorpseContentType corpseContentType,
                                                GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
                                                GraveInventoryHelper.GraveContentType graveContentType,
                                                EnumGraveMaterial graveMaterial) {
         return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
-                new LootContextGrave.Builder((WorldServer) world).withGraveTypeByEntity(graveTypeByEntity).withGraveContentType(graveContentType).withGraveMaterial(graveMaterial).build());
+                new LootContextGrave.Builder((WorldServer) world)
+                        .withCorpseContentType(corpseContentType)
+                        .withGraveTypeByEntity(graveTypeByEntity)
+                        .withGraveContentType(graveContentType)
+                        .withGraveMaterial(graveMaterial)
+                        .build());
     }
 }

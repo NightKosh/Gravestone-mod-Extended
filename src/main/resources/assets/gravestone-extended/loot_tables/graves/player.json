@@ -1,6 +1,57 @@
 {
     "pools": [
         {
+            "name": "corpse",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "corpse_content_type",
+                    "type": "CORPSE"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/corpse/corpse",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "bones_and_flesh",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "corpse_content_type",
+                    "type": "BONES_AND_FLESH"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/corpse/bones_and_flesh",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "skull_and_bones_and_flesh",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "corpse_content_type",
+                    "type": "SKULL_BONES_AND_FLESH"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/corpse/skull_and_bones_and_flesh",
+                    "weight": 10
+                }
+            ]
+        },
+        {
             "name": "adventurer",
             "rolls": 1,
             "conditions": [

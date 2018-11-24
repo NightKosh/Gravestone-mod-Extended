@@ -20,8 +20,10 @@ public class LootContextGrave extends LootContext {
     private EnumGraveMaterial graveMaterial;
     private GraveInventoryHelper.GraveContentType graveContentType;
     private GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity;
+    private GraveInventoryHelper.GraveCorpseContentType corpseContentType;
 
     public LootContextGrave(float luck, WorldServer world, LootTableManager lootTableManager,
+                            @Nullable GraveInventoryHelper.GraveCorpseContentType corpseContentType,
                             @Nullable GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
                             @Nullable GraveInventoryHelper.GraveContentType graveContentType,
                             @Nullable EnumGraveMaterial graveMaterial) {
@@ -29,6 +31,7 @@ public class LootContextGrave extends LootContext {
         this.graveMaterial = graveMaterial;
         this.graveContentType = graveContentType;
         this.graveTypeByEntity = graveTypeByEntity;
+        this.corpseContentType = corpseContentType;
     }
 
     public EnumGraveMaterial getGraveMaterial() {
@@ -43,11 +46,16 @@ public class LootContextGrave extends LootContext {
         return graveTypeByEntity;
     }
 
+    public GraveInventoryHelper.GraveCorpseContentType getCorpseContentType() {
+        return corpseContentType;
+    }
+
     public static class Builder {
         private final WorldServer world;
         private EnumGraveMaterial graveMaterial;
         private GraveInventoryHelper.GraveContentType graveContentType;
         private GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity;
+        private GraveInventoryHelper.GraveCorpseContentType corpseContentType;
 
         public Builder(WorldServer world) {
             this.world = world;
@@ -68,8 +76,13 @@ public class LootContextGrave extends LootContext {
             return this;
         }
 
+        public Builder withCorpseContentType(GraveInventoryHelper.GraveCorpseContentType corpseContentType) {
+            this.corpseContentType = corpseContentType;
+            return this;
+        }
+
         public LootContextGrave build() {
-            return new LootContextGrave(0, this.world, this.world.getLootTableManager(), graveTypeByEntity, graveContentType, graveMaterial);
+            return new LootContextGrave(0, this.world, this.world.getLootTableManager(), corpseContentType, graveTypeByEntity, graveContentType, graveMaterial);
         }
     }
 }

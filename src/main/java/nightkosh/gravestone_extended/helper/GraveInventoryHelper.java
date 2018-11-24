@@ -253,24 +253,16 @@ public class GraveInventoryHelper {
 
     public static List<ItemStack> getRandomGraveContent(World world, Random random, GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType,
                                                         GraveCorpseContentType corpseType, EnumGraveMaterial graveMaterial) {
-        List<ItemStack> itemList = new ArrayList<>();
         if (corpseType == GraveCorpseContentType.RANDOM) {
             corpseType = getRandomCorpseContentType(graveMaterial, random);
         }
-        switch (corpseType) {
-            case CORPSE:
-                addCorpse(graveTypeByEntity, random, itemList);//TODO
-                break;
-            case BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentType, graveMaterial));
-                break;
-            case SKULL_BONES_AND_FLESH:
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_SKULL, graveTypeByEntity, contentType, graveMaterial));
-                itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_BONES_AND_FLESH, graveTypeByEntity, contentType, graveMaterial));
-                break;
+
+        List<ItemStack> itemList = new ArrayList<>();
+        if (corpseType == GraveCorpseContentType.CORPSE) {//TODO
+            addCorpse(graveTypeByEntity, random, itemList);
         }
 
-        itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentType, graveMaterial));
+        itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, corpseType, graveTypeByEntity, contentType, graveMaterial));
 
         return itemList;
     }

@@ -1,0 +1,49 @@
+{
+    "pools": [
+        {
+            "name": "corpse",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "corpse_content_type",
+                    "type": "CORPSE"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/horse/corpse/corpse",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "bones_and_flesh",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "corpse_content_type",
+                    "type": "BONES_AND_FLESH"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/horse/corpse/bones_and_flesh",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "items",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/horse/items",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}

@@ -12,7 +12,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:graves/pet/dog",
+                    "name": "gravestone-extended:graves/dog",
                     "weight": 10
                 }
             ]
@@ -29,7 +29,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:graves/pet/cat",
+                    "name": "gravestone-extended:graves/cat",
                     "weight": 10
                 }
             ]
@@ -46,7 +46,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:graves/pet/horse",
+                    "name": "gravestone-extended:graves/horse",
                     "weight": 10
                 }
             ]

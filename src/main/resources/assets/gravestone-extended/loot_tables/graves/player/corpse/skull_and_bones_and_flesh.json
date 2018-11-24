@@ -1,0 +1,26 @@
+{
+    "pools": [
+        {
+            "name": "skull",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/corpse/skull",
+                    "weight": 10
+                }
+            ]
+        },
+        {
+            "name": "bones_and_flesh",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "gravestone-extended:graves/player/corpse/bones_and_flesh",
+                    "weight": 10
+                }
+            ]
+        }
+    ]
+}
