@@ -270,9 +270,8 @@ public class GraveInventoryHelper {
                 break;
         }
 
-        if (contentType != GraveContentType.JUNK) {
-            itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentType, graveMaterial));
-        }
+        itemList.addAll(GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, graveTypeByEntity, contentType, graveMaterial));
+
         return itemList;
     }
 
