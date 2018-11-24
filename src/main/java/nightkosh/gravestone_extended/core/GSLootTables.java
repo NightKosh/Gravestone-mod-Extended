@@ -81,6 +81,8 @@ public class GSLootTables {
 
     public static final ResourceLocation GRAVE_PLAYER_TREASURY = new ResourceLocation(ModInfo.ID, "graves/player/treasury");
 
+    public static final ResourceLocation GRAVE_VILLAGER = new ResourceLocation(ModInfo.ID, "graves/villager");
+
     public static final ResourceLocation GRAVE_DOG = new ResourceLocation(ModInfo.ID, "graves/dog");
     public static final ResourceLocation GRAVE_DOG_ITEMS = new ResourceLocation(ModInfo.ID, "graves/dog/items");
     public static final ResourceLocation GRAVE_DOG_CORPSE = new ResourceLocation(ModInfo.ID, "graves/dog/corpse/corpse");
@@ -154,6 +156,8 @@ public class GSLootTables {
         LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_DIAMOND);
 
         LootTableList.register(GRAVE_PLAYER_TREASURY);
+
+        LootTableList.register(GRAVE_VILLAGER);
 
         LootTableList.register(GRAVE_DOG);
         LootTableList.register(GRAVE_DOG_ITEMS);

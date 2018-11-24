@@ -80,7 +80,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "gravestone-extended:graves/player",
+                    "name": "gravestone-extended:graves/villager",
                     "weight": 10
                 }
             ]
