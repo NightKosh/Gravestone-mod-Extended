@@ -68,6 +68,9 @@ tile.altar.name=Алтарь
 ## Portal
 tile.catacombs_portal.name=Портал в катакомбы
 
+##Frozen Lava
+tile.frozen_lava.name=Застывшая лава
+
 # Enchantments
 enchantment.shadow_of_death=Тень Смерти
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Наносит дополнительные 2.5 урона за уровень существам, не являющимся пауками или нежитью

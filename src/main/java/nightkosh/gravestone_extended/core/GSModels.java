@@ -86,6 +86,9 @@ public class GSModels {
             //candle
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CANDLE), 0, ResourcesModels.CANDLE);
 
+            //frozen lava
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.FROZEN_LAVA), 0, ResourcesModels.FROZEN_LAVA);
+
             //portal
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CATACOMBS_PORTAL), 0, ResourcesModels.CATACOMBS_PORTAL);
 

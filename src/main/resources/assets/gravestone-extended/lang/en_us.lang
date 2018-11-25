@@ -68,6 +68,9 @@ tile.altar.name=Altar
 ## Portal
 tile.catacombs_portal.name=Catacombs Portal
 
+##Frozen Lava
+tile.frozen_lava.name=Frozen Lava
+
 # Enchantments
 enchantment.shadow_of_death=Shadow of Death
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs

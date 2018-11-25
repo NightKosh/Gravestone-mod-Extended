@@ -68,6 +68,10 @@ tile.altar.name=Altar
 ## Portal
 tile.catacombs_portal.name=Portal de catacumbas
 
+##Frozen Lava
+## TODO !!!!!!!!!!
+tile.frozen_lava.name=Frozen Lava
+
 # Enchantments
 enchantment.shadow_of_death=Sombra de la muerte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos

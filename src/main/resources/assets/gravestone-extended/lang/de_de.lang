@@ -69,6 +69,10 @@ tile.altar.name=Altar
 ## Portal
 tile.catacombs_portal.name=Portal in die Katakomben
 
+##Frozen Lava
+## TODO !!!!!!!!!!
+tile.frozen_lava.name=Frozen Lava
+
 # Enchantments
 ## TODO !!!!!!!!!!
 enchantment.shadow_of_death=Shadow of Death

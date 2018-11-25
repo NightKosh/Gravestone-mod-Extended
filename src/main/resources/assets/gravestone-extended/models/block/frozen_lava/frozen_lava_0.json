@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "gravestone-extended:blocks/frozen_lava/frozen_lava_0"
+    }
+}

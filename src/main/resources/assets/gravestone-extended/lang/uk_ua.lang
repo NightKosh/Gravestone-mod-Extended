@@ -70,6 +70,10 @@ tile.altar.name=Вівтар
 ## TODO !!!!!!!!!!
 tile.catacombs_portal.name=Catacombs Portal
 
+##Frozen Lava
+## TODO !!!!!!!!!!
+tile.frozen_lava.name=Frozen Lava
+
 # Enchantments
 enchantment.shadow_of_death=Тінь смерті
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Завдає додаткових 2.5 шкоди за рівень істотам, які не є павуками або нежиттю
