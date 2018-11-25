@@ -22,7 +22,7 @@ public class ZombieCorpseHelper extends CorpseHelper {
 
     public static ItemStack getRandomCorpse(Random random) {
         List<ItemStack> corpses = getDefaultCorpses();
-        return corpses.get(random.nextInt(corpses.size() - 1));
+        return corpses.get(random.nextInt(corpses.size()));
     }
 
     public static ItemStack getDefaultCorpse() {
