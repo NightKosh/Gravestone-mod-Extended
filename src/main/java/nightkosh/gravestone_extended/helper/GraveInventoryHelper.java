@@ -1,14 +1,8 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper.EnumGraveTypeByEntity;
-import nightkosh.gravestone_extended.core.GSLootTables;
 
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -27,7 +21,7 @@ public class GraveInventoryHelper {
         RANDOM
     }
 
-    private static GraveCorpseContentType getRandomCorpseContentType(EnumGraveMaterial graveMaterial, Random random) {
+    public static GraveCorpseContentType getRandomCorpseContentType(EnumGraveMaterial graveMaterial, Random random) {
         switch (graveMaterial) {
             case DIAMOND:
             case EMERALD:
@@ -135,26 +129,6 @@ public class GraveInventoryHelper {
         }
     }
 
-    public static ItemStack getWarriorSword(EnumGraveMaterial graveMaterial, Random random) {
-        Item sword;
-        switch (graveMaterial) {
-            case IRON:
-                sword = Items.IRON_SWORD;
-                break;
-            case GOLD:
-                sword = Items.GOLDEN_SWORD;
-                break;
-            case DIAMOND:
-                sword = Items.DIAMOND_SWORD;
-                break;
-            default:
-            case OTHER:
-                sword = random.nextBoolean() ? Items.STONE_SWORD : Items.WOODEN_SWORD;
-                break;
-        }
-        return new ItemStack(sword, 1, getRandomDamage(random, 30));
-    }
-
     private static EnumGraveMaterial getMinerContentType(Random random) {
         int chance = random.nextInt(100);
         if (chance < 10) {
@@ -240,18 +214,5 @@ public class GraveInventoryHelper {
         } else {
             return EnumGraveMaterial.OTHER;//75%
         }
-    }
-
-    private static int getRandomDamage(Random random, int maxDamage) {
-        return random.nextInt(maxDamage);
-    }
-
-    public static List<ItemStack> getRandomGraveContent(World world, Random random, GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity, GraveContentType contentType,
-                                                        GraveCorpseContentType corpseType, EnumGraveMaterial graveMaterial) {
-        if (corpseType == GraveCorpseContentType.RANDOM) {
-            corpseType = getRandomCorpseContentType(graveMaterial, random);
-        }
-
-        return GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, corpseType, graveTypeByEntity, contentType, graveMaterial);
     }
 }

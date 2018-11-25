@@ -73,6 +73,7 @@ public class GSLootTables {
 
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR = new ResourceLocation(ModInfo.ID, "graves/player/warrior");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_BOW = new ResourceLocation(ModInfo.ID, "graves/player/warrior/bow");
+    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_SWORD = new ResourceLocation(ModInfo.ID, "graves/player/warrior/sword");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/leather");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_IRON = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/iron");
     public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/chainmail");
@@ -149,6 +150,7 @@ public class GSLootTables {
 
         LootTableList.register(GRAVE_PLAYER_WARRIOR);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_BOW);
+        LootTableList.register(GRAVE_PLAYER_WARRIOR_SWORD);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_IRON);
         LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL);

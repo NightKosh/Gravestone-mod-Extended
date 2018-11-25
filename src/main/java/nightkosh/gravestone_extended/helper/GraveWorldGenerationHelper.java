@@ -1,5 +1,6 @@
 package nightkosh.gravestone_extended.helper;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -10,6 +11,7 @@ import nightkosh.gravestone.block.enums.EnumGraves;
 import nightkosh.gravestone.helper.DeathTextHelper;
 import nightkosh.gravestone.tileentity.GraveStoneDeathText;
 import nightkosh.gravestone.tileentity.TileEntityGraveStone;
+import nightkosh.gravestone_extended.core.GSLootTables;
 
 import java.util.List;
 import java.util.Random;
@@ -50,6 +52,7 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
         EnumGraveType[] graveTypes;
         ItemStack sword = null;
         EnumGraveMaterial graveMaterial;
+        GraveInventoryHelper.GraveCorpseContentType corpseType = GraveInventoryHelper.GraveCorpseContentType.RANDOM;
 
         if (contentType == GraveInventoryHelper.GraveContentType.JUNK) {
             if (isFireDamage(deathText.getDeathText()) || isLavaDamage(deathText.getDeathText())) {
@@ -62,7 +65,12 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
             graveMaterial = GraveInventoryHelper.getContentMaterial(graveTypeByEntity, contentType, random);
 
             if (contentType == GraveInventoryHelper.GraveContentType.WARRIOR) {
-                sword = GraveInventoryHelper.getWarriorSword(graveMaterial, random);
+                List<ItemStack> swords = GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE_PLAYER_WARRIOR_SWORD, corpseType, graveTypeByEntity, contentType, graveMaterial);
+                if (!swords.isEmpty()) {
+                    sword = swords.get(random.nextInt(swords.size()));
+                } else {
+                    sword = new ItemStack(Items.WOODEN_SWORD);
+                }
                 grave = EnumGraves.SWORD;
             } else {
                 if (graveMaterial == EnumGraveMaterial.STONE) {
@@ -73,7 +81,9 @@ public class GraveWorldGenerationHelper extends GraveGenerationHelper {
             }
         }
 
-        items = GraveInventoryHelper.getRandomGraveContent(world, random, graveTypeByEntity, contentType, GraveInventoryHelper.GraveCorpseContentType.RANDOM, grave.getMaterial());
+        graveMaterial = grave.getMaterial();
+        corpseType = GraveInventoryHelper.getRandomCorpseContentType(graveMaterial, random);
+        items = GSLootTables.getGraveLoot(world, random, GSLootTables.GRAVE, corpseType, graveTypeByEntity, contentType, graveMaterial);
 
         boolean enchanted = isMagicDamage(deathText.getDeathText());
         boolean mossy = isMossyGrave(world, pos, grave.getMaterial());
