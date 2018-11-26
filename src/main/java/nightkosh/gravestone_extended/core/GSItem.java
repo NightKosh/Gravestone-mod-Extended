@@ -2,12 +2,12 @@ package nightkosh.gravestone_extended.core;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
+import nightkosh.gravestone_extended.core.compatibility.CompatibilityAdvancedFishing;
 import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.item.*;
 import nightkosh.gravestone_extended.item.armor.bone.ItemBoneBoots;
@@ -26,7 +26,6 @@ import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThi
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingChestplate;
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingHelmet;
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingLeggings;
-import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
 import nightkosh.gravestone_extended.item.tools.ItemChisel;
 import nightkosh.gravestone_extended.item.tools.axe.ItemBoneAxe;
 import nightkosh.gravestone_extended.item.tools.axe.ItemDiamondBoneAxe;
@@ -63,7 +62,7 @@ public class GSItem {
     public static final Item BONE_SWORD_DIAMOND = new ItemDiamondBoneSword();
     public static final Item BONE_SHIELD = new ItemBoneShield();
 
-    public static final Item BONE_FISHING_POLE = new ItemBoneFishingPole();
+    public static Item BONE_FISHING_POLE;
     public static final Item BONE_HOE = new ItemBoneHoe();
     public static final Item BONE_HOE_IRON = new ItemIronBoneHoe();
     public static final Item BONE_HOE_GOLDEN = new ItemGoldenBoneHoe();
@@ -135,6 +134,7 @@ public class GSItem {
                     BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
             if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
+                BONE_FISHING_POLE = CompatibilityAdvancedFishing.getBoneFishingPole();
                 registry.register(BONE_FISHING_POLE);
             }
             registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);

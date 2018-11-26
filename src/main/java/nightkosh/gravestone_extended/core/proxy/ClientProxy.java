@@ -26,6 +26,7 @@ import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSItem;
 import nightkosh.gravestone_extended.core.GSParticles;
 import nightkosh.gravestone_extended.core.ResourcesModels;
+import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.event.RenderEventHandler;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
@@ -170,7 +171,9 @@ public class ClientProxy extends CommonProxy {
         // Spawner Helper
         RenderingRegistry.registerEntityRenderingHandler(EntityGroupOfGravesMobSpawnerHelper.class, new RenderSpawnerHelper(renderManager));
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityBoneFishHook.class, new RendererBoneFishHook(renderManager));
+        if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
+            RenderingRegistry.registerEntityRenderingHandler(EntityBoneFishHook.class, new RendererBoneFishHook(renderManager));
+        }
     }
 
     @Override
