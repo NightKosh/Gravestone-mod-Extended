@@ -14,5 +14,6 @@ public class ItemIronBoneAxe extends ItemBoneAxe {
         super(ToolMaterial.IRON);
         this.setUnlocalizedName("gravestone.bone_axe_iron");
         this.setRegistryName(ModInfo.ID, "gs_bone_axe_iron");
+        this.setCreativeTab(null);
     }
 }

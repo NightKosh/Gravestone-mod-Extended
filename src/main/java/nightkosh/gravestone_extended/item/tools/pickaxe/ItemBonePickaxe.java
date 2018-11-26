@@ -22,6 +22,7 @@ public class ItemBonePickaxe extends ItemPickaxe implements IBonePickaxe {
         super(material);
         this.setUnlocalizedName("gravestone." + str);
         this.setRegistryName(ModInfo.ID, "gs_" + str);
+        this.setCreativeTab(null);
     }
 
     @Override

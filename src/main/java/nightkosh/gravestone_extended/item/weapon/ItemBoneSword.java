@@ -18,6 +18,7 @@ public class ItemBoneSword extends ItemSword implements IBoneSword{
         this(ToolMaterial.STONE);
         this.setUnlocalizedName("gravestone.bone_sword");
         this.setRegistryName(ModInfo.ID, "gs_bone_sword");
+        this.setCreativeTab(null);
     }
 
     public ItemBoneSword(ToolMaterial material) {

@@ -18,6 +18,7 @@ public class ItemBoneAxe extends ItemAxe implements IBoneAxe {
         this(Item.ToolMaterial.STONE);
         this.setUnlocalizedName("gravestone.bone_axe");
         this.setRegistryName(ModInfo.ID, "gs_bone_axe");
+        this.setCreativeTab(null);
     }
 
     public ItemBoneAxe(Item.ToolMaterial material) {

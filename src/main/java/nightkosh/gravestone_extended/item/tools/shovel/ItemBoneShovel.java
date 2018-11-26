@@ -22,6 +22,7 @@ public class ItemBoneShovel extends ItemSpade implements IBoneShovel {
         super(material);
         this.setUnlocalizedName("gravestone." + str);
         this.setRegistryName(ModInfo.ID, str);
+        this.setCreativeTab(null);
     }
 
     @Override

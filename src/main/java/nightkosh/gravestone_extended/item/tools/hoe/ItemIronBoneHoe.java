@@ -14,5 +14,6 @@ public class ItemIronBoneHoe extends ItemBoneHoe {
         super(ToolMaterial.IRON);
         this.setUnlocalizedName("gravestone.bone_hoe_iron");
         this.setRegistryName(ModInfo.ID, "gs_bone_hoe_iron");
+        this.setCreativeTab(null);
     }
 }

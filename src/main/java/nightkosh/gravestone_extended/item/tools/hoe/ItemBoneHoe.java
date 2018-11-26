@@ -32,6 +32,7 @@ public class ItemBoneHoe extends ItemHoe implements IBoneHoe {
         this(ToolMaterial.STONE);
         this.setUnlocalizedName("gravestone.bone_hoe");
         this.setRegistryName(ModInfo.ID, "gs_bone_hoe");
+        this.setCreativeTab(null);
     }
 
     public ItemBoneHoe(ToolMaterial material) {
