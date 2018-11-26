@@ -112,8 +112,11 @@ public class GSEventsHandler {
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void onMove(PlayerEvent.LivingUpdateEvent event) {
-        EnchantmentFrozenNether.applyEffect(event.getEntityLiving());
+    public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
+        if (event.getEntityLiving() instanceof EntityPlayer) {
+            EnchantmentFrozenNether.applyEffect((EntityPlayer) event.getEntityLiving());
+            EnchantmentWebCrawler.applyEffect((EntityPlayer) event.getEntityLiving());
+        }
     }
 
     @SubscribeEvent

@@ -94,6 +94,8 @@ enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 d
 ## TODO !!!!!!!!!!
 enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
+enchantment.web_crawler=Web Crawler
+enchantment.gravestone-extended.web_crawler.desc=Allows to move normally in the web.
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Maldição da Fome

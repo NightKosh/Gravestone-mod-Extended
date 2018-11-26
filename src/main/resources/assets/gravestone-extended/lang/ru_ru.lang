@@ -92,6 +92,8 @@ enchantment.bloody_replication=Кровавая копия
 enchantment.gravestone-extended.gs_bloody_replication.desc=Обменивает 0.25 - 1.5 очков здоровья(в зависимости от уровня зачарования) на копию блока дерева вместо его уничтожения
 enchantment.frozen_nether=Застывший ад
 enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
+enchantment.web_crawler=Паучьи шаги
+enchantment.gravestone-extended.web_crawler.desc=Позволяет свободно передвигаться в паутине.
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Проклятие истощения

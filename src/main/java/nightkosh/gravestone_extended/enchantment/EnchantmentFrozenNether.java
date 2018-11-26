@@ -4,7 +4,7 @@ import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -53,18 +53,18 @@ public class EnchantmentFrozenNether extends EnchantmentTreasure {
         return super.canApply(stack) && stack.getItem() instanceof ItemBoneBoots;
     }
 
-    public static void applyEffect(EntityLivingBase entity) {
-        World world = entity.getEntityWorld();
+    public static void applyEffect(EntityPlayer player) {
+        World world = player.getEntityWorld();
         if (!world.isRemote) {
-            int level = GSEnchantmentHelper.getEnchantmentLevel(entity.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
+            int level = GSEnchantmentHelper.getEnchantmentLevel(player.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
 
             if (level > 0) {
-                BlockPos blockPos = entity.getPosition();
+                BlockPos blockPos = player.getPosition();
                 double f = Math.ceil(Math.min(16, 1.5 + level));
                 BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos(0, 0, 0);
 
                 for (BlockPos.MutableBlockPos pos : BlockPos.getAllInBoxMutable(blockPos.add(-f, -1, -f), blockPos.add(f, -1, f))) {
-                    if (pos.distanceSqToCenter(entity.posX, entity.posY, entity.posZ) <= (f * f)) {
+                    if (pos.distanceSqToCenter(player.posX, player.posY, player.posZ) <= (f * f)) {
                         mutableBlockPos.setPos(pos.getX(), pos.getY() + 1, pos.getZ());
                         IBlockState state = world.getBlockState(mutableBlockPos);
 
@@ -75,7 +75,7 @@ public class EnchantmentFrozenNether extends EnchantmentTreasure {
                                     blockState.getValue(BlockLiquid.LEVEL) == 0 && world.mayPlace(GSBlock.FROZEN_LAVA, pos, false, EnumFacing.DOWN, null) ||
                                     (blockState.getBlock() == GSBlock.FROZEN_LAVA && blockState.getValue(BlockFrozenLava.AGE) != 0)) {
                                 world.setBlockState(pos, GSBlock.FROZEN_LAVA.getDefaultState());
-                                world.scheduleUpdate(pos.toImmutable(), GSBlock.FROZEN_LAVA, MathHelper.getInt(entity.getRNG(), 60, 120));
+                                world.scheduleUpdate(pos.toImmutable(), GSBlock.FROZEN_LAVA, MathHelper.getInt(player.getRNG(), 60, 120));
                             }
                         }
                     }
