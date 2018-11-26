@@ -91,6 +91,9 @@ enchantment.hellish_angling=Pesca infernal con caña
 enchantment.gravestone-extended.gs_hellish_angling.desc=Permite pescar en la lava
 enchantment.bloody_replication=Replicación sangrienta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
+## TODO !!!!!!!!!!
+enchantment.frozen_nether=Frozen Nether
+enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Maldición de inanición

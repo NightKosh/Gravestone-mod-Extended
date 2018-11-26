@@ -94,6 +94,8 @@ enchantment.gravestone-extended.gs_hellish_angling.desc=Дозволяє риб�
 ## TODO !!!!!!!!!!
 enchantment.bloody_replication=Bloody Replication
 enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
+enchantment.frozen_nether=Frozen Nether
+enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Прокляття виснаження

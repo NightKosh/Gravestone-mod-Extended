@@ -31,6 +31,9 @@ public class GSEnchantment {
     public static final Enchantment HELLISH_ANGLING = new EnchantmentHellishAngling();
     public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
 
+    //armor
+    public static final Enchantment FROZEN_NETHER = new EnchantmentFrozenNether();
+
     // CURSES
     public static final Enchantment CURSE_STARVATION = new EnchantmentStarvationCurse();
     public static final Enchantment CURSE_AWKWARD = new EnchantmentAwkwardCurse();
@@ -45,6 +48,7 @@ public class GSEnchantment {
             final IForgeRegistry<Enchantment> registry = event.getRegistry();
             registry.registerAll(VAMPIRIC_TOUCH, POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
             registry.registerAll(PAIN_MIRROR);
+            registry.registerAll(FROZEN_NETHER);
             registry.registerAll(BONE_RAIN, HELLISH_ANGLING, BLOODY_REPLICATION);
             registry.registerAll(CURSE_STARVATION, CURSE_AWKWARD, CURSE_BROKEN_HOOK);
         }

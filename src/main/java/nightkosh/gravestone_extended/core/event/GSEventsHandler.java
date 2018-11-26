@@ -35,10 +35,7 @@ import nightkosh.gravestone_extended.capability.choke.ChokeProvider;
 import nightkosh.gravestone_extended.capability.choke.IChoke;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
-import nightkosh.gravestone_extended.enchantment.EnchantmentBloodyReplication;
-import nightkosh.gravestone_extended.enchantment.EnchantmentNecroticCorrosion;
-import nightkosh.gravestone_extended.enchantment.EnchantmentPainMirror;
-import nightkosh.gravestone_extended.enchantment.EnchantmentVampiricTouch;
+import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentStarvationCurse;
@@ -123,6 +120,11 @@ public class GSEventsHandler {
                     ((ItemBoneShield) stack.getItem()).damageShield(stack, player, amount);
             }
         }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onMove(PlayerEvent.LivingUpdateEvent event) {
+        EnchantmentFrozenNether.applyEffect(event.getEntityLiving());
     }
 
     @SubscribeEvent

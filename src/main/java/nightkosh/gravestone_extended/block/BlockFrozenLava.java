@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.core.GSEnchantment;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
@@ -50,8 +51,8 @@ public class BlockFrozenLava extends Block {
 
     @Override
     public void onEntityWalk(World world, BlockPos pos, Entity entity) {
-        //TODO
-        if (!entity.isImmuneToFire() && entity instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entity)) {
+        if (!entity.isImmuneToFire() && entity instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entity) &&
+                EnchantmentHelper.getMaxEnchantmentLevel(GSEnchantment.FROZEN_NETHER, (EntityLivingBase) entity) <= 0) {
             entity.attackEntityFrom(DamageSource.HOT_FLOOR, 1);
         }
 
