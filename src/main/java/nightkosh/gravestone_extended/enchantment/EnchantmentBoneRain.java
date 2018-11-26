@@ -13,7 +13,7 @@ import nightkosh.gravestone_extended.item.tools.hoe.IBoneHoe;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentBoneRain extends EnchantmentBase {
+public class EnchantmentBoneRain extends EnchantmentTreasure {
     public EnchantmentBoneRain() {
         super(Rarity.VERY_RARE, EnumEnchantmentType.ALL, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND});
         this.setName("bone_rain");

@@ -13,7 +13,7 @@ import nightkosh.gravestone_extended.item.weapon.IBoneSword;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentNecroticCorrosion extends EnchantmentBase {
+public class EnchantmentNecroticCorrosion extends EnchantmentTreasure {
 
     public EnchantmentNecroticCorrosion() {
         super(Rarity.VERY_RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
@@ -40,6 +40,7 @@ public class EnchantmentNecroticCorrosion extends EnchantmentBase {
     public boolean canApply(ItemStack stack) {
         return super.canApply(stack) && stack.getItem() instanceof IBoneSword;
     }
+
     public static void applyEnchantmentEffect(EntityLivingBase target, float damage, short level) {
         float additionalDamage = damage * 0.1F * level;
         if (additionalDamage < 0.5) {

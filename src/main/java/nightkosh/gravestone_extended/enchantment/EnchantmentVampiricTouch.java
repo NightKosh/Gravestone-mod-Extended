@@ -14,7 +14,7 @@ import nightkosh.gravestone_extended.item.weapon.IBoneSword;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentVampiricTouch extends EnchantmentBase {
+public class EnchantmentVampiricTouch extends EnchantmentTreasure {
 
     public EnchantmentVampiricTouch() {
         super(Enchantment.Rarity.VERY_RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});

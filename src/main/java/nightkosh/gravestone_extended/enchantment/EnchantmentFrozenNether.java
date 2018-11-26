@@ -25,7 +25,7 @@ import nightkosh.gravestone_extended.item.armor.bone.ItemBoneBoots;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentFrozenNether extends EnchantmentBase {
+public class EnchantmentFrozenNether extends EnchantmentTreasure {
 
     public EnchantmentFrozenNether() {
         super(Rarity.VERY_RARE, EnumEnchantmentType.ARMOR_FEET, new EntityEquipmentSlot[]{EntityEquipmentSlot.FEET});
@@ -56,7 +56,7 @@ public class EnchantmentFrozenNether extends EnchantmentBase {
     public static void applyEffect(EntityLivingBase entity) {
         World world = entity.getEntityWorld();
         if (!world.isRemote) {
-            int level = GSEnchantmentHelper.getMaxEnchantmentLevel(entity.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
+            int level = GSEnchantmentHelper.getEnchantmentLevel(entity.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
 
             if (level > 0) {
                 BlockPos blockPos = entity.getPosition();

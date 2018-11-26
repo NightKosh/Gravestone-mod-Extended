@@ -16,7 +16,7 @@ public abstract class EnchantmentBase extends Enchantment {
             EntityEquipmentSlot.OFFHAND
     };
 
-    protected EnchantmentBase(Rarity rarityIn, EnumEnchantmentType typeIn, EntityEquipmentSlot[] slots) {
-        super(rarityIn, typeIn, slots);
+    protected EnchantmentBase(Rarity rarity, EnumEnchantmentType type, EntityEquipmentSlot[] slots) {
+        super(rarity, type, slots);
     }
 }

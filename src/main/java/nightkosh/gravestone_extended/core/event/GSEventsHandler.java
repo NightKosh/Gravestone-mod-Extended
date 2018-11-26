@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.core.event;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.AbstractSkeleton;
@@ -44,9 +43,8 @@ import nightkosh.gravestone_extended.entity.monster.crawler.EntityStraySkullCraw
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityWitherSkullCrawler;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntityZombieSkullCrawler;
 import nightkosh.gravestone_extended.helper.CemeteryHelper;
-import nightkosh.gravestone_extended.item.weapon.IBoneShiled;
+import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
-import nightkosh.gravestone_extended.item.weapon.ItemBoneShield;
 import nightkosh.gravestone_extended.potion.PotionBleeding;
 import nightkosh.gravestone_extended.potion.PotionPurification;
 import org.lwjgl.opengl.GL11;
@@ -109,16 +107,7 @@ public class GSEventsHandler {
     @SubscribeEvent
     public void livingAttackEvent(LivingAttackEvent event) {
         if (event.getEntityLiving() instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-            ItemStack stack = player.getActiveItemStack();
-            if (!stack.isEmpty() && stack.getItem() instanceof IBoneShiled) {
-                float amount = event.getAmount();
-
-                EnchantmentPainMirror.applyEnchantmentEffect(player, event.getSource().getTrueSource(), stack, amount);
-
-                if (event.getAmount() >= 3)
-                    ((ItemBoneShield) stack.getItem()).damageShield(stack, player, amount);
-            }
+            EnchantmentPainMirror.applyEffect((EntityPlayer) event.getEntityLiving(), event.getSource().getTrueSource(), event.getAmount());
         }
     }
 
@@ -146,7 +135,7 @@ public class GSEventsHandler {
 //        if (!event.getItem().isEmpty()) {
 //            NBTTagList nbtList = event.getItem().getEnchantmentTagList();
 //            for (NBTBase nbt : nbtList) {
-//                if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.CURSE_FRAGILITY)) {
+//                if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.CURSE_FRAGILITY)) {
 //                    event.getItem().damageItem(2, event.getEntityLiving());
 //                }
 //            }
@@ -155,19 +144,7 @@ public class GSEventsHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void itemFishedEvent(ItemFishedEvent event) {
-        ItemStack stack = event.getEntityPlayer().getHeldItemMainhand();
-
-        if (!stack.isEmpty()) {
-            NBTTagList nbtList = stack.getEnchantmentTagList();
-            for (NBTBase nbt : nbtList) {
-                if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.CURSE_BROKEN_HOOK)) {
-                    if (EnchantmentBrokenHookCurse.cancelFishing()) {
-                        event.setCanceled(true);
-                    }
-                    break;
-                }
-            }
-        }
+        EnchantmentBrokenHookCurse.applyEffect(event);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
@@ -190,9 +167,9 @@ public class GSEventsHandler {
     private static void applyEntityLivingDamageEnchantments(EntityLivingBase attacker, EntityLivingBase target, ItemStack weapon, float damage) {
         NBTTagList nbtList = weapon.getEnchantmentTagList();
         for (NBTBase nbt : nbtList) {
-            if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.VAMPIRIC_TOUCH)) {
+            if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.VAMPIRIC_TOUCH)) {
                 EnchantmentVampiricTouch.applyEnchantmentEffect(attacker, damage);
-            } else if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.NECROTIC_CORROSION)) {
+            } else if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.NECROTIC_CORROSION)) {
                 EnchantmentNecroticCorrosion.applyEnchantmentEffect(target, damage, ((NBTTagCompound) nbt).getShort("lvl"));
             }
         }

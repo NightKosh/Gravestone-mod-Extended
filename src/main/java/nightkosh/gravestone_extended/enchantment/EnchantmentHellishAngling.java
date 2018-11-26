@@ -12,7 +12,7 @@ import nightkosh.gravestone_extended.item.tools.IBoneFishingPole;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentHellishAngling extends EnchantmentBase {
+public class EnchantmentHellishAngling extends EnchantmentTreasure {
 
     public EnchantmentHellishAngling() {
         super(Rarity.VERY_RARE, EnumEnchantmentType.FISHING_ROD, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND});

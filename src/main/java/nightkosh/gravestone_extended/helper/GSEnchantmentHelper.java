@@ -17,7 +17,11 @@ import java.util.Map;
  */
 public class GSEnchantmentHelper extends nightkosh.gravestone.helper.EnchantmentHelper {
 
-    public static short getMaxEnchantmentLevel(ItemStack stack, Enchantment enchantment) {
+    public static boolean hasEnchantment(NBTBase nbt, Enchantment enchantment) {
+        return ((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(enchantment);
+    }
+
+    public static short getEnchantmentLevel(ItemStack stack, Enchantment enchantment) {
         if (stack != null && stack != ItemStack.EMPTY) {
             NBTTagList nbtList = stack.getEnchantmentTagList();
             for (NBTBase nbt : nbtList) {
