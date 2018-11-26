@@ -129,18 +129,21 @@ public class GSItem {
             final IForgeRegistry<Item> registry = event.getRegistry();
             registry.registerAll(TOXIC_SLIME, BAT_WING, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
             registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY, FROZEN_MIRROR);
-            registry.registerAll(CHISEL, BONE_FISHING_POLE,
+            registry.registerAll(CHISEL,
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
                     BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,
                     BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
+            if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
+                registry.register(BONE_FISHING_POLE);
+            }
             registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
             registry.registerAll(BONE_HELMET, BONE_CHESTPLATE, BONE_LEGGINGS, BONE_BOOTS,
                     DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
                     SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,
                     MUMMY_HELMET, MUMMY_CHESTPLATE, MUMMY_LEGGINGS, MUMMY_BOOTS);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
-            if (Loader.isModLoaded(Compatibility.FORESTRY_ID)) {
+            if (Compatibility.isModLoaded(Compatibility.FORESTRY_ID)) {
                 CompatibilityForestry.addBackpack(registry);
             }
         }
