@@ -94,6 +94,8 @@ enchantment.frozen_nether=Застывший ад
 enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
 enchantment.web_crawler=Паучьи шаги
 enchantment.gravestone-extended.web_crawler.desc=Позволяет свободно передвигаться в паутине.
+enchantment.soul_bound=Привязка души
+enchantment.gravestone-extended.soul_bound.desc=Сохраняет предемы в инветнаре после смерти.
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Проклятие истощения

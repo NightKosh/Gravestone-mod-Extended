@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.EnumDifficulty;
+import nightkosh.gravestone_extended.helper.GameRuleHelper;
 
 /**
  * GraveStone mod
@@ -24,7 +25,7 @@ public class EntityAIBreakBlock extends EntityAIBlockInteract {
      */
     @Override
     public boolean shouldExecute() {
-        return super.shouldExecute() && this.theEntity.getEntityWorld().getGameRules().getBoolean("mobGriefing");
+        return super.shouldExecute() && GameRuleHelper.checkMobGriefing(this.theEntity.getEntityWorld());
     }
 
     /**

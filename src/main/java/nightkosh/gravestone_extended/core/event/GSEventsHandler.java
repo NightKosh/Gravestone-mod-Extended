@@ -22,6 +22,7 @@ import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
+import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -61,7 +62,13 @@ public class GSEventsHandler {
     public void onPlayerClone(PlayerEvent.Clone event) {
         if (event.isWasDeath()) {
             CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntityPlayer());
+            EnchantmentSoulBound.restoreItems(event.getOriginal(), event.getEntityPlayer());
         }
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public void onPlayerDrops(PlayerDropsEvent event) {
+        EnchantmentSoulBound.applyEffect(event);
     }
 
     // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness

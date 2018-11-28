@@ -6,6 +6,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import nightkosh.gravestone_extended.helper.GameRuleHelper;
 
 import java.util.Random;
 
@@ -51,7 +52,7 @@ public class AISummonSkullCrawler extends EntityAIBase {
 
                         if ((state.getBlock().equals(GSBlock.BONE_BLOCK) && GSBlock.BONE_BLOCK.isSkullCrawlerBlock(state)) ||
                                 (state.getBlock().equals(GSBlock.PILE_OF_BONES) && GSBlock.PILE_OF_BONES.isSkullCrawlerBlock(state))) {
-                            if (world.getGameRules().getBoolean("mobGriefing")) {
+                            if (GameRuleHelper.checkMobGriefing(world)) {
                                 world.destroyBlock(blockPos, true);
                             }
 
