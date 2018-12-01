@@ -10,6 +10,7 @@ import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import nightkosh.gravestone_extended.core.GSEnchantment;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.helper.GameRuleHelper;
 
@@ -46,17 +47,20 @@ public class EnchantmentSoulBound extends EnchantmentTreasure {
 
     public static void applyEffect(PlayerDropsEvent event) {
         if (FMLCommonHandler.instance().getEffectiveSide().isServer() && event.getEntityLiving() != null && event.getEntityLiving() instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.getEntity();
+            EntityPlayer player = (EntityPlayer) event.getEntityLiving();
             if (!GameRuleHelper.checkKeepInventory(player.world)) {
-
-                ListIterator<EntityItem> it = event.getDrops().listIterator();
-                while (it.hasNext()) {
-                    ItemStack item = it.next().getItem();
-                    if (item != null && !item.isEmpty() && GSEnchantmentHelper.hasEnchantment(item, GSEnchantment.SOUL_BOUND)) {
-                        if (saveItem(player, item)) {
-                            it.remove();
+                try {
+                    ListIterator<EntityItem> it = event.getDrops().listIterator();
+                    while (it.hasNext()) {
+                        ItemStack item = it.next().getItem();
+                        if (item != null && !item.isEmpty() && GSEnchantmentHelper.hasEnchantment(item, GSEnchantment.SOUL_BOUND)) {
+                            if (saveItem(player, item)) {
+                                it.remove();
+                            }
                         }
                     }
+                } catch (Exception e) {
+                    GSLogger.logError("Can't save soulbound items!");
                 }
             }
         }
@@ -76,11 +80,15 @@ public class EnchantmentSoulBound extends EnchantmentTreasure {
 
     public static void restoreItems(EntityPlayer playerOld, EntityPlayer playerNew) {
         if (playerOld != null && playerNew != null && !GameRuleHelper.checkKeepInventory(playerNew.world)) {
-            for (int i = 0; i < playerOld.inventory.mainInventory.size(); i++) {
-                ItemStack item = playerOld.inventory.mainInventory.get(i);
-                if (GSEnchantmentHelper.hasEnchantment(item, GSEnchantment.SOUL_BOUND) && saveItem(playerNew, item)) {
-                    playerOld.inventory.mainInventory.set(i, ItemStack.EMPTY);
+            try {
+                for (int i = 0; i < playerOld.inventory.mainInventory.size(); i++) {
+                    ItemStack item = playerOld.inventory.mainInventory.get(i);
+                    if (GSEnchantmentHelper.hasEnchantment(item, GSEnchantment.SOUL_BOUND) && saveItem(playerNew, item)) {
+                        playerOld.inventory.mainInventory.set(i, ItemStack.EMPTY);
+                    }
                 }
+            } catch (Exception e) {
+                GSLogger.logError("Can't restore soulbound items!");
             }
         }
     }
