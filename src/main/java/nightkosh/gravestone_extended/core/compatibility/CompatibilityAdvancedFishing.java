@@ -1,5 +1,6 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.Item;
@@ -11,6 +12,7 @@ import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import nightkosh.advanced_fishing.api.AdvancedFishingAPI;
 import nightkosh.advanced_fishing.api.EnumFishType;
 import nightkosh.gravestone_extended.core.GSPotion;
+import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
 
 /**
@@ -43,5 +45,9 @@ public class CompatibilityAdvancedFishing {
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.CAVE_TROUT.ordinal())), GSPotion.RESISTANCE_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.CHORUS_KOI.ordinal())), GSPotion.LEVITATION_TYPE);
         PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.WITHERED_CRUCIAN.ordinal())), GSPotion.WITHER_TYPE);
+    }
+
+    public static boolean isBoneHook(Entity entity) {
+        return entity instanceof EntityBoneFishHook;
     }
 }

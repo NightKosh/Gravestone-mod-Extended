@@ -27,8 +27,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
+import nightkosh.gravestone_extended.core.compatibility.Compatibility;
+import nightkosh.gravestone_extended.core.compatibility.CompatibilityAdvancedFishing;
 import nightkosh.gravestone_extended.entity.monster.EntityToxicSludge;
-import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.helper.StateHelper;
 import nightkosh.gravestone_extended.item.armor.bone.IBoneArmor;
 
@@ -86,7 +87,8 @@ public class BlockFluidToxicWater extends BlockFluidClassic {
                     }
                 }
             }
-        } else if (!(entity instanceof EntityItem) && !(entity instanceof EntityBoneFishHook)) {
+        } else if (!(entity instanceof EntityItem) &&
+                !(Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID) && CompatibilityAdvancedFishing.isBoneHook(entity))) {
             dealDamage = true;
             if (entity instanceof EntityFishHook) {
                 meltEffect(world, entity.posX, entity.posY, entity.posZ);
