@@ -1,13 +1,13 @@
 package nightkosh.gravestone_extended.entity.monster;
 
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -105,31 +105,27 @@ public class EntityPossessedArmor extends EntityMob {
 
         Map<EntityEquipmentSlot, Item> armorMap = ARMOR_LIST.get(this.rand.nextInt(ARMOR_LIST.size()));
 
-        ItemStack helmet = new ItemStack(armorMap.get(EntityEquipmentSlot.HEAD));
-        helmet.addEnchantment(Enchantment.getEnchantmentByLocation("binding_curse"), 1);
-        helmet.addEnchantment(GSEnchantment.CURSE_STARVATION, 1);
-
-        ItemStack chestPlate = new ItemStack(armorMap.get(EntityEquipmentSlot.CHEST));
-        chestPlate.addEnchantment(Enchantment.getEnchantmentByLocation("binding_curse"), 1);
-        chestPlate.addEnchantment(GSEnchantment.CURSE_STARVATION, 1);
-
-        ItemStack leggings = new ItemStack(armorMap.get(EntityEquipmentSlot.LEGS));
-        leggings.addEnchantment(Enchantment.getEnchantmentByLocation("binding_curse"), 1);
-        leggings.addEnchantment(GSEnchantment.CURSE_STARVATION, 1);
-
-        ItemStack boots = new ItemStack(armorMap.get(EntityEquipmentSlot.FEET));
-        boots.addEnchantment(Enchantment.getEnchantmentByLocation("binding_curse"), 1);
-        boots.addEnchantment(GSEnchantment.CURSE_STARVATION, 1);
-
-        this.setItemStackToSlot(EntityEquipmentSlot.HEAD, helmet);
-        this.setItemStackToSlot(EntityEquipmentSlot.CHEST, chestPlate);
-        this.setItemStackToSlot(EntityEquipmentSlot.LEGS, leggings);
-        this.setItemStackToSlot(EntityEquipmentSlot.FEET, boots);
-
+        this.setItemStackToSlot(EntityEquipmentSlot.HEAD, getItem(armorMap.get(EntityEquipmentSlot.HEAD)));
+        this.setItemStackToSlot(EntityEquipmentSlot.CHEST, getItem(armorMap.get(EntityEquipmentSlot.CHEST)));
+        this.setItemStackToSlot(EntityEquipmentSlot.LEGS, getItem(armorMap.get(EntityEquipmentSlot.LEGS)));
+        this.setItemStackToSlot(EntityEquipmentSlot.FEET, getItem(armorMap.get(EntityEquipmentSlot.FEET)));
 
         return livingdata;
     }
 
+    private ItemStack getItem(Item item) {
+        ItemStack stack = new ItemStack(item);
+        stack.addEnchantment(Enchantments.BINDING_CURSE, 1);
+        stack.addEnchantment(GSEnchantment.CURSE_STARVATION, 1);
+        if (this.rand.nextInt(10) == 0) {
+            if (this.rand.nextBoolean()) {
+                stack.addEnchantment(GSEnchantment.SOUL_BOUND, 1);
+            } else {
+                stack.addEnchantment(Enchantments.MENDING, 1);
+            }
+        }
+        return stack;
+    }
 
     private int ticks = 0;
 
