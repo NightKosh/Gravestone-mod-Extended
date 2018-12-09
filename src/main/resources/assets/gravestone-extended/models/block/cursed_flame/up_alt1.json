@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone-extended:block/cursed_flame/up_alt",
+    "textures": {
+        "particle": "gravestone-extended:blocks/cursed_flame/layer_1",
+        "fire": "gravestone-extended:blocks/cursed_flame/layer_1"
+    }
+}

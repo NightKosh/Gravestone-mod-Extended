@@ -12,6 +12,7 @@ public class GameRuleHelper {
 
     public static final String RULE_MOB_GRIEFING = "mobGriefing";
     public static final String RULE_KEEP_INVENTORY = "keepInventory";
+    public static final String RULE_DO_FIRE_TICK = "doFireTick";
 
     public static boolean checkRule(World world, String rule) {
         return world.getGameRules().getBoolean(rule);
@@ -23,5 +24,9 @@ public class GameRuleHelper {
 
     public static boolean checkKeepInventory(World world) {
         return checkRule(world, RULE_KEEP_INVENTORY);
+    }
+
+    public static boolean checkFireTick(World world) {
+        return checkRule(world, RULE_DO_FIRE_TICK);
     }
 }

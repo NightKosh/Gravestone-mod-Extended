@@ -90,6 +90,9 @@ public class GSModels {
             //frozen lava
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.FROZEN_LAVA), 0, ResourcesModels.FROZEN_LAVA);
 
+            //cursed flame
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CURSED_FLAME), 0, ResourcesModels.CURSED_FLAME);
+
             //portal
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.CATACOMBS_PORTAL), 0, ResourcesModels.CATACOMBS_PORTAL);
 

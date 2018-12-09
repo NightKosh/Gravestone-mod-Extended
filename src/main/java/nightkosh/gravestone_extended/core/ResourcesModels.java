@@ -126,4 +126,6 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation CATACOMBS_PORTAL = new ModelResourceLocation(ModInfo.ID + ":block/catacombs_portal", "inventory");
 
     public static final ModelResourceLocation FROZEN_LAVA = new ModelResourceLocation(ModInfo.ID + ":block/frozen_lava", "inventory");
+
+    public static final ModelResourceLocation CURSED_FLAME = new ModelResourceLocation(ModInfo.ID + ":block/cursed_flame", "inventory");
 }

@@ -83,6 +83,9 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
     public static final Block FROZEN_LAVA = new BlockFrozenLava();
     public static final ItemBlock FROZEN_LAVA_IB = new IBFrozenLava(FROZEN_LAVA);
 
+    public static final Block CURSED_FLAME = new BlockCursedFlame();
+    public static final ItemBlock CURSED_FLAME_IB = new IBCursedFlame(CURSED_FLAME);
+
     public static final BlockFluidToxicWater TOXIC_WATER = new BlockFluidToxicWater();
 
     @Mod.EventBusSubscriber(modid = ModInfo.ID)
@@ -93,7 +96,7 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
             final IForgeRegistry<Block> registry = event.getRegistry();
             registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP, WITHERED_GLASS, PILE_OF_BONES, WITHERED_GLASS_PANE,
                     BONE_BLOCK, BONE_SLAB, BONE_STAIRS, HAUNTED_CHEST, CANDLE, SKULL_CANDLE_SKELETON, SKULL_CANDLE_ZOMBIE, SKULL_CANDLE_WITHER,
-                    ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, FROZEN_LAVA);
+                    ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, FROZEN_LAVA, CURSED_FLAME);
         }
 
         @SubscribeEvent
@@ -102,7 +105,7 @@ public class GSBlock extends nightkosh.gravestone.core.GSBlock {
             registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB, WITHERED_GLASS_IB, WITHERED_GLASS_PANE_IB,
                     PILE_OF_BONES_IB, BONE_BLOCK_IB, BONE_SLAB_IB, BONE_STAIRS_IB, HAUNTED_CHEST_IB, CANDLE_IB,
                     SKULL_CANDLE_SKELETON_IB, SKULL_CANDLE_ZOMBIE_IB, SKULL_CANDLE_WITHER_IB,
-                    ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB);
+                    ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB, CURSED_FLAME_IB);
         }
     }
 }

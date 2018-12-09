@@ -1,0 +1,50 @@
+{
+    "multipart": [
+        {   "when": {"north": false, "east": false, "south": false, "west": false, "up": false},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/floor0" },
+                { "model": "gravestone-extended:cursed_flame/floor1" }
+            ]
+        },
+        {   "when": {"OR": [{"north": true}, {"north": false, "east": false, "south": false, "west": false, "up": false}]},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/side0" },
+                { "model": "gravestone-extended:cursed_flame/side1" },
+                { "model": "gravestone-extended:cursed_flame/side_alt0" },
+                { "model": "gravestone-extended:cursed_flame/side_alt1" }
+            ]
+        },
+        {   "when": {"OR": [{"east": true}, {"north": false, "east": false, "south": false, "west": false, "up": false}]},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/side0", "y": 90 },
+                { "model": "gravestone-extended:cursed_flame/side1", "y": 90 },
+                { "model": "gravestone-extended:cursed_flame/side_alt0", "y": 90 },
+                { "model": "gravestone-extended:cursed_flame/side_alt1", "y": 90 }
+            ]
+        },
+        {   "when": {"OR": [{"south": true}, {"north": false, "east": false, "south": false, "west": false, "up": false}]},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/side0", "y": 180 },
+                { "model": "gravestone-extended:cursed_flame/side1", "y": 180 },
+                { "model": "gravestone-extended:cursed_flame/side_alt0", "y": 180 },
+                { "model": "gravestone-extended:cursed_flame/side_alt1", "y": 180 }
+            ]
+        },
+        {   "when": {"OR": [{"west": true}, {"north": false, "east": false, "south": false, "west": false, "up": false}]},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/side0", "y": 270 },
+                { "model": "gravestone-extended:cursed_flame/side1", "y": 270 },
+                { "model": "gravestone-extended:cursed_flame/side_alt0", "y": 270 },
+                { "model": "gravestone-extended:cursed_flame/side_alt1", "y": 270 }
+            ]
+        },
+        {   "when": {"up": true},
+            "apply": [
+                { "model": "gravestone-extended:cursed_flame/up0" },
+                { "model": "gravestone-extended:cursed_flame/up1" },
+                { "model": "gravestone-extended:cursed_flame/up_alt0" },
+                { "model": "gravestone-extended:cursed_flame/up_alt1" }
+            ]
+        }
+    ]
+}
