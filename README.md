@@ -24,8 +24,8 @@ For more information visit [official site](http://gravestone.nightkosh.com/) or 
 
 1. [Sophisticated wolves API](https://github.com/NightKosh/Sophisticated-wolves-API) (will be loaded as git submodule)
 2. ~~[Thaumcraft API](https://github.com/Azanor/thaumcraft-api) (will be loaded as git submodule)~~
-4. Download mod's API
-   * Download [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+Get started
 1. Clone mod repository 
 2. [Download forge](http://files.minecraftforge.net/) and copy "gradlew.bat", "gradlew" files and "gradle" directory to mod folder
 3. Download required mods and place them to the "external_libs" folder (look to the "build.gradle" to "dependencies" section for the mods versions):
