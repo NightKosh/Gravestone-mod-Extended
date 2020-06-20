@@ -25,10 +25,23 @@ For more information visit [official site](http://gravestone.nightkosh.com/) or 
 1. [Sophisticated wolves API](https://github.com/NightKosh/Sophisticated-wolves-API) (will be loaded as git submodule)
 2. ~~[Thaumcraft API](https://github.com/Azanor/thaumcraft-api) (will be loaded as git submodule)~~
 
-## Get started
-1. [Set up forge](http://www.minecraftforge.net/wiki/Installation/Source)
-2. Clone mod repository into the Forge folder
-3. Download required mods and place them to the "external_libs" folder (look to the "build.gradle" to "dependencies" section for the mods versions)
 4. Download mod's API
    * Download [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-   * Download other API's manually and place them into "src/main/java/" folder
+   
+1. Clone mod repository 
+2. [Download forge](http://files.minecraftforge.net/) and copy "gradlew.bat", "gradlew" files and "gradle" directory to mod folder
+3. Download required mods and place them to the "external_libs" folder (look to the "build.gradle" to "dependencies" section for the mods versions):
+   * [Gravestone mod - Graves](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod-graves/files/2634989)
+   * [Forestry](https://www.curseforge.com/minecraft/mc-mods/forestry/files/2511367  )
+   * [Advanced Fishing](https://www.curseforge.com/minecraft/mc-mods/advanced-fishing/files/2628531)
+4. Download mod's API
+   * Download [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+      * Run next commands from mod folder:
+      ```
+        git submodule init
+        git submodule update
+      ```
+   * ~~Download other API's manually and place them into "src/main/java/" folder~~
+5. Run "./gradlew setupDecompWorkspace idea" from mod folder
+6. Import mod to your ide as "new Gradle project"
+   
