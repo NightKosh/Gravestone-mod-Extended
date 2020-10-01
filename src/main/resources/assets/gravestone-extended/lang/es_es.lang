@@ -6,11 +6,11 @@ itemGroup.tabGSOther=Items de Gravestone mod
 
 # Blocks
 ## Memorials
-block.memorial.cross.name=Memorial Cruz
+block.memorial.cross.name=Cruz Memorial
 block.memorial.obelisk.name=Obelisco
 block.memorial.steve_statue.name=Estatua de Steve
 block.memorial.villager_statue.name=Estatua de aldeano
-block.memorial.angel_statue.name=Estatua de angel
+block.memorial.angel_statue.name=Estatua de ángel
 block.memorial.dog_statue.name=Estatua de perro
 block.memorial.cat_statue.name=Estatua de gato
 block.memorial.creeper_statue.name=Estatua de creeper
@@ -25,14 +25,14 @@ block.execution.burning_stake.name=Hoguera
 ## Traps
 block.trap.night.name=Piedra nocturna
 block.trap.thunder.name=Piedra del trueno
-block.trap.curse=¡La oscuridad de aproxima!
+block.trap.curse=¡La oscuridad se aproxima!
 
 ## Withered Glass
 tile.withered_glass.name=Vidrio marchito
 tile.withered_glass_pane.name=Panel de vidrio marchito
 
 ## Spawners
-block.spawner.wither.name=Gendrador de Wither
+block.spawner.wither.name=Generador de Wither
 block.spawner.skeleton.name=Generador de Esqueleto
 block.spawner.zombie.name=Generador de Zombi
 block.spawner.spider.name=Generador de Araña
@@ -40,8 +40,8 @@ block.spawner.spider.name=Generador de Araña
 ## Bone Blocks
 block.bone_block.default.name=Bloque de hueso
 block.bone_block.skull.name=Bloque de hueso con cráneo
-block.bone_block.crawler.name=Bloque de hueso con craneo del arranca cráneos
-block.bone_block.crawler_skull.name=Bloque de hueso con craneo del arranca cráneos
+block.bone_block.crawler.name=Bloque de hueso con cráneo del arranca cráneos
+block.bone_block.crawler_skull.name=Bloque de hueso con cráneo del arranca cráneos
 tile.bone_slab.name=Losa de hueso
 tile.bone_stairs.name=Escaleras de hueso
 
@@ -70,43 +70,43 @@ tile.catacombs_portal.name=Portal de catacumbas
 
 ##Frozen Lava
 ## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
+tile.frozen_lava.name=Lava congelada
 
 # Enchantments
 enchantment.shadow_of_death=Sombra de la muerte
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos
+enchantment.gravestone-extended.gs_shadow_of_death.desc=Inflinge 2.5 extra de daño por nivel a aquellos mobs excepto arañas y no muertos
 enchantment.poisoned_blade=Cuchilla envenenada
 enchantment.gravestone-extended.gs_poisoned_blade.desc=Aplica veneno al objetivo durante 10 segundos por nivel
 enchantment.withered_blade=Cuchilla marchita
 enchantment.gravestone-extended.gs_withered_blade.desc=Aplica marchitar al objetivo durante 5 segundos por nivel
 enchantment.vampiric_touch=Toque vampírico
-enchantment.gravestone-extended.gs_vampiric_touch.desc=Convierte le 20 por ciento del daño echo por este arma en salud
+enchantment.gravestone-extended.gs_vampiric_touch.desc=Convierte ee 20 por ciento del daño hecho por este arma en salud
 enchantment.necrotic_corrosion=Corrosión necrótica
 enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 por ciento (por nivel) del daño hecho por este arma ignora la armadura
 enchantment.pain_mirror=Espejo de dolor
 enchantment.gravestone-extended.gs_pain_mirror.desc=Refleja todo el daño bloqueado con un 10 por ciento de probabilidad por nivel 
 enchantment.bone_rain=Lluvia de hueso
-enchantment.gravestone-extended.gs_bone_rain.desc=Usa harina de hueso  en un bloque
+enchantment.gravestone-extended.gs_bone_rain.desc=Usa harina de hueso en un bloque
 enchantment.hellish_angling=Pesca infernal con caña
 enchantment.gravestone-extended.gs_hellish_angling.desc=Permite pescar en la lava
 enchantment.bloody_replication=Replicación sangrienta
-enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
+enchantment.gravestone-extended.gs_bloody_replication.desc=Intercambia 0.25 - 1.5 puntos de salud (dependiendo del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
 ## TODO !!!!!!!!!!
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
+enchantment.frozen_nether=Nether Congelado
+enchantment.gravestone-extended.frozen_nether.desc=Convierte la lava bajo el jugador en lava congelada
 enchantment.web_crawler=Web Crawler
-enchantment.gravestone-extended.web_crawler.desc=Allows to move normally in the web.
+enchantment.gravestone-extended.web_crawler.desc=Permite moverse normalmente por la telaraña
 enchantment.soul_bound=Soul Bound
-enchantment.gravestone-extended.soul_bound.desc=Keeps item in your inventory on death.
+enchantment.gravestone-extended.soul_bound.desc=Mantiene el objeto en el inventario tras morirse
 
 ## Enchantments - Curses
 enchantment.starvation_curse=Maldición de inanición
 enchantment.gravestone-extended.gs_starvation_curse.desc=Aplica hambre durante 10 segundos por item
 enchantment.awkward_curse=Maldición de torpeza
-enchantment.gravestone-extended.gs_awkward_curse.desc=Infingir daño a tí mismo en vez de al enemigo con un 10 por ciento de probabilidad
+enchantment.gravestone-extended.gs_awkward_curse.desc=Inflingir daño a tí mismo en vez de al enemigo con un 10 por ciento de probabilidad
 enchantment.fragility_curse=Maldición de fragilidad
 enchantment.gravestone-extended.gs_fragility_curse.desc=El item recibe daño adicional al usarse
-enchantment.broken_hook_curse=Maldición del anzuelo roto 
+enchantment.broken_hook_curse=Maldición del anzuelo roto
 enchantment.gravestone-extended.gs_broken_hook_curse.desc=Añade un 30 por ciento de probabilidad de perder tu pesca
 
 # Potions
@@ -243,14 +243,14 @@ item.gravestone.mummy_chestplate.name=Camiseta de momia
 item.gravestone.mummy_leggings.name=Pantalones de momia
 item.gravestone.mummy_boots.name=Botas de momia
 ## TODO !!!!!!!!!!!!!!!!!
-item.gravestone.bone_helmet.name=Bone Helmet
-item.gravestone.bone_chestplate.name=Bone Chestplate
-item.gravestone.bone_leggings.name=Bone Leggings
-item.gravestone.bone_boots.name=Bone Boots
+item.gravestone.bone_helmet.name=Casco de hueso
+item.gravestone.bone_chestplate.name=Peto de hueso
+item.gravestone.bone_leggings.name=Pantalones de hueso
+item.gravestone.bone_boots.name=Botas de hueso
 
 ## Other Items
 item.gravestone.toxic_slime.name=Slime tóxico
-item.gravestone.raven_feather.name=Raven Feather
+item.gravestone.raven_feather.name=Pluma de cuervo
 item.gravestone.raven_claws.name=Garras de cuervo
 item.gravestone.ooze.name=Pringue
 item.gravestone.piece_of_mummy_cloth.name=Trozo de tela de momia
@@ -262,8 +262,8 @@ item.gravestone.slime_chunk.name=Pedazo de slime
 item.gravestone.imp_skull.name=Cráneo de Imp
 item.gravestone.ender_skull.name=Cráneo de Ender
 ## TODO !!!!!!!!!!!!!!!
-item.gravestone.cemetery_key.player=Cemetery Key
-item.gravestone.cemetery_key.server=Server Cemetery Key
+item.gravestone.cemetery_key.player=Llave del cementerio
+item.gravestone.cemetery_key.server=Llave del cementerio del servidor
 item.gravestone.frozen_mirror.name=Espejo congelado
 
 
@@ -278,7 +278,7 @@ item.corpse.zombie=Cadáver Zombi
 item.corpse.zombie_villager=Cadáver Aldeano Zombi
 item.corpse.skeleton=Cadáver Esqueleto
 item.corpse.witch=Cadáver Bruja
-item.corpse.entity_name=Name
+item.corpse.entity_name=Nombre
 item.corpse.villager_type=Profesión
 item.corpse.villager_type.farmer=Granjero
 item.corpse.villager_type.librarian=Biblotecario
@@ -287,12 +287,12 @@ item.corpse.villager_type.smith=Herrero
 item.corpse.villager_type.butcher=Carnicero
 item.corpse.villager_type.undertaker=Enterrador
 item.corpse.villager_type.brewer=Licorero
-item.corpse.villager_type.thaumaturge=Taumaturgo
+item.corpse.villager_type.thaumaturge=Traumaturgo
 item.corpse.villager_type.beekeeper=Apicultor
 item.corpse.villager_type.lumberjack=Leñador
 item.corpse.villager_type.unknown=Desconocido
-item.corpse.villager_career=Career
-item.corpse.villager_career.unknown=Unknown
+item.corpse.villager_career=Profesión
+item.corpse.villager_career.unknown=Desconocido
 item.corpse.horse_type=Tipo de caballo
 item.corpse.horse_type.horse=Caballo
 item.corpse.horse_type.donkey=Burro
@@ -335,8 +335,8 @@ mobtype.title=Tipo de mob
 mobtype.zombie=Zombi
 mobtype.skeleton=Esqueleto
 mobtype.ghost=Fantasma
-mobtype.husk=Husk Zombie
-mobtype.stray=Stray Skeleton
+mobtype.husk=Zombie momificado
+mobtype.stray=Esqueleto errante
 mobtype.wither=Esqueleto Wither
 mobtype.pigman=Hombrecerdo zombi
 
@@ -346,7 +346,7 @@ item.backpack.undertaker.t2=Mochila tejida del enterrador
 
 
 # GUI
-gui.edit_grave.title=Ponga nombre a la lapida
+gui.edit_grave.title=Ponga nombre a la lápida
 gui.edit_grave.close=Hecho
 gui.edit_grave.randomText=Poner nombre aleatorio
 gui.altar.resurrect=Resucitar
@@ -369,11 +369,11 @@ entity.GSSkeletonDog.name=Perro Esqueleto
 entity.GSZombieCat.name=Gato Zombi
 entity.GSSkeletonCat.name=Gato Esqueleto
 entity.GSSkullCrawler.name=Arranca cráneos
-entity.GSStraySkullCrawler.name=Arranca Cráneos Sray
+entity.GSStraySkullCrawler.name=Arranca Cráneos Errante
 entity.GSWitherSkullCrawler.name=Arranca Cráneos Wither
 entity.GSZombieSkullCrawler.name=Arranca Cráneos Zombi
-entity.GSHuskSkullCrawler.name=Arranca Cráneos Husk
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
+entity.GSHuskSkullCrawler.name=Arranca Cráneos Momificado
+entity.GSPigmanSkullCrawler.name=Arranca Cráneos Hombre Cerdo
 entity.GSRaven.name=Cuervo
 entity.GSSkeletonRaider.name=Asaltante Esqueleto
 entity.GSZombieRaider.name=Asaltante Zombi
@@ -396,13 +396,13 @@ fluid.gs_toxic_water=Agua tóxica
 
 # Console messages
 ##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
+message.cemetery_key.activated=Esta llave ha sido activada por
+message.cemetery_key.cant_use=¡No puedes usar esta llave!
+message.cemetery_key.bounded=¡Tu alma está atada a este cementerio!
+message.cemetery_key.bounded.pet=¡El alma de tu mascota está atada a este cementerio!
+message.cemetery_key.bounded_server=¡Las almas de todos los jugadores están atadas a este cementerio!
+message.cemetery_key.bounded_server.pet=¡Las almas de todas las mascotas domesticadas están atadas a este cementerio! 
 
 ## Console commands
-commands.direction_error=Error de dirección!
-commands.generate.unknown_structure=Estructura desconocida!
+commands.direction_error=¡Error de dirección!
+commands.generate.unknown_structure=¡Estructura desconocida!
