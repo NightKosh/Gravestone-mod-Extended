@@ -12,8 +12,6 @@ import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
 import nightkosh.gravestone_extended.entity.monster.*;
-import nightkosh.gravestone_extended.entity.monster.bat.EntityVampireBat;
-import nightkosh.gravestone_extended.entity.monster.bat.EntityWitheredBat;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
@@ -77,8 +75,6 @@ public class GSEntity {
     public static final String MUMMY_NAME = "GSMummy";
     public static final String DROWNED_NAME = "GSDrowned";
     public static final String PHANTOM_DIVER_NAME = "GSPhantomDiver";
-    public static final String VAMPIRE_BAT_NAME = "GSVampireBat";
-    public static final String WITHERED_BAT_NAME = "GSWitheredBat";
     public static final String BARGHEST_NAME = "GSBarghest";
     public static final String SWAMP_THING_NAME = "GSSwampThing";
     public static final String RAVEN_NAME = "GSRaven";
@@ -121,8 +117,6 @@ public class GSEntity {
     public static final ResourceLocation MUMMY_ID = new ResourceLocation(ModInfo.ID + ":" + MUMMY_NAME);
     public static final ResourceLocation DROWNED_ID = new ResourceLocation(ModInfo.ID + ":" + DROWNED_NAME);
     public static final ResourceLocation PHANTOM_DIVER_ID = new ResourceLocation(ModInfo.ID + ":" + PHANTOM_DIVER_NAME);
-    public static final ResourceLocation VAMPIRE_BAT_ID = new ResourceLocation(ModInfo.ID + ":" + VAMPIRE_BAT_NAME);
-    public static final ResourceLocation WITHERED_BAT_ID = new ResourceLocation(ModInfo.ID + ":" + WITHERED_BAT_NAME);
     public static final ResourceLocation BARGHEST_ID = new ResourceLocation(ModInfo.ID + ":" + BARGHEST_NAME);
     public static final ResourceLocation SWAMP_THING_ID = new ResourceLocation(ModInfo.ID + ":" + SWAMP_THING_NAME);
     public static final ResourceLocation DAMNED_WARRIOR_ID = new ResourceLocation(ModInfo.ID + ":" + DAMNED_WARRIOR_NAME);
@@ -214,16 +208,6 @@ public class GSEntity {
         registerModEntity(PHANTOM_DIVER_ID, EntityPhantomDiver.class, PHANTOM_DIVER_NAME);
         if (ExtendedConfig.spawnPhantomDiver) {
             addSpawnWater(BiomeDictionary.Type.OCEAN, EntityPhantomDiver.class, ExtendedConfig.spawnWeightPhantomDiver, 1, 1);
-        }
-
-        registerModEntity(VAMPIRE_BAT_ID, EntityVampireBat.class, VAMPIRE_BAT_NAME);
-        if (ExtendedConfig.spawnVampireBat) {
-            addSpawn(OVERWORLD_BIOMES, EntityVampireBat.class, ExtendedConfig.spawnWeightVampireBat, 1, 5);
-        }
-
-        registerModEntity(WITHERED_BAT_ID, EntityWitheredBat.class, WITHERED_BAT_NAME);
-        if (ExtendedConfig.spawnWitheredBat) {
-            addSpawn(BiomeDictionary.Type.NETHER, EntityWitheredBat.class, ExtendedConfig.spawnWeightWitheredBat, 1, 3);
         }
 
         registerModEntity(BARGHEST_ID, EntityBarghest.class, BARGHEST_NAME);

@@ -58,8 +58,6 @@ public class ItemGSMonsterPlacer extends ItemMonsterPlacer {
     public static final int DROWNED_BACKGROUND_COLOR = 0x50999d;
     public static final int DROWNED_FOREGROUND_COLOR = 0x15575d;
     public static final int PHANTOM_DIVER_FOREGROUND_COLOR = 0x162b2c;
-    public static final int VAMPIRE_BAT_BACKGROUND_COLOR = 4996656;
-    public static final int VAMPIRE_BAT_FOREGROUND_COLOR = 986895;
     public static final int BARGHEST_FOREGROUND_COLOR = 0x131212;
     public static final int SWAMP_THING_BACKGROUND_COLOR = 0x365a25;
     public static final int SWAMP_THING_FOREGROUND_COLOR = 0x719610;
