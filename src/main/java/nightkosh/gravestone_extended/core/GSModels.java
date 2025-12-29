@@ -111,8 +111,6 @@ public class GSModels {
             ModelLoader.setCustomModelResourceLocation(GSItem.RAVEN_FEATHER, 0, ResourcesModels.RAVEN_FEATHER);
             ModelLoader.setCustomModelResourceLocation(GSItem.RAVEN_CLAWS, 0, ResourcesModels.RAVEN_CLAWS);
 
-            ModelLoader.setCustomModelResourceLocation(GSItem.BAT_WING, 0, ResourcesModels.BAT_WING);
-
             ModelLoader.setCustomModelResourceLocation(GSItem.OOZE, 0, ResourcesModels.OOZE);
 
             ModelLoader.setCustomModelResourceLocation(GSItem.PIECE_OF_MUMMY_CLOTH, 0, ResourcesModels.PIECE_OF_MUMMY_CLOTH);

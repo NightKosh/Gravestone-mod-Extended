@@ -74,8 +74,6 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation RAVEN_FEATHER = new ModelResourceLocation(GSItem.RAVEN_FEATHER.getRegistryName(), "inventory");
     public static final ModelResourceLocation RAVEN_CLAWS = new ModelResourceLocation(GSItem.RAVEN_CLAWS.getRegistryName(), "inventory");
 
-    public static final ModelResourceLocation BAT_WING = new ModelResourceLocation(GSItem.BAT_WING.getRegistryName(), "inventory");
-
     public static final ModelResourceLocation OOZE = new ModelResourceLocation(GSItem.OOZE.getRegistryName(), "inventory");
 
     public static final ModelResourceLocation PIECE_OF_MUMMY_CLOTH = new ModelResourceLocation(GSItem.PIECE_OF_MUMMY_CLOTH.getRegistryName(), "inventory");
