@@ -16,7 +16,6 @@ import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
 import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonCat;
-import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonDog;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
@@ -58,7 +57,6 @@ public class GSEntity {
     public static final String SKELETON_NAME = "GSSkeleton";
     public static final String ZOMBIE_DOG_NAME = "GSZombieDog";
     public static final String ZOMBIE_CAT_NAME = "GSZombieCat";
-    public static final String SKELETON_DOG_NAME = "GSSkeletonDog";
     public static final String SKELETON_CAT_NAME = "GSSkeletonCat";
     public static final String SKULL_CRAWLER_NAME = "GSSkullCrawler";
     public static final String STRAY_SKULL_CRAWLER_NAME = "GSStraySkullCrawler";
@@ -139,12 +137,6 @@ public class GSEntity {
         registerModEntity(ZOMBIE_CAT_ID, EntityZombieCat.class, ZOMBIE_CAT_NAME);
         if (ExtendedConfig.spawnZombieCats) {
             addSpawn(BiomeDictionary.Type.JUNGLE, EntityZombieCat.class, ExtendedConfig.spawnWeightZombieCats, 1, 1);
-        }
-
-        // skeleton dog
-        registerModEntity(SKELETON_DOG_ID, EntitySkeletonDog.class, SKELETON_DOG_NAME);
-        if (ExtendedConfig.spawnSkeletonDogs) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntitySkeletonDog.class, ExtendedConfig.spawnWeightSkeletonDogs, 1, 1);
         }
 
         // skeleton cat

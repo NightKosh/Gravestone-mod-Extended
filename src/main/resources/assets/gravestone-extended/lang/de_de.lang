@@ -377,7 +377,6 @@ gui.chisel_crafting.recipe=Required items
 
 # Entity
 entity.GSZombieDog.name=Zombiehund
-entity.GSSkeletonDog.name=Skeletthund
 entity.GSZombieCat.name=Zombiekatze
 entity.GSSkeletonCat.name=Skelettkatze
 entity.GSSkullCrawler.name=Skelettkriecher

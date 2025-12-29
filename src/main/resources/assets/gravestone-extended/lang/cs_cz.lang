@@ -391,7 +391,6 @@ gui.chisel_crafting.recipe=Required items
 
 # Entity
 entity.GSZombieDog.name=Zombie pes
-entity.GSSkeletonDog.name=Kostlivý pes
 entity.GSZombieCat.name=Zombie kočka
 entity.GSSkeletonCat.name=Kostlivá kočka
 entity.GSSkullCrawler.name=Lebkokrab
