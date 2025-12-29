@@ -397,7 +397,6 @@ entity.GSPhantomDiver.name=Фантомний дайвер
 entity.GSVampireBat.name=Летюча миша-вампір
 ##TODO !!!!!!!!!!
 entity.GSWitheredBat.name=Withered Bat
-entity.GSBarghest.name=Баргест
 entity.GSSwampThing.name=Болотна тварина
 
 # Fluids

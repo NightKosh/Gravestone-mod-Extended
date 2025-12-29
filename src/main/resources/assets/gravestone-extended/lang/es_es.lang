@@ -386,7 +386,6 @@ entity.GSDrowned.name=Ahogado
 entity.GSPhantomDiver.name=Buceador fantasma
 entity.GSVampireBat.name=Murciélago vampiro
 entity.GSWitheredBat.name=Murciélago marchito
-entity.GSBarghest.name=Barghest
 entity.GSSwampThing.name=Cosa del pantano
 
 # Fluids

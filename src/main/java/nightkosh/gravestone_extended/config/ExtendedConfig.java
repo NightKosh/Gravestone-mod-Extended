@@ -218,9 +218,6 @@ public class ExtendedConfig {
     public static boolean spawnMummy;
     public static boolean spawnDrowned;
     public static boolean spawnPhantomDiver;
-    public static boolean spawnVampireBat;
-    public static boolean spawnWitheredBat;
-    public static boolean spawnBarghest;
     public static boolean spawnSwampThing;
 
     public static int spawnWeightZombieDogs;
@@ -235,9 +232,6 @@ public class ExtendedConfig {
     public static int spawnWeightMummy;
     public static int spawnWeightDrowned;
     public static int spawnWeightPhantomDiver;
-    public static int spawnWeightVampireBat;
-    public static int spawnWeightWitheredBat;
-    public static int spawnWeightBarghest;
     public static int spawnWeightSwampThing;
 
     public static boolean spawnSkullCrawlersAtMobsDeath;
@@ -262,9 +256,6 @@ public class ExtendedConfig {
         spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean();
         spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean();
         spawnPhantomDiver = config.get(CATEGORY_MOBS, "SpawnPhantomDiverInTheWorld", true).getBoolean();
-        spawnVampireBat = config.get(CATEGORY_MOBS, "SpawnVampireBatInTheWorld", true).getBoolean();
-        spawnWitheredBat = config.get(CATEGORY_MOBS, "SpawnWitheredBatInTheWorld", true).getBoolean();
-        spawnBarghest = config.get(CATEGORY_MOBS, "SpawnBarghestInTheWorld", true).getBoolean();
         spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean();
 
         spawnWeightZombieDogs = config.get(CATEGORY_MOBS, "SpawnWeightZombieDogs", 50).getInt();
@@ -279,9 +270,6 @@ public class ExtendedConfig {
         spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
         spawnWeightDrowned = config.get(CATEGORY_MOBS, "SpawnWeightDrowned", 15).getInt();
         spawnWeightPhantomDiver = config.get(CATEGORY_MOBS, "SpawnWeightPhantomDiver", 5).getInt();
-        spawnWeightVampireBat = config.get(CATEGORY_MOBS, "SpawnWeightVampireBat", 30).getInt();
-        spawnWeightWitheredBat = config.get(CATEGORY_MOBS, "SpawnWeightWitheredBat", 40).getInt();
-        spawnWeightBarghest = config.get(CATEGORY_MOBS, "SpawnWeightBarghest", 5).getInt();
         spawnWeightSwampThing = config.get(CATEGORY_MOBS, "SpawnWeightSwampThing", 50).getInt();
 
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,

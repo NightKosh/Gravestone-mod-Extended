@@ -399,7 +399,6 @@ entity.GSDrowned.name=Ertrunkener
 entity.GSPhantomDiver.name=Phantomfahrer
 entity.GSVampireBat.name=Vampirfledermaus
 entity.GSWitheredBat.name=Verwelkte Fledermaus
-entity.GSBarghest.name=Barghest
 entity.GSSwampThing.name=Sumpfding
 
 # Fluids

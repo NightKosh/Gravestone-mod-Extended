@@ -75,7 +75,6 @@ public class GSEntity {
     public static final String MUMMY_NAME = "GSMummy";
     public static final String DROWNED_NAME = "GSDrowned";
     public static final String PHANTOM_DIVER_NAME = "GSPhantomDiver";
-    public static final String BARGHEST_NAME = "GSBarghest";
     public static final String SWAMP_THING_NAME = "GSSwampThing";
     public static final String RAVEN_NAME = "GSRaven";
     public static final String DAMNED_WARRIOR_NAME = "GSDamnedWarrior";
@@ -117,7 +116,6 @@ public class GSEntity {
     public static final ResourceLocation MUMMY_ID = new ResourceLocation(ModInfo.ID + ":" + MUMMY_NAME);
     public static final ResourceLocation DROWNED_ID = new ResourceLocation(ModInfo.ID + ":" + DROWNED_NAME);
     public static final ResourceLocation PHANTOM_DIVER_ID = new ResourceLocation(ModInfo.ID + ":" + PHANTOM_DIVER_NAME);
-    public static final ResourceLocation BARGHEST_ID = new ResourceLocation(ModInfo.ID + ":" + BARGHEST_NAME);
     public static final ResourceLocation SWAMP_THING_ID = new ResourceLocation(ModInfo.ID + ":" + SWAMP_THING_NAME);
     public static final ResourceLocation DAMNED_WARRIOR_ID = new ResourceLocation(ModInfo.ID + ":" + DAMNED_WARRIOR_NAME);
     public static final ResourceLocation RAVEN_ID = new ResourceLocation(ModInfo.ID + ":" + RAVEN_NAME);
@@ -208,11 +206,6 @@ public class GSEntity {
         registerModEntity(PHANTOM_DIVER_ID, EntityPhantomDiver.class, PHANTOM_DIVER_NAME);
         if (ExtendedConfig.spawnPhantomDiver) {
             addSpawnWater(BiomeDictionary.Type.OCEAN, EntityPhantomDiver.class, ExtendedConfig.spawnWeightPhantomDiver, 1, 1);
-        }
-
-        registerModEntity(BARGHEST_ID, EntityBarghest.class, BARGHEST_NAME);
-        if (ExtendedConfig.spawnBarghest) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntityBarghest.class, ExtendedConfig.spawnWeightBarghest, 1, 1);
         }
 
         registerModEntity(SWAMP_THING_ID, EntitySwampThing.class, SWAMP_THING_NAME);

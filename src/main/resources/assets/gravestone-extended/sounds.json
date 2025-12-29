@@ -79,22 +79,6 @@
             "stream" : true
         }]
     },
-    "entity.barghest.growl" : {
-        "category": "entity",
-        "subtitle": "entity.barghest.growl",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/barghest/growl",
-            "stream" : true
-        }]
-    },
-    "entity.swamp_thing.growl" : {
-        "category": "entity",
-        "subtitle": "entity.swamp_thing.growl",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/swamp_thing/growl",
-            "stream" : true
-        }]
-    },
     "entity.raven.ambient" : {
         "category": "entity",
         "subtitle": "entity.raven.ambient",
