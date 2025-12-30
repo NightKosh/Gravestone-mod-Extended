@@ -209,7 +209,6 @@ public class ExtendedConfig {
     // mobs
     public static boolean spawnZombieDogs;
     public static boolean spawnZombieCats;
-    public static boolean spawnSkeletonCats;
     public static boolean spawnUndeadHorses;
     public static boolean spawnSkeletonRaiders;
     public static boolean spawnZombieRaiders;
@@ -221,7 +220,6 @@ public class ExtendedConfig {
 
     public static int spawnWeightZombieDogs;
     public static int spawnWeightZombieCats;
-    public static int spawnWeightSkeletonCats;
     public static int spawnWeightUndeadHorses;
     public static int spawnWeightSkeletonRaiders;
     public static int spawnWeightZombieRaiders;
@@ -245,7 +243,6 @@ public class ExtendedConfig {
         //mob spawn
         spawnZombieDogs = config.get(CATEGORY_MOBS, "SpawnZombieDogsInTheWorld", true).getBoolean();
         spawnZombieCats = config.get(CATEGORY_MOBS, "SpawnZombieCatsInTheWorld", true).getBoolean();
-        spawnSkeletonCats = config.get(CATEGORY_MOBS, "SpawnSkeletonCatsInTheWorld", true).getBoolean();
         spawnUndeadHorses = config.get(CATEGORY_MOBS, "SpawnUndeadHorses", true).getBoolean();
         spawnSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnSkeletonRaidersInTheWorld", true).getBoolean();
         spawnZombieRaiders = config.get(CATEGORY_MOBS, "SpawnZombieRaidersInTheWorld", true).getBoolean();
@@ -257,7 +254,6 @@ public class ExtendedConfig {
 
         spawnWeightZombieDogs = config.get(CATEGORY_MOBS, "SpawnWeightZombieDogs", 50).getInt();
         spawnWeightZombieCats = config.get(CATEGORY_MOBS, "SpawnWeightZombieCats", 50).getInt();
-        spawnWeightSkeletonCats = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonCats", 50).getInt();
         spawnWeightUndeadHorses = config.get(CATEGORY_MOBS, "SpawnWeightUndeadHorses", 5).getInt();
         spawnWeightSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonRaiders", 2).getInt();
         spawnWeightZombieRaiders = config.get(CATEGORY_MOBS, "SpawnWeightZombieRaiders", 2).getInt();

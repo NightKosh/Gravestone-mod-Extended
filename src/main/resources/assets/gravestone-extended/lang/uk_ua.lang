@@ -375,7 +375,6 @@ gui.chisel_crafting.recipe=Required items
 # Entity
 entity.GSZombieDog.name=Пес-зомбі
 entity.GSZombieCat.name=Кіт-зомбі
-entity.GSSkeletonCat.name=Кіт-скелет
 entity.GSSkullCrawler.name=Повзучий череп
 entity.GSStraySkullCrawler.name=Повзучий череп зимогора
 entity.GSWitherSkullCrawler.name=Повзучий череп висушувача

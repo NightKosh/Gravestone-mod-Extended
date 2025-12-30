@@ -35,7 +35,6 @@ import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler.SkullCrawlerType;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
-import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonCat;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
@@ -115,9 +114,6 @@ public class ClientProxy extends CommonProxy {
 
         // zombie cat
         RenderingRegistry.registerEntityRenderingHandler(EntityZombieCat.class, new RenderUndeadCat(renderManager, new ModelUndeadCat(), 0));
-
-        // zombie cat
-        RenderingRegistry.registerEntityRenderingHandler(EntitySkeletonCat.class, new RenderUndeadCat(renderManager, new ModelUndeadCat(), 0));
 
         // skull crawler
         RenderingRegistry.registerEntityRenderingHandler(EntitySkullCrawler.class, new RenderSkullCrawler(SkullCrawlerType.SKELETON, renderManager));

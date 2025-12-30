@@ -37,6 +37,8 @@ import java.util.Random;
  */
 public class EntityZombieCat extends EntityUndeadCat {
 
+    protected static final DataParameter<Integer> OCELOT_VARIANT = EntityDataManager.createKey(UndeadCat.class, DataSerializers.VARINT);
+
     private static final byte CAT_TYPES = 4;
 
     public EntityZombieCat(World world) {
