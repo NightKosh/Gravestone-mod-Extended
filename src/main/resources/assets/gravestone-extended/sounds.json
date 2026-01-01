@@ -51,34 +51,6 @@
             "stream" : true
         }]
     },
-    "entity.drowned.ambient" : {
-        "category": "entity",
-        "subtitle": "entity.drowned.ambient",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/drowned/ambient",
-            "stream" : true
-        }]
-    },
-    "entity.drowned.bubbles" : {
-        "category": "entity",
-        "subtitle": "entity.drowned.bubbles",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/drowned/bubbles",
-            "stream" : true
-        }]
-    },
-    "entity.drowned.step" : {
-        "category": "entity",
-        "subtitle": "entity.drowned.step",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/drowned/step_1",
-            "stream" : true
-        },
-        {
-            "name" : "gravestone-extended:entity/drowned/step_2",
-            "stream" : true
-        }]
-    },
     "entity.raven.ambient" : {
         "category": "entity",
         "subtitle": "entity.raven.ambient",

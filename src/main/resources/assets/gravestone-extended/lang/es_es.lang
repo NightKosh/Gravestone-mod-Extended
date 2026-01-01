@@ -380,9 +380,6 @@ entity.GSToxicSludge.name=Lodo tóxico
 entity.GSPossessedArmor.name=Armadura poseída
 entity.GSMummy.name=Momia
 entity.GSDrowned.name=Ahogado
-entity.GSPhantomDiver.name=Buceador fantasma
-entity.GSVampireBat.name=Murciélago vampiro
-entity.GSWitheredBat.name=Murciélago marchito
 entity.GSSwampThing.name=Cosa del pantano
 
 # Fluids

@@ -393,9 +393,6 @@ entity.GSToxicSludge.name=Giftiger Schlamm
 entity.GSPossessedArmor.name=Possessed Armor
 entity.GSMummy.name=Mumie
 entity.GSDrowned.name=Ertrunkener
-entity.GSPhantomDiver.name=Phantomfahrer
-entity.GSVampireBat.name=Vampirfledermaus
-entity.GSWitheredBat.name=Verwelkte Fledermaus
 entity.GSSwampThing.name=Sumpfding
 
 # Fluids

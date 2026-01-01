@@ -383,9 +383,6 @@ entity.GSToxicSludge.name=Lama Tóxica
 entity.GSPossessedArmor.name=Armadura Possuída
 entity.GSMummy.name=Múmia
 entity.GSDrowned.name=Afogado
-entity.GSPhantomDiver.name=Mergulhador Fantasma
-entity.GSVampireBat.name=Morcego Vampiro
-entity.GSWitheredBat.name=Morcego Wither
 entity.GSSwampThing.name=Coisa do Pântano
 
 # Fluids

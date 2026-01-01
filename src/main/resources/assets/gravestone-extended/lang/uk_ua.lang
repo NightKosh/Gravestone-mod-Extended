@@ -390,10 +390,6 @@ entity.GSToxicSludge.name=токсичний слимак
 entity.GSPossessedArmor.name=Одержимі обладунки
 entity.GSMummy.name=Мумія
 entity.GSDrowned.name=Потопельник
-entity.GSPhantomDiver.name=Фантомний дайвер
-entity.GSVampireBat.name=Летюча миша-вампір
-##TODO !!!!!!!!!!
-entity.GSWitheredBat.name=Withered Bat
 entity.GSSwampThing.name=Болотна тварина
 
 # Fluids
