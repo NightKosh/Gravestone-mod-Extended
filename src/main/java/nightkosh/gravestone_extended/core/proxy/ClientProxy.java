@@ -38,8 +38,6 @@ import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
 import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 import nightkosh.gravestone_extended.entity.monster.water.EntityDrowned;
-import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
-import nightkosh.gravestone_extended.entity.monster.water.EntitySwampThing;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.gui.GSGraveTextGui;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
@@ -144,9 +142,6 @@ public class ClientProxy extends CommonProxy {
         // Drowned
         RenderingRegistry.registerEntityRenderingHandler(EntityDrowned.class, new RenderDrowned(renderManager));
         RenderingRegistry.registerEntityRenderingHandler(EntityPhantomDiver.class, new RenderPhantomDiver(renderManager));
-
-        // Swamp Thing
-        RenderingRegistry.registerEntityRenderingHandler(EntitySwampThing.class, new RenderSwampThing(renderManager));
 
         // Damned Warrior
         RenderingRegistry.registerEntityRenderingHandler(EntityDamnedWarrior.class, new RenderDamnedWarrior(renderManager, new ModelDamnedWarrior()));

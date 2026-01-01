@@ -410,7 +410,6 @@ entity.GSToxicSludge.name=Toxic Sludge
 entity.GSPossessedArmor.name=Possessed Armor
 entity.GSMummy.name=Mummy
 entity.GSDrowned.name=Drowned
-entity.GSSwampThing.name=Swamp Thing
 
 # Fluids
 ## TODO !!!!!!!!!!

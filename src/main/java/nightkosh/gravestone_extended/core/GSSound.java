@@ -42,10 +42,6 @@ public class GSSound {
     @GameRegistry.ObjectHolder("entity.drowned.step")
     public static SoundEvent ENTITY_DROWNED_STEP = createSoundEvent("entity.drowned.step");
 
-    // SWAMP THING
-    @GameRegistry.ObjectHolder("entity.swamp_thing.growl")
-    public static SoundEvent ENTITY_SWAMP_THING_GROWL = createSoundEvent("entity.swamp_thing.growl");
-
     // RAVEN
     @GameRegistry.ObjectHolder("entity.raven.ambient")
     public static SoundEvent ENTITY_RAVEN_AMBIENT = createSoundEvent("entity.raven.ambient");
@@ -65,8 +61,7 @@ public class GSSound {
 
             event.getRegistry().registerAll(ENTITY_POSSESSED_ARMOR_STEP, ENTITY_POSSESSED_ARMOR_HURT,
                     ENTITY_MUMMY_AMBIENT, ENTITY_MUMMY_STEP,
-                    ENTITY_DROWNED_AMBIENT, ENTITY_DROWNED_BUBBLES, ENTITY_DROWNED_STEP,
-                    ENTITY_SWAMP_THING_GROWL);
+                    ENTITY_DROWNED_AMBIENT, ENTITY_DROWNED_BUBBLES, ENTITY_DROWNED_STEP);
         }
     }
 }

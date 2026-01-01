@@ -390,7 +390,6 @@ entity.GSToxicSludge.name=токсичний слимак
 entity.GSPossessedArmor.name=Одержимі обладунки
 entity.GSMummy.name=Мумія
 entity.GSDrowned.name=Потопельник
-entity.GSSwampThing.name=Болотна тварина
 
 # Fluids
 tile.gs_toxic_water.name=Токсична вода

@@ -216,7 +216,6 @@ public class ExtendedConfig {
     public static boolean spawnMummy;
     public static boolean spawnDrowned;
     public static boolean spawnPhantomDiver;
-    public static boolean spawnSwampThing;
 
     public static int spawnWeightZombieDogs;
     public static int spawnWeightZombieCats;
@@ -228,7 +227,6 @@ public class ExtendedConfig {
     public static int spawnWeightMummy;
     public static int spawnWeightDrowned;
     public static int spawnWeightPhantomDiver;
-    public static int spawnWeightSwampThing;
 
     public static boolean spawnSkullCrawlersAtMobsDeath;
     public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
@@ -249,8 +247,6 @@ public class ExtendedConfig {
         spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean();
         spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean();
         spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean();
-        spawnPhantomDiver = config.get(CATEGORY_MOBS, "SpawnPhantomDiverInTheWorld", true).getBoolean();
-        spawnSwampThing = config.get(CATEGORY_MOBS, "SpawnSwampThingInTheWorld", true).getBoolean();
 
         spawnWeightZombieDogs = config.get(CATEGORY_MOBS, "SpawnWeightZombieDogs", 50).getInt();
         spawnWeightZombieCats = config.get(CATEGORY_MOBS, "SpawnWeightZombieCats", 50).getInt();
@@ -261,8 +257,6 @@ public class ExtendedConfig {
         spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
         spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
         spawnWeightDrowned = config.get(CATEGORY_MOBS, "SpawnWeightDrowned", 15).getInt();
-        spawnWeightPhantomDiver = config.get(CATEGORY_MOBS, "SpawnWeightPhantomDiver", 5).getInt();
-        spawnWeightSwampThing = config.get(CATEGORY_MOBS, "SpawnWeightSwampThing", 50).getInt();
 
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
                 "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");

@@ -44,7 +44,6 @@ public class GSLootTables {
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ModInfo.ID, "entities/possessed_armor");
     public static final ResourceLocation MUMMY = new ResourceLocation(ModInfo.ID, "entities/mummy");
     public static final ResourceLocation DROWNED = new ResourceLocation(ModInfo.ID, "entities/drowned");
-    public static final ResourceLocation SWAMP_THING = new ResourceLocation(ModInfo.ID, "entities/swamp_thing");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
     // Skeletons, undead horses, raiders ??
@@ -119,7 +118,6 @@ public class GSLootTables {
         LootTableList.register(POSSESSED_ARMOR);
         LootTableList.register(MUMMY);
         LootTableList.register(DROWNED);
-        LootTableList.register(SWAMP_THING);
         LootTableList.register(RAVEN);
         LootTableList.register(DAMNED_WARRIOR);
 
