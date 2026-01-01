@@ -391,7 +391,6 @@ entity.GSSkeleton.name=Skellett
 entity.Villager.gravestone-extended:undertaker=Totengräber
 entity.GSToxicSludge.name=Giftiger Schlamm
 entity.GSPossessedArmor.name=Possessed Armor
-entity.GSMummy.name=Mumie
 
 # Fluids
 tile.gs_toxic_water.name=Giftiges Wasser

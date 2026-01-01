@@ -35,22 +35,6 @@
             "stream" : true
         }]
     },
-    "entity.mummy.ambient" : {
-        "category": "entity",
-        "subtitle": "entity.mummy.ambient",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/mummy/ambient",
-            "stream" : true
-        }]
-    },
-    "entity.mummy.step" : {
-        "category": "entity",
-        "subtitle": "entity.mummy.step",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/mummy/step",
-            "stream" : true
-        }]
-    },
     "entity.raven.ambient" : {
         "category": "entity",
         "subtitle": "entity.raven.ambient",

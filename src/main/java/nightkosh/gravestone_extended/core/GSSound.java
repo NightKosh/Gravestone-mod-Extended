@@ -28,12 +28,6 @@ public class GSSound {
     @GameRegistry.ObjectHolder("entity.possessed_armor.hurt")
     public static SoundEvent ENTITY_POSSESSED_ARMOR_HURT = createSoundEvent("entity.possessed_armor.hurt");
 
-    // MUMMY
-    @GameRegistry.ObjectHolder("entity.mummy.ambient")
-    public static SoundEvent ENTITY_MUMMY_AMBIENT = createSoundEvent("entity.mummy.ambient");
-    @GameRegistry.ObjectHolder("entity.mummy.step")
-    public static SoundEvent ENTITY_MUMMY_STEP = createSoundEvent("entity.mummy.step");
-
     // RAVEN
     @GameRegistry.ObjectHolder("entity.raven.ambient")
     public static SoundEvent ENTITY_RAVEN_AMBIENT = createSoundEvent("entity.raven.ambient");
@@ -51,8 +45,7 @@ public class GSSound {
         public static void registerSoundEvents(final RegistryEvent.Register<SoundEvent> event) {
             event.getRegistry().registerAll(BUBBLING, DROP_OF_ACID);
 
-            event.getRegistry().registerAll(ENTITY_POSSESSED_ARMOR_STEP, ENTITY_POSSESSED_ARMOR_HURT,
-                    ENTITY_MUMMY_AMBIENT, ENTITY_MUMMY_STEP);
+            event.getRegistry().registerAll(ENTITY_POSSESSED_ARMOR_STEP, ENTITY_POSSESSED_ARMOR_HURT);
         }
     }
 }

@@ -378,7 +378,6 @@ entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Enterrador
 entity.GSToxicSludge.name=Lodo tóxico
 entity.GSPossessedArmor.name=Armadura poseída
-entity.GSMummy.name=Momia
 
 # Fluids
 tile.gs_toxic_water.name=Agua tóxica
