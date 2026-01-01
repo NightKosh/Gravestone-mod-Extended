@@ -44,7 +44,6 @@ public class GSLootTables {
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ModInfo.ID, "entities/possessed_armor");
     public static final ResourceLocation MUMMY = new ResourceLocation(ModInfo.ID, "entities/mummy");
     public static final ResourceLocation DROWNED = new ResourceLocation(ModInfo.ID, "entities/drowned");
-    public static final ResourceLocation PHANTOM_DIVER = new ResourceLocation(ModInfo.ID, "entities/phantom_diver");
     public static final ResourceLocation SWAMP_THING = new ResourceLocation(ModInfo.ID, "entities/swamp_thing");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
@@ -120,7 +119,6 @@ public class GSLootTables {
         LootTableList.register(POSSESSED_ARMOR);
         LootTableList.register(MUMMY);
         LootTableList.register(DROWNED);
-        LootTableList.register(PHANTOM_DIVER);
         LootTableList.register(SWAMP_THING);
         LootTableList.register(RAVEN);
         LootTableList.register(DAMNED_WARRIOR);
@@ -191,12 +189,6 @@ public class GSLootTables {
     }
 
     public static void inject(LootTableLoadEvent event) {
-        if (event.getName().toString().equals("minecraft:entities/bat")) {
-            LootEntry entry = new LootEntryTable(INJECT_BAT, 1, 1, new LootCondition[0], "bat_wing");
-            LootPool pool = new LootPool(new LootEntry[]{entry}, new LootCondition[]{}, new RandomValueRange(1, 1), new RandomValueRange(0, 1), "bat_wing");
-            event.getTable().addPool(pool);
-        }
-
         if (event.getName().toString().equals("advanced-fishing:gameplay/fishing_lava_nether/treasure")) {
             event.getTable().getPool("fishing_lava_nether_treasure").addEntry(
                     new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 10, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull"));
