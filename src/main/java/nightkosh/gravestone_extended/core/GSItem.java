@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.compatibility.CompatibilityAdvancedFishing;
-import nightkosh.gravestone_extended.core.compatibility.forestry.CompatibilityForestry;
 import nightkosh.gravestone_extended.item.*;
 import nightkosh.gravestone_extended.item.armor.bone.ItemBoneBoots;
 import nightkosh.gravestone_extended.item.armor.bone.ItemBoneChestplate;
@@ -142,9 +141,6 @@ public class GSItem {
                     SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,
                     MUMMY_HELMET, MUMMY_CHESTPLATE, MUMMY_LEGGINGS, MUMMY_BOOTS);
             registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
-            if (Compatibility.isModLoaded(Compatibility.FORESTRY_ID)) {
-                CompatibilityForestry.addBackpack(registry);
-            }
         }
     }
 }

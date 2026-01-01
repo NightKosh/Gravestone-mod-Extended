@@ -82,15 +82,6 @@ public class GSRecipes {
                 'b', new ItemStack(GSBlock.BONE_BLOCK, 1, 0));
     }
 
-    public static void addForestryBackpack(ItemStack backpack, Item item) {
-        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "backpack"), GROUP, backpack,
-                "sws", "ici", "sws",
-                'w', Blocks.WOOL,
-                'i', item,
-                's', Items.STRING,
-                'c', Blocks.CHEST);
-    }
-
     public static void smeltingRecipesRegistration() {
     }
 }

@@ -18,7 +18,6 @@ For more information visit [official site](http://gravestone.nightkosh.com/) or 
 ## Dependencies - MODS.
 
 1. [Gravestone mod - Graves](https://minecraft.curseforge.com/projects/gravestone-mod-graves/files) 
-2. [Forestry](https://minecraft.curseforge.com/projects/forestry/files)
 
 ## Dependencies - API.
 
@@ -31,7 +30,6 @@ For more information visit [official site](http://gravestone.nightkosh.com/) or 
 2. [Download forge](http://files.minecraftforge.net/) and copy "gradlew.bat", "gradlew" files and "gradle" directory to mod folder
 3. Download required mods and place them to the "external_libs" folder (look to the "build.gradle" to "dependencies" section for the mods versions):
    * [Gravestone mod - Graves](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod-graves/files/2634989)
-   * [Forestry](https://www.curseforge.com/minecraft/mc-mods/forestry/files/2511367  )
    * [Advanced Fishing](https://www.curseforge.com/minecraft/mc-mods/advanced-fishing/files/2628531)
 4. Download mod's API
    * Download [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

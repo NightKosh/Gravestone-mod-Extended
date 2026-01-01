@@ -12,13 +12,11 @@ public class Compatibility {
 
     public static final Compatibility INSTANCE = new Compatibility();
 
-    public static final String FORESTRY_ID = "forestry";
     public static final String ADVANCED_FISHING_ID = "advanced-fishing";
 
     //This fields should be out of their compatibility modules to prevent "ClassNotFoundException" or some other similar bugs in case of API lack
     public static boolean advancedFishingInstalled;
     public static boolean sophisticatedWolvesInstalled;
-    public static boolean forestryInstalled;
 
     public void checkMods() {
         if (isModLoaded("mocreatures")) {
@@ -30,10 +28,6 @@ public class Compatibility {
             CompatibilityThaumcraft.addReciepes();
             CompatibilityThaumcraft.addAspects();
             CompatibilityThaumcraft.addSwords();
-        }
-
-        if (isModLoaded(FORESTRY_ID)) {
-            forestryInstalled = true;
         }
 
         if (isModLoaded("sophisticatedwolves")) {
