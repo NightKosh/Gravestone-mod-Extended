@@ -376,7 +376,6 @@ entity.Villager.gravestone-extended:undertaker=Гробовщик
 entity.GSToxicSludge.name=Токсичный слизнюк
 entity.GSPossessedArmor.name=Одержимые доспехи
 entity.GSMummy.name=Мумия
-entity.GSDrowned.name=Утопленник
 
 # Fluids
 tile.gs_toxic_water.name=Токсичная вода

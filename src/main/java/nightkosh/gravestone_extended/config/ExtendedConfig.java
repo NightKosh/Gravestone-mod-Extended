@@ -214,7 +214,6 @@ public class ExtendedConfig {
     public static boolean spawnZombieRaiders;
     public static boolean spawnPossessedArmor;
     public static boolean spawnMummy;
-    public static boolean spawnDrowned;
     public static boolean spawnPhantomDiver;
 
     public static int spawnWeightZombieDogs;
@@ -225,7 +224,6 @@ public class ExtendedConfig {
     public static int spawnWeightToxicSludge;
     public static int spawnWeightPossessedArmor;
     public static int spawnWeightMummy;
-    public static int spawnWeightDrowned;
     public static int spawnWeightPhantomDiver;
 
     public static boolean spawnSkullCrawlersAtMobsDeath;
@@ -246,7 +244,6 @@ public class ExtendedConfig {
         spawnZombieRaiders = config.get(CATEGORY_MOBS, "SpawnZombieRaidersInTheWorld", true).getBoolean();
         spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean();
         spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean();
-        spawnDrowned = config.get(CATEGORY_MOBS, "SpawnDrownedInTheWorld", true).getBoolean();
 
         spawnWeightZombieDogs = config.get(CATEGORY_MOBS, "SpawnWeightZombieDogs", 50).getInt();
         spawnWeightZombieCats = config.get(CATEGORY_MOBS, "SpawnWeightZombieCats", 50).getInt();
@@ -256,7 +253,6 @@ public class ExtendedConfig {
         spawnWeightToxicSludge = config.get(CATEGORY_MOBS, "SpawnWeightToxicSludge", 5).getInt();
         spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
         spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
-        spawnWeightDrowned = config.get(CATEGORY_MOBS, "SpawnWeightDrowned", 15).getInt();
 
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
                 "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");

@@ -34,14 +34,6 @@ public class GSSound {
     @GameRegistry.ObjectHolder("entity.mummy.step")
     public static SoundEvent ENTITY_MUMMY_STEP = createSoundEvent("entity.mummy.step");
 
-    // DROWNED
-    @GameRegistry.ObjectHolder("entity.drowned.ambient")
-    public static SoundEvent ENTITY_DROWNED_AMBIENT = createSoundEvent("entity.drowned.ambient");
-    @GameRegistry.ObjectHolder("entity.drowned.bubbles")
-    public static SoundEvent ENTITY_DROWNED_BUBBLES = createSoundEvent("entity.drowned.bubbles");
-    @GameRegistry.ObjectHolder("entity.drowned.step")
-    public static SoundEvent ENTITY_DROWNED_STEP = createSoundEvent("entity.drowned.step");
-
     // RAVEN
     @GameRegistry.ObjectHolder("entity.raven.ambient")
     public static SoundEvent ENTITY_RAVEN_AMBIENT = createSoundEvent("entity.raven.ambient");
@@ -60,8 +52,7 @@ public class GSSound {
             event.getRegistry().registerAll(BUBBLING, DROP_OF_ACID);
 
             event.getRegistry().registerAll(ENTITY_POSSESSED_ARMOR_STEP, ENTITY_POSSESSED_ARMOR_HURT,
-                    ENTITY_MUMMY_AMBIENT, ENTITY_MUMMY_STEP,
-                    ENTITY_DROWNED_AMBIENT, ENTITY_DROWNED_BUBBLES, ENTITY_DROWNED_STEP);
+                    ENTITY_MUMMY_AMBIENT, ENTITY_MUMMY_STEP);
         }
     }
 }
