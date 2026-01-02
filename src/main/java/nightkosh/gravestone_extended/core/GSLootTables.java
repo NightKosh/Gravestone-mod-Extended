@@ -30,10 +30,6 @@ import java.util.Random;
  */
 public class GSLootTables {
 
-    public static final ResourceLocation ZOMBIE_DOG = new ResourceLocation(ModInfo.ID, "entities/zombie_dog");
-    public static final ResourceLocation ZOMBIE_CAT = new ResourceLocation(ModInfo.ID, "entities/zombie_cat");
-    public static final ResourceLocation SKELETON_DOG = new ResourceLocation(ModInfo.ID, "entities/skeleton_dog");
-    public static final ResourceLocation SKELETON_CAT = new ResourceLocation(ModInfo.ID, "entities/skeleton_cat");
     public static final ResourceLocation SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/skull_crawler");
     public static final ResourceLocation STRAY_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/stray_skull_crawler");
     public static final ResourceLocation WITHER_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/wither_skull_crawler");
@@ -101,10 +97,6 @@ public class GSLootTables {
 
 
     public static void registration() {
-        LootTableList.register(ZOMBIE_DOG);
-        LootTableList.register(ZOMBIE_CAT);
-        LootTableList.register(SKELETON_DOG);
-        LootTableList.register(SKELETON_CAT);
         LootTableList.register(SKULL_CRAWLER);
         LootTableList.register(STRAY_SKULL_CRAWLER);
         LootTableList.register(WITHER_SKULL_CRAWLER);

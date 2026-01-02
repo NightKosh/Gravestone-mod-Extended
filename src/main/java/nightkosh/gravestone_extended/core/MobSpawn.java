@@ -42,8 +42,6 @@ public class MobSpawn {
      */
     public static Map<ResourceLocation, Constructor<EntityLiving>> mobNameToClassMapping = new HashMap<>();
     public static List<ResourceLocation> MOB_ID = new ArrayList<>(Arrays.asList(GSEntity.MINECRAFT_ZOMBIE_ID, GSEntity.SKELETON_ID));
-    public static List<ResourceLocation> DOG_ID = new ArrayList<>(Arrays.asList(GSEntity.ZOMBIE_DOG_ID, GSEntity.SKELETON_DOG_ID));
-    public static List<ResourceLocation> CAT_ID = new ArrayList<>(Arrays.asList(GSEntity.ZOMBIE_CAT_ID, GSEntity.SKELETON_CAT_ID));
     public static List<ResourceLocation> HORSE_ID = new ArrayList<>(Arrays.asList(GSEntity.ZOMBIE_HORSE_ID, GSEntity.SKELETON_HORSE_ID));
     public static List<ResourceLocation> HELL_MOB_ID = new ArrayList<>(Arrays.asList(GSEntity.MINECRAFT_PIGZOMBIE_ID, GSEntity.SKELETON_ID));
     // spawner mobs

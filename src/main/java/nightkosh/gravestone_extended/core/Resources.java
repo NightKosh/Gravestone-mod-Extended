@@ -82,16 +82,6 @@ public class Resources extends nightkosh.gravestone.core.Resources{
 
     public static final String UNDERTAKER = ENTITY_LOCATION + "villagers/undertaker.png";
     public static final String UNDERTAKER_ZOMBIE = ENTITY_LOCATION + "villagers/zombie_undertaker.png";
-    public static final ResourceLocation ZOMBIE_DOG = new ResourceLocation(ENTITY_LOCATION + "undead_pets/dog/zombie.png");
-    public static final ResourceLocation GREEN_ZOMBIE_DOG = new ResourceLocation(ENTITY_LOCATION + "undead_pets/dog/zombie_green.png");
-    public static final ResourceLocation ZOMBIE_OZELOT = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_ozelot.png");
-    public static final ResourceLocation ZOMBIE_CAT_BLACK = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_black.png");
-    public static final ResourceLocation ZOMBIE_CAT_RED = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_red.png");
-    public static final ResourceLocation ZOMBIE_CAT_SIAMESE = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_siamese.png");
-    public static final ResourceLocation GREEN_ZOMBIE_OZELOT = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_ozelot.png");
-    public static final ResourceLocation GREEN_ZOMBIE_CAT_BLACK = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_black.png");
-    public static final ResourceLocation GREEN_ZOMBIE_CAT_RED = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_red.png");
-    public static final ResourceLocation GREEN_ZOMBIE_CAT_SIAMESE = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_siamese.png");
     public static final ResourceLocation SKELETON_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/skeleton.png");
     public static final ResourceLocation STRAY_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/stray.png");
     public static final ResourceLocation WITHER_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/wither.png");

@@ -15,8 +15,6 @@ import nightkosh.gravestone_extended.entity.monster.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.entity.projectile.EntityObsidianFishHook;
@@ -52,8 +50,6 @@ public class GSEntity {
     }
 
     public static final String SKELETON_NAME = "GSSkeleton";
-    public static final String ZOMBIE_DOG_NAME = "GSZombieDog";
-    public static final String ZOMBIE_CAT_NAME = "GSZombieCat";
     public static final String SKULL_CRAWLER_NAME = "GSSkullCrawler";
     public static final String STRAY_SKULL_CRAWLER_NAME = "GSStraySkullCrawler";
     public static final String WITHER_SKULL_CRAWLER_NAME = "GSWitherSkullCrawler";
@@ -86,10 +82,6 @@ public class GSEntity {
     public static final ResourceLocation MINECRAFT_WITHER_ID = new ResourceLocation("wither");
 
     public static final ResourceLocation SKELETON_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_NAME);
-    public static final ResourceLocation ZOMBIE_DOG_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_DOG_NAME);
-    public static final ResourceLocation ZOMBIE_CAT_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_CAT_NAME);
-    public static final ResourceLocation SKELETON_DOG_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_DOG_NAME);
-    public static final ResourceLocation SKELETON_CAT_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_CAT_NAME);
     public static final ResourceLocation SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + SKULL_CRAWLER_NAME);
     public static final ResourceLocation STRAY_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + STRAY_SKULL_CRAWLER_NAME);
     public static final ResourceLocation WITHER_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + WITHER_SKULL_CRAWLER_NAME);
@@ -113,17 +105,6 @@ public class GSEntity {
     public static final String MINECRAFT_SKELETON_HORSE_NAME = "SkeletonHorse";
 
     public static void registration() {
-        // zombie dog
-        registerModEntity(ZOMBIE_DOG_ID, EntityZombieDog.class, ZOMBIE_DOG_NAME);
-        if (ExtendedConfig.spawnZombieDogs) {
-            addSpawn(BiomeDictionary.Type.FOREST, EntityZombieDog.class, ExtendedConfig.spawnWeightZombieDogs, 1, 3);
-        }
-
-        // zombie cat
-        registerModEntity(ZOMBIE_CAT_ID, EntityZombieCat.class, ZOMBIE_CAT_NAME);
-        if (ExtendedConfig.spawnZombieCats) {
-            addSpawn(BiomeDictionary.Type.JUNGLE, EntityZombieCat.class, ExtendedConfig.spawnWeightZombieCats, 1, 1);
-        }
 
         // skull crawlers
         registerModEntity(SKULL_CRAWLER_ID, EntitySkullCrawler.class, SKULL_CRAWLER_NAME);

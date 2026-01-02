@@ -71,15 +71,6 @@ public class CompatibilityThaumcraft {
 //            ThaumcraftApi.registerObjectTag(new ItemStack(GSItem.corpse), new int[]{3}, new AspectList().add(Aspect.DEATH, 2)
 //                    .add(Aspect.BEAST, 4).add(Aspect.AIR, 1).add(Aspect.EARTH, 1)); // horse
 //
-//            // entity
-//            ThaumcraftApi.registerEntityTag(GSEntity.ZOMBIE_DOG_NAME, new AspectList().add(Aspect.BEAST, 3)
-//                    .add(Aspect.UNDEAD, 3).add(Aspect.EARTH, 3));
-//            ThaumcraftApi.registerEntityTag(GSEntity.ZOMBIE_CAT_NAME, new AspectList().add(Aspect.BEAST, 3)
-//                    .add(Aspect.UNDEAD, 3).add(Aspect.ENTROPY, 3));
-//            ThaumcraftApi.registerEntityTag(GSEntity.SKELETON_DOG_NAME, new AspectList().add(Aspect.BEAST, 2)
-//                    .add(Aspect.UNDEAD, 4).add(Aspect.EARTH, 3));
-//            ThaumcraftApi.registerEntityTag(GSEntity.SKELETON_CAT_NAME, new AspectList().add(Aspect.BEAST, 2)
-//                    .add(Aspect.UNDEAD, 4).add(Aspect.ENTROPY, 3));
 //            // Crawlers
 //            ThaumcraftApi.registerEntityTag(GSEntity.SKULL_CRAWLER_NAME, new AspectList().add(Aspect.DEATH, 2).add(Aspect.UNDEAD, 2));
 //            ThaumcraftApi.registerEntityTag(GSEntity.WITHER_SKULL_CRAWLER_NAME, new AspectList().add(Aspect.DEATH, 2)

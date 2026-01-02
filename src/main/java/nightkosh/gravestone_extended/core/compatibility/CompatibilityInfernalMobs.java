@@ -6,8 +6,6 @@ import nightkosh.gravestone_extended.entity.monster.bat.EntityVampireBat;
 import nightkosh.gravestone_extended.entity.monster.bat.EntityWitheredBat;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.pet.EntitySkeletonDog;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

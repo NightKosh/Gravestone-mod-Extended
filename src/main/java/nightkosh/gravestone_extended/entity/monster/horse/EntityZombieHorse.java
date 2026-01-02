@@ -24,8 +24,6 @@ import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.GSEntity;
 import nightkosh.gravestone_extended.entity.ai.EntityAINearestAttackableHorse;
 import nightkosh.gravestone_extended.entity.ai.EntityUndeadHorseAINearestAttackableTarget;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 
 import javax.annotation.Nullable;
 

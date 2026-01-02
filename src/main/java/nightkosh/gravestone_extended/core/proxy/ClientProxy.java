@@ -35,13 +35,10 @@ import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler.SkullCrawlerType;
 import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
 import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieCat;
-import nightkosh.gravestone_extended.entity.monster.pet.EntityZombieDog;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.gui.GSGraveTextGui;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
 import nightkosh.gravestone_extended.models.entity.ModelDamnedWarrior;
-import nightkosh.gravestone_extended.models.entity.ModelUndeadCat;
 import nightkosh.gravestone_extended.particle.*;
 import nightkosh.gravestone_extended.renderer.entity.*;
 import nightkosh.gravestone_extended.renderer.entity.projectile.RendererBoneFishHook;
@@ -105,12 +102,6 @@ public class ClientProxy extends CommonProxy {
     public void registerMobsRenderers() {
         RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
         RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
-
-        // zombie dog
-        RenderingRegistry.registerEntityRenderingHandler(EntityZombieDog.class, new RenderUndeadDog(renderManager));
-
-        // zombie cat
-        RenderingRegistry.registerEntityRenderingHandler(EntityZombieCat.class, new RenderUndeadCat(renderManager, new ModelUndeadCat(), 0));
 
         // skull crawler
         RenderingRegistry.registerEntityRenderingHandler(EntitySkullCrawler.class, new RenderSkullCrawler(SkullCrawlerType.SKELETON, renderManager));
