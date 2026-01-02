@@ -379,7 +379,6 @@ entity.GSSkeletonRaider.name=Saqueador Esqueleto
 entity.GSZombieRaider.name=Saqueador Zumbi
 entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Agente Funerário
-entity.GSToxicSludge.name=Lama Tóxica
 entity.GSPossessedArmor.name=Armadura Possuída
 
 # Fluids

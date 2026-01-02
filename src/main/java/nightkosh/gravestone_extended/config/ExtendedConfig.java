@@ -221,7 +221,6 @@ public class ExtendedConfig {
     public static int spawnWeightUndeadHorses;
     public static int spawnWeightSkeletonRaiders;
     public static int spawnWeightZombieRaiders;
-    public static int spawnWeightToxicSludge;
     public static int spawnWeightPossessedArmor;
     public static int spawnWeightMummy;
     public static int spawnWeightPhantomDiver;
@@ -250,7 +249,6 @@ public class ExtendedConfig {
         spawnWeightUndeadHorses = config.get(CATEGORY_MOBS, "SpawnWeightUndeadHorses", 5).getInt();
         spawnWeightSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonRaiders", 2).getInt();
         spawnWeightZombieRaiders = config.get(CATEGORY_MOBS, "SpawnWeightZombieRaiders", 2).getInt();
-        spawnWeightToxicSludge = config.get(CATEGORY_MOBS, "SpawnWeightToxicSludge", 5).getInt();
         spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
         spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
 

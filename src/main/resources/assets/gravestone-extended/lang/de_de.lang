@@ -389,7 +389,6 @@ entity.GSSkeletonRaider.name=Skeletträuber
 entity.GSZombieRaider.name=Zombieräuber
 entity.GSSkeleton.name=Skellett
 entity.Villager.gravestone-extended:undertaker=Totengräber
-entity.GSToxicSludge.name=Giftiger Schlamm
 entity.GSPossessedArmor.name=Possessed Armor
 
 # Fluids

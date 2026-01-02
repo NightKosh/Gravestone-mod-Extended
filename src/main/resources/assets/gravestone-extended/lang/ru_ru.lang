@@ -373,7 +373,6 @@ entity.GSSkeletonRaider.name=Скелет наездник
 entity.GSZombieRaider.name=Зомби наездник
 entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Гробовщик
-entity.GSToxicSludge.name=Токсичный слизнюк
 entity.GSPossessedArmor.name=Одержимые доспехи
 
 # Fluids

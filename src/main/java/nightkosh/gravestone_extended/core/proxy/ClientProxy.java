@@ -129,9 +129,6 @@ public class ClientProxy extends CommonProxy {
         // raven
         RenderingRegistry.registerEntityRenderingHandler(EntityRaven.class, new RenderRaven(renderManager));
 
-        // toxic sludge
-        RenderingRegistry.registerEntityRenderingHandler(EntityToxicSludge.class, new RendererToxicSludge(renderManager));
-
         // Possessed armor
         RenderingRegistry.registerEntityRenderingHandler(EntityPossessedArmor.class, new RendererPossessedArmor(renderManager));
 

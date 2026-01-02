@@ -376,7 +376,6 @@ entity.GSSkeletonRaider.name=Asaltante Esqueleto
 entity.GSZombieRaider.name=Asaltante Zombi
 entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Enterrador
-entity.GSToxicSludge.name=Lodo tóxico
 entity.GSPossessedArmor.name=Armadura poseída
 
 # Fluids

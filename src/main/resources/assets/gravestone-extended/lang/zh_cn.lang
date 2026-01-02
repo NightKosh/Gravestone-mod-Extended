@@ -406,7 +406,6 @@ entity.GSZombieRaider.name=僵尸掠夺者
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=送葬者
 ## TODO !!!!!!!!!!
-entity.GSToxicSludge.name=Toxic Sludge
 entity.GSPossessedArmor.name=Possessed Armor
 
 # Fluids

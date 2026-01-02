@@ -412,7 +412,6 @@ entity.GSZombieRaider.name=Zombie Raider
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Croque-mort
 ## TODO !!!!!!!!!!
-entity.GSToxicSludge.name=Toxic Sludge
 entity.GSPossessedArmor.name=Possessed Armor
 
 # Fluids

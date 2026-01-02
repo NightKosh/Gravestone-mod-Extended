@@ -29,7 +29,6 @@ import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.core.compatibility.CompatibilityAdvancedFishing;
-import nightkosh.gravestone_extended.entity.monster.EntityToxicSludge;
 import nightkosh.gravestone_extended.helper.StateHelper;
 import nightkosh.gravestone_extended.item.armor.bone.IBoneArmor;
 

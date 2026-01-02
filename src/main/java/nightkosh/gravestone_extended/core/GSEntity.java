@@ -64,7 +64,6 @@ public class GSEntity {
     public static final String SKELETON_HORSE_NAME = "GSSkeletonHorse";
     public static final String SKELETON_RAIDER_NAME = "GSSkeletonRaider";
     public static final String ZOMBIE_RAIDER_NAME = "GSZombieRaider";
-    public static final String TOXIC_SLUDGE_NAME = "GSToxicSludge";
     public static final String POSSESSED_ARMOR_NAME = "GSPossessedArmor";
     public static final String RAVEN_NAME = "GSRaven";
     public static final String DAMNED_WARRIOR_NAME = "GSDamnedWarrior";
@@ -156,9 +155,6 @@ public class GSEntity {
         if (ExtendedConfig.spawnSkeletonRaiders) {
             addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonRaider.class, ExtendedConfig.spawnWeightSkeletonRaiders, 1, 1);
         }
-
-        registerModEntity(TOXIC_SLUDGE_ID, EntityToxicSludge.class, TOXIC_SLUDGE_NAME);
-        addSpawn(OVERWORLD_BIOMES, EntityToxicSludge.class, ExtendedConfig.spawnWeightToxicSludge, 1, 2);
 
         registerModEntity(POSSESSED_ARMOR_ID, EntityPossessedArmor.class, POSSESSED_ARMOR_NAME);
         if (ExtendedConfig.spawnPossessedArmor) {
