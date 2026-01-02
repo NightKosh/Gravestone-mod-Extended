@@ -92,8 +92,6 @@ public class Resources extends nightkosh.gravestone.core.Resources{
     public static final ResourceLocation GREEN_ZOMBIE_CAT_BLACK = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_black.png");
     public static final ResourceLocation GREEN_ZOMBIE_CAT_RED = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_red.png");
     public static final ResourceLocation GREEN_ZOMBIE_CAT_SIAMESE = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/zombie_green_siamese.png");
-    public static final ResourceLocation SKELETON_DOG = new ResourceLocation(ENTITY_LOCATION + "undead_pets/dog/skeleton.png");
-    public static final ResourceLocation SKELETON_CAT = new ResourceLocation(ENTITY_LOCATION + "undead_pets/cat/skeleton.png");
     public static final ResourceLocation SKELETON_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/skeleton.png");
     public static final ResourceLocation STRAY_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/stray.png");
     public static final ResourceLocation WITHER_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/wither.png");
@@ -102,12 +100,7 @@ public class Resources extends nightkosh.gravestone.core.Resources{
     public static final ResourceLocation HUSK_SKULL_CRAWLER = new ResourceLocation(ENTITY_LOCATION + "crawler/husk.png");
     public static final ResourceLocation RAVEN = new ResourceLocation(ENTITY_LOCATION + "raven.png");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ENTITY_LOCATION + "damnedwarrior.png");
-    public static final ResourceLocation TOXIC_SLUDGE = new ResourceLocation(ENTITY_LOCATION + "toxic_sludge/toxic_sludge.png");
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ENTITY_LOCATION + "possessed_armor.png");
-    public static final ResourceLocation MUMMY = new ResourceLocation(ENTITY_LOCATION + "mummy/mummy.png");
-    public static final ResourceLocation MUMMY_OVERLAY = new ResourceLocation(ENTITY_LOCATION + "mummy/overlay.png");
-    public static final ResourceLocation SWAMP_THING = new ResourceLocation(ENTITY_LOCATION + "swamp_thing/swamp_thing.png");
-    public static final ResourceLocation SWAMP_THING_OVERLAY = new ResourceLocation(ENTITY_LOCATION + "swamp_thing/overlay.png");
 
     public static final ResourceLocation VILLAGER = new ResourceLocation("textures/entity/villager/villager.png");
     public static final ResourceLocation VILLAGER_FARMER = new ResourceLocation("textures/entity/villager/farmer.png");

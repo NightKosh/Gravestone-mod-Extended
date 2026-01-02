@@ -40,7 +40,6 @@ public class GSLootTables {
     public static final ResourceLocation ZOMBIE_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/zombie_skull_crawler");
     public static final ResourceLocation HUSK_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/husk_skull_crawler");
     public static final ResourceLocation PIGMAN_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/pigman_skull_crawler");
-    public static final ResourceLocation TOXIC_SLUDGE = new ResourceLocation(ModInfo.ID, "entities/toxic_sludge");
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ModInfo.ID, "entities/possessed_armor");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
@@ -112,7 +111,6 @@ public class GSLootTables {
         LootTableList.register(ZOMBIE_SKULL_CRAWLER);
         LootTableList.register(HUSK_SKULL_CRAWLER);
         LootTableList.register(PIGMAN_SKULL_CRAWLER);
-        LootTableList.register(TOXIC_SLUDGE);
         LootTableList.register(POSSESSED_ARMOR);
         LootTableList.register(RAVEN);
         LootTableList.register(DAMNED_WARRIOR);

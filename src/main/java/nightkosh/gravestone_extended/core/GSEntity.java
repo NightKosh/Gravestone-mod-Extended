@@ -100,7 +100,6 @@ public class GSEntity {
     public static final ResourceLocation SKELETON_HORSE_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_HORSE_NAME);
     public static final ResourceLocation SKELETON_RAIDER_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_RAIDER_NAME);
     public static final ResourceLocation ZOMBIE_RAIDER_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_RAIDER_NAME);
-    public static final ResourceLocation TOXIC_SLUDGE_ID = new ResourceLocation(ModInfo.ID + ":" + TOXIC_SLUDGE_NAME);
     public static final ResourceLocation POSSESSED_ARMOR_ID = new ResourceLocation(ModInfo.ID + ":" + POSSESSED_ARMOR_NAME);
     public static final ResourceLocation DAMNED_WARRIOR_ID = new ResourceLocation(ModInfo.ID + ":" + DAMNED_WARRIOR_NAME);
     public static final ResourceLocation RAVEN_ID = new ResourceLocation(ModInfo.ID + ":" + RAVEN_NAME);
