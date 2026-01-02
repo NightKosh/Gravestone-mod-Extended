@@ -207,19 +207,9 @@ public class ExtendedConfig {
     }
 
     // mobs
-    public static boolean spawnUndeadHorses;
-    public static boolean spawnSkeletonRaiders;
-    public static boolean spawnZombieRaiders;
     public static boolean spawnPossessedArmor;
-    public static boolean spawnMummy;
-    public static boolean spawnPhantomDiver;
 
-    public static int spawnWeightUndeadHorses;
-    public static int spawnWeightSkeletonRaiders;
-    public static int spawnWeightZombieRaiders;
     public static int spawnWeightPossessedArmor;
-    public static int spawnWeightMummy;
-    public static int spawnWeightPhantomDiver;
 
     public static boolean spawnSkullCrawlersAtMobsDeath;
     public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
@@ -232,17 +222,9 @@ public class ExtendedConfig {
 
     private static void entityConfig() {
         //mob spawn
-        spawnUndeadHorses = config.get(CATEGORY_MOBS, "SpawnUndeadHorses", true).getBoolean();
-        spawnSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnSkeletonRaidersInTheWorld", true).getBoolean();
-        spawnZombieRaiders = config.get(CATEGORY_MOBS, "SpawnZombieRaidersInTheWorld", true).getBoolean();
         spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean();
-        spawnMummy = config.get(CATEGORY_MOBS, "SpawnMummyInTheWorld", true).getBoolean();
 
-        spawnWeightUndeadHorses = config.get(CATEGORY_MOBS, "SpawnWeightUndeadHorses", 5).getInt();
-        spawnWeightSkeletonRaiders = config.get(CATEGORY_MOBS, "SpawnWeightSkeletonRaiders", 2).getInt();
-        spawnWeightZombieRaiders = config.get(CATEGORY_MOBS, "SpawnWeightZombieRaiders", 2).getInt();
         spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
-        spawnWeightMummy = config.get(CATEGORY_MOBS, "SpawnWeightMummy", 20).getInt();
 
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
                 "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");

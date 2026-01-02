@@ -39,7 +39,6 @@ public class GSLootTables {
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ModInfo.ID, "entities/possessed_armor");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
-    // Skeletons, undead horses, raiders ??
 
     //fishing
     public static final ResourceLocation FISHING_TOXIC_WATER = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water");

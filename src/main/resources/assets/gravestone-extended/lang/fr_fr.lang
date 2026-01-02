@@ -405,8 +405,6 @@ entity.GSHuskSkullCrawler.name=Husk Skull Crawler
 entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Corbeau
 ##TODO !!!!!!!!!!
-entity.GSSkeletonRaider.name=Skeleton Raider
-entity.GSZombieRaider.name=Zombie Raider
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Croque-mort
 ## TODO !!!!!!!!!!

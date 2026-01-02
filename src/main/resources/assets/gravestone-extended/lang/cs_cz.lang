@@ -399,8 +399,6 @@ entity.GSZombieSkullCrawler.name=Zombie lebkokrab
 entity.GSHuskSkullCrawler.name=Husk Skull Crawler
 entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Havran
-entity.GSSkeletonRaider.name=Kostlivý nájezdník
-entity.GSZombieRaider.name=Zombie nájezdník
 ##TODO !!!!!!!!!!
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Hrobař

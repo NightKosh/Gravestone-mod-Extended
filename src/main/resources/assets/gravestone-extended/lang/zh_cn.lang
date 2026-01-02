@@ -398,8 +398,6 @@ entity.GSZombieSkullCrawler.name=爬行僵尸头颅
 entity.GSHuskSkullCrawler.name=Husk Skull Crawler
 entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=乌鸦
-entity.GSSkeletonRaider.name=骷髅掠夺者
-entity.GSZombieRaider.name=僵尸掠夺者
 ##TODO !!!!!!!!!!
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=送葬者

@@ -13,8 +13,6 @@ import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
 import nightkosh.gravestone_extended.entity.monster.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
-import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
-import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
 import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.entity.projectile.EntityObsidianFishHook;
@@ -56,10 +54,6 @@ public class GSEntity {
     public static final String ZOMBIE_SKULL_CRAWLER_NAME = "GSZombieSkullCrawler";
     public static final String HUSK_SKULL_CRAWLER_NAME = "GSHuskSkullCrawler";
     public static final String PIGMAN_SKULL_CRAWLER_NAME = "GSPigmanSkullCrawler";
-    public static final String ZOMBIE_HORSE_NAME = "GSZombieHorse";
-    public static final String SKELETON_HORSE_NAME = "GSSkeletonHorse";
-    public static final String SKELETON_RAIDER_NAME = "GSSkeletonRaider";
-    public static final String ZOMBIE_RAIDER_NAME = "GSZombieRaider";
     public static final String POSSESSED_ARMOR_NAME = "GSPossessedArmor";
     public static final String RAVEN_NAME = "GSRaven";
     public static final String DAMNED_WARRIOR_NAME = "GSDamnedWarrior";
@@ -88,10 +82,6 @@ public class GSEntity {
     public static final ResourceLocation ZOMBIE_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_SKULL_CRAWLER_NAME);
     public static final ResourceLocation HUSK_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + HUSK_SKULL_CRAWLER_NAME);
     public static final ResourceLocation PIGMAN_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + PIGMAN_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation ZOMBIE_HORSE_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_HORSE_NAME);
-    public static final ResourceLocation SKELETON_HORSE_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_HORSE_NAME);
-    public static final ResourceLocation SKELETON_RAIDER_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_RAIDER_NAME);
-    public static final ResourceLocation ZOMBIE_RAIDER_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_RAIDER_NAME);
     public static final ResourceLocation POSSESSED_ARMOR_ID = new ResourceLocation(ModInfo.ID + ":" + POSSESSED_ARMOR_NAME);
     public static final ResourceLocation DAMNED_WARRIOR_ID = new ResourceLocation(ModInfo.ID + ":" + DAMNED_WARRIOR_NAME);
     public static final ResourceLocation RAVEN_ID = new ResourceLocation(ModInfo.ID + ":" + RAVEN_NAME);
@@ -101,8 +91,6 @@ public class GSEntity {
     public static final ResourceLocation OBSIDIAN_FISH_HOOK_ID = new ResourceLocation(ModInfo.ID + ":obsidian_fish_hook");
 
     public static final String MINECRAFT_SKELETON_NAME = "Skeleton";
-    public static final String MINECRAFT_ZOMBIE_HORSE_NAME = "ZombieHorse";
-    public static final String MINECRAFT_SKELETON_HORSE_NAME = "SkeletonHorse";
 
     public static void registration() {
 
@@ -120,21 +108,6 @@ public class GSEntity {
         registerModEntity(SKELETON_ID, EntityGSSkeleton.class, SKELETON_NAME);
         EntityRegistry.addSpawn(EntityGSSkeleton.class, 40, 1, 3, EnumCreatureType.MONSTER);
 
-        registerModEntity(ZOMBIE_HORSE_ID, EntityZombieHorse.class, ZOMBIE_HORSE_NAME);
-        registerModEntity(SKELETON_HORSE_ID, EntitySkeletonHorse.class, SKELETON_HORSE_NAME);
-        if (ExtendedConfig.spawnUndeadHorses) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieHorse.class, ExtendedConfig.spawnWeightUndeadHorses, 1, 3);
-            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonHorse.class, ExtendedConfig.spawnWeightUndeadHorses, 1, 3);
-        }
-
-        registerModEntity(ZOMBIE_RAIDER_ID, EntityZombieRaider.class, ZOMBIE_RAIDER_NAME);
-        if (ExtendedConfig.spawnZombieRaiders) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntityZombieRaider.class, ExtendedConfig.spawnWeightZombieRaiders, 1, 1);
-        }
-        registerModEntity(SKELETON_RAIDER_ID, EntitySkeletonRaider.class, SKELETON_RAIDER_NAME);
-        if (ExtendedConfig.spawnSkeletonRaiders) {
-            addSpawn(BiomeDictionary.Type.PLAINS, EntitySkeletonRaider.class, ExtendedConfig.spawnWeightSkeletonRaiders, 1, 1);
-        }
 
         registerModEntity(POSSESSED_ARMOR_ID, EntityPossessedArmor.class, POSSESSED_ARMOR_NAME);
         if (ExtendedConfig.spawnPossessedArmor) {

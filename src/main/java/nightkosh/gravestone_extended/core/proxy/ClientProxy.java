@@ -33,8 +33,6 @@ import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawner
 import nightkosh.gravestone_extended.entity.monster.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler.SkullCrawlerType;
-import nightkosh.gravestone_extended.entity.monster.horse.EntitySkeletonHorse;
-import nightkosh.gravestone_extended.entity.monster.horse.EntityZombieHorse;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.gui.GSGraveTextGui;
 import nightkosh.gravestone_extended.item.ItemGSMonsterPlacer;
@@ -113,9 +111,6 @@ public class ClientProxy extends CommonProxy {
 
         // Skeleton
         RenderingRegistry.registerEntityRenderingHandler(EntityGSSkeleton.class, new RenderGSSkeleton(renderManager));
-        // Horses
-        RenderingRegistry.registerEntityRenderingHandler(EntitySkeletonHorse.class, new RenderUndeadHorse(renderManager));
-        RenderingRegistry.registerEntityRenderingHandler(EntityZombieHorse.class, new RenderUndeadHorse(renderManager));
 
         // raven
         RenderingRegistry.registerEntityRenderingHandler(EntityRaven.class, new RenderRaven(renderManager));
