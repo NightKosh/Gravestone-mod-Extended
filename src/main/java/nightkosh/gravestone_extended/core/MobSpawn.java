@@ -21,7 +21,6 @@ import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.entity.monster.EntityGSSkeleton;
 import nightkosh.gravestone_extended.entity.monster.EntityGSSkeleton.SkeletonType;
-import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

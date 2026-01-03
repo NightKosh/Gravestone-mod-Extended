@@ -363,12 +363,6 @@ gui.chisel_crafting.recipe=Items requeridos
 
 
 # Entity
-entity.GSSkullCrawler.name=Arranca cráneos
-entity.GSStraySkullCrawler.name=Arranca Cráneos Sray
-entity.GSWitherSkullCrawler.name=Arranca Cráneos Wither
-entity.GSZombieSkullCrawler.name=Arranca Cráneos Zombi
-entity.GSHuskSkullCrawler.name=Arranca Cráneos Husk
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Cuervo
 entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Enterrador

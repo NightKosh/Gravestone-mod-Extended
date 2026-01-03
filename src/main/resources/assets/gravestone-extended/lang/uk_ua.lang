@@ -373,12 +373,6 @@ gui.chisel_crafting.recipe=Required items
 
 
 # Entity
-entity.GSSkullCrawler.name=Повзучий череп
-entity.GSStraySkullCrawler.name=Повзучий череп зимогора
-entity.GSWitherSkullCrawler.name=Повзучий череп висушувача
-entity.GSZombieSkullCrawler.name=Повзучий череп зомбі
-entity.GSHuskSkullCrawler.name=Повзучий череп кадавра
-entity.GSPigmanSkullCrawler.name=Повзучий череп свінозомбі
 entity.GSRaven.name=Ворон
 entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Трунар

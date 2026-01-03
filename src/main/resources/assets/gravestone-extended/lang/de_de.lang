@@ -376,12 +376,6 @@ gui.chisel_crafting.recipe=Required items
 
 
 # Entity
-entity.GSSkullCrawler.name=Skelettkriecher
-entity.GSStraySkullCrawler.name=Streunender Skelettkriecher
-entity.GSWitherSkullCrawler.name=Wither-Skelettkriecher
-entity.GSZombieSkullCrawler.name=Zombie-Skelettkriecher
-entity.GSHuskSkullCrawler.name=Husk-Skelettkriecher
-entity.GSPigmanSkullCrawler.name=Schweinezombie-Skelettkriecher
 entity.GSRaven.name=Rabe
 entity.GSSkeleton.name=Skellett
 entity.Villager.gravestone-extended:undertaker=Totengräber

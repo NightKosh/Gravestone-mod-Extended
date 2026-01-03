@@ -390,14 +390,6 @@ gui.chisel_crafting.recipe=Required items
 
 
 # Entity
-entity.GSSkullCrawler.name=Lebkokrab
-##TODO !!!!!!!!!!
-entity.GSStraySkullCrawler.name=Stray Skull Crawler
-entity.GSWitherSkullCrawler.name=Witherský lebkokrab
-entity.GSZombieSkullCrawler.name=Zombie lebkokrab
-##TODO !!!!!!!!!!
-entity.GSHuskSkullCrawler.name=Husk Skull Crawler
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Havran
 ##TODO !!!!!!!!!!
 entity.GSSkeleton.name=Skeleton

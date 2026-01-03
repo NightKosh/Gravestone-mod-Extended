@@ -360,12 +360,6 @@ gui.chisel_crafting.recipe=Required items
 
 
 # Entity
-entity.GSSkullCrawler.name=Skull Crawler
-entity.GSStraySkullCrawler.name=Stray Skull Crawler
-entity.GSWitherSkullCrawler.name=Wither Skull Crawler
-entity.GSZombieSkullCrawler.name=Zombie Skull Crawler
-entity.GSHuskSkullCrawler.name=Husk Skull Crawler
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Raven
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Undertaker

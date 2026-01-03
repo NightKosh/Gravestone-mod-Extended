@@ -366,12 +366,6 @@ gui.chisel_crafting.recipe=Itens requeridos
 
 
 # Entity
-entity.GSSkullCrawler.name=Cabeça Rastejante
-entity.GSStraySkullCrawler.name=Cabeça Rastejante de Vagante
-entity.GSWitherSkullCrawler.name=Cabeça Rastejante de Wither
-entity.GSZombieSkullCrawler.name=Cabeça Ratejante de Zumbi
-entity.GSHuskSkullCrawler.name=Cabeça Rastejante de Zumbi-Múmia
-entity.GSPigmanSkullCrawler.name=Cabeça Rastejante de Homem-Porco Zumbi
 entity.GSRaven.name=Corvo
 entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Agente Funerário

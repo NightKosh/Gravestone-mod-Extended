@@ -39,10 +39,6 @@ import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentStarvationCurse;
-import nightkosh.gravestone_extended.entity.monster.crawler.EntitySkullCrawler;
-import nightkosh.gravestone_extended.entity.monster.crawler.EntityStraySkullCrawler;
-import nightkosh.gravestone_extended.entity.monster.crawler.EntityWitherSkullCrawler;
-import nightkosh.gravestone_extended.entity.monster.crawler.EntityZombieSkullCrawler;
 import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
@@ -75,21 +71,6 @@ public class GSEventsHandler {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onEntityLivingDeath(LivingDeathEvent event) {
         if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
-            if (ExtendedConfig.spawnSkullCrawlersAtMobsDeath) {
-                if (event.getEntity() instanceof AbstractSkeleton) {
-                    EntitySkullCrawler crawler;
-                    if (MobSpawn.isWitherSkeleton((AbstractSkeleton) event.getEntity())) {
-                        crawler = new EntityWitherSkullCrawler(event.getEntity().getEntityWorld());
-                    } else if (MobSpawn.isStraySkeleton((AbstractSkeleton) event.getEntity())) {
-                        crawler = new EntityStraySkullCrawler(event.getEntity().getEntityWorld());
-                    } else {
-                        crawler = new EntitySkullCrawler(event.getEntity().getEntityWorld());
-                    }
-                    MobSpawn.spawnCrawler(event.getEntity(), crawler);
-                } else if (event.getEntity() instanceof EntityZombie) {
-                    MobSpawn.spawnCrawler(event.getEntity(), new EntityZombieSkullCrawler(event.getEntity().getEntityWorld()));
-                }
-            }
             if (event.getEntity() instanceof EntityCreeper && ((EntityCreeper) event.getEntity()).getPowered()) {
                 // drop creeper statue if entity is a charged creeper
                 GSBlock.MEMORIAL.dropCreeperMemorial(event.getEntity().getEntityWorld(), new BlockPos(event.getEntity()));

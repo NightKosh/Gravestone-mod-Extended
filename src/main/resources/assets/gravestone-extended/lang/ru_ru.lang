@@ -360,12 +360,6 @@ gui.chisel_crafting.recipe=Необходимые предметы
 
 
 # Entity
-entity.GSSkullCrawler.name=Ползучий череп
-entity.GSStraySkullCrawler.name=Ползучий череп зимогора
-entity.GSWitherSkullCrawler.name=Ползучий череп иссушителя
-entity.GSZombieSkullCrawler.name=Ползучий череп зомби
-entity.GSHuskSkullCrawler.name=Ползучий череп кадавра
-entity.GSPigmanSkullCrawler.name=Ползучий череп свинозомби
 entity.GSRaven.name=Ворон
 entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Гробовщик

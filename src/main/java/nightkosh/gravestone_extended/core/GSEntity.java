@@ -12,7 +12,6 @@ import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.entity.EntityRaven;
 import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
 import nightkosh.gravestone_extended.entity.monster.*;
-import nightkosh.gravestone_extended.entity.monster.crawler.*;
 import nightkosh.gravestone_extended.entity.monster.water.EntityPhantomDiver;
 import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
 import nightkosh.gravestone_extended.entity.projectile.EntityObsidianFishHook;
@@ -48,12 +47,6 @@ public class GSEntity {
     }
 
     public static final String SKELETON_NAME = "GSSkeleton";
-    public static final String SKULL_CRAWLER_NAME = "GSSkullCrawler";
-    public static final String STRAY_SKULL_CRAWLER_NAME = "GSStraySkullCrawler";
-    public static final String WITHER_SKULL_CRAWLER_NAME = "GSWitherSkullCrawler";
-    public static final String ZOMBIE_SKULL_CRAWLER_NAME = "GSZombieSkullCrawler";
-    public static final String HUSK_SKULL_CRAWLER_NAME = "GSHuskSkullCrawler";
-    public static final String PIGMAN_SKULL_CRAWLER_NAME = "GSPigmanSkullCrawler";
     public static final String POSSESSED_ARMOR_NAME = "GSPossessedArmor";
     public static final String RAVEN_NAME = "GSRaven";
     public static final String DAMNED_WARRIOR_NAME = "GSDamnedWarrior";
