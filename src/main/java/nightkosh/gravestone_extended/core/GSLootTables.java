@@ -30,12 +30,6 @@ import java.util.Random;
  */
 public class GSLootTables {
 
-    public static final ResourceLocation SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/skull_crawler");
-    public static final ResourceLocation STRAY_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/stray_skull_crawler");
-    public static final ResourceLocation WITHER_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/wither_skull_crawler");
-    public static final ResourceLocation ZOMBIE_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/zombie_skull_crawler");
-    public static final ResourceLocation HUSK_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/husk_skull_crawler");
-    public static final ResourceLocation PIGMAN_SKULL_CRAWLER = new ResourceLocation(ModInfo.ID, "entities/pigman_skull_crawler");
     public static final ResourceLocation POSSESSED_ARMOR = new ResourceLocation(ModInfo.ID, "entities/possessed_armor");
     public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
     public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
@@ -96,12 +90,6 @@ public class GSLootTables {
 
 
     public static void registration() {
-        LootTableList.register(SKULL_CRAWLER);
-        LootTableList.register(STRAY_SKULL_CRAWLER);
-        LootTableList.register(WITHER_SKULL_CRAWLER);
-        LootTableList.register(ZOMBIE_SKULL_CRAWLER);
-        LootTableList.register(HUSK_SKULL_CRAWLER);
-        LootTableList.register(PIGMAN_SKULL_CRAWLER);
         LootTableList.register(POSSESSED_ARMOR);
         LootTableList.register(RAVEN);
         LootTableList.register(DAMNED_WARRIOR);
