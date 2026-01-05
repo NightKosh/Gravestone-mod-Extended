@@ -31,18 +31,14 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import nightkosh.gravestone_extended.capability.choke.ChokeProvider;
-import nightkosh.gravestone_extended.capability.choke.IChoke;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentStarvationCurse;
 import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
-import nightkosh.gravestone_extended.potion.PotionBleeding;
 import nightkosh.gravestone_extended.potion.PotionPurification;
 import org.lwjgl.opengl.GL11;
 
@@ -104,20 +100,6 @@ public class GSEventsHandler {
         if (event.getEntityLiving() instanceof EntityPlayer) {
             EnchantmentFrozenNether.applyEffect((EntityPlayer) event.getEntityLiving());
             EnchantmentWebCrawler.applyEffect((EntityPlayer) event.getEntityLiving());
-        }
-    }
-
-    @SubscribeEvent
-    public void livingUpdateEvent(LivingEvent.LivingUpdateEvent event) {
-        if (event.getEntityLiving() != null && event.getEntityLiving() instanceof EntityPlayer) {
-            EnchantmentStarvationCurse.applyCurseEffect((EntityPlayer) event.getEntityLiving());
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void livingHealEvent(LivingHealEvent event) {
-        if (PotionBleeding.hasPotion(event.getEntityLiving())) {
-            event.setCanceled(true);
         }
     }
 
@@ -185,29 +167,4 @@ public class GSEventsHandler {
         GSLootTables.inject(event);
     }
 
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public void onTick(RenderGameOverlayEvent.Pre event) {
-        if (event.getType() == RenderGameOverlayEvent.ElementType.AIR) {
-
-            EntityPlayer player = FMLClientHandler.instance().getClient().player;
-            IChoke choke = player.getCapability(ChokeProvider.AIR_CAP, null);
-            int air = choke.getAir();
-
-            if (choke.isActive() && !player.isInsideOfMaterial(Material.WATER)) {
-                final ScaledResolution res = new ScaledResolution(FMLClientHandler.instance().getClient());
-                GL11.glEnable(GL11.GL_BLEND);
-
-                final int left = res.getScaledWidth() / 2 + 91;
-                final int top = res.getScaledHeight() - 49;
-                final int full = MathHelper.ceil((air - 2) * 10 / 300D);
-                final int partial = MathHelper.ceil(air * 10 / 300D) - full;
-
-                for (int i = 0; i < full + partial; i++) {
-                    FMLClientHandler.instance().getClient().ingameGUI.drawTexturedModalRect(left - i * 8 - 9, top, (i < full ? 16 : 25), 18, 9, 9);
-                }
-                GL11.glDisable(GL11.GL_BLEND);
-            }
-        }
-    }
 }

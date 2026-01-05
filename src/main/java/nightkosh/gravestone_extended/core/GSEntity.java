@@ -47,7 +47,6 @@ public class GSEntity {
     }
 
     public static final String SKELETON_NAME = "GSSkeleton";
-    public static final String POSSESSED_ARMOR_NAME = "GSPossessedArmor";
     public static final String RAVEN_NAME = "GSRaven";
     public static final String DAMNED_WARRIOR_NAME = "GSDamnedWarrior";
     public static final String SPAWNER_HELPER_NAME = "GSSpawnerHelper";
@@ -69,13 +68,6 @@ public class GSEntity {
     public static final ResourceLocation MINECRAFT_WITHER_ID = new ResourceLocation("wither");
 
     public static final ResourceLocation SKELETON_ID = new ResourceLocation(ModInfo.ID + ":" + SKELETON_NAME);
-    public static final ResourceLocation SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + SKULL_CRAWLER_NAME);
-    public static final ResourceLocation STRAY_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + STRAY_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation WITHER_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + WITHER_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation ZOMBIE_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + ZOMBIE_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation HUSK_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + HUSK_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation PIGMAN_SKULL_CRAWLER_ID = new ResourceLocation(ModInfo.ID + ":" + PIGMAN_SKULL_CRAWLER_NAME);
-    public static final ResourceLocation POSSESSED_ARMOR_ID = new ResourceLocation(ModInfo.ID + ":" + POSSESSED_ARMOR_NAME);
     public static final ResourceLocation DAMNED_WARRIOR_ID = new ResourceLocation(ModInfo.ID + ":" + DAMNED_WARRIOR_NAME);
     public static final ResourceLocation RAVEN_ID = new ResourceLocation(ModInfo.ID + ":" + RAVEN_NAME);
     public static final ResourceLocation SPAWNER_HELPER_ID = new ResourceLocation(ModInfo.ID + ":spawner_helper");
@@ -87,30 +79,8 @@ public class GSEntity {
 
     public static void registration() {
 
-        // skull crawlers
-        registerModEntity(SKULL_CRAWLER_ID, EntitySkullCrawler.class, SKULL_CRAWLER_NAME);
-        registerModEntity(STRAY_SKULL_CRAWLER_ID, EntityStraySkullCrawler.class, STRAY_SKULL_CRAWLER_NAME);
-        // wither
-        registerModEntity(WITHER_SKULL_CRAWLER_ID, EntityWitherSkullCrawler.class, WITHER_SKULL_CRAWLER_NAME);
-        addSpawn(BiomeDictionary.Type.NETHER, EntityWitherSkullCrawler.class, 5, 1, 4);
-        // zombie
-        registerModEntity(ZOMBIE_SKULL_CRAWLER_ID, EntityZombieSkullCrawler.class, ZOMBIE_SKULL_CRAWLER_NAME);
-        registerModEntity(HUSK_SKULL_CRAWLER_ID, EntityHuskSkullCrawler.class, HUSK_SKULL_CRAWLER_NAME);
-        registerModEntity(PIGMAN_SKULL_CRAWLER_ID, EntityPigmanSkullCrawler.class, PIGMAN_SKULL_CRAWLER_NAME);
-
         registerModEntity(SKELETON_ID, EntityGSSkeleton.class, SKELETON_NAME);
         EntityRegistry.addSpawn(EntityGSSkeleton.class, 40, 1, 3, EnumCreatureType.MONSTER);
-
-
-        registerModEntity(POSSESSED_ARMOR_ID, EntityPossessedArmor.class, POSSESSED_ARMOR_NAME);
-        if (ExtendedConfig.spawnPossessedArmor) {
-            addSpawn(OVERWORLD_BIOMES, EntityPossessedArmor.class, ExtendedConfig.spawnWeightPossessedArmor, 1, 3);
-        }
-
-        registerModEntity(MUMMY_ID, EntityMummy.class, MUMMY_NAME);
-        if (ExtendedConfig.spawnMummy) {
-            addSpawn(BiomeDictionary.Type.SANDY, EntityMummy.class, ExtendedConfig.spawnWeightMummy, 1, 3);
-        }
 
         registerModEntity(RAVEN_ID, EntityRaven.class, RAVEN_NAME);
 //        EntityRegistry.addSpawn(EntityRaven.class, 1, 3, 10, EnumCreatureType.AMBIENT);//TODO!!!!

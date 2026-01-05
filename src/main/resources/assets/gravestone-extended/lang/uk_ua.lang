@@ -102,8 +102,6 @@ enchantment.soul_bound=Soul Bound
 enchantment.gravestone-extended.soul_bound.desc=Keeps item in your inventory on death.
 
 ## Enchantments - Curses
-enchantment.starvation_curse=Прокляття виснаження
-enchantment.gravestone-extended.gs_starvation_curse.desc=Накладає голод на 10 секунд за кожен предмет
 enchantment.awkward_curse=Прокляття незграбності
 enchantment.gravestone-extended.gs_awkward_curse.desc=З шансом в 10 відсотків ви атакуєте самого себе замість противника
 enchantment.fragility_curse=Прокляття крихкості
@@ -142,7 +140,6 @@ potion.effect.gs_bleeding_type=Зілля кровотечі
 splash_potion.effect.gs_bleeding_type=Вибухове зілля кровотечі
 lingering_potion.effect.gs_bleeding_type=Туманне зілля кровотечі
 tipped_arrow.effect.gs_bleeding_type=Стріла кровотечі
-potion.choke.title=Задуха
 potion.effect.gs_choke_type=Зілля задухи
 splash_potion.effect.gs_choke_type=Вибухове зілля задухи
 lingering_potion.effect.gs_choke_type=Туманне зілля задухи
@@ -376,7 +373,6 @@ gui.chisel_crafting.recipe=Required items
 entity.GSRaven.name=Ворон
 entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Трунар
-entity.GSPossessedArmor.name=Одержимі обладунки
 
 # Fluids
 tile.gs_toxic_water.name=Токсична вода

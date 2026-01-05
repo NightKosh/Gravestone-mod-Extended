@@ -98,8 +98,6 @@ enchantment.soul_bound=Soul Bound
 enchantment.gravestone-extended.soul_bound.desc=Keeps item in your inventory on death.
 
 ## Enchantments - Curses
-enchantment.starvation_curse=Curse of Starvation
-enchantment.gravestone-extended.gs_starvation_curse.desc=Applies hunger for 10 seconds per item
 enchantment.awkward_curse=Curse of Awkwardness
 enchantment.gravestone-extended.gs_awkward_curse.desc=Deals damage to yourself instead of enemy with 10 percent chance
 enchantment.fragility_curse=Curse of Fragility
@@ -139,7 +137,6 @@ potion.effect.gs_bleeding_type=Potion of Bleeding
 splash_potion.effect.gs_bleeding_type=Splash Potion of Bleeding
 lingering_potion.effect.gs_bleeding_type=Lingering Potion of Bleeding
 tipped_arrow.effect.gs_bleeding_type=Arrow of Bleeding
-potion.choke.title=Breathlessness
 potion.effect.gs_choke_type=Potion of Breathlessness
 splash_potion.effect.gs_choke_type=Splash Potion of Breathlessness
 lingering_potion.effect.gs_choke_type=Lingering Potion of Breathlessness
@@ -363,7 +360,6 @@ gui.chisel_crafting.recipe=Required items
 entity.GSRaven.name=Raven
 entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Undertaker
-entity.GSPossessedArmor.name=Possessed Armor
 
 # Fluids
 tile.gs_toxic_water.name=Toxic Water

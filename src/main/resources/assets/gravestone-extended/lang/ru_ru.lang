@@ -98,8 +98,6 @@ enchantment.soul_bound=Привязка души
 enchantment.gravestone-extended.soul_bound.desc=Сохраняет предемы в инветнаре после смерти.
 
 ## Enchantments - Curses
-enchantment.starvation_curse=Проклятие истощения
-enchantment.gravestone-extended.gs_starvation_curse.desc=Накладывает голод на 10 секунд за каждый предмет
 enchantment.awkward_curse=Проклятие неловкости
 enchantment.gravestone-extended.gs_awkward_curse.desc=С шансом в 10 процентов вы атакуете самого себя вместо противника
 enchantment.fragility_curse=Проклятие хрупкости
@@ -138,7 +136,6 @@ potion.effect.gs_bleeding_type=Зелье кровотечения
 splash_potion.effect.gs_bleeding_type=Взрывное зелье кровотечения
 lingering_potion.effect.gs_bleeding_type=Туманное зелье кровотечения
 tipped_arrow.effect.gs_bleeding_type=Стрела кровотечения
-potion.choke.title=Удушье
 potion.effect.gs_choke_type=Зелье удушья
 splash_potion.effect.gs_choke_type=Взрывное зелье удушья
 lingering_potion.effect.gs_choke_type=Туманное зелье удушья
@@ -363,7 +360,6 @@ gui.chisel_crafting.recipe=Необходимые предметы
 entity.GSRaven.name=Ворон
 entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Гробовщик
-entity.GSPossessedArmor.name=Одержимые доспехи
 
 # Fluids
 tile.gs_toxic_water.name=Токсичная вода

@@ -22,12 +22,6 @@ public class GSSound {
     @GameRegistry.ObjectHolder("blocks.fluid.drop_of_acid")
     public static SoundEvent DROP_OF_ACID = createSoundEvent("blocks.fluid.drop_of_acid");
 
-    // POSSESSED ARMOR
-    @GameRegistry.ObjectHolder("entity.possessed_armor.step")
-    public static SoundEvent ENTITY_POSSESSED_ARMOR_STEP = createSoundEvent("entity.possessed_armor.step");
-    @GameRegistry.ObjectHolder("entity.possessed_armor.hurt")
-    public static SoundEvent ENTITY_POSSESSED_ARMOR_HURT = createSoundEvent("entity.possessed_armor.hurt");
-
     // RAVEN
     @GameRegistry.ObjectHolder("entity.raven.ambient")
     public static SoundEvent ENTITY_RAVEN_AMBIENT = createSoundEvent("entity.raven.ambient");
@@ -44,8 +38,6 @@ public class GSSound {
         @SubscribeEvent
         public static void registerSoundEvents(final RegistryEvent.Register<SoundEvent> event) {
             event.getRegistry().registerAll(BUBBLING, DROP_OF_ACID);
-
-            event.getRegistry().registerAll(ENTITY_POSSESSED_ARMOR_STEP, ENTITY_POSSESSED_ARMOR_HURT);
         }
     }
 }

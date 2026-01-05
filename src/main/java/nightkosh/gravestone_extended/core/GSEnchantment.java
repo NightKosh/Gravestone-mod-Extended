@@ -10,7 +10,6 @@ import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentFragilityCurse;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentStarvationCurse;
 
 /**
  * GraveStone mod
@@ -37,7 +36,6 @@ public class GSEnchantment {
     public static final Enchantment FROZEN_NETHER = new EnchantmentFrozenNether();
 
     // CURSES
-    public static final Enchantment CURSE_STARVATION = new EnchantmentStarvationCurse();
     public static final Enchantment CURSE_AWKWARD = new EnchantmentAwkwardCurse();
     public static final Enchantment CURSE_FRAGILITY = new EnchantmentFragilityCurse();
     public static final Enchantment CURSE_BROKEN_HOOK = new EnchantmentBrokenHookCurse();
@@ -52,7 +50,6 @@ public class GSEnchantment {
             registry.registerAll(PAIN_MIRROR);
             registry.registerAll(WEB_CRAWLER, FROZEN_NETHER);
             registry.registerAll(BONE_RAIN, HELLISH_ANGLING, BLOODY_REPLICATION, SOUL_BOUND);
-            registry.registerAll(CURSE_STARVATION, CURSE_AWKWARD, CURSE_BROKEN_HOOK);
         }
     }
 }

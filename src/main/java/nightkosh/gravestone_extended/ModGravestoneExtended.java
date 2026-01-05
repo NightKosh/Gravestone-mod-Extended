@@ -16,9 +16,6 @@ import nightkosh.gravestone.tileentity.TileEntityGraveStone;
 import nightkosh.gravestone_extended.capability.cemetery.Cemetery;
 import nightkosh.gravestone_extended.capability.cemetery.CemeteryStorage;
 import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
-import nightkosh.gravestone_extended.capability.choke.Choke;
-import nightkosh.gravestone_extended.capability.choke.ChokeStorage;
-import nightkosh.gravestone_extended.capability.choke.IChoke;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.core.commands.ExtendedCommands;
@@ -67,7 +64,6 @@ public class ModGravestoneExtended {
         GSTabs.registration();
         GSTileEntity.registration();
 
-        CapabilityManager.INSTANCE.register(IChoke.class, new ChokeStorage(), Choke.class);
         CapabilityManager.INSTANCE.register(ICemetery.class, new CemeteryStorage(), Cemetery.class);
 
         GSLootTables.registration();

@@ -207,34 +207,19 @@ public class ExtendedConfig {
     }
 
     // mobs
-    public static boolean spawnPossessedArmor;
-
-    public static int spawnWeightPossessedArmor;
-
-    public static boolean spawnSkullCrawlersAtMobsDeath;
     public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
     public static boolean spawnSkullCrawlersAtPileBonesDestruction;
 
     public static boolean toxicSludgeAndWaterChangeBlocks;
-    public static boolean zombiePetsAttackAnimals;
-    public static boolean zombiePetsAttackPets;
     public static List<Integer> mobsDimensionWhiteList;
 
     private static void entityConfig() {
         //mob spawn
-        spawnPossessedArmor = config.get(CATEGORY_MOBS, "SpawnPossessedArmorInTheWorld", true).getBoolean();
-
-        spawnWeightPossessedArmor = config.get(CATEGORY_MOBS, "SpawnWeightPossessedArmor", 20).getInt();
-
         mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
                 "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");
 
-        spawnSkullCrawlersAtMobsDeath = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtMobsDeath", true).getBoolean();
         spawnSkullCrawlersAtBoneBlockDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAnBoneBlockDestruction", true).getBoolean();
         spawnSkullCrawlersAtPileBonesDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtPileBonesDestruction", true).getBoolean();
-
-        zombiePetsAttackAnimals = config.get(CATEGORY_MOBS, "ZombiePetsAttackAnimals", true).getBoolean();
-        zombiePetsAttackPets = config.get(CATEGORY_MOBS, "ZombiePetsAttackPets", true).getBoolean();
 
         // toxic sludge and water
         toxicSludgeAndWaterChangeBlocks = config.get(CATEGORY_MOBS, "ToxicSludgeAndWaterChangeBlocks", true).getBoolean();

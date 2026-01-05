@@ -115,9 +115,6 @@ public class ClientProxy extends CommonProxy {
         // raven
         RenderingRegistry.registerEntityRenderingHandler(EntityRaven.class, new RenderRaven(renderManager));
 
-        // Possessed armor
-        RenderingRegistry.registerEntityRenderingHandler(EntityPossessedArmor.class, new RendererPossessedArmor(renderManager));
-
         // Damned Warrior
         RenderingRegistry.registerEntityRenderingHandler(EntityDamnedWarrior.class, new RenderDamnedWarrior(renderManager, new ModelDamnedWarrior()));
 

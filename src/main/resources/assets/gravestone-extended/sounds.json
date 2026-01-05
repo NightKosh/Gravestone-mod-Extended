@@ -15,26 +15,6 @@
             "stream" : true
         }]
     },
-    "entity.possessed_armor.step" : {
-        "category": "entity",
-        "subtitle": "entity.possessed_armor.step",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/possessed_armor/step1",
-            "stream" : true
-        },
-        {
-            "name" : "gravestone-extended:entity/possessed_armor/step2",
-            "stream" : true
-        }]
-    },
-    "entity.possessed_armor.hurt" : {
-        "category": "entity",
-        "subtitle": "entity.possessed_armor.hurt",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/possessed_armor/hurt",
-            "stream" : true
-        }]
-    },
     "entity.raven.ambient" : {
         "category": "entity",
         "subtitle": "entity.raven.ambient",

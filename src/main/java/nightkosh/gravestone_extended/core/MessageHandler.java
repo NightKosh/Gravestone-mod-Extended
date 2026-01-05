@@ -19,7 +19,6 @@ public class MessageHandler {
         networkWrapper.registerMessage(AltarResurrectionMessageToServer.class, AltarResurrectionMessageToServer.class, 1, Side.SERVER);
         networkWrapper.registerMessage(AltarResurrectionMessageToClient.class, AltarResurrectionMessageToClient.class, 2, Side.CLIENT);
         networkWrapper.registerMessage(ChiselMessageToServer.class, ChiselMessageToServer.class, 3, Side.SERVER);
-        networkWrapper.registerMessage(ChokeMessageToClient.class, ChokeMessageToClient.class, 4, Side.CLIENT);
         networkWrapper.registerMessage(StrongholdMessageToServer.class, StrongholdMessageToServer.class, 5, Side.SERVER);
         networkWrapper.registerMessage(StrongholdMessageToClient.class, StrongholdMessageToClient.class, 6, Side.CLIENT);
         networkWrapper.registerMessage(NetherFortressMessageToServer.class, NetherFortressMessageToServer.class, 7, Side.SERVER);
