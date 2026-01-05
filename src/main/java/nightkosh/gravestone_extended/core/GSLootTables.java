@@ -1,14 +1,8 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-import net.minecraft.world.storage.loot.*;
-import net.minecraft.world.storage.loot.conditions.LootCondition;
-import net.minecraft.world.storage.loot.conditions.LootConditionManager;
-import net.minecraft.world.storage.loot.functions.LootFunctionManager;
-import net.minecraftforge.event.LootTableLoadEvent;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.event.LootTableLoadEvent;
 import nightkosh.gravestone.api.grave.EnumGraveMaterial;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
@@ -22,6 +16,8 @@ import nightkosh.gravestone_extended.loot.function.LootFunctionCorpse;
 import java.util.List;
 import java.util.Random;
 
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+
 /**
  * GraveStone mod
  *
@@ -30,62 +26,62 @@ import java.util.Random;
  */
 public class GSLootTables {
 
-    public static final ResourceLocation RAVEN = new ResourceLocation(ModInfo.ID, "entities/raven");
-    public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ModInfo.ID, "entities/damned_warrior");
+    public static final Identifier RAVEN = fromNamespaceAndPath(ModInfo.ID, "entities/raven");
+    public static final Identifier DAMNED_WARRIOR = fromNamespaceAndPath(ModInfo.ID, "entities/damned_warrior");
 
     //fishing
-    public static final ResourceLocation FISHING_TOXIC_WATER = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water");
-    public static final ResourceLocation FISHING_TOXIC_WATER_TREASURE = new ResourceLocation(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
+    public static final Identifier FISHING_TOXIC_WATER = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water");
+    public static final Identifier FISHING_TOXIC_WATER_TREASURE = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
 
     //graves
-    public static final ResourceLocation GRAVE = new ResourceLocation(ModInfo.ID, "graves/grave");
+    public static final Identifier GRAVE = fromNamespaceAndPath(ModInfo.ID, "graves/grave");
 
-    public static final ResourceLocation GRAVE_PLAYER = new ResourceLocation(ModInfo.ID, "graves/player");
+    public static final Identifier GRAVE_PLAYER = fromNamespaceAndPath(ModInfo.ID, "graves/player");
 
-    public static final ResourceLocation GRAVE_PLAYER_SKULL = new ResourceLocation(ModInfo.ID, "graves/player/corpse/skull");
-    public static final ResourceLocation GRAVE_PLAYER_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/player/corpse/bones_and_flesh");
-    public static final ResourceLocation GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/player/corpse/skull_and_bones_and_flesh");
+    public static final Identifier GRAVE_PLAYER_SKULL = fromNamespaceAndPath(ModInfo.ID, "graves/player/corpse/skull");
+    public static final Identifier GRAVE_PLAYER_BONES_AND_FLESH = fromNamespaceAndPath(ModInfo.ID, "graves/player/corpse/bones_and_flesh");
+    public static final Identifier GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH = fromNamespaceAndPath(ModInfo.ID, "graves/player/corpse/skull_and_bones_and_flesh");
 
-    public static final ResourceLocation GRAVE_PLAYER_ADVENTURER = new ResourceLocation(ModInfo.ID, "graves/player/adventurer");
-    public static final ResourceLocation GRAVE_PLAYER_WIZARD = new ResourceLocation(ModInfo.ID, "graves/player/wizard");
-    public static final ResourceLocation GRAVE_PLAYER_WORKER = new ResourceLocation(ModInfo.ID, "graves/player/worker");
-    public static final ResourceLocation GRAVE_PLAYER_MINER = new ResourceLocation(ModInfo.ID, "graves/player/miner");
+    public static final Identifier GRAVE_PLAYER_ADVENTURER = fromNamespaceAndPath(ModInfo.ID, "graves/player/adventurer");
+    public static final Identifier GRAVE_PLAYER_WIZARD = fromNamespaceAndPath(ModInfo.ID, "graves/player/wizard");
+    public static final Identifier GRAVE_PLAYER_WORKER = fromNamespaceAndPath(ModInfo.ID, "graves/player/worker");
+    public static final Identifier GRAVE_PLAYER_MINER = fromNamespaceAndPath(ModInfo.ID, "graves/player/miner");
 
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR = new ResourceLocation(ModInfo.ID, "graves/player/warrior");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_BOW = new ResourceLocation(ModInfo.ID, "graves/player/warrior/bow");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_SWORD = new ResourceLocation(ModInfo.ID, "graves/player/warrior/sword");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/leather");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_IRON = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/iron");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/chainmail");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_GOLDEN = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/golden");
-    public static final ResourceLocation GRAVE_PLAYER_WARRIOR_ARMOR_DIAMOND = new ResourceLocation(ModInfo.ID, "graves/player/warrior/armor/diamond");
+    public static final Identifier GRAVE_PLAYER_WARRIOR = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_BOW = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/bow");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_SWORD = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/sword");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/armor/leather");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_ARMOR_IRON = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/armor/iron");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/armor/chainmail");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_ARMOR_GOLDEN = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/armor/golden");
+    public static final Identifier GRAVE_PLAYER_WARRIOR_ARMOR_DIAMOND = fromNamespaceAndPath(ModInfo.ID, "graves/player/warrior/armor/diamond");
 
-    public static final ResourceLocation GRAVE_PLAYER_TREASURY = new ResourceLocation(ModInfo.ID, "graves/player/treasury");
+    public static final Identifier GRAVE_PLAYER_TREASURY = fromNamespaceAndPath(ModInfo.ID, "graves/player/treasury");
 
-    public static final ResourceLocation GRAVE_VILLAGER = new ResourceLocation(ModInfo.ID, "graves/villager");
+    public static final Identifier GRAVE_VILLAGER = fromNamespaceAndPath(ModInfo.ID, "graves/villager");
 
-    public static final ResourceLocation GRAVE_DOG = new ResourceLocation(ModInfo.ID, "graves/dog");
-    public static final ResourceLocation GRAVE_DOG_ITEMS = new ResourceLocation(ModInfo.ID, "graves/dog/items");
-    public static final ResourceLocation GRAVE_DOG_CORPSE = new ResourceLocation(ModInfo.ID, "graves/dog/corpse/corpse");
-    public static final ResourceLocation GRAVE_DOG_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/dog/corpse/bones_and_flesh");
+    public static final Identifier GRAVE_DOG = fromNamespaceAndPath(ModInfo.ID, "graves/dog");
+    public static final Identifier GRAVE_DOG_ITEMS = fromNamespaceAndPath(ModInfo.ID, "graves/dog/items");
+    public static final Identifier GRAVE_DOG_CORPSE = fromNamespaceAndPath(ModInfo.ID, "graves/dog/corpse/corpse");
+    public static final Identifier GRAVE_DOG_BONES_AND_FLESH = fromNamespaceAndPath(ModInfo.ID, "graves/dog/corpse/bones_and_flesh");
 
-    public static final ResourceLocation GRAVE_CAT = new ResourceLocation(ModInfo.ID, "graves/cat");
-    public static final ResourceLocation GRAVE_CAT_ITEMS = new ResourceLocation(ModInfo.ID, "graves/cat/items");
-    public static final ResourceLocation GRAVE_CAT_CORPSE = new ResourceLocation(ModInfo.ID, "graves/cat/corpse/corpse");
-    public static final ResourceLocation GRAVE_CAT_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/cat/corpse/bones_and_flesh");
+    public static final Identifier GRAVE_CAT = fromNamespaceAndPath(ModInfo.ID, "graves/cat");
+    public static final Identifier GRAVE_CAT_ITEMS = fromNamespaceAndPath(ModInfo.ID, "graves/cat/items");
+    public static final Identifier GRAVE_CAT_CORPSE = fromNamespaceAndPath(ModInfo.ID, "graves/cat/corpse/corpse");
+    public static final Identifier GRAVE_CAT_BONES_AND_FLESH = fromNamespaceAndPath(ModInfo.ID, "graves/cat/corpse/bones_and_flesh");
 
-    public static final ResourceLocation GRAVE_HORSE = new ResourceLocation(ModInfo.ID, "graves/horse");
-    public static final ResourceLocation GRAVE_HORSE_ITEMS = new ResourceLocation(ModInfo.ID, "graves/horse/items");
-    public static final ResourceLocation GRAVE_HORSE_CORPSE = new ResourceLocation(ModInfo.ID, "graves/horse/corpse/corpse");
-    public static final ResourceLocation GRAVE_HORSE_BONES_AND_FLESH = new ResourceLocation(ModInfo.ID, "graves/horse/corpse/bones_and_flesh");
+    public static final Identifier GRAVE_HORSE = fromNamespaceAndPath(ModInfo.ID, "graves/horse");
+    public static final Identifier GRAVE_HORSE_ITEMS = fromNamespaceAndPath(ModInfo.ID, "graves/horse/items");
+    public static final Identifier GRAVE_HORSE_CORPSE = fromNamespaceAndPath(ModInfo.ID, "graves/horse/corpse/corpse");
+    public static final Identifier GRAVE_HORSE_BONES_AND_FLESH = fromNamespaceAndPath(ModInfo.ID, "graves/horse/corpse/bones_and_flesh");
 
-    public static final ResourceLocation GRAVE_OTHER_EGGS = new ResourceLocation(ModInfo.ID, "graves/other/eggs");
-    public static final ResourceLocation GRAVE_OTHER_RECORDS = new ResourceLocation(ModInfo.ID, "graves/other/records");
-    public static final ResourceLocation GRAVE_OTHER_POTIONS = new ResourceLocation(ModInfo.ID, "graves/other/potions");
+    public static final Identifier GRAVE_OTHER_EGGS = fromNamespaceAndPath(ModInfo.ID, "graves/other/eggs");
+    public static final Identifier GRAVE_OTHER_RECORDS = fromNamespaceAndPath(ModInfo.ID, "graves/other/records");
+    public static final Identifier GRAVE_OTHER_POTIONS = fromNamespaceAndPath(ModInfo.ID, "graves/other/potions");
 
     //inject
-    public static final ResourceLocation INJECT_BAT = new ResourceLocation(ModInfo.ID, "inject/bat");
-    public static final ResourceLocation INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL = new ResourceLocation(ModInfo.ID, "inject/fishing_lava_nether_enchanted_skull");
+    public static final Identifier INJECT_BAT = fromNamespaceAndPath(ModInfo.ID, "inject/bat");
+    public static final Identifier INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL = fromNamespaceAndPath(ModInfo.ID, "inject/fishing_lava_nether_enchanted_skull");
 
 
     public static void registration() {
@@ -164,7 +160,7 @@ public class GSLootTables {
         }
     }
 
-    public static List<ItemStack> getGraveLoot(World world, Random random, ResourceLocation lootTable,
+    public static List<ItemStack> getGraveLoot(World world, Random random, Identifier lootTable,
                                                GraveInventoryHelper.GraveCorpseContentType corpseContentType,
                                                GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
                                                GraveInventoryHelper.GraveContentType graveContentType,
@@ -177,4 +173,5 @@ public class GSLootTables {
                         .withGraveMaterial(graveMaterial)
                         .build());
     }
+    
 }

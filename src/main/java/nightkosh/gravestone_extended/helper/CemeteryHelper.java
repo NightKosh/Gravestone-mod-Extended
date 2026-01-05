@@ -1,18 +1,13 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.passive.EntityOcelot;
-import net.minecraft.entity.passive.EntityTameable;
-import net.minecraft.entity.passive.EntityWolf;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.DimensionType;
-import net.minecraft.world.World;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.animal.feline.Cat;
+import net.minecraft.world.entity.animal.wolf.Wolf;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import nightkosh.gravestone.api.GraveStoneAPI;
 import nightkosh.gravestone.api.grave_position.IGravePositionHandler;
 import nightkosh.gravestone.helper.GraveGenerationHelper;
@@ -36,7 +31,7 @@ public class CemeteryHelper {
 
     private static final Random rnd = new Random();
 
-    public static void cloneCemetery(EntityPlayer playerOln, EntityPlayer playerNew) {
+    public static void cloneCemetery(Player playerOln, Player playerNew) {
         ICemetery cemeteryOld = getCemeteryCapability(playerOln);
         ICemetery cemeteryNew = getCemeteryCapability(playerNew);
 
@@ -69,19 +64,19 @@ public class CemeteryHelper {
         }
 
         @Override
-        public boolean condition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
+        public boolean condition(Level level, Entity entity, BlockPos pos, DamageSource damageSource) {
             if (isPlayerCemetery) {
-                if (entity instanceof EntityPlayer) {
-                    return checkCondition(world, entity, isServerCemetery ? world : entity);
+                if (entity instanceof Player) {
+                    return checkCondition(level, entity, isServerCemetery ? level : entity);
                 }
             } else {
-                if (entity instanceof EntityWolf || entity instanceof EntityOcelot && ((EntityTameable) entity).isTamed()) {
+                if (entity instanceof Wolf || entity instanceof Cat && ((TamableAnimal) entity).isTame()) {
                     if (isServerCemetery) {
-                        return checkCondition(world, entity, world);
+                        return checkCondition(level, entity, level);
                     } else {
-                        EntityLivingBase owner = ((EntityTameable) entity).getOwner();
-                        if (owner != null && owner instanceof EntityPlayer) {
-                            return checkCondition(world, entity, owner);
+                        var owner = ((TamableAnimal) entity).getOwner();
+                        if (owner instanceof Player) {
+                            return checkCondition(level, entity, owner);
                         }
                     }
                 }
@@ -90,24 +85,24 @@ public class CemeteryHelper {
         }
 
         @Override
-        public BlockPos gravePosition(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-            World newWorld = getCemeteryWorld(world, entity, getProvider(world, entity));
+        public BlockPos gravePosition(Level level, Entity entity, BlockPos pos, DamageSource damageSource) {
+            var newWorld = getCemeteryWorld(level, entity, getProvider(level, entity));
             return getGravePos(newWorld, getCemeteryInfo(getCemeteryCapability(getProvider(newWorld, entity))).getPosition());
         }
 
         @Override
-        public EnumFacing graveFacing(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-            World newWorld = getCemeteryWorld(world, entity, getProvider(world, entity));
+        public EnumFacing graveFacing(Level level, Entity entity, BlockPos pos, DamageSource damageSource) {
+            var newWorld = getCemeteryWorld(level, entity, getProvider(level, entity));
             return getCemeteryFacing(getProvider(newWorld, entity));
         }
 
         @Nonnull
         @Override
-        public World getWorld(World world, Entity entity, BlockPos pos, DamageSource damageSource) {
-            return getCemeteryWorld(world, entity, getProvider(world, entity));
+        public Level getWorld(Level level, Entity entity, BlockPos pos, DamageSource damageSource) {
+            return getCemeteryWorld(level, entity, getProvider(level, entity));
         }
 
-        protected boolean checkCondition(World world, Entity entity, ICapabilityProvider provider) {
+        protected boolean checkCondition(Level level, Entity entity, ICapabilityProvider provider) {
             ICemetery cemetery = getCemeteryCapability(provider);
 
             CemeteryInfo cemeteryInfo;
@@ -118,7 +113,7 @@ public class CemeteryHelper {
             }
 
             if (cemeteryInfo != null) {
-                World newWorld = getCemeteryWorld(world, entity, getProvider(world, entity));
+                var newWorld = getCemeteryWorld(level, entity, getProvider(level, entity));
                 if (newWorld.getBlockState(cemeteryInfo.getPosition()).getBlock() == GSBlock.MEMORIAL) {
                     return true;
                 } else {
@@ -132,10 +127,10 @@ public class CemeteryHelper {
             return getCemeteryInfo(getCemeteryCapability(provider)).getFacing();
         }
 
-        protected World getCemeteryWorld(World world, Entity entity, ICapabilityProvider provider) {
+        protected Level getCemeteryWorld(Level level, Entity entity, ICapabilityProvider provider) {
             int dimensionId = getCemeteryInfo(getCemeteryCapability(provider)).getDimensionId();
-            if (world.provider.getDimension() == dimensionId) {
-                return world;
+            if (level.provider.getDimension() == dimensionId) {
+                return level;
             } else {
                 return DimensionManager.getWorld(dimensionId);
             }
@@ -145,9 +140,9 @@ public class CemeteryHelper {
             return isPlayerCemetery ? cemetery.getPlayerCemetery() : cemetery.getPetCemetery();
         }
 
-        protected ICapabilityProvider getProvider(World world, Entity entity) {
+        protected ICapabilityProvider getProvider(Level level, Entity entity) {
             if (isServerCemetery) {
-                return world;
+                return level;
             } else {
                 return isPlayerCemetery ? entity : ((EntityTameable) entity).getOwner();
             }
@@ -159,7 +154,7 @@ public class CemeteryHelper {
         private static final int CEMETERY_SIZE_PLAYER_SERVER = 10;
         private static final int CEMETERY_SIZE_PET_SERVER = 5;
 
-        protected BlockPos getGravePos(World world, BlockPos pos) {
+        protected BlockPos getGravePos(Level level, BlockPos pos) {
             List<BlockPos> list = new ArrayList<>();
 
             int xPos;
@@ -180,10 +175,10 @@ public class CemeteryHelper {
                     xPos = x * 2 - 1;
                     zPos = z * 2 - 1;
 
-                    addPosition(list, world, pos, xPos, zPos);
-                    addPosition(list, world, pos, -xPos, zPos);
-                    addPosition(list, world, pos, xPos, -zPos);
-                    addPosition(list, world, pos, -xPos, -zPos);
+                    addPosition(list, level, pos, xPos, zPos);
+                    addPosition(list, level, pos, -xPos, zPos);
+                    addPosition(list, level, pos, xPos, -zPos);
+                    addPosition(list, level, pos, -xPos, -zPos);
                 }
             }
 
@@ -194,13 +189,13 @@ public class CemeteryHelper {
             }
         }
 
-        private static void addPosition(List<BlockPos> list, World world, BlockPos cemeteryPos, int x, int z) {
+        private static void addPosition(List<BlockPos> list, Level level, BlockPos cemeteryPos, int x, int z) {
             x = cemeteryPos.getX() + x;
             z = cemeteryPos.getZ() + z;
 
-            int y = GraveGenerationHelper.getGround(world, x, cemeteryPos.getY() + 10, z);
+            int y = GraveGenerationHelper.getGround(level, x, cemeteryPos.getY() + 10, z);
             BlockPos pos = new BlockPos(x, y, z);
-            if (GraveGenerationHelper.canGenerateGraveAtCoordinates(world, pos)) {
+            if (GraveGenerationHelper.canGenerateGraveAtCoordinates(level, pos)) {
                 list.add(pos);
             }
         }

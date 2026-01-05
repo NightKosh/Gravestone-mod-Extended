@@ -12,6 +12,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.entity.player.Player;
 import nightkosh.gravestone_extended.block.BlockFrozenLava;
 import nightkosh.gravestone_extended.core.GSBlock;
 import nightkosh.gravestone_extended.core.GSEnchantment;
@@ -53,13 +54,13 @@ public class EnchantmentFrozenNether extends EnchantmentTreasure {
         return super.canApply(stack) && stack.getItem() instanceof ItemBoneBoots;
     }
 
-    public static void applyEffect(EntityPlayer player) {
-        World world = player.getEntityWorld();
-        if (!world.isRemote) {
+    public static void applyEffect(Player player) {
+        var world = player.level();
+        if (!world.isClientSide()) {
             int level = GSEnchantmentHelper.getEnchantmentLevel(player.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
 
             if (level > 0) {
-                BlockPos blockPos = player.getPosition();
+                var blockPos = player.blockPosition();
                 double f = Math.ceil(Math.min(16, 1.5 + level));
                 BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos(0, 0, 0);
 
@@ -83,4 +84,5 @@ public class EnchantmentFrozenNether extends EnchantmentTreasure {
             }
         }
     }
+
 }

@@ -1,6 +1,6 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,7 +29,7 @@ public class GSSound {
     public static SoundEvent ENTITY_RAVEN_HURT = createSoundEvent("entity.raven.hurt");
 
     private static SoundEvent createSoundEvent(final String soundName) {
-        final ResourceLocation soundID = new ResourceLocation(ModInfo.ID, soundName);
+        final Identifier soundID = new ResourceLocation(ModInfo.ID, soundName);
         return new SoundEvent(soundID).setRegistryName(soundID);
     }
 

@@ -1,6 +1,8 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.Identifier;
+
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
 /**
  * GraveStone mod
@@ -10,218 +12,217 @@ import net.minecraft.util.ResourceLocation;
  */
 public class Resources extends nightkosh.gravestone.core.Resources{
 
-    public static final String EXT_MOD_NAME = ModInfo.ID.toLowerCase();
-
-    protected static final String BLOCK_LOCATION = EXT_MOD_NAME + ":textures/blocks/";
-    protected static final String FLUID_LOCATION = EXT_MOD_NAME + ":blocks/fluids/";
-    protected static final String GUI_LOCATION = EXT_MOD_NAME + ":textures/gui/";
-    protected static final String POTIONS_LOCATION = EXT_MOD_NAME + ":textures/potions/";
-    protected static final String PARTICLES_LOCATION = EXT_MOD_NAME + ":textures/particles/";
-    protected static final String ENTITY_LOCATION = EXT_MOD_NAME + ":textures/entity/";
-    protected static final String PROJECTILE_LOCATION = ENTITY_LOCATION + "projectile/";
-    protected static final String MEMORIALS_LOCATION = EXT_MOD_NAME + ":textures/blocks/memorials/";
-    protected static final String EXECUTIONS_LOCATION = EXT_MOD_NAME + ":textures/blocks/execution/";
-    protected static final String ARMOR_LOCATION = EXT_MOD_NAME + ":textures/blocks/memorials/armor/";
-    protected static final String PEDESTALS_LOCATION = EXT_MOD_NAME + ":textures/blocks/memorials/pedestal/";
+    protected static final String BLOCK_LOCATION = ":textures/blocks/";
+    protected static final String FLUID_LOCATION = ":blocks/fluids/";
+    protected static final String GUI_LOCATION = ":textures/gui/";
+    protected static final String POTIONS_LOCATION = ":textures/potions/";
+    protected static final String PARTICLES_LOCATION = ":textures/particles/";
+    protected static final String ENTITY_LOCATION = ":textures/entity/";
+    protected static final String PROJECTILE_LOCATION = "projectile/";
+    protected static final String MEMORIALS_LOCATION = ":textures/blocks/memorials/";
+    protected static final String EXECUTIONS_LOCATION = ":textures/blocks/execution/";
+    protected static final String ARMOR_LOCATION = ":textures/blocks/memorials/armor/";
+    protected static final String PEDESTALS_LOCATION = ":textures/blocks/memorials/pedestal/";
     // blocks
-    public static final ResourceLocation PENTAGRAM = new ResourceLocation(BLOCK_LOCATION + "pentagram.png");
-    public static final ResourceLocation SPIDER_SPAWNER = new ResourceLocation(BLOCK_LOCATION + "spiderspawner.png");
-    public static final ResourceLocation CANDLE = new ResourceLocation(BLOCK_LOCATION + "candle.png");
-    public static final ResourceLocation PILE_OF_BONES = new ResourceLocation(BLOCK_LOCATION + "pileofbones.png");
+    public static final Identifier PENTAGRAM = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pentagram.png");
+    public static final Identifier SPIDER_SPAWNER = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "spiderspawner.png");
+    public static final Identifier CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "candle.png");
+    public static final Identifier PILE_OF_BONES = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pileofbones.png");
 
     // armor
-    public static final String BONE_HELMET = EXT_MOD_NAME + ":textures/models/armor/bone/helmet.png";
-    public static final String BONE_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/bone/chestplate.png";
-    public static final String BONE_LEGS = EXT_MOD_NAME + ":textures/models/armor/bone/leggings.png";
-    public static final String BONE_BOOTS = EXT_MOD_NAME + ":textures/models/armor/bone/boots.png";
+    public static final String BONE_HELMET = ":textures/models/armor/bone/helmet.png";
+    public static final String BONE_CHESTPLATE = ":textures/models/armor/bone/chestplate.png";
+    public static final String BONE_LEGS = ":textures/models/armor/bone/leggings.png";
+    public static final String BONE_BOOTS = ":textures/models/armor/bone/boots.png";
 
-    public static final String DIVING_HELMET = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/helmet.png";
-    public static final String PHANTOM_DIVER_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/chestplate.png";
-    public static final String PHANTOM_DIVER_LEGS = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/leggings.png";
-    public static final String PHANTOM_DIVER_BOOTS = EXT_MOD_NAME + ":textures/models/armor/phantom_diver_costume/boots.png";
+    public static final String DIVING_HELMET = ":textures/models/armor/phantom_diver_costume/helmet.png";
+    public static final String PHANTOM_DIVER_CHESTPLATE = ":textures/models/armor/phantom_diver_costume/chestplate.png";
+    public static final String PHANTOM_DIVER_LEGS = ":textures/models/armor/phantom_diver_costume/leggings.png";
+    public static final String PHANTOM_DIVER_BOOTS = ":textures/models/armor/phantom_diver_costume/boots.png";
 
-    public static final String SWAMP_THING_HELMET = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/helmet.png";
-    public static final String SWAMP_THING_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/chestplate.png";
-    public static final String SWAMP_THING_LEGS = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/leggings.png";
-    public static final String SWAMP_THING_BOOTS = EXT_MOD_NAME + ":textures/models/armor/swamp_thing_costume/boots.png";
+    public static final String SWAMP_THING_HELMET = ":textures/models/armor/swamp_thing_costume/helmet.png";
+    public static final String SWAMP_THING_CHESTPLATE = ":textures/models/armor/swamp_thing_costume/chestplate.png";
+    public static final String SWAMP_THING_LEGS = ":textures/models/armor/swamp_thing_costume/leggings.png";
+    public static final String SWAMP_THING_BOOTS = ":textures/models/armor/swamp_thing_costume/boots.png";
 
-    public static final String MUMMY_HELMET = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/helmet.png";
-    public static final String MUMMY_CHESTPLATE = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/chestplate.png";
-    public static final String MUMMY_LEGS = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/leggings.png";
-    public static final String MUMMY_BOOTS = EXT_MOD_NAME + ":textures/models/armor/mummy_costume/boots.png";
+    public static final String MUMMY_HELMET = ":textures/models/armor/mummy_costume/helmet.png";
+    public static final String MUMMY_CHESTPLATE = ":textures/models/armor/mummy_costume/chestplate.png";
+    public static final String MUMMY_LEGS = ":textures/models/armor/mummy_costume/leggings.png";
+    public static final String MUMMY_BOOTS = ":textures/models/armor/mummy_costume/boots.png";
 
     // gui
-    public static final ResourceLocation ALTAR_RESURRECTION_GUI = new ResourceLocation(GUI_LOCATION + "altar/resurrection.png");
-    public static final ResourceLocation ALTAR_ENCHANTMENT_GUI = new ResourceLocation(GUI_LOCATION + "altar/enchanting.png");
-    public static final ResourceLocation ALTAR_DISENCHANTMENT_GUI = new ResourceLocation(GUI_LOCATION + "altar/disenchanting.png");
-    public static final ResourceLocation CHISEL_GUI = new ResourceLocation(GUI_LOCATION + "chisel_gui.png");
+    public static final Identifier ALTAR_RESURRECTION_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/resurrection.png");
+    public static final Identifier ALTAR_ENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/enchanting.png");
+    public static final Identifier ALTAR_DISENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/disenchanting.png");
+    public static final Identifier CHISEL_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "chisel_gui.png");
 
     //potions
-    public static final ResourceLocation POTIONS = new ResourceLocation(POTIONS_LOCATION + "potions.png");
+    public static final Identifier POTIONS = fromNamespaceAndPath(ModInfo.ID, POTIONS_LOCATION + "potions.png");
 
     //particles
-    public static final ResourceLocation PARTICLES = new ResourceLocation(PARTICLES_LOCATION + "particles.png");
+    public static final Identifier PARTICLES = fromNamespaceAndPath(ModInfo.ID, PARTICLES_LOCATION + "particles.png");
 
     // entities
-    public static final ResourceLocation EMPTY = new ResourceLocation("textures/entity/empty.png");
-    public static final ResourceLocation STEVE = new ResourceLocation("textures/entity/steve.png");
-    public static final ResourceLocation ZOMBIE = new ResourceLocation("textures/entity/zombie/zombie.png");
-    public static final ResourceLocation HUSK_ZOMBIE = new ResourceLocation("textures/entity/zombie/husk.png");
-    public static final ResourceLocation ZOMBIE_VILLAGER = new ResourceLocation("textures/entity/zombie_villager/zombie_villager.png");
-    public static final ResourceLocation ZOMBIE_BUTCHER = new ResourceLocation("textures/entity/zombie_villager/zombie_butcher.png");
-    public static final ResourceLocation ZOMBIE_FARMER = new ResourceLocation("textures/entity/zombie_villager/zombie_farmer.png");
-    public static final ResourceLocation ZOMBIE_LIBRARIAN = new ResourceLocation("textures/entity/zombie_villager/zombie_librarian.png");
-    public static final ResourceLocation ZOMBIE_PRIEST = new ResourceLocation("textures/entity/zombie_villager/zombie_priest.png");
-    public static final ResourceLocation ZOMBIE_SMITH = new ResourceLocation("textures/entity/zombie_villager/zombie_smith.png");
-    public static final ResourceLocation ZOMBIE_PIGMAN = new ResourceLocation("textures/entity/zombie_pigman.png");
-    public static final ResourceLocation SKELETON = new ResourceLocation("textures/entity/skeleton/skeleton.png");
-    public static final ResourceLocation STRAY_SKELETON = new ResourceLocation("textures/entity/skeleton/stray.png");
-    public static final ResourceLocation STRAY_SKELETON_OVERLAY = new ResourceLocation("textures/entity/skeleton/stray_overlay.png");
-    public static final ResourceLocation WITHER_SKELETON = new ResourceLocation("textures/entity/skeleton/wither_skeleton.png");
-    public static final ResourceLocation WITCH = new ResourceLocation("textures/entity/witch.png");
+    public static final Identifier EMPTY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/empty.png");
+    public static final Identifier STEVE = fromNamespaceAndPath(ModInfo.ID, "textures/entity/steve.png");
+    public static final Identifier ZOMBIE = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie/zombie.png");
+    public static final Identifier HUSK_ZOMBIE = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie/husk.png");
+    public static final Identifier ZOMBIE_VILLAGER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_villager.png");
+    public static final Identifier ZOMBIE_BUTCHER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_butcher.png");
+    public static final Identifier ZOMBIE_FARMER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_farmer.png");
+    public static final Identifier ZOMBIE_LIBRARIAN = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_librarian.png");
+    public static final Identifier ZOMBIE_PRIEST = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_priest.png");
+    public static final Identifier ZOMBIE_SMITH = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_villager/zombie_smith.png");
+    public static final Identifier ZOMBIE_PIGMAN = fromNamespaceAndPath(ModInfo.ID, "textures/entity/zombie_pigman.png");
+    public static final Identifier SKELETON = fromNamespaceAndPath(ModInfo.ID, "textures/entity/skeleton/skeleton.png");
+    public static final Identifier STRAY_SKELETON = fromNamespaceAndPath(ModInfo.ID, "textures/entity/skeleton/stray.png");
+    public static final Identifier STRAY_SKELETON_OVERLAY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/skeleton/stray_overlay.png");
+    public static final Identifier WITHER_SKELETON = fromNamespaceAndPath(ModInfo.ID, "textures/entity/skeleton/wither_skeleton.png");
+    public static final Identifier WITCH = fromNamespaceAndPath(ModInfo.ID, "textures/entity/witch.png");
 
     public static final String UNDERTAKER = ENTITY_LOCATION + "villagers/undertaker.png";
     public static final String UNDERTAKER_ZOMBIE = ENTITY_LOCATION + "villagers/zombie_undertaker.png";
-    public static final ResourceLocation RAVEN = new ResourceLocation(ENTITY_LOCATION + "raven.png");
-    public static final ResourceLocation DAMNED_WARRIOR = new ResourceLocation(ENTITY_LOCATION + "damnedwarrior.png");
+    public static final Identifier RAVEN = fromNamespaceAndPath(ModInfo.ID, ENTITY_LOCATION + "raven.png");
+    public static final Identifier DAMNED_WARRIOR = fromNamespaceAndPath(ModInfo.ID, ENTITY_LOCATION + "damnedwarrior.png");
 
-    public static final ResourceLocation VILLAGER = new ResourceLocation("textures/entity/villager/villager.png");
-    public static final ResourceLocation VILLAGER_FARMER = new ResourceLocation("textures/entity/villager/farmer.png");
-    public static final ResourceLocation VILLAGER_LIBRARIAN = new ResourceLocation("textures/entity/villager/librarian.png");
-    public static final ResourceLocation VILLAGER_PRIEST = new ResourceLocation("textures/entity/villager/priest.png");
-    public static final ResourceLocation VILLAGER_SMITH = new ResourceLocation("textures/entity/villager/smith.png");
-    public static final ResourceLocation VILLAGER_BUTCHER = new ResourceLocation("textures/entity/villager/butcher.png");
+    public static final Identifier VILLAGER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/villager.png");
+    public static final Identifier VILLAGER_FARMER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/farmer.png");
+    public static final Identifier VILLAGER_LIBRARIAN = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/librarian.png");
+    public static final Identifier VILLAGER_PRIEST = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/priest.png");
+    public static final Identifier VILLAGER_SMITH = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/smith.png");
+    public static final Identifier VILLAGER_BUTCHER = fromNamespaceAndPath(ModInfo.ID, "textures/entity/villager/butcher.png");
 
-    public static final ResourceLocation WOLF = new ResourceLocation("textures/entity/wolf/wolf.png");
-    public static final ResourceLocation OCELOT = new ResourceLocation("textures/entity/cat/ocelot.png");
-    public static final ResourceLocation BLACK_CAT = new ResourceLocation("textures/entity/cat/black.png");
-    public static final ResourceLocation RED_CAT = new ResourceLocation("textures/entity/cat/red.png");
-    public static final ResourceLocation SIAMESE_CAT = new ResourceLocation("textures/entity/cat/siamese.png");
-    public static final ResourceLocation DONKEY = new ResourceLocation("textures/entity/horse/donkey.png");
-    public static final ResourceLocation MULE = new ResourceLocation("textures/entity/horse/mule.png");
+    public static final Identifier WOLF = fromNamespaceAndPath(ModInfo.ID, "textures/entity/wolf/wolf.png");
+    public static final Identifier OCELOT = fromNamespaceAndPath(ModInfo.ID, "textures/entity/cat/ocelot.png");
+    public static final Identifier BLACK_CAT = fromNamespaceAndPath(ModInfo.ID, "textures/entity/cat/black.png");
+    public static final Identifier RED_CAT = fromNamespaceAndPath(ModInfo.ID, "textures/entity/cat/red.png");
+    public static final Identifier SIAMESE_CAT = fromNamespaceAndPath(ModInfo.ID, "textures/entity/cat/siamese.png");
+    public static final Identifier DONKEY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/horse/donkey.png");
+    public static final Identifier MULE = fromNamespaceAndPath(ModInfo.ID, "textures/entity/horse/mule.png");
 
     // models - memorials
     // cross
-    public static final ResourceLocation MEMORIAL_WOODEN_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/wooden.png");
-    public static final ResourceLocation MEMORIAL_SANDSTONE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/sandstone.png");
-    public static final ResourceLocation MEMORIAL_RED_SANDSTONE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/redsandstone.png");
-    public static final ResourceLocation MEMORIAL_STONE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/stone.png");
-    public static final ResourceLocation MEMORIAL_DIORITE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/diorite.png");
-    public static final ResourceLocation MEMORIAL_ANDESITE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/andesite.png");
-    public static final ResourceLocation MEMORIAL_GRANITE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/granite.png");
-    public static final ResourceLocation MEMORIAL_IRON_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/iron.png");
-    public static final ResourceLocation MEMORIAL_GOLDEN_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/golden.png");
-    public static final ResourceLocation MEMORIAL_DIAMOND_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/diamond.png");
-    public static final ResourceLocation MEMORIAL_EMERALD_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/emerald.png");
-    public static final ResourceLocation MEMORIAL_LAPIS_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/lapis.png");
-    public static final ResourceLocation MEMORIAL_REDSTONE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/redstone.png");
-    public static final ResourceLocation MEMORIAL_OBSIDIAN_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/obsidian.png");
-    public static final ResourceLocation MEMORIAL_QUARTZ_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/quartz.png");
-    public static final ResourceLocation MEMORIAL_PRIZMARINE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/prizmarine.png");
-    public static final ResourceLocation MEMORIAL_ICE_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/ice.png");
-    public static final ResourceLocation MEMORIAL_MOSSY_CROSS = new ResourceLocation(MEMORIALS_LOCATION + "cross/mossy.png");
+    public static final Identifier MEMORIAL_WOODEN_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/wooden.png");
+    public static final Identifier MEMORIAL_SANDSTONE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/sandstone.png");
+    public static final Identifier MEMORIAL_RED_SANDSTONE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/redsandstone.png");
+    public static final Identifier MEMORIAL_STONE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/stone.png");
+    public static final Identifier MEMORIAL_DIORITE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/diorite.png");
+    public static final Identifier MEMORIAL_ANDESITE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/andesite.png");
+    public static final Identifier MEMORIAL_GRANITE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/granite.png");
+    public static final Identifier MEMORIAL_IRON_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/iron.png");
+    public static final Identifier MEMORIAL_GOLDEN_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/golden.png");
+    public static final Identifier MEMORIAL_DIAMOND_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/diamond.png");
+    public static final Identifier MEMORIAL_EMERALD_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/emerald.png");
+    public static final Identifier MEMORIAL_LAPIS_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/lapis.png");
+    public static final Identifier MEMORIAL_REDSTONE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/redstone.png");
+    public static final Identifier MEMORIAL_OBSIDIAN_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/obsidian.png");
+    public static final Identifier MEMORIAL_QUARTZ_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/quartz.png");
+    public static final Identifier MEMORIAL_PRIZMARINE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/prizmarine.png");
+    public static final Identifier MEMORIAL_ICE_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/ice.png");
+    public static final Identifier MEMORIAL_MOSSY_CROSS = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "cross/mossy.png");
     // steve memorials
-    public static final ResourceLocation MEMORIAL_WOODEN_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/wooden.png");
-    public static final ResourceLocation MEMORIAL_SANDSTONE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/sandstone.png");
-    public static final ResourceLocation MEMORIAL_RED_SANDSTONE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/redsandstone.png");
-    public static final ResourceLocation MEMORIAL_STONE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/stone.png");
-    public static final ResourceLocation MEMORIAL_DIORITE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/diorite.png");
-    public static final ResourceLocation MEMORIAL_ANDESITE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/andesite.png");
-    public static final ResourceLocation MEMORIAL_GRANITE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/granite.png");
-    public static final ResourceLocation MEMORIAL_IRON_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/iron.png");
-    public static final ResourceLocation MEMORIAL_GOLDEN_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/golden.png");
-    public static final ResourceLocation MEMORIAL_DIAMOND_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/diamond.png");
-    public static final ResourceLocation MEMORIAL_EMERALD_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/emerald.png");
-    public static final ResourceLocation MEMORIAL_LAPIS_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/lapis.png");
-    public static final ResourceLocation MEMORIAL_REDSTONE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/redstone.png");
-    public static final ResourceLocation MEMORIAL_OBSIDIAN_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/obsidian.png");
-    public static final ResourceLocation MEMORIAL_QUARTZ_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/quartz.png");
-    public static final ResourceLocation MEMORIAL_PRIZMARINE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/prizmarine.png");
-    public static final ResourceLocation MEMORIAL_ICE_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/ice.png");
-    public static final ResourceLocation MEMORIAL_MOSSY_STEVE_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "stevestatue/mossy.png");
+    public static final Identifier MEMORIAL_WOODEN_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/wooden.png");
+    public static final Identifier MEMORIAL_SANDSTONE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/sandstone.png");
+    public static final Identifier MEMORIAL_RED_SANDSTONE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/redsandstone.png");
+    public static final Identifier MEMORIAL_STONE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/stone.png");
+    public static final Identifier MEMORIAL_DIORITE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/diorite.png");
+    public static final Identifier MEMORIAL_ANDESITE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/andesite.png");
+    public static final Identifier MEMORIAL_GRANITE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/granite.png");
+    public static final Identifier MEMORIAL_IRON_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/iron.png");
+    public static final Identifier MEMORIAL_GOLDEN_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/golden.png");
+    public static final Identifier MEMORIAL_DIAMOND_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/diamond.png");
+    public static final Identifier MEMORIAL_EMERALD_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/emerald.png");
+    public static final Identifier MEMORIAL_LAPIS_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/lapis.png");
+    public static final Identifier MEMORIAL_REDSTONE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/redstone.png");
+    public static final Identifier MEMORIAL_OBSIDIAN_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/obsidian.png");
+    public static final Identifier MEMORIAL_QUARTZ_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/quartz.png");
+    public static final Identifier MEMORIAL_PRIZMARINE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/prizmarine.png");
+    public static final Identifier MEMORIAL_ICE_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/ice.png");
+    public static final Identifier MEMORIAL_MOSSY_STEVE_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "stevestatue/mossy.png");
     // angels memorials
-    public static final ResourceLocation MEMORIAL_WOODEN_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/wooden.png");
-    public static final ResourceLocation MEMORIAL_SANDSTONE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/sandstone.png");
-    public static final ResourceLocation MEMORIAL_RED_SANDSTONE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/redsandstone.png");
-    public static final ResourceLocation MEMORIAL_STONE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/stone.png");
-    public static final ResourceLocation MEMORIAL_DIORITE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/diorite.png");
-    public static final ResourceLocation MEMORIAL_ANDESITE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/andesite.png");
-    public static final ResourceLocation MEMORIAL_GRANITE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/granite.png");
-    public static final ResourceLocation MEMORIAL_IRON_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/iron.png");
-    public static final ResourceLocation MEMORIAL_GOLDEN_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/golden.png");
-    public static final ResourceLocation MEMORIAL_DIAMOND_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/diamond.png");
-    public static final ResourceLocation MEMORIAL_EMERALD_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/emerald.png");
-    public static final ResourceLocation MEMORIAL_LAPIS_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/lapis.png");
-    public static final ResourceLocation MEMORIAL_REDSTONE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/redstone.png");
-    public static final ResourceLocation MEMORIAL_OBSIDIAN_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/obsidian.png");
-    public static final ResourceLocation MEMORIAL_QUARTZ_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/quartz.png");
-    public static final ResourceLocation MEMORIAL_PRIZMARINE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/prizmarine.png");
-    public static final ResourceLocation MEMORIAL_ICE_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/ice.png");
-    public static final ResourceLocation MEMORIAL_MOSSY_ANGEL_STATUE = new ResourceLocation(MEMORIALS_LOCATION + "angelstatue/mossy.png");
+    public static final Identifier MEMORIAL_WOODEN_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/wooden.png");
+    public static final Identifier MEMORIAL_SANDSTONE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/sandstone.png");
+    public static final Identifier MEMORIAL_RED_SANDSTONE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/redsandstone.png");
+    public static final Identifier MEMORIAL_STONE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/stone.png");
+    public static final Identifier MEMORIAL_DIORITE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/diorite.png");
+    public static final Identifier MEMORIAL_ANDESITE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/andesite.png");
+    public static final Identifier MEMORIAL_GRANITE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/granite.png");
+    public static final Identifier MEMORIAL_IRON_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/iron.png");
+    public static final Identifier MEMORIAL_GOLDEN_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/golden.png");
+    public static final Identifier MEMORIAL_DIAMOND_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/diamond.png");
+    public static final Identifier MEMORIAL_EMERALD_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/emerald.png");
+    public static final Identifier MEMORIAL_LAPIS_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/lapis.png");
+    public static final Identifier MEMORIAL_REDSTONE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/redstone.png");
+    public static final Identifier MEMORIAL_OBSIDIAN_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/obsidian.png");
+    public static final Identifier MEMORIAL_QUARTZ_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/quartz.png");
+    public static final Identifier MEMORIAL_PRIZMARINE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/prizmarine.png");
+    public static final Identifier MEMORIAL_ICE_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/ice.png");
+    public static final Identifier MEMORIAL_MOSSY_ANGEL_STATUE = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "angelstatue/mossy.png");
 
     // models - txecution
-    public static final ResourceLocation GALLOWS = new ResourceLocation(EXECUTIONS_LOCATION + "gallows.png");
-    public static final ResourceLocation GIBBET = new ResourceLocation(EXECUTIONS_LOCATION + "gibbet.png");
-    public static final ResourceLocation STOCKS = new ResourceLocation(EXECUTIONS_LOCATION + "stocks.png");
-    public static final ResourceLocation BURNING_STAKE = new ResourceLocation(EXECUTIONS_LOCATION + "burningstake.png");
+    public static final Identifier GALLOWS = fromNamespaceAndPath(ModInfo.ID, EXECUTIONS_LOCATION + "gallows.png");
+    public static final Identifier GIBBET = fromNamespaceAndPath(ModInfo.ID, EXECUTIONS_LOCATION + "gibbet.png");
+    public static final Identifier STOCKS = fromNamespaceAndPath(ModInfo.ID, EXECUTIONS_LOCATION + "stocks.png");
+    public static final Identifier BURNING_STAKE = fromNamespaceAndPath(ModInfo.ID, EXECUTIONS_LOCATION + "burningstake.png");
 
     // models - parts
-    public static final ResourceLocation CREEPER_AURA = new ResourceLocation("textures/entity/creeper/creeper_armor.png");
+    public static final Identifier CREEPER_AURA = fromNamespaceAndPath(ModInfo.ID, "textures/entity/creeper/creeper_armor.png");
     // armor
-    public static final ResourceLocation WOODEN_ARMOR = new ResourceLocation(ARMOR_LOCATION + "wooden.png");
-    public static final ResourceLocation SANDSTONE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "sandstone.png");
-    public static final ResourceLocation RED_SANDSTONE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "redsandstone.png");
-    public static final ResourceLocation STONE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "stone.png");
-    public static final ResourceLocation DIORITE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "diorite.png");
-    public static final ResourceLocation ANDESITE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "andesite.png");
-    public static final ResourceLocation GRANITE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "granite.png");
-    public static final ResourceLocation IRON_ARMOR = new ResourceLocation(ARMOR_LOCATION + "iron.png");
-    public static final ResourceLocation GOLDEN_ARMOR = new ResourceLocation(ARMOR_LOCATION + "golden.png");
-    public static final ResourceLocation DIAMOND_ARMOR = new ResourceLocation(ARMOR_LOCATION + "diamond.png");
-    public static final ResourceLocation EMERALD_ARMOR = new ResourceLocation(ARMOR_LOCATION + "emerald.png");
-    public static final ResourceLocation LAPIS_ARMOR = new ResourceLocation(ARMOR_LOCATION + "lapis.png");
-    public static final ResourceLocation REDSTONE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "redstone.png");
-    public static final ResourceLocation OBSIDIAN_ARMOR = new ResourceLocation(ARMOR_LOCATION + "obsidian.png");
-    public static final ResourceLocation QUARTZ_ARMOR = new ResourceLocation(ARMOR_LOCATION + "quartz.png");
-    public static final ResourceLocation PRIZMARINE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "prizmarine.png");
-    public static final ResourceLocation ICE_ARMOR = new ResourceLocation(ARMOR_LOCATION + "ice.png");
-    public static final ResourceLocation MOSSY_ARMOR = new ResourceLocation(ARMOR_LOCATION + "mossy.png");
+    public static final Identifier WOODEN_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "wooden.png");
+    public static final Identifier SANDSTONE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "sandstone.png");
+    public static final Identifier RED_SANDSTONE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "redsandstone.png");
+    public static final Identifier STONE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "stone.png");
+    public static final Identifier DIORITE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "diorite.png");
+    public static final Identifier ANDESITE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "andesite.png");
+    public static final Identifier GRANITE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "granite.png");
+    public static final Identifier IRON_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "iron.png");
+    public static final Identifier GOLDEN_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "golden.png");
+    public static final Identifier DIAMOND_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "diamond.png");
+    public static final Identifier EMERALD_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "emerald.png");
+    public static final Identifier LAPIS_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "lapis.png");
+    public static final Identifier REDSTONE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "redstone.png");
+    public static final Identifier OBSIDIAN_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "obsidian.png");
+    public static final Identifier QUARTZ_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "quartz.png");
+    public static final Identifier PRIZMARINE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "prizmarine.png");
+    public static final Identifier ICE_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "ice.png");
+    public static final Identifier MOSSY_ARMOR = fromNamespaceAndPath(ModInfo.ID, ARMOR_LOCATION + "mossy.png");
     // small pedestal
-    public static final ResourceLocation SMALL_PEDESTAL = new ResourceLocation(MEMORIALS_LOCATION + "modelsmallpedestal.png");
+    public static final Identifier SMALL_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, MEMORIALS_LOCATION + "modelsmallpedestal.png");
     // big pedestals
-    public static final ResourceLocation MEMORIAL_WOODEN_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "wooden.png");
-    public static final ResourceLocation MEMORIAL_SANDSTONE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "sandstone.png");
-    public static final ResourceLocation MEMORIAL_RED_SANDSTONE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "redsandstone.png");
-    public static final ResourceLocation MEMORIAL_STONE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "stone.png");
-    public static final ResourceLocation MEMORIAL_DIORITE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "diorite.png");
-    public static final ResourceLocation MEMORIAL_ANDESITE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "andesite.png");
-    public static final ResourceLocation MEMORIAL_GRANITE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "granite.png");
-    public static final ResourceLocation MEMORIAL_IRON_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "iron.png");
-    public static final ResourceLocation MEMORIAL_GOLDEN_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "golden.png");
-    public static final ResourceLocation MEMORIAL_DIAMOND_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "diamond.png");
-    public static final ResourceLocation MEMORIAL_EMERALD_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "emerald.png");
-    public static final ResourceLocation MEMORIAL_LAPIS_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "lapis.png");
-    public static final ResourceLocation MEMORIAL_REDSTONE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "redstone.png");
-    public static final ResourceLocation MEMORIAL_OBSIDIAN_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "obsidian.png");
-    public static final ResourceLocation MEMORIAL_QUARTZ_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "quartz.png");
-    public static final ResourceLocation MEMORIAL_PRIZMARINE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "prizmarine.png");
-    public static final ResourceLocation MEMORIAL_ICE_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "ice.png");
-    public static final ResourceLocation MEMORIAL_MOSSY_BIG_PEDESTAL = new ResourceLocation(PEDESTALS_LOCATION + "mossy.png");
+    public static final Identifier MEMORIAL_WOODEN_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "wooden.png");
+    public static final Identifier MEMORIAL_SANDSTONE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "sandstone.png");
+    public static final Identifier MEMORIAL_RED_SANDSTONE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "redsandstone.png");
+    public static final Identifier MEMORIAL_STONE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "stone.png");
+    public static final Identifier MEMORIAL_DIORITE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "diorite.png");
+    public static final Identifier MEMORIAL_ANDESITE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "andesite.png");
+    public static final Identifier MEMORIAL_GRANITE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "granite.png");
+    public static final Identifier MEMORIAL_IRON_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "iron.png");
+    public static final Identifier MEMORIAL_GOLDEN_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "golden.png");
+    public static final Identifier MEMORIAL_DIAMOND_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "diamond.png");
+    public static final Identifier MEMORIAL_EMERALD_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "emerald.png");
+    public static final Identifier MEMORIAL_LAPIS_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "lapis.png");
+    public static final Identifier MEMORIAL_REDSTONE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "redstone.png");
+    public static final Identifier MEMORIAL_OBSIDIAN_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "obsidian.png");
+    public static final Identifier MEMORIAL_QUARTZ_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "quartz.png");
+    public static final Identifier MEMORIAL_PRIZMARINE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "prizmarine.png");
+    public static final Identifier MEMORIAL_ICE_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "ice.png");
+    public static final Identifier MEMORIAL_MOSSY_BIG_PEDESTAL = fromNamespaceAndPath(ModInfo.ID, PEDESTALS_LOCATION + "mossy.png");
 
     // haunted chest
-    public static final ResourceLocation CHRISTMAS_CHEST = new ResourceLocation("textures/entity/chest/christmas.png");
-    public static final ResourceLocation DEFAULT_CHEST = new ResourceLocation("textures/entity/chest/normal.png");
+    public static final Identifier CHRISTMAS_CHEST = fromNamespaceAndPath(ModInfo.ID, "textures/entity/chest/christmas.png");
+    public static final Identifier DEFAULT_CHEST = fromNamespaceAndPath(ModInfo.ID, "textures/entity/chest/normal.png");
 
     // bone hook
-    public static final ResourceLocation BONE_HOOK = new ResourceLocation(PROJECTILE_LOCATION + "bone_hook.png");
-    public static final ResourceLocation WITHERED_HOOK = new ResourceLocation(PROJECTILE_LOCATION + "wither_hook.png");
+    public static final Identifier BONE_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "bone_hook.png");
+    public static final Identifier WITHERED_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "wither_hook.png");
 
     // skull candle
-    public static final ResourceLocation SKELETON_SKULL_CANDLE = new ResourceLocation(BLOCK_LOCATION + "skeletonskullcandle.png");
-    public static final ResourceLocation WITHER_SKULL_CANDLE = new ResourceLocation(BLOCK_LOCATION + "witherskullcandle.png");
-    public static final ResourceLocation ZOMBIE_SKULL_CANDLE = new ResourceLocation(BLOCK_LOCATION + "zombieskullcandle.png");
+    public static final Identifier SKELETON_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "skeletonskullcandle.png");
+    public static final Identifier WITHER_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "witherskullcandle.png");
+    public static final Identifier ZOMBIE_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "zombieskullcandle.png");
 
     // TOXIC WATER
-    public static final ResourceLocation TOXIC_WATER_STILL =  new ResourceLocation(FLUID_LOCATION + "toxic_water_still");
-    public static final ResourceLocation TOXIC_WATER_FLOW = new ResourceLocation(FLUID_LOCATION + "toxic_water_flow");
+    public static final Identifier TOXIC_WATER_STILL =  fromNamespaceAndPath(ModInfo.ID, FLUID_LOCATION + "toxic_water_still");
+    public static final Identifier TOXIC_WATER_FLOW = fromNamespaceAndPath(ModInfo.ID, FLUID_LOCATION + "toxic_water_flow");
+
 }

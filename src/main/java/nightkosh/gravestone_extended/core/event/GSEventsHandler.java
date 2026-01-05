@@ -1,37 +1,19 @@
 package nightkosh.gravestone_extended.core.event;
 
-import net.minecraft.block.material.Material;
-import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.AbstractSkeleton;
-import net.minecraft.entity.monster.EntityCreeper;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityPotion;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTBase;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.potion.PotionType;
-import net.minecraft.potion.PotionUtils;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.event.LootTableLoadEvent;
-import net.minecraftforge.event.entity.ProjectileImpactEvent;
-import net.minecraftforge.event.entity.living.*;
-import net.minecraftforge.event.entity.player.ItemFishedEvent;
-import net.minecraftforge.event.entity.player.PlayerDropsEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.LootTableLoadEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.entity.player.ItemFishedEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
@@ -40,7 +22,6 @@ import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
 import nightkosh.gravestone_extended.potion.PotionPurification;
-import org.lwjgl.opengl.GL11;
 
 /**
  * GraveStone mod
@@ -53,8 +34,8 @@ public class GSEventsHandler {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerClone(PlayerEvent.Clone event) {
         if (event.isWasDeath()) {
-            CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntityPlayer());
-            EnchantmentSoulBound.restoreItems(event.getOriginal(), event.getEntityPlayer());
+            CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntity());
+            EnchantmentSoulBound.restoreItems(event.getOriginal(), event.getEntity());
         }
     }
 
@@ -67,9 +48,9 @@ public class GSEventsHandler {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onEntityLivingDeath(LivingDeathEvent event) {
         if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
-            if (event.getEntity() instanceof EntityCreeper && ((EntityCreeper) event.getEntity()).getPowered()) {
+            if (event.getEntity() instanceof Creeper creeper && creeper.isPowered()) {
                 // drop creeper statue if entity is a charged creeper
-                GSBlock.MEMORIAL.dropCreeperMemorial(event.getEntity().getEntityWorld(), new BlockPos(event.getEntity()));
+                GSBlock.MEMORIAL.dropCreeperMemorial(creeper.level(), creeper.blockPosition());
             }
         }
     }
@@ -90,16 +71,16 @@ public class GSEventsHandler {
 
     @SubscribeEvent
     public void livingAttackEvent(LivingAttackEvent event) {
-        if (event.getEntityLiving() instanceof EntityPlayer) {
-            EnchantmentPainMirror.applyEffect((EntityPlayer) event.getEntityLiving(), event.getSource().getTrueSource(), event.getAmount());
+        if (event.getEntityLiving() instanceof Player player) {
+            EnchantmentPainMirror.applyEffect(player, event.getSource().getTrueSource(), event.getAmount());
         }
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
-        if (event.getEntityLiving() instanceof EntityPlayer) {
-            EnchantmentFrozenNether.applyEffect((EntityPlayer) event.getEntityLiving());
-            EnchantmentWebCrawler.applyEffect((EntityPlayer) event.getEntityLiving());
+        if (event.getEntityLiving() instanceof Player player) {
+            EnchantmentFrozenNether.applyEffect(player);
+            EnchantmentWebCrawler.applyEffect(player);
         }
     }
 
@@ -124,20 +105,19 @@ public class GSEventsHandler {
     public void onEntityLivingDamage(LivingDamageEvent event) {
         if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
             Entity entity = event.getSource().getTrueSource();
-            if (entity instanceof EntityLivingBase && event.getEntity() instanceof EntityLivingBase) {
-                EntityLivingBase attacker = (EntityLivingBase) entity;
+            if (entity instanceof LivingEntity attacker && event.getEntity() instanceof LivingEntity targert) {
                 ItemStack itemMainHand = attacker.getHeldItemMainhand();
                 ItemStack itemOffHand = attacker.getHeldItemOffhand();
                 if (itemMainHand.getItem() instanceof IBoneSword) {
-                    applyEntityLivingDamageEnchantments(attacker, (EntityLivingBase) event.getEntity(), itemMainHand, event.getAmount());
+                    applyEntityLivingDamageEnchantments(attacker, targert, itemMainHand, event.getAmount());
                 } else if (itemOffHand.getItem() instanceof IBoneSword) {
-                    applyEntityLivingDamageEnchantments(attacker, (EntityLivingBase) event.getEntity(), itemOffHand, event.getAmount());
+                    applyEntityLivingDamageEnchantments(attacker, targert, itemOffHand, event.getAmount());
                 }
             }
         }
     }
 
-    private static void applyEntityLivingDamageEnchantments(EntityLivingBase attacker, EntityLivingBase target, ItemStack weapon, float damage) {
+    private static void applyEntityLivingDamageEnchantments(LivingEntity attacker, LivingEntity target, ItemStack weapon, float damage) {
         NBTTagList nbtList = weapon.getEnchantmentTagList();
         for (NBTBase nbt : nbtList) {
             if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.VAMPIRIC_TOUCH)) {

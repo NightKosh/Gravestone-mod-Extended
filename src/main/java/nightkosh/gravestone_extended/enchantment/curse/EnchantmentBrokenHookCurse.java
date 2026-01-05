@@ -1,8 +1,6 @@
 package nightkosh.gravestone_extended.enchantment.curse;
 
-import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraftforge.event.entity.player.ItemFishedEvent;
+import net.neoforged.neoforge.event.entity.player.ItemFishedEvent;
 import nightkosh.gravestone_extended.core.GSEnchantment;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
@@ -25,9 +23,10 @@ public class EnchantmentBrokenHookCurse extends EnchantmentCurse {
     }
 
     public static void applyEffect(ItemFishedEvent event) {
-        int level = GSEnchantmentHelper.getEnchantmentLevel(event.getEntityPlayer().getHeldItemMainhand(), GSEnchantment.CURSE_BROKEN_HOOK);
+        int level = GSEnchantmentHelper.getEnchantmentLevel(event.getEntity().getMainHandItem(), GSEnchantment.CURSE_BROKEN_HOOK);
         if (level > 0 && RANDOM.nextInt(10) < 3) {
             event.setCanceled(true);
         }
     }
+
 }

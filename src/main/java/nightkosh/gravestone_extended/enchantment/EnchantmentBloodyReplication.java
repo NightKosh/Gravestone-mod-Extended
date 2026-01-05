@@ -1,14 +1,8 @@
 package nightkosh.gravestone_extended.enchantment;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import nightkosh.gravestone_extended.core.GSEnchantment;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
@@ -48,16 +42,16 @@ public class EnchantmentBloodyReplication extends EnchantmentTreasure {
         return super.canApply(stack) && stack.getItem() instanceof IBoneAxe;
     }
 
-    public static boolean applyEffect(EntityLivingBase entity, IBlockState state, BlockPos pos) {
+    public static boolean applyEffect(LivingEntity entity, IBlockState state, BlockPos pos) {
         if (!entity.isSneaking()) {
             ItemStack axe = entity.getHeldItemMainhand();
             if (axe.getItem() instanceof IBoneAxe) {
                 if (!axe.isEmpty()) {
                     int level = GSEnchantmentHelper.getEnchantmentLevel(axe, GSEnchantment.BLOODY_REPLICATION);
                     if (level > 0) {
-                        Block block = state.getBlock();
+                        var block = state.getBlock();
                         if (!(level == 4 && entity.getHealth() < 0.3) && block instanceof BlockLog) {
-                            block.dropBlockAsItem(entity.world, entity.getPosition(), state, 0);
+                            block.dropBlockAsItem(entity.level(), entity.blockPosition(), state, 0);
                             float damage;
                             switch (level) {
                                 case 1:
@@ -85,4 +79,5 @@ public class EnchantmentBloodyReplication extends EnchantmentTreasure {
         }
         return false;
     }
+
 }
