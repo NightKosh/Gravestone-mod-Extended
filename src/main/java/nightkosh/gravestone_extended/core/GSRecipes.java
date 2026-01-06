@@ -21,18 +21,6 @@ public class GSRecipes {
     private static final ResourceLocation GROUP = new ResourceLocation(ModInfo.ID);
 
     public static void registration() {
-//        RecipesJsonGenerator.addShapedRecipe(
-
-
-        //TODO ????
-        // sword graves TODO remove
-//        for (net.minecraft.item.Item sword : GraveStoneHelper.swordsList) {
-//            GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, ""), GROUP, GraveStoneHelper.getSwordAsGrave(net.minecraft.item.Item.getItemFromBlock(Block.graveStone), new ItemStack(sword, 1)),
-//                    "sc",
-//                    's', sword,
-//                    'c', ExtendedItem.chisel);
-//        }
-
         if (ExtendedConfig.craftableWitherSpawner) {
             GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "wither_spawner"), GROUP, new ItemStack(GSBlock.SPAWNER, 1, EnumSpawner.WITHER_SPAWNER.ordinal()),
                     "bcb", "cec", "cbc",

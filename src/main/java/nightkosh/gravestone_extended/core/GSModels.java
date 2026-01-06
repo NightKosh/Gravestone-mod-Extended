@@ -98,9 +98,6 @@ public class GSModels {
 
 
             // ITEMS
-            ModelLoader.setCustomModelResourceLocation(GSItem.CHISEL, 0, ResourcesModels.CHISEL);
-            ModelBakery.registerItemVariants(GSItem.CHISEL, ResourcesModels.CHISEL);
-
             for (ItemGSMonsterPlacer.EnumEggs egg : ItemGSMonsterPlacer.EnumEggs.values()) {
                 ModelLoader.setCustomModelResourceLocation(GSItem.SPAWN_EGG, egg.ordinal(), ResourcesModels.SPAWN_EGG_MODEL);
             }

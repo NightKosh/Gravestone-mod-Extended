@@ -19,7 +19,6 @@ import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThi
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingChestplate;
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingHelmet;
 import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingLeggings;
-import nightkosh.gravestone_extended.item.tools.ItemChisel;
 import nightkosh.gravestone_extended.item.tools.axe.ItemBoneAxe;
 import nightkosh.gravestone_extended.item.tools.axe.ItemDiamondBoneAxe;
 import nightkosh.gravestone_extended.item.tools.axe.ItemGoldenBoneAxe;
@@ -47,7 +46,6 @@ import nightkosh.gravestone_extended.item.weapon.*;
 @GameRegistry.ObjectHolder(ModInfo.ID)
 public class GSItem {
 
-    public static final Item CHISEL = new ItemChisel();
     public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
     public static final Item BONE_SWORD = new ItemBoneSword();
     public static final Item BONE_SWORD_IRON = new ItemIronBoneSword();
@@ -120,7 +118,7 @@ public class GSItem {
             final IForgeRegistry<Item> registry = event.getRegistry();
             registry.registerAll(TOXIC_SLIME, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
             registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY, FROZEN_MIRROR);
-            registry.registerAll(CHISEL,
+            registry.registerAll(
                     BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
                     BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
                     BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,

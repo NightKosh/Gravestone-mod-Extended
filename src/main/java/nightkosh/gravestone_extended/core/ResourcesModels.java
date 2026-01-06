@@ -34,8 +34,6 @@ public class ResourcesModels extends Resources {
     public static final ModelResourceLocation MUMMY_BOOTS = new ModelResourceLocation(ModInfo.ID + ":armor/mummy_costume/boots", "inventory");
 
     // tools
-    public static final ModelResourceLocation CHISEL = new ModelResourceLocation(ModInfo.ID + ":tools/chisel", "inventory");
-
     public static final ModelResourceLocation BONE_SWORD = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/bone", "inventory");
     public static final ModelResourceLocation BONE_SWORD_IRON = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/iron", "inventory");
     public static final ModelResourceLocation BONE_SWORD_GOLDEN = new ModelResourceLocation(ModInfo.ID + ":weapon/sword/golden", "inventory");

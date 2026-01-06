@@ -35,13 +35,7 @@ public class GSEventsHandler {
     public void onPlayerClone(PlayerEvent.Clone event) {
         if (event.isWasDeath()) {
             CemeteryHelper.cloneCemetery(event.getOriginal(), event.getEntity());
-            EnchantmentSoulBound.restoreItems(event.getOriginal(), event.getEntity());
         }
-    }
-
-    @SubscribeEvent(priority = EventPriority.LOW)
-    public void onPlayerDrops(PlayerDropsEvent event) {
-        EnchantmentSoulBound.applyEffect(event);
     }
 
     // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness

@@ -27,7 +27,6 @@ import nightkosh.gravestone_extended.potion.potion_type.*;
 public class GSPotion {
 
     public static final Potion CURSE = new PotionCurse();
-    public static final Potion PURIFICATION = new PotionPurification();
     public static final Potion RUST = new PotionRust();
     public static final Potion BONE_SKIN = new PotionBoneSkin();
     public static final Potion RECALL = new PotionRecall();
@@ -54,12 +53,12 @@ public class GSPotion {
 
     @SubscribeEvent
     public static void registerPotions(final RegistryEvent.Register<Potion> event) {
-        event.getRegistry().registerAll(CURSE, PURIFICATION, RUST, BONE_SKIN, RECALL, BURNING, BLEEDING, CHOKE, INFERNO);
+        event.getRegistry().registerAll(CURSE, RUST, BONE_SKIN, RECALL, BURNING, BLEEDING, CHOKE, INFERNO);
     }
 
     @SubscribeEvent
     public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
-        event.getRegistry().registerAll(PURIFICATION_TYPE, RUST_TYPE, BONE_SKIN_TYPE, RECALL_TYPE, BURNING_TYPE, BLEEDING_TYPE,
+        event.getRegistry().registerAll(RUST_TYPE, BONE_SKIN_TYPE, RECALL_TYPE, BURNING_TYPE, BLEEDING_TYPE,
                 INFERNO_TYPE, CHOKE_TYPE);
         event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE, WITHER_TYPE);
 

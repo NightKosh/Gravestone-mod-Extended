@@ -102,8 +102,6 @@ enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 enchantment.web_crawler=Web Crawler
 enchantment.gravestone-extended.web_crawler.desc=Allows to move normally in the web.
-enchantment.soul_bound=Soul Bound
-enchantment.gravestone-extended.soul_bound.desc=Keeps item in your inventory on death.
 
 ## Enchantments - Curses
 ## TODO !!!!!!!!!!
@@ -195,9 +193,6 @@ tipped_arrow.effect.wither_type=Arrow of Withering
 
 
 # Items
-## Chisel
-item.gravestone.chisel.name=墓碑凿
-
 ## Fishing Pole
 ## TODO !!!!!!!!!!
 item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
