@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.world.World;
 
 /**
  * GraveStone mod
@@ -25,35 +24,35 @@ public class TimeHelper {
 
     private static boolean isGraveSpawnTime;
 
-
-    public static long getDayTime(World world) {
-        return world.getWorldTime() % 24000;
-    }
-
-    public static long getDayTime(long time) {
-        return time % 24000;
-    }
-
-    public static boolean isGraveSpawnTime() {
-        return isGraveSpawnTime;
-    }
-
-    public static void setIsGraveSpawnTime(boolean isValidTime) {
-        isGraveSpawnTime = isValidTime;
-    }
-
-    public static void updateIsGraveSpawnTime(World world) {
-        long time = TimeHelper.getDayTime(world);
-
-        setIsGraveSpawnTime(time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME || world.isThundering());
-    }
-
-    public static boolean isFogTime(World world) {
-        if (world.isRaining()) {
-            return false;
-        } else {
-            long dayTime = getDayTime(world);
-            return dayTime > FOG_START_TIME && dayTime < FOG_END_TIME;
-        }
-    }
+//TODO
+//    public static long getDayTime(World world) {
+//        return world.getWorldTime() % 24000;
+//    }
+//
+//    public static long getDayTime(long time) {
+//        return time % 24000;
+//    }
+//
+//    public static boolean isGraveSpawnTime() {
+//        return isGraveSpawnTime;
+//    }
+//
+//    public static void setIsGraveSpawnTime(boolean isValidTime) {
+//        isGraveSpawnTime = isValidTime;
+//    }
+//
+//    public static void updateIsGraveSpawnTime(World world) {
+//        long time = TimeHelper.getDayTime(world);
+//
+//        setIsGraveSpawnTime(time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME || world.isThundering());
+//    }
+//
+//    public static boolean isFogTime(World world) {
+//        if (world.isRaining()) {
+//            return false;
+//        } else {
+//            long dayTime = getDayTime(world);
+//            return dayTime > FOG_START_TIME && dayTime < FOG_END_TIME;
+//        }
+//    }
 }

@@ -1,9 +1,5 @@
 package nightkosh.gravestone_extended.core.proxy;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import nightkosh.gravestone.tileentity.TileEntityGrave;
 import nightkosh.gravestone_extended.tileentity.*;
 
 /**
@@ -20,31 +16,24 @@ public class CommonProxy {
     public void registerMobsRenderers() {
     }
 
-    public String getLocalizedString(String str) {
-        return str;
-    }
-
-    public String getLocalizedEntityName(String str) {
-        return str;
-    }
-
-    public void openGraveTextGui(TileEntityGrave tileEntity) {
-    }
-
-    public void registerHandlers() {
-    }
-
-    public void registerFluidRenderers(Block block, ModelResourceLocation modelResourceLocation) {
-
-    }
-
-    public void registerTERenderers() {
-        GameRegistry.registerTileEntity(TileEntityMemorial.class, "Memorial");
-        GameRegistry.registerTileEntity(TileEntityExecution.class, "Execution");
-        GameRegistry.registerTileEntity(TileEntitySpawner.class, "GS Spawner");
-        GameRegistry.registerTileEntity(TileEntityHauntedChest.class, "GSHaunted Chest");
-        GameRegistry.registerTileEntity(TileEntityAltar.class, "GSAltarTE");
-    }
+    //TODO
+//    public void openGraveTextGui(TileEntityGrave tileEntity) {
+//    }
+//
+//    public void registerHandlers() {
+//    }
+//
+//    public void registerFluidRenderers(Block block, ModelResourceLocation modelResourceLocation) {
+//
+//    }
+//
+//    public void registerTERenderers() {
+//        GameRegistry.registerTileEntity(TileEntityMemorial.class, "Memorial");
+//        GameRegistry.registerTileEntity(TileEntityExecution.class, "Execution");
+//        GameRegistry.registerTileEntity(TileEntitySpawner.class, "GS Spawner");
+//        GameRegistry.registerTileEntity(TileEntityHauntedChest.class, "GSHaunted Chest");
+//        GameRegistry.registerTileEntity(TileEntityAltar.class, "GSAltarTE");
+//    }
 
     public void registerParticles() {
 

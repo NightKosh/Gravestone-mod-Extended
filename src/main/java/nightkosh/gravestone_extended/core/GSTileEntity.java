@@ -8,9 +8,9 @@ import nightkosh.gravestone_extended.ModGravestoneExtended;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSTileEntity extends nightkosh.gravestone.core.GSTileEntity {
+public class GSTileEntity {//TODO extends nightkosh.gravestone.core.GSTileEntity {
 
     public static void registration() {
-        ModGravestoneExtended.proxy.registerTERenderers();
+//        ModGravestoneExtended.proxy.registerTERenderers();
     }
 }

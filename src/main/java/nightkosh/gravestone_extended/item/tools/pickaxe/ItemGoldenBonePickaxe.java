@@ -8,7 +8,7 @@ package nightkosh.gravestone_extended.item.tools.pickaxe;
  */
 public class ItemGoldenBonePickaxe extends ItemBonePickaxe {
 
-    public ItemGoldenBonePickaxe() {
-        super(ToolMaterial.GOLD, "bone_pickaxe_golden");
-    }
+//    public ItemGoldenBonePickaxe() {
+//        super(ToolMaterial.GOLD, "bone_pickaxe_golden");
+//    }
 }

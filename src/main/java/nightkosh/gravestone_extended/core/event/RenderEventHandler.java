@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.core.event;
 
-import net.minecraft.world.World;
-import net.minecraftforge.client.event.EntityViewRenderEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.helper.TimeHelper;
 import org.lwjgl.opengl.GL11;
@@ -31,12 +26,13 @@ public class RenderEventHandler {
         updateFogDensity();
     }
 
-    public static void resetAmountOfFogSources(World world) {
-        amountOfFogSources = 0;
-        if (fogDensityPerTick != 0 && !TimeHelper.isFogTime(world)) {
-            fogDensityPerTick = 0;
-        }
-    }
+    //TODO
+//    public static void resetAmountOfFogSources(World world) {
+//        amountOfFogSources = 0;
+//        if (fogDensityPerTick != 0 && !TimeHelper.isFogTime(world)) {
+//            fogDensityPerTick = 0;
+//        }
+//    }
 
     private static void updateFogDensity() {
         fogDensityPerTick = DENSITY_PER_GRAVE * amountOfFogSources;
@@ -45,25 +41,26 @@ public class RenderEventHandler {
         }
     }
 
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public void fogEvent(EntityViewRenderEvent.RenderFogEvent event) {
-        if (ExtendedConfig.isFogEnabled) {
-            if (fogDensity < fogDensityPerTick) {
-                fogDensity += DENSITY_PER_TICK;
-            } else if (fogDensity > fogDensityPerTick) {
-                fogDensity -= DENSITY_PER_TICK;
-            }
-            if (fogDensity < DENSITY_PER_TICK) {
-                fogDensity = 0;
-            }
-
-            if (fogDensity > 0) {
-                GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-                GL11.glFogf(GL11.GL_FOG_DENSITY, fogDensity);
-            } else {
-                GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_LINEAR);
-            }
-        }
-    }
+    //TODO
+//    @SubscribeEvent
+//    @SideOnly(Side.CLIENT)
+//    public void fogEvent(EntityViewRenderEvent.RenderFogEvent event) {
+//        if (ExtendedConfig.isFogEnabled) {
+//            if (fogDensity < fogDensityPerTick) {
+//                fogDensity += DENSITY_PER_TICK;
+//            } else if (fogDensity > fogDensityPerTick) {
+//                fogDensity -= DENSITY_PER_TICK;
+//            }
+//            if (fogDensity < DENSITY_PER_TICK) {
+//                fogDensity = 0;
+//            }
+//
+//            if (fogDensity > 0) {
+//                GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+//                GL11.glFogf(GL11.GL_FOG_DENSITY, fogDensity);
+//            } else {
+//                GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_LINEAR);
+//            }
+//        }
+//    }
 }

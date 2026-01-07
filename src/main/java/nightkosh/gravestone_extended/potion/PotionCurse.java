@@ -10,10 +10,10 @@ import nightkosh.gravestone_extended.core.ModInfo;
  */
 public class PotionCurse extends PotionBase {
 
-    public PotionCurse() {
-        super(true, 0);
-        this.setIconIndex(0, 0);
-        this.setRegistryName(ModInfo.ID, "Curse");
-        this.setPotionName("Curse");
-    }
+//    public PotionCurse() {
+//        super(true, 0);
+//        this.setIconIndex(0, 0);
+//        this.setRegistryName(ModInfo.ID, "Curse");
+//        this.setPotionName("Curse");
+//    }
 }

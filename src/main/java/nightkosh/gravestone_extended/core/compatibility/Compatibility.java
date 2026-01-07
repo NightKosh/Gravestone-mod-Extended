@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
-import net.minecraftforge.fml.common.Loader;
-
 /**
  * GraveStone mod
  *
@@ -19,16 +17,6 @@ public class Compatibility {
     public static boolean sophisticatedWolvesInstalled;
 
     public void checkMods() {
-        if (isModLoaded("mocreatures")) {
-            CompatibilityMoCreatures.isInstalled = true;
-            CompatibilityMoCreatures.addMobs();
-        }
-
-        if (isModLoaded("thaumcraft")) {
-            CompatibilityThaumcraft.addReciepes();
-            CompatibilityThaumcraft.addAspects();
-            CompatibilityThaumcraft.addSwords();
-        }
 
         if (isModLoaded("sophisticatedwolves")) {
             sophisticatedWolvesInstalled = true;
@@ -50,6 +38,6 @@ public class Compatibility {
     }
 
     public static boolean isModLoaded(String modId) {
-        return Loader.isModLoaded(modId);
+        return false;//TODO Loader.isModLoaded(modId);
     }
 }

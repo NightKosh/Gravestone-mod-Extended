@@ -8,17 +8,17 @@ package nightkosh.gravestone_extended.potion;
  */
 public abstract class PotionInstant extends PotionBase {
 
-    protected PotionInstant(boolean isBadEffectIn, int liquidColorIn) {
-        super(isBadEffectIn, liquidColorIn);
-    }
-
-    @Override
-    public boolean isInstant() {
-        return true;
-    }
-
-    @Override
-    public boolean hasStatusIcon() {
-        return false;
-    }
+//    protected PotionInstant(boolean isBadEffectIn, int liquidColorIn) {
+//        super(isBadEffectIn, liquidColorIn);
+//    }
+//
+//    @Override
+//    public boolean isInstant() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean hasStatusIcon() {
+//        return false;
+//    }
 }

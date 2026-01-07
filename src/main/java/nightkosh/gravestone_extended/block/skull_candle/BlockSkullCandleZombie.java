@@ -8,7 +8,8 @@ package nightkosh.gravestone_extended.block.skull_candle;
  */
 public class BlockSkullCandleZombie extends BlockSkullCandleSkeleton {
 
-    public BlockSkullCandleZombie() {
-        super("skull_candle_zombie");
-    }
+    //TODO
+//    public BlockSkullCandleZombie() {
+//        super("skull_candle_zombie");
+//    }
 }

@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.potion.potion_type;
 
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionType;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.ModInfo;
 
@@ -14,17 +12,17 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class PotionTypeRust extends PotionType {
+public class PotionTypeRust {//TODO extends PotionType {
 
-    public PotionTypeRust(PotionEffect... effects) {
-        super(effects);
-        this.setRegistryName(ModInfo.ID, "gs_rust_type");
-    }
-
-    @Override
-    public List<PotionEffect> getEffects() {
-        List<PotionEffect> effectList = new ArrayList<>(1);
-        effectList.add(new PotionEffect(GSPotion.RUST, 600));
-        return effectList;
-    }
+//    public PotionTypeRust(PotionEffect... effects) {
+//        super(effects);
+//        this.setRegistryName(ModInfo.ID, "gs_rust_type");
+//    }
+//
+//    @Override
+//    public List<PotionEffect> getEffects() {
+//        List<PotionEffect> effectList = new ArrayList<>(1);
+//        effectList.add(new PotionEffect(GSPotion.RUST, 600));
+//        return effectList;
+//    }
 }

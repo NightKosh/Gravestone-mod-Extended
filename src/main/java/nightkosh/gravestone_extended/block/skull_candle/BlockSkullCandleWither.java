@@ -8,7 +8,8 @@ package nightkosh.gravestone_extended.block.skull_candle;
  */
 public class BlockSkullCandleWither extends BlockSkullCandleSkeleton {
 
-    public BlockSkullCandleWither() {
-        super("skull_candle_wither");
-    }
+    //TODO
+//    public BlockSkullCandleWither() {
+//        super("skull_candle_wither");
+//    }
 }

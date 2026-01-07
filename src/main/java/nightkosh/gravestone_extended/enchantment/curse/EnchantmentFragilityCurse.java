@@ -11,7 +11,7 @@ import nightkosh.gravestone_extended.core.ModInfo;
 public class EnchantmentFragilityCurse extends EnchantmentCurse {
     public EnchantmentFragilityCurse() {
         //TODO BREAKABLE
-        this.setName("fragility_curse");
-        this.setRegistryName(ModInfo.ID, "gs_fragility_curse");
+//        this.setName("fragility_curse");
+//        this.setRegistryName(ModInfo.ID, "gs_fragility_curse");
     }
 }

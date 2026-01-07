@@ -1,13 +1,5 @@
 package nightkosh.gravestone_extended.item.armor.bone;
 
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import nightkosh.gravestone_extended.core.GSTabs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.core.Resources;
@@ -23,26 +15,26 @@ import javax.annotation.Nullable;
  */
 public class ItemBoneLeggings extends AbstractBoneArmor {
 
-    public ItemBoneLeggings() {
-        super(EntityEquipmentSlot.LEGS);
-        this.setUnlocalizedName("gravestone.bone_leggings");
-        this.setRegistryName(ModInfo.ID, "bone_leggings");
-        this.setCreativeTab(GSTabs.otherItemsTab);
-    }
-
-    @Nullable
-    @Override
-    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-        return Resources.BONE_LEGS;
-    }
-
-    @Nullable
-    @Override
-    @SideOnly(Side.CLIENT)
-    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
-        if (!stack.isEmpty() && stack.getItem() instanceof ItemArmor) {
-            return ArmorModelsHelper.BONE_LEGGINGS;
-        }
-        return null;
-    }
+//    public ItemBoneLeggings() {
+//        super(EntityEquipmentSlot.LEGS);
+//        this.setUnlocalizedName("gravestone.bone_leggings");
+//        this.setRegistryName(ModInfo.ID, "bone_leggings");
+//        this.setCreativeTab(GSTabs.otherItemsTab);
+//    }
+//
+//    @Nullable
+//    @Override
+//    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+//        return Resources.BONE_LEGS;
+//    }
+//
+//    @Nullable
+//    @Override
+//    @SideOnly(Side.CLIENT)
+//    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
+//        if (!stack.isEmpty() && stack.getItem() instanceof ItemArmor) {
+//            return ArmorModelsHelper.BONE_LEGGINGS;
+//        }
+//        return null;
+//    }
 }

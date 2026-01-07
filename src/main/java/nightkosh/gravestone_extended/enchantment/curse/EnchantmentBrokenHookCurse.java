@@ -13,20 +13,20 @@ import java.util.Random;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantmentBrokenHookCurse extends EnchantmentCurse {
-    private static final Random RANDOM = new Random();
-
-    public EnchantmentBrokenHookCurse() {
-        super(EnumEnchantmentType.FISHING_ROD, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND});
-        this.setName("broken_hook_curse");
-        this.setRegistryName(ModInfo.ID, "gs_broken_hook_curse");
-    }
-
-    public static void applyEffect(ItemFishedEvent event) {
-        int level = GSEnchantmentHelper.getEnchantmentLevel(event.getEntity().getMainHandItem(), GSEnchantment.CURSE_BROKEN_HOOK);
-        if (level > 0 && RANDOM.nextInt(10) < 3) {
-            event.setCanceled(true);
-        }
-    }
+public class EnchantmentBrokenHookCurse {//TODO extends EnchantmentCurse {
+//    private static final Random RANDOM = new Random();
+//
+//    public EnchantmentBrokenHookCurse() {
+//        super(EnumEnchantmentType.FISHING_ROD, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND});
+//        this.setName("broken_hook_curse");
+//        this.setRegistryName(ModInfo.ID, "gs_broken_hook_curse");
+//    }
+//
+//    public static void applyEffect(ItemFishedEvent event) {
+//        int level = GSEnchantmentHelper.getEnchantmentLevel(event.getEntity().getMainHandItem(), GSEnchantment.CURSE_BROKEN_HOOK);
+//        if (level > 0 && RANDOM.nextInt(10) < 3) {
+//            event.setCanceled(true);
+//        }
+//    }
 
 }

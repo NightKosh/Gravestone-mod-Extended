@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.potion.potion_type;
 
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionType;
 import nightkosh.gravestone_extended.core.GSPotion;
 import nightkosh.gravestone_extended.core.ModInfo;
 
@@ -14,22 +12,22 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class PotionTypeBurning extends PotionType {
-
-    public PotionTypeBurning(PotionEffect... effects) {
-        super(effects);
-        this.setRegistryName(ModInfo.ID, "gs_burning_type");
-    }
-
-    @Override
-    public List<PotionEffect> getEffects() {
-        List<PotionEffect> effectList = new ArrayList<>(1);
-        effectList.add(new PotionEffect(GSPotion.BURNING));
-        return effectList;
-    }
-
-    @Override
-    public boolean hasInstantEffect() {
-        return true;
-    }
+public class PotionTypeBurning {//TODO extends PotionType {
+//
+//    public PotionTypeBurning(PotionEffect... effects) {
+//        super(effects);
+//        this.setRegistryName(ModInfo.ID, "gs_burning_type");
+//    }
+//
+//    @Override
+//    public List<PotionEffect> getEffects() {
+//        List<PotionEffect> effectList = new ArrayList<>(1);
+//        effectList.add(new PotionEffect(GSPotion.BURNING));
+//        return effectList;
+//    }
+//
+//    @Override
+//    public boolean hasInstantEffect() {
+//        return true;
+//    }
 }

@@ -10,10 +10,10 @@ import nightkosh.gravestone_extended.core.ModInfo;
  */
 public class ItemGoldenBoneAxe extends ItemBoneAxe {
 
-    public ItemGoldenBoneAxe() {
-        super(ToolMaterial.GOLD);
-        this.setUnlocalizedName("gravestone.bone_axe_golden");
-        this.setRegistryName(ModInfo.ID, "gs_bone_axe_golden");
-        this.setCreativeTab(null);
-    }
+//    public ItemGoldenBoneAxe() {
+//        super(ToolMaterial.GOLD);
+//        this.setUnlocalizedName("gravestone.bone_axe_golden");
+//        this.setRegistryName(ModInfo.ID, "gs_bone_axe_golden");
+//        this.setCreativeTab(null);
+//    }
 }

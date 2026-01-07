@@ -41,42 +41,45 @@ public class GSEventsHandler {
     // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onEntityLivingDeath(LivingDeathEvent event) {
-        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
-            if (event.getEntity() instanceof Creeper creeper && creeper.isPowered()) {
-                // drop creeper statue if entity is a charged creeper
-                GSBlock.MEMORIAL.dropCreeperMemorial(creeper.level(), creeper.blockPosition());
-            }
-        }
+        //TODO
+//        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
+//            if (event.getEntity() instanceof Creeper creeper && creeper.isPowered()) {
+//                // drop creeper statue if entity is a charged creeper
+//                GSBlock.MEMORIAL.dropCreeperMemorial(creeper.level(), creeper.blockPosition());
+//            }
+//        }
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void breakBlockEvent(BlockEvent.BreakEvent event) {
-        if (EnchantmentBloodyReplication.applyEffect(event.getPlayer(), event.getState(), event.getPos())) {
-            event.setCanceled(true);
-        }
+        //TODO
+//        if (EnchantmentBloodyReplication.applyEffect(event.getPlayer(), event.getState(), event.getPos())) {
+//            event.setCanceled(true);
+//        }
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void livingDamageEvent(LivingDamageEvent event) {
-        if (EnchantmentAwkwardCurse.applyCurseEffect(event.getSource(), event.getEntityLiving(), event.getAmount())) {
-            event.setCanceled(true);
-        }
+        //TODO
+//        if (EnchantmentAwkwardCurse.applyCurseEffect(event.getSource(), event.getEntityLiving(), event.getAmount())) {
+//            event.setCanceled(true);
+//        }
     }
-
-    @SubscribeEvent
-    public void livingAttackEvent(LivingAttackEvent event) {
-        if (event.getEntityLiving() instanceof Player player) {
-            EnchantmentPainMirror.applyEffect(player, event.getSource().getTrueSource(), event.getAmount());
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
-        if (event.getEntityLiving() instanceof Player player) {
-            EnchantmentFrozenNether.applyEffect(player);
-            EnchantmentWebCrawler.applyEffect(player);
-        }
-    }
+//TODO
+//    @SubscribeEvent
+//    public void livingAttackEvent(LivingAttackEvent event) {
+//        if (event.getEntityLiving() instanceof Player player) {
+//            EnchantmentPainMirror.applyEffect(player, event.getSource().getTrueSource(), event.getAmount());
+//        }
+//    }
+//
+//    @SubscribeEvent(priority = EventPriority.HIGHEST)
+//    public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
+//        if (event.getEntityLiving() instanceof Player player) {
+//            EnchantmentFrozenNether.applyEffect(player);
+//            EnchantmentWebCrawler.applyEffect(player);
+//        }
+//    }
 
 //    @SubscribeEvent
 //    public void livingUseItemEvent(LivingEntityUseItemEvent event) {
@@ -92,53 +95,56 @@ public class GSEventsHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void itemFishedEvent(ItemFishedEvent event) {
-        EnchantmentBrokenHookCurse.applyEffect(event);
+        //TODO
+//        EnchantmentBrokenHookCurse.applyEffect(event);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onEntityLivingDamage(LivingDamageEvent event) {
-        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
-            Entity entity = event.getSource().getTrueSource();
-            if (entity instanceof LivingEntity attacker && event.getEntity() instanceof LivingEntity targert) {
-                ItemStack itemMainHand = attacker.getHeldItemMainhand();
-                ItemStack itemOffHand = attacker.getHeldItemOffhand();
-                if (itemMainHand.getItem() instanceof IBoneSword) {
-                    applyEntityLivingDamageEnchantments(attacker, targert, itemMainHand, event.getAmount());
-                } else if (itemOffHand.getItem() instanceof IBoneSword) {
-                    applyEntityLivingDamageEnchantments(attacker, targert, itemOffHand, event.getAmount());
-                }
-            }
-        }
+        //TODO
+//        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
+//            Entity entity = event.getSource().getTrueSource();
+//            if (entity instanceof LivingEntity attacker && event.getEntity() instanceof LivingEntity targert) {
+//                ItemStack itemMainHand = attacker.getHeldItemMainhand();
+//                ItemStack itemOffHand = attacker.getHeldItemOffhand();
+//                if (itemMainHand.getItem() instanceof IBoneSword) {
+//                    applyEntityLivingDamageEnchantments(attacker, targert, itemMainHand, event.getAmount());
+//                } else if (itemOffHand.getItem() instanceof IBoneSword) {
+//                    applyEntityLivingDamageEnchantments(attacker, targert, itemOffHand, event.getAmount());
+//                }
+//            }
+//        }
     }
-
-    private static void applyEntityLivingDamageEnchantments(LivingEntity attacker, LivingEntity target, ItemStack weapon, float damage) {
-        NBTTagList nbtList = weapon.getEnchantmentTagList();
-        for (NBTBase nbt : nbtList) {
-            if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.VAMPIRIC_TOUCH)) {
-                EnchantmentVampiricTouch.applyEnchantmentEffect(attacker, damage);
-            } else if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.NECROTIC_CORROSION)) {
-                EnchantmentNecroticCorrosion.applyEnchantmentEffect(target, damage, ((NBTTagCompound) nbt).getShort("lvl"));
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void onProjectileImpact(ProjectileImpactEvent.Throwable event) {
-        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
-            if (event.getThrowable() instanceof EntityPotion) {
-                EntityPotion entityPotion = (EntityPotion) event.getThrowable();
-                PotionType potionType = PotionUtils.getPotionFromItem(entityPotion.getPotion());
-
-                if (potionType == GSPotion.PURIFICATION_TYPE) {
-                    PotionPurification.applyPotionOnBlocks(entityPotion);
-                }
-            }
-        }
-    }
+//TODO
+//    private static void applyEntityLivingDamageEnchantments(LivingEntity attacker, LivingEntity target, ItemStack weapon, float damage) {
+//        NBTTagList nbtList = weapon.getEnchantmentTagList();
+//        for (NBTBase nbt : nbtList) {
+//            if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.VAMPIRIC_TOUCH)) {
+//                EnchantmentVampiricTouch.applyEnchantmentEffect(attacker, damage);
+//            } else if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.NECROTIC_CORROSION)) {
+//                EnchantmentNecroticCorrosion.applyEnchantmentEffect(target, damage, ((NBTTagCompound) nbt).getShort("lvl"));
+//            }
+//        }
+//    }
+//
+//    @SubscribeEvent(priority = EventPriority.HIGH)
+//    public void onProjectileImpact(ProjectileImpactEvent.Throwable event) {
+//        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
+//            if (event.getThrowable() instanceof EntityPotion) {
+//                EntityPotion entityPotion = (EntityPotion) event.getThrowable();
+//                PotionType potionType = PotionUtils.getPotionFromItem(entityPotion.getPotion());
+//
+//                if (potionType == GSPotion.PURIFICATION_TYPE) {
+//                    PotionPurification.applyPotionOnBlocks(entityPotion);
+//                }
+//            }
+//        }
+//    }
 
     @SubscribeEvent
     public void lootLoad(LootTableLoadEvent event) {
-        GSLootTables.inject(event);
+        //TODO
+//        GSLootTables.inject(event);
     }
 
 }

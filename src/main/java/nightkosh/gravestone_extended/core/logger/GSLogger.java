@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.core.logger;
 
-import nightkosh.gravestone.core.logger.GravesLogger;
 import nightkosh.gravestone_extended.core.ModInfo;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class GSLogger {
 
     private static Logger logger = LogManager.getLogger(ModInfo.ID);
-    private static Logger graveLogger = new GravesLogger();
+//    private static Logger graveLogger = new GravesLogger();//TODO
 
     public static void log(Level logLevel, String message) {
         logger.log(logLevel, message);
@@ -29,15 +28,15 @@ public class GSLogger {
         logger.log(Level.ERROR, message);
     }
 
-    public static void logGrave(Level logLevel, String message) {
-        graveLogger.log(logLevel, message);
-    }
-
-    public static void logInfoGrave(String message) {
-        graveLogger.log(Level.INFO, message);
-    }
-
-    public static void logErrorGrave(String message) {
-        graveLogger.log(Level.ERROR, message);
-    }
+//    public static void logGrave(Level logLevel, String message) {
+//        graveLogger.log(logLevel, message);
+//    }
+//
+//    public static void logInfoGrave(String message) {
+//        graveLogger.log(Level.INFO, message);
+//    }
+//
+//    public static void logErrorGrave(String message) {
+//        graveLogger.log(Level.ERROR, message);
+//    }
 }

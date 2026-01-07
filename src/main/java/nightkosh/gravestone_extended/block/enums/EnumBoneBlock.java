@@ -5,16 +5,13 @@
 
 package nightkosh.gravestone_extended.block.enums;
 
-import net.minecraft.util.IStringSerializable;
-import nightkosh.gravestone.block.enums.IBlockEnum;
-
 /**
  * GraveStone mod
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public enum EnumBoneBlock implements IBlockEnum, IStringSerializable {
+public enum EnumBoneBlock {//TODO implements IBlockEnum, IStringSerializable {
 
     BONE_BLOCK("block.bone_block.default", "bone_block"),
     SKULL_BONE_BLOCK("block.bone_block.skull", "bone_block_with_skull"),
@@ -28,12 +25,12 @@ public enum EnumBoneBlock implements IBlockEnum, IStringSerializable {
         this.blockModelName = blockModelName;
     }
 
-    @Override
+//    @Override
     public String getUnLocalizedName() {
         return this.name;
     }
 
-    @Override
+//    @Override
     public String getName() {
         return blockModelName;
     }

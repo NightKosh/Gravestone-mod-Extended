@@ -10,9 +10,9 @@ import nightkosh.gravestone_extended.core.GSTabs;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class ItemDiamondBoneShovel extends ItemBoneShovel {
-
-    public ItemDiamondBoneShovel() {
-        super(GSMaterials.BONE_TOOL, "bone_shovel_diamond");
-        this.setCreativeTab(GSTabs.otherItemsTab);
-    }
+//
+//    public ItemDiamondBoneShovel() {
+//        super(GSMaterials.BONE_TOOL, "bone_shovel_diamond");
+//        this.setCreativeTab(GSTabs.otherItemsTab);
+//    }
 }

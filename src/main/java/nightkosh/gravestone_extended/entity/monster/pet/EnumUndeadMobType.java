@@ -35,10 +35,6 @@ public enum EnumUndeadMobType {
         return this.name;
     }
 
-    public String getLocalizedName() {
-        return ModGravestoneExtended.proxy.getLocalizedString(this.name);
-    }
-
     public boolean sunLightProtected() {
         return this == HUSK || fireProtected();
     }

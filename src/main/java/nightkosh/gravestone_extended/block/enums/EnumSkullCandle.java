@@ -1,15 +1,12 @@
 package nightkosh.gravestone_extended.block.enums;
 
-import net.minecraft.util.IStringSerializable;
-import nightkosh.gravestone.block.enums.IBlockEnum;
-
 /**
  * GraveStone mod
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public enum EnumSkullCandle implements IBlockEnum, IStringSerializable {
+public enum EnumSkullCandle {//TODO implements IBlockEnum, IStringSerializable {
 
     SKELETON_SKULL("block.skull_candle.skeleton", "skeleton_skull_candle"),
     WITHER_SKULL("block.skull_candle.wither_skeleton", "wither_skull_candle"),
@@ -22,15 +19,15 @@ public enum EnumSkullCandle implements IBlockEnum, IStringSerializable {
         this.blockModelName = blockModelName;
     }
 
-    @Override
-    public String getUnLocalizedName() {
-        return this.name;
-    }
-
-    @Override
-    public String getName() {
-        return blockModelName;
-    }
+//    @Override
+//    public String getUnLocalizedName() {
+//        return this.name;
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return blockModelName;
+//    }
 
     public static EnumSkullCandle getById(int id) {
         if (id < values().length) {

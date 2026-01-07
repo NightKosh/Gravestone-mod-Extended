@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraft.world.DimensionType;
-import net.minecraft.world.WorldProvider;
-import net.minecraftforge.common.DimensionManager;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.dimension.catacombs.WorldProviderCatacombs;
 
@@ -14,12 +11,12 @@ import nightkosh.gravestone_extended.dimension.catacombs.WorldProviderCatacombs;
  */
 public class GSDimensions {
     public static final int CATACOMBS_DEFAULT_DIMENSION_ID = -8;
-
-    public static final DimensionType CATACOMBS = DimensionType.register("catacombs", "_catacombs", ExtendedConfig.catacombsDimensionId, WorldProviderCatacombs.class, false);
-
-    public static final WorldProvider PROVIDER_CATACOMBS = CATACOMBS.createDimension();
-
-    public static void registration() {
-        DimensionManager.registerDimension(CATACOMBS.getId(), CATACOMBS);
-    }
+//TODO
+//    public static final DimensionType CATACOMBS = DimensionType.register("catacombs", "_catacombs", ExtendedConfig.catacombsDimensionId, WorldProviderCatacombs.class, false);
+//
+//    public static final WorldProvider PROVIDER_CATACOMBS = CATACOMBS.createDimension();
+//
+//    public static void registration() {
+//        DimensionManager.registerDimension(CATACOMBS.getId(), CATACOMBS);
+//    }
 }

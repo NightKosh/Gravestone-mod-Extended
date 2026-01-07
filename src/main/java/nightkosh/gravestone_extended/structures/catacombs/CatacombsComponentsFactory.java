@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.structures.catacombs;
 
-import net.minecraft.util.EnumFacing;
 import nightkosh.gravestone_extended.structures.catacombs.components.*;
 
 import java.lang.reflect.Constructor;
@@ -151,24 +150,24 @@ public class CatacombsComponentsFactory {
         return componentClass;
     }
 
-    public static CatacombsBaseComponent createComponent(CatacombsBaseComponent.Passage exit, Random random, EnumFacing facing, int level, Class<CatacombsBaseComponent> buildComponent) {
-        CatacombsBaseComponent component = exit.getComponent();
-        if (component != null) {
-            try {
-                Constructor<CatacombsBaseComponent> constructor = buildComponent.getConstructor(EnumFacing.class, int.class, Random.class, int.class, int.class, int.class);
-                component = constructor.newInstance(facing, level, random, component.getXEnd(exit), component.getYEnd(exit), component.getZEnd(exit));
-                return component;
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-            }
-        }
-
-        return null;
-    }
+//    public static CatacombsBaseComponent createComponent(CatacombsBaseComponent.Passage exit, Random random, EnumFacing facing, int level, Class<CatacombsBaseComponent> buildComponent) {
+//        CatacombsBaseComponent component = exit.getComponent();
+//        if (component != null) {
+//            try {
+//                Constructor<CatacombsBaseComponent> constructor = buildComponent.getConstructor(EnumFacing.class, int.class, Random.class, int.class, int.class, int.class);
+//                component = constructor.newInstance(facing, level, random, component.getXEnd(exit), component.getYEnd(exit), component.getZEnd(exit));
+//                return component;
+//            } catch (NoSuchMethodException e) {
+//                e.printStackTrace();
+//            } catch (InstantiationException e) {
+//                e.printStackTrace();
+//            } catch (IllegalAccessException e) {
+//                e.printStackTrace();
+//            } catch (InvocationTargetException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        return null;
+//    }
 }

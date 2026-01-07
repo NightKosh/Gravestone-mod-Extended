@@ -3,8 +3,8 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.event.LootTableLoadEvent;
-import nightkosh.gravestone.api.grave.EnumGraveMaterial;
-import nightkosh.gravestone.helper.GraveGenerationHelper;
+//import nightkosh.gravestone.api.grave.EnumGraveMaterial;
+//import nightkosh.gravestone.helper.GraveGenerationHelper;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
 import nightkosh.gravestone_extended.loot.LootContextGrave;
 import nightkosh.gravestone_extended.loot.condition.LootConditionCorpseContentType;
@@ -84,94 +84,90 @@ public class GSLootTables {
     public static final Identifier INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL = fromNamespaceAndPath(ModInfo.ID, "inject/fishing_lava_nether_enchanted_skull");
 
 
-    public static void registration() {
-        LootTableList.register(RAVEN);
-        LootTableList.register(DAMNED_WARRIOR);
-
-        //fishing
-        LootTableList.register(FISHING_TOXIC_WATER);
-        LootTableList.register(FISHING_TOXIC_WATER_TREASURE);
-
-        //graves
-        LootTableList.register(GRAVE);
-
-        LootTableList.register(GRAVE_PLAYER);
-
-        LootTableList.register(GRAVE_PLAYER_SKULL);
-        LootTableList.register(GRAVE_PLAYER_BONES_AND_FLESH);
-        LootTableList.register(GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH);
-
-        LootTableList.register(GRAVE_PLAYER_ADVENTURER);
-        LootTableList.register(GRAVE_PLAYER_WIZARD);
-        LootTableList.register(GRAVE_PLAYER_WORKER);//TODO add loot
-        LootTableList.register(GRAVE_PLAYER_MINER);
-
-        LootTableList.register(GRAVE_PLAYER_WARRIOR);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_BOW);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_SWORD);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_IRON);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_GOLDEN);
-        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_DIAMOND);
-
-        LootTableList.register(GRAVE_PLAYER_TREASURY);
-
-        LootTableList.register(GRAVE_VILLAGER);
-
-        LootTableList.register(GRAVE_DOG);
-        LootTableList.register(GRAVE_DOG_ITEMS);
-        LootTableList.register(GRAVE_DOG_CORPSE);
-        LootTableList.register(GRAVE_DOG_BONES_AND_FLESH);
-
-        LootTableList.register(GRAVE_CAT);
-        LootTableList.register(GRAVE_CAT_ITEMS);
-        LootTableList.register(GRAVE_CAT_CORPSE);
-        LootTableList.register(GRAVE_CAT_BONES_AND_FLESH);
-
-        LootTableList.register(GRAVE_HORSE);
-        LootTableList.register(GRAVE_HORSE_ITEMS);
-        LootTableList.register(GRAVE_HORSE_CORPSE);
-        LootTableList.register(GRAVE_HORSE_BONES_AND_FLESH);
-
-        LootTableList.register(GRAVE_OTHER_EGGS);
-        LootTableList.register(GRAVE_OTHER_RECORDS);
-        LootTableList.register(GRAVE_OTHER_POTIONS);
-
-        //inject
-        LootTableList.register(INJECT_BAT);
-        LootTableList.register(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL);
-
-
-        // conditions
-        LootConditionManager.registerCondition(new LootConditionGraveMaterial.Serializer());
-        LootConditionManager.registerCondition(new LootConditionGraveContentType.Serializer());
-        LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
-        LootConditionManager.registerCondition(new LootConditionCorpseContentType.Serializer());
-
-        // functions
-        LootFunctionManager.registerFunction(new LootFunctionCorpse.Serializer());
-    }
-
-    public static void inject(LootTableLoadEvent event) {
-        if (event.getName().toString().equals("advanced-fishing:gameplay/fishing_lava_nether/treasure")) {
-            event.getTable().getPool("fishing_lava_nether_treasure").addEntry(
-                    new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 10, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull"));
-        }
-    }
-
-    public static List<ItemStack> getGraveLoot(World world, Random random, Identifier lootTable,
-                                               GraveInventoryHelper.GraveCorpseContentType corpseContentType,
-                                               GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
-                                               GraveInventoryHelper.GraveContentType graveContentType,
-                                               EnumGraveMaterial graveMaterial) {
-        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
-                new LootContextGrave.Builder((WorldServer) world)
-                        .withCorpseContentType(corpseContentType)
-                        .withGraveTypeByEntity(graveTypeByEntity)
-                        .withGraveContentType(graveContentType)
-                        .withGraveMaterial(graveMaterial)
-                        .build());
-    }
+//    public static void registration() {
+//        //fishing
+//        LootTableList.register(FISHING_TOXIC_WATER);
+//        LootTableList.register(FISHING_TOXIC_WATER_TREASURE);
+//
+//        //graves
+//        LootTableList.register(GRAVE);
+//
+//        LootTableList.register(GRAVE_PLAYER);
+//
+//        LootTableList.register(GRAVE_PLAYER_SKULL);
+//        LootTableList.register(GRAVE_PLAYER_BONES_AND_FLESH);
+//        LootTableList.register(GRAVE_PLAYER_SKULL_AND_BONES_AND_FLESH);
+//
+//        LootTableList.register(GRAVE_PLAYER_ADVENTURER);
+//        LootTableList.register(GRAVE_PLAYER_WIZARD);
+//        LootTableList.register(GRAVE_PLAYER_WORKER);//TODO add loot
+//        LootTableList.register(GRAVE_PLAYER_MINER);
+//
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_BOW);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_SWORD);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_LEATHER);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_IRON);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_CHAINMAIL);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_GOLDEN);
+//        LootTableList.register(GRAVE_PLAYER_WARRIOR_ARMOR_DIAMOND);
+//
+//        LootTableList.register(GRAVE_PLAYER_TREASURY);
+//
+//        LootTableList.register(GRAVE_VILLAGER);
+//
+//        LootTableList.register(GRAVE_DOG);
+//        LootTableList.register(GRAVE_DOG_ITEMS);
+//        LootTableList.register(GRAVE_DOG_CORPSE);
+//        LootTableList.register(GRAVE_DOG_BONES_AND_FLESH);
+//
+//        LootTableList.register(GRAVE_CAT);
+//        LootTableList.register(GRAVE_CAT_ITEMS);
+//        LootTableList.register(GRAVE_CAT_CORPSE);
+//        LootTableList.register(GRAVE_CAT_BONES_AND_FLESH);
+//
+//        LootTableList.register(GRAVE_HORSE);
+//        LootTableList.register(GRAVE_HORSE_ITEMS);
+//        LootTableList.register(GRAVE_HORSE_CORPSE);
+//        LootTableList.register(GRAVE_HORSE_BONES_AND_FLESH);
+//
+//        LootTableList.register(GRAVE_OTHER_EGGS);
+//        LootTableList.register(GRAVE_OTHER_RECORDS);
+//        LootTableList.register(GRAVE_OTHER_POTIONS);
+//
+//        //inject
+//        LootTableList.register(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL);
+//
+//
+//        // conditions
+//        LootConditionManager.registerCondition(new LootConditionGraveMaterial.Serializer());
+//        LootConditionManager.registerCondition(new LootConditionGraveContentType.Serializer());
+//        LootConditionManager.registerCondition(new LootConditionGraveTypeByEntity.Serializer());
+//        LootConditionManager.registerCondition(new LootConditionCorpseContentType.Serializer());
+//
+//        // functions
+//        LootFunctionManager.registerFunction(new LootFunctionCorpse.Serializer());
+//    }
+//
+//    public static void inject(LootTableLoadEvent event) {
+//        if (event.getName().toString().equals("advanced-fishing:gameplay/fishing_lava_nether/treasure")) {
+//            event.getTable().getPool("fishing_lava_nether_treasure").addEntry(
+//                    new LootEntryTable(INJECT_FISHING_LAVA_NETHER_ENCHANTED_SKULL, 10, 1, new LootCondition[0], "fishing_lava_nether_enchanted_skull"));
+//        }
+//    }
+//
+//    public static List<ItemStack> getGraveLoot(World world, Random random, Identifier lootTable,
+//                                               GraveInventoryHelper.GraveCorpseContentType corpseContentType,
+//                                               GraveGenerationHelper.EnumGraveTypeByEntity graveTypeByEntity,
+//                                               GraveInventoryHelper.GraveContentType graveContentType,
+//                                               EnumGraveMaterial graveMaterial) {
+//        return world.getLootTableManager().getLootTableFromLocation(lootTable).generateLootForPools(random,
+//                new LootContextGrave.Builder((WorldServer) world)
+//                        .withCorpseContentType(corpseContentType)
+//                        .withGraveTypeByEntity(graveTypeByEntity)
+//                        .withGraveContentType(graveContentType)
+//                        .withGraveMaterial(graveMaterial)
+//                        .build());
+//    }
     
 }

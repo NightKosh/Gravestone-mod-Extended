@@ -10,10 +10,10 @@ import nightkosh.gravestone_extended.core.ModInfo;
  */
 public class ItemGoldenBoneHoe extends ItemBoneHoe {
 
-    public ItemGoldenBoneHoe() {
-        super(ToolMaterial.GOLD);
-        this.setUnlocalizedName("gravestone.bone_hoe_golden");
-        this.setRegistryName(ModInfo.ID, "gs_bone_hoe_golden");
-        this.setCreativeTab(null);
-    }
+//    public ItemGoldenBoneHoe() {
+//        super(ToolMaterial.GOLD);
+//        this.setUnlocalizedName("gravestone.bone_hoe_golden");
+//        this.setRegistryName(ModInfo.ID, "gs_bone_hoe_golden");
+//        this.setCreativeTab(null);
+//    }
 }

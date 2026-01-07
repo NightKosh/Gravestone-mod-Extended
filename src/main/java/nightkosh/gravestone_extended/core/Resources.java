@@ -10,7 +10,7 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class Resources extends nightkosh.gravestone.core.Resources{
+public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
 
     protected static final String BLOCK_LOCATION = ":textures/blocks/";
     protected static final String FLUID_LOCATION = ":blocks/fluids/";

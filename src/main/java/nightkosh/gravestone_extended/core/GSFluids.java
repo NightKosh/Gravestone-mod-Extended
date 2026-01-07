@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.core;
 
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
-
 /**
  * GraveStone mod
  *
@@ -11,10 +8,10 @@ import net.minecraftforge.fluids.FluidRegistry;
  */
 public class GSFluids {
 
-    public static final Fluid TOXIC_WATER = new Fluid("gs_toxic_water", Resources.TOXIC_WATER_STILL, Resources.TOXIC_WATER_FLOW);
-
-    static {
-        FluidRegistry.registerFluid(TOXIC_WATER);
-        FluidRegistry.addBucketForFluid(TOXIC_WATER);
-    }
+//    public static final Fluid TOXIC_WATER = new Fluid("gs_toxic_water", Resources.TOXIC_WATER_STILL, Resources.TOXIC_WATER_FLOW);
+//
+//    static {
+//        FluidRegistry.registerFluid(TOXIC_WATER);
+//        FluidRegistry.addBucketForFluid(TOXIC_WATER);
+//    }
 }

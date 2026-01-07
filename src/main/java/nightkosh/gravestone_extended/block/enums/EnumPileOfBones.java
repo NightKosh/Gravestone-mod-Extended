@@ -1,15 +1,12 @@
 package nightkosh.gravestone_extended.block.enums;
 
-import net.minecraft.util.IStringSerializable;
-import nightkosh.gravestone.block.enums.IBlockEnum;
-
 /**
  * GraveStone mod
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public enum EnumPileOfBones implements IBlockEnum, IStringSerializable {
+public enum EnumPileOfBones {//TODO implements IBlockEnum, IStringSerializable {
 
     PILE_OF_BONES("block.pile_of_bones", "pile_of_bones"),
     PILE_OF_BONES_WITH_SKULL("block.pile_of_bones_with_skull", "pile_of_bones_with_skull"),
@@ -23,15 +20,15 @@ public enum EnumPileOfBones implements IBlockEnum, IStringSerializable {
         this.blockModelName = blockModelName;
     }
 
-    @Override
-    public String getUnLocalizedName() {
-        return this.name;
-    }
-
-    @Override
-    public String getName() {
-        return blockModelName;
-    }
+//    @Override
+//    public String getUnLocalizedName() {
+//        return this.name;
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return blockModelName;
+//    }
 
     public static EnumPileOfBones getById(int id) {
         if (id < values().length) {

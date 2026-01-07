@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.models.block;
 
-import net.minecraft.client.model.ModelBase;
 
 /**
  * GraveStone mod
@@ -8,7 +7,7 @@ import net.minecraft.client.model.ModelBase;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public abstract class ModelSpawnerBase extends ModelBase {
+public abstract class ModelSpawnerBase {//TODO extends ModelBase {
 
     public abstract void renderAll();
 }

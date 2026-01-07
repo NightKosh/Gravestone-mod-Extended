@@ -8,7 +8,7 @@ package nightkosh.gravestone_extended.item.tools.shovel;
  */
 public class ItemIronBoneShovel extends ItemBoneShovel {
 
-    public ItemIronBoneShovel() {
-        super(ToolMaterial.IRON, "bone_shovel_iron");
-    }
+//    public ItemIronBoneShovel() {
+//        super(ToolMaterial.IRON, "bone_shovel_iron");
+//    }
 }

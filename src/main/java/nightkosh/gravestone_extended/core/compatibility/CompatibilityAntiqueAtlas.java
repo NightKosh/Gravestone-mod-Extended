@@ -1,7 +1,7 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
+import net.minecraft.world.entity.player.Player;
 import nightkosh.gravestone_extended.config.ExtendedConfig;
-import net.minecraft.entity.player.EntityPlayer;
 
 /**
  * GraveStone mod
@@ -16,7 +16,7 @@ public class CompatibilityAntiqueAtlas {
     private CompatibilityAntiqueAtlas() {
     }
 
-    public static void placeDeathMarkerAtDeath(EntityPlayer player) {
+    public static void placeDeathMarkerAtDeath(Player player) {
         if (isInstalled() && ExtendedConfig.enableAntiqueAtlasDeathMarkers) {
 //            List<Integer> atlasesIdList = AtlasAPI.getPlayerAtlases(player);
 //            MarkerAPI markerAPI = AtlasAPI.getMarkerAPI();
