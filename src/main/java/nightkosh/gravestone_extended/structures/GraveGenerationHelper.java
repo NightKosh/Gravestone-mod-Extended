@@ -1,16 +1,7 @@
 package nightkosh.gravestone_extended.structures;
 
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.logger.GSLogger;
-import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
-import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
-import nightkosh.gravestone_extended.helper.GraveStoneHelper;
-import nightkosh.gravestone_extended.helper.GraveWorldGenerationHelper;
-
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

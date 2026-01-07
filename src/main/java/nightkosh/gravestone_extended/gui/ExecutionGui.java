@@ -6,7 +6,7 @@ import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
 import org.lwjgl.opengl.GL11;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

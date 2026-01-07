@@ -6,7 +6,7 @@ import nightkosh.gravestone_extended.potion.*;
 import nightkosh.gravestone_extended.potion.potion_type.*;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

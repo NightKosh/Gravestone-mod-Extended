@@ -1,15 +1,7 @@
 package nightkosh.gravestone_extended.enchantment;
 
-import net.minecraft.world.entity.player.Player;
-import nightkosh.gravestone_extended.block.BlockFrozenLava;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneBoots;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

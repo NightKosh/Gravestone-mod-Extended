@@ -1,11 +1,7 @@
 package nightkosh.gravestone_extended.item.tools.hoe;
 
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.ModInfo;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

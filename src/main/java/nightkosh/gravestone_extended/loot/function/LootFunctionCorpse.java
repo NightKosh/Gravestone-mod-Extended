@@ -1,17 +1,7 @@
 package nightkosh.gravestone_extended.loot.function;
 
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializationContext;
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.item.corpse.*;
-import nightkosh.gravestone_extended.loot.LootContextGrave;
-
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

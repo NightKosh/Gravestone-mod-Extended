@@ -4,7 +4,7 @@ import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.dimension.catacombs.WorldProviderCatacombs;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

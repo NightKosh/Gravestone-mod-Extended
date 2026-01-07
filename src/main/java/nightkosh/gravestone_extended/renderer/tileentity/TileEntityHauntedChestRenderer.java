@@ -8,7 +8,7 @@ import org.lwjgl.opengl.GL12;
 import java.util.Calendar;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

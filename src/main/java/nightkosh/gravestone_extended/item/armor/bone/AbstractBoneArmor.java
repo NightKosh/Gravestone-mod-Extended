@@ -1,10 +1,7 @@
 package nightkosh.gravestone_extended.item.armor.bone;
 
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSMaterials;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

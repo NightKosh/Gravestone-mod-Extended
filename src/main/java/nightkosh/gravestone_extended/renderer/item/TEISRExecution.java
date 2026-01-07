@@ -4,7 +4,7 @@ import nightkosh.gravestone_extended.block.enums.EnumExecution;
 import nightkosh.gravestone_extended.renderer.tileentity.TileEntityExecutionRenderer;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

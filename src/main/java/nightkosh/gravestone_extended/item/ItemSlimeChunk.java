@@ -1,15 +1,7 @@
 package nightkosh.gravestone_extended.item;
 
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.core.MessageHandler;
-import nightkosh.gravestone_extended.helper.VanillaStructuresPosition;
-import nightkosh.gravestone_extended.packets.SeedMessageToServer;
-
-import javax.annotation.Nullable;
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

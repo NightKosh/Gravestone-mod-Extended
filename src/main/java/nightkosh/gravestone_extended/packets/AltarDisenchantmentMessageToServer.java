@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.packets;
 
-import io.netty.buffer.ByteBuf;
 //import net.minecraft.entity.player.EntityPlayer;
 //import net.minecraft.init.Items;
 //import net.minecraft.item.ItemStack;
@@ -15,15 +14,10 @@ import io.netty.buffer.ByteBuf;
 //import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 //import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 //import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.inventory.AltarDisenchantmentInventory;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

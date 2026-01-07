@@ -4,7 +4,7 @@ import nightkosh.gravestone_extended.core.Resources;
 import nightkosh.gravestone_extended.models.entity.ModelRaven;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

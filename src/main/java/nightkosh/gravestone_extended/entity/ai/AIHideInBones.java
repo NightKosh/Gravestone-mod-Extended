@@ -1,12 +1,7 @@
 package nightkosh.gravestone_extended.entity.ai;
 
-import nightkosh.gravestone_extended.block.BlockBoneBlock;
-import nightkosh.gravestone_extended.core.GSBlock;
-
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

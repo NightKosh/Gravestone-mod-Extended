@@ -3,27 +3,14 @@ package nightkosh.gravestone_extended;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import nightkosh.gravestone_extended.capability.cemetery.Cemetery;
-import nightkosh.gravestone_extended.capability.cemetery.CemeteryStorage;
-import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.*;
-import nightkosh.gravestone_extended.core.commands.ExtendedCommands;
-import nightkosh.gravestone_extended.core.compatibility.Compatibility;
-import nightkosh.gravestone_extended.core.event.GSEventsHandler;
-import nightkosh.gravestone_extended.core.event.TickEventHandler;
-import nightkosh.gravestone_extended.core.proxy.CommonProxy;
-import nightkosh.gravestone_extended.helper.CemeteryHelper;
-import nightkosh.gravestone_extended.helper.FogHandler;
-import nightkosh.gravestone_extended.helper.GraveGenerationHelper;
-import nightkosh.gravestone_extended.helper.GraveSpawnerHelper;
-import nightkosh.gravestone_extended.structures.village.VillagersHandler;
+import nightkosh.gravestone_extended.core.GSEBlocks;
+import nightkosh.gravestone_extended.core.GSEItems;
+import nightkosh.gravestone_extended.core.ModInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -48,7 +35,8 @@ public class ModGravestoneExtended {
 
 //        GSEEntities.register(eventBus);
 //        GSESounds.register(eventBus);
-//        GSEItems.register(eventBus);
+        GSEBlocks.register(eventBus);
+        GSEItems.register(eventBus);
 //        GSETabs.register(eventBus);
 //        GSEMobEffects.register(eventBus);
     }

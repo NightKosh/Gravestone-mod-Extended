@@ -1,20 +1,7 @@
 package nightkosh.gravestone_extended.structures.village.undertaker;
 
-import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleSkeleton;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
-import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.structures.BoundingBoxHelper;
-import nightkosh.gravestone_extended.structures.GraveGenerationHelper;
-import nightkosh.gravestone_extended.structures.IComponentGraveStone;
-import nightkosh.gravestone_extended.structures.village.VillagersHandler;
-
-import java.util.List;
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

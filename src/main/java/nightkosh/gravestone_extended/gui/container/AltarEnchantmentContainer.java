@@ -1,15 +1,9 @@
 package nightkosh.gravestone_extended.gui.container;
 
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSkullSlot;
-import nightkosh.gravestone_extended.gui.container.slot.AltarEnchantmentSlot;
-import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
 
-import java.util.Map;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

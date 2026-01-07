@@ -1,19 +1,7 @@
 package nightkosh.gravestone_extended.block;
 
-import nightkosh.gravestone_extended.block.enums.EnumSpawner;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSParticles;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.tileentity.TileEntitySpawner;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

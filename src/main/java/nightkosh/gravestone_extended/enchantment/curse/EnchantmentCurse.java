@@ -3,7 +3,7 @@ package nightkosh.gravestone_extended.enchantment.curse;
 import nightkosh.gravestone_extended.enchantment.EnchantmentBase;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

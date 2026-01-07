@@ -5,7 +5,7 @@ import net.minecraft.resources.Identifier;
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

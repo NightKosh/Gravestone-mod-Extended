@@ -1,25 +1,11 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.animal.feline.Cat;
-import net.minecraft.world.entity.animal.wolf.Wolf;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.Level;
-import nightkosh.gravestone_extended.capability.cemetery.CemeteryInfo;
-import nightkosh.gravestone_extended.capability.cemetery.CemeteryProvider;
-import nightkosh.gravestone_extended.capability.cemetery.ICemetery;
-import nightkosh.gravestone_extended.core.GSBlock;
 
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

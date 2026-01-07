@@ -1,15 +1,7 @@
 package nightkosh.gravestone_extended.packets;
 
-import io.netty.buffer.ByteBuf;
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
-import nightkosh.gravestone_extended.inventory.AltarEnchantmentInventory;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
-import java.util.Map;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

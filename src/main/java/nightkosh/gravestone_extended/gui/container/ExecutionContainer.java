@@ -4,7 +4,7 @@ import nightkosh.gravestone_extended.gui.container.slot.ExecutionSlot;
 import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

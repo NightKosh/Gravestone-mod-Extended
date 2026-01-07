@@ -1,33 +1,7 @@
 package nightkosh.gravestone_extended.core.proxy;
 
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.block.enums.EnumExecution;
-import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.block.enums.EnumSpawner;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.GSItem;
-import nightkosh.gravestone_extended.core.GSParticles;
-import nightkosh.gravestone_extended.core.ResourcesModels;
-import nightkosh.gravestone_extended.core.compatibility.Compatibility;
-import nightkosh.gravestone_extended.core.event.RenderEventHandler;
-import nightkosh.gravestone_extended.entity.EntityRaven;
-import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
-import nightkosh.gravestone_extended.entity.monster.*;
-import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
-import nightkosh.gravestone_extended.gui.GSGraveTextGui;
-import nightkosh.gravestone_extended.models.entity.ModelDamnedWarrior;
-import nightkosh.gravestone_extended.particle.*;
-import nightkosh.gravestone_extended.renderer.entity.*;
-import nightkosh.gravestone_extended.renderer.entity.projectile.RendererBoneFishHook;
-import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
-import nightkosh.gravestone_extended.renderer.item.TEISRExecution;
-import nightkosh.gravestone_extended.renderer.item.TEISRMemorial;
-import nightkosh.gravestone_extended.renderer.item.TEISRSpawner;
-import nightkosh.gravestone_extended.renderer.tileentity.*;
-import nightkosh.gravestone_extended.tileentity.*;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

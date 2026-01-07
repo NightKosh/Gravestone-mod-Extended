@@ -1,12 +1,7 @@
 package nightkosh.gravestone_extended.core.commands;
 
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.logger.GSLogger;
-import nightkosh.gravestone_extended.helper.GameProfileHelper;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)

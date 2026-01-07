@@ -1,18 +1,7 @@
 package nightkosh.gravestone_extended.item.corpse;
 
-import nightkosh.gravestone_extended.ModGravestoneExtended;
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.core.GSBlock;
-import nightkosh.gravestone_extended.core.compatibility.Compatibility;
-import nightkosh.gravestone_extended.core.compatibility.CompatibilitySophisticatedWolves;
-import nightkosh.gravestone_extended.entity.monster.pet.EnumUndeadMobType;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
