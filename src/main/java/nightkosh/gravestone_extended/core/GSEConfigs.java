@@ -1,14 +1,7 @@
-package nightkosh.gravestone_extended.config;
+package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.core.GSDimensions;
-import nightkosh.gravestone_extended.core.GSParticles;
-import nightkosh.gravestone_extended.structures.GraveStoneWorldGenerator;
-import nightkosh.gravestone_extended.structures.catacombs.CatacombsGenerator;
-import nightkosh.gravestone_extended.structures.catacombs.CatacombsLevel;
-import nightkosh.gravestone_extended.structures.graves.SingleGraveGenerator;
-import nightkosh.gravestone_extended.structures.memorials.MemorialGenerator;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -17,10 +10,25 @@ import java.util.List;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ExtendedConfig {
+public class GSEConfigs {
 
-//    private static Configuration config;
-    private static ExtendedConfig instance;
+    public static final ModConfigSpec SPEC;
+    public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+
+
+    public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
+
+    static {
+        BUILDER.push("Configs for Gravestone mod - Extended");
+
+
+        DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
+                .define("Debug Mode", false);
+
+        BUILDER.pop();
+        SPEC = BUILDER.build();
+    }
+
     // CATEGORIES
     public static final String CATEGORY_STRUCTURES_CATACOMBS = "structures_catacombs";
     public static final String CATEGORY_STRUCTURES_VILLAGE = "structures_village";

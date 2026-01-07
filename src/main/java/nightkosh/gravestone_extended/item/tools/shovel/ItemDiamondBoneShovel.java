@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.item.tools.shovel;
 
-import nightkosh.gravestone_extended.core.GSMaterials;
-import nightkosh.gravestone_extended.core.GSTabs;
-
 /**
  * Gravestone mod - Extended
  *

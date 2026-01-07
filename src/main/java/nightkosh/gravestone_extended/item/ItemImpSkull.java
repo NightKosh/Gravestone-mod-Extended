@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.item;
 
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.helper.VanillaStructuresPosition;
-
-import javax.annotation.Nullable;
-
 /**
  * Gravestone mod - Extended
  *

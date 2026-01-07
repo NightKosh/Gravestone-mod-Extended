@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.dimension.catacombs.WorldProviderCatacombs;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.item;
 
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-
 /**
  * Gravestone mod - Extended
  *

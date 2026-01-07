@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.structures.catacombs;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.structures.catacombs.components.*;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.block;
 
-import net.minecraft.client.Minecraft;
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-
 /**
  * Gravestone mod - Extended
  *

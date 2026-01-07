@@ -1,15 +1,5 @@
 package nightkosh.gravestone_extended.block;
 
-import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

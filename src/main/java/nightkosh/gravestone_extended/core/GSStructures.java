@@ -1,11 +1,7 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
-import nightkosh.gravestone_extended.structures.GraveStoneWorldGenerator;
-import nightkosh.gravestone_extended.structures.village.memorial.ComponentVillageMemorial;
 import nightkosh.gravestone_extended.structures.village.memorial.VillageHandlerMemorial;
-import nightkosh.gravestone_extended.structures.village.undertaker.ComponentVillageUndertaker;
 import nightkosh.gravestone_extended.structures.village.undertaker.VillageHandlerGSUndertaker;
 
 /**
@@ -27,7 +23,7 @@ public class GSStructures {
 
     public static void preInit() {
         // register memorials
-        if (ExtendedConfig.generateVillageMemorials) {
+        if (GSEConfigs.generateVillageMemorials) {
             try {
 //                MapGenStructureIO.registerStructureComponent(ComponentVillageMemorial.class, "GSVillageMemorial");
             } catch (Throwable e) {
@@ -37,7 +33,7 @@ public class GSStructures {
         }
 
         // register Undertaker
-        if (ExtendedConfig.generateUndertaker) {
+        if (GSEConfigs.generateUndertaker) {
             try {
 //                MapGenStructureIO.registerStructureComponent(ComponentVillageUndertaker.class, "GSUndertakerHouse");
             } catch (Throwable e) {
@@ -49,13 +45,13 @@ public class GSStructures {
 
     public static void registration() {
         // register memorials
-        if (ExtendedConfig.generateVillageMemorials) {
+        if (GSEConfigs.generateVillageMemorials) {
             VillageHandlerMemorial villageMemorialHandler = new VillageHandlerMemorial();
 //            VillagerRegistry.instance().registerVillageCreationHandler(villageMemorialHandler);
         }
 
         // register Undertaker
-        if (ExtendedConfig.generateUndertaker) {
+        if (GSEConfigs.generateUndertaker) {
             VillageHandlerGSUndertaker villageUndertakerHandler = new VillageHandlerGSUndertaker();
 //            VillagerRegistry.instance().registerVillageCreationHandler(villageUndertakerHandler);
         }

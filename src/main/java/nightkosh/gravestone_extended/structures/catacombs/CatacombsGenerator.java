@@ -1,12 +1,6 @@
 package nightkosh.gravestone_extended.structures.catacombs;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.GSStructureGenerator;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 /**
  * Gravestone mod - Extended

@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.block;
 
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.helper.GameRuleHelper;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

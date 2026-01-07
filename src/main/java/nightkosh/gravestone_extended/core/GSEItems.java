@@ -1,49 +1,20 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.core.compatibility.Compatibility;
-import nightkosh.gravestone_extended.core.compatibility.CompatibilityAdvancedFishing;
-import nightkosh.gravestone_extended.item.*;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneBoots;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneChestplate;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneHelmet;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneLeggings;
-import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyBoots;
-import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyChestplate;
-import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyHelmet;
-import nightkosh.gravestone_extended.item.armor.mummy_costume.ItemMummyLeggings;
-import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingBoots;
-import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingChestplate;
-import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingHelmet;
-import nightkosh.gravestone_extended.item.armor.phantom_diver_costume.ItemDivingLeggings;
-import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingBoots;
-import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingChestplate;
-import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingHelmet;
-import nightkosh.gravestone_extended.item.armor.swamp_thing_costume.ItemSwampThingLeggings;
-import nightkosh.gravestone_extended.item.tools.axe.ItemBoneAxe;
-import nightkosh.gravestone_extended.item.tools.axe.ItemDiamondBoneAxe;
-import nightkosh.gravestone_extended.item.tools.axe.ItemGoldenBoneAxe;
-import nightkosh.gravestone_extended.item.tools.axe.ItemIronBoneAxe;
-import nightkosh.gravestone_extended.item.tools.hoe.ItemBoneHoe;
-import nightkosh.gravestone_extended.item.tools.hoe.ItemDiamondBoneHoe;
-import nightkosh.gravestone_extended.item.tools.hoe.ItemGoldenBoneHoe;
-import nightkosh.gravestone_extended.item.tools.hoe.ItemIronBoneHoe;
-import nightkosh.gravestone_extended.item.tools.pickaxe.ItemBonePickaxe;
-import nightkosh.gravestone_extended.item.tools.pickaxe.ItemDiamondBonePickaxe;
-import nightkosh.gravestone_extended.item.tools.pickaxe.ItemGoldenBonePickaxe;
-import nightkosh.gravestone_extended.item.tools.pickaxe.ItemIronBonePickaxe;
-import nightkosh.gravestone_extended.item.tools.shovel.ItemBoneShovel;
-import nightkosh.gravestone_extended.item.tools.shovel.ItemDiamondBoneShovel;
-import nightkosh.gravestone_extended.item.tools.shovel.ItemGoldenBoneShovel;
-import nightkosh.gravestone_extended.item.tools.shovel.ItemIronBoneShovel;
-import nightkosh.gravestone_extended.item.weapon.*;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.Item;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSItem {
+public class GSEItems {
+
+    public static final DeferredRegister<Item> ITEMS_REGISTER =
+            DeferredRegister.create(Registries.ITEM, ModInfo.ID);
 //
 //    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
 //    public static final Item BONE_SWORD = new ItemBoneSword();
@@ -134,4 +105,9 @@ public class GSItem {
 //            registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
 //        }
 //    }
+
+    public static void register(IEventBus eventBus) {
+        ITEMS_REGISTER.register(eventBus);
+    }
+
 }

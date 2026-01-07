@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.client.Minecraft;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.GSDimensions;
-import nightkosh.gravestone_extended.core.event.RenderEventHandler;
-import nightkosh.gravestone_extended.core.event.TickEventHandler;
-
 /**
  * Gravestone mod - Extended
  *

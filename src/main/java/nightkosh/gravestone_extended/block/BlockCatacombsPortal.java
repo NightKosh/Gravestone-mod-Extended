@@ -1,14 +1,5 @@
 package nightkosh.gravestone_extended.block;
 
-import net.minecraft.server.MinecraftServer;
-import nightkosh.gravestone_extended.core.GSDimensions;
-import nightkosh.gravestone_extended.core.GSParticles;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.teleporter.TeleporterCatacombs;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,22 +1,21 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.block.*;
-import nightkosh.gravestone_extended.block.fluid.BlockFluidToxicWater;
-import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleSkeleton;
-import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleWither;
-import nightkosh.gravestone_extended.block.skull_candle.BlockSkullCandleZombie;
-import nightkosh.gravestone_extended.item.itemblock.*;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleSkeleton;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleWither;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.IBSkullCandleZombie;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSBlock {//TODO extends nightkosh.gravestone.core.GSBlock {
+public class GSEBlocks {
+    
+    public static final DeferredRegister<Block> BLOCKS_REGISTER =
+            DeferredRegister.create(Registries.BLOCK, ModInfo.ID);
+    
 //
 //    public static final BlockMemorial MEMORIAL = new BlockMemorial();
 //    public static final ItemBlock MEMORIAL_IB = new IBMemorial(MEMORIAL);
@@ -99,4 +98,9 @@ public class GSBlock {//TODO extends nightkosh.gravestone.core.GSBlock {
 //                    ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB, CURSED_FLAME_IB);
 //        }
 //    }
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS_REGISTER.register(eventBus);
+    }
+
 }

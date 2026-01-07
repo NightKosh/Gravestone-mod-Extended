@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.block;
 
-import nightkosh.gravestone_extended.ModGravestoneExtended;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.GuiHandler;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
 /**
  * Gravestone mod - Extended
  *

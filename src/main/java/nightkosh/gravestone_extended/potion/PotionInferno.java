@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.potion;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.ModInfo;
-
-import java.util.List;
-
 /**
  * Gravestone mod - Extended
  *

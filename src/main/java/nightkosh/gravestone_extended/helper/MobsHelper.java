@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.GSDimensions;
-
 /**
  * Gravestone mod - Extended
  *

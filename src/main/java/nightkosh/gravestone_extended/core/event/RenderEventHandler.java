@@ -1,9 +1,5 @@
 package nightkosh.gravestone_extended.core.event;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.helper.TimeHelper;
-import org.lwjgl.opengl.GL11;
-
 /**
  * Gravestone mod - Extended
  *

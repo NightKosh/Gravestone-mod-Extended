@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.item;
 
-import net.minecraft.world.item.Item;
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.potion.PotionRecall;
-
 /**
  * Gravestone mod - Extended
  *

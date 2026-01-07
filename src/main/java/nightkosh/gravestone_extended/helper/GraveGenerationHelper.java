@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-
-import java.util.ArrayList;
 import java.util.Random;
 
 /**

@@ -1,12 +1,5 @@
 package nightkosh.gravestone_extended.item.armor.bone;
 
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.models.armor.ArmorModelsHelper;
-
-import javax.annotation.Nullable;
-
 /**
  * Gravestone mod - Extended
  *

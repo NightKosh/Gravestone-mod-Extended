@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.core.commands;
 
-import net.minecraft.server.MinecraftServer;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-
 /**
  * Gravestone mod - Extended
  *

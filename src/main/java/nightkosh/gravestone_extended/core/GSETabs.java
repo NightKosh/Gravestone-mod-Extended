@@ -1,7 +1,12 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.item.corpse.ZombieCorpseHelper;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
  * Gravestone mod - Extended
@@ -9,7 +14,23 @@ import nightkosh.gravestone_extended.item.corpse.ZombieCorpseHelper;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSTabs {//TODO extends nightkosh.gravestone.core.Tabs {
+public class GSETabs {
+
+    public static final DeferredRegister<CreativeModeTab> GSE_TAB =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ModInfo.ID);
+
+//    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
+//            GSE_TAB.register("gravestone_extended", () -> CreativeModeTab.builder()
+//                    .icon(() -> new ItemStack(GSEtems.))//TODO
+//                    .title(Component.translatable("itemGroup." + ModInfo.ID))
+//                    .displayItems((parameters, output) -> {
+//
+//                        output.accept(GSEtems..get());//TODO
+//
+//                    })
+//                    .build()
+//            );
+
 //
 //    public static CreativeTabs memorialsTab;
 //    public static CreativeTabs corpseTab;
@@ -55,4 +76,9 @@ public class GSTabs {//TODO extends nightkosh.gravestone.core.Tabs {
 //            }
 //        };
 //    }
+
+    public static void register(IEventBus modEventBus) {
+//        GSE_TAB.register(modEventBus);//TODO
+    }
+
 }

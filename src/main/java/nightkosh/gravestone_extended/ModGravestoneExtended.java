@@ -3,9 +3,8 @@ package nightkosh.gravestone_extended;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import nightkosh.gravestone_extended.core.GSEBlocks;
-import nightkosh.gravestone_extended.core.GSEItems;
-import nightkosh.gravestone_extended.core.ModInfo;
+import net.neoforged.fml.config.ModConfig;
+import nightkosh.gravestone_extended.core.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,20 +30,18 @@ public class ModGravestoneExtended {
     public ModGravestoneExtended(IEventBus eventBus, ModContainer container) {
         INSTANCE = this;
 
-//        container.registerConfig(ModConfig.Type.COMMON, GSEConfigs.SPEC, ModInfo.ID + ".toml");
+        container.registerConfig(ModConfig.Type.COMMON, GSEConfigs.SPEC, ModInfo.ID + ".toml");
 
 //        GSEEntities.register(eventBus);
 //        GSESounds.register(eventBus);
         GSEBlocks.register(eventBus);
         GSEItems.register(eventBus);
-//        GSETabs.register(eventBus);
-//        GSEMobEffects.register(eventBus);
+        GSETabs.register(eventBus);
+        GSEMobEffects.register(eventBus);
     }
 
 //    @Mod.EventHandler
 //    public void preInit(FMLPreInitializationEvent event) {
-//        ExtendedConfig.getInstance(event.getModConfigurationDirectory().getAbsolutePath() + "/GraveStoneMod/", "GraveStone.cfg");
-//
 //        GSStructures.preInit();
 //
 ////        MessageHandler.init();

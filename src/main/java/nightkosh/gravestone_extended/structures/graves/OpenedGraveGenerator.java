@@ -1,9 +1,5 @@
 package nightkosh.gravestone_extended.structures.graves;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,13 +1,5 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.core.logger.GSLogger;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.HashMap;
-
 /**
  * Gravestone mod - Extended
  *

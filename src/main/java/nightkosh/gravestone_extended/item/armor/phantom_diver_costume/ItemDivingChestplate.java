@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.item.armor.phantom_diver_costume;
 
-import nightkosh.gravestone_extended.core.GSTabs;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.core.Resources;
-
-import javax.annotation.Nullable;
-
 /**
  * Gravestone mod - Extended
  *

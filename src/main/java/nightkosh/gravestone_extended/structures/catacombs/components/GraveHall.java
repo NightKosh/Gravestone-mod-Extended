@@ -1,14 +1,5 @@
 package nightkosh.gravestone_extended.structures.catacombs.components;
 
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
-import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.structures.BoundingBoxHelper;
-import nightkosh.gravestone_extended.structures.GraveGenerationHelper;
-import nightkosh.gravestone_extended.structures.MobSpawnHelper;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *
