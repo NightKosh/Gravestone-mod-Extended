@@ -1,0 +1,373 @@
+# Tabs
+itemGroup.tabGSMemorials=Memoriais
+itemGroup.tabGSCorpse=Cadáveres
+itemGroup.tabGSOther=Itens do mod Gravestone
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Cruz Memorial
+block.memorial.obelisk.name=Obelisco
+block.memorial.steve_statue.name=Estátua de Steve
+block.memorial.villager_statue.name=Estátua de Aldeão
+block.memorial.angel_statue.name=Estátua de Anjo
+block.memorial.dog_statue.name=Estátua de Cachorro
+block.memorial.cat_statue.name=Estátua de Gato
+block.memorial.creeper_statue.name=Estátua de Creeper
+block.memorial.celtic_cross.name=Cruz Celta
+
+## Executions
+block.execution.gallows.name=Forca
+block.execution.gibbet.name=Candafalso
+block.execution.stocks.name=Berlinda
+block.execution.burning_stake.name=Fogueira
+
+## Traps
+block.trap.night.name=Pedra da Noite
+block.trap.thunder.name=Pedra do Trovão
+block.trap.curse=A escuridão está vindo!
+
+## Withered Glass
+tile.withered_glass.name=Vidro Withered
+tile.withered_glass_pane.name=Painel de Vidro Withered
+
+## Spawners
+block.spawner.wither.name=Gerador de Wither
+block.spawner.skeleton.name=Gerador de Esqueleto
+block.spawner.zombie.name=Gerador de Zumbi
+block.spawner.spider.name=Gerador de Aranha
+
+## Pile of Bones
+block.pile_of_bones.name=Pilha de Ossos
+block.pile_of_bones_with_skull.name=Pilha de Ossos com Crânio
+block.pile_of_bones_with_skull_crawler.name=Pilha de Ossos com Cabeça Rastejante
+
+## Chests
+block.haunted_chest.bats_chest.name=Baú com Morcegos
+block.haunted_chest.skeleton_chest.name=Baú com Esqueleto
+block.haunted_chest.raven_chest.name=Baú com Corvos
+block.haunted_chest.ghost_chest.name=Baú com Fantasma
+
+## Candles
+tile.candle.name=Vela
+block.skull_candle.skeleton.name=Crânio com Vela
+block.skull_candle.wither_skeleton.name=Crânio de Esqueleto Wither com Vela
+block.skull_candle.zombie.name=Cabeça de Zumbi com vela
+
+## Altar
+tile.altar.name=Altar
+
+## Portal
+tile.catacombs_portal.name=Portal das Catacumbas
+
+##Frozen Lava
+## TODO !!!!!!!!!!
+tile.frozen_lava.name=Frozen Lava
+
+# Enchantments
+enchantment.shadow_of_death=Sombra da Morte
+enchantment.gravestone-extended.gs_shadow_of_death.desc=Causa 2,5 de dano extra por nível para mobs não aranha e não morto-vivo
+enchantment.poisoned_blade=Lâmina Envenenada
+enchantment.gravestone-extended.gs_poisoned_blade.desc=Aplica envenenamento para um alvo por 10 segundos por nível
+enchantment.withered_blade=Lâmina Decomposta
+enchantment.gravestone-extended.gs_withered_blade.desc= Aplica decomposição para um alvo por 5 segundos por nível
+enchantment.vampiric_touch=Toque Vampírico
+enchantment.gravestone-extended.gs_vampiric_touch.desc=Converte 20% do dano feito por esta arma para saúde
+enchantment.necrotic_corrosion=Corrosão Necrótica
+enchantment.gravestone-extended.gs_necrotic_corrosion.desc= 10% (por nível) do dano causado por esta arma ignorar a armadura
+enchantment.pain_mirror=Espelho da Dor
+enchantment.gravestone-extended.gs_pain_mirror.desc=Reflete todo dano bloqueado com 10% de chance por nível
+enchantment.bone_rain=Chuva de Osso
+enchantment.gravestone-extended.gs_bone_rain.desc=Usa pó de osso em um bloco
+enchantment.hellish_angling=Pesca Infernal
+enchantment.gravestone-extended.gs_hellish_angling.desc=Permite pescar na lava
+enchantment.bloody_replication=Replicação Sangrenta
+enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
+## TODO !!!!!!!!!!
+enchantment.frozen_nether=Frozen Nether
+enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
+enchantment.web_crawler=Web Crawler
+enchantment.gravestone-extended.web_crawler.desc=Allows to move normally in the web.
+
+## Enchantments - Curses
+enchantment.awkward_curse=Maldição da Inabilidade
+enchantment.gravestone-extended.gs_awkward_curse.desc=Causa dano a você mesmo ao invés do inimigo com 10% de chance
+enchantment.fragility_curse=Maldição de Fragilidade
+enchantment.gravestone-extended.gs_fragility_curse.desc=O item recebe dano adicional no uso
+enchantment.broken_hook_curse=Maldição do Anzol Quebrado
+enchantment.gravestone-extended.gs_broken_hook_curse.desc=Adiciona 30% de chance de perder sua captura
+
+# Potions
+potion.purification.title=Remove todos os efeitos negativos
+potion.effect.gs_purification_type=Poção de Purificação
+splash_potion.effect.gs_purification_type=Poção Arremessável de Purificação
+lingering_potion.effect.gs_purification_type=Poção Prolongada de Purificação
+tipped_arrow.effect.gs_purification_type=Flecha de Purificação
+potion.bone_skin.title=Camada Óssea
+potion.effect.gs_bone_skin_type=Poção de Camada Óssea
+splash_potion.effect.gs_bone_skin_type=Poção Arremessável de Camada Óssea
+lingering_potion.effect.gs_bone_skin_type=Poção Prolongada de Camada Óssea
+tipped_arrow.effect.gs_bone_skin_type=Flecha de Camada Óssea
+potion.rust.title=Ferrugem
+potion.effect.gs_rust_type=Poção de Ferrugem
+splash_potion.effect.gs_rust_type=Poção Arremessável de Ferrugem
+lingering_potion.effect.gs_rust_type=Poção Prolongada de Ferrugem
+tipped_arrow.effect.gs_rust_type=Flecha de Ferrugem
+potion.recall.title=Retonar para casa
+potion.effect.gs_recall_type=Poção de Retorno
+splash_potion.effect.gs_recall_type=Poção Arremessável de Retorno
+lingering_potion.effect.gs_recall_type=Poção Prolongada de Retorno
+tipped_arrow.effect.gs_recall_type=Flecha de Retorno
+potion.burning.title=Incendeia o alvo
+potion.effect.gs_burning_type=Poção de Combustão
+splash_potion.effect.gs_burning_type=Poção Arremessável de Combustão
+lingering_potion.effect.gs_burning_type=Poção Prolongada de Combustão
+tipped_arrow.effect.gs_burning_type=Flecha de Combustão
+potion.bleeding.title=Sangramento 
+potion.effect.gs_bleeding_type=Poção de Sangramento
+splash_potion.effect.gs_bleeding_type=Poção Arremessável de Sangramente
+lingering_potion.effect.gs_bleeding_type=Poção Arremessável de Sangramento
+tipped_arrow.effect.gs_bleeding_type=Flecha de Sangramento
+potion.effect.gs_choke_type=Poção de Falta de Ar
+splash_potion.effect.gs_choke_type=Poção Arremessável de Falta de Ar
+lingering_potion.effect.gs_choke_type=Poção Prolongada de Falta de Ar
+tipped_arrow.effect.gs_choke_type=Flecha de Falta de ar
+potion.inferno.title=Inferno
+potion.effect.gs_inferno_type=Poção de Inferno
+splash_potion.effect.gs_inferno_type=Poção Arremessável de Inferno
+lingering_potion.effect.gs_inferno_type=Poção Arremessável de Inferno
+tipped_arrow.effect.gs_inferno_type=Flecha de Inferno
+potion.cursed_inferno.title=Inferno Maldito
+potion.effect.gs_cursed_inferno_type=Poção de Inferno Maldito
+splash_potion.effect.gs_cursed_inferno_type=Poção Arremessável de Inferno Maldito
+lingering_potion.effect.gs_cursed_inferno_type=Poção Prolongada de Inferno Maldito
+tipped_arrow.effect.gs_cursed_inferno_type=Flecha de Inferno Maldito
+potion.cursed_flame.title=Chama Amaldiçoada
+potion.effect.gs_cursed_flame_type=Poção de Chama Amaldiçoada
+splash_potion.effect.gs_cursed_flame_type=Poção Arremessável de Chama Amaldiçoada
+lingering_potion.effect.gs_cursed_flame_type=Poção Prolongada de Chama Amaldiçoada
+tipped_arrow.effect.gs_cursed_flame_type=Flecha de Chama Amaldiçoada
+
+# Vanilla Potions
+potion.effect.gs_hunger_type=Poção de Fome
+splash_potion.effect.gs_hunger_type=Poção Arremessável de Fome
+lingering_potion.effect.gs_hunger_type=Poção Prolongada de Fome
+tipped_arrow.effect.gs_hunger_type=Flecha de Fome
+potion.effect.gs_blindness_type=Poção de Cegueira
+splash_potion.effect.gs_blindness_type=Poção Arremessável de Cegueira
+lingering_potion.effect.gs_blindness_type=Poção Prolongada de Cegueira
+tipped_arrow.effect.gs_blindness_type=Flecha de Cegueira
+potion.effect.gs_nausea_type=Poção de Náusea
+splash_potion.effect.gs_nausea_type=Poção Arremessável de Náusea
+lingering_potion.effect.gs_nausea_type=Poção Prolongada de Náusea
+tipped_arrow.effect.gs_nausea_type=Flecha de Náusea
+potion.effect.gs_resistance_type=Poção de Resistência
+splash_potion.effect.gs_resistance_type=Poção Arremessável de Resistência
+lingering_potion.effect.gs_resistance_type=Poção Prolongada de Resistência
+tipped_arrow.effect.gs_resistance_type=Flecha de Resistência
+potion.effect.gs_levitation_type=Poção de Levitação
+splash_potion.effect.gs_levitation_type=Poção Arremessável de Levitação
+lingering_potion.effect.gs_levitation_type=Poção Prolongada de Levitação
+tipped_arrow.effect.gs_levitation_type=Flecha de Levitação
+potion.effect.wither_type=Poção de Wither
+splash_potion.effect.wither_type=Poção Arremessável de Wither
+lingering_potion.effect.wither_type=Poção Prolongada de Wither
+tipped_arrow.effect.wither_type=Flecha de Wither
+
+
+# Items
+## Fishing Pole
+item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso
+
+## Shovel
+item.gravestone.bone_shovel.name=Pá de Osso
+item.gravestone.bone_shovel_iron.name=Pá de Osso de Ferro
+item.gravestone.bone_shovel_golden.name=Pá de Osso de Ouro
+item.gravestone.bone_shovel_diamond.name=Pá de Osso de Diamante
+
+## Pickaxe
+item.gravestone.bone_pickaxe.name=Picareta de Osso
+item.gravestone.bone_pickaxe_iron.name=Picareta de Osso de Ferro
+item.gravestone.bone_pickaxe_golden.name=Picareta de Osso de Ouro
+item.gravestone.bone_pickaxe_diamond.name=Picareta de Osso de Diamante
+
+## Axe
+item.gravestone.bone_axe.name=Machado de Osso
+item.gravestone.bone_axe_iron.name=Machado de Osso de Ferro
+item.gravestone.bone_axe_golden.name=Machado de Osso de Ouro
+item.gravestone.bone_axe_diamond.name=Machado de Osso de Diamante
+
+## Hoe
+item.gravestone.bone_hoe.name=Enxada de Osso
+item.gravestone.bone_hoe_iron.name=Enxada de Osso de Ferro
+item.gravestone.bone_hoe_golden.name=Enxada de Osso de Ouro
+item.gravestone.bone_hoe_diamond.name=Enxada de Osso de Diamante
+
+## Swords
+item.gravestone.bone_sword.name=Espada de Osso
+item.gravestone.bone_sword_iron.name=Espada de Osso de Ferro
+item.gravestone.bone_sword_golden.name=Espada de Osso de Ouro
+item.gravestone.bone_sword_diamond.name=Espada de Osso de Diamante
+
+## Shield
+item.gravestone.bone_shield.name=Escudo de Osso
+
+## Armor
+item.gravestone.diving_helmet.name=Capacete de Mergulho
+item.gravestone.diving_helmet.tooltip=Fornece respiração inlimitada sob a água
+item.gravestone.diving_chestplate.name=Peitoral de Megulho
+item.gravestone.diving_leggings.name=Calças de Megulho
+item.gravestone.diving_boots.name=Botas de Megulho
+item.gravestone.swamp_thing_helmet.name=Máscara de Coisa do Pântano
+item.gravestone.swamp_thing_chestplate.name=Camisa de Coisa do Pântano
+item.gravestone.swamp_thing_leggings.name=Calças de Coisa do Pântano
+item.gravestone.swamp_thing_boots.name=Botas de Coisa do Pântano
+item.gravestone.mummy_helmet.name=Máscara de Múmia
+item.gravestone.mummy_chestplate.name=Camisa de Múmia
+item.gravestone.mummy_leggings.name=Calças de Múmia
+item.gravestone.mummy_boots.name=Bota de Múmia
+## TODO !!!!!!!!!!!!!!!!!
+item.gravestone.bone_helmet.name=Bone Helmet
+item.gravestone.bone_chestplate.name=Bone Chestplate
+item.gravestone.bone_leggings.name=Bone Leggings
+item.gravestone.bone_boots.name=Bone Boots
+
+## Other Items
+item.gravestone.toxic_slime.name=Gosma Tóxica
+item.gravestone.raven_feather.name=Pena de Corvo
+item.gravestone.raven_claws.name=Garras de Corvo
+item.gravestone.ooze.name=Lodo
+item.gravestone.piece_of_mummy_cloth.name=Pedaço de Pano de Múmia 
+item.gravestone.piece_of_diving_suit.name=Pedaço de Traje de mergulho
+item.gravestone.enchanted_skull.name=Crânio Encantado
+item.gravestone.enchanted_skull_withered.name=Crânio de Esqueleto Wither Encantado
+item.gravestone.slime_chunk.name=Pedaço de Gosma
+item.gravestone.imp_skull.name=Crânio de Diabrete 
+item.gravestone.ender_skull.name=Cranio do Ender
+## TODO !!!!!!!!!!!!!!!!!
+item.gravestone.cemetery_key.player=Cemetery Key
+item.gravestone.cemetery_key.server=Server Cemetery Key
+item.gravestone.frozen_mirror.name=Espelho Congelado
+
+
+## Corpses
+item.corpse.steve=Cadáver de Steve
+item.corpse.player=Cadáver de Jogador
+item.corpse.villager=Cadáver de Aldeão
+item.corpse.horse=Cadáver de Cavalo
+item.corpse.dog=Cadáver de Cachorro
+item.corpse.cat=Cadáver de Gato
+item.corpse.zombie=Cadáver de Zumbi
+item.corpse.zombie_villager=Cadáver de Aldeão Zumbi
+##item.corpse.zombie_pigmen=Cadáver de Homem-Porco Zumbi
+item.corpse.skeleton=Cadáver de Esqueleto
+##item.corpse.wither_skeleton=Cadáver de Esqueleto Wither
+item.corpse.witch=Cadáver de Bruxa
+item.corpse.entity_name=Nome
+item.corpse.villager_type=Profissão
+item.corpse.villager_type.farmer=Fazendeiro
+item.corpse.villager_type.librarian=Bibliotecário
+item.corpse.villager_type.priest=Padre
+item.corpse.villager_type.smith=Ferreiro
+item.corpse.villager_type.butcher=Açougueiro
+item.corpse.villager_type.undertaker=Agente Funerário
+item.corpse.villager_type.brewer=Cervejeiro
+item.corpse.villager_type.thaumaturge=Taumaturgo
+item.corpse.villager_type.beekeeper=Apicultor
+item.corpse.villager_type.lumberjack=Lenhador
+item.corpse.villager_type.unknown=Desconhecido
+
+item.corpse.villager_career=Carreira
+item.corpse.villager_career.unknown=Desconhecida
+
+item.corpse.horse_type=Tipo de Cavalo
+item.corpse.horse_type.horse=Cavalo
+item.corpse.horse_type.donkey=Jumento
+item.corpse.horse_type.mule=Mula
+item.corpse.horse_type.zombie=Cavalo Zumbi
+item.corpse.horse_type.skeleton=Cavalo Esqueleto
+item.corpse.horse_type.unknown=Desconhecido
+item.corpse.horse_variant=Variante de Cavalo
+item.corpse.health=Saúde Máxima
+item.corpse.speed=Velocidade
+item.corpse.jump_strength=Força do Pulo
+item.corpse.collar=Coleira
+item.corpse.collar.white=Branco
+item.corpse.collar.orange=Laranja
+item.corpse.collar.purple=Roxo
+item.corpse.collar.azure=Índigo
+item.corpse.collar.yellow=Amarelo
+item.corpse.collar.lime=Lima
+item.corpse.collar.pink=Rosa
+item.corpse.collar.grey=Cinza
+item.corpse.collar.light_grey=Cinza Fraco
+item.corpse.collar.turquoise=Turquesa
+item.corpse.collar.violet=Violeta
+item.corpse.collar.blue=Azul
+item.corpse.collar.brown=Marrom
+item.corpse.collar.green=Verde
+item.corpse.collar.red=Vermelho
+item.corpse.collar.black=Preto
+item.corpse.collar.unknown=Desconhecido
+item.corpse.dog_type=Tipo de Cachorro
+item.corpse.cat_type=Tipo de Gato
+item.corpse.cat_type.ocelot=Ocelot
+item.corpse.cat_type.black=Preto
+item.corpse.cat_type.red=Vermelho
+item.corpse.cat_type.siamese=Siamês
+item.corpse.cat_type.unknown=Desconhecido
+
+## mobs type
+mobtype.title=Tipo de mob
+mobtype.zombie=Zumbi
+mobtype.skeleton=Esqueleto
+mobtype.ghost=Fantasma
+mobtype.husk=Zumbi-Múmia
+mobtype.stray=Esqueleto Vagante
+mobtype.wither=Esqueleto Wither
+mobtype.pigman=Homem-Porco Zumbi
+
+##Backpacks
+item.backpack.undertaker.t1=Mochila do Agente Funerário
+item.backpack.undertaker.t2=Mochila Tecida do Agente Funerário
+
+# GUI
+gui.edit_grave.title=Defina o texto do túmulo
+gui.edit_grave.close=Concluído
+gui.edit_grave.randomText=Definir texto aleatório
+gui.altar.resurrect=Ressuscitar
+gui.altar.enchant=Encantar
+gui.altar.disenchant=Desencantar
+gui.altar.requirements=Níveis requeridos %d
+gui.altar.tab.resurrection=Ressurreição
+gui.altar.tab.enchanting=Encantador
+gui.altar.tab.disenchanting=Desencantado
+gui.chisel_crafting.grave_btn=Lápide
+gui.chisel_crafting.memorial_btn=Memorial
+gui.chisel_crafting.enchanted_btn=Encantado
+gui.chisel_crafting.mossy_btn=Musgosa
+gui.chisel_crafting.recipe=Itens requeridos
+
+
+# Entity
+entity.GSRaven.name=Corvo
+entity.GSSkeleton.name=Esqueleto
+entity.Villager.gravestone-extended:undertaker=Agente Funerário
+
+# Fluids
+tile.gs_toxic_water.name=Água Tóxica
+fluid.gs_toxic_water=Água Tóxica
+
+
+# Console messages
+##TODO !!!!!!!!!!
+message.cemetery_key.activated=This key was activated by
+message.cemetery_key.cant_use=You can't use this key!
+message.cemetery_key.bounded=Your soul is bounded to this cemetery!
+message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
+message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
+message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
+
+## Console commands
+commands.direction_error=Erro de direção!
+commands.generate.unknown_structure=Estrutura desconhecida!

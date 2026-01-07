@@ -1,0 +1,10 @@
+{
+  "itemGroup.gravestone_extended": "Gravestone mod - Extended",
+
+  "item.gravestone_extended.bone_block": "Bloque de hueso",
+  "item.gravestone_extended.bone_block_skull": "Bloque de hueso con cráneo",
+  "item.gravestone_extended.bone_slab": "Losa de hueso",
+  "item.gravestone_extended.bone_stairs": "Escaleras de hueso",
+  "item.gravestone_extended.bone_block_crawler": "Bloque de hueso con craneo del arranca cráneos",
+  "item.gravestone_extended.bone_block_skull_crawler": "Bloque de hueso con craneo del arranca cráneos"
+}

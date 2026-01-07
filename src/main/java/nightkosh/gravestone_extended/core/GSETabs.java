@@ -19,17 +19,24 @@ public class GSETabs {
     public static final DeferredRegister<CreativeModeTab> GSE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ModInfo.ID);
 
-//    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
-//            GSE_TAB.register("gravestone_extended", () -> CreativeModeTab.builder()
-//                    .icon(() -> new ItemStack(GSEtems.))//TODO
-//                    .title(Component.translatable("itemGroup." + ModInfo.ID))
-//                    .displayItems((parameters, output) -> {
-//
-//                        output.accept(GSEtems..get());//TODO
-//
-//                    })
-//                    .build()
-//            );
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
+            GSE_TAB.register("gravestone_extended", () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(GSEBlocks.BONE_BLOCK.get()))
+                    .title(Component.translatable("itemGroup." + ModInfo.ID))
+                    .displayItems((parameters, output) -> {
+
+                        // bone blocks
+                        output.accept(GSEBlocks.BONE_BLOCK.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL.get());
+                        output.accept(GSEBlocks.BONE_SLAB.get());
+                        output.accept(GSEBlocks.BONE_STAIRS.get());
+
+                        output.accept(GSEBlocks.BONE_BLOCK_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_CRAWLER.get());
+
+                    })
+                    .build()
+            );
 
 //
 //    public static CreativeTabs memorialsTab;
@@ -78,7 +85,7 @@ public class GSETabs {
 //    }
 
     public static void register(IEventBus modEventBus) {
-//        GSE_TAB.register(modEventBus);//TODO
+        GSE_TAB.register(modEventBus);
     }
 
 }

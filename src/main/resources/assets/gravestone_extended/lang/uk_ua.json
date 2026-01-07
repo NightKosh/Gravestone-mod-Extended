@@ -1,0 +1,10 @@
+{
+  "itemGroup.gravestone_extended": "Gravestone mod - Extended",
+
+  "item.gravestone_extended.bone_block": "Кістяний блок",
+  "item.gravestone_extended.bone_block_skull": "Кістяний блок з черепом",
+  "item.gravestone_extended.bone_slab": "Кістяна плита",
+  "item.gravestone_extended.bone_stairs": "Кістяна драбина",
+  "item.gravestone_extended.bone_block_crawler": "Кістяний блок повзучого черепа",
+  "item.gravestone_extended.bone_block_skull_crawler": "Кістяний блок повзучого черепа з черепом"
+}

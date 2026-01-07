@@ -9,5 +9,5 @@ package nightkosh.gravestone_extended.core;
 public class ModInfo {
 
     public static final String ID = "gravestone_extended";
-    public static final String VERSION = "2.0.0";
+
 }

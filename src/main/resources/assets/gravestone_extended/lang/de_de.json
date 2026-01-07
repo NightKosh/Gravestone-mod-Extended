@@ -1,0 +1,10 @@
+{
+  "itemGroup.gravestone_extended": "Gravestone mod - Extended",
+
+  "item.gravestone_extended.bone_block": "Knochenblock",
+  "item.gravestone_extended.bone_block_skull": "Knochenblock mit Totenkopf",
+  "item.gravestone_extended.bone_slab": "Knochenstufe",
+  "item.gravestone_extended.bone_stairs": "Knochentreppe",
+  "item.gravestone_extended.bone_block_crawler": "Knochenblock des Skelettkriechers",
+  "item.gravestone_extended.bone_block_skull_crawler": "Knochenblock des Skelettkriechers mit Totenkopf"
+}

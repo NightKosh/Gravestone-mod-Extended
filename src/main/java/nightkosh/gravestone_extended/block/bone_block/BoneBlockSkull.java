@@ -1,0 +1,22 @@
+package nightkosh.gravestone_extended.block.bone_block;
+
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import nightkosh.gravestone_extended.core.GSEBlocks;
+
+/**
+ * Gravestone mod - Extended
+ *
+ * @author NightKosh
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ */
+public class BoneBlockSkull extends Block {
+
+    public BoneBlockSkull() {
+        super(Properties.of()
+                .setId(GSEBlocks.BONE_BLOCK_SKULL_RK)
+                .sound(SoundType.BONE_BLOCK)
+                .strength(0.5F));
+    }
+
+}

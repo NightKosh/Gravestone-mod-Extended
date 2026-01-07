@@ -1,0 +1,10 @@
+{
+  "itemGroup.gravestone_extended": "Gravestone mod - Extended",
+
+  "item.gravestone_extended.bone_block": "Block d'os",
+  "item.gravestone_extended.bone_block_skull": "Block d'os avec crâne",
+  "item.gravestone_extended.bone_slab": "Dalle d'os",
+  "item.gravestone_extended.bone_stairs": "Escalier d'os",
+  "item.gravestone_extended.bone_block_crawler": "Block d'os de crâne rampant",
+  "item.gravestone_extended.bone_block_skull_crawler": "Block d'os de  crâne rampant avec crâne"
+}

@@ -1,9 +1,18 @@
 package nightkosh.gravestone_extended.core;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.block.bone_block.*;
+import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
+
+import java.util.function.Supplier;
+
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
 /**
  * Gravestone mod - Extended
@@ -15,7 +24,55 @@ public class GSEBlocks {
     
     public static final DeferredRegister<Block> BLOCKS_REGISTER =
             DeferredRegister.create(Registries.BLOCK, ModInfo.ID);
-    
+
+    // bone blocks
+    public static final ResourceKey BONE_BLOCK_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK = registerBlock("bone_block",
+            BoneBlock::new,
+            BIBoneBlock::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL = registerBlock("bone_block_skull",
+            BoneBlockSkull::new,
+            BIBoneBlockSkull::new);
+
+    public static final ResourceKey BONE_SLAB_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_slab"));
+    public static final DeferredHolder<Block, Block> BONE_SLAB = registerBlock("bone_slab",
+            BoneSlab::new,
+            BIBoneSlab::new);
+
+    public static final ResourceKey BONE_STAIRS_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_stairs"));
+    public static final DeferredHolder<Block, Block> BONE_STAIRS = registerBlock("bone_stairs",
+            BoneStairs::new,
+            BIBoneStairs::new);
+
+    public static final ResourceKey BONE_BLOCK_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_CRAWLER = registerBlock("bone_block_crawler",
+            BoneBlockCrawler::new,
+            BIBoneBlockCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_CRAWLER = registerBlock("bone_block_skull_crawler",
+            BoneBlockSkullCrawler::new,
+            BIBoneBlockSkullCrawler::new);
+
+    private static <T extends Block> DeferredHolder<Block, T> registerBlock(
+            String name, Supplier<T> block, Supplier<Item> itemBlock) {
+        GSEItems.ITEMS_REGISTER.register(name, itemBlock);
+        return BLOCKS_REGISTER.register(name, block);
+    }
 //
 //    public static final BlockMemorial MEMORIAL = new BlockMemorial();
 //    public static final ItemBlock MEMORIAL_IB = new IBMemorial(MEMORIAL);
@@ -37,14 +94,6 @@ public class GSEBlocks {
 //
 //    public static final BlockPileOfBones PILE_OF_BONES = new BlockPileOfBones();
 //    public static final ItemBlock PILE_OF_BONES_IB = new IBPileOfBones(PILE_OF_BONES);
-//
-//    public static final BlockBoneBlock BONE_BLOCK = new BlockBoneBlock();
-//    public static final ItemBlock BONE_BLOCK_IB = new IBBoneBlock(BONE_BLOCK);
-//    public static final BlockBoneSlab BONE_SLAB = new BlockBoneSlab();
-//    public static final IBBoneSlab BONE_SLAB_IB = new IBBoneSlab(BONE_SLAB);
-//
-//    public static final BlockBoneStairs BONE_STAIRS = new BlockBoneStairs();
-//    public static final IBBoneStairs BONE_STAIRS_IB = new IBBoneStairs(BONE_STAIRS);
 //
 //    public static final BlockHauntedChest HAUNTED_CHEST = new BlockHauntedChest();
 //    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
