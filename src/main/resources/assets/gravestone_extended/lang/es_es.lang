@@ -94,8 +94,6 @@ enchantment.awkward_curse=Maldición de torpeza
 enchantment.gravestone-extended.gs_awkward_curse.desc=Infingir daño a tí mismo en vez de al enemigo con un 10 por ciento de probabilidad
 enchantment.fragility_curse=Maldición de fragilidad
 enchantment.gravestone-extended.gs_fragility_curse.desc=El item recibe daño adicional al usarse
-enchantment.broken_hook_curse=Maldición del anzuelo roto 
-enchantment.gravestone-extended.gs_broken_hook_curse.desc=Añade un 30 por ciento de probabilidad de perder tu pesca
 
 # Potions
 potion.purification.title=Elimina todos los efectos negativos

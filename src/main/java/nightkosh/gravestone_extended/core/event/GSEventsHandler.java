@@ -17,7 +17,6 @@ import net.neoforged.neoforge.event.level.BlockEvent;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
 import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
 import nightkosh.gravestone_extended.item.weapon.IBoneSword;
@@ -92,12 +91,6 @@ public class GSEventsHandler {
 //            }
 //        }
 //    }
-
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void itemFishedEvent(ItemFishedEvent event) {
-        //TODO
-//        EnchantmentBrokenHookCurse.applyEffect(event);
-    }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onEntityLivingDamage(LivingDamageEvent event) {

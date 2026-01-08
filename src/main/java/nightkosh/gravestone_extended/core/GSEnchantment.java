@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.core;
 
 import nightkosh.gravestone_extended.enchantment.*;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentBrokenHookCurse;
 import nightkosh.gravestone_extended.enchantment.curse.EnchantmentFragilityCurse;
 
 /**
@@ -30,7 +29,6 @@ public class GSEnchantment {
 //    // CURSES
 //    public static final Enchantment CURSE_AWKWARD = new EnchantmentAwkwardCurse();
 //    public static final Enchantment CURSE_FRAGILITY = new EnchantmentFragilityCurse();
-//    public static final Enchantment CURSE_BROKEN_HOOK = new EnchantmentBrokenHookCurse();
 //
 //    @Mod.EventBusSubscriber(modid = ModInfo.ID)
 //    public static class RegistrationHandler {

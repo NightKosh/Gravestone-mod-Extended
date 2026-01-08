@@ -94,8 +94,6 @@ enchantment.awkward_curse=Maldição da Inabilidade
 enchantment.gravestone-extended.gs_awkward_curse.desc=Causa dano a você mesmo ao invés do inimigo com 10% de chance
 enchantment.fragility_curse=Maldição de Fragilidade
 enchantment.gravestone-extended.gs_fragility_curse.desc=O item recebe dano adicional no uso
-enchantment.broken_hook_curse=Maldição do Anzol Quebrado
-enchantment.gravestone-extended.gs_broken_hook_curse.desc=Adiciona 30% de chance de perder sua captura
 
 # Potions
 potion.purification.title=Remove todos os efeitos negativos
