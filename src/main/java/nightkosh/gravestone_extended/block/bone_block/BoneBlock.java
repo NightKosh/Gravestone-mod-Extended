@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.block.bone_block;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import nightkosh.gravestone_extended.core.GSEBlocks;
 
 /**
@@ -15,6 +16,7 @@ public class BoneBlock extends Block {
 
     public BoneBlock() {
         super(BlockBehaviour.Properties.of()
+                .instrument(NoteBlockInstrument.XYLOPHONE)
                 .setId(GSEBlocks.BONE_BLOCK_RK)
                 .sound(SoundType.BONE_BLOCK)
                 .strength(0.5F));
