@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "bbb"
+  ],
+  "key": {
+    "b": "gravestone_extended:bone_block"
+  },
+  "result": {
+    "id": "gravestone_extended:bone_slab",
+    "count": 6
+  }
+}
