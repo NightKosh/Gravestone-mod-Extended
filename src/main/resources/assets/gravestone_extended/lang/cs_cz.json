@@ -1,6 +1,8 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.bone_shield": "Bone Shield",
+
   "item.gravestone_extended.pile_of_bones": "Hromada kostí",
   "item.gravestone_extended.pile_of_bones_skull": "Hromada kostí s lebkou",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

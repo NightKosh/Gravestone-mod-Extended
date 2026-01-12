@@ -196,9 +196,6 @@ item.gravestone.bone_sword_iron.name=Железный Костяной мечь
 item.gravestone.bone_sword_golden.name=Золотой Костяной мечь
 item.gravestone.bone_sword_diamond.name=Алмазный Костяной мечь
 
-## Shield
-item.gravestone.bone_shield.name=Костяной щит
-
 ## Armor
 item.gravestone.diving_helmet.name=Водолазный шлем
 item.gravestone.diving_helmet.tooltip=Позволяет дышать под водой

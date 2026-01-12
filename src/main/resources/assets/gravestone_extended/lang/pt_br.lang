@@ -198,9 +198,6 @@ item.gravestone.bone_sword_iron.name=Espada de Osso de Ferro
 item.gravestone.bone_sword_golden.name=Espada de Osso de Ouro
 item.gravestone.bone_sword_diamond.name=Espada de Osso de Diamante
 
-## Shield
-item.gravestone.bone_shield.name=Escudo de Osso
-
 ## Armor
 item.gravestone.diving_helmet.name=Capacete de Mergulho
 item.gravestone.diving_helmet.tooltip=Fornece respiração inlimitada sob a água

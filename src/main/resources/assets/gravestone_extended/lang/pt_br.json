@@ -1,6 +1,8 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.bone_shield": "Escudo de Osso",
+
   "item.gravestone_extended.pile_of_bones": "Pilha de Ossos",
   "item.gravestone_extended.pile_of_bones_skull": "Pilha de Ossos com Crânio",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

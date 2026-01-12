@@ -3,7 +3,9 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 /**
  * Gravestone mod - Extended
@@ -15,13 +17,14 @@ public class GSEItems {
 
     public static final DeferredRegister<Item> ITEMS_REGISTER =
             DeferredRegister.create(Registries.ITEM, ModInfo.ID);
+
+    public static final DeferredHolder<Item, Item> BONE_SHIELD = ITEMS_REGISTER.register("bone_shield", BoneShield::new);
 //
 //    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
 //    public static final Item BONE_SWORD = new ItemBoneSword();
 //    public static final Item BONE_SWORD_IRON = new ItemIronBoneSword();
 //    public static final Item BONE_SWORD_GOLDEN = new ItemGoldenBoneSword();
 //    public static final Item BONE_SWORD_DIAMOND = new ItemDiamondBoneSword();
-//    public static final Item BONE_SHIELD = new ItemBoneShield();
 //
 //    public static Item BONE_FISHING_POLE;
 //    public static final Item BONE_HOE = new ItemBoneHoe();
@@ -97,7 +100,7 @@ public class GSEItems {
 //                BONE_FISHING_POLE = CompatibilityAdvancedFishing.getBoneFishingPole();
 //                registry.register(BONE_FISHING_POLE);
 //            }
-//            registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND, BONE_SHIELD);
+//            registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND);
 //            registry.registerAll(BONE_HELMET, BONE_CHESTPLATE, BONE_LEGGINGS, BONE_BOOTS,
 //                    DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
 //                    SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,

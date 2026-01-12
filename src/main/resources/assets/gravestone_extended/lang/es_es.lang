@@ -198,9 +198,6 @@ item.gravestone.bone_sword_iron.name=Espada de hueso de hierro
 item.gravestone.bone_sword_golden.name=Espada de hueso de oro
 item.gravestone.bone_sword_diamond.name=Espada de hueso de diamante
 
-## Shield
-item.gravestone.bone_shield.name=Escudo de hueso
-
 ## Armor
 item.gravestone.diving_helmet.name=Escafandra
 item.gravestone.diving_helmet.tooltip=Permite respirar debajo del agua

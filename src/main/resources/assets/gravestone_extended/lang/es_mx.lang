@@ -217,10 +217,6 @@ item.gravestone.bone_sword_iron.name=Iron Bone Sword
 item.gravestone.bone_sword_golden.name=Golden Bone Sword
 item.gravestone.bone_sword_diamond.name=Diamond Bone Sword
 
-## Shield
-## TODO !!!!!!!!!!
-item.gravestone.bone_shield.name=Bone Shield
-
 ## Armor
 ## TODO !!!!!!!!!!
 item.gravestone.diving_helmet.name=Diving Helmet

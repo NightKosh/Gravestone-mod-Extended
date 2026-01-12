@@ -1,6 +1,8 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.bone_shield": "Кістяний щит",
+
   "item.gravestone_extended.pile_of_bones": "Купка кісток",
   "item.gravestone_extended.pile_of_bones_skull": "Купка кісток з черепом",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

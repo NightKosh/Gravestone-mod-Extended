@@ -1,6 +1,8 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.bone_shield": "Escudo de hueso",
+
   "item.gravestone_extended.pile_of_bones": "Montón de huesos",
   "item.gravestone_extended.pile_of_bones_skull": "Montón de huesos con cráneo",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

@@ -1,5 +1,5 @@
 {
-    "parent": "gravestone-extended:item/weapon/gs_bone_shield",
+    "parent": "gravestone_extended:item/weapon/bone_shield",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [45, -25, 0],

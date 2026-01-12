@@ -25,6 +25,9 @@ public class GSETabs {
                     .title(Component.translatable("itemGroup." + ModInfo.ID))
                     .displayItems((parameters, output) -> {
 
+                        // tools and armor
+                        output.accept(GSEItems.BONE_SHIELD.get());
+
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());
                         output.accept(GSEBlocks.PILE_OF_BONES_SKULL.get());
