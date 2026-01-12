@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.TintedGlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
 import nightkosh.gravestone_extended.core.GSEBlocks;
 
 import javax.annotation.Nonnull;
@@ -26,7 +25,6 @@ public class WitheredGlass extends TintedGlassBlock {
         super(BlockBehaviour.Properties.of()
                 .setId(GSEBlocks.WITHERED_GLASS_RK)
                 .sound(SoundType.GLASS)
-                .mapColor(MapColor.COLOR_GRAY)
                 .instrument(NoteBlockInstrument.HAT)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()

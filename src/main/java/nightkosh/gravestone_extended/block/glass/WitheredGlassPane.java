@@ -36,4 +36,14 @@ public class WitheredGlassPane extends IronBarsBlock {
         return false;
     }
 
+    @Override
+    protected boolean propagatesSkylightDown(@Nonnull BlockState state) {
+        return false;
+    }
+
+    @Override
+    protected int getLightBlock(@Nonnull BlockState state) {
+        return 15;
+    }
+
 }
