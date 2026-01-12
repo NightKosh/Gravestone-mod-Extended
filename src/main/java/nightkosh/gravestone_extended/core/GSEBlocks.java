@@ -58,19 +58,131 @@ public class GSEBlocks {
             BoneStairs::new,
             BIBoneStairs::new);
 
-    public static final ResourceKey BONE_BLOCK_CRAWLER_RK = ResourceKey.create(
+    public static final ResourceKey BONE_BLOCK_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
-            fromNamespaceAndPath(ModInfo.ID, "bone_block_crawler"));
-    public static final DeferredHolder<Block, Block> BONE_BLOCK_CRAWLER = registerBlock("bone_block_crawler",
-            BoneBlockCrawler::new,
-            BIBoneBlockCrawler::new);
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skeleton_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKELETON_CRAWLER = registerBlock("bone_block_skeleton_crawler",
+            BoneBlockSkeletonCrawler::new,
+            BIBoneBlockSkeletonCrawler::new);
 
-    public static final ResourceKey BONE_BLOCK_SKULL_CRAWLER_RK = ResourceKey.create(
+    public static final ResourceKey BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
-            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_crawler"));
-    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_CRAWLER = registerBlock("bone_block_skull_crawler",
-            BoneBlockSkullCrawler::new,
-            BIBoneBlockSkullCrawler::new);
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_skeleton_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_SKELETON_CRAWLER = registerBlock("bone_block_skull_skeleton_crawler",
+            BoneBlockSkullSkeletonCrawler::new,
+            BIBoneBlockSkullSkeletonCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_STRAY_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_stray_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_STRAY_CRAWLER = registerBlock("bone_block_stray_crawler",
+            BoneBlockStrayCrawler::new,
+            BIBoneBlockStrayCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_STRAY_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_stray_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_STRAY_CRAWLER = registerBlock("bone_block_skull_stray_crawler",
+            BoneBlockSkullStrayCrawler::new,
+            BIBoneBlockSkullStrayCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_BOGGED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_bogged_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_BOGGED_CRAWLER = registerBlock("bone_block_bogged_crawler",
+            BoneBlockBoggedCrawler::new,
+            BIBoneBlockBoggedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_bogged_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_BOGGED_CRAWLER = registerBlock("bone_block_skull_bogged_crawler",
+            BoneBlockSkullBoggedCrawler::new,
+            BIBoneBlockSkullBoggedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_PARCHED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_parched_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_PARCHED_CRAWLER = registerBlock("bone_block_parched_crawler",
+            BoneBlockParchedCrawler::new,
+            BIBoneBlockParchedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_parched_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_PARCHED_CRAWLER = registerBlock("bone_block_skull_parched_crawler",
+            BoneBlockSkullParchedCrawler::new,
+            BIBoneBlockSkullParchedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_WITHER_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_wither_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_WITHER_CRAWLER = registerBlock("bone_block_wither_crawler",
+            BoneBlockWitherCrawler::new,
+            BIBoneBlockWitherCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_WITHER_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_wither_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_WITHER_CRAWLER = registerBlock("bone_block_skull_wither_crawler",
+            BoneBlockSkullWitherCrawler::new,
+            BIBoneBlockSkullWitherCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_ZOMBIE_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_zombie_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_ZOMBIE_CRAWLER = registerBlock("bone_block_zombie_crawler",
+            BoneBlockZombieCrawler::new,
+            BIBoneBlockZombieCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_zombie_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_ZOMBIE_CRAWLER = registerBlock("bone_block_skull_zombie_crawler",
+            BoneBlockSkullZombieCrawler::new,
+            BIBoneBlockSkullZombieCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_HUSK_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_husk_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_HUSK_CRAWLER = registerBlock("bone_block_husk_crawler",
+            BoneBlockHuskCrawler::new,
+            BIBoneBlockHuskCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_HUSK_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_husk_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_HUSK_CRAWLER = registerBlock("bone_block_skull_husk_crawler",
+            BoneBlockSkullHuskCrawler::new,
+            BIBoneBlockSkullHuskCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_DROWNED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_drowned_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_DROWNED_CRAWLER = registerBlock("bone_block_drowned_crawler",
+            BoneBlockDrownedCrawler::new,
+            BIBoneBlockDrownedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_drowned_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_DROWNED_CRAWLER = registerBlock("bone_block_skull_drowned_crawler",
+            BoneBlockSkullDrownedCrawler::new,
+            BIBoneBlockSkullDrownedCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_PIGLIN_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_piglin_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_PIGLIN_CRAWLER = registerBlock("bone_block_piglin_crawler",
+            BoneBlockPiglinCrawler::new,
+            BIBoneBlockPiglinCrawler::new);
+
+    public static final ResourceKey BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_piglin_crawler"));
+    public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_PIGLIN_CRAWLER = registerBlock("bone_block_skull_piglin_crawler",
+            BoneBlockSkullPiglinCrawler::new,
+            BIBoneBlockSkullPiglinCrawler::new);
 
     // glass
     public static final ResourceKey WITHERED_GLASS_RK = ResourceKey.create(

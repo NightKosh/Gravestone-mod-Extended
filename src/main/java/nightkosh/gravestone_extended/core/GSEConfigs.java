@@ -15,12 +15,18 @@ public class GSEConfigs {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
+    public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION;
+    public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_PILES_DESTRUCTION;
 
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
     static {
         BUILDER.push("Configs for Gravestone mod - Extended");
 
+        SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at bone block destruction")
+                .define("SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION", true);
+        SPAWN_CRAWLERS_AT_PILES_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at pile of bones destruction")
+                .define("SPAWN_CRAWLERS_AT_PILES_DESTRUCTION", true);
 
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
                 .define("Debug Mode", false);
@@ -210,9 +216,6 @@ public class GSEConfigs {
 //        hardAltarRecipe = config.get(CATEGORY_RECIPES, "HardAltarRecipe", false).getBoolean();
 //    }
 //
-//    // mobs
-//    public static boolean spawnSkullCrawlersAtBoneBlockDestruction;
-//    public static boolean spawnSkullCrawlersAtPileBonesDestruction;
 //
 //    public static boolean toxicSludgeAndWaterChangeBlocks;
 //    public static List<Integer> mobsDimensionWhiteList;
@@ -222,8 +225,6 @@ public class GSEConfigs {
 //        mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
 //                "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");
 //
-//        spawnSkullCrawlersAtBoneBlockDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAnBoneBlockDestruction", true).getBoolean();
-//        spawnSkullCrawlersAtPileBonesDestruction = config.get(CATEGORY_MOBS, "SpawnSkullCrawlersAtPileBonesDestruction", true).getBoolean();
 //
 //        // toxic sludge and water
 //        toxicSludgeAndWaterChangeBlocks = config.get(CATEGORY_MOBS, "ToxicSludgeAndWaterChangeBlocks", true).getBoolean();

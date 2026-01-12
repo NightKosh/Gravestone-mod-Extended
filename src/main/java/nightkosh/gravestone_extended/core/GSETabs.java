@@ -31,8 +31,24 @@ public class GSETabs {
                         output.accept(GSEBlocks.BONE_SLAB.get());
                         output.accept(GSEBlocks.BONE_STAIRS.get());
 
-                        output.accept(GSEBlocks.BONE_BLOCK_CRAWLER.get());
-                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_STRAY_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_WITHER_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_HUSK_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER.get());
+                        output.accept(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER.get());
 
                         // glass
                         output.accept(GSEBlocks.WITHERED_GLASS.get());

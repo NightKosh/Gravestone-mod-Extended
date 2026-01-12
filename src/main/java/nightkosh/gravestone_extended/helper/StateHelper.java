@@ -81,10 +81,6 @@ public class StateHelper {
 //    public static final IBlockState NIGHTSTONE = GSBlock.TRAP.getDefaultState();
 //    public static final IBlockState CANDLE = GSBlock.CANDLE.getDefaultState();
 //    public static final IBlockState SKELETON_SKULL_CANDLE = GSBlock.SKULL_CANDLE_SKELETON.getDefaultState();
-//    public static final IBlockState BONE_BLOCK = GSBlock.BONE_BLOCK.getDefaultState();
-//    public static final IBlockState BONE_BLOCK_SKULL = BONE_BLOCK.withProperty(BlockBoneBlock.VARIANT, EnumBoneBlock.SKULL_BONE_BLOCK);
-//    public static final IBlockState BONE_BLOCK_CRAWLER = BONE_BLOCK.withProperty(BlockBoneBlock.VARIANT, EnumBoneBlock.CRAWLER_BONE_BLOCK);
-//    public static final IBlockState BONE_BLOCK_SKULL_CRAWLER = BONE_BLOCK.withProperty(BlockBoneBlock.VARIANT, EnumBoneBlock.CRAWLER_SKULL_BONE_BLOCK);
 //    public static final IBlockState PILE_OF_BONES = GSBlock.PILE_OF_BONES.getDefaultState();
 //    public static final IBlockState PILE_OF_BONES_WITH_SKULL = PILE_OF_BONES.withProperty(BlockPileOfBones.VARIANT, EnumPileOfBones.PILE_OF_BONES_WITH_SKULL);
 //    public static final IBlockState PILE_OF_BONES_WITH_SKULL_CRAWLER = PILE_OF_BONES.withProperty(BlockPileOfBones.VARIANT, EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER);

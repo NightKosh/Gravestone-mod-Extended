@@ -9,12 +9,12 @@ import nightkosh.gravestone_extended.core.GSEBlocks;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class BIBoneBlockSkullCrawler extends BlockItem {
+public class BIBoneBlockSkullWitherCrawler extends BlockItem {
 
-    public BIBoneBlockSkullCrawler() {
-        super(GSEBlocks.BONE_BLOCK_SKULL_CRAWLER.get(), new Properties()
+    public BIBoneBlockSkullWitherCrawler() {
+        super(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER.get(), new Properties()
                 .stacksTo(64)
-                .setId(GSEBlocks.BONE_BLOCK_SKULL_CRAWLER_RK));
+                .setId(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER_RK));
     }
 
 }
