@@ -1,12 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
-    {
-      "item": "gravestone-extended:gspileofbones"
-    }
+    "gravestone_extended:pile_of_bones"
   ],
   "result": {
-    "item": "minecraft:bone",
+    "id": "minecraft:bone",
     "count": 4
   }
 }

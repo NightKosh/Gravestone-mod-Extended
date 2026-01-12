@@ -36,13 +36,6 @@ block.spawner.zombie.name=Spawner na zombie
 ## TODO !!!!!
 block.spawner.spider.name=Spider Spawner
 
-
-## Pile of Bones
-block.pile_of_bones.name=Hromada kostí
-block.pile_of_bones_with_skull.name=Hromada kostí s lebkou
-## TODO !!!!!
-block.pile_of_bones_with_skull_crawler.name=Pile of Bones with Skull Crawler
-
 ## Chests
 block.haunted_chest.bats_chest.name=Bedna s netopýry
 block.haunted_chest.skeleton_chest.name=Bedna s kostlivcem

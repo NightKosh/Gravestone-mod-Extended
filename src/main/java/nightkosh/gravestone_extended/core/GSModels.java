@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.core;
 
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
-import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
 import nightkosh.gravestone_extended.block.enums.EnumTrap;
 import nightkosh.gravestone_extended.core.compatibility.Compatibility;
 import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
@@ -21,15 +20,6 @@ public class GSModels {
 //        @SubscribeEvent
 //        public static void registerModels(final ModelRegistryEvent event) {
 //            ModGravestoneExtended.proxy.addModelRotationsAndTEISR();
-//
-//            //piles of bones
-//            for (int i = EnumPileOfBones.PILE_OF_BONES.ordinal(); i < EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal() * 4 - 1; i++) {
-//                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES);
-//            }
-//            for (int i = EnumPileOfBones.PILE_OF_BONES_WITH_SKULL.ordinal() * 4; i <= EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER.ordinal() * 4; i++) {
-//                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), i, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
-//            }
-//            ModelBakery.registerItemVariants(Item.getItemFromBlock(GSBlock.PILE_OF_BONES), ResourcesModels.PILE_OF_BONES, ResourcesModels.PILE_OF_BONES_WITH_SKULL);
 //
 //            //haunted chest
 //            for (int meta = 0; meta <= EnumHauntedChest.values().length - 1; meta++) {

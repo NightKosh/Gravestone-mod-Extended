@@ -1,16 +1,5 @@
 package nightkosh.gravestone_extended.structures;
 
-import nightkosh.gravestone_extended.block.BlockPileOfBones;
-import nightkosh.gravestone_extended.block.BlockSpawner;
-import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
-import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
-import nightkosh.gravestone_extended.block.enums.EnumSpawner;
-import nightkosh.gravestone_extended.helper.PotionHelper;
-import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *
@@ -25,14 +14,6 @@ public class ObjectsGenerationHelper {
 //    public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, EnumFacing facing, IBlockState state) {
 //        BlockPos pos = new BlockPos(component.getXWithOffset(xCoord, zCoord), component.getYWithOffset(yCoord), component.getZWithOffset(xCoord, zCoord));
 //        world.setBlockState(pos, state.withProperty(BlockPileOfBones.FACING, facing), 2);
-//    }
-//
-//    public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, IBlockState state) {
-//        generatePileOfBones(component, world, xCoord, yCoord, zCoord, EnumFacing.getHorizontal(world.rand.nextInt(4)), state);
-//    }
-//
-//    public static void generatePileOfBones(ComponentGraveStone component, World world, int xCoord, int yCoord, int zCoord, EnumFacing facing, EnumPileOfBones type) {
-//        generatePileOfBones(component, world, xCoord, yCoord, zCoord, facing, StateHelper.getPileOfBones(type));
 //    }
 //
 //    /**

@@ -33,11 +33,6 @@ block.spawner.skeleton.name=Skelettspawner
 block.spawner.zombie.name=Zombiespawner
 block.spawner.spider.name=Spinnenspawner
 
-## Pile of Bones
-block.pile_of_bones.name=Knochenhaufen
-block.pile_of_bones_with_skull.name=Knochenhaufen mit Totenkopf
-block.pile_of_bones_with_skull_crawler.name=Knochenhaufen mit Skelettkriecher
-
 ## Chests
 block.haunted_chest.bats_chest.name=Fledermauskiste
 block.haunted_chest.skeleton_chest.name=Skelettkiste

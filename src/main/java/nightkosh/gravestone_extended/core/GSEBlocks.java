@@ -10,9 +10,11 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block.bone_block.*;
 import nightkosh.gravestone_extended.block.glass.WitheredGlass;
 import nightkosh.gravestone_extended.block.glass.WitheredGlassPane;
+import nightkosh.gravestone_extended.block.pile_of_bones.*;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
 import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlassPane;
+import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
 
 import java.util.function.Supplier;
 
@@ -28,6 +30,84 @@ public class GSEBlocks {
     
     public static final DeferredRegister<Block> BLOCKS_REGISTER =
             DeferredRegister.create(Registries.BLOCK, ModInfo.ID);
+
+    // pile of bones
+    public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES = registerBlock("pile_of_bones",
+            PileOfBones::new,
+            BIPileOfBones::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL = registerBlock("pile_of_bones_skull",
+            PileOfBonesSkull::new,
+            BIPileOfBonesSkull::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_SKELETON_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_skeleton_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_SKELETON = registerBlock("pile_of_bones_skull_skeleton_crawler",
+            PileOfBonesSkeleton::new,
+            BIPileOfBonesSkeleton::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_STRAY_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_stray_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_STRAY = registerBlock("pile_of_bones_skull_stray_crawler",
+            PileOfBonesStray::new,
+            BIPileOfBonesStray::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_BOGGED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_bogged_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_BOGGED = registerBlock("pile_of_bones_skull_bogged_crawler",
+            PileOfBonesBogged::new,
+            BIPileOfBonesBogged::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_PARCHED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_parched_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_PARCHED = registerBlock("pile_of_bones_skull_parched_crawler",
+            PileOfBonesParched::new,
+            BIPileOfBonesParched::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_WITHER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_wither_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_WITHER = registerBlock("pile_of_bones_skull_wither_crawler",
+            PileOfBonesWither::new,
+            BIPileOfBonesWither::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_ZOMBIE_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_zombie_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_ZOMBIE = registerBlock("pile_of_bones_skull_zombie_crawler",
+            PileOfBonesZombie::new,
+            BIPileOfBonesZombie::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_HUSK_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_husk_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_HUSK = registerBlock("pile_of_bones_skull_husk_crawler",
+            PileOfBonesHusk::new,
+            BIPileOfBonesHusk::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_DROWNED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_drowned_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_DROWNED = registerBlock("pile_of_bones_skull_drowned_crawler",
+            PileOfBonesDrowned::new,
+            BIPileOfBonesDrowned::new);
+
+    public static final ResourceKey PILE_OF_BONES_SKULL_PIGLIN_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_piglin_crawler"));
+    public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_PIGLIN = registerBlock("pile_of_bones_skull_piglin_crawler",
+            PileOfBonesPiglin::new,
+            BIPileOfBonesPiglin::new);
 
     // bone blocks
     public static final ResourceKey BONE_BLOCK_RK = ResourceKey.create(
@@ -217,8 +297,6 @@ public class GSEBlocks {
 //    public static final BlockTrap TRAP = new BlockTrap();
 //    public static final ItemBlock TRAP_IB = new IBTrap(TRAP);
 //
-//    public static final BlockPileOfBones PILE_OF_BONES = new BlockPileOfBones();
-//    public static final ItemBlock PILE_OF_BONES_IB = new IBPileOfBones(PILE_OF_BONES);
 //
 //    public static final BlockHauntedChest HAUNTED_CHEST = new BlockHauntedChest();
 //    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
@@ -258,7 +336,7 @@ public class GSEBlocks {
 //        @SubscribeEvent
 //        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 //            final IForgeRegistry<Block> registry = event.getRegistry();
-//            registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP, PILE_OF_BONES,
+//            registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP,
 //                    HAUNTED_CHEST, CANDLE, SKULL_CANDLE_SKELETON, SKULL_CANDLE_ZOMBIE, SKULL_CANDLE_WITHER,
 //                    ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, FROZEN_LAVA, CURSED_FLAME);
 //        }
@@ -267,7 +345,7 @@ public class GSEBlocks {
 //        public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB,
-//                    PILE_OF_BONES_IB, HAUNTED_CHEST_IB, CANDLE_IB,
+//                    HAUNTED_CHEST_IB, CANDLE_IB,
 //                    SKULL_CANDLE_SKELETON_IB, SKULL_CANDLE_ZOMBIE_IB, SKULL_CANDLE_WITHER_IB,
 //                    ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB, CURSED_FLAME_IB);
 //        }

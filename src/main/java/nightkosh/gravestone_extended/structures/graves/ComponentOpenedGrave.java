@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.structures.graves;
 
-import nightkosh.gravestone_extended.block.enums.EnumPileOfBones;
 import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
 import nightkosh.gravestone_extended.helper.StateHelper;

@@ -33,11 +33,6 @@ block.spawner.skeleton.name=Skeleton Spawner
 block.spawner.zombie.name=Zombie Spawner
 block.spawner.spider.name=Spider Spawner
 
-## Pile of Bones
-block.pile_of_bones.name=Pile of Bones
-block.pile_of_bones_with_skull.name=Pile of Bones with Skull
-block.pile_of_bones_with_skull_crawler.name=Pile of Bones with Skull Crawler
-
 ## Chests
 block.haunted_chest.bats_chest.name=Chest with Bats
 block.haunted_chest.skeleton_chest.name=Chest with Skeleton

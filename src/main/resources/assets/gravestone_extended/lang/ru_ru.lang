@@ -33,11 +33,6 @@ block.spawner.skeleton.name=Спаунер скелетов
 block.spawner.zombie.name=Спаунер зомби
 block.spawner.spider.name=Спаунер пауков
 
-## Pile of Bones
-block.pile_of_bones.name=Кучка костей
-block.pile_of_bones_with_skull.name=Кучка костей с черепом
-block.pile_of_bones_with_skull_crawler.name=Кучка костей с ползучим черепом
-
 ## Chests
 block.haunted_chest.bats_chest.name=Сундук с летучими мышами
 block.haunted_chest.skeleton_chest.name=Сундук со скелетом

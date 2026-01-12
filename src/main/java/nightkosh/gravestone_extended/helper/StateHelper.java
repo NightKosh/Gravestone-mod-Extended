@@ -81,9 +81,6 @@ public class StateHelper {
 //    public static final IBlockState NIGHTSTONE = GSBlock.TRAP.getDefaultState();
 //    public static final IBlockState CANDLE = GSBlock.CANDLE.getDefaultState();
 //    public static final IBlockState SKELETON_SKULL_CANDLE = GSBlock.SKULL_CANDLE_SKELETON.getDefaultState();
-//    public static final IBlockState PILE_OF_BONES = GSBlock.PILE_OF_BONES.getDefaultState();
-//    public static final IBlockState PILE_OF_BONES_WITH_SKULL = PILE_OF_BONES.withProperty(BlockPileOfBones.VARIANT, EnumPileOfBones.PILE_OF_BONES_WITH_SKULL);
-//    public static final IBlockState PILE_OF_BONES_WITH_SKULL_CRAWLER = PILE_OF_BONES.withProperty(BlockPileOfBones.VARIANT, EnumPileOfBones.PILE_OF_BONES_WITH_SKULL_CRAWLER);
 //    public static final IBlockState GRAVESTONE = GSBlock.GRAVE_STONE.getDefaultState();
 //    public static final IBlockState GRAVESTONE_NORTH = GRAVESTONE.withProperty(BlockGraveStone.FACING, EnumFacing.NORTH);
 //    public static final IBlockState GRAVESTONE_EAST = GRAVESTONE.withProperty(BlockGraveStone.FACING, EnumFacing.EAST);
@@ -147,17 +144,6 @@ public class StateHelper {
 //                return MEMORIAL_SOUTH;
 //            case WEST:
 //                return MEMORIAL_WEST;
-//        }
-//    }
-//
-//    public static IBlockState getPileOfBones(EnumPileOfBones type) {
-//        switch (type) {
-//            default:
-//                return PILE_OF_BONES;
-//            case PILE_OF_BONES_WITH_SKULL:
-//                return PILE_OF_BONES_WITH_SKULL;
-//            case PILE_OF_BONES_WITH_SKULL_CRAWLER:
-//                return PILE_OF_BONES_WITH_SKULL_CRAWLER;
 //        }
 //    }
 //

@@ -33,11 +33,6 @@ block.spawner.skeleton.name=Gerador de Esqueleto
 block.spawner.zombie.name=Gerador de Zumbi
 block.spawner.spider.name=Gerador de Aranha
 
-## Pile of Bones
-block.pile_of_bones.name=Pilha de Ossos
-block.pile_of_bones_with_skull.name=Pilha de Ossos com Crânio
-block.pile_of_bones_with_skull_crawler.name=Pilha de Ossos com Cabeça Rastejante
-
 ## Chests
 block.haunted_chest.bats_chest.name=Baú com Morcegos
 block.haunted_chest.skeleton_chest.name=Baú com Esqueleto

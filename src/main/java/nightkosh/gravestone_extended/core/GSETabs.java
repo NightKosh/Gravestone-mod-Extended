@@ -25,6 +25,19 @@ public class GSETabs {
                     .title(Component.translatable("itemGroup." + ModInfo.ID))
                     .displayItems((parameters, output) -> {
 
+                        // pile of bones
+                        output.accept(GSEBlocks.PILE_OF_BONES.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_SKELETON.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_STRAY.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_BOGGED.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_PARCHED.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_WITHER.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_HUSK.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_DROWNED.get());
+                        output.accept(GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN.get());
+
                         // bone blocks
                         output.accept(GSEBlocks.BONE_BLOCK.get());
                         output.accept(GSEBlocks.BONE_BLOCK_SKULL.get());

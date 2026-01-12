@@ -1,6 +1,18 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.pile_of_bones": "Pile of Bones",
+  "item.gravestone_extended.pile_of_bones_skull": "Pile of Bones with Skull",
+  "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_stray_crawler": "Pile of Bones with Stray Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_bogged_crawler": "Pile of Bones with Bogged Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_parched_crawler": "Pile of Bones with Parched Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_wither_crawler": "Pile of Bones with Wither Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_zombie_crawler": "Pile of Bones with Zombie Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_husk_crawler": "Pile of Bones with Husk Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_drowned_crawler": "Pile of Bones with Drowned Skull Crawler",
+  "item.gravestone_extended.pile_of_bones_skull_piglin_crawler": "Pile of Bones with Zombified Piglin Skull Crawler",
+
   "item.gravestone_extended.bone_block": "Block d'os",
   "item.gravestone_extended.bone_block_skull": "Block d'os avec crâne",
   "item.gravestone_extended.bone_slab": "Dalle d'os",
@@ -21,8 +33,8 @@
   "item.gravestone_extended.bone_block_skull_husk_crawler": "Husk Skull Crawler's Bone Block with Skull",
   "item.gravestone_extended.bone_block_drowned_crawler": "Drowned Skull Crawler's Bone Block",
   "item.gravestone_extended.bone_block_skull_drowned_crawler": "Drowned Skull Crawler's Bone Block with Skull",
-  "item.gravestone_extended.bone_block_piglin_crawler": "Piglin Skull Crawler's Bone Block",
-  "item.gravestone_extended.bone_block_skull_piglin_crawler": "Piglin Skull Crawler's Bone Block with Skull",
+  "item.gravestone_extended.bone_block_piglin_crawler": "Zombified Piglin Skull Crawler's Bone Block",
+  "item.gravestone_extended.bone_block_skull_piglin_crawler": "Zombified Piglin Skull Crawler's Bone Block with Skull",
 
   "item.gravestone_extended.withered_glass": "Withered Glass",
   "item.gravestone_extended.withered_glass_pane": "Withered Glass Pane"
