@@ -24,7 +24,7 @@ public class WitheredGlassPane extends IronBarsBlock {
         super(BlockBehaviour.Properties.of()
                 .setId(GSEBlocks.WITHERED_GLASS_PANE_RK)
                 .instrument(NoteBlockInstrument.HAT)
-                .strength(30, Integer.MAX_VALUE)
+                .strength(4, Integer.MAX_VALUE)
                 .sound(SoundType.GLASS)
                 .noOcclusion());
     }

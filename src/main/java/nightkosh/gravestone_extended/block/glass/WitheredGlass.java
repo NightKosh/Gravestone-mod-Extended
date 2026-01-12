@@ -26,13 +26,12 @@ public class WitheredGlass extends TintedGlassBlock {
                 .setId(GSEBlocks.WITHERED_GLASS_RK)
                 .sound(SoundType.GLASS)
                 .instrument(NoteBlockInstrument.HAT)
-                .requiresCorrectToolForDrops()
                 .noOcclusion()
                 .isValidSpawn(Blocks::never)
                 .isRedstoneConductor((state, level, pos) -> false)
                 .isSuffocating((state, level, pos) -> false)
                 .isViewBlocking((state, level, pos) -> false)
-                .strength(30, Integer.MAX_VALUE));
+                .strength(4, Integer.MAX_VALUE));
     }
 
     @Override

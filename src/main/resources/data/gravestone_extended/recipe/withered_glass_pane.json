@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": "gravestone_extended:withered_glass"
+  },
+  "result": {
+    "id": "gravestone_extended:withered_glass_pane",
+    "count": 16
+  }
+}
