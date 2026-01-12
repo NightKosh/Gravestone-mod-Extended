@@ -1,6 +1,10 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.skull_candle_skeleton": "Totenkopfkerze",
+  "item.gravestone_extended.skull_candle_zombie": "Wither-Totenkopfkerze",
+  "item.gravestone_extended.skull_candle_wither": "Zombie-Totenkopfkerze",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.pile_of_bones": "Knochenhaufen",

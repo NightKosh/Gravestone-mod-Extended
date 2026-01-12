@@ -1,6 +1,10 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.skull_candle_skeleton": "骷髅头颅蜡烛",
+  "item.gravestone_extended.skull_candle_zombie": "凋灵头颅蜡烛",
+  "item.gravestone_extended.skull_candle_wither": "僵尸头颅蜡烛",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.pile_of_bones": "骨堆",

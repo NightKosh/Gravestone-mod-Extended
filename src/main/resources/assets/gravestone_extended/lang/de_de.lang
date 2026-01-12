@@ -39,12 +39,6 @@ block.haunted_chest.skeleton_chest.name=Skelettkiste
 block.haunted_chest.raven_chest.name=Rabenkiste
 block.haunted_chest.ghost_chest.name=Geisterkiste
 
-## Candles
-tile.candle.name=Kerze
-block.skull_candle.skeleton.name=Totenkopfkerze
-block.skull_candle.wither_skeleton.name=Wither-Totenkopfkerze
-block.skull_candle.zombie.name=Zombie-Totenkopfkerze
-
 ## Altar
 tile.altar.name=Altar
 

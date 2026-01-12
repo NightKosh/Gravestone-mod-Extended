@@ -1,6 +1,10 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.skull_candle_skeleton": "Crânio com Vela",
+  "item.gravestone_extended.skull_candle_zombie": "Crânio de Esqueleto Wither com Vela",
+  "item.gravestone_extended.skull_candle_wither": "Cabeça de Zumbi com vela",
+
   "item.gravestone_extended.bone_shield": "Escudo de Osso",
 
   "item.gravestone_extended.pile_of_bones": "Pilha de Ossos",

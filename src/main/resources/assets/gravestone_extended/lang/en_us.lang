@@ -39,12 +39,6 @@ block.haunted_chest.skeleton_chest.name=Chest with Skeleton
 block.haunted_chest.raven_chest.name=Chest with Ravens
 block.haunted_chest.ghost_chest.name=Chest with Ghost
 
-## Candles
-tile.candle.name=Candle
-block.skull_candle.skeleton.name=Skull Candle
-block.skull_candle.wither_skeleton.name=Wither Skull Candle
-block.skull_candle.zombie.name=Zombie Skull Candle
-
 ## Altar
 tile.altar.name=Altar
 

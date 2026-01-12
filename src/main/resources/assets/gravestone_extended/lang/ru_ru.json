@@ -1,6 +1,10 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.skull_candle_skeleton": "Череп скелета со свечой",
+  "item.gravestone_extended.skull_candle_zombie": "Череп иссушителя со свечой",
+  "item.gravestone_extended.skull_candle_wither": "Череп зомби со свечой",
+
   "item.gravestone_extended.bone_shield": "Костяной щит",
 
   "item.gravestone_extended.pile_of_bones": "Куча костей",

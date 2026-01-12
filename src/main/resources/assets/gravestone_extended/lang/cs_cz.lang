@@ -42,12 +42,6 @@ block.haunted_chest.skeleton_chest.name=Bedna s kostlivcem
 block.haunted_chest.raven_chest.name=Bedna s havrany
 block.haunted_chest.ghost_chest.name=Bedna s duchem
 
-## Candles
-tile.candle.name=Svíčka
-block.skull_candle.skeleton.name=Lebka se svíčkou
-block.skull_candle.wither_skeleton.name=Lebka withera se svíčkou
-block.skull_candle.zombie.name=Zombie hlava se svíčkou
-
 ## Altar
 tile.altar.name=Oltář
 

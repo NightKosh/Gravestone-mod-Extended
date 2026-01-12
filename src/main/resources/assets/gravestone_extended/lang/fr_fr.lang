@@ -44,12 +44,6 @@ block.haunted_chest.skeleton_chest.name=Coffre à squelette
 block.haunted_chest.raven_chest.name=Coffre à corbeau
 block.haunted_chest.ghost_chest.name=Coffre à fantômes
 
-## Candles
-tile.candle.name=Bougie
-block.skull_candle.skeleton.name=Bougie à tête de squelette
-block.skull_candle.wither_skeleton.name=Bougie à tête de wither
-block.skull_candle.zombie.name=Bougie à tête de zombie
-
 ## Altar
 ##TODO !!!!!!!!!!
 tile.altar.name=Altar

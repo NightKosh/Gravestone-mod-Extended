@@ -46,13 +46,6 @@ block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
 block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
-## Candles
-##TODO !!!!!!!!!!
-tile.candle.name=Candle
-block.skull_candle.skeleton.name=Vela en Cráneo
-block.skull_candle.wither_skeleton.name=Vela en Cráneo de Wither
-block.skull_candle.zombie.name=Vela en Cabeza de Zombi
-
 ## Altar
 ##TODO !!!!!!!!!!
 tile.altar.name=Altar

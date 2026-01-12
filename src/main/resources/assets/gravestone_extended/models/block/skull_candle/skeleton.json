@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"ambientocclusion": false,
 	"textures": {
-		"texture_skull": "gravestone-extended:blocks/skull_candle/skeleton_skull",
-		"particle": "gravestone-extended:blocks/skull_candle/skeleton_skull",
-		"texture_candle": "gravestone-extended:blocks/candle"
+		"texture_skull": "gravestone_extended:block/skull_candle/skeleton",
+		"particle": "gravestone_extended:block/skull_candle/skeleton",
+		"texture_candle": "gravestone_extended:block/skull_candle/candle"
 	},
 	"elements": [
 		{

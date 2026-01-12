@@ -11,10 +11,16 @@ import nightkosh.gravestone_extended.block.bone_block.*;
 import nightkosh.gravestone_extended.block.glass.WitheredGlass;
 import nightkosh.gravestone_extended.block.glass.WitheredGlassPane;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
+import nightkosh.gravestone_extended.block.skull_candle.SkullCandleSkeleton;
+import nightkosh.gravestone_extended.block.skull_candle.SkullCandleWither;
+import nightkosh.gravestone_extended.block.skull_candle.SkullCandleZombie;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
 import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlassPane;
 import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleSkeleton;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleWither;
+import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleZombie;
 
 import java.util.function.Supplier;
 
@@ -30,6 +36,28 @@ public class GSEBlocks {
     
     public static final DeferredRegister<Block> BLOCKS_REGISTER =
             DeferredRegister.create(Registries.BLOCK, ModInfo.ID);
+
+    // skull candles
+    public static final ResourceKey SKULL_CANDLE_SKELETON_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_skeleton"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_SKELETON = registerBlock("skull_candle_skeleton",
+            SkullCandleSkeleton::new,
+            BISkullCandleSkeleton::new);
+
+    public static final ResourceKey SKULL_CANDLE_ZOMBIE_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_zombie"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_ZOMBIE = registerBlock("skull_candle_zombie",
+            SkullCandleZombie::new,
+            BISkullCandleZombie::new);
+
+    public static final ResourceKey SKULL_CANDLE_WITHER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_wither"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_WITHER = registerBlock("skull_candle_wither",
+            SkullCandleWither::new,
+            BISkullCandleWither::new);
 
     // pile of bones
     public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
@@ -301,16 +329,6 @@ public class GSEBlocks {
 //    public static final BlockHauntedChest HAUNTED_CHEST = new BlockHauntedChest();
 //    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
 //
-//    public static final BlockCandle CANDLE = new BlockCandle();
-//    public static final ItemBlock CANDLE_IB = new IBCandle(CANDLE);
-//
-//    public static final BlockSkullCandleSkeleton SKULL_CANDLE_SKELETON = new BlockSkullCandleSkeleton();
-//    public static final ItemBlock SKULL_CANDLE_SKELETON_IB = new IBSkullCandleSkeleton(SKULL_CANDLE_SKELETON);
-//    public static final BlockSkullCandleSkeleton SKULL_CANDLE_ZOMBIE = new BlockSkullCandleZombie();
-//    public static final ItemBlock SKULL_CANDLE_ZOMBIE_IB = new IBSkullCandleZombie(SKULL_CANDLE_ZOMBIE);
-//    public static final BlockSkullCandleSkeleton SKULL_CANDLE_WITHER = new BlockSkullCandleWither();
-//    public static final ItemBlock SKULL_CANDLE_WITHER_IB = new IBSkullCandleWither(SKULL_CANDLE_WITHER);
-//
 //    public static final BlockAltar ALTAR = new BlockAltar();
 //    public static final ItemBlock ALTAR_IB = new IBAltar(ALTAR);
 //
@@ -337,17 +355,14 @@ public class GSEBlocks {
 //        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 //            final IForgeRegistry<Block> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP,
-//                    HAUNTED_CHEST, CANDLE, SKULL_CANDLE_SKELETON, SKULL_CANDLE_ZOMBIE, SKULL_CANDLE_WITHER,
-//                    ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, FROZEN_LAVA, CURSED_FLAME);
+//                    HAUNTED_CHEST, ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, FROZEN_LAVA, CURSED_FLAME);
 //        }
 //
 //        @SubscribeEvent
 //        public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB,
-//                    HAUNTED_CHEST_IB, CANDLE_IB,
-//                    SKULL_CANDLE_SKELETON_IB, SKULL_CANDLE_ZOMBIE_IB, SKULL_CANDLE_WITHER_IB,
-//                    ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB, CURSED_FLAME_IB);
+//                    HAUNTED_CHEST_IB, ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, FROZEN_LAVA_IB, CURSED_FLAME_IB);
 //        }
 //    }
 

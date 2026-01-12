@@ -39,12 +39,6 @@ block.haunted_chest.skeleton_chest.name=Baú com Esqueleto
 block.haunted_chest.raven_chest.name=Baú com Corvos
 block.haunted_chest.ghost_chest.name=Baú com Fantasma
 
-## Candles
-tile.candle.name=Vela
-block.skull_candle.skeleton.name=Crânio com Vela
-block.skull_candle.wither_skeleton.name=Crânio de Esqueleto Wither com Vela
-block.skull_candle.zombie.name=Cabeça de Zumbi com vela
-
 ## Altar
 tile.altar.name=Altar
 

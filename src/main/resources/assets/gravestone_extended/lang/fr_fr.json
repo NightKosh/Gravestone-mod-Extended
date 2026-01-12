@@ -1,6 +1,10 @@
 {
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
+  "item.gravestone_extended.skull_candle_skeleton": "Bougie à tête de squelette",
+  "item.gravestone_extended.skull_candle_zombie": "Bougie à tête de wither",
+  "item.gravestone_extended.skull_candle_wither": "Bougie à tête de zombie",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.pile_of_bones": "Pile of Bones",

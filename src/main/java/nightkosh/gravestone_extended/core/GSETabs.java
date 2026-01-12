@@ -28,6 +28,11 @@ public class GSETabs {
                         // tools and armor
                         output.accept(GSEItems.BONE_SHIELD.get());
 
+                        // skull candles
+                        output.accept(GSEBlocks.SKULL_CANDLE_SKELETON.get());
+                        output.accept(GSEBlocks.SKULL_CANDLE_ZOMBIE.get());
+                        output.accept(GSEBlocks.SKULL_CANDLE_WITHER.get());
+
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());
                         output.accept(GSEBlocks.PILE_OF_BONES_SKULL.get());

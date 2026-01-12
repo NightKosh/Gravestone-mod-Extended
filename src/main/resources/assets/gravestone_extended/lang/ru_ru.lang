@@ -39,12 +39,6 @@ block.haunted_chest.skeleton_chest.name=Сундук со скелетом
 block.haunted_chest.raven_chest.name=Сундук с воронами
 block.haunted_chest.ghost_chest.name=Сундук с привидениями
 
-## candles
-tile.candle.name=Свеча
-block.skull_candle.skeleton.name=Череп скелета со свечой
-block.skull_candle.wither_skeleton.name=Череп иссушителя со свечой
-block.skull_candle.zombie.name=Череп зомби со свечой
-
 ## Altar
 tile.altar.name=Алтарь
 

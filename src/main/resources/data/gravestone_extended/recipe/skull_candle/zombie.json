@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:candle",
+    "minecraft:zombie_head"
+  ],
+  "result": {
+    "id": "gravestone_extended:skull_candle_zombie"
+  }
+}

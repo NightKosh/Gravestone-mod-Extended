@@ -1,0 +1,19 @@
+{
+     "variants": {
+         "facing=north": {
+            "model": "gravestone_extended:block/skull_candle/skeleton"
+         },
+         "facing=east": {
+            "model": "gravestone_extended:block/skull_candle/skeleton",
+            "y": 90
+         },
+         "facing=south": {
+            "model": "gravestone_extended:block/skull_candle/skeleton",
+            "y": 180
+         },
+         "facing=west": {
+            "model": "gravestone_extended:block/skull_candle/skeleton",
+            "y": 270
+         }
+     }
+}
