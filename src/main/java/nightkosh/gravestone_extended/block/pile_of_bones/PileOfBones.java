@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -52,6 +53,7 @@ public class PileOfBones extends Block {
                 .setId(GSEBlocks.PILE_OF_BONES_RK)
                 .sound(SoundType.BONE_BLOCK)
                 .noCollision()
+                .pushReaction(PushReaction.DESTROY)
                 .strength(0.1F, 0));
     }
 

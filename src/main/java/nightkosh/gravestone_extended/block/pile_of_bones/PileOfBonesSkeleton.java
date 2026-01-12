@@ -2,6 +2,7 @@ package nightkosh.gravestone_extended.block.pile_of_bones;
 
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.PushReaction;
 import nightkosh.gravestone_extended.core.GSEBlocks;
 
 /**
@@ -22,6 +23,7 @@ public class PileOfBonesSkeleton extends APileOfBonesCrawler {
                 .setId(GSEBlocks.PILE_OF_BONES_SKULL_SKELETON_RK)
                 .sound(SoundType.BONE_BLOCK)
                 .noCollision()
+                .pushReaction(PushReaction.DESTROY)
                 .strength(0.1F, 0));
     }
 
