@@ -27,11 +27,6 @@ block.trap.night.name=Камінь темряви
 block.trap.thunder.name=Грозовий камінь
 block.trap.curse=Темрява наближається!
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=Спавнер висушувачів
 block.spawner.skeleton.name=Спавнер скелетів

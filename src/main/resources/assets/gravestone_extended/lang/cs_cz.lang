@@ -29,11 +29,6 @@ block.trap.night.name=Noční kámen
 block.trap.thunder.name=Bleskový kámen
 block.trap.curse=Temnota přichází!
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=Spawner na withera
 block.spawner.skeleton.name=Spawner na kostlivce

@@ -34,6 +34,10 @@ public class GSETabs {
                         output.accept(GSEBlocks.BONE_BLOCK_CRAWLER.get());
                         output.accept(GSEBlocks.BONE_BLOCK_SKULL_CRAWLER.get());
 
+                        // glass
+                        output.accept(GSEBlocks.WITHERED_GLASS.get());
+                        output.accept(GSEBlocks.WITHERED_GLASS_PANE.get());
+
                     })
                     .build()
             );

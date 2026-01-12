@@ -6,5 +6,8 @@
   "item.gravestone_extended.bone_slab": "Kostěný půlblok",
   "item.gravestone_extended.bone_stairs": "Kostěné schody",
   "item.gravestone_extended.bone_block_crawler": "Kostěný blok s Lebkokrabem uvnitř",
-  "item.gravestone_extended.bone_block_skull_crawler": "Kostěný blok s lebkou a Lebkokrabem uvnitř"
+  "item.gravestone_extended.bone_block_skull_crawler": "Kostěný blok s lebkou a Lebkokrabem uvnitř",
+
+  "item.gravestone_extended.withered_glass": "Withered Glass",
+  "item.gravestone_extended.withered_glass_pane": "Withered Glass Pane"
 }

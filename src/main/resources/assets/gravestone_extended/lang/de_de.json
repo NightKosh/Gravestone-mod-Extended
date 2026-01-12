@@ -6,5 +6,8 @@
   "item.gravestone_extended.bone_slab": "Knochenstufe",
   "item.gravestone_extended.bone_stairs": "Knochentreppe",
   "item.gravestone_extended.bone_block_crawler": "Knochenblock des Skelettkriechers",
-  "item.gravestone_extended.bone_block_skull_crawler": "Knochenblock des Skelettkriechers mit Totenkopf"
+  "item.gravestone_extended.bone_block_skull_crawler": "Knochenblock des Skelettkriechers mit Totenkopf",
+
+  "item.gravestone_extended.withered_glass": "Verwelktes Glas",
+  "item.gravestone_extended.withered_glass_pane": "Verwelkte Glasscheibe"
 }

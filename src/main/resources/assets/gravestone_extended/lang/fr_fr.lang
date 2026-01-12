@@ -31,11 +31,6 @@ block.trap.night.name=Pierre nocturne
 block.trap.thunder.name=Pierre de tonnerre
 block.trap.curse=Les ténèbres approchent !
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=Spawner à sorcière
 block.spawner.skeleton.name=Spawner à squelette

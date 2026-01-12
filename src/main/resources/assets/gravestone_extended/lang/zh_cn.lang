@@ -29,11 +29,6 @@ block.trap.night.name=午夜石
 block.trap.thunder.name=雷电石
 block.trap.curse=暗夜正在降临！
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=凋灵刷怪笼
 block.spawner.skeleton.name=骷髅刷怪笼

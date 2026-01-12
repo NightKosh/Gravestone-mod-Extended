@@ -31,11 +31,6 @@ block.trap.night.name=Piedra nocturna
 block.trap.thunder.name=Piedra del trueno
 block.trap.curse=¡La oscuridad de aproxima!
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=Engendrador de wither
 ##TODO !!!!!!!!!!

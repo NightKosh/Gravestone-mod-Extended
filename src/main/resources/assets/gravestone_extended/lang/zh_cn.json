@@ -6,5 +6,8 @@
   "item.gravestone_extended.bone_slab": "骨质台阶",
   "item.gravestone_extended.bone_stairs": "骨质阶梯",
   "item.gravestone_extended.bone_block_crawler": "骨质方块(有爬行头颅)",
-  "item.gravestone_extended.bone_block_skull_crawler": "颅骨骨质方块(有爬行头颅)"
+  "item.gravestone_extended.bone_block_skull_crawler": "颅骨骨质方块(有爬行头颅)",
+
+  "item.gravestone_extended.withered_glass": "Withered Glass",
+  "item.gravestone_extended.withered_glass_pane": "Withered Glass Pane"
 }

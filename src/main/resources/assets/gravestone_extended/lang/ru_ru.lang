@@ -27,10 +27,6 @@ block.trap.night.name=Камень тьмы
 block.trap.thunder.name=Грозовой камень
 block.trap.curse=Тьма приближается!
 
-## Withered Glass
-tile.withered_glass.name=Иссушенное стекло
-tile.withered_glass_pane.name=Иссушенная стеклянная панель
-
 ## Spawners
 block.spawner.wither.name=Спаунер иссушителей
 block.spawner.skeleton.name=Спаунер скелетов

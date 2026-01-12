@@ -6,5 +6,8 @@
   "item.gravestone_extended.bone_slab": "Костяная плита",
   "item.gravestone_extended.bone_stairs": "Костяная лестница",
   "item.gravestone_extended.bone_block_crawler": "Костяной блок ползучего черепа",
-  "item.gravestone_extended.bone_block_skull_crawler": "Костяной блок ползучего черепа с черепом"
+  "item.gravestone_extended.bone_block_skull_crawler": "Костяной блок ползучего черепа с черепом",
+
+  "item.gravestone_extended.withered_glass": "Иссушённое стекло",
+  "item.gravestone_extended.withered_glass_pane": "Иссушённая стеклянная панель"
 }

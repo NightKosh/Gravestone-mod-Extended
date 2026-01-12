@@ -27,10 +27,6 @@ block.trap.night.name=Night Stone
 block.trap.thunder.name=Thunder Stone
 block.trap.curse=Darkness is coming!
 
-## Withered Glass
-tile.withered_glass.name=Withered Glass
-tile.withered_glass_pane.name=Withered Glass Pane
-
 ## Spawners
 block.spawner.wither.name=Wither Spawner
 block.spawner.skeleton.name=Skeleton Spawner

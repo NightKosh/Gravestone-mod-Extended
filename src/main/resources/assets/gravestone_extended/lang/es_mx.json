@@ -6,5 +6,8 @@
   "item.gravestone_extended.bone_slab": "Losa de hueso",
   "item.gravestone_extended.bone_stairs": "Escaleras de hueso",
   "item.gravestone_extended.bone_block_crawler": "Bloque de hueso con craneo del arranca craneos",
-  "item.gravestone_extended.bone_block_skull_crawler": "Bloque de hueso con craneo del arranca cráneos"
+  "item.gravestone_extended.bone_block_skull_crawler": "Bloque de hueso con craneo del arranca cráneos",
+
+  "item.gravestone_extended.withered_glass": "Vidrio marchito",
+  "item.gravestone_extended.withered_glass_pane": "Panel de vidrio marchito"
 }

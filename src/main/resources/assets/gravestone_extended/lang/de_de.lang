@@ -27,11 +27,6 @@ block.trap.night.name=Nachtstein
 block.trap.thunder.name=Donnerstein
 block.trap.curse=Die Dunkelheit bricht ein!
 
-## Withered Glass
-## TODO !!!!!
-tile.withered_glass.name=Verwelktes Glas
-tile.withered_glass_pane.name=Verwelkte Glasscheibe
-
 ## Spawners
 block.spawner.wither.name=Witherspawner
 block.spawner.skeleton.name=Skelettspawner
