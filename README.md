@@ -59,3 +59,12 @@ For more information visit [official site](http://gravestone.nightkosh.com/) or 
 
 For more information, look at "minecraft NeoForge" README.txt file (it's not included to this repository) or [this link](https://docs.neoforged.net/)
 
+
+
+## Useful commands
+
+## Apply an enchantment on item:
+1. Bone Rain
+    ```
+        /enchant @s gravestone_extended:bone_rain 1
+    ``` 

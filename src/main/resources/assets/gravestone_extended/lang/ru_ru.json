@@ -43,5 +43,7 @@
   "item.gravestone_extended.bone_block_skull_piglin_crawler": "Костяной блок ползучего черепа свинозомби с черепом",
 
   "item.gravestone_extended.withered_glass": "Иссушённое стекло",
-  "item.gravestone_extended.withered_glass_pane": "Иссушённая стеклянная панель"
+  "item.gravestone_extended.withered_glass_pane": "Иссушённая стеклянная панель",
+
+  "enchantment.gravestone_extended.bone_rain": "Костяной дождь"
 }

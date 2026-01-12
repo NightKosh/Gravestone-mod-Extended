@@ -1,8 +1,10 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.enchantment.*;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentAwkwardCurse;
-import nightkosh.gravestone_extended.enchantment.curse.EnchantmentFragilityCurse;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.enchantment.Enchantment;
+
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
 /**
  * Gravestone mod - Extended
@@ -10,7 +12,11 @@ import nightkosh.gravestone_extended.enchantment.curse.EnchantmentFragilityCurse
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSEnchantment {
+public class GSEEnchantments {
+
+    public static final ResourceKey<Enchantment> BONE_RAIN =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "bone_rain"));
+
 //TODO
 //    public static final Enchantment VAMPIRIC_TOUCH = new EnchantmentVampiricTouch();
 //    public static final Enchantment POISONED_BLADE = new EnchantmentPoisonedBlade();
@@ -18,7 +24,6 @@ public class GSEnchantment {
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
 //    public static final Enchantment NECROTIC_CORROSION = new EnchantmentNecroticCorrosion();
 //    public static final Enchantment PAIN_MIRROR = new EnchantmentPainMirror();
-//    public static final Enchantment BONE_RAIN = new EnchantmentBoneRain();
 //    public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
 //
 //    //armor
@@ -38,7 +43,7 @@ public class GSEnchantment {
 //            registry.registerAll(VAMPIRIC_TOUCH, POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
 //            registry.registerAll(PAIN_MIRROR);
 //            registry.registerAll(WEB_CRAWLER, FROZEN_NETHER);
-//            registry.registerAll(BONE_RAIN, BLOODY_REPLICATION);
+//            registry.registerAll(BLOODY_REPLICATION);
 //        }
 //    }
 }

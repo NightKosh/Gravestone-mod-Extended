@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.enchantment;
 
-import nightkosh.gravestone_extended.core.GSEnchantment;
-import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.helper.GSEnchantmentHelper;
-import nightkosh.gravestone_extended.item.armor.bone.ItemBoneLeggings;
-
 /**
  * Gravestone mod - Extended
  *
