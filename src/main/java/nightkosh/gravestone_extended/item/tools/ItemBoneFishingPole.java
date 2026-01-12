@@ -22,7 +22,7 @@ public class ItemBoneFishingPole {//TODO extends AbstractFishingPole implements 
 //
 //    @Override
 //    protected EntityBoneFishHook getHook(World world, EntityPlayer player, ItemStack stack) {
-//        boolean hellishAngling = false;
+//        boolean hellishAngling = false; //TODO replaced by "Infernal line"
 //        NBTTagList nbtList = stack.getEnchantmentTagList();
 //        for (NBTBase nbt : nbtList) {
 //            if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.HELLISH_ANGLING)) {

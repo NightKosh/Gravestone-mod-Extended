@@ -64,8 +64,6 @@ enchantment.pain_mirror=Espejo de dolor
 enchantment.gravestone-extended.gs_pain_mirror.desc=Refleja todo el daño bloqueado con un 10 por ciento de probabilidad por nivel 
 enchantment.bone_rain=Lluvia de hueso
 enchantment.gravestone-extended.gs_bone_rain.desc=Usa harina de hueso  en un bloque
-enchantment.hellish_angling=Pesca infernal con caña
-enchantment.gravestone-extended.gs_hellish_angling.desc=Permite pescar en la lava
 enchantment.bloody_replication=Replicación sangrienta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
 ## TODO !!!!!!!!!!
