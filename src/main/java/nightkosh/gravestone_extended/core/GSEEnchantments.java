@@ -42,12 +42,6 @@ public class GSEEnchantments {
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "curse_of_fragility"));
 
 //TODO
-//    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
-//    public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
-//
-//    //armor
-//    public static final Enchantment FROZEN_NETHER = new EnchantmentFrozenNether();
-//
 //    @Mod.EventBusSubscriber(modid = ModInfo.ID)
 //    public static class RegistrationHandler {
 //
