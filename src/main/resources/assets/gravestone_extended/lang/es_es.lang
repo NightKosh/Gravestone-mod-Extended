@@ -61,8 +61,6 @@ enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 ## Enchantments - Curses
-enchantment.awkward_curse=Maldición de torpeza
-enchantment.gravestone-extended.gs_awkward_curse.desc=Infingir daño a tí mismo en vez de al enemigo con un 10 por ciento de probabilidad
 enchantment.fragility_curse=Maldición de fragilidad
 enchantment.gravestone-extended.gs_fragility_curse.desc=El item recibe daño adicional al usarse
 

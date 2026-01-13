@@ -71,8 +71,6 @@ enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player
 
 ## Enchantments - Curses
 ## TODO !!!!!!!!!!
-enchantment.awkward_curse=Curse of Awkwardness
-enchantment.gravestone-extended.gs_awkward_curse.desc=Deals damage to yourself instead of enemy with 10 percent chance
 enchantment.fragility_curse=Curse of Fragility
 enchantment.gravestone-extended.gs_fragility_curse.desc=Item get additional damage at usage
 

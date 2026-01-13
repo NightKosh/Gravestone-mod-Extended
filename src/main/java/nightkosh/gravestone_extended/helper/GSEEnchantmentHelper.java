@@ -3,7 +3,6 @@ package nightkosh.gravestone_extended.helper;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -16,6 +15,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEEnchantments;
@@ -64,6 +64,17 @@ public class GSEEnchantmentHelper {
                 BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), level, pos, event.getEntity());
             }
         }
+    }
+
+    public static boolean applyAwkwardCurse(Level level, ItemStack weapon, Player player, LivingIncomingDamageEvent event) {
+        if (enchanted(level, GSEEnchantments.CURSE_OF_AWKWARDNESS, weapon) && player.getRandom().nextInt(10) == 0) {
+            if (GSEConfigs.DEBUG_MODE.get()) {
+                LOGGER.info("Going to cancel player {} attack due to CURSE_OF_AWKWARDNESS", player.getScoreboardName());
+            }
+            event.setCanceled(true);
+            return true;
+        }
+        return false;
     }
 
     public static void applyVampiricTouch(Level level, ItemStack weapon, Player player, float damage) {

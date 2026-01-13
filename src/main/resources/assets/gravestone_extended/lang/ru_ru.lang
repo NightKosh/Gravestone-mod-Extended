@@ -59,8 +59,6 @@ enchantment.frozen_nether=Застывший ад
 enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
 
 ## Enchantments - Curses
-enchantment.awkward_curse=Проклятие неловкости
-enchantment.gravestone-extended.gs_awkward_curse.desc=С шансом в 10 процентов вы атакуете самого себя вместо противника
 enchantment.fragility_curse=Проклятие хрупкости
 enchantment.gravestone-extended.gs_fragility_curse.desc=Предмет получает дополнительный урон при использовании
 

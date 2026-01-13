@@ -1,8 +1,10 @@
 package nightkosh.gravestone_extended.core.event;
 
 import net.minecraft.world.entity.player.Player;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
@@ -45,15 +47,6 @@ public class GSEEventsHandler {
 ////        if (EnchantmentBloodyReplication.applyEffect(event.getPlayer(), event.getState(), event.getPos())) {
 ////            event.setCanceled(true);
 ////        }
-//    }
-
-//    @SubscribeEvent(priority = EventPriority.HIGHEST)
-//    public void livingDamageEvent(LivingDamageEvent event) {
-//        //TODO
-
-    /// /        if (EnchantmentAwkwardCurse.applyCurseEffect(event.getSource(), event.getEntityLiving(), event.getAmount())) {
-    /// /            event.setCanceled(true);
-    /// /        }
 //    }
 
     @SubscribeEvent
@@ -104,6 +97,9 @@ public class GSEEventsHandler {
                 }
 
                 if (entity instanceof Player player) {
+                    if (GSEEnchantmentHelper.applyAwkwardCurse(level, event.getSource().getWeaponItem(), player, event)) {
+                        return;
+                    }
                     GSEEnchantmentHelper.applyVampiricTouch(level, event.getSource().getWeaponItem(), player, event.getAmount());
                     GSEEnchantmentHelper.applyPoisonedBlade(level, event.getSource().getWeaponItem(), event.getEntity(), player);
                     GSEEnchantmentHelper.applyWitheredBlade(level, event.getSource().getWeaponItem(), event.getEntity(), player);

@@ -32,6 +32,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> MIRROR_OF_PAIN =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "mirror_of_pain"));
 
+    public static final ResourceKey<Enchantment> CURSE_OF_AWKWARDNESS =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "curse_of_awkwardness"));
+
 //TODO
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
 //    public static final Enchantment NECROTIC_CORROSION = new EnchantmentNecroticCorrosion();

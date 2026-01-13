@@ -95,3 +95,9 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:web_crawler 1
     ```
+
+### Curse enchantments:
+1. Curse of Awkwardness
+    ```
+        /enchant @s gravestone_extended:curse_of_awkwardness 1
+    ```

@@ -62,8 +62,6 @@ enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 ## Enchantments - Curses
-enchantment.awkward_curse=Прокляття незграбності
-enchantment.gravestone-extended.gs_awkward_curse.desc=З шансом в 10 відсотків ви атакуєте самого себе замість противника
 enchantment.fragility_curse=Прокляття крихкості
 enchantment.gravestone-extended.gs_fragility_curse.desc=Предмет отримує додатковий урон при використанні
 
