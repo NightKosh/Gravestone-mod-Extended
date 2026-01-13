@@ -1,8 +1,11 @@
 package nightkosh.gravestone_extended.block.bone_block;
 
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import nightkosh.gravestone_extended.core.GSEBlocks;
+
+import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.DROWNED_CRAWLER;
 
 /**
  * Gravestone mod - Extended
@@ -21,8 +24,8 @@ public class BoneBlockSkullDrownedCrawler extends ABoneBlockCrawler {
     }
 
     @Override
-    public String getCrawler() {
-        return DROWNED;
+    public Identifier getCrawler() {
+        return DROWNED_CRAWLER;
     }
 
 }

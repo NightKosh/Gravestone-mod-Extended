@@ -1,9 +1,12 @@
 package nightkosh.gravestone_extended.block.pile_of_bones;
 
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.PushReaction;
 import nightkosh.gravestone_extended.core.GSEBlocks;
+
+import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.BOGGED_CRAWLER;
 
 /**
  * Gravestone mod - Extended
@@ -27,8 +30,8 @@ public class PileOfBonesBogged extends APileOfBonesCrawler {
                 .strength(0.1F, 0));
     }
 
-    public String getCrawler() {
-        return BOGGED;
+    public Identifier getCrawler() {
+        return BOGGED_CRAWLER;
     }
 
 }

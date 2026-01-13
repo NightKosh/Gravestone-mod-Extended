@@ -1,18 +1,18 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
-import net.minecraft.world.entity.Entity;
-import nightkosh.gravestone_extended.core.GSPotion;
-import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
-import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
-
 /**
  * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class CompatibilityAdvancedFishing {
+public class AdvancedFishingCompatibility extends ACompatibility {
 
+    public static final String ADVANCED_FISHING_ID = "advanced_fishing";
+
+    public static boolean loaded() {
+        return loaded(ADVANCED_FISHING_ID);
+    }
 //    public static Item getBoneFishingPole() {
 //        return new ItemBoneFishingPole();
 //    }
