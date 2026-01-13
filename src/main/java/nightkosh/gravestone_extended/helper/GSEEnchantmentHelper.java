@@ -3,8 +3,6 @@ package nightkosh.gravestone_extended.helper;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -87,30 +85,6 @@ public class GSEEnchantmentHelper {
                 LOGGER.info("Going to heal {} health player {} by VAMPIRIC_TOUCH", healed, player.getScoreboardName());
             }
             player.heal(healed);
-        }
-    }
-
-    public static void applyPoisonedBlade(Level level, ItemStack weapon, LivingEntity target, Player player) {
-        var lvl = getLevel(level, GSEEnchantments.POISONED_BLADE, weapon);
-        if (lvl > 0) {
-            if (GSEConfigs.DEBUG_MODE.get()) {
-                LOGGER.info("Going to apply POISONED_BLADE effect on {} by player {} by VAMPIRIC_TOUCH",
-                        target.getScoreboardName(),
-                        player.getScoreboardName());
-            }
-            target.addEffect(new MobEffectInstance(MobEffects.POISON, lvl * 200), player);
-        }
-    }
-
-    public static void applyWitheredBlade(Level level, ItemStack weapon, LivingEntity target, Player player) {
-        var lvl = getLevel(level, GSEEnchantments.WITHERED_BLADE, weapon);
-        if (lvl > 0) {
-            if (GSEConfigs.DEBUG_MODE.get()) {
-                LOGGER.info("Going to apply WITHERED_BLADE effect on {} by player {} by VAMPIRIC_TOUCH",
-                        target.getScoreboardName(),
-                        player.getScoreboardName());
-            }
-            target.addEffect(new MobEffectInstance(MobEffects.WITHER, lvl * 100), player);
         }
     }
 

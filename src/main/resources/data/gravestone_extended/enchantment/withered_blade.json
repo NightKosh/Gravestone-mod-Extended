@@ -17,5 +17,29 @@
     "base": 10,
     "per_level_above_first": 20
   },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:apply_mob_effect",
+          "to_apply": "minecraft:wither",
+          "min_duration": {
+            "type": "minecraft:linear",
+            "base": 5,
+            "per_level_above_first": 5
+          },
+          "max_duration": {
+            "type": "minecraft:linear",
+            "base": 5,
+            "per_level_above_first": 5
+          },
+          "min_amplifier": 0,
+          "max_amplifier": 0
+        }
+      }
+    ]
+  },
   "supported_items": "#minecraft:enchantable/melee_weapon"
 }
