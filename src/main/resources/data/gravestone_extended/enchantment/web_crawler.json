@@ -1,0 +1,21 @@
+{
+  "weight": 2,
+  "max_level": 1,
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.gravestone_extended.web_crawler"
+  },
+  "exclusive_set": [],
+  "slots": [
+    "any"
+  ],
+  "max_cost": {
+    "base": 75,
+    "per_level_above_first": 25
+  },
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 25
+  },
+  "supported_items": "#minecraft:enchantable/leg_armor"
+}

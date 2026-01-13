@@ -20,6 +20,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> VAMPIRIC_TOUCH =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "vampiric_touch"));
 
+    public static final ResourceKey<Enchantment> WEB_CRAWLER =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "web_crawler"));
+
 //TODO
 //    public static final Enchantment POISONED_BLADE = new EnchantmentPoisonedBlade();
 //    public static final Enchantment WITHERED_BLADE = new EnchantmentWitheredBlade();
@@ -29,7 +32,6 @@ public class GSEEnchantments {
 //    public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
 //
 //    //armor
-//    public static final Enchantment WEB_CRAWLER = new EnchantmentWebCrawler();
 //    public static final Enchantment FROZEN_NETHER = new EnchantmentFrozenNether();
 //
 //    // CURSES
@@ -44,7 +46,7 @@ public class GSEEnchantments {
 //            final IForgeRegistry<Enchantment> registry = event.getRegistry();
 //            registry.registerAll(POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
 //            registry.registerAll(PAIN_MIRROR);
-//            registry.registerAll(WEB_CRAWLER, FROZEN_NETHER);
+//            registry.registerAll(FROZEN_NETHER);
 //            registry.registerAll(BLOODY_REPLICATION);
 //        }
 //    }

@@ -7,6 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.LootTableLoadEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
@@ -69,10 +70,12 @@ public class GSEEventsHandler {
 //    }
 //
 //    @SubscribeEvent(priority = EventPriority.HIGHEST)
-//    public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
-//        if (event.getEntityLiving() instanceof Player player) {
+//    public void onPlayerUpdate(LivingEvent event) {
+//        if (event.getEntity() instanceof Player player && !player.level().isClientSide()) {
+//            if (GSEConfigs.DEBUG_MODE.get()) {
+//                LOGGER.info("LivingEvent event triggered by player {}", player.getScoreboardName());
+//            }
 //            EnchantmentFrozenNether.applyEffect(player);
-//            EnchantmentWebCrawler.applyEffect(player);
 //        }
 //    }
 
@@ -91,14 +94,16 @@ public class GSEEventsHandler {
     @SubscribeEvent
     public static void onLivingHurt(LivingIncomingDamageEvent event) {
         var entity = event.getSource().getEntity();
-        var level = entity.level();
-        if (!level.isClientSide()) {
-            if (GSEConfigs.DEBUG_MODE.get()) {
-                LOGGER.info("LivingIncomingDamageEvent event triggered by entity {}", entity.getScoreboardName());
-            }
+        if (entity != null) {
+            var level = entity.level();
+            if (!level.isClientSide()) {
+                if (GSEConfigs.DEBUG_MODE.get()) {
+                    LOGGER.info("LivingIncomingDamageEvent event triggered by entity {}", entity.getScoreboardName());
+                }
 
-            if (entity instanceof Player player) {
-                GSEEnchantmentHelper.applyVampiricTouch(level, event.getSource().getWeaponItem(), player, event.getAmount());
+                if (entity instanceof Player player) {
+                    GSEEnchantmentHelper.applyVampiricTouch(level, event.getSource().getWeaponItem(), player, event.getAmount());
+                }
             }
         }
     }

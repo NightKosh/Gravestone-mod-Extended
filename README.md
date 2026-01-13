@@ -72,3 +72,7 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:vampiric_touch 1
     ``` 
+3. Web Crawler
+    ```
+        /enchant @s gravestone_extended:web_crawler 1
+    ``` 
