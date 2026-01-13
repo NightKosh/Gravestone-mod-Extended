@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.ModGravestoneExtended;
-import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
-import nightkosh.gravestone_extended.block.enums.EnumTrap;
-import nightkosh.gravestone_extended.core.compatibility.Compatibility;
-import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
-
 /**
  * Gravestone mod - Extended
  *

@@ -59,8 +59,6 @@ public class ResourcesModels extends Resources {//TODO
 //    // items
 //    public static final ModelResourceLocation CORPSE = new ModelResourceLocation(ModInfo.ID + ":corpse", "inventory");
 //
-//    public static final ModelResourceLocation SPAWN_EGG_MODEL = new ModelResourceLocation(GSItem.SPAWN_EGG.getRegistryName(), "inventory");
-//
 //    public static final ModelResourceLocation TOXIC_SLIME = new ModelResourceLocation(GSItem.TOXIC_SLIME.getRegistryName(), "inventory");
 //
 //    public static final ModelResourceLocation RAVEN_FEATHER = new ModelResourceLocation(GSItem.RAVEN_FEATHER.getRegistryName(), "inventory");
@@ -92,24 +90,7 @@ public class ResourcesModels extends Resources {//TODO
 //    public static final ModelResourceLocation NIGHT_STONE = new ModelResourceLocation(ModInfo.ID + ":block/trap/night_stone", "inventory");
 //    public static final ModelResourceLocation THUNDER_STONE = new ModelResourceLocation(ModInfo.ID + ":block/trap/thunder_stone", "inventory");
 //
-//    public static final ModelResourceLocation WITHERED_GLASS = new ModelResourceLocation(ModInfo.ID + ":block/withered_glass/withered_glass", "inventory");
-//    public static final ModelResourceLocation WITHERED_GLASS_PANE = new ModelResourceLocation(ModInfo.ID + ":block/withered_glass/withered_glass_pane", "inventory");
-//
-//    public static final ModelResourceLocation PILE_OF_BONES = new ModelResourceLocation(ModInfo.ID + ":block/pile_of_bones/pile_of_bones", "inventory");
-//    public static final ModelResourceLocation PILE_OF_BONES_WITH_SKULL = new ModelResourceLocation(ModInfo.ID + ":block/pile_of_bones/pile_of_bones_with_skull", "inventory");
-//
-//    public static final ModelResourceLocation BONE_BLOCK = new ModelResourceLocation(ModInfo.ID + ":block/bone_block/bone_block", "inventory");
-//    public static final ModelResourceLocation BONE_BLOCK_WITH_SKULL = new ModelResourceLocation(ModInfo.ID + ":block/bone_block/bone_block_with_skull", "inventory");
-//
-//    public static final ModelResourceLocation BONE_SLAB = new ModelResourceLocation(ModInfo.ID + ":block/bone_slab", "inventory");
-//    public static final ModelResourceLocation BONE_STAIRS = new ModelResourceLocation(ModInfo.ID + ":block/bone_stairs", "inventory");
-//
 //    public static final ModelResourceLocation HAUNTED_CHEST = new ModelResourceLocation(ModInfo.ID + ":block/haunted_chest", "inventory");
-//    public static final ModelResourceLocation CANDLE = new ModelResourceLocation(ModInfo.ID + ":block/candle", "inventory");
-//
-//    public static final ModelResourceLocation SKULL_CANDLE_SKELETON = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/skeleton", "inventory");
-//    public static final ModelResourceLocation SKULL_CANDLE_WITHER = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/wither", "inventory");
-//    public static final ModelResourceLocation SKULL_CANDLE_ZOMBIE = new ModelResourceLocation(ModInfo.ID + ":block/skull_candle/zombie", "inventory");
 //
 //    public static final ModelResourceLocation ALTAR = new ModelResourceLocation(ModInfo.ID + ":block/altar", "inventory");
 //
