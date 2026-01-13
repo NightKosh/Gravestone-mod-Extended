@@ -101,3 +101,7 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:curse_of_awkwardness 1
     ```
+2. Curse of Fragility
+    ```
+        /enchant @s gravestone_extended:curse_of_fragility 3
+    ```

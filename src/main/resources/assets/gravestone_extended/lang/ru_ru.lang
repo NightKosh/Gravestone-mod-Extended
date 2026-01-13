@@ -58,10 +58,6 @@ enchantment.gravestone-extended.gs_bloody_replication.desc=Обменивает 
 enchantment.frozen_nether=Застывший ад
 enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
 
-## Enchantments - Curses
-enchantment.fragility_curse=Проклятие хрупкости
-enchantment.gravestone-extended.gs_fragility_curse.desc=Предмет получает дополнительный урон при использовании
-
 # Potions
 potion.purification.title=Снимает все негативные эффекты
 potion.effect.gs_purification_type=Зелье очищения

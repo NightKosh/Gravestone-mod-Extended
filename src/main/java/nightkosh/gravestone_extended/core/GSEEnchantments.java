@@ -35,6 +35,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> CURSE_OF_AWKWARDNESS =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "curse_of_awkwardness"));
 
+    public static final ResourceKey<Enchantment> CURSE_OF_FRAGILITY =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "curse_of_fragility"));
+
 //TODO
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
 //    public static final Enchantment NECROTIC_CORROSION = new EnchantmentNecroticCorrosion();
@@ -42,10 +45,6 @@ public class GSEEnchantments {
 //
 //    //armor
 //    public static final Enchantment FROZEN_NETHER = new EnchantmentFrozenNether();
-//
-//    // CURSES
-//    public static final Enchantment CURSE_AWKWARD = new EnchantmentAwkwardCurse();
-//    public static final Enchantment CURSE_FRAGILITY = new EnchantmentFragilityCurse();
 //
 //    @Mod.EventBusSubscriber(modid = ModInfo.ID)
 //    public static class RegistrationHandler {

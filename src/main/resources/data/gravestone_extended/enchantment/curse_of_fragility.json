@@ -1,0 +1,34 @@
+{
+  "weight": 1,
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.gravestone_extended.curse_of_fragility"
+  },
+  "slots": [
+    "any"
+  ],
+  "max_cost": {
+    "base": 55,
+    "per_level_above_first": 8
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 8
+  },
+  "effects": {
+    "minecraft:item_damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 1,
+            "per_level_above_first": 1
+          }
+        }
+      }
+    ]
+  },
+  "supported_items": "#minecraft:enchantable/durability"
+}

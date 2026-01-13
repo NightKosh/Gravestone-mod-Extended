@@ -67,11 +67,6 @@ enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 h
 enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
-## Enchantments - Curses
-## TODO !!!!!!!!!!
-enchantment.fragility_curse=Curse of Fragility
-enchantment.gravestone-extended.gs_fragility_curse.desc=Item get additional damage at usage
-
 # Potions
 ## TODO !!!!!!!!!!!!
 potion.purification.title=Remove all negative effects

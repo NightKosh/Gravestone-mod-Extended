@@ -60,10 +60,6 @@ enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5
 enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
-## Enchantments - Curses
-enchantment.fragility_curse=Maldición de fragilidad
-enchantment.gravestone-extended.gs_fragility_curse.desc=El item recibe daño adicional al usarse
-
 # Potions
 potion.purification.title=Elimina todos los efectos negativos
 potion.effect.gs_purification_type=Poción de purificación
