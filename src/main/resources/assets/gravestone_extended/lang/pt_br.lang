@@ -52,10 +52,6 @@ tile.frozen_lava.name=Frozen Lava
 # Enchantments
 enchantment.shadow_of_death=Sombra da Morte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Causa 2,5 de dano extra por nível para mobs não aranha e não morto-vivo
-enchantment.poisoned_blade=Lâmina Envenenada
-enchantment.gravestone-extended.gs_poisoned_blade.desc=Aplica envenenamento para um alvo por 10 segundos por nível
-enchantment.withered_blade=Lâmina Decomposta
-enchantment.gravestone-extended.gs_withered_blade.desc= Aplica decomposição para um alvo por 5 segundos por nível
 enchantment.necrotic_corrosion=Corrosão Necrótica
 enchantment.gravestone-extended.gs_necrotic_corrosion.desc= 10% (por nível) do dano causado por esta arma ignorar a armadura
 enchantment.bloody_replication=Replicação Sangrenta

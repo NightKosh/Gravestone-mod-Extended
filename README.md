@@ -64,19 +64,34 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
 ## Useful commands
 
 ## Apply an enchantment on item:
+### Weapon enchantments:
+1. Vampiric Touch
+    ```
+        /enchant @s gravestone_extended:vampiric_touch 1
+    ```
+2. Poisoned Blade
+    ```
+        /enchant @s gravestone_extended:poisoned_blade 2
+    ```
+3. Withered Blade
+    ```
+        /enchant @s gravestone_extended:withered_blade 2
+    ```
+
+### Shield enchantments:
+1. Mirror of Pain
+    ```
+        /enchant @s gravestone_extended:mirror_of_pain 3
+    ```
+
+### Tools enchantments:
 1. Bone Rain
     ```
         /enchant @s gravestone_extended:bone_rain 1
-    ``` 
-2. Vampiric Touch
     ```
-        /enchant @s gravestone_extended:vampiric_touch 1
-    ``` 
-3. Web Crawler
+
+### Armor enchantments:
+1. Web Crawler
     ```
         /enchant @s gravestone_extended:web_crawler 1
     ```
-4. Mirror of Pain
-    ```
-        /enchant @s gravestone_extended:mirror_of_pain 3
-    ``` 

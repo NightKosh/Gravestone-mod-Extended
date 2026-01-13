@@ -57,10 +57,6 @@ tile.frozen_lava.name=Frozen Lava
 ## TODO !!!!!!!!!!
 enchantment.shadow_of_death=Shadow of Death
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.poisoned_blade=Poisoned Blade
-enchantment.gravestone-extended.gs_poisoned_blade.desc=Applies poison to a target for 10 seconds per level
-enchantment.withered_blade=Withered Blade
-enchantment.gravestone-extended.gs_withered_blade.desc=Applies wither to a target for 5 seconds per level
 enchantment.necrotic_corrosion=Necrotic Corrosion
 enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 percent(per level) of damage dealt by this weapon ignores armor
 enchantment.bloody_replication=Bloody Replication

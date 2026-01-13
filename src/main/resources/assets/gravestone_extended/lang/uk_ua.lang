@@ -53,10 +53,6 @@ tile.frozen_lava.name=Frozen Lava
 # Enchantments
 enchantment.shadow_of_death=Тінь смерті
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Завдає додаткових 2.5 шкоди за рівень істотам, які не є павуками або нежиттю
-enchantment.poisoned_blade=Отруєне Лезо
-enchantment.gravestone-extended.gs_poisoned_blade.desc=Накладає отруєння на ціль на 10 секунд за рівень
-enchantment.withered_blade=Висушуюче Лезо
-enchantment.gravestone-extended.gs_withered_blade.desc=Накладає висушування на ціль на 5 секунд за рівень
 enchantment.necrotic_corrosion=Некротична Корозія
 enchantment.gravestone-extended.gs_necrotic_corrosion.desc=Завдає 10% додаткової шкоди за рівень, що ігнорує броню
 ## TODO !!!!!!!!!!

@@ -105,6 +105,8 @@ public class GSEEventsHandler {
 
                 if (entity instanceof Player player) {
                     GSEEnchantmentHelper.applyVampiricTouch(level, event.getSource().getWeaponItem(), player, event.getAmount());
+                    GSEEnchantmentHelper.applyPoisonedBlade(level, event.getSource().getWeaponItem(), event.getEntity(), player);
+                    GSEEnchantmentHelper.applyWitheredBlade(level, event.getSource().getWeaponItem(), event.getEntity(), player);
                 }
             }
         }

@@ -1,0 +1,21 @@
+{
+  "weight": 2,
+  "max_level": 2,
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.gravestone_extended.withered_blade"
+  },
+  "exclusive_set": [],
+  "slots": [
+    "any"
+  ],
+  "max_cost": {
+    "base": 75,
+    "per_level_above_first": 20
+  },
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 20
+  },
+  "supported_items": "#minecraft:enchantable/melee_weapon"
+}
