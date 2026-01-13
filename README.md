@@ -68,3 +68,7 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:bone_rain 1
     ``` 
+2. Vampiric Touch
+    ```
+        /enchant @s gravestone_extended:vampiric_touch 1
+    ``` 

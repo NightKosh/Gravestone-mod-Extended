@@ -17,8 +17,10 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> BONE_RAIN =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "bone_rain"));
 
+    public static final ResourceKey<Enchantment> VAMPIRIC_TOUCH =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "vampiric_touch"));
+
 //TODO
-//    public static final Enchantment VAMPIRIC_TOUCH = new EnchantmentVampiricTouch();
 //    public static final Enchantment POISONED_BLADE = new EnchantmentPoisonedBlade();
 //    public static final Enchantment WITHERED_BLADE = new EnchantmentWitheredBlade();
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
@@ -40,7 +42,7 @@ public class GSEEnchantments {
 //        @SubscribeEvent
 //        public static void registerBlocks(final RegistryEvent.Register<Enchantment> event) {
 //            final IForgeRegistry<Enchantment> registry = event.getRegistry();
-//            registry.registerAll(VAMPIRIC_TOUCH, POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
+//            registry.registerAll(POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
 //            registry.registerAll(PAIN_MIRROR);
 //            registry.registerAll(WEB_CRAWLER, FROZEN_NETHER);
 //            registry.registerAll(BLOODY_REPLICATION);

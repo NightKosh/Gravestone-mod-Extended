@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "gravestone_extended:bone_rain"
+    "gravestone_extended:bone_rain",
+    "gravestone_extended:vampiric_touch"
   ]
 }

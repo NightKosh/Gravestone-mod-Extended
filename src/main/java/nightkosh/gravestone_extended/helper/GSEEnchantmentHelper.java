@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.helper;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -53,6 +54,19 @@ public class GSEEnchantmentHelper {
                 level.levelEvent(1505, pos, 15);
                 BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), level, pos, event.getEntity());
             }
+        }
+    }
+
+    public static void applyVampiricTouch(Level level, ItemStack weapon, Player player, float damage) {
+        if (GSEEnchantmentHelper.enchanted(level, GSEEnchantments.VAMPIRIC_TOUCH, weapon)) {
+            float healed = damage * 0.1F;
+            if (healed < 0.5) {
+                healed = 0.5F;
+            }
+            if (GSEConfigs.DEBUG_MODE.get()) {
+                LOGGER.info("Going to heal {} health player {} by VAMPIRIC_TOUCH", healed, player.getScoreboardName());
+            }
+            player.heal(healed);
         }
     }
 
