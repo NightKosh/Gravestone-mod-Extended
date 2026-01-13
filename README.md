@@ -75,4 +75,8 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
 3. Web Crawler
     ```
         /enchant @s gravestone_extended:web_crawler 1
+    ```
+4. Mirror of Pain
+    ```
+        /enchant @s gravestone_extended:mirror_of_pain 3
     ``` 

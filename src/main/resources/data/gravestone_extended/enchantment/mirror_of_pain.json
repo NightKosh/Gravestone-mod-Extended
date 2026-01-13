@@ -1,0 +1,24 @@
+{
+  "weight": 2,
+  "max_level": 3,
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.gravestone_extended.mirror_of_pain"
+  },
+  "exclusive_set": [],
+  "slots": [
+    "any"
+  ],
+  "max_cost": {
+    "base": 75,
+    "per_level_above_first": 10
+  },
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 10
+  },
+  "supported_items": [
+    "minecraft:shield",
+    "gravestone_extended:bone_shield"
+  ]
+}

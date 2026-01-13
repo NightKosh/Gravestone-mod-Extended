@@ -58,8 +58,6 @@ enchantment.withered_blade=Lâmina Decomposta
 enchantment.gravestone-extended.gs_withered_blade.desc= Aplica decomposição para um alvo por 5 segundos por nível
 enchantment.necrotic_corrosion=Corrosão Necrótica
 enchantment.gravestone-extended.gs_necrotic_corrosion.desc= 10% (por nível) do dano causado por esta arma ignorar a armadura
-enchantment.pain_mirror=Espelho da Dor
-enchantment.gravestone-extended.gs_pain_mirror.desc=Reflete todo dano bloqueado com 10% de chance por nível
 enchantment.bloody_replication=Replicação Sangrenta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
 ## TODO !!!!!!!!!!

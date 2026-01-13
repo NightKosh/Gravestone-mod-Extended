@@ -1,19 +1,12 @@
 package nightkosh.gravestone_extended.core.event;
 
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.LootTableLoadEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.helper.CemeteryHelper;
 import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
@@ -57,18 +50,27 @@ public class GSEEventsHandler {
 //    @SubscribeEvent(priority = EventPriority.HIGHEST)
 //    public void livingDamageEvent(LivingDamageEvent event) {
 //        //TODO
-////        if (EnchantmentAwkwardCurse.applyCurseEffect(event.getSource(), event.getEntityLiving(), event.getAmount())) {
-////            event.setCanceled(true);
-////        }
+
+    /// /        if (EnchantmentAwkwardCurse.applyCurseEffect(event.getSource(), event.getEntityLiving(), event.getAmount())) {
+    /// /            event.setCanceled(true);
+    /// /        }
 //    }
+
+    @SubscribeEvent
+    public static void onLivingShieldBlockEvent(LivingShieldBlockEvent event) {
+        if (event.getEntity() instanceof Player player) {
+            var level = player.level();
+            if (!level.isClientSide()) {
+                if (GSEConfigs.DEBUG_MODE.get()) {
+                    LOGGER.info("LivingShieldBlockEvent event triggered for player: {}", player.getScoreboardName());
+                }
+
+                GSEEnchantmentHelper.applyMirrorOfPain(level, player, event.getDamageSource().getDirectEntity(), event.getOriginalBlockedDamage());
+            }
+        }
+    }
+
 //TODO
-//    @SubscribeEvent
-//    public void livingAttackEvent(LivingAttackEvent event) {
-//        if (event.getEntityLiving() instanceof Player player) {
-//            EnchantmentPainMirror.applyEffect(player, event.getSource().getTrueSource(), event.getAmount());
-//        }
-//    }
-//
 //    @SubscribeEvent(priority = EventPriority.HIGHEST)
 //    public void onPlayerUpdate(LivingEvent event) {
 //        if (event.getEntity() instanceof Player player && !player.level().isClientSide()) {

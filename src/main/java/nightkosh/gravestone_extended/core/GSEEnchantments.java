@@ -23,12 +23,14 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> WEB_CRAWLER =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "web_crawler"));
 
+    public static final ResourceKey<Enchantment> MIRROR_OF_PAIN =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "mirror_of_pain"));
+
 //TODO
 //    public static final Enchantment POISONED_BLADE = new EnchantmentPoisonedBlade();
 //    public static final Enchantment WITHERED_BLADE = new EnchantmentWitheredBlade();
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
 //    public static final Enchantment NECROTIC_CORROSION = new EnchantmentNecroticCorrosion();
-//    public static final Enchantment PAIN_MIRROR = new EnchantmentPainMirror();
 //    public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
 //
 //    //armor
@@ -45,7 +47,6 @@ public class GSEEnchantments {
 //        public static void registerBlocks(final RegistryEvent.Register<Enchantment> event) {
 //            final IForgeRegistry<Enchantment> registry = event.getRegistry();
 //            registry.registerAll(POISONED_BLADE, WITHERED_BLADE, SHADOW_OF_DEATH, NECROTIC_CORROSION);
-//            registry.registerAll(PAIN_MIRROR);
 //            registry.registerAll(FROZEN_NETHER);
 //            registry.registerAll(BLOODY_REPLICATION);
 //        }
