@@ -51,8 +51,6 @@ tile.frozen_lava.name=Застывшая лава
 # Enchantments
 enchantment.shadow_of_death=Тень Смерти
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Наносит дополнительные 2.5 урона за уровень существам, не являющимся пауками или нежитью
-enchantment.necrotic_corrosion=Некротическая Коррозия
-enchantment.gravestone-extended.gs_necrotic_corrosion.desc=Наносит 10 процентов дополнительного урона за уровень, игнорирующего броню
 enchantment.bloody_replication=Кровавая копия
 enchantment.gravestone-extended.gs_bloody_replication.desc=Обменивает 0.25 - 1.5 очков здоровья(в зависимости от уровня зачарования) на копию блока дерева вместо его уничтожения
 enchantment.frozen_nether=Застывший ад

@@ -52,8 +52,6 @@ tile.frozen_lava.name=Frozen Lava
 # Enchantments
 enchantment.shadow_of_death=Sombra da Morte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Causa 2,5 de dano extra por nível para mobs não aranha e não morto-vivo
-enchantment.necrotic_corrosion=Corrosão Necrótica
-enchantment.gravestone-extended.gs_necrotic_corrosion.desc= 10% (por nível) do dano causado por esta arma ignorar a armadura
 enchantment.bloody_replication=Replicação Sangrenta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
 ## TODO !!!!!!!!!!

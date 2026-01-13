@@ -52,8 +52,6 @@ tile.frozen_lava.name=Frozen Lava
 # Enchantments
 enchantment.shadow_of_death=Sombra de la muerte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos
-enchantment.necrotic_corrosion=Corrosión necrótica
-enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 por ciento (por nivel) del daño hecho por este arma ignora la armadura
 enchantment.bloody_replication=Replicación sangrienta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
 ## TODO !!!!!!!!!!

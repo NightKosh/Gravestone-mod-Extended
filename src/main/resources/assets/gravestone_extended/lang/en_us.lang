@@ -51,8 +51,6 @@ tile.frozen_lava.name=Frozen Lava
 # Enchantments
 enchantment.shadow_of_death=Shadow of Death
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.necrotic_corrosion=Necrotic Corrosion
-enchantment.gravestone-extended.gs_necrotic_corrosion.desc=10 percent(per level) of damage dealt by this weapon ignores armor
 enchantment.bloody_replication=Bloody Replication
 enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
 enchantment.frozen_nether=Frozen Nether

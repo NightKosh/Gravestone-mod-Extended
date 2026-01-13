@@ -26,6 +26,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> WITHERED_BLADE =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "withered_blade"));
 
+    public static final ResourceKey<Enchantment> TRUE_STRIKE =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "true_strike"));
+
     public static final ResourceKey<Enchantment> WEB_CRAWLER =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "web_crawler"));
 
@@ -40,7 +43,6 @@ public class GSEEnchantments {
 
 //TODO
 //    public static final Enchantment SHADOW_OF_DEATH = new EnchantmentShadowOfDeath();
-//    public static final Enchantment NECROTIC_CORROSION = new EnchantmentNecroticCorrosion();
 //    public static final Enchantment BLOODY_REPLICATION = new EnchantmentBloodyReplication();
 //
 //    //armor
@@ -52,7 +54,7 @@ public class GSEEnchantments {
 //        @SubscribeEvent
 //        public static void registerBlocks(final RegistryEvent.Register<Enchantment> event) {
 //            final IForgeRegistry<Enchantment> registry = event.getRegistry();
-//            registry.registerAll(SHADOW_OF_DEATH, NECROTIC_CORROSION);
+//            registry.registerAll(SHADOW_OF_DEATH);
 //            registry.registerAll(FROZEN_NETHER);
 //            registry.registerAll(BLOODY_REPLICATION);
 //        }
