@@ -75,18 +75,6 @@ public class GSEEventsHandler {
 //        }
 //    }
 
-//    @SubscribeEvent
-//    public void livingUseItemEvent(LivingEntityUseItemEvent event) {
-//        if (!event.getItem().isEmpty()) {
-//            NBTTagList nbtList = event.getItem().getEnchantmentTagList();
-//            for (NBTBase nbt : nbtList) {
-//                if (GSEnchantmentHelper.hasEnchantment(nbt, GSEnchantment.CURSE_FRAGILITY)) {
-//                    event.getItem().damageItem(2, event.getEntityLiving());
-//                }
-//            }
-//        }
-//    }
-
     @SubscribeEvent
     public static void onLivingHurt(LivingIncomingDamageEvent event) {
         var entity = event.getSource().getEntity();
