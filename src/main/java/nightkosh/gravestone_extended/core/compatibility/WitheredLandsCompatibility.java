@@ -14,6 +14,7 @@ public class WitheredLandsCompatibility extends ACompatibility {
 
     public static final String WITHERED_LANDS_ID = "withered_lands";
 
+    // mobs
     public static final Identifier SKELETON_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_skull_crawler");
     public static final Identifier STRAY_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "stray_skull_crawler");
     public static final Identifier BOGGED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "bogged_skull_crawler");
@@ -23,6 +24,10 @@ public class WitheredLandsCompatibility extends ACompatibility {
     public static final Identifier HUSK_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "husk_skull_crawler");
     public static final Identifier DROWNED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "drowned_skull_crawler");
     public static final Identifier PIGLIN_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "piglin_skull_crawler");
+
+    // effects
+    public static final Identifier BLEEDING_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "bleeding");
+    public static final Identifier CALL_OF_THE_ABYSS_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "call_of_the_abyss");
 
     public static boolean loaded() {
         return loaded(WITHERED_LANDS_ID);

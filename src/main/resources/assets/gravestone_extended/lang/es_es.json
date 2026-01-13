@@ -53,5 +53,15 @@
   "enchantment.gravestone_extended.web_crawler": "Web Crawler",
   "enchantment.gravestone_extended.mirror_of_pain": "Espejo de dolor",
   "enchantment.gravestone_extended.curse_of_awkwardness": "Maldición de torpeza",
-  "enchantment.gravestone_extended.curse_of_fragility": "Maldición de fragilidad"
+  "enchantment.gravestone_extended.curse_of_fragility": "Maldición de fragilidad",
+
+  "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
+  "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
+  "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",
+  "item.minecraft.tipped_arrow.effect.bleeding": "Flecha de sangrar",
+
+  "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
+  "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
+  "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss"
 }

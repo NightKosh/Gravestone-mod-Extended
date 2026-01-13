@@ -38,6 +38,7 @@ public class ModGravestoneExtended {
         GSEItems.register(eventBus);
         GSETabs.register(eventBus);
         GSEMobEffects.register(eventBus);
+        GSEPotions.register(eventBus);
     }
 
 //    @Mod.EventHandler
