@@ -209,10 +209,6 @@ mobtype.stray=Stray Skeleton
 mobtype.wither=Wither Skeleton
 mobtype.pigman=Zombie Pigmen
 
-##Backpacks
-item.backpack.undertaker.t1=Undertaker's Backpack
-item.backpack.undertaker.t2=Undertaker's Woven Backpack
-
 
 # GUI
 gui.edit_grave.title=Set grave text

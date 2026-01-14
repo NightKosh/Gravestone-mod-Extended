@@ -1,10 +1,3 @@
-# Tabs
-##TODO !!!!!!!!!!
-itemGroup.tabGSMemorials=Memorials
-## TODO !!!!!!
-itemGroup.tabGSCorpse=Corpses
-##TODO !!!!!!!!!!
-itemGroup.tabGSOther=Gravestone mod Items
 
 
 # Blocks
@@ -19,12 +12,6 @@ block.memorial.cat_statue.name=Statue de chat
 block.memorial.creeper_statue.name=Statue de creeper
 block.memorial.celtic_cross.name=Croix celtique
 
-## Executions
-##TODO !!!!!!!!!!
-block.execution.gallows.name=Gallows
-block.execution.gibbet.name=Gibbet
-block.execution.stocks.name=Stocks
-block.execution.burning_stake.name=Burning Stake
 
 ## Traps
 block.trap.night.name=Pierre nocturne
@@ -35,8 +22,6 @@ block.trap.curse=Les ténèbres approchent !
 block.spawner.wither.name=Spawner à sorcière
 block.spawner.skeleton.name=Spawner à squelette
 block.spawner.zombie.name=Spawner à zombie
-## TODO !!!!!
-block.spawner.spider.name=Spider Spawner
 
 ## Chests
 block.haunted_chest.bats_chest.name=Coffre à chauve-souris
@@ -44,47 +29,13 @@ block.haunted_chest.skeleton_chest.name=Coffre à squelette
 block.haunted_chest.raven_chest.name=Coffre à corbeau
 block.haunted_chest.ghost_chest.name=Coffre à fantômes
 
-## Altar
-##TODO !!!!!!!!!!
-tile.altar.name=Altar
-
-## Portal
-## TODO !!!!!!!!!!
-tile.catacombs_portal.name=Catacombs Portal
-
-##Frozen Lava
-## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
-
-# Enchantments
-## TODO !!!!!!!!!!
-enchantment.shadow_of_death=Shadow of Death
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.bloody_replication=Bloody Replication
-enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
-
-
 
 
 ## Corpses
-## TODO !!!!!!!!!!
-item.corpse.steve=Steve Corpse
-## TODO !!!!!!!!!!
-item.corpse.player=Player Corpse
 item.corpse.villager=Carcasse de villageois
 item.corpse.horse=Carcasse de cheval
 item.corpse.dog=Carcasse de chien
 item.corpse.cat=Carcasse de chat
-## TODO !!!!!!!!!!
-item.corpse.zombie=Zombie Corpse
-## TODO !!!!!!!!!!
-item.corpse.zombie_villager=Zombie Villager Corpse
-## TODO !!!!!!!!!!
-item.corpse.skeleton=Skeleton Corpse
-## TODO !!!!!!!!!!
-item.corpse.witch=Witch Corpse
 item.corpse.entity_name=Nom
 item.corpse.villager_type=Profession
 item.corpse.villager_type.farmer=Fermier
@@ -99,8 +50,6 @@ item.corpse.villager_type.beekeeper=Apiculteur
 item.corpse.villager_type.lumberjack=Bucheron
 item.corpse.villager_type.unknown=Inconnu
 
-##TODO !!!!!!!!!!
-item.corpse.villager_career=Career
 item.corpse.villager_career.unknown=Inconnu
 
 item.corpse.horse_type=Type de cheval
@@ -140,64 +89,16 @@ item.corpse.cat_type.red=Rouge
 item.corpse.cat_type.siamese=Siamois
 item.corpse.cat_type.unknown=Inconnu
 
-## mobs type
-mobtype.title=Mob type
-mobtype.zombie=Zombie
-mobtype.skeleton=Skeleton
-mobtype.ghost=Ghost
-mobtype.husk=Husk Zombie
-mobtype.stray=Stray Skeleton
-mobtype.wither=Wither Skeleton
-mobtype.pigman=Zombie Pigmen
-
-##Backpacks
-item.backpack.undertaker.t1=Sac à dos du croque-mort
-item.backpack.undertaker.t2=Sac à dos tissé du croque-mort
-
 
 # GUI
 gui.edit_grave.title=Changer l'épitaphe
 gui.edit_grave.close=Fait
 gui.edit_grave.randomText=texte aléatoire
 gui.altar.resurrect=Ressusciter
-##TODO !!!!!!!!!!
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
 gui.altar.requirements=%d niveau demandé
-##TODO !!!!!!!!!!
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
-gui.chisel_crafting.grave_btn=Gravestone
-gui.chisel_crafting.memorial_btn=Memorial
-gui.chisel_crafting.enchanted_btn=Enchanted
-gui.chisel_crafting.mossy_btn=Mossy
-gui.chisel_crafting.recipe=Required items
 
 
 # Entity
-entity.GSPigmanSkullCrawler.name=Zombie Pigman Skull Crawler
 entity.GSRaven.name=Corbeau
-##TODO !!!!!!!!!!
-entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Croque-mort
 
-# Fluids
-## TODO !!!!!!!!!!
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
-
-
-# Console messages
-##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
-
-## Console commands
-##TODO !!!!!!!!!!
-commands.direction_error=Direction error!
-commands.generate.unknown_structure=Unknown structure!

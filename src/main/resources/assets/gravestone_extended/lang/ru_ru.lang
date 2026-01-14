@@ -209,10 +209,6 @@ mobtype.stray=Зимогор
 mobtype.wither=Скелет-иссушитель
 mobtype.pigman=Свинозомби
 
-##Backpacks
-item.backpack.undertaker.t1=Рюкзак гробовщика
-item.backpack.undertaker.t2=Тканый рюкзак гробовщика
-
 
 # GUI
 gui.edit_grave.title=Введите надпись

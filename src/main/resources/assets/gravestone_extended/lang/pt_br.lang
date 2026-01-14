@@ -39,24 +39,17 @@ block.haunted_chest.skeleton_chest.name=Baú com Esqueleto
 block.haunted_chest.raven_chest.name=Baú com Corvos
 block.haunted_chest.ghost_chest.name=Baú com Fantasma
 
-## Altar
-tile.altar.name=Altar
 
 ## Portal
 tile.catacombs_portal.name=Portal das Catacumbas
 
-##Frozen Lava
-## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
 
 # Enchantments
 enchantment.shadow_of_death=Sombra da Morte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Causa 2,5 de dano extra por nível para mobs não aranha e não morto-vivo
 enchantment.bloody_replication=Replicação Sangrenta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
-## TODO !!!!!!!!!!
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
+
 
 # Potions
 potion.cursed_inferno.title=Inferno Maldito
@@ -119,11 +112,6 @@ item.gravestone.mummy_helmet.name=Máscara de Múmia
 item.gravestone.mummy_chestplate.name=Camisa de Múmia
 item.gravestone.mummy_leggings.name=Calças de Múmia
 item.gravestone.mummy_boots.name=Bota de Múmia
-## TODO !!!!!!!!!!!!!!!!!
-item.gravestone.bone_helmet.name=Bone Helmet
-item.gravestone.bone_chestplate.name=Bone Chestplate
-item.gravestone.bone_leggings.name=Bone Leggings
-item.gravestone.bone_boots.name=Bone Boots
 
 ## Other Items
 item.gravestone.toxic_slime.name=Gosma Tóxica
@@ -244,15 +232,6 @@ entity.Villager.gravestone-extended:undertaker=Agente Funerário
 tile.gs_toxic_water.name=Água Tóxica
 fluid.gs_toxic_water=Água Tóxica
 
-
-# Console messages
-##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
 
 ## Console commands
 commands.direction_error=Erro de direção!

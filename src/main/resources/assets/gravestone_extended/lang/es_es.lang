@@ -48,9 +48,7 @@ enchantment.shadow_of_death=Sombra de la muerte
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos
 enchantment.bloody_replication=Replicación sangrienta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
-## TODO !!!!!!!!!!
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
+
 
 # Potions
 potion.cursed_inferno.title=Infierno maldito
@@ -198,11 +196,6 @@ mobtype.stray=Stray Skeleton
 mobtype.wither=Esqueleto Wither
 mobtype.pigman=Hombrecerdo zombi
 
-##Backpacks
-item.backpack.undertaker.t1=Mochila del enterrador
-item.backpack.undertaker.t2=Mochila tejida del enterrador
-
-
 # GUI
 gui.edit_grave.title=Ponga nombre a la lapida
 gui.edit_grave.close=Hecho
@@ -230,15 +223,6 @@ entity.Villager.gravestone-extended:undertaker=Enterrador
 tile.gs_toxic_water.name=Agua tóxica
 fluid.gs_toxic_water=Agua tóxica
 
-
-# Console messages
-##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
 
 ## Console commands
 commands.direction_error=Error de dirección!

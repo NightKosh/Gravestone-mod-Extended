@@ -47,7 +47,6 @@ item.corpse.villager=Mrtvola vesničana
 item.corpse.horse=Mrtvola koně
 item.corpse.dog=Mrtvola psa
 item.corpse.cat=Mrtvola kočky
-## TODO !!!!!!!!!!
 item.corpse.entity_name=Jméno
 item.corpse.villager_type=Profese
 item.corpse.villager_type.farmer=Farmář

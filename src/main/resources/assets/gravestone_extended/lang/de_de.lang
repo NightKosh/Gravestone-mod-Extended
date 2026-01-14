@@ -126,10 +126,6 @@ mobtype.stray=Eiswanderer
 mobtype.wither=Witherskelett
 mobtype.pigman=Schweinezombie
 
-## Backpacks
-item.backpack.undertaker.t1=Rucksack des Totengräbers
-item.backpack.undertaker.t2=Gewebter Rucksack des Totengräbers
-
 
 # GUI
 gui.edit_grave.title=Grabtext festlegen
