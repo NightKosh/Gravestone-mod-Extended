@@ -60,6 +60,11 @@
   "item.minecraft.lingering_potion.effect.purification": "Poción persistente de purificación",
   "item.minecraft.tipped_arrow.effect.purification": "Flecha de purificación",
 
+  "item.minecraft.potion.effect.recall": "Poción de retorno",
+  "item.minecraft.splash_potion.effect.recall": "Poción de retorno de área",
+  "item.minecraft.lingering_potion.effect.recall": "Poción de retorno persistente",
+  "item.minecraft.tipped_arrow.effect.recall": "Flecha de retorno",
+
   "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
   "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
   "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",

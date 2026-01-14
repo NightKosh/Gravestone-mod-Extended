@@ -87,6 +87,12 @@ public class GSEBrewingRecipes {
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(GOLDEN_KOI),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.PURIFICATION_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(SPECULAR_SNAPPER),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.RECALL_POTION));
         }
 
     }

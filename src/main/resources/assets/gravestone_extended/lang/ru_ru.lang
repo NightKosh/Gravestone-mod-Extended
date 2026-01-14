@@ -67,11 +67,7 @@ potion.effect.gs_rust_type=Зелье ржавчины
 splash_potion.effect.gs_rust_type=Взрывное зелье ржавчины
 lingering_potion.effect.gs_rust_type=Туманное зелье ржавчины
 tipped_arrow.effect.gs_rust_type=Стрела ржавчины
-potion.recall.title=Возвращение домой
-potion.effect.gs_recall_type=Зелье возвращения
-splash_potion.effect.gs_recall_type=Взрывное зелье возвращения
-lingering_potion.effect.gs_recall_type=Туманное зелье возвращения
-tipped_arrow.effect.gs_recall_type=Стрела возвращения
+
 potion.burning.title=Поджигает цель
 potion.effect.gs_burning_type=Пылающее зелье
 splash_potion.effect.gs_burning_type=Взрывное пылающее зелье

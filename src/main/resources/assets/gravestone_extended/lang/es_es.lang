@@ -69,11 +69,7 @@ potion.effect.gs_rust_type=Poción de óxido
 splash_potion.effect.gs_rust_type=Poción de área de óxido
 lingering_potion.effect.gs_rust_type=Poción persistente de óxido
 tipped_arrow.effect.gs_rust_type=Flecha de óxido
-potion.recall.title=Volver al inicio
-potion.effect.gs_recall_type=Poción de retorno
-splash_potion.effect.gs_recall_type=Poción de retorno de área
-lingering_potion.effect.gs_recall_type=Poción de retorno persistente
-tipped_arrow.effect.gs_recall_type=Flecha de retorno
+
 potion.burning.title=Prende fuego al objetivo
 potion.effect.gs_burning_type=Poción de llamas
 splash_potion.effect.gs_burning_type=Poción de área de llamas

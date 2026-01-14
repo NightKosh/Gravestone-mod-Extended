@@ -24,6 +24,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static final Item CHORUS_KOI = getFish("chorus_koi");
     public static final Item WITHERED_CRUCIAN = getFish("withered_crucian");
     public static final Item SPOOKYFIN = getFish("spookyfin");
+    public static final Item SPECULAR_SNAPPER = getFish("specular_snapper");
 
     private static Item getFish(String id) {
         var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(ADVANCED_FISHING_ID, id));
@@ -44,10 +45,6 @@ public class AdvancedFishingCompatibility extends ACompatibility {
 //        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), GSPotion.BONE_SKIN_TYPE);
 //        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.MAGMA_JELLYFISH.ordinal())), GSPotion.BURNING_TYPE);
 //        PotionHelper.addMix(GSPotion.BURNING_TYPE, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.FLAREFIN_KOI.ordinal())), GSPotion.INFERNO_TYPE);
-//
-//        BrewingRecipeRegistry.addRecipe(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), PotionTypes.AWKWARD),
-//                new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPECULAR_SNAPPER.ordinal()),
-//                PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), GSPotion.RECALL_TYPE));
     }
 //TODO
 //    public static boolean isBoneHook(Entity entity) {

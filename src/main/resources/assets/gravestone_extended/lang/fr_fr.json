@@ -60,6 +60,11 @@
   "item.minecraft.lingering_potion.effect.purification": "Lingering Potion of Purification",
   "item.minecraft.tipped_arrow.effect.purification": "Arrow of Purification",
 
+  "item.minecraft.potion.effect.recall": "Potion of Recall",
+  "item.minecraft.splash_potion.effect.recall": "Splash Potion of Recall",
+  "item.minecraft.lingering_potion.effect.recall": "Lingering Potion of Recall",
+  "item.minecraft.tipped_arrow.effect.recall": "Arrow of Recall",
+
   "item.minecraft.potion.effect.bleeding": "Potion of Bleeding",
   "item.minecraft.splash_potion.effect.bleeding": "Splash Potion of Bleeding",
   "item.minecraft.lingering_potion.effect.bleeding": "Lingering Potion of Bleeding",

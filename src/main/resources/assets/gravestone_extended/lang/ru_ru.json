@@ -60,6 +60,11 @@
   "item.minecraft.lingering_potion.effect.purification": "Туманное зелье очищения",
   "item.minecraft.tipped_arrow.effect.purification": "Стрела очищения",
 
+  "item.minecraft.potion.effect.recall": "Зелье возвращения",
+  "item.minecraft.splash_potion.effect.recall": "Взрывное зелье возвращения",
+  "item.minecraft.lingering_potion.effect.recall": "Туманное зелье возвращения",
+  "item.minecraft.tipped_arrow.effect.recall": "Стрела возвращения",
+
   "item.minecraft.potion.effect.bleeding": "Зелье кровотечения",
   "item.minecraft.splash_potion.effect.bleeding": "Взрывное зелье кровотечения",
   "item.minecraft.lingering_potion.effect.bleeding": "Туманное зелье кровотечения",

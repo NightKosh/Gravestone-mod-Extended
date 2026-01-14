@@ -6,6 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.mob_effect.PurificationEffect;
+import nightkosh.gravestone_extended.mob_effect.RecallEffect;
 
 /**
  * Gravestone mod - Extended
@@ -20,6 +21,9 @@ public class GSEMobEffects {
 
     public static final DeferredHolder<MobEffect, MobEffect> PURIFICATION =
             EFFECTS.register("purification", PurificationEffect::new);
+
+    public static final DeferredHolder<MobEffect, MobEffect> RECALL =
+            EFFECTS.register("recall", RecallEffect::new);
 
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);

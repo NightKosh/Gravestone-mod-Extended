@@ -69,11 +69,7 @@ potion.effect.gs_rust_type=Poção de Ferrugem
 splash_potion.effect.gs_rust_type=Poção Arremessável de Ferrugem
 lingering_potion.effect.gs_rust_type=Poção Prolongada de Ferrugem
 tipped_arrow.effect.gs_rust_type=Flecha de Ferrugem
-potion.recall.title=Retonar para casa
-potion.effect.gs_recall_type=Poção de Retorno
-splash_potion.effect.gs_recall_type=Poção Arremessável de Retorno
-lingering_potion.effect.gs_recall_type=Poção Prolongada de Retorno
-tipped_arrow.effect.gs_recall_type=Flecha de Retorno
+
 potion.burning.title=Incendeia o alvo
 potion.effect.gs_burning_type=Poção de Combustão
 splash_potion.effect.gs_burning_type=Poção Arremessável de Combustão
