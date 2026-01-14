@@ -31,9 +31,10 @@ public class InfernoEffect extends MobEffect {
                             entity.getX() + 3, entity.getY() + 3, entity.getZ() + 3));
 
             for (var mob : mobsList) {
-                if (!(mob instanceof TamableAnimal animal && animal.isTame() || // ignore tamed pets
-                        (mob instanceof Player && // ignore other players
-                                (!GSEConfigs.INFERNO_DEALS_DAMAGE_TO_PLAYERS.get() || !level.isPvpAllowed())))) {
+                if (!mob.equals(entity) && // ignore self
+                        !(mob instanceof TamableAnimal animal && animal.isTame() || // ignore tamed pets
+                                (mob instanceof Player && // ignore other players
+                                        (!GSEConfigs.INFERNO_DEALS_DAMAGE_TO_PLAYERS.get() || !level.isPvpAllowed())))) {
                     mob.igniteForTicks(200);
                 }
             }
