@@ -16,8 +16,13 @@ public class AdvancedFishingCompatibility extends ACompatibility {
 
     public static final String ADVANCED_FISHING_ID = "advanced_fishing";
 
+    public static final Item BLUE_JELLYFISH = getFish("blue_jellyfish");
     public static final Item PIRANHA = getFish("piranha");
     public static final Item ANGLER_FISH = getFish("angler_fish");
+    public static final Item CAVE_TROUT = getFish("cave_trout");
+    public static final Item CHORUS_KOI = getFish("chorus_koi");
+    public static final Item WITHERED_CRUCIAN = getFish("withered_crucian");
+    public static final Item SPOOKYFIN = getFish("spookyfin");
 
     private static Item getFish(String id) {
         var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(ADVANCED_FISHING_ID, id));
@@ -43,14 +48,6 @@ public class AdvancedFishingCompatibility extends ACompatibility {
 //        BrewingRecipeRegistry.addRecipe(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), PotionTypes.AWKWARD),
 //                new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPECULAR_SNAPPER.ordinal()),
 //                PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM), GSPotion.RECALL_TYPE));
-//
-//        // vanilla potions
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.SPOOKYFIN.ordinal())), GSPotion.BLINDNESS_TYPE);
-//
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BLUE_JELLYFISH.ordinal())), GSPotion.NAUSEA_TYPE);
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.CAVE_TROUT.ordinal())), GSPotion.RESISTANCE_TYPE);
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.CHORUS_KOI.ordinal())), GSPotion.LEVITATION_TYPE);
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.WITHERED_CRUCIAN.ordinal())), GSPotion.WITHER_TYPE);
     }
 //TODO
 //    public static boolean isBoneHook(Entity entity) {

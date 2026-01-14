@@ -63,5 +63,30 @@
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
-  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss"
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss",
+
+  "item.minecraft.potion.effect.hunger": "Poción de hambre",
+  "item.minecraft.splash_potion.effect.hunger": "Poción de área de hambre",
+  "item.minecraft.lingering_potion.effect.hunger": "Poción persistente de hambre",
+  "item.minecraft.tipped_arrow.effect.hunger": "Flecha de hambre",
+
+  "item.minecraft.potion.effect.blindness": "Poción de ceguera",
+  "item.minecraft.splash_potion.effect.blindness": "Poción de área de ceguera",
+  "item.minecraft.lingering_potion.effect.blindness": "Poción persistente de ceguera",
+  "item.minecraft.tipped_arrow.effect.blindness": "Flecha de ceguera",
+
+  "item.minecraft.potion.effect.nausea": "Poción de náusea",
+  "item.minecraft.splash_potion.effect.nausea": "Poción de área de náusea",
+  "item.minecraft.lingering_potion.effect.nausea": "Poción persistente de náusea",
+  "item.minecraft.tipped_arrow.effect.nausea": "Flecha de náusea",
+
+  "item.minecraft.potion.effect.resistance": "Poción de resistencia",
+  "item.minecraft.splash_potion.effect.resistance": "Poción de área de resistencia",
+  "item.minecraft.lingering_potion.effect.resistance": "Poción persistente de resistencia",
+  "item.minecraft.tipped_arrow.effect.resistance": "Flecha de resistencia",
+
+  "item.minecraft.potion.effect.wither": "Poción de marchitamiento",
+  "item.minecraft.splash_potion.effect.wither": "Poción de área de marchitamiento",
+  "item.minecraft.lingering_potion.effect.wither": "Poción persistente de marchitamiento",
+  "item.minecraft.tipped_arrow.effect.wither": "Flecha de marchitamiento"
 }

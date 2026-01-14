@@ -63,5 +63,30 @@
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
-  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss"
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss",
+
+  "item.minecraft.potion.effect.hunger": "Зілля голоду",
+  "item.minecraft.splash_potion.effect.hunger": "Вибухове зілля голоду",
+  "item.minecraft.lingering_potion.effect.hunger": "Туманне зілля голоду",
+  "item.minecraft.tipped_arrow.effect.hunger": "Стріла голоду",
+
+  "item.minecraft.potion.effect.blindness": "Зілля сліпоти",
+  "item.minecraft.splash_potion.effect.blindness": "Вибухове зілля сліпоти",
+  "item.minecraft.lingering_potion.effect.blindness": "Туманне зілля сліпоти",
+  "item.minecraft.tipped_arrow.effect.blindness": "Стріла сліпоти",
+
+  "item.minecraft.potion.effect.nausea": "Зілля нудоти",
+  "item.minecraft.splash_potion.effect.nausea": "Вибухове зілля нудоти",
+  "item.minecraft.lingering_potion.effect.nausea": "Туманне зілля нудоти",
+  "item.minecraft.tipped_arrow.effect.nausea": "Стріла нудоти",
+
+  "item.minecraft.potion.effect.resistance": "Зілля опору",
+  "item.minecraft.splash_potion.effect.resistance": "Вибухове зілля опору",
+  "item.minecraft.lingering_potion.effect.resistance": "Туманне зілля опору",
+  "item.minecraft.tipped_arrow.effect.resistance": "Стріла опору",
+
+  "item.minecraft.potion.effect.wither": "Potion of Withering",
+  "item.minecraft.splash_potion.effect.wither": "Splash Potion of Withering",
+  "item.minecraft.lingering_potion.effect.wither": "Lingering Potion of Withering",
+  "item.minecraft.tipped_arrow.effect.wither": "Arrow of Withering"
 }

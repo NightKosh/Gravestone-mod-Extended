@@ -15,8 +15,7 @@ import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
-import static nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility.ANGLER_FISH;
-import static nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility.PIRANHA;
+import static nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility.*;
 
 /**
  * Gravestone mod - Extended
@@ -33,7 +32,44 @@ public class GSEBrewingRecipes {
             LOGGER.info("BrewingRecipes event registration triggered");
         }
 
+        event.getBuilder().addRecipe(
+                DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                        .getCustomIngredient().toVanilla(),
+                Ingredient.of(Items.ROTTEN_FLESH),
+                PotionContents.createItemStack(Items.POTION, GSEPotions.HUNGER_POTION));
+
         if (AdvancedFishingCompatibility.loaded()) {
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(BLUE_JELLYFISH),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.NAUSEA_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(SPOOKYFIN),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.BLINDNESS_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(CAVE_TROUT),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.RESISTANCE_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(CHORUS_KOI),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.LEVITATION_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(WITHERED_CRUCIAN),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.WITHER_POTION));
+
+            // potions with custom effects
             event.getBuilder().addRecipe(
                     DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
                             .getCustomIngredient().toVanilla(),

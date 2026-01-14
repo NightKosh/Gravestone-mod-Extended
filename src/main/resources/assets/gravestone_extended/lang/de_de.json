@@ -63,5 +63,30 @@
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
-  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss"
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss",
+
+  "item.minecraft.potion.effect.hunger": "Potion of Hunger",
+  "item.minecraft.splash_potion.effect.hunger": "Splash Potion of Hunger",
+  "item.minecraft.lingering_potion.effect.hunger": "Lingering Potion of Hunger",
+  "item.minecraft.tipped_arrow.effect.hunger": "Arrow of Hunger",
+
+  "item.minecraft.potion.effect.blindness": "Potion of Blindness",
+  "item.minecraft.splash_potion.effect.blindness": "Splash Potion of Blindness",
+  "item.minecraft.lingering_potion.effect.blindness": "Lingering Potion of Blindness",
+  "item.minecraft.tipped_arrow.effect.blindness": "Arrow of Blindness",
+
+  "item.minecraft.potion.effect.nausea": "Potion of Nausea",
+  "item.minecraft.splash_potion.effect.nausea": "Splash Potion of Nausea",
+  "item.minecraft.lingering_potion.effect.nausea": "Lingering Potion of Nausea",
+  "item.minecraft.tipped_arrow.effect.nausea": "Arrow of Nausea",
+
+  "item.minecraft.potion.effect.resistance": "Potion of Resistance",
+  "item.minecraft.splash_potion.effect.resistance": "Splash Potion of Resistance",
+  "item.minecraft.lingering_potion.effect.resistance": "Lingering Potion of Resistance",
+  "item.minecraft.tipped_arrow.effect.resistance": "Arrow of Resistance",
+
+  "item.minecraft.potion.effect.wither": "Potion of Withering",
+  "item.minecraft.splash_potion.effect.wither": "Splash Potion of Withering",
+  "item.minecraft.lingering_potion.effect.wither": "Lingering Potion of Withering",
+  "item.minecraft.tipped_arrow.effect.wither": "Arrow of Withering"
 }

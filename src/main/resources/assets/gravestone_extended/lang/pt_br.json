@@ -63,5 +63,30 @@
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
-  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss"
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Arrow of the Call of the Abyss",
+
+  "item.minecraft.potion.effect.hunger": "Poção de Fome",
+  "item.minecraft.splash_potion.effect.hunger": "Poção Arremessável de Fome",
+  "item.minecraft.lingering_potion.effect.hunger": "Poção Prolongada de Fome",
+  "item.minecraft.tipped_arrow.effect.hunger": "Flecha de Fome",
+
+  "item.minecraft.potion.effect.blindness": "Poção de Cegueira",
+  "item.minecraft.splash_potion.effect.blindness": "Poção Arremessável de Cegueira",
+  "item.minecraft.lingering_potion.effect.blindness": "Poção Prolongada de Cegueira",
+  "item.minecraft.tipped_arrow.effect.blindness": "Flecha de Cegueira",
+
+  "item.minecraft.potion.effect.nausea": "Poção de Náusea",
+  "item.minecraft.splash_potion.effect.nausea": "Poção Arremessável de Náusea",
+  "item.minecraft.lingering_potion.effect.nausea": "Poção Prolongada de Náusea",
+  "item.minecraft.tipped_arrow.effect.nausea": "Flecha de Náusea",
+
+  "item.minecraft.potion.effect.resistance": "Poção de Resistência",
+  "item.minecraft.splash_potion.effect.resistance": "Poção Arremessável de Resistência",
+  "item.minecraft.lingering_potion.effect.resistance": "Poção Prolongada de Resistência",
+  "item.minecraft.tipped_arrow.effect.resistance": "Flecha de Resistência",
+
+  "item.minecraft.potion.effect.wither": "Poção de Wither",
+  "item.minecraft.splash_potion.effect.wither": "Poção Arremessável de Wither",
+  "item.minecraft.lingering_potion.effect.wither": "Poção Prolongada de Wither",
+  "item.minecraft.tipped_arrow.effect.wither": "Flecha de Wither"
 }

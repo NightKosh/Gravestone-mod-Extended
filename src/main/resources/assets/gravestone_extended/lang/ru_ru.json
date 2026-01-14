@@ -63,5 +63,30 @@
   "item.minecraft.potion.effect.call_of_the_abyss": "Зелье зова бездны",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Взрывное зелье зова бездны",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Туманное зелье зова бездны",
-  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Стрела зова бездны"
+  "item.minecraft.tipped_arrow.effect.call_of_the_abyss": "Стрела зова бездны",
+
+  "item.minecraft.potion.effect.hunger": "Зелье голода",
+  "item.minecraft.splash_potion.effect.hunger": "Взрывное зелье голода",
+  "item.minecraft.lingering_potion.effect.hunger": "Туманное зелье голода",
+  "item.minecraft.tipped_arrow.effect.hunger": "Стрела голода",
+
+  "item.minecraft.potion.effect.blindness": "Зелье слепоты",
+  "item.minecraft.splash_potion.effect.blindness": "Взрывное зелье слепоты",
+  "item.minecraft.lingering_potion.effect.blindness": "Туманное зелье слепоты",
+  "item.minecraft.tipped_arrow.effect.blindness": "Стрела слепоты",
+
+  "item.minecraft.potion.effect.nausea": "Зелье тошноты",
+  "item.minecraft.splash_potion.effect.nausea": "Взрывное зелье тошноты",
+  "item.minecraft.lingering_potion.effect.nausea": "Туманное зелье тошноты",
+  "item.minecraft.tipped_arrow.effect.nausea": "Стрела тошноты",
+
+  "item.minecraft.potion.effect.resistance": "Зелье сопротивления",
+  "item.minecraft.splash_potion.effect.resistance": "Взрывное зелье сопротивления",
+  "item.minecraft.lingering_potion.effect.resistance": "Туманное зелье сопротивления",
+  "item.minecraft.tipped_arrow.effect.resistance": "Стрела сопротивления",
+
+  "item.minecraft.potion.effect.wither": "Зелье иссушения",
+  "item.minecraft.splash_potion.effect.wither": "Взрывное зелье иссушения",
+  "item.minecraft.lingering_potion.effect.wither": "Туманное зелье иссушения",
+  "item.minecraft.tipped_arrow.effect.wither": "Иссушающая стрела"
 }

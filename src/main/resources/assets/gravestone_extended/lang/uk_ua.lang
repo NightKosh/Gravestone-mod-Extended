@@ -101,33 +101,6 @@ splash_potion.effect.gs_cursed_flame_type=Вибухове зілля прокл
 lingering_potion.effect.gs_cursed_flame_type=Туманне зілля проклятого полум'я
 tipped_arrow.effect.gs_cursed_flame_type=Стріла проклятого полум'я
 
-# Vanilla Potions
-potion.effect.gs_hunger_type=Зілля голоду
-splash_potion.effect.gs_hunger_type=Вибухове зілля голоду
-lingering_potion.effect.gs_hunger_type=Туманне зілля голоду
-tipped_arrow.effect.gs_hunger_type=Стріла голоду
-potion.effect.gs_blindness_type=Зілля сліпоти
-splash_potion.effect.gs_blindness_type=Вибухове зілля сліпоти
-lingering_potion.effect.gs_blindness_type=Туманне зілля сліпоти
-tipped_arrow.effect.gs_blindness_type=Стріла сліпоти
-potion.effect.gs_nausea_type=Зілля нудоти
-splash_potion.effect.gs_nausea_type=Вибухове зілля нудоти
-lingering_potion.effect.gs_nausea_type=Туманне зілля нудоти
-tipped_arrow.effect.gs_nausea_type=Стріла нудоти
-potion.effect.gs_resistance_type=Зілля опору
-splash_potion.effect.gs_resistance_type=Вибухове зілля опору
-lingering_potion.effect.gs_resistance_type=Туманне зілля опору
-tipped_arrow.effect.gs_resistance_type=Стріла опору
-potion.effect.gs_levitation_type=Зілля левітації
-splash_potion.effect.gs_levitation_type=Вибухове зілля левітації
-lingering_potion.effect.gs_levitation_type=Туманне зілля левітації
-tipped_arrow.effect.gs_levitation_type=Стріла левітації
-## TODO !!!!!!!!!!
-potion.effect.wither_type=Potion of Withering
-splash_potion.effect.wither_type=Splash Potion of Withering
-lingering_potion.effect.wither_type=Lingering Potion of Withering
-tipped_arrow.effect.wither_type=Arrow of Withering
-
 
 # Items
 ## Fishing Pole

@@ -100,32 +100,6 @@ splash_potion.effect.gs_cursed_flame_type=Poción de área de llama maldita
 lingering_potion.effect.gs_cursed_flame_type=Poción persistente de llama maldita
 tipped_arrow.effect.gs_cursed_flame_type=Flecha de llama maldita
 
-# Vanilla Potions
-potion.effect.gs_hunger_type=Poción de hambre
-splash_potion.effect.gs_hunger_type=Poción de área de hambre
-lingering_potion.effect.gs_hunger_type=Poción persistente de hambre
-tipped_arrow.effect.gs_hunger_type=Flecha de hambre
-potion.effect.gs_blindness_type=Poción de ceguera
-splash_potion.effect.gs_blindness_type=Poción de área de ceguera
-lingering_potion.effect.gs_blindness_type=Poción persistente de ceguera
-tipped_arrow.effect.gs_blindness_type=Flecha de ceguera
-potion.effect.gs_nausea_type=Poción de náusea
-splash_potion.effect.gs_nausea_type=Poción de área de náusea
-lingering_potion.effect.gs_nausea_type=Poción persistente de náusea
-tipped_arrow.effect.gs_nausea_type=Flecha de náusea
-potion.effect.gs_resistance_type=Poción de resistencia
-splash_potion.effect.gs_resistance_type=Poción de área de resistencia
-lingering_potion.effect.gs_resistance_type=Poción persistente de resistencia
-tipped_arrow.effect.gs_resistance_type=Flecha de resistencia
-potion.effect.gs_levitation_type=Poción de levitación
-splash_potion.effect.gs_levitation_type=Poción de área de levitación
-lingering_potion.effect.gs_levitation_type=Poción persistente de levitación
-tipped_arrow.effect.gs_levitation_type=Flecha de levitación
-potion.effect.wither_type=Poción de marchitamiento
-splash_potion.effect.wither_type=Poción de área de marchitamiento
-lingering_potion.effect.wither_type=Poción persistente de marchitamiento
-tipped_arrow.effect.wither_type=Flecha de marchitamiento
-
 
 # Items
 ## Fishing Pole

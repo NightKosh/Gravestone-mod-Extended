@@ -105,34 +105,6 @@ potion.effect.gs_cursed_flame_type=Potion of Cursed Flame
 splash_potion.effect.gs_cursed_flame_type=Splash Potion of Cursed Flame
 lingering_potion.effect.gs_cursed_flame_type=Lingering Potion of Cursed Flame
 tipped_arrow.effect.gs_cursed_flame_type=Arrow of Cursed Flame
-
-# Vanilla Potions
-## TODO !!!!!!!!!!!!
-potion.effect.gs_hunger_type=Potion of Hunger
-splash_potion.effect.gs_hunger_type=Splash Potion of Hunger
-lingering_potion.effect.gs_hunger_type=Lingering Potion of Hunger
-tipped_arrow.effect.gs_hunger_type=Arrow of Hunger
-potion.effect.gs_blindness_type=Potion of Blindness
-splash_potion.effect.gs_blindness_type=Splash Potion of Blindness
-lingering_potion.effect.gs_blindness_type=Lingering Potion of Blindness
-tipped_arrow.effect.gs_blindness_type=Arrow of Blindness
-potion.effect.gs_nausea_type=Potion of Nausea
-splash_potion.effect.gs_nausea_type=Splash Potion of Nausea
-lingering_potion.effect.gs_nausea_type=Lingering Potion of Nausea
-tipped_arrow.effect.gs_nausea_type=Arrow of Nausea
-potion.effect.gs_resistance_type=Potion of Resistance
-splash_potion.effect.gs_resistance_type=Splash Potion of Resistance
-lingering_potion.effect.gs_resistance_type=Lingering Potion of Resistance
-tipped_arrow.effect.gs_resistance_type=Arrow of Resistance
-potion.effect.gs_levitation_type=Potion of Levitation
-splash_potion.effect.gs_levitation_type=Splash Potion of Levitation
-lingering_potion.effect.gs_levitation_type=Lingering Potion of Levitation
-tipped_arrow.effect.gs_levitation_type=Arrow of Levitation
-potion.effect.wither_type=Potion of Withering
-splash_potion.effect.wither_type=Splash Potion of Withering
-lingering_potion.effect.wither_type=Lingering Potion of Withering
-tipped_arrow.effect.wither_type=Arrow of Withering
-
 # Items
 ## Fishing Pole
 ## TODO !!!!!!!!!!

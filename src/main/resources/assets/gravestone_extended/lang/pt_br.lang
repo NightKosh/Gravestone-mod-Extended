@@ -101,32 +101,6 @@ splash_potion.effect.gs_cursed_flame_type=Poção Arremessável de Chama Amaldi�
 lingering_potion.effect.gs_cursed_flame_type=Poção Prolongada de Chama Amaldiçoada
 tipped_arrow.effect.gs_cursed_flame_type=Flecha de Chama Amaldiçoada
 
-# Vanilla Potions
-potion.effect.gs_hunger_type=Poção de Fome
-splash_potion.effect.gs_hunger_type=Poção Arremessável de Fome
-lingering_potion.effect.gs_hunger_type=Poção Prolongada de Fome
-tipped_arrow.effect.gs_hunger_type=Flecha de Fome
-potion.effect.gs_blindness_type=Poção de Cegueira
-splash_potion.effect.gs_blindness_type=Poção Arremessável de Cegueira
-lingering_potion.effect.gs_blindness_type=Poção Prolongada de Cegueira
-tipped_arrow.effect.gs_blindness_type=Flecha de Cegueira
-potion.effect.gs_nausea_type=Poção de Náusea
-splash_potion.effect.gs_nausea_type=Poção Arremessável de Náusea
-lingering_potion.effect.gs_nausea_type=Poção Prolongada de Náusea
-tipped_arrow.effect.gs_nausea_type=Flecha de Náusea
-potion.effect.gs_resistance_type=Poção de Resistência
-splash_potion.effect.gs_resistance_type=Poção Arremessável de Resistência
-lingering_potion.effect.gs_resistance_type=Poção Prolongada de Resistência
-tipped_arrow.effect.gs_resistance_type=Flecha de Resistência
-potion.effect.gs_levitation_type=Poção de Levitação
-splash_potion.effect.gs_levitation_type=Poção Arremessável de Levitação
-lingering_potion.effect.gs_levitation_type=Poção Prolongada de Levitação
-tipped_arrow.effect.gs_levitation_type=Flecha de Levitação
-potion.effect.wither_type=Poção de Wither
-splash_potion.effect.wither_type=Poção Arremessável de Wither
-lingering_potion.effect.wither_type=Poção Prolongada de Wither
-tipped_arrow.effect.wither_type=Flecha de Wither
-
 
 # Items
 ## Fishing Pole

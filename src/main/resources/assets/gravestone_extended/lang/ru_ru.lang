@@ -98,32 +98,6 @@ splash_potion.effect.gs_cursed_flame_type=Взрывное зелье прокл
 lingering_potion.effect.gs_cursed_flame_type=Туманное зелье проклятого пламени
 tipped_arrow.effect.gs_cursed_flame_type=Стрела проклятого пламени
 
-# Vanilla Potions
-potion.effect.gs_hunger_type=Зелье голода
-splash_potion.effect.gs_hunger_type=Взрывное зелье голода
-lingering_potion.effect.gs_hunger_type=Туманное зелье голода
-tipped_arrow.effect.gs_hunger_type=Стрела голода
-potion.effect.gs_blindness_type=Зелье слепоты
-splash_potion.effect.gs_blindness_type=Взрывное зелье слепоты
-lingering_potion.effect.gs_blindness_type=Туманное зелье слепоты
-tipped_arrow.effect.gs_blindness_type=Стрела слепоты
-potion.effect.gs_nausea_type=Зелье тошноты
-splash_potion.effect.gs_nausea_type=Взрывное зелье тошноты
-lingering_potion.effect.gs_nausea_type=Туманное зелье тошноты
-tipped_arrow.effect.gs_nausea_type=Стрела тошноты
-potion.effect.gs_resistance_type=Зелье сопротивления
-splash_potion.effect.gs_resistance_type=Взрывное зелье сопротивления
-lingering_potion.effect.gs_resistance_type=Туманное зелье сопротивления
-tipped_arrow.effect.gs_resistance_type=Стрела сопротивления
-potion.effect.gs_levitation_type=Зелье левитации
-splash_potion.effect.gs_levitation_type=Взрывное зелье левитации
-lingering_potion.effect.gs_levitation_type=Туманное зелье левитации
-tipped_arrow.effect.gs_levitation_type=Стрела левитации
-potion.effect.wither_type=Зелье иссушения
-splash_potion.effect.wither_type=Взрывное зелье иссушения
-lingering_potion.effect.wither_type=Туманное зелье иссушения
-tipped_arrow.effect.wither_type=Иссушающая стрела
-
 
 # Items
 ## Fishing Pole

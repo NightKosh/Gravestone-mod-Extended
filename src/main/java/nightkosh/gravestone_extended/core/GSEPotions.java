@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -21,6 +22,30 @@ public class GSEPotions {
 
     public static final DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(Registries.POTION, ModInfo.ID);
+
+    public static final DeferredHolder<Potion, Potion> HUNGER_POTION =
+            POTIONS.register("hunger", () ->
+                    new Potion("hunger", new MobEffectInstance(MobEffects.HUNGER, 1200, 0)));
+
+    public static final DeferredHolder<Potion, Potion> NAUSEA_POTION =
+            POTIONS.register("nausea", () ->
+                    new Potion("nausea", new MobEffectInstance(MobEffects.NAUSEA, 1200, 0)));
+
+    public static final DeferredHolder<Potion, Potion> BLINDNESS_POTION =
+            POTIONS.register("blindness", () ->
+                    new Potion("blindness", new MobEffectInstance(MobEffects.BLINDNESS, 600, 0)));
+
+    public static final DeferredHolder<Potion, Potion> RESISTANCE_POTION =
+            POTIONS.register("resistance", () ->
+                    new Potion("resistance", new MobEffectInstance(MobEffects.RESISTANCE, 3600, 0)));
+
+    public static final DeferredHolder<Potion, Potion> LEVITATION_POTION =
+            POTIONS.register("levitation", () ->
+                    new Potion("levitation", new MobEffectInstance(MobEffects.LEVITATION, 900, 0)));
+
+    public static final DeferredHolder<Potion, Potion> WITHER_POTION =
+            POTIONS.register("wither", () ->
+                    new Potion("wither", new MobEffectInstance(MobEffects.WITHER, 600, 0)));
 
     public static final DeferredHolder<Potion, Potion> BLEEDING_POTION =
             POTIONS.register("bleeding", () -> {
@@ -57,13 +82,6 @@ public class GSEPotions {
 //    public static final PotionType RECALL_TYPE = new PotionTypeRecall();
 //    public static final PotionType BURNING_TYPE = new PotionTypeBurning();
 //    public static final PotionType INFERNO_TYPE = new PotionTypeInferno();
-//    //vanilla
-//    public static final PotionType HUNGER_TYPE = new PotionTypeHunger();
-//    public static final PotionType BLINDNESS_TYPE = new PotionTypeBlindness();
-//    public static final PotionType NAUSEA_TYPE = new PotionTypeNausea();
-//    public static final PotionType RESISTANCE_TYPE = new PotionTypeResistance();
-//    public static final PotionType LEVITATION_TYPE = new PotionTypeLevitation();
-//    public static final PotionType WITHER_TYPE = new PotionTypeWither();
 //
 //    @SubscribeEvent
 //    public static void registerPotions(final RegistryEvent.Register<Potion> event) {
@@ -73,14 +91,8 @@ public class GSEPotions {
 //    @SubscribeEvent
 //    public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
 //        event.getRegistry().registerAll(RUST_TYPE, BONE_SKIN_TYPE, RECALL_TYPE, BURNING_TYPE, INFERNO_TYPE);
-//        event.getRegistry().registerAll(HUNGER_TYPE, BLINDNESS_TYPE, NAUSEA_TYPE, RESISTANCE_TYPE, LEVITATION_TYPE, WITHER_TYPE);
 //
 //        PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
-//
-//        PotionHelper.addMix(PotionTypes.WATER_BREATHING, Ingredient.fromStacks(new ItemStack(GSItem.PIECE_OF_DIVING_SUIT, 1)), CHOKE_TYPE);
-//
-//        // vanilla potions
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(Items.ROTTEN_FLESH, 1)), GSPotion.HUNGER_TYPE);
 //
 //        if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
 //            CompatibilityAdvancedFishing.addPotionsRecipes();
