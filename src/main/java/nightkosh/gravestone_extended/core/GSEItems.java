@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.item.FrozenMirror;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 /**
@@ -19,6 +20,8 @@ public class GSEItems {
             DeferredRegister.create(Registries.ITEM, ModInfo.ID);
 
     public static final DeferredHolder<Item, Item> BONE_SHIELD = ITEMS_REGISTER.register("bone_shield", BoneShield::new);
+
+    public static final DeferredHolder<Item, Item> FROZEN_MIRROR = ITEMS_REGISTER.register("frozen_mirror", FrozenMirror::new);
 //
 //    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
 //    public static final Item BONE_SWORD = new ItemBoneSword();
@@ -73,8 +76,6 @@ public class GSEItems {
 //
 //    public static final Item CEMETERY_KEY = new ItemCemeteryKey();
 //
-//    public static final Item FROZEN_MIRROR = new ItemFrozenMirror();
-//
 //    public static final Item TOXIC_SLIME = new ItemToxicSlime();
 //    public static final Item OOZE = new ItemOoze();
 //    public static final Item PIECE_OF_MUMMY_CLOTH = new ItemPieceOfMummyCloth();
@@ -90,7 +91,7 @@ public class GSEItems {
 //        public static void registerItems(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
 //            registry.registerAll(TOXIC_SLIME, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
-//            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY, FROZEN_MIRROR);
+//            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY);
 //            registry.registerAll(
 //                    BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
 //                    BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,

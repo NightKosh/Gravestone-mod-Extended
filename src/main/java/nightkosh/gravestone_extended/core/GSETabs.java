@@ -21,12 +21,13 @@ public class GSETabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
             GSE_TAB.register("gravestone_extended", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(GSEBlocks.BONE_BLOCK.get()))
+                    .icon(() -> new ItemStack(GSEBlocks.SKULL_CANDLE_WITHER.get()))
                     .title(Component.translatable("itemGroup." + ModInfo.ID))
                     .displayItems((parameters, output) -> {
 
                         // tools and armor
                         output.accept(GSEItems.BONE_SHIELD.get());
+                        output.accept(GSEItems.FROZEN_MIRROR.get());
 
                         // skull candles
                         output.accept(GSEBlocks.SKULL_CANDLE_SKELETON.get());

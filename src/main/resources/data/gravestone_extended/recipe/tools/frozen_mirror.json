@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ipi",
+    "psp",
+    "ini"
+  ],
+  "key": {
+    "p": {
+      "strict": true,
+      "items": "minecraft:potion",
+      "neoforge:ingredient_type": "neoforge:components",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "gravestone_extended:recall"
+        }
+      }
+    },
+    "s": "minecraft:nether_star",
+    "i": "minecraft:packed_ice",
+    "n": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "id": "gravestone_extended:frozen_mirror"
+  }
+}

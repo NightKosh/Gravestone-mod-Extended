@@ -136,7 +136,6 @@ item.gravestone.imp_skull.name=Череп беса
 item.gravestone.ender_skull.name=Череп края
 item.gravestone.cemetery_key.player=Ключ от кладбища
 item.gravestone.cemetery_key.server=Ключ от кладбища сервера
-item.gravestone.frozen_mirror.name=Ледяное зеркало
 
 ## Corpses
 item.corpse.steve=Труп Стива
