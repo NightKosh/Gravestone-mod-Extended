@@ -73,6 +73,12 @@
   "item.minecraft.lingering_potion.effect.flames": "Poción persistente de llamas",
   "item.minecraft.tipped_arrow.effect.flames": "Flecha de llamas",
 
+  "effect.gravestone_extended.inferno": "Ignites all around",
+  "item.minecraft.potion.effect.inferno": "Poción de infierno",
+  "item.minecraft.splash_potion.effect.inferno": "Poción de área de infierno",
+  "item.minecraft.lingering_potion.effect.inferno": "Poción persistente de infierno",
+  "item.minecraft.tipped_arrow.effect.inferno": "Flecha de infierno",
+
   "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
   "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
   "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",

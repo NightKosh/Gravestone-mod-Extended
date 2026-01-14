@@ -6,6 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.mob_effect.FlamesEffect;
+import nightkosh.gravestone_extended.mob_effect.InfernoEffect;
 import nightkosh.gravestone_extended.mob_effect.PurificationEffect;
 import nightkosh.gravestone_extended.mob_effect.RecallEffect;
 
@@ -28,6 +29,9 @@ public class GSEMobEffects {
 
     public static final DeferredHolder<MobEffect, MobEffect> FLAMES =
             EFFECTS.register("flames", FlamesEffect::new);
+
+    public static final DeferredHolder<MobEffect, MobEffect> INFERNO =
+            EFFECTS.register("inferno", InfernoEffect::new);
 
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);

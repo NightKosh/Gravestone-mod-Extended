@@ -77,28 +77,29 @@ public class GSEPotions {
             POTIONS.register("flames", () ->
                     new Potion("flames", new MobEffectInstance(GSEMobEffects.FLAMES, 600, 0)));
 
+    public static final DeferredHolder<Potion, Potion> INFERNO_POTION =
+            POTIONS.register("inferno", () ->
+                    new Potion("inferno", new MobEffectInstance(GSEMobEffects.INFERNO, 1800, 0)));
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }
 
-//    public static final Potion CURSE = new PotionCurse();
 //    public static final Potion RUST = new PotionRust();
 //    public static final Potion BONE_SKIN = new PotionBoneSkin();
-//    public static final Potion INFERNO = new PotionInferno();
 //
 //    public static final PotionType PURIFICATION_TYPE = new PotionTypePurification();
 //    public static final PotionType RUST_TYPE = new PotionTypeRust();
 //    public static final PotionType BONE_SKIN_TYPE = new PotionTypeBoneSkin();
-//    public static final PotionType INFERNO_TYPE = new PotionTypeInferno();
 //
 //    @SubscribeEvent
 //    public static void registerPotions(final RegistryEvent.Register<Potion> event) {
-//        event.getRegistry().registerAll(CURSE, RUST, BONE_SKIN, BURNING, INFERNO);
+//        event.getRegistry().registerAll(RUST, BONE_SKIN, BURNING);
 //    }
 //
 //    @SubscribeEvent
 //    public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
-//        event.getRegistry().registerAll(RUST_TYPE, BONE_SKIN_TYPE, INFERNO_TYPE);
+//        event.getRegistry().registerAll(RUST_TYPE, BONE_SKIN_TYPE);
 //
 //        PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
 //

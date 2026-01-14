@@ -69,11 +69,6 @@ splash_potion.effect.gs_rust_type=Splash Potion of Rust
 lingering_potion.effect.gs_rust_type=Lingering Potion of Rust
 tipped_arrow.effect.gs_rust_type=Arrow of Rust
 
-potion.inferno.title=Inferno
-potion.effect.gs_inferno_type=Potion of Inferno
-splash_potion.effect.gs_inferno_type=Splash Potion of Inferno
-lingering_potion.effect.gs_inferno_type=Lingering Potion of Inferno
-tipped_arrow.effect.gs_inferno_type=Arrow of Inferno
 potion.cursed_inferno.title=Cursed Inferno
 potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
 splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno

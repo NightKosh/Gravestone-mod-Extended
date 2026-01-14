@@ -18,6 +18,8 @@ public class GSEConfigs {
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION;
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_PILES_DESTRUCTION;
 
+    public static ModConfigSpec.ConfigValue<Boolean> INFERNO_DEALS_DAMAGE_TO_PLAYERS;
+
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
     static {
@@ -27,6 +29,9 @@ public class GSEConfigs {
                 .define("SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION", true);
         SPAWN_CRAWLERS_AT_PILES_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at pile of bones destruction")
                 .define("SPAWN_CRAWLERS_AT_PILES_DESTRUCTION", true);
+
+        INFERNO_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Inferno potion ignite other players")
+                .define("INFERNO_DEALS_DAMAGE_TO_PLAYERS", true);
 
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
                 .define("Debug Mode", false);
@@ -161,12 +166,6 @@ public class GSEConfigs {
 //        isFogEnabled = config.get(Config.CATEGORY_GRAVES, "CemeteryFogEnabled", true).getBoolean();
 //    }
 //
-//
-//    public static boolean infernoDealsDamageToPlayers;
-//
-//    private static void potionsConfigs() {
-//        infernoDealsDamageToPlayers = config.get(CATEGORY_POTIONS, "InfernoDealsDamageToPlayers", false).getBoolean();
-//    }
 //
     // disable/enable time changing by night stone
     public static boolean enableNightStone;

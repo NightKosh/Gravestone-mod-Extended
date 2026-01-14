@@ -73,6 +73,12 @@
   "item.minecraft.lingering_potion.effect.flames": "Туманное пылающее зелье",
   "item.minecraft.tipped_arrow.effect.flames": "Пылающая стрела",
 
+  "effect.gravestone_extended.inferno": "Поджигает всех вокруг",
+  "item.minecraft.potion.effect.inferno": "Зелье инферно",
+  "item.minecraft.splash_potion.effect.inferno": "Взрывное зелье инферно",
+  "item.minecraft.lingering_potion.effect.inferno": "Туманное зелье инферно",
+  "item.minecraft.tipped_arrow.effect.inferno": "Стрела инферно",
+
   "item.minecraft.potion.effect.bleeding": "Зелье кровотечения",
   "item.minecraft.splash_potion.effect.bleeding": "Взрывное зелье кровотечения",
   "item.minecraft.lingering_potion.effect.bleeding": "Туманное зелье кровотечения",

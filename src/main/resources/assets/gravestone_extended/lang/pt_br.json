@@ -73,6 +73,12 @@
   "item.minecraft.lingering_potion.effect.flames": "Lingering Potion of Flames",
   "item.minecraft.tipped_arrow.effect.flames": "Arrow of Flames",
 
+  "effect.gravestone_extended.inferno": "Ignites all around",
+  "item.minecraft.potion.effect.inferno": "Poção de Inferno",
+  "item.minecraft.splash_potion.effect.inferno": "Poção Arremessável de Inferno",
+  "item.minecraft.lingering_potion.effect.inferno": "Poção Arremessável de Inferno",
+  "item.minecraft.tipped_arrow.effect.inferno": "Flecha de Inferno",
+
   "item.minecraft.potion.effect.bleeding": "Poção de Sangramento",
   "item.minecraft.splash_potion.effect.bleeding": "Poção Arremessável de Sangramente",
   "item.minecraft.lingering_potion.effect.bleeding": "Poção Arremessável de Sangramento",

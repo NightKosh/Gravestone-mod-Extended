@@ -78,6 +78,12 @@
   "item.minecraft.lingering_potion.effect.flames": "Туманне палаюче зілля",
   "item.minecraft.tipped_arrow.effect.flames": "Палаюча стріла",
 
+  "effect.gravestone_extended.inferno": "Ignites all around",
+  "item.minecraft.potion.effect.inferno": "Зілля інферно",
+  "item.minecraft.splash_potion.effect.inferno": "Вибухове зілля інферно",
+  "item.minecraft.lingering_potion.effect.inferno": "Туманне зілля інферно",
+  "item.minecraft.tipped_arrow.effect.inferno": "Стріла інферно",
+
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",
