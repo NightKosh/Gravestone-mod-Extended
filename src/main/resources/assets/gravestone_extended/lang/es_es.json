@@ -65,6 +65,12 @@
   "item.minecraft.lingering_potion.effect.recall": "Poción de retorno persistente",
   "item.minecraft.tipped_arrow.effect.recall": "Flecha de retorno",
 
+  "effect.gravestone_extended.flames": "Prende fuego al objetivo",
+  "item.minecraft.potion.effect.flames": "Poción de llamas",
+  "item.minecraft.splash_potion.effect.flames": "Poción de área de llamas",
+  "item.minecraft.lingering_potion.effect.flames": "Poción persistente de llamas",
+  "item.minecraft.tipped_arrow.effect.flames": "Flecha de llamas",
+
   "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
   "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
   "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",

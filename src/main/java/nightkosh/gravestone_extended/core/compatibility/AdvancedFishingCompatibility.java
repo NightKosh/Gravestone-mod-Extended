@@ -17,6 +17,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static final String ADVANCED_FISHING_ID = "advanced_fishing";
 
     public static final Item BLUE_JELLYFISH = getFish("blue_jellyfish");
+    public static final Item MAGMA_JELLYFISH = getFish("magma_jellyfish");
     public static final Item PIRANHA = getFish("piranha");
     public static final Item ANGLER_FISH = getFish("angler_fish");
     public static final Item CAVE_TROUT = getFish("cave_trout");
@@ -43,7 +44,6 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static void addPotionsRecipes() {
         //TODO
 //        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), GSPotion.BONE_SKIN_TYPE);
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.MAGMA_JELLYFISH.ordinal())), GSPotion.BURNING_TYPE);
 //        PotionHelper.addMix(GSPotion.BURNING_TYPE, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.FLAREFIN_KOI.ordinal())), GSPotion.INFERNO_TYPE);
     }
 //TODO

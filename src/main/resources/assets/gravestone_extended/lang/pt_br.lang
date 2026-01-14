@@ -69,13 +69,6 @@ potion.effect.gs_rust_type=Poção de Ferrugem
 splash_potion.effect.gs_rust_type=Poção Arremessável de Ferrugem
 lingering_potion.effect.gs_rust_type=Poção Prolongada de Ferrugem
 tipped_arrow.effect.gs_rust_type=Flecha de Ferrugem
-
-potion.burning.title=Incendeia o alvo
-potion.effect.gs_burning_type=Poção de Combustão
-splash_potion.effect.gs_burning_type=Poção Arremessável de Combustão
-lingering_potion.effect.gs_burning_type=Poção Prolongada de Combustão
-tipped_arrow.effect.gs_burning_type=Flecha de Combustão
-potion.bleeding.title=Sangramento
 potion.inferno.title=Inferno
 potion.effect.gs_inferno_type=Poção de Inferno
 splash_potion.effect.gs_inferno_type=Poção Arremessável de Inferno

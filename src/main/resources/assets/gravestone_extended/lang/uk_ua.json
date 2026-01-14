@@ -70,6 +70,12 @@
   "item.minecraft.lingering_potion.effect.bleeding": "Туманне зілля кровотечі",
   "item.minecraft.tipped_arrow.effect.bleeding": "Стріла кровотечі",
 
+  "effect.gravestone_extended.flames": "Підпалює ціль",
+  "item.minecraft.potion.effect.flames": "Палаюче зілля",
+  "item.minecraft.splash_potion.effect.flames": "Вибухове палаюче зілля",
+  "item.minecraft.lingering_potion.effect.flames": "Туманне палаюче зілля",
+  "item.minecraft.tipped_arrow.effect.flames": "Палаюча стріла",
+
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",
   "item.minecraft.lingering_potion.effect.call_of_the_abyss": "Lingering Potion of the Call of the Abyss",

@@ -67,12 +67,6 @@ potion.effect.gs_rust_type=Зелье ржавчины
 splash_potion.effect.gs_rust_type=Взрывное зелье ржавчины
 lingering_potion.effect.gs_rust_type=Туманное зелье ржавчины
 tipped_arrow.effect.gs_rust_type=Стрела ржавчины
-
-potion.burning.title=Поджигает цель
-potion.effect.gs_burning_type=Пылающее зелье
-splash_potion.effect.gs_burning_type=Взрывное пылающее зелье
-lingering_potion.effect.gs_burning_type=Туманное пылающее зелье
-tipped_arrow.effect.gs_burning_type=Пылающая стрела
 potion.inferno.title=Инферно
 potion.effect.gs_inferno_type=Зелье инферно
 splash_potion.effect.gs_inferno_type=Взрывное зелье инферно

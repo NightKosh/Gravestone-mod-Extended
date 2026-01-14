@@ -93,6 +93,12 @@ public class GSEBrewingRecipes {
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(SPECULAR_SNAPPER),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.RECALL_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(MAGMA_JELLYFISH),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.FLAMES_POTION));
         }
 
     }

@@ -69,12 +69,6 @@ potion.effect.gs_rust_type=Poción de óxido
 splash_potion.effect.gs_rust_type=Poción de área de óxido
 lingering_potion.effect.gs_rust_type=Poción persistente de óxido
 tipped_arrow.effect.gs_rust_type=Flecha de óxido
-
-potion.burning.title=Prende fuego al objetivo
-potion.effect.gs_burning_type=Poción de llamas
-splash_potion.effect.gs_burning_type=Poción de área de llamas
-lingering_potion.effect.gs_burning_type=Poción persistente de llamas
-tipped_arrow.effect.gs_burning_type=Flecha de llamas
 potion.inferno.title=Infierno
 potion.effect.gs_inferno_type=Poción de infierno
 splash_potion.effect.gs_inferno_type=Poción de área de infierno

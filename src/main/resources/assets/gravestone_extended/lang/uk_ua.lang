@@ -70,12 +70,6 @@ potion.effect.gs_rust_type=Зілля іржі
 splash_potion.effect.gs_rust_type=Вибухове зілля іржі
 lingering_potion.effect.gs_rust_type=Туманне зілля іржі
 tipped_arrow.effect.gs_rust_type=Стріла іржі
-
-potion.burning.title=Підпалює ціль
-potion.effect.gs_burning_type=Палаюче зілля
-splash_potion.effect.gs_burning_type=Вибухове палаюче зілля
-lingering_potion.effect.gs_burning_type=Туманне палаюче зілля
-tipped_arrow.effect.gs_burning_type=Палаюча стріла
 potion.inferno.title=Інферно
 potion.effect.gs_inferno_type=Зілля інферно
 splash_potion.effect.gs_inferno_type=Вибухове зілля інферно

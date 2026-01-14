@@ -68,11 +68,7 @@ potion.effect.gs_rust_type=Potion of Rust
 splash_potion.effect.gs_rust_type=Splash Potion of Rust
 lingering_potion.effect.gs_rust_type=Lingering Potion of Rust
 tipped_arrow.effect.gs_rust_type=Arrow of Rust
-potion.burning.title=Sets Target on Fire
-potion.effect.gs_burning_type=Potion of Burning
-splash_potion.effect.gs_burning_type=Splash Potion of Burning
-lingering_potion.effect.gs_burning_type=Lingering Potion of Burning
-tipped_arrow.effect.gs_burning_type=Arrow of Burning
+
 potion.inferno.title=Inferno
 potion.effect.gs_inferno_type=Potion of Inferno
 splash_potion.effect.gs_inferno_type=Splash Potion of Inferno
