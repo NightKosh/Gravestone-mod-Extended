@@ -6,6 +6,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.item.FrozenMirror;
+import nightkosh.gravestone_extended.item.compass.EnderSkull;
+import nightkosh.gravestone_extended.item.compass.ImpSkull;
+import nightkosh.gravestone_extended.item.compass.SlimeChunk;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 /**
@@ -21,6 +24,9 @@ public class GSEItems {
 
     public static final DeferredHolder<Item, Item> BONE_SHIELD = ITEMS_REGISTER.register("bone_shield", BoneShield::new);
 
+    public static final DeferredHolder<Item, Item> SLIME_CHUNK = ITEMS_REGISTER.register("slime_chunk", SlimeChunk::new);
+    public static final DeferredHolder<Item, Item> IMP_SKULL = ITEMS_REGISTER.register("imp_skull", ImpSkull::new);
+    public static final DeferredHolder<Item, Item> ENDER_SKULL = ITEMS_REGISTER.register("ender_skull", EnderSkull::new);
     public static final DeferredHolder<Item, Item> FROZEN_MIRROR = ITEMS_REGISTER.register("frozen_mirror", FrozenMirror::new);
 //
 //    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
@@ -70,10 +76,6 @@ public class GSEItems {
 //    public static final Item MUMMY_LEGGINGS = new ItemMummyLeggings();
 //    public static final Item MUMMY_BOOTS = new ItemMummyBoots();
 //
-//    public static final Item SLIME_CHUNK = new ItemSlimeChunk();
-//    public static final Item IMP_SKULL = new ItemImpSkull();
-//    public static final Item ENDER_SKULL = new ItemEnderSkull();
-//
 //    public static final Item CEMETERY_KEY = new ItemCemeteryKey();
 //
 //    public static final Item TOXIC_SLIME = new ItemToxicSlime();
@@ -91,7 +93,7 @@ public class GSEItems {
 //        public static void registerItems(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
 //            registry.registerAll(TOXIC_SLIME, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
-//            registry.registerAll(SLIME_CHUNK, IMP_SKULL, ENDER_SKULL, CEMETERY_KEY);
+//            registry.registerAll(CEMETERY_KEY);
 //            registry.registerAll(
 //                    BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
 //                    BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,

@@ -134,12 +134,6 @@ item.gravestone.piece_of_mummy_cloth.name=Pedaço de Pano de Múmia
 item.gravestone.piece_of_diving_suit.name=Pedaço de Traje de mergulho
 item.gravestone.enchanted_skull.name=Crânio Encantado
 item.gravestone.enchanted_skull_withered.name=Crânio de Esqueleto Wither Encantado
-item.gravestone.slime_chunk.name=Pedaço de Gosma
-item.gravestone.imp_skull.name=Crânio de Diabrete 
-item.gravestone.ender_skull.name=Cranio do Ender
-## TODO !!!!!!!!!!!!!!!!!
-item.gravestone.cemetery_key.player=Cemetery Key
-item.gravestone.cemetery_key.server=Server Cemetery Key
 
 
 ## Corpses

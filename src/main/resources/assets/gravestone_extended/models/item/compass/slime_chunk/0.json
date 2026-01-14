@@ -1,0 +1,33 @@
+{
+  "parent": "gravestone_extended:item/compass/slime_chunk/default",
+  "display": {
+    "thirdperson_righthand": {
+      "scale": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    },
+    "firstperson_righthand": {
+      "scale": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    },
+    "thirdperson_lefthand": {
+      "scale": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    },
+    "firstperson_lefthand": {
+      "scale": [
+        0.325,
+        0.325,
+        0.325
+      ]
+    }
+  }
+}

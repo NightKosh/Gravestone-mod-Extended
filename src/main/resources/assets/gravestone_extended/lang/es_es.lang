@@ -39,15 +39,9 @@ block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
 block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
-## Altar
-tile.altar.name=Altar
 
 ## Portal
 tile.catacombs_portal.name=Portal de catacumbas
-
-##Frozen Lava
-## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
 
 # Enchantments
 enchantment.shadow_of_death=Sombra de la muerte
@@ -119,11 +113,6 @@ item.gravestone.mummy_helmet.name=Máscara de momia
 item.gravestone.mummy_chestplate.name=Camiseta de momia
 item.gravestone.mummy_leggings.name=Pantalones de momia
 item.gravestone.mummy_boots.name=Botas de momia
-## TODO !!!!!!!!!!!!!!!!!
-item.gravestone.bone_helmet.name=Bone Helmet
-item.gravestone.bone_chestplate.name=Bone Chestplate
-item.gravestone.bone_leggings.name=Bone Leggings
-item.gravestone.bone_boots.name=Bone Boots
 
 ## Other Items
 item.gravestone.toxic_slime.name=Slime tóxico
@@ -134,12 +123,6 @@ item.gravestone.piece_of_mummy_cloth.name=Trozo de tela de momia
 item.gravestone.piece_of_diving_suit.name=Trozo de traje de buceo
 item.gravestone.enchanted_skull.name=Calavera encantada
 item.gravestone.enchanted_skull_withered.name=Calavera encantada marchita
-item.gravestone.slime_chunk.name=Pedazo de slime
-item.gravestone.imp_skull.name=Cráneo de Imp
-item.gravestone.ender_skull.name=Cráneo de Ender
-## TODO !!!!!!!!!!!!!!!
-item.gravestone.cemetery_key.player=Cemetery Key
-item.gravestone.cemetery_key.server=Server Cemetery Key
 
 
 ## Corpses

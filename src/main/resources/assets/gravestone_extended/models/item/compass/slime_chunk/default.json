@@ -1,0 +1,110 @@
+{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"textures": {
+		"texture": "gravestone_extended:item/compass/slime_chunk"
+	},
+    "overrides": [
+        { "predicate": { "size": 0 }, "model": "gravestone_extended:item/compass/slime_chunk/default" },
+        { "predicate": { "size": 1 }, "model": "gravestone_extended:item/compass/slime_chunk/0" },
+        { "predicate": { "size": 2 }, "model": "gravestone_extended:item/compass/slime_chunk/1" },
+        { "predicate": { "size": 3 }, "model": "gravestone_extended:item/compass/slime_chunk/2" },
+        { "predicate": { "size": 4 }, "model": "gravestone_extended:item/compass/slime_chunk/3" },
+        { "predicate": { "size": 5 }, "model": "gravestone_extended:item/compass/slime_chunk/2" },
+        { "predicate": { "size": 6 }, "model": "gravestone_extended:item/compass/slime_chunk/1" },
+        { "predicate": { "size": 7 }, "model": "gravestone_extended:item/compass/slime_chunk/0" }
+    ],
+	"elements": [
+		{
+			"name": "cube",
+			"from": [3, 3, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {
+					"uv": [3, 3, 13, 13],
+					"texture": "#texture"
+				},
+				"east": {
+					"uv": [3, 3, 13, 13],
+					"texture": "#texture"
+				},
+				"south": {
+					"uv": [3, 3, 13, 13],
+					"texture": "#texture"
+				},
+				"west": {
+					"uv": [3, 3, 13, 13],
+					"texture": "#texture"
+				},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#texture"},
+				"down": {
+					"uv": [3, 3, 13, 13],
+					"texture": "#texture"
+				}
+			},
+			"type": "cube"
+		},
+		{
+			"name": "cube",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 16, 16],
+					"texture": "#texture"
+				},
+				"east": {
+					"uv": [0, 0, 16, 16],
+					"texture": "#texture"
+				},
+				"south": {
+					"uv": [0, 0, 16, 16],
+					"texture": "#texture"
+				},
+				"west": {
+					"uv": [0, 0, 16, 16],
+					"texture": "#texture"
+				},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#texture"},
+				"down": {
+					"uv": [0, 0, 16, 16],
+					"texture": "#texture"
+				}
+			},
+			"type": "cube"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [
+				0.3,
+				0.3,
+				0.3
+			]
+		},
+		"firstperson_righthand": {
+			"scale": [
+				0.3,
+				0.3,
+				0.3
+			]
+		},
+		"thirdperson_lefthand": {
+			"scale": [
+				0.3,
+				0.3,
+				0.3
+			]
+		},
+		"firstperson_lefthand": {
+			"scale": [
+				0.3,
+				0.3,
+				0.3
+			]
+		},
+		"gui": {
+			"scale": [0.6, 0.6, 0.6],
+			"rotation": [20, -45, 0]
+		}
+	}
+}

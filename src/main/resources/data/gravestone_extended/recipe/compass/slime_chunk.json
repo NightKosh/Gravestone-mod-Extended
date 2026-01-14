@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "bsb",
+    "scs",
+    "bsb"
+  ],
+  "key": {
+    "b": "minecraft:bone",
+    "s": "withered_lands:slime_gel",
+    "c": "minecraft:compass"
+  },
+  "result": {
+    "id": "gravestone_extended:slime_chunk"
+  }
+}

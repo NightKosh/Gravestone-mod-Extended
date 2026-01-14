@@ -140,9 +140,6 @@ item.gravestone.piece_of_diving_suit.name=Piece of Diving Suit
 item.gravestone.enchanted_skull.name=Зачарований череп
 item.gravestone.enchanted_skull_withered.name=Зачарований череп висушувача
 ## TODO !!!!!!!!!!
-item.gravestone.slime_chunk.name=Slime Chunk
-item.gravestone.imp_skull.name=Imp Skull
-item.gravestone.ender_skull.name=Ender Skull
 item.gravestone.cemetery_key.player=Cemetery Key
 item.gravestone.cemetery_key.server=Server Cemetery Key
 

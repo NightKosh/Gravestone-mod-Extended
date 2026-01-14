@@ -1,7 +1,5 @@
 # Tabs
 itemGroup.tabGSMemorials=Památníky
-## TODO !!!!!!
-itemGroup.tabGSCorpse=Corpses
 itemGroup.tabGSOther=Předměty módu Gravestone
 
 
@@ -33,8 +31,6 @@ block.trap.curse=Temnota přichází!
 block.spawner.wither.name=Spawner na withera
 block.spawner.skeleton.name=Spawner na kostlivce
 block.spawner.zombie.name=Spawner na zombie
-## TODO !!!!!
-block.spawner.spider.name=Spider Spawner
 
 ## Chests
 block.haunted_chest.bats_chest.name=Bedna s netopýry
@@ -45,117 +41,13 @@ block.haunted_chest.ghost_chest.name=Bedna s duchem
 ## Altar
 tile.altar.name=Oltář
 
-## Portal
-## TODO !!!!!!!!!!
-tile.catacombs_portal.name=Catacombs Portal
-
-##Frozen Lava
-## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
-
-# Enchantments
-## TODO !!!!!!!!!!
-enchantment.shadow_of_death=Shadow of Death
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.bloody_replication=Bloody Replication
-enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
-
-
-# Items
-## Fishing Pole
-## TODO !!!!!!!!!!
-item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
-
-## Shovel
-## TODO !!!!!!!!!!
-item.gravestone.bone_shovel.name=Bone Shovel
-item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
-item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
-item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
-
-## Pickaxe
-## TODO !!!!!!!!!!
-item.gravestone.bone_pickaxe.name=Bone Pickaxe
-item.gravestone.bone_pickaxe_iron.name=Iron Bone Pickaxe
-item.gravestone.bone_pickaxe_golden.name=Golden Bone Pickaxe
-item.gravestone.bone_pickaxe_diamond.name=Diamond Bone Pickaxe
-
-## Axe
-## TODO !!!!!!!!!!
-item.gravestone.bone_axe.name=Bone Axe
-item.gravestone.bone_axe_iron.name=Iron Bone Axe
-item.gravestone.bone_axe_golden.name=Golden Bone Axe
-item.gravestone.bone_axe_diamond.name=Diamond Bone Axe
-
-## Hoe
-## TODO !!!!!!!!!!
-item.gravestone.bone_hoe.name=Bone Hoe
-item.gravestone.bone_hoe_iron.name=Iron Bone Hoe
-item.gravestone.bone_hoe_golden.name=Golden Bone Hoe
-item.gravestone.bone_hoe_diamond.name=Diamond Bone Hoe
-
-## Swords
-## TODO !!!!!!!!!!
-item.gravestone.bone_sword.name=Bone Sword
-item.gravestone.bone_sword_iron.name=Iron Bone Sword
-item.gravestone.bone_sword_golden.name=Golden Bone Sword
-item.gravestone.bone_sword_diamond.name=Diamond Bone Sword
-
-## Armor
-## TODO !!!!!!!!!!
-item.gravestone.diving_helmet.name=Diving Helmet
-item.gravestone.diving_helmet.tooltip=Provides unlimited breath under the water
-item.gravestone.diving_chestplate.name=Diving Chestplate
-item.gravestone.diving_leggings.name=Diving Leggings
-item.gravestone.diving_boots.name=Diving Boots
-item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
-item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
-item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
-item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
-item.gravestone.mummy_helmet.name=Mummy Mask
-item.gravestone.mummy_chestplate.name=Mummy Shirt
-item.gravestone.mummy_leggings.name=Mummy Pants
-item.gravestone.mummy_boots.name=Mummy Boots
-item.gravestone.bone_helmet.name=Bone Helmet
-item.gravestone.bone_chestplate.name=Bone Chestplate
-item.gravestone.bone_leggings.name=Bone Leggings
-item.gravestone.bone_boots.name=Bone Boots
-
-## Other Items
-## TODO !!!!!!!!!!
-item.gravestone.toxic_slime.name=Toxic Slime
-item.gravestone.raven_feather.name=Raven Feather
-item.gravestone.raven_claws.name=Raven Claws
-item.gravestone.ooze.name=Ooze
-item.gravestone.piece_of_mummy_cloth.name=Piece of Mummy Cloth
-item.gravestone.piece_of_diving_suit.name=Piece of Diving Suit
-item.gravestone.enchanted_skull.name=Enchanted Skull
-item.gravestone.enchanted_skull_withered.name=Enchanted Wither Skull
-item.gravestone.slime_chunk.name=Slime Chunk
-item.gravestone.imp_skull.name=Imp Skull
-item.gravestone.ender_skull.name=Ender Skull
-item.gravestone.cemetery_key.player=Cemetery Key
-item.gravestone.cemetery_key.server=Server Cemetery Key
 
 ## Corpses
-## TODO !!!!!!!!!!
-item.corpse.steve=Steve Corpse
-## TODO !!!!!!!!!!
-item.corpse.player=Player Corpse
 item.corpse.villager=Mrtvola vesničana
 item.corpse.horse=Mrtvola koně
 item.corpse.dog=Mrtvola psa
 item.corpse.cat=Mrtvola kočky
 ## TODO !!!!!!!!!!
-item.corpse.zombie=Zombie Corpse
-## TODO !!!!!!!!!!
-item.corpse.zombie_villager=Zombie Villager Corpse
-## TODO !!!!!!!!!!
-item.corpse.skeleton=Skeleton Corpse
-## TODO !!!!!!!!!!
-item.corpse.witch=Witch Corpse
 item.corpse.entity_name=Jméno
 item.corpse.villager_type=Profese
 item.corpse.villager_type.farmer=Farmář
@@ -170,8 +62,6 @@ item.corpse.villager_type.beekeeper=Včelař
 item.corpse.villager_type.lumberjack=Dřevorubec
 item.corpse.villager_type.unknown=neznámý
 
-##TODO !!!!!!!!!!
-item.corpse.villager_career=Career
 item.corpse.villager_career.unknown=neznámý
 
 item.corpse.horse_type=Typ koně
@@ -211,62 +101,18 @@ item.corpse.cat_type.red=Červená
 item.corpse.cat_type.siamese=Siamská
 item.corpse.cat_type.unknown=Neznámá
 
-## mobs type
-##TODO !!!!!!!!!!!!!
-mobtype.title=Mob type
-mobtype.zombie=Zombie
-mobtype.skeleton=Skeleton
-mobtype.ghost=Ghost
-mobtype.husk=Husk Zombie
-mobtype.stray=Stray Skeleton
-mobtype.wither=Wither Skeleton
-mobtype.pigman=Zombie Pigmen
-
-##Backpacks
-item.backpack.undertaker.t1=Hrobníkův batoh
-item.backpack.undertaker.t2=Hrobníkův tkaný batoh
-
 
 # GUI
 gui.edit_grave.title=Nastav text náhrobku
 gui.edit_grave.close=Hotovo
 gui.edit_grave.randomText=Nastav náhodný text
 gui.altar.resurrect=Vzkřísit
-##TODO !!!!!!!!!!
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
 gui.altar.requirements=%d levelů je potřeba
-##TODO !!!!!!!!!!
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
-gui.chisel_crafting.grave_btn=Gravestone
-gui.chisel_crafting.memorial_btn=Memorial
-gui.chisel_crafting.enchanted_btn=Enchanted
-gui.chisel_crafting.mossy_btn=Mossy
-gui.chisel_crafting.recipe=Required items
-
 
 # Entity
 entity.GSRaven.name=Havran
-##TODO !!!!!!!!!!
-entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Hrobař
 
-# Fluids
-## TODO !!!!!!!!!!
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
-
-
-# Console messages
-##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
 
 ## Console commands
 commands.direction_error=Chyba umístění!

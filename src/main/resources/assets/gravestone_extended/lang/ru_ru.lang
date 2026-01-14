@@ -131,9 +131,6 @@ item.gravestone.piece_of_mummy_cloth.name=Бинты мумии
 item.gravestone.piece_of_diving_suit.name=Кусок водолазного костюма
 item.gravestone.enchanted_skull.name=Зачарованный череп
 item.gravestone.enchanted_skull_withered.name=Зачарованный череп иссушителя
-item.gravestone.slime_chunk.name=Кусок слизи
-item.gravestone.imp_skull.name=Череп беса
-item.gravestone.ender_skull.name=Череп края
 item.gravestone.cemetery_key.player=Ключ от кладбища
 item.gravestone.cemetery_key.server=Ключ от кладбища сервера
 

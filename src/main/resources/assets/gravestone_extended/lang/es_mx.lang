@@ -1,12 +1,3 @@
-# Tabs
-##TODO !!!!!!!!!!
-itemGroup.tabGSMemorials=Memorials
-## TODO !!!!!!
-itemGroup.tabGSCorpse=Corpses
-##TODO !!!!!!!!!!
-itemGroup.tabGSOther=Gravestone mod Items
-
-
 # Blocks
 ## Memorials
 block.memorial.cross.name=Memorial Cruz
@@ -19,12 +10,6 @@ block.memorial.cat_statue.name=Estatua de gato
 block.memorial.creeper_statue.name=Estatua de creeper
 block.memorial.celtic_cross.name=Cruz céltica
 
-## Executions
-##TODO !!!!!!!!!!
-block.execution.gallows.name=Gallows
-block.execution.gibbet.name=Gibbet
-block.execution.stocks.name=Stocks
-block.execution.burning_stake.name=Burning Stake
 
 ## Traps
 block.trap.night.name=Piedra nocturna
@@ -33,12 +18,6 @@ block.trap.curse=¡La oscuridad de aproxima!
 
 ## Spawners
 block.spawner.wither.name=Engendrador de wither
-##TODO !!!!!!!!!!
-block.spawner.skeleton.name=Skeleton Spawner
-##TODO !!!!!!!!!!
-block.spawner.zombie.name=Zombie Spawner
-## TODO !!!!!
-block.spawner.spider.name=Spider Spawner
 
 ## Chests
 block.haunted_chest.bats_chest.name=Cofre con Murciélagos
@@ -46,234 +25,12 @@ block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
 block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
-## Altar
-##TODO !!!!!!!!!!
-tile.altar.name=Altar
-
-## Portal
-## TODO !!!!!!!!!!
-tile.catacombs_portal.name=Catacombs Portal
-
-##Frozen Lava
-## TODO !!!!!!!!!!
-tile.frozen_lava.name=Frozen Lava
-
-# Enchantments
-## TODO !!!!!!!!!!
-enchantment.shadow_of_death=Shadow of Death
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
-enchantment.bloody_replication=Bloody Replication
-enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
-enchantment.frozen_nether=Frozen Nether
-enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
-
-
-# Items
-## Fishing Pole
-## TODO !!!!!!!!!!
-item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
-
-## Shovel
-## TODO !!!!!!!!!!
-item.gravestone.bone_shovel.name=Bone Shovel
-item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
-item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
-item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
-
-## Pickaxe
-## TODO !!!!!!!!!!
-item.gravestone.bone_pickaxe.name=Bone Pickaxe
-item.gravestone.bone_pickaxe_iron.name=Iron Bone Pickaxe
-item.gravestone.bone_pickaxe_golden.name=Golden Bone Pickaxe
-item.gravestone.bone_pickaxe_diamond.name=Diamond Bone Pickaxe
-
-## Axe
-## TODO !!!!!!!!!!
-item.gravestone.bone_axe.name=Bone Axe
-item.gravestone.bone_axe_iron.name=Iron Bone Axe
-item.gravestone.bone_axe_golden.name=Golden Bone Axe
-item.gravestone.bone_axe_diamond.name=Diamond Bone Axe
-
-## Hoe
-## TODO !!!!!!!!!!
-item.gravestone.bone_hoe.name=Bone Hoe
-item.gravestone.bone_hoe_iron.name=Iron Bone Hoe
-item.gravestone.bone_hoe_golden.name=Golden Bone Hoe
-item.gravestone.bone_hoe_diamond.name=Diamond Bone Hoe
-
-## Swords
-## TODO !!!!!!!!!!
-item.gravestone.bone_sword.name=Bone Sword
-item.gravestone.bone_sword_iron.name=Iron Bone Sword
-item.gravestone.bone_sword_golden.name=Golden Bone Sword
-item.gravestone.bone_sword_diamond.name=Diamond Bone Sword
-
-## Armor
-## TODO !!!!!!!!!!
-item.gravestone.diving_helmet.name=Diving Helmet
-item.gravestone.diving_helmet.tooltip=Provides unlimited breath under the water
-item.gravestone.diving_chestplate.name=Diving Chestplate
-item.gravestone.diving_leggings.name=Diving Leggings
-item.gravestone.diving_boots.name=Diving Boots
-item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
-item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
-item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
-item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
-item.gravestone.mummy_helmet.name=Mummy Mask
-item.gravestone.mummy_chestplate.name=Mummy Shirt
-item.gravestone.mummy_leggings.name=Mummy Pants
-item.gravestone.mummy_boots.name=Mummy Boots
-item.gravestone.bone_helmet.name=Bone Helmet
-item.gravestone.bone_chestplate.name=Bone Chestplate
-item.gravestone.bone_leggings.name=Bone Leggings
-item.gravestone.bone_boots.name=Bone Boots
-
-## Other Items
-## TODO !!!!!!!!!!
-item.gravestone.toxic_slime.name=Toxic Slime
-item.gravestone.raven_feather.name=Raven Feather
-item.gravestone.raven_claws.name=Raven Claws
-item.gravestone.ooze.name=Ooze
-item.gravestone.piece_of_mummy_cloth.name=Piece of Mummy Cloth
-item.gravestone.piece_of_diving_suit.name=Piece of Diving Suit
-item.gravestone.enchanted_skull.name=Enchanted Skull
-item.gravestone.enchanted_skull_withered.name=Enchanted Wither Skull
-item.gravestone.slime_chunk.name=Slime Chunk
-item.gravestone.imp_skull.name=Imp Skull
-item.gravestone.ender_skull.name=Ender Skull
-item.gravestone.cemetery_key.player=Cemetery Key
-item.gravestone.cemetery_key.server=Server Cemetery Key
-
-
-## Corpses
-## TODO !!!!!!!!!!
-item.corpse.steve=Steve Corpse
-## TODO !!!!!!!!!!
-item.corpse.player=Player Corpse
-##TODO !!!!!!!!!!
-item.corpse.villager=Villager Corpse
-item.corpse.horse=Horse Corpse
-item.corpse.dog=Dog Corpse
-item.corpse.cat=Cat Corpse
-## TODO !!!!!!!!!!
-item.corpse.zombie=Zombie Corpse
-## TODO !!!!!!!!!!
-item.corpse.zombie_villager=Zombie Villager Corpse
-## TODO !!!!!!!!!!
-item.corpse.skeleton=Skeleton Corpse
-## TODO !!!!!!!!!!
-item.corpse.witch=Witch Corpse
-item.corpse.entity_name=Name
-item.corpse.villager_type=Profession
-item.corpse.villager_type.farmer=Farmer
-item.corpse.villager_type.librarian=Librarian
-item.corpse.villager_type.priest=Priest
-item.corpse.villager_type.smith=Smith
-item.corpse.villager_type.butcher=Butcher
-item.corpse.villager_type.undertaker=Undertaker
-item.corpse.villager_type.brewer=Brewer
-item.corpse.villager_type.thaumaturge=Thaumaturge
-item.corpse.villager_type.beekeeper=Beekeeper
-item.corpse.villager_type.lumberjack=Lumberjack
-item.corpse.villager_type.unknown=Unknown
-item.corpse.villager_career=Career
-item.corpse.villager_career.unknown=Unknown
-item.corpse.horse_type=Horse Type
-item.corpse.horse_type.horse=Horse
-item.corpse.horse_type.donkey=Donkey
-item.corpse.horse_type.mule=Mule
-item.corpse.horse_type.zombie=Zombie Horse
-item.corpse.horse_type.skeleton=Skeleton Horse
-item.corpse.horse_type.unknown=Unknown
-item.corpse.horse_variant=Horse Variant
-item.corpse.health=Max Health
-item.corpse.speed=Speed
-item.corpse.jump_strength=Jump Strength
-item.corpse.collar=Collar
-item.corpse.collar.white=White
-item.corpse.collar.orange=Orange
-item.corpse.collar.purple=Purple
-item.corpse.collar.azure=Azure
-item.corpse.collar.yellow=Yellow
-item.corpse.collar.lime=Lime
-item.corpse.collar.pink=Pink
-item.corpse.collar.grey=Grey
-item.corpse.collar.light_grey=Light Gray
-item.corpse.collar.turquoise=Turquoise
-item.corpse.collar.violet=Violet
-item.corpse.collar.blue=Blue
-item.corpse.collar.brown=Brown
-item.corpse.collar.green=Green
-item.corpse.collar.red=Red
-item.corpse.collar.black=Black
-item.corpse.collar.unknown=Unknown
-item.corpse.dog_type=Dog type
-item.corpse.cat_type=Cat type
-item.corpse.cat_type.ocelot=Ocelot
-item.corpse.cat_type.black=Black
-item.corpse.cat_type.red=Red
-item.corpse.cat_type.siamese=Siamese
-item.corpse.cat_type.unknown=Unknown
-
-## mobs type
-mobtype.title=Mob type
-mobtype.zombie=Zombie
-mobtype.skeleton=Skeleton
-mobtype.ghost=Ghost
-mobtype.husk=Husk Zombie
-mobtype.stray=Stray Skeleton
-mobtype.wither=Wither Skeleton
-mobtype.pigman=Zombie Pigmen
-
-##Backpacks
-##TODO !!!!!!!!!!
-item.backpack.undertaker.t1=Undertaker's Backpack
-##TODO !!!!!!!!!!
-item.backpack.undertaker.t2=Undertaker's Woven Backpack
 
 
 # GUI
 gui.edit_grave.title=Ponga nombre a la lapida
-##TODO !!!!!!!!!!
-gui.edit_grave.close=Done
-gui.edit_grave.randomText=Set random text
-gui.altar.resurrect=Resurrect
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
-gui.altar.requirements=%d levels required
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
-gui.chisel_crafting.grave_btn=Gravestone
-gui.chisel_crafting.memorial_btn=Memorial
-gui.chisel_crafting.enchanted_btn=Enchanted
-gui.chisel_crafting.mossy_btn=Mossy
-gui.chisel_crafting.recipe=Required items
 
 
 # Entity
 entity.GSRaven.name=Cuervo
-##TODO !!!!!!!!!!
-entity.GSSkeleton.name=Skeleton
-entity.Villager.gravestone-extended:undertaker=Undertaker
 
-# Fluids
-## TODO !!!!!!!!!!
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
-
-
-# Console messages
-##TODO !!!!!!!!!!
-message.cemetery_key.activated=This key was activated by
-message.cemetery_key.cant_use=You can't use this key!
-message.cemetery_key.bounded=Your soul is bounded to this cemetery!
-message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
-message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
-message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
-
-## Console commands
-##TODO !!!!!!!!!!
-commands.direction_error=Direction error!
-##TODO !!!!!!!!!!
-commands.generate.unknown_structure=Unknown structure!
