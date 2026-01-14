@@ -73,10 +73,6 @@ public class ResourcesModels extends Resources {//TODO
 //    public static final ModelResourceLocation ENCHANTED_SKULL = new ModelResourceLocation(GSItem.ENCHANTED_SKULL.getRegistryName(), "inventory");
 //    public static final ModelResourceLocation ENCHANTED_SKULL_WITHERED = new ModelResourceLocation(GSItem.ENCHANTED_SKULL.getRegistryName() + "_withered", "inventory");
 //
-//    public static final ModelResourceLocation SLIME_CHUNK = new ModelResourceLocation(ModInfo.ID + ":compasses/slime_chunk/" + GSItem.SLIME_CHUNK.getRegistryName().getResourcePath(), "inventory");
-//    public static final ModelResourceLocation IMP_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/imp_skull/" + GSItem.IMP_SKULL.getRegistryName().getResourcePath(), "inventory");
-//    public static final ModelResourceLocation ENDER_SKULL = new ModelResourceLocation(ModInfo.ID + ":compasses/ender_skull/" + GSItem.ENDER_SKULL.getRegistryName().getResourcePath(), "inventory");
-//
 //    public static final ModelResourceLocation CEMETERY_KEY_PLAYER = new ModelResourceLocation(ModInfo.ID + ":cemetery_key/player", "inventory");
 //    public static final ModelResourceLocation CEMETERY_KEY_SERVER = new ModelResourceLocation(ModInfo.ID + ":cemetery_key/server", "inventory");
 //

@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-
 /**
  * Gravestone mod - Extended
  *
@@ -8,6 +7,23 @@ package nightkosh.gravestone_extended.helper;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class TimeHelper {
+
+    public static final int SECONDS_5 = 100;
+    public static final int SECONDS_8 = 160;
+    public static final int SECONDS_10 = 200;
+    public static final int SECONDS_15 = 300;
+    public static final int SECONDS_20 = 400;
+    public static final int SECONDS_25 = 500;
+    public static final int SECONDS_30 = 600;
+    public static final int SECONDS_35 = 700;
+    public static final int SECONDS_40 = 800;
+    public static final int SECONDS_45 = 900;
+    public static final int SECONDS_50 = 1000;
+    public static final int SECONDS_55 = 1100;
+    public static final int SECONDS_60 = 1200;
+    public static final int SECONDS_90 = 1800;
+    public static final int SECONDS_180 = 3600;
+    public static final int SECONDS_600 = 12000;
 
     public static final int PRE_NIGHT = 12000;
     public static final int NIGHT = 14000;

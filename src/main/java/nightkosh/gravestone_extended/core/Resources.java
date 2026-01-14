@@ -15,7 +15,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     protected static final String BLOCK_LOCATION = ":textures/blocks/";
     protected static final String FLUID_LOCATION = ":blocks/fluids/";
     protected static final String GUI_LOCATION = ":textures/gui/";
-    protected static final String POTIONS_LOCATION = ":textures/potions/";
     protected static final String PARTICLES_LOCATION = ":textures/particles/";
     protected static final String ENTITY_LOCATION = ":textures/entity/";
     protected static final String PROJECTILE_LOCATION = "projectile/";
@@ -26,8 +25,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     // blocks
     public static final Identifier PENTAGRAM = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pentagram.png");
     public static final Identifier SPIDER_SPAWNER = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "spiderspawner.png");
-    public static final Identifier CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "candle.png");
-    public static final Identifier PILE_OF_BONES = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pileofbones.png");
 
     // armor
     public static final String BONE_HELMET = ":textures/models/armor/bone/helmet.png";
@@ -54,13 +51,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     public static final Identifier ALTAR_RESURRECTION_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/resurrection.png");
     public static final Identifier ALTAR_ENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/enchanting.png");
     public static final Identifier ALTAR_DISENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/disenchanting.png");
-    public static final Identifier CHISEL_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "chisel_gui.png");
-
-    //potions
-    public static final Identifier POTIONS = fromNamespaceAndPath(ModInfo.ID, POTIONS_LOCATION + "potions.png");
-
-    //particles
-    public static final Identifier PARTICLES = fromNamespaceAndPath(ModInfo.ID, PARTICLES_LOCATION + "particles.png");
 
     // entities
     public static final Identifier EMPTY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/empty.png");
@@ -215,11 +205,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     // bone hook
     public static final Identifier BONE_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "bone_hook.png");
     public static final Identifier WITHERED_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "wither_hook.png");
-
-    // skull candle
-    public static final Identifier SKELETON_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "skeletonskullcandle.png");
-    public static final Identifier WITHER_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "witherskullcandle.png");
-    public static final Identifier ZOMBIE_SKULL_CANDLE = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "zombieskullcandle.png");
 
     // TOXIC WATER
     public static final Identifier TOXIC_WATER_STILL =  fromNamespaceAndPath(ModInfo.ID, FLUID_LOCATION + "toxic_water_still");

@@ -221,11 +221,6 @@ gui.altar.requirements=Требуется %d уровней
 gui.altar.tab.resurrection=Воскрешение
 gui.altar.tab.enchanting=Перенос чар
 gui.altar.tab.disenchanting=Снятие чар
-gui.chisel_crafting.grave_btn=Надгробия
-gui.chisel_crafting.memorial_btn=Мемориалы
-gui.chisel_crafting.enchanted_btn=Зачарованные
-gui.chisel_crafting.mossy_btn=Замшелые
-gui.chisel_crafting.recipe=Необходимые предметы
 
 
 # Entity

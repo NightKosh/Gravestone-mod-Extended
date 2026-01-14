@@ -207,11 +207,6 @@ gui.altar.requirements=%d niveles requeridos
 gui.altar.tab.resurrection=Resurrección
 gui.altar.tab.enchanting=Encantamiento
 gui.altar.tab.disenchanting=Desencantamiento
-gui.chisel_crafting.grave_btn=Lápida
-gui.chisel_crafting.memorial_btn=Memorial
-gui.chisel_crafting.enchanted_btn=Encantada
-gui.chisel_crafting.mossy_btn=Musgosa
-gui.chisel_crafting.recipe=Items requeridos
 
 
 # Entity

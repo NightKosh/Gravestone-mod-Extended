@@ -14,7 +14,6 @@ import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
 public class GuiHandler {//TODO extends nightkosh.gravestone.core.GuiHandler {
 
     public static final int ALTAR_RESURRECTION_GUI_ID = 1;
-    public static final int CHISEL_CRAFTING_GUI_ID = 2;
     public static final int EXECUTION_GUI_ID = 3;
     public static final int ALTAR_DISENCHANTMENT_GUI_ID = 4;
     public static final int ALTAR_ENCHANTMENT_GUI_ID = 5;
@@ -41,8 +40,6 @@ public class GuiHandler {//TODO extends nightkosh.gravestone.core.GuiHandler {
 //                    return new AltarEnchantmentContainer(player.inventory, ((TileEntityAltar) tileEntity).getEnchantmentInventory());
 //                }
 //                break;
-//            case CHISEL_CRAFTING_GUI_ID:
-//                return new ChiselContainer(player, player.inventory);
 //            case EXECUTION_GUI_ID:
 //                tileEntity = world.getTileEntity(new BlockPos(x, y, z));
 //                if (tileEntity instanceof TileEntityExecution) {
@@ -75,8 +72,6 @@ public class GuiHandler {//TODO extends nightkosh.gravestone.core.GuiHandler {
 //                    return new AltarEnchantmentGui(player.inventory, (TileEntityAltar) tileEntity);
 //                }
 //                break;
-//            case CHISEL_CRAFTING_GUI_ID:
-//                return new GSChiselCraftingGui(player, player.inventory);
 //            case EXECUTION_GUI_ID:
 //                tileEntity = world.getTileEntity(new BlockPos(x, y, z));
 //                if (tileEntity instanceof TileEntityExecution) {
