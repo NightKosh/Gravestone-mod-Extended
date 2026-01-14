@@ -30,6 +30,12 @@ public class GSEMobEffects {
     public static final DeferredHolder<MobEffect, MobEffect> INFERNO =
             EFFECTS.register("inferno", InfernoEffect::new);
 
+    public static final DeferredHolder<MobEffect, MobEffect> FROSTBITE =
+            EFFECTS.register("frostbite", FrostbiteEffect::new);
+
+    public static final DeferredHolder<MobEffect, MobEffect> BLIZZARD =
+            EFFECTS.register("blizzard", BlizzardEffect::new);
+
     public static final DeferredHolder<MobEffect, MobEffect> RUST =
             EFFECTS.register("rust", RustEffect::new);
 

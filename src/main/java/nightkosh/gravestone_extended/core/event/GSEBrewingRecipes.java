@@ -109,6 +109,18 @@ public class GSEBrewingRecipes {
             event.getBuilder().addRecipe(
                     DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
                             .getCustomIngredient().toVanilla(),
+                    Ingredient.of(SNOWY_WALLEYE),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.FROSTBITE_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(GLACIER_ANCHOVY),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.BLIZZARD_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
                     Ingredient.of(SLIME_GEL),//TODO TOXIC_SLIME ???
                     PotionContents.createItemStack(Items.POTION, GSEPotions.RUST_POTION));
 

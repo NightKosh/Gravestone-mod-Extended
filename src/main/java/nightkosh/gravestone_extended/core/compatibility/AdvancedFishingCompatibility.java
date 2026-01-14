@@ -28,6 +28,8 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static final Item BONE_FISH = getFish("bone_fish");
     public static final Item SPOOKYFIN = getFish("spookyfin");
     public static final Item SPECULAR_SNAPPER = getFish("specular_snapper");
+    public static final Item SNOWY_WALLEYE = getFish("snowy_walleye");
+    public static final Item GLACIER_ANCHOVY = getFish("glacier_anchovy");
 
     private static Item getFish(String id) {
         var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(ADVANCED_FISHING_ID, id));

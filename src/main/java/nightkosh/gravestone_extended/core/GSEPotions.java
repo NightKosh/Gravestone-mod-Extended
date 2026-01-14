@@ -81,6 +81,14 @@ public class GSEPotions {
             POTIONS.register("inferno", () ->
                     new Potion("inferno", new MobEffectInstance(GSEMobEffects.INFERNO, 1800, 0)));
 
+    public static final DeferredHolder<Potion, Potion> FROSTBITE_POTION =
+            POTIONS.register("frostbite", () ->
+                    new Potion("frostbite", new MobEffectInstance(GSEMobEffects.FROSTBITE, 600, 0)));
+
+    public static final DeferredHolder<Potion, Potion> BLIZZARD_POTION =
+            POTIONS.register("blizzard", () ->
+                    new Potion("blizzard", new MobEffectInstance(GSEMobEffects.BLIZZARD, 1800, 0)));
+
     public static final DeferredHolder<Potion, Potion> RUST_POTION =
             POTIONS.register("rust", () ->
                     new Potion("rust", new MobEffectInstance(GSEMobEffects.RUST, 600, 0)));

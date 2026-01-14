@@ -19,6 +19,7 @@ public class GSEConfigs {
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_PILES_DESTRUCTION;
 
     public static ModConfigSpec.ConfigValue<Boolean> INFERNO_DEALS_DAMAGE_TO_PLAYERS;
+    public static ModConfigSpec.ConfigValue<Boolean> BLIZZARD_DEALS_DAMAGE_TO_PLAYERS;
 
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
@@ -32,6 +33,9 @@ public class GSEConfigs {
 
         INFERNO_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Inferno potion ignite other players")
                 .define("INFERNO_DEALS_DAMAGE_TO_PLAYERS", true);
+
+        BLIZZARD_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Blizzard potion freeze other players")
+                .define("BLIZZARD_DEALS_DAMAGE_TO_PLAYERS", true);
 
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
                 .define("Debug Mode", false);

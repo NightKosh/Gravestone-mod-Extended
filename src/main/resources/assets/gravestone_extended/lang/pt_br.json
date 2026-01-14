@@ -79,6 +79,18 @@
   "item.minecraft.lingering_potion.effect.inferno": "Poção Arremessável de Inferno",
   "item.minecraft.tipped_arrow.effect.inferno": "Flecha de Inferno",
 
+  "effect.gravestone_extended.frostbite": "Freeze Target",
+  "item.minecraft.potion.effect.frostbite": "Potion of Frostbite",
+  "item.minecraft.splash_potion.effect.frostbite": "Splash Potion of Frostbite",
+  "item.minecraft.lingering_potion.effect.frostbite": "Lingering Potion of Frostbite",
+  "item.minecraft.tipped_arrow.effect.frostbite": "Arrow of Frostbite",
+
+  "effect.gravestone_extended.blizzard": "Freeze all around",
+  "item.minecraft.potion.effect.blizzard": "Potion of Blizzard",
+  "item.minecraft.splash_potion.effect.blizzard": "Splash Potion of Blizzard",
+  "item.minecraft.lingering_potion.effect.blizzard": "Lingering Potion of Blizzard",
+  "item.minecraft.tipped_arrow.effect.blizzard": "Arrow of Blizzard",
+
   "effect.gravestone_extended.rust": "Deals damage to your items",
   "item.minecraft.potion.effect.rust": "Poção de Ferrugem",
   "item.minecraft.splash_potion.effect.rust": "Poção Arremessável de Ferrugem",
