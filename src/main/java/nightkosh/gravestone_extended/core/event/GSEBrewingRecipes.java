@@ -101,7 +101,7 @@ public class GSEBrewingRecipes {
                     PotionContents.createItemStack(Items.POTION, GSEPotions.FLAMES_POTION));
 
             event.getBuilder().addRecipe(
-                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, GSEPotions.FLAMES_POTION))
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(FLAREFIN_KOI),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.INFERNO_POTION));
@@ -113,7 +113,7 @@ public class GSEBrewingRecipes {
                     PotionContents.createItemStack(Items.POTION, GSEPotions.FROSTBITE_POTION));
 
             event.getBuilder().addRecipe(
-                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, GSEPotions.FROSTBITE_POTION))
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(GLACIER_ANCHOVY),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.BLIZZARD_POTION));
