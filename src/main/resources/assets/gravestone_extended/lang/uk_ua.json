@@ -55,6 +55,11 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Прокляття незграбності",
   "enchantment.gravestone_extended.curse_of_fragility": "Прокляття крихкості",
 
+  "item.minecraft.potion.effect.purification": "Зілля очищення",
+  "item.minecraft.splash_potion.effect.purification": "Вибухове зілля очищення",
+  "item.minecraft.lingering_potion.effect.purification": "Туманне зілля очищення",
+  "item.minecraft.tipped_arrow.effect.purification": "Стріла очищення",
+
   "item.minecraft.potion.effect.bleeding": "Зілля кровотечі",
   "item.minecraft.splash_potion.effect.bleeding": "Вибухове зілля кровотечі",
   "item.minecraft.lingering_potion.effect.bleeding": "Туманне зілля кровотечі",

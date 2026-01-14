@@ -55,6 +55,11 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Проклятие неловкости",
   "enchantment.gravestone_extended.curse_of_fragility": "Проклятие хрупкости",
 
+  "item.minecraft.potion.effect.purification": "Зелье очищения",
+  "item.minecraft.splash_potion.effect.purification": "Взрывное зелье очищения",
+  "item.minecraft.lingering_potion.effect.purification": "Туманное зелье очищения",
+  "item.minecraft.tipped_arrow.effect.purification": "Стрела очищения",
+
   "item.minecraft.potion.effect.bleeding": "Зелье кровотечения",
   "item.minecraft.splash_potion.effect.bleeding": "Взрывное зелье кровотечения",
   "item.minecraft.lingering_potion.effect.bleeding": "Туманное зелье кровотечения",

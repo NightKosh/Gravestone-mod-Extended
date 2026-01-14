@@ -65,6 +65,10 @@ public class GSEPotions {
                 return new Potion("call_of_the_abyss", new MobEffectInstance(effect.get(), 500, 0));
             });
 
+    public static final DeferredHolder<Potion, Potion> PURIFICATION_POTION =
+            POTIONS.register("purification", () ->
+                    new Potion("purification", new MobEffectInstance(GSEMobEffects.PURIFICATION, 200, 0)));
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }

@@ -20,6 +20,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static final Item PIRANHA = getFish("piranha");
     public static final Item ANGLER_FISH = getFish("angler_fish");
     public static final Item CAVE_TROUT = getFish("cave_trout");
+    public static final Item GOLDEN_KOI = getFish("golden_koi");
     public static final Item CHORUS_KOI = getFish("chorus_koi");
     public static final Item WITHERED_CRUCIAN = getFish("withered_crucian");
     public static final Item SPOOKYFIN = getFish("spookyfin");
@@ -41,7 +42,6 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static void addPotionsRecipes() {
         //TODO
 //        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), GSPotion.BONE_SKIN_TYPE);
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.GOLDEN_KOI.ordinal())), GSPotion.PURIFICATION_TYPE);
 //        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.MAGMA_JELLYFISH.ordinal())), GSPotion.BURNING_TYPE);
 //        PotionHelper.addMix(GSPotion.BURNING_TYPE, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.FLAREFIN_KOI.ordinal())), GSPotion.INFERNO_TYPE);
 //

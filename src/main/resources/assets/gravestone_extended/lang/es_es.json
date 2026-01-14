@@ -55,6 +55,11 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Maldición de torpeza",
   "enchantment.gravestone_extended.curse_of_fragility": "Maldición de fragilidad",
 
+  "item.minecraft.potion.effect.purification": "Poción de purificación",
+  "item.minecraft.splash_potion.effect.purification": "Poción de área de purificación",
+  "item.minecraft.lingering_potion.effect.purification": "Poción persistente de purificación",
+  "item.minecraft.tipped_arrow.effect.purification": "Flecha de purificación",
+
   "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
   "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
   "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",

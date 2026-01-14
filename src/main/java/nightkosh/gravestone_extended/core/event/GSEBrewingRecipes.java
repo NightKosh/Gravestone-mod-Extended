@@ -81,6 +81,12 @@ public class GSEBrewingRecipes {
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(ANGLER_FISH),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.CALL_OF_THE_ABYSS_POTION));
+
+            event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(GOLDEN_KOI),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.PURIFICATION_POTION));
         }
 
     }

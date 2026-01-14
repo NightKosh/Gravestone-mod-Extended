@@ -59,11 +59,6 @@ enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 # Potions
-potion.purification.title=Remove todos os efeitos negativos
-potion.effect.gs_purification_type=Poção de Purificação
-splash_potion.effect.gs_purification_type=Poção Arremessável de Purificação
-lingering_potion.effect.gs_purification_type=Poção Prolongada de Purificação
-tipped_arrow.effect.gs_purification_type=Flecha de Purificação
 potion.bone_skin.title=Camada Óssea
 potion.effect.gs_bone_skin_type=Poção de Camada Óssea
 splash_potion.effect.gs_bone_skin_type=Poção Arremessável de Camada Óssea

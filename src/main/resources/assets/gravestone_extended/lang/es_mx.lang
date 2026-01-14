@@ -67,49 +67,6 @@ enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 h
 enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
-# Potions
-## TODO !!!!!!!!!!!!
-potion.purification.title=Remove all negative effects
-potion.effect.gs_purification_type=Potion of Purification
-splash_potion.effect.gs_purification_type=Splash Potion of Purification
-lingering_potion.effect.gs_purification_type=Lingering Potion of Purification
-tipped_arrow.effect.gs_purification_type=Arrow of Purification
-potion.bone_skin.title=Bone Skin
-potion.effect.gs_bone_skin_type=Potion of Bone Skin
-splash_potion.effect.gs_bone_skin_type=Splash Potion of Bone Skin
-lingering_potion.effect.gs_bone_skin_type=Lingering Potion of Bone Skin
-tipped_arrow.effect.gs_bone_skin_type=Arrow of Bone Skin
-potion.rust.title=Rust
-potion.effect.gs_rust_type=Potion of Rust
-splash_potion.effect.gs_rust_type=Splash Potion of Rust
-lingering_potion.effect.gs_rust_type=Lingering Potion of Rust
-tipped_arrow.effect.gs_rust_type=Arrow of Rust
-potion.recall.title=Return back to home
-potion.effect.gs_recall_type=Recall Potion
-splash_potion.effect.gs_recall_type=Splash Recall Potion
-lingering_potion.effect.gs_recall_type=Lingering Recall Potion
-tipped_arrow.effect.gs_recall_type=Arrow of Recall
-potion.burning.title=Sets Target on Fire
-potion.effect.gs_burning_type=Potion of Burning
-splash_potion.effect.gs_burning_type=Splash Potion of Burning
-lingering_potion.effect.gs_burning_type=Lingering Potion of Burning
-tipped_arrow.effect.gs_burning_type=Arrow of Burning
-potion.inferno.title=Inferno
-potion.effect.gs_inferno_type=Potion of Inferno
-splash_potion.effect.gs_inferno_type=Splash Potion of Inferno
-lingering_potion.effect.gs_inferno_type=Lingering Potion of Inferno
-tipped_arrow.effect.gs_inferno_type=Arrow of Inferno
-potion.cursed_inferno.title=Cursed Inferno
-potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
-splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno
-lingering_potion.effect.gs_cursed_inferno_type=Lingering Potion of Cursed Inferno
-tipped_arrow.effect.gs_cursed_inferno_type=Arrow of Cursed Inferno
-potion.cursed_flame.title=Cursed Flame
-potion.effect.gs_cursed_flame_type=Potion of Cursed Flame
-splash_potion.effect.gs_cursed_flame_type=Splash Potion of Cursed Flame
-lingering_potion.effect.gs_cursed_flame_type=Lingering Potion of Cursed Flame
-tipped_arrow.effect.gs_cursed_flame_type=Arrow of Cursed Flame
-
 
 # Items
 ## Fishing Pole

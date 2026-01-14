@@ -57,11 +57,6 @@ enchantment.frozen_nether=Застывший ад
 enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
 
 # Potions
-potion.purification.title=Снимает все негативные эффекты
-potion.effect.gs_purification_type=Зелье очищения
-splash_potion.effect.gs_purification_type=Взрывное зелье очищения
-lingering_potion.effect.gs_purification_type=Туманное зелье очищения
-tipped_arrow.effect.gs_purification_type=Стрела очищения
 potion.bone_skin.title=Костяная кожа
 potion.effect.gs_bone_skin_type=Зелье костяной кожи
 splash_potion.effect.gs_bone_skin_type=Взрывное зелье костяной кожи

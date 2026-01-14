@@ -55,6 +55,11 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Curse of Awkwardness",
   "enchantment.gravestone_extended.curse_of_fragility": "Curse of Fragility",
 
+  "item.minecraft.potion.effect.purification": "Potion of Purification",
+  "item.minecraft.splash_potion.effect.purification": "Splash Potion of Purification",
+  "item.minecraft.lingering_potion.effect.purification": "Lingering Potion of Purification",
+  "item.minecraft.tipped_arrow.effect.purification": "Arrow of Purification",
+
   "item.minecraft.potion.effect.bleeding": "Potion of Bleeding",
   "item.minecraft.splash_potion.effect.bleeding": "Splash Potion of Bleeding",
   "item.minecraft.lingering_potion.effect.bleeding": "Lingering Potion of Bleeding",
