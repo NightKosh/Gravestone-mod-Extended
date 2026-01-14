@@ -79,6 +79,18 @@
   "item.minecraft.lingering_potion.effect.inferno": "Туманное зелье инферно",
   "item.minecraft.tipped_arrow.effect.inferno": "Стрела инферно",
 
+  "effect.gravestone_extended.rust": "Повреждает ваши вещи",
+  "item.minecraft.potion.effect.rust": "Зелье ржавчины",
+  "item.minecraft.splash_potion.effect.rust": "Взрывное зелье ржавчины",
+  "item.minecraft.lingering_potion.effect.rust": "Туманное зелье ржавчины",
+  "item.minecraft.tipped_arrow.effect.rust": "Стрела ржавчины",
+
+  "effect.gravestone_extended.bone_skin": "Защищает от эффекта ржавчины",
+  "item.minecraft.potion.effect.bone_skin": "Зелье костяной кожи",
+  "item.minecraft.splash_potion.effect.bone_skin": "Взрывное зелье костяной кожи",
+  "item.minecraft.lingering_potion.effect.bone_skin": "Туманное зелье костяной кожи",
+  "item.minecraft.tipped_arrow.effect.bone_skin": "Стрела костяной кожи",
+
   "item.minecraft.potion.effect.bleeding": "Зелье кровотечения",
   "item.minecraft.splash_potion.effect.bleeding": "Взрывное зелье кровотечения",
   "item.minecraft.lingering_potion.effect.bleeding": "Туманное зелье кровотечения",

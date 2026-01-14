@@ -58,17 +58,6 @@ enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player
 
 
 # Potions
-potion.bone_skin.title=Bone Skin
-potion.effect.gs_bone_skin_type=Potion of Bone Skin
-splash_potion.effect.gs_bone_skin_type=Splash Potion of Bone Skin
-lingering_potion.effect.gs_bone_skin_type=Lingering Potion of Bone Skin
-tipped_arrow.effect.gs_bone_skin_type=Arrow of Bone Skin
-potion.rust.title=Rust
-potion.effect.gs_rust_type=Potion of Rust
-splash_potion.effect.gs_rust_type=Splash Potion of Rust
-lingering_potion.effect.gs_rust_type=Lingering Potion of Rust
-tipped_arrow.effect.gs_rust_type=Arrow of Rust
-
 potion.cursed_inferno.title=Cursed Inferno
 potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
 splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno

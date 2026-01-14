@@ -25,6 +25,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static final Item FLAREFIN_KOI = getFish("flarefin_koi");
     public static final Item CHORUS_KOI = getFish("chorus_koi");
     public static final Item WITHERED_CRUCIAN = getFish("withered_crucian");
+    public static final Item BONE_FISH = getFish("bone_fish");
     public static final Item SPOOKYFIN = getFish("spookyfin");
     public static final Item SPECULAR_SNAPPER = getFish("specular_snapper");
 
@@ -32,21 +33,17 @@ public class AdvancedFishingCompatibility extends ACompatibility {
         var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(ADVANCED_FISHING_ID, id));
         return holder.isPresent() ?
                 holder.get().value() :
-                Items.AIR;
+                Items.NETHER_STAR;
     }
 
     public static boolean loaded() {
         return loaded(ADVANCED_FISHING_ID);
     }
+
+//TODO
 //    public static Item getBoneFishingPole() {
 //        return new ItemBoneFishingPole();
 //    }
-
-    public static void addPotionsRecipes() {
-        //TODO
-//        PotionHelper.addMix(PotionTypes.AWKWARD, Ingredient.fromStacks(new ItemStack(AdvancedFishingAPI.FISH_ITEM, 1, EnumFishType.BONE_FISH.ordinal())), GSPotion.BONE_SKIN_TYPE);
-    }
-//TODO
 //    public static boolean isBoneHook(Entity entity) {
 //        return entity instanceof EntityBoneFishHook;
 //    }

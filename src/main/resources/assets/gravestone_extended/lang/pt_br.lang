@@ -59,16 +59,6 @@ enchantment.frozen_nether=Frozen Nether
 enchantment.gravestone-extended.frozen_nether.desc=Freezes lava under the player into frozen lava.
 
 # Potions
-potion.bone_skin.title=Camada Óssea
-potion.effect.gs_bone_skin_type=Poção de Camada Óssea
-splash_potion.effect.gs_bone_skin_type=Poção Arremessável de Camada Óssea
-lingering_potion.effect.gs_bone_skin_type=Poção Prolongada de Camada Óssea
-tipped_arrow.effect.gs_bone_skin_type=Flecha de Camada Óssea
-potion.rust.title=Ferrugem
-potion.effect.gs_rust_type=Poção de Ferrugem
-splash_potion.effect.gs_rust_type=Poção Arremessável de Ferrugem
-lingering_potion.effect.gs_rust_type=Poção Prolongada de Ferrugem
-tipped_arrow.effect.gs_rust_type=Flecha de Ferrugem
 potion.cursed_inferno.title=Inferno Maldito
 potion.effect.gs_cursed_inferno_type=Poção de Inferno Maldito
 splash_potion.effect.gs_cursed_inferno_type=Poção Arremessável de Inferno Maldito

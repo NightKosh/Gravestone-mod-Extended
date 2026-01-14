@@ -67,11 +67,6 @@
   "item.minecraft.lingering_potion.effect.recall": "Туманне зілля повернення",
   "item.minecraft.tipped_arrow.effect.recall": "Стріла повернення",
 
-  "item.minecraft.potion.effect.bleeding": "Зілля кровотечі",
-  "item.minecraft.splash_potion.effect.bleeding": "Вибухове зілля кровотечі",
-  "item.minecraft.lingering_potion.effect.bleeding": "Туманне зілля кровотечі",
-  "item.minecraft.tipped_arrow.effect.bleeding": "Стріла кровотечі",
-
   "effect.gravestone_extended.flames": "Підпалює ціль",
   "item.minecraft.potion.effect.flames": "Палаюче зілля",
   "item.minecraft.splash_potion.effect.flames": "Вибухове палаюче зілля",
@@ -83,6 +78,23 @@
   "item.minecraft.splash_potion.effect.inferno": "Вибухове зілля інферно",
   "item.minecraft.lingering_potion.effect.inferno": "Туманне зілля інферно",
   "item.minecraft.tipped_arrow.effect.inferno": "Стріла інферно",
+
+  "effect.gravestone_extended.rust": "Deals damage to your items",
+  "item.minecraft.potion.effect.rust": "Зілля іржі",
+  "item.minecraft.splash_potion.effect.rust": "Вибухове зілля іржі",
+  "item.minecraft.lingering_potion.effect.rust": "Туманне зілля іржі",
+  "item.minecraft.tipped_arrow.effect.rust": "Стріла іржі",
+
+  "effect.gravestone_extended.bone_skin": "Protects from Rust effect",
+  "item.minecraft.potion.effect.bone_skin": "Зілля кістяної шкіри",
+  "item.minecraft.splash_potion.effect.bone_skin": "Вибухове зілля кістяної шкіри",
+  "item.minecraft.lingering_potion.effect.bone_skin": "Туманне зілля кістяної шкіри",
+  "item.minecraft.tipped_arrow.effect.bone_skin": "Стріла кістяної шкіри",
+
+  "item.minecraft.potion.effect.bleeding": "Зілля кровотечі",
+  "item.minecraft.splash_potion.effect.bleeding": "Вибухове зілля кровотечі",
+  "item.minecraft.lingering_potion.effect.bleeding": "Туманне зілля кровотечі",
+  "item.minecraft.tipped_arrow.effect.bleeding": "Стріла кровотечі",
 
   "item.minecraft.potion.effect.call_of_the_abyss": "Potion of the Call of the Abyss",
   "item.minecraft.splash_potion.effect.call_of_the_abyss": "Splash Potion of the Call of the Abyss",

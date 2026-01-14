@@ -79,6 +79,18 @@
   "item.minecraft.lingering_potion.effect.inferno": "Poción persistente de infierno",
   "item.minecraft.tipped_arrow.effect.inferno": "Flecha de infierno",
 
+  "effect.gravestone_extended.rust": "Deals damage to your items",
+  "item.minecraft.potion.effect.rust": "Poción de óxido",
+  "item.minecraft.splash_potion.effect.rust": "Poción de área de óxido",
+  "item.minecraft.lingering_potion.effect.rust": "Poción persistente de óxido",
+  "item.minecraft.tipped_arrow.effect.rust": "Flecha de óxido",
+
+  "effect.gravestone_extended.bone_skin": "Protects from Rust effect",
+  "item.minecraft.potion.effect.bone_skin": "Poción de piel de hueso",
+  "item.minecraft.splash_potion.effect.bone_skin": "Poción de área de piel de hueso",
+  "item.minecraft.lingering_potion.effect.bone_skin": "Poción persistente de piel de hueso",
+  "item.minecraft.tipped_arrow.effect.bone_skin": "Flecha de piel de hueso",
+
   "item.minecraft.potion.effect.bleeding": "Poción de sangrar",
   "item.minecraft.splash_potion.effect.bleeding": "Poción de área de sangrar",
   "item.minecraft.lingering_potion.effect.bleeding": "Poción persistente de sangrar",

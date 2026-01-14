@@ -1,6 +1,9 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
@@ -28,6 +31,17 @@ public class WitheredLandsCompatibility extends ACompatibility {
     // effects
     public static final Identifier BLEEDING_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "bleeding");
     public static final Identifier CALL_OF_THE_ABYSS_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "call_of_the_abyss");
+
+    // items
+    public static final Item SLIME_GEL = getItem("slime_gel");
+    public static final Item BAT_WING = getItem("bat_wing");
+
+    private static Item getItem(String id) {
+        var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(WITHERED_LANDS_ID, id));
+        return holder.isPresent() ?
+                holder.get().value() :
+                Items.NETHER_STAR;
+    }
 
     public static boolean loaded() {
         return loaded(WITHERED_LANDS_ID);

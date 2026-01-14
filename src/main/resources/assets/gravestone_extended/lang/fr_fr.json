@@ -79,6 +79,18 @@
   "item.minecraft.lingering_potion.effect.inferno": "Lingering Potion of Inferno",
   "item.minecraft.tipped_arrow.effect.inferno": "Arrow of Inferno",
 
+  "effect.gravestone_extended.rust": "Deals damage to your items",
+  "item.minecraft.potion.effect.rust": "Potion of Rust",
+  "item.minecraft.splash_potion.effect.rust": "Splash Potion of Rust",
+  "item.minecraft.lingering_potion.effect.rust": "Lingering Potion of Rust",
+  "item.minecraft.tipped_arrow.effect.rust": "Arrow of Rust",
+
+  "effect.gravestone_extended.bone_skin": "Protects from Rust effect",
+  "item.minecraft.potion.effect.bone_skin": "Potion of Bone Skin",
+  "item.minecraft.splash_potion.effect.bone_skin": "Splash Potion of Bone Skin",
+  "item.minecraft.lingering_potion.effect.bone_skin": "Lingering Potion of Bone Skin",
+  "item.minecraft.tipped_arrow.effect.bone_skin": "Arrow of Bone Skin",
+
   "item.minecraft.potion.effect.bleeding": "Potion of Bleeding",
   "item.minecraft.splash_potion.effect.bleeding": "Splash Potion of Bleeding",
   "item.minecraft.lingering_potion.effect.bleeding": "Lingering Potion of Bleeding",

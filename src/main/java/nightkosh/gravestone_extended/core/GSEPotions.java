@@ -81,30 +81,16 @@ public class GSEPotions {
             POTIONS.register("inferno", () ->
                     new Potion("inferno", new MobEffectInstance(GSEMobEffects.INFERNO, 1800, 0)));
 
+    public static final DeferredHolder<Potion, Potion> RUST_POTION =
+            POTIONS.register("rust", () ->
+                    new Potion("rust", new MobEffectInstance(GSEMobEffects.RUST, 600, 0)));
+
+    public static final DeferredHolder<Potion, Potion> BONE_SKIN_POTION =
+            POTIONS.register("bone_skin", () ->
+                    new Potion("bone_skin", new MobEffectInstance(GSEMobEffects.BONE_SKIN, 12000, 0)));
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }
 
-//    public static final Potion RUST = new PotionRust();
-//    public static final Potion BONE_SKIN = new PotionBoneSkin();
-//
-//    public static final PotionType PURIFICATION_TYPE = new PotionTypePurification();
-//    public static final PotionType RUST_TYPE = new PotionTypeRust();
-//    public static final PotionType BONE_SKIN_TYPE = new PotionTypeBoneSkin();
-//
-//    @SubscribeEvent
-//    public static void registerPotions(final RegistryEvent.Register<Potion> event) {
-//        event.getRegistry().registerAll(RUST, BONE_SKIN, BURNING);
-//    }
-//
-//    @SubscribeEvent
-//    public static void registerPotionTypes(final RegistryEvent.Register<PotionType> event) {
-//        event.getRegistry().registerAll(RUST_TYPE, BONE_SKIN_TYPE);
-//
-//        PotionHelper.addMix(PotionTypes.AWKWARD, GSItem.TOXIC_SLIME, RUST_TYPE);
-//
-//        if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
-//            CompatibilityAdvancedFishing.addPotionsRecipes();
-//        }
-//    }
 }
