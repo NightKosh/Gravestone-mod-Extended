@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "gravestone_extended:item/tools/frozen_mirror"
+    "model": "gravestone_extended:item/frozen_mirror"
   }
 }
