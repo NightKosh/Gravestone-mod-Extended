@@ -3,7 +3,8 @@
   "package": "nightkosh.gravestone_extended.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "CobwebBlockMixin"
+    "CobwebBlockMixin",
+    "PiglinAiMixin"
   ],
   "client": [],
   "server": []

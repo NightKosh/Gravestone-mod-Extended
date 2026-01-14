@@ -35,6 +35,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> MIRROR_OF_PAIN =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "mirror_of_pain"));
 
+    public static final ResourceKey<Enchantment> GILDED_SHEEN =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "gilded_sheen"));
+
     public static final ResourceKey<Enchantment> CURSE_OF_AWKWARDNESS =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "curse_of_awkwardness"));
 

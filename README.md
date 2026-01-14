@@ -95,7 +95,11 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
 
 ### Armor enchantments:
-1. Web Crawler
+1. Gilded Sheen
+    ```
+        /enchant @s gravestone_extended:gilded_sheen 1
+    ```
+2. Web Crawler
     ```
         /enchant @s gravestone_extended:web_crawler 1
     ```
