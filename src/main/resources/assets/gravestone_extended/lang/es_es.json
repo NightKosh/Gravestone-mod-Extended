@@ -55,11 +55,13 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Maldición de torpeza",
   "enchantment.gravestone_extended.curse_of_fragility": "Maldición de fragilidad",
 
+  "effect.gravestone_extended.purification": "Elimina todos los efectos negativos",
   "item.minecraft.potion.effect.purification": "Poción de purificación",
   "item.minecraft.splash_potion.effect.purification": "Poción de área de purificación",
   "item.minecraft.lingering_potion.effect.purification": "Poción persistente de purificación",
   "item.minecraft.tipped_arrow.effect.purification": "Flecha de purificación",
 
+  "effect.gravestone_extended.recall": "Volver al inicio",
   "item.minecraft.potion.effect.recall": "Poción de retorno",
   "item.minecraft.splash_potion.effect.recall": "Poción de retorno de área",
   "item.minecraft.lingering_potion.effect.recall": "Poción de retorno persistente",

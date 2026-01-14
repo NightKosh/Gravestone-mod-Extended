@@ -55,11 +55,13 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Прокляття незграбності",
   "enchantment.gravestone_extended.curse_of_fragility": "Прокляття крихкості",
 
+  "effect.gravestone_extended.purification": "Знімає всі негативні ефекти",
   "item.minecraft.potion.effect.purification": "Зілля очищення",
   "item.minecraft.splash_potion.effect.purification": "Вибухове зілля очищення",
   "item.minecraft.lingering_potion.effect.purification": "Туманне зілля очищення",
   "item.minecraft.tipped_arrow.effect.purification": "Стріла очищення",
 
+  "effect.gravestone_extended.recall": "Повернення додому",
   "item.minecraft.potion.effect.recall": "Зілля повернення",
   "item.minecraft.splash_potion.effect.recall": "Вибухове зілля повернення",
   "item.minecraft.lingering_potion.effect.recall": "Туманне зілля повернення",

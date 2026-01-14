@@ -55,11 +55,13 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Проклятие неловкости",
   "enchantment.gravestone_extended.curse_of_fragility": "Проклятие хрупкости",
 
+  "effect.gravestone_extended.purification": "Снимает все негативные эффекты",
   "item.minecraft.potion.effect.purification": "Зелье очищения",
   "item.minecraft.splash_potion.effect.purification": "Взрывное зелье очищения",
   "item.minecraft.lingering_potion.effect.purification": "Туманное зелье очищения",
   "item.minecraft.tipped_arrow.effect.purification": "Стрела очищения",
 
+  "effect.gravestone_extended.recall": "Возвращает вас домой",
   "item.minecraft.potion.effect.recall": "Зелье возвращения",
   "item.minecraft.splash_potion.effect.recall": "Взрывное зелье возвращения",
   "item.minecraft.lingering_potion.effect.recall": "Туманное зелье возвращения",

@@ -55,11 +55,13 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Maldição da Inabilidade",
   "enchantment.gravestone_extended.curse_of_fragility": "Maldição de Fragilidade",
 
+  "effect.gravestone_extended.purification": "Remove todos os efeitos negativos",
   "item.minecraft.potion.effect.purification": "Poção de Purificação",
   "item.minecraft.splash_potion.effect.purification": "Poção Arremessável de Purificação",
   "item.minecraft.lingering_potion.effect.purification": "Poção Prolongada de Purificação",
   "item.minecraft.tipped_arrow.effect.purification": "Flecha de Purificação",
 
+  "effect.gravestone_extended.recall": "Retonar para casa",
   "item.minecraft.potion.effect.recall": "Poção de Retorno",
   "item.minecraft.splash_potion.effect.recall": "Poção Arremessável de Retorno",
   "item.minecraft.lingering_potion.effect.recall": "Poção Prolongada de Retorno",

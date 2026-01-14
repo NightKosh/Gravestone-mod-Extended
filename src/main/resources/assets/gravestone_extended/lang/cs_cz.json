@@ -55,11 +55,13 @@
   "enchantment.gravestone_extended.curse_of_awkwardness": "Curse of Awkwardness",
   "enchantment.gravestone_extended.curse_of_fragility": "Curse of Fragility",
 
+  "effect.gravestone_extended.purification": "Remove all negative effects",
   "item.minecraft.potion.effect.purification": "Potion of Purification",
   "item.minecraft.splash_potion.effect.purification": "Splash Potion of Purification",
   "item.minecraft.lingering_potion.effect.purification": "Lingering Potion of Purification",
   "item.minecraft.tipped_arrow.effect.purification": "Arrow of Purification",
 
+  "effect.gravestone_extended.recall": "Return back to home",
   "item.minecraft.potion.effect.recall": "Potion of Recall",
   "item.minecraft.splash_potion.effect.recall": "Splash Potion of Recall",
   "item.minecraft.lingering_potion.effect.recall": "Lingering Potion of Recall",
