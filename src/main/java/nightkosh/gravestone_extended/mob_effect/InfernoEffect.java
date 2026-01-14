@@ -25,7 +25,7 @@ public class InfernoEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide()) {
+        if (!level.isClientSide()) {
             var mobsList = level.getEntitiesOfClass(LivingEntity.class,
                     new AABB(entity.getX() - 3, entity.getY() - 3, entity.getZ() - 3,
                             entity.getX() + 3, entity.getY() + 3, entity.getZ() + 3));

@@ -27,7 +27,7 @@ public class PurificationEffect extends InstantenousMobEffect {
 
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide()) {
+        if (!level.isClientSide()) {
             if (GSEConfigs.DEBUG_MODE.get()) {
                 LOGGER.info("Going to remove all negative effects on {} by PurificationEffect", entity.getScoreboardName());
             }

@@ -21,7 +21,7 @@ public class FlamesEffect extends InstantenousMobEffect {
 
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide()) {
+        if (!level.isClientSide()) {
             entity.igniteForTicks(1200);
         }
 

@@ -29,7 +29,7 @@ public class RecallEffect extends InstantenousMobEffect {
 
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide() && entity instanceof Player player) {
+        if (!level.isClientSide() && entity instanceof Player player) {
             if (GSEConfigs.DEBUG_MODE.get()) {
                 LOGGER.info("Going to teleport player {} back to home by RecallEffect", entity.getScoreboardName());
             }
