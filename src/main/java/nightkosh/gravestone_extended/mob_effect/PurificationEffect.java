@@ -42,6 +42,8 @@ public class PurificationEffect extends InstantenousMobEffect {
             for (var effect : effectsToRemove) {
                 entity.removeEffect(effect);
             }
+            entity.extinguishFire();
+            entity.clearFreeze();
         }
 
         return true;
