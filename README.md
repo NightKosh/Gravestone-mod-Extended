@@ -103,6 +103,10 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:web_crawler 1
     ```
+3. Frozen Nether
+    ```
+        /enchant @s gravestone_extended:frozen_nether 2
+    ```
 
 ### Curse enchantments:
 1. Curse of Awkwardness
