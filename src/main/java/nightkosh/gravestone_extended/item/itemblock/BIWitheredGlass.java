@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.item.itemblock.glass;
+package nightkosh.gravestone_extended.item.itemblock;
 
 import net.minecraft.world.item.BlockItem;
 import nightkosh.gravestone_extended.core.GSEBlocks;

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_post",
-  "render_type": "translucent",
-  "textures": {
-    "edge": "gravestone_extended:block/glass/withered_glass_pane_top",
-    "pane": "gravestone_extended:block/glass/withered_glass"
-  }
-}

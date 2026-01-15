@@ -8,15 +8,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block.bone_block.*;
-import nightkosh.gravestone_extended.block.glass.WitheredGlass;
-import nightkosh.gravestone_extended.block.glass.WitheredGlassPane;
+import nightkosh.gravestone_extended.block.WitheredGlass;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleSkeleton;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleWither;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleZombie;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
-import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlass;
-import nightkosh.gravestone_extended.item.itemblock.glass.BIWitheredGlassPane;
+import nightkosh.gravestone_extended.item.itemblock.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
 import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleSkeleton;
 import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleWither;
@@ -299,13 +297,6 @@ public class GSEBlocks {
     public static final DeferredHolder<Block, Block> WITHERED_GLASS = registerBlock("withered_glass",
             WitheredGlass::new,
             BIWitheredGlass::new);
-
-    public static final ResourceKey WITHERED_GLASS_PANE_RK = ResourceKey.create(
-            Registries.BLOCK,
-            fromNamespaceAndPath(ModInfo.ID, "withered_glass_pane"));
-    public static final DeferredHolder<Block, Block> WITHERED_GLASS_PANE = registerBlock("withered_glass_pane",
-            WitheredGlassPane::new,
-            BIWitheredGlassPane::new);
 
     private static <T extends Block> DeferredHolder<Block, T> registerBlock(
             String name, Supplier<T> block, Supplier<Item> itemBlock) {

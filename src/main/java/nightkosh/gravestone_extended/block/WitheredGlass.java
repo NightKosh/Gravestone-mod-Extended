@@ -1,10 +1,11 @@
-package nightkosh.gravestone_extended.block.glass;
+package nightkosh.gravestone_extended.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.TintedGlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -18,15 +19,19 @@ import javax.annotation.Nonnull;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class WitheredGlassPane extends IronBarsBlock {
+public class WitheredGlass extends TintedGlassBlock {
 
-    public WitheredGlassPane() {
+    public WitheredGlass() {
         super(BlockBehaviour.Properties.of()
-                .setId(GSEBlocks.WITHERED_GLASS_PANE_RK)
-                .instrument(NoteBlockInstrument.HAT)
-                .strength(4, Integer.MAX_VALUE)
+                .setId(GSEBlocks.WITHERED_GLASS_RK)
                 .sound(SoundType.GLASS)
-                .noOcclusion());
+                .instrument(NoteBlockInstrument.HAT)
+                .noOcclusion()
+                .isValidSpawn(Blocks::never)
+                .isRedstoneConductor((state, level, pos) -> false)
+                .isSuffocating((state, level, pos) -> false)
+                .isViewBlocking((state, level, pos) -> false)
+                .strength(4, Integer.MAX_VALUE));
     }
 
     @Override
@@ -34,16 +39,6 @@ public class WitheredGlassPane extends IronBarsBlock {
             @Nonnull BlockState state, @Nonnull BlockGetter level,
             @Nonnull BlockPos pos, @Nonnull Entity entity) {
         return false;
-    }
-
-    @Override
-    protected boolean propagatesSkylightDown(@Nonnull BlockState state) {
-        return false;
-    }
-
-    @Override
-    protected int getLightBlock(@Nonnull BlockState state) {
-        return 15;
     }
 
 }

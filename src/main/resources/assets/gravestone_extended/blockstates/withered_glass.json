@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "gravestone_extended:block/glass/withered_glass"
+      "model": "gravestone_extended:block/withered_glass"
     }
   }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gravestone_extended:block/glass/withered_glass"
-  }
-}

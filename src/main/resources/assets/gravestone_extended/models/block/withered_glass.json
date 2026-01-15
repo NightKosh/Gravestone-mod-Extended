@@ -2,6 +2,6 @@
   "parent": "block/cube_all",
   "render_type": "translucent",
   "textures": {
-    "all": "gravestone_extended:block/glass/withered_glass"
+    "all": "gravestone_extended:block/withered_glass"
   }
 }

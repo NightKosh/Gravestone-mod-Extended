@@ -78,7 +78,6 @@ public class GSETabs {
 
                         // glass
                         output.accept(GSEBlocks.WITHERED_GLASS.get());
-                        output.accept(GSEBlocks.WITHERED_GLASS_PANE.get());
 
                     })
                     .build()
