@@ -29,15 +29,20 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 public class GSEEnchantmentHelper {
 
     public static int getLevel(Level level, ResourceKey<Enchantment> key, ItemStack item) {
-        return EnchantmentHelper.getItemEnchantmentLevel(getEnchantmentHolder(level, key), item);
+        try {
+            if (level == null || key == null || item == null) {
+                return 0;
+            } else {
+                return EnchantmentHelper.getItemEnchantmentLevel(getEnchantmentHolder(level, key), item);
+            }
+        } catch (Exception e) {
+            LOGGER.error("Cant get Enchantment", e);
+            return 0;
+        }
     }
 
     public static boolean enchanted(Level level, ResourceKey<Enchantment> key, ItemStack item) {
         return getLevel(level, key, item) > 0;
-    }
-
-    public static boolean enchanted(Holder<Enchantment> enchantment, ItemStack item) {
-        return EnchantmentHelper.getItemEnchantmentLevel(enchantment, item) > 0;
     }
 
     public static Holder<Enchantment> getEnchantmentHolder(Level level, ResourceKey<Enchantment> key) {
