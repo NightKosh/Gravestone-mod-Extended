@@ -32,6 +32,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> WEB_CRAWLER =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "web_crawler"));
 
+    public static final ResourceKey<Enchantment> FROZEN_NETHER =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "frozen_nether"));
+
     public static final ResourceKey<Enchantment> MIRROR_OF_PAIN =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "mirror_of_pain"));
 
@@ -52,7 +55,6 @@ public class GSEEnchantments {
 //        public static void registerBlocks(final RegistryEvent.Register<Enchantment> event) {
 //            final IForgeRegistry<Enchantment> registry = event.getRegistry();
 //            registry.registerAll(SHADOW_OF_DEATH);
-//            registry.registerAll(FROZEN_NETHER);
 //            registry.registerAll(BLOODY_REPLICATION);
 //        }
 //    }

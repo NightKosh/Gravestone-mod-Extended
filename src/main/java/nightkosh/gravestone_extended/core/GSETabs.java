@@ -76,9 +76,10 @@ public class GSETabs {
                         output.accept(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER.get());
                         output.accept(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER.get());
 
-                        // glass
                         output.accept(GSEBlocks.WITHERED_GLASS.get());
                         output.accept(GSEBlocks.WITHERED_BRICKS.get());
+
+                        output.accept(GSEBlocks.FROZEN_LAVA.get());
 
                     })
                     .build()

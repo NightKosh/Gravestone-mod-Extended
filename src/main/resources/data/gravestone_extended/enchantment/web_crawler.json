@@ -7,7 +7,7 @@
   },
   "exclusive_set": [],
   "slots": [
-    "any"
+    "legs"
   ],
   "max_cost": {
     "base": 75,

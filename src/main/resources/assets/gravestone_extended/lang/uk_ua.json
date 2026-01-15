@@ -51,12 +51,15 @@
   "item.gravestone_extended.withered_glass": "Withered Glass",
   "item.gravestone_extended.withered_bricks": "Withered Bricks",
 
+  "item.gravestone_extended.frozen_lava": "Frozen Lava",
+
   "enchantment.gravestone_extended.bone_rain": "Кістяний дощ",
   "enchantment.gravestone_extended.vampiric_touch": "Дотик Вампіра",
   "enchantment.gravestone_extended.poisoned_blade": "Отруєне Лезо",
   "enchantment.gravestone_extended.withered_blade": "Висушуюче Лезо",
   "enchantment.gravestone_extended.true_strike": "True Strike",
   "enchantment.gravestone_extended.web_crawler": "Web Crawler",
+  "enchantment.gravestone_extended.frozen_nether": "Frozen Nether",
   "enchantment.gravestone_extended.gilded_sheen": "Gilded Sheen",
   "enchantment.gravestone_extended.mirror_of_pain": "Дзеркало болю",
   "enchantment.gravestone_extended.curse_of_awkwardness": "Прокляття незграбності",

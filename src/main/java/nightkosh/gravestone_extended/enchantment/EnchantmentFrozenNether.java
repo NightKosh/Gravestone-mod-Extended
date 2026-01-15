@@ -34,35 +34,5 @@ public class EnchantmentFrozenNether {//TODO extends EnchantmentTreasure {
 //        return super.canApply(stack) && stack.getItem() instanceof ItemBoneBoots;
 //    }
 //
-//    public static void applyEffect(Player player) {
-//        var world = player.level();
-//        if (!world.isClientSide()) {
-//            int level = GSEnchantmentHelper.getEnchantmentLevel(player.getItemStackFromSlot(EntityEquipmentSlot.FEET), GSEnchantment.FROZEN_NETHER);
-//
-//            if (level > 0) {
-//                var blockPos = player.blockPosition();
-//                double f = Math.ceil(Math.min(16, 1.5 + level));
-//                BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos(0, 0, 0);
-//
-//                for (BlockPos.MutableBlockPos pos : BlockPos.getAllInBoxMutable(blockPos.add(-f, -1, -f), blockPos.add(f, -1, f))) {
-//                    if (pos.distanceSqToCenter(player.posX, player.posY, player.posZ) <= (f * f)) {
-//                        mutableBlockPos.setPos(pos.getX(), pos.getY() + 1, pos.getZ());
-//                        IBlockState state = world.getBlockState(mutableBlockPos);
-//
-//                        if (state.getMaterial() == Material.AIR) {
-//                            IBlockState blockState = world.getBlockState(pos);
-//
-//                            if (blockState.getMaterial() == Material.LAVA && (blockState.getBlock() == Blocks.LAVA || blockState.getBlock() == Blocks.FLOWING_LAVA) &&
-//                                    blockState.getValue(BlockLiquid.LEVEL) == 0 && world.mayPlace(GSBlock.FROZEN_LAVA, pos, false, EnumFacing.DOWN, null) ||
-//                                    (blockState.getBlock() == GSBlock.FROZEN_LAVA && blockState.getValue(BlockFrozenLava.AGE) != 0)) {
-//                                world.setBlockState(pos, GSBlock.FROZEN_LAVA.getDefaultState());
-//                                world.scheduleUpdate(pos.toImmutable(), GSBlock.FROZEN_LAVA, MathHelper.getInt(player.getRNG(), 60, 120));
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
 
 }

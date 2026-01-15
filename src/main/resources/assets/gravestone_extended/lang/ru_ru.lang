@@ -45,16 +45,11 @@ tile.altar.name=Алтарь
 ## Portal
 tile.catacombs_portal.name=Портал в катакомбы
 
-##Frozen Lava
-tile.frozen_lava.name=Застывшая лава
-
 # Enchantments
 enchantment.shadow_of_death=Тень Смерти
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Наносит дополнительные 2.5 урона за уровень существам, не являющимся пауками или нежитью
 enchantment.bloody_replication=Кровавая копия
 enchantment.gravestone-extended.gs_bloody_replication.desc=Обменивает 0.25 - 1.5 очков здоровья(в зависимости от уровня зачарования) на копию блока дерева вместо его уничтожения
-enchantment.frozen_nether=Застывший ад
-enchantment.gravestone-extended.frozen_nether.desc=Замораживает лаву под ногами.
 
 # Potions
 potion.cursed_inferno.title=Проклятое инферно
