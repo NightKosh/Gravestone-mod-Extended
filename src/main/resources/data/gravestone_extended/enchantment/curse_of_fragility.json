@@ -30,5 +30,6 @@
       }
     ]
   },
+  "exclusive_set": "minecraft:unbreaking",
   "supported_items": "#minecraft:enchantable/durability"
 }
