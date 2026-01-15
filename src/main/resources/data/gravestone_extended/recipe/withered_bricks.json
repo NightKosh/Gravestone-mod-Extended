@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "bbb",
+    "sos",
+    "bbb"
+  ],
+  "key": {
+    "s": "minecraft:soul_sand",
+    "b": "minecraft:nether_bricks",
+    "o": "minecraft:obsidian"
+  },
+  "result": {
+    "id": "gravestone_extended:withered_bricks",
+    "count": 6
+  }
+}

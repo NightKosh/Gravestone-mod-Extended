@@ -7,12 +7,14 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.block.WitheredBricks;
 import nightkosh.gravestone_extended.block.bone_block.*;
 import nightkosh.gravestone_extended.block.WitheredGlass;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleSkeleton;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleWither;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleZombie;
+import nightkosh.gravestone_extended.item.itemblock.BIWitheredBricks;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
 import nightkosh.gravestone_extended.item.itemblock.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
@@ -297,6 +299,13 @@ public class GSEBlocks {
     public static final DeferredHolder<Block, Block> WITHERED_GLASS = registerBlock("withered_glass",
             WitheredGlass::new,
             BIWitheredGlass::new);
+
+    public static final ResourceKey WITHERED_BRICKS_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "withered_bricks"));
+    public static final DeferredHolder<Block, Block> WITHERED_BRICKS = registerBlock("withered_bricks",
+            WitheredBricks::new,
+            BIWitheredBricks::new);
 
     private static <T extends Block> DeferredHolder<Block, T> registerBlock(
             String name, Supplier<T> block, Supplier<Item> itemBlock) {
