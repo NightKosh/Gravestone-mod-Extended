@@ -64,17 +64,6 @@ public class GSEEventsHandler {
         }
     }
 
-//TODO
-//    @SubscribeEvent(priority = EventPriority.HIGHEST)
-//    public void onPlayerUpdate(LivingEvent event) {
-//        if (event.getEntity() instanceof Player player && !player.level().isClientSide()) {
-//            if (GSEConfigs.DEBUG_MODE.get()) {
-//                LOGGER.info("LivingEvent event triggered by player {}", player.getScoreboardName());
-//            }
-//            EnchantmentFrozenNether.applyEffect(player);
-//        }
-//    }
-
     @SubscribeEvent
     public static void onLivingHurt(LivingIncomingDamageEvent event) {
         var entity = event.getSource().getEntity();
