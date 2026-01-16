@@ -7,6 +7,15 @@
 
   "item.gravestone_extended.bone_shield": "Костяной щит",
 
+  "item.gravestone_extended.diving_helmet": "Водолазный шлем",
+  "item.gravestone_extended.diving_helmet.tooltip": "Позволяет дышать под водой",
+  "item.gravestone_extended.diving_chestplate": "Водолазный нагрудник",
+  "item.gravestone_extended.diving_chestplate.tooltip": "Наделяет эффектом «Сопротивление» в воде",
+  "item.gravestone_extended.diving_leggings": "Водолазные штаны",
+  "item.gravestone_extended.diving_leggings.tooltip": "Наделяет эффектом «Грация дельфина» в воде",
+  "item.gravestone_extended.diving_boots": "Водолазные ботинки",
+  "item.gravestone_extended.diving_boots.tooltip": "Наделяет эффектом «Скорость» в воде",
+
   "item.gravestone_extended.slime_chunk": "Кусок слизи",
   "item.gravestone_extended.imp_skull": "Череп беса",
   "item.gravestone_extended.ender_skull": "Череп края",

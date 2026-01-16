@@ -26,9 +26,6 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  */
 public class GSLootTables {
 
-    public static final Identifier RAVEN = fromNamespaceAndPath(ModInfo.ID, "entities/raven");
-    public static final Identifier DAMNED_WARRIOR = fromNamespaceAndPath(ModInfo.ID, "entities/damned_warrior");
-
     //fishing
     public static final Identifier FISHING_TOXIC_WATER = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water");
     public static final Identifier FISHING_TOXIC_WATER_TREASURE = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");

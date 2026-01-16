@@ -7,6 +7,15 @@
 
   "item.gravestone_extended.bone_shield": "Escudo de Osso",
 
+  "item.gravestone_extended.diving_helmet": "Capacete de Mergulho",
+  "item.gravestone_extended.diving_helmet.tooltip": "Fornece respiração inlimitada sob a água",
+  "item.gravestone_extended.diving_chestplate": "Peitoral de Megulho",
+  "item.gravestone_extended.diving_chestplate.tooltip": "Grants Resistance while in water",
+  "item.gravestone_extended.diving_leggings": "Calças de Megulho",
+  "item.gravestone_extended.diving_leggings.tooltip": "Grants Dolphin’s Grace while in water",
+  "item.gravestone_extended.diving_boots": "Botas de Megulho",
+  "item.gravestone_extended.diving_boots.tooltip": "Grants Speed while in water",
+
   "item.gravestone_extended.slime_chunk": "Pedaço de Gosma",
   "item.gravestone_extended.imp_skull": "Crânio de Diabrete",
   "item.gravestone_extended.ender_skull": "Cranio do Ender",

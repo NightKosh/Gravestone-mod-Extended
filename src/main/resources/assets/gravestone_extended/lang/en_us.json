@@ -7,6 +7,15 @@
 
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
+  "item.gravestone_extended.diving_helmet": "Diving Helmet",
+  "item.gravestone_extended.diving_helmet.tooltip": "Provides unlimited breath under the water",
+  "item.gravestone_extended.diving_chestplate": "Diving Chestplate",
+  "item.gravestone_extended.diving_chestplate.tooltip": "Grants Resistance while in water",
+  "item.gravestone_extended.diving_leggings": "Diving Leggings",
+  "item.gravestone_extended.diving_leggings.tooltip": "Grants Dolphin’s Grace while in water",
+  "item.gravestone_extended.diving_boots": "Diving Boots",
+  "item.gravestone_extended.diving_boots.tooltip": "Grants Speed while in water",
+
   "item.gravestone_extended.slime_chunk": "Slime Chunk",
   "item.gravestone_extended.imp_skull": "Imp Skull",
   "item.gravestone_extended.ender_skull": "Ender Skull",

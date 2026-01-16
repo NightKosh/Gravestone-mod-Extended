@@ -26,27 +26,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     public static final Identifier PENTAGRAM = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pentagram.png");
     public static final Identifier SPIDER_SPAWNER = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "spiderspawner.png");
 
-    // armor
-    public static final String BONE_HELMET = ":textures/models/armor/bone/helmet.png";
-    public static final String BONE_CHESTPLATE = ":textures/models/armor/bone/chestplate.png";
-    public static final String BONE_LEGS = ":textures/models/armor/bone/leggings.png";
-    public static final String BONE_BOOTS = ":textures/models/armor/bone/boots.png";
-
-    public static final String DIVING_HELMET = ":textures/models/armor/phantom_diver_costume/helmet.png";
-    public static final String PHANTOM_DIVER_CHESTPLATE = ":textures/models/armor/phantom_diver_costume/chestplate.png";
-    public static final String PHANTOM_DIVER_LEGS = ":textures/models/armor/phantom_diver_costume/leggings.png";
-    public static final String PHANTOM_DIVER_BOOTS = ":textures/models/armor/phantom_diver_costume/boots.png";
-
-    public static final String SWAMP_THING_HELMET = ":textures/models/armor/swamp_thing_costume/helmet.png";
-    public static final String SWAMP_THING_CHESTPLATE = ":textures/models/armor/swamp_thing_costume/chestplate.png";
-    public static final String SWAMP_THING_LEGS = ":textures/models/armor/swamp_thing_costume/leggings.png";
-    public static final String SWAMP_THING_BOOTS = ":textures/models/armor/swamp_thing_costume/boots.png";
-
-    public static final String MUMMY_HELMET = ":textures/models/armor/mummy_costume/helmet.png";
-    public static final String MUMMY_CHESTPLATE = ":textures/models/armor/mummy_costume/chestplate.png";
-    public static final String MUMMY_LEGS = ":textures/models/armor/mummy_costume/leggings.png";
-    public static final String MUMMY_BOOTS = ":textures/models/armor/mummy_costume/boots.png";
-
     // gui
     public static final Identifier ALTAR_RESURRECTION_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/resurrection.png");
     public static final Identifier ALTAR_ENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/enchanting.png");

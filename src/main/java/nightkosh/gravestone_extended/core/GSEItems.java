@@ -6,6 +6,10 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.item.FrozenMirror;
+import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingHelmet;
+import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingBoots;
+import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingChestplate;
+import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingLeggings;
 import nightkosh.gravestone_extended.item.compass.EnderSkull;
 import nightkosh.gravestone_extended.item.compass.ImpSkull;
 import nightkosh.gravestone_extended.item.compass.SlimeChunk;
@@ -24,11 +28,16 @@ public class GSEItems {
 
     public static final DeferredHolder<Item, Item> BONE_SHIELD = ITEMS_REGISTER.register("bone_shield", BoneShield::new);
 
+    public static final DeferredHolder<Item, Item> DIVING_HELMET = ITEMS_REGISTER.register("diving_helmet", DivingHelmet::new);
+    public static final DeferredHolder<Item, Item> DIVING_CHESTPLATE = ITEMS_REGISTER.register("diving_chestplate", DivingChestplate::new);
+    public static final DeferredHolder<Item, Item> DIVING_LEGGINGS = ITEMS_REGISTER.register("diving_leggings", DivingLeggings::new);
+    public static final DeferredHolder<Item, Item> DIVING_BOOTS = ITEMS_REGISTER.register("diving_boots", DivingBoots::new);
+
     public static final DeferredHolder<Item, Item> SLIME_CHUNK = ITEMS_REGISTER.register("slime_chunk", SlimeChunk::new);
     public static final DeferredHolder<Item, Item> IMP_SKULL = ITEMS_REGISTER.register("imp_skull", ImpSkull::new);
     public static final DeferredHolder<Item, Item> ENDER_SKULL = ITEMS_REGISTER.register("ender_skull", EnderSkull::new);
     public static final DeferredHolder<Item, Item> FROZEN_MIRROR = ITEMS_REGISTER.register("frozen_mirror", FrozenMirror::new);
-//
+
 //    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
 //    public static final Item BONE_SWORD = new ItemBoneSword();
 //    public static final Item BONE_SWORD_IRON = new ItemIronBoneSword();
@@ -61,10 +70,6 @@ public class GSEItems {
 //    public static final Item BONE_LEGGINGS = new ItemBoneLeggings();
 //    public static final Item BONE_BOOTS = new ItemBoneBoots();
 //
-//    public static final Item DIVING_HELMET = new ItemDivingHelmet();
-//    public static final Item DIVING_CHESTPLATE = new ItemDivingChestplate();
-//    public static final Item DIVING_LEGGINGS = new ItemDivingLeggings();
-//    public static final Item DIVING_BOOTS = new ItemDivingBoots();
 //
 //    public static final Item SWAMP_THING_HELMET = new ItemSwampThingHelmet();
 //    public static final Item SWAMP_THING_CHESTPLATE = new ItemSwampThingChestplate();
@@ -83,34 +88,7 @@ public class GSEItems {
 //    public static final Item PIECE_OF_MUMMY_CLOTH = new ItemPieceOfMummyCloth();
 //    public static final Item RAVEN_FEATHER = new ItemRavenFeather();
 //    public static final Item RAVEN_CLAWS = new ItemRavenClaws();
-//    public static final Item PIECE_OF_DIVING_SUIT = new ItemPieceOfDivingSuit();
 //    public static final Item ENCHANTED_SKULL = new ItemEnchantedSkull();
-//
-//    @Mod.EventBusSubscriber(modid = ModInfo.ID)
-//    public static class RegistrationHandler {
-//
-//        @SubscribeEvent
-//        public static void registerItems(final RegistryEvent.Register<Item> event) {
-//            final IForgeRegistry<Item> registry = event.getRegistry();
-//            registry.registerAll(TOXIC_SLIME, OOZE, PIECE_OF_MUMMY_CLOTH, RAVEN_FEATHER, RAVEN_CLAWS, PIECE_OF_DIVING_SUIT);
-//            registry.registerAll(CEMETERY_KEY);
-//            registry.registerAll(
-//                    BONE_PICKAXE, BONE_PICKAXE_IRON, BONE_PICKAXE_GOLDEN, BONE_PICKAXE_DIAMOND,
-//                    BONE_AXE, BONE_AXE_IRON, BONE_AXE_GOLDEN, BONE_AXE_DIAMOND,
-//                    BONE_SHOVEL, BONE_SHOVEL_IRON, BONE_SHOVEL_GOLDEN, BONE_SHOVEL_DIAMOND,
-//                    BONE_HOE, BONE_HOE_IRON, BONE_HOE_GOLDEN, BONE_HOE_DIAMOND);
-//            if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
-//                BONE_FISHING_POLE = CompatibilityAdvancedFishing.getBoneFishingPole();
-//                registry.register(BONE_FISHING_POLE);
-//            }
-//            registry.registerAll(BONE_SWORD, BONE_SWORD_IRON, BONE_SWORD_GOLDEN, BONE_SWORD_DIAMOND);
-//            registry.registerAll(BONE_HELMET, BONE_CHESTPLATE, BONE_LEGGINGS, BONE_BOOTS,
-//                    DIVING_HELMET, DIVING_CHESTPLATE, DIVING_LEGGINGS, DIVING_BOOTS,
-//                    SWAMP_THING_HELMET, SWAMP_THING_CHESTPLATE, SWAMP_THING_LEGGINGS, SWAMP_THING_BOOTS,
-//                    MUMMY_HELMET, MUMMY_CHESTPLATE, MUMMY_LEGGINGS, MUMMY_BOOTS);
-//            registry.registerAll(ENCHANTED_SKULL, SPAWN_EGG);
-//        }
-//    }
 
     public static void register(IEventBus eventBus) {
         ITEMS_REGISTER.register(eventBus);

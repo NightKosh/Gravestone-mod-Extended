@@ -99,11 +99,6 @@ item.gravestone.bone_sword_golden.name=Золотой Костяной мечь
 item.gravestone.bone_sword_diamond.name=Алмазный Костяной мечь
 
 ## Armor
-item.gravestone.diving_helmet.name=Водолазный шлем
-item.gravestone.diving_helmet.tooltip=Позволяет дышать под водой
-item.gravestone.diving_chestplate.name=Водолазный нагрудник
-item.gravestone.diving_leggings.name=Водолазные штаны
-item.gravestone.diving_boots.name=Водолазные ботинки
 item.gravestone.swamp_thing_helmet.name=Маска болотной твари
 item.gravestone.swamp_thing_chestplate.name=Рубашка болотной твари
 item.gravestone.swamp_thing_leggings.name=Штаны болотной твари
@@ -123,7 +118,6 @@ item.gravestone.raven_feather.name=Перо ворона
 item.gravestone.raven_claws.name=Лапа ворона
 item.gravestone.ooze.name=Тина
 item.gravestone.piece_of_mummy_cloth.name=Бинты мумии
-item.gravestone.piece_of_diving_suit.name=Кусок водолазного костюма
 item.gravestone.enchanted_skull.name=Зачарованный череп
 item.gravestone.enchanted_skull_withered.name=Зачарованный череп иссушителя
 item.gravestone.cemetery_key.player=Ключ от кладбища

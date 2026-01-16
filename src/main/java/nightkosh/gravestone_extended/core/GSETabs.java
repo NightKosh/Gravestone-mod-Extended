@@ -28,6 +28,11 @@ public class GSETabs {
                         // tools and armor
                         output.accept(GSEItems.BONE_SHIELD.get());
 
+                        output.accept(GSEItems.DIVING_HELMET.get());
+                        output.accept(GSEItems.DIVING_CHESTPLATE.get());
+                        output.accept(GSEItems.DIVING_LEGGINGS.get());
+                        output.accept(GSEItems.DIVING_BOOTS.get());
+
                         output.accept(GSEItems.SLIME_CHUNK.get());
                         output.accept(GSEItems.IMP_SKULL.get());
                         output.accept(GSEItems.ENDER_SKULL.get());

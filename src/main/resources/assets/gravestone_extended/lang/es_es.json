@@ -7,6 +7,15 @@
 
   "item.gravestone_extended.bone_shield": "Escudo de hueso",
 
+  "item.gravestone_extended.diving_helmet": "Escafandra",
+  "item.gravestone_extended.diving_helmet.tooltip": "Permite respirar debajo del agua",
+  "item.gravestone_extended.diving_chestplate": "Traje de buceo",
+  "item.gravestone_extended.diving_chestplate.tooltip": "Grants Resistance while in water",
+  "item.gravestone_extended.diving_leggings": "Pantalones de buceo",
+  "item.gravestone_extended.diving_leggings.tooltip": "Grants Dolphin’s Grace while in water",
+  "item.gravestone_extended.diving_boots": "Aletas de buceo",
+  "item.gravestone_extended.diving_boots.tooltip": "Grants Speed while in water",
+
   "item.gravestone_extended.slime_chunk": "Pedazo de slime",
   "item.gravestone_extended.imp_skull": "Cráneo de Imp",
   "item.gravestone_extended.ender_skull": "Cráneo de Ender",

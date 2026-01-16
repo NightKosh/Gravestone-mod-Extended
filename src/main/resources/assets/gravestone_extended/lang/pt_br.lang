@@ -99,11 +99,6 @@ item.gravestone.bone_sword_golden.name=Espada de Osso de Ouro
 item.gravestone.bone_sword_diamond.name=Espada de Osso de Diamante
 
 ## Armor
-item.gravestone.diving_helmet.name=Capacete de Mergulho
-item.gravestone.diving_helmet.tooltip=Fornece respiração inlimitada sob a água
-item.gravestone.diving_chestplate.name=Peitoral de Megulho
-item.gravestone.diving_leggings.name=Calças de Megulho
-item.gravestone.diving_boots.name=Botas de Megulho
 item.gravestone.swamp_thing_helmet.name=Máscara de Coisa do Pântano
 item.gravestone.swamp_thing_chestplate.name=Camisa de Coisa do Pântano
 item.gravestone.swamp_thing_leggings.name=Calças de Coisa do Pântano
@@ -118,8 +113,7 @@ item.gravestone.toxic_slime.name=Gosma Tóxica
 item.gravestone.raven_feather.name=Pena de Corvo
 item.gravestone.raven_claws.name=Garras de Corvo
 item.gravestone.ooze.name=Lodo
-item.gravestone.piece_of_mummy_cloth.name=Pedaço de Pano de Múmia 
-item.gravestone.piece_of_diving_suit.name=Pedaço de Traje de mergulho
+item.gravestone.piece_of_mummy_cloth.name=Pedaço de Pano de Múmia
 item.gravestone.enchanted_skull.name=Crânio Encantado
 item.gravestone.enchanted_skull_withered.name=Crânio de Esqueleto Wither Encantado
 
