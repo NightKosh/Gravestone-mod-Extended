@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "gravestone_extended:zombie_head"
+    "minecraft:zombie_head"
   ],
   "result": {
     "id": "minecraft:skeleton_skull"
