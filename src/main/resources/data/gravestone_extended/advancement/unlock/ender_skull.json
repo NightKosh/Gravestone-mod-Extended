@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "has_my_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:compass",
+              "minecraft:ender_eye",
+              "minecraft:end_crystal",
+              "minecraft:skeleton_skull",
+              "minecraft:glowstone_dust"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gravestone_extended:compass/ender_skull"
+    ]
+  }
+}

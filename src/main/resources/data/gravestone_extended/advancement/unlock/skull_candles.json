@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "has_my_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:candle",
+              "minecraft:zombie_head",
+              "minecraft:skeleton_skull",
+              "minecraft:wither_skeleton_skull"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gravestone_extended:skull_candle/skeleton",
+      "gravestone_extended:skull_candle/zombie",
+      "gravestone_extended:skull_candle/wither",
+      "gravestone_extended:skull_candle/to_skeleton_skull",
+      "gravestone_extended:skull_candle/to_wither_skull",
+      "gravestone_extended:skull_candle/to_zombie_skull"
+    ]
+  }
+}
