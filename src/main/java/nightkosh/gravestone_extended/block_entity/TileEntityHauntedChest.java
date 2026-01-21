@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.tileentity;
+package nightkosh.gravestone_extended.block_entity;
 
 import nightkosh.gravestone_extended.block.enums.EnumHauntedChest;
 

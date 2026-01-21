@@ -1,12 +1,5 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.tileentity.TileEntityHauntedChest;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
-import java.util.Calendar;
-
 /**
  * Gravestone mod - Extended
  *

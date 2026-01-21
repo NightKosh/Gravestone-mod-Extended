@@ -1,18 +1,5 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
-import com.google.common.collect.Maps;
-import com.mojang.authlib.GameProfile;
-import net.minecraft.client.Minecraft;
-import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.helper.GameProfileHelper;
-import nightkosh.gravestone_extended.models.block.ModelMemorial;
-import nightkosh.gravestone_extended.models.block.memorials.*;
-import nightkosh.gravestone_extended.tileentity.TileEntityMemorial;
-import org.lwjgl.opengl.GL11;
-
-import java.util.Map;
-
 /**
  * Gravestone mod - Extended
  *

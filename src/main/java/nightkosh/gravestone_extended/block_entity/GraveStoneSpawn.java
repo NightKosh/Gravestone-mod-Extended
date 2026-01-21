@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.tileentity;
+package nightkosh.gravestone_extended.block_entity;
 
 /**
  * Gravestone mod - Extended

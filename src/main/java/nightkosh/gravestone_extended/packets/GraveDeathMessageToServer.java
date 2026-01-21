@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.packets;
 
-import io.netty.buffer.ByteBuf;
-import nightkosh.gravestone_extended.tileentity.TileEntityMemorial;
-
-import java.util.Random;
-
 /**
  * Gravestone mod - Extended
  *

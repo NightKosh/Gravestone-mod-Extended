@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.packets;
 
-import io.netty.buffer.ByteBuf;
-import nightkosh.gravestone_extended.block.BlockCorpse;
-import nightkosh.gravestone_extended.core.MessageHandler;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import nightkosh.gravestone_extended.tileentity.GraveStoneSpawn;
-
 /**
  * Gravestone mod - Extended
  *

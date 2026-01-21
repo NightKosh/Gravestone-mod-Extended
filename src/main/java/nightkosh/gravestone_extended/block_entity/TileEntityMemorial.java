@@ -1,10 +1,6 @@
-package nightkosh.gravestone_extended.tileentity;
+package nightkosh.gravestone_extended.block_entity;
 
 import com.mojang.authlib.GameProfile;
-import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.helper.GameProfileHelper;
-
-import java.util.Random;
 
 /**
  * Gravestone mod - Extended

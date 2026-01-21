@@ -1,11 +1,5 @@
 package nightkosh.gravestone_extended.structures;
 
-import nightkosh.gravestone_extended.block.BlockMemorial;
-import nightkosh.gravestone_extended.block.enums.EnumMemorials;
-import nightkosh.gravestone_extended.helper.GraveWorldGenerationHelper;
-import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.tileentity.TileEntityMemorial;
-
 import java.util.Random;
 
 /**

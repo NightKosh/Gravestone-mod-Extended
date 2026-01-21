@@ -1,14 +1,11 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.block.enums.EnumExecution;
 import nightkosh.gravestone_extended.models.block.ModelExecution;
 import nightkosh.gravestone_extended.models.block.execution.ModelBurningStake;
 import nightkosh.gravestone_extended.models.block.execution.ModelGallows;
 import nightkosh.gravestone_extended.models.block.execution.ModelGibbet;
 import nightkosh.gravestone_extended.models.block.execution.ModelStocks;
-import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
-import org.lwjgl.opengl.GL11;
+import nightkosh.gravestone_extended.block_entity.TileEntityExecution;
 
 /**
  * Gravestone mod - Extended

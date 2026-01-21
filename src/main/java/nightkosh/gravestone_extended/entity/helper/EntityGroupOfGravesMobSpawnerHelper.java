@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.entity.helper;
 
-import nightkosh.gravestone_extended.tileentity.GraveStoneSpawn;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Gravestone mod - Extended
  *

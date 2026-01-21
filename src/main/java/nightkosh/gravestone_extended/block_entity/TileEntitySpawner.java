@@ -1,7 +1,4 @@
-package nightkosh.gravestone_extended.tileentity;
-
-import nightkosh.gravestone_extended.block.enums.EnumSpawner;
-import nightkosh.gravestone_extended.entity.helper.EntityGroupOfGravesMobSpawnerHelper;
+package nightkosh.gravestone_extended.block_entity;
 
 /**
  * Gravestone mod - Extended

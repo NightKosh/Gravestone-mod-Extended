@@ -1,9 +1,4 @@
-package nightkosh.gravestone_extended.tileentity;
-
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.block.enums.EnumExecution;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
-import nightkosh.gravestone_extended.item.corpse.VillagerCorpseHelper;
+package nightkosh.gravestone_extended.block_entity;
 
 /**
  * Gravestone mod - Extended

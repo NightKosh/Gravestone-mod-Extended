@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.renderer.tileentity;
 
-import nightkosh.gravestone_extended.renderer.item.TEISRCorpse;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
 /**
  * Gravestone mod - Extended
  *

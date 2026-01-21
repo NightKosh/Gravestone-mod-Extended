@@ -1,12 +1,5 @@
 package nightkosh.gravestone_extended.gui;
 
-import nightkosh.gravestone_extended.ModGravestoneExtended;
-import nightkosh.gravestone_extended.core.MessageHandler;
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.gui.container.AltarDisenchantmentContainer;
-import nightkosh.gravestone_extended.packets.AltarDisenchantmentMessageToServer;
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
 /**
  * Gravestone mod - Extended
  *

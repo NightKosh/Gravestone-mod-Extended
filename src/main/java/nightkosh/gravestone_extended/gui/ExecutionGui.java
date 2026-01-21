@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.gui;
 
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.gui.container.ExecutionContainer;
-import nightkosh.gravestone_extended.tileentity.TileEntityExecution;
-import org.lwjgl.opengl.GL11;
-
 /**
  * Gravestone mod - Extended
  *
