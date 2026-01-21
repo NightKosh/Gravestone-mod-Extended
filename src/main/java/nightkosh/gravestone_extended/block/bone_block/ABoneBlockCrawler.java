@@ -3,13 +3,14 @@ package nightkosh.gravestone_extended.block.bone_block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.entity.EntitySpawnReason;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.gamerules.GameRules;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility;
 
@@ -30,10 +31,17 @@ public abstract class ABoneBlockCrawler extends Block {
     }
 
     @Override
-    public boolean onDestroyedByPlayer(
-            @Nonnull BlockState state, @Nonnull Level level, @Nonnull BlockPos pos,
-            @Nonnull Player player, @Nonnull ItemStack toolStack, boolean willHarvest,
-            @Nonnull FluidState fluid) {
+    protected void spawnAfterBreak(
+            @Nonnull BlockState state, @Nonnull ServerLevel level, @Nonnull BlockPos pos,
+            @Nonnull ItemStack stack, boolean dropExperience) {
+        super.spawnAfterBreak(state, level, pos, stack, dropExperience);
+        if (level.getGameRules().get(GameRules.BLOCK_DROPS) &&
+                !EnchantmentHelper.hasTag(stack, EnchantmentTags.PREVENTS_INFESTED_SPAWNS)) {
+            this.spawnCrawler(level, pos);
+        }
+    }
+
+    protected void spawnCrawler(@Nonnull ServerLevel level, @Nonnull BlockPos pos) {
         if (!level.isClientSide() && GSEConfigs.SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION.get() &&
                 WitheredLandsCompatibility.loaded()) {
             var id = getCrawler();
@@ -44,8 +52,6 @@ public abstract class ABoneBlockCrawler extends Block {
                 level.addFreshEntity(crawler);
             }
         }
-
-        return super.onDestroyedByPlayer(state, level, pos, player, toolStack, willHarvest, fluid);
     }
 
     public Identifier getCrawler() {
