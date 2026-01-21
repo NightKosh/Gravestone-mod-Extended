@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " c ",
+    "sts",
+    "bbb"
+  ],
+  "key": {
+    "c": "minecraft:nether_star",
+    "s": "minecraft:skeleton_skull",
+    "t": "minecraft:enchanting_table",
+    "b": "gravestone_extended:bone_block"
+  },
+  "result": {
+    "id": "gravestone_extended:altar"
+  }
+}

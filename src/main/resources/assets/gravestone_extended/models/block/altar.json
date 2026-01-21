@@ -1,9 +1,9 @@
 {
     "textures": {
-        "particle": "gravestone-extended:blocks/bone_block",
-        "bottom": "gravestone-extended:blocks/bone_block",
-        "top": "gravestone-extended:blocks/altar_top",
-        "side": "gravestone-extended:blocks/altar_side"
+        "particle": "gravestone_extended:block/bone_block/block",
+        "bottom": "gravestone_extended:block/bone_block/block",
+        "top": "gravestone_extended:block/altar/top",
+        "side": "gravestone_extended:block/altar/side"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

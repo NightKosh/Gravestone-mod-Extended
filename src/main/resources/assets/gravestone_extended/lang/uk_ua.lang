@@ -39,10 +39,6 @@ block.haunted_chest.skeleton_chest.name=Скриня зі скелетом
 block.haunted_chest.raven_chest.name=Скриня з воронами
 block.haunted_chest.ghost_chest.name=Скриня з привидами
 
-## Altar
-tile.altar.name=Вівтар
-
-
 # Enchantments
 enchantment.shadow_of_death=Тінь смерті
 enchantment.gravestone-extended.gs_shadow_of_death.desc=Завдає додаткових 2.5 шкоди за рівень істотам, які не є павуками або нежиттю

@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.block.Altar;
 import nightkosh.gravestone_extended.block.FrozenLava;
 import nightkosh.gravestone_extended.block.WitheredBricks;
 import nightkosh.gravestone_extended.block.bone_block.*;
@@ -17,6 +18,7 @@ import nightkosh.gravestone_extended.block.skull_candle.SkullCandleWither;
 import nightkosh.gravestone_extended.block.skull_candle.SkullCandleZombie;
 import nightkosh.gravestone_extended.item.itemblock.BIWitheredBricks;
 import nightkosh.gravestone_extended.item.itemblock.BIFrozenLava;
+import nightkosh.gravestone_extended.item.itemblock.BIAltar;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
 import nightkosh.gravestone_extended.item.itemblock.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
@@ -294,7 +296,7 @@ public class GSEBlocks {
             BoneBlockSkullPiglinCrawler::new,
             BIBoneBlockSkullPiglinCrawler::new);
 
-    // glass
+    // withered blocks
     public static final ResourceKey WITHERED_GLASS_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "withered_glass"));
@@ -309,6 +311,15 @@ public class GSEBlocks {
             WitheredBricks::new,
             BIWitheredBricks::new);
 
+    // altar
+    public static final ResourceKey ALTAR_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "altar"));
+    public static final DeferredHolder<Block, Block> ALTAR = registerBlock("altar",
+            Altar::new,
+            BIAltar::new);
+
+    // other
     public static final ResourceKey FROZEN_LAVA_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "frozen_lava"));
@@ -337,9 +348,6 @@ public class GSEBlocks {
 //    public static final BlockHauntedChest HAUNTED_CHEST = new BlockHauntedChest();
 //    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
 //
-//    public static final BlockAltar ALTAR = new BlockAltar();
-//    public static final ItemBlock ALTAR_IB = new IBAltar(ALTAR);
-//
 //    public static final BlockInvisibleWall INVISIBLE_WALL = new BlockInvisibleWall();
 //
 //    public static final BlockCorpse CORPSE = new BlockCorpse();
@@ -360,14 +368,14 @@ public class GSEBlocks {
 //        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 //            final IForgeRegistry<Block> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP,
-//                    HAUNTED_CHEST, ALTAR, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, CURSED_FLAME);
+//                    HAUNTED_CHEST, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, CURSED_FLAME);
 //        }
 //
 //        @SubscribeEvent
 //        public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB,
-//                    HAUNTED_CHEST_IB, ALTAR_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, CURSED_FLAME_IB);
+//                    HAUNTED_CHEST_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, CURSED_FLAME_IB);
 //        }
 //    }
 

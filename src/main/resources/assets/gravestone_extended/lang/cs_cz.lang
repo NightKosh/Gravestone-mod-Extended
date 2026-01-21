@@ -38,10 +38,6 @@ block.haunted_chest.skeleton_chest.name=Bedna s kostlivcem
 block.haunted_chest.raven_chest.name=Bedna s havrany
 block.haunted_chest.ghost_chest.name=Bedna s duchem
 
-## Altar
-tile.altar.name=Oltář
-
-
 ## Corpses
 item.corpse.villager=Mrtvola vesničana
 item.corpse.horse=Mrtvola koně

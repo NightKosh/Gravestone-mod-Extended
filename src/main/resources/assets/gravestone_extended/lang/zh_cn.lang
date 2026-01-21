@@ -36,10 +36,6 @@ block.haunted_chest.skeleton_chest.name=带着骷髅的箱子
 block.haunted_chest.raven_chest.name=带着乌鸦的箱子
 block.haunted_chest.ghost_chest.name=带着鬼魂的箱子
 
-## Altar
-tile.altar.name=祭坛
-
-
 ## Corpses
 item.corpse.villager=村民的尸体
 item.corpse.horse=马的尸体
