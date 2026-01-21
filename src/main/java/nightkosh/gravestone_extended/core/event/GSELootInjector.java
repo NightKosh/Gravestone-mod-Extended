@@ -10,6 +10,8 @@ import net.neoforged.neoforge.event.LootTableLoadEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 
+import java.util.ArrayList;
+
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
@@ -38,6 +40,32 @@ public class GSELootInjector {
                                                     fromNamespaceAndPath(ModInfo.ID, "inject/phantom_diver")))
                                     .setWeight(1))
                             .build());
+        }
+
+        if (event.getName().toString().equals("advanced_fishing:gameplay/fishing/nether/treasure")) {
+            if (GSEConfigs.DEBUG_MODE.get()) {
+                LOGGER.info("LootTableLoadEvent event triggered. Going to inject enchanted skulls as nether fishing treasure loot.");
+            }
+
+            var table = event.getTable();
+            var targetPool = table.getPool("fishing_nether_treasure");
+            if (targetPool != null) {
+                var ref = ResourceKey.create(
+                        Registries.LOOT_TABLE,
+                        fromNamespaceAndPath(ModInfo.ID, "inject/fishing_nether_enchanted_skull"));
+                var newEntry = NestedLootTable.lootTableReference(ref)
+                        .setWeight(1)//TODO change to 10
+                        .build();
+
+                var entries = new ArrayList<>(targetPool.entries);
+                entries.add(newEntry);
+                targetPool.entries = entries;
+            } else {
+                if (GSEConfigs.DEBUG_MODE.get()) {
+                    LOGGER.info("Can't find loot pool {}", "fishing_nether_treasure");
+                }
+            }
+
         }
     }
 

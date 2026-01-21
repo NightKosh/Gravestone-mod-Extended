@@ -26,8 +26,6 @@ public class EnchantedSkeletonSkull extends Item {
                 .stacksTo(1)
                 .rarity(Rarity.RARE)
                 .enchantable(1)
-                .component(DataComponents.STORED_ENCHANTMENTS, ItemEnchantments.EMPTY)
-                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
                 .setId(RK));
     }
 

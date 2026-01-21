@@ -27,8 +27,8 @@ public class EnchantedWitherSkull extends Item {
                 .rarity(Rarity.EPIC)
                 .fireResistant()
                 .enchantable(1)
-                .component(DataComponents.STORED_ENCHANTMENTS, ItemEnchantments.EMPTY)
-                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+//                .component(DataComponents.STORED_ENCHANTMENTS, ItemEnchantments.EMPTY)
+//                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
                 .setId(RK));
     }
 
