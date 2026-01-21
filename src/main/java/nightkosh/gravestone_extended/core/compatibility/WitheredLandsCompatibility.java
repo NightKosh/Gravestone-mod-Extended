@@ -17,6 +17,8 @@ public class WitheredLandsCompatibility extends ACompatibility {
 
     public static final String WITHERED_LANDS_ID = "withered_lands";
 
+    public static final String PHANTOM_DIVER_LOOT_TABLE = "withered_lands:entities/phantom_diver";
+
     // mobs
     public static final Identifier SKELETON_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_skull_crawler");
     public static final Identifier STRAY_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "stray_skull_crawler");

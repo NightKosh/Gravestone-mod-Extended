@@ -9,6 +9,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.LootTableLoadEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility;
+import nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility;
 
 import java.util.ArrayList;
 
@@ -26,7 +28,7 @@ public class GSELootInjector {
 
     @SubscribeEvent
     public static void inject(LootTableLoadEvent event) {
-        if (event.getName().toString().equals("withered_lands:entities/phantom_diver")) {
+        if (event.getName().toString().equals(WitheredLandsCompatibility.PHANTOM_DIVER_LOOT_TABLE)) {
             if (GSEConfigs.DEBUG_MODE.get()) {
                 LOGGER.info("LootTableLoadEvent event triggered. Going to inject additional phantom_diver loot.");
             }
@@ -42,13 +44,13 @@ public class GSELootInjector {
                             .build());
         }
 
-        if (event.getName().toString().equals("advanced_fishing:gameplay/fishing/nether/treasure")) {
+        if (event.getName().toString().equals(AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_LOOT_TABLE)) {
             if (GSEConfigs.DEBUG_MODE.get()) {
                 LOGGER.info("LootTableLoadEvent event triggered. Going to inject enchanted skulls as nether fishing treasure loot.");
             }
 
             var table = event.getTable();
-            var targetPool = table.getPool("fishing_nether_treasure");
+            var targetPool = table.getPool(AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_POOL_NAME);
             if (targetPool != null) {
                 var ref = ResourceKey.create(
                         Registries.LOOT_TABLE,
@@ -62,7 +64,7 @@ public class GSELootInjector {
                 targetPool.entries = entries;
             } else {
                 if (GSEConfigs.DEBUG_MODE.get()) {
-                    LOGGER.info("Can't find loot pool {}", "fishing_nether_treasure");
+                    LOGGER.info("Can't find loot pool {}", AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_POOL_NAME);
                 }
             }
 

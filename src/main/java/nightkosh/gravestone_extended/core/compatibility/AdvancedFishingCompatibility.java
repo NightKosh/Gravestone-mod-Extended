@@ -16,6 +16,9 @@ public class AdvancedFishingCompatibility extends ACompatibility {
 
     public static final String ADVANCED_FISHING_ID = "advanced_fishing";
 
+    public static final String NETHER_FISHING_TREASURE_LOOT_TABLE = "advanced_fishing:gameplay/fishing/nether/treasure";
+    public static final String NETHER_FISHING_TREASURE_POOL_NAME = "fishing_nether_treasure";
+
     public static final Item BLUE_JELLYFISH = getFish("blue_jellyfish");
     public static final Item MAGMA_JELLYFISH = getFish("magma_jellyfish");
     public static final Item PIRANHA = getFish("piranha");
