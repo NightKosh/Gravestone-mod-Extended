@@ -47,15 +47,6 @@ public class GSRecipes {
 //                    'r', Items.REDSTONE,
 //                    's', Blocks.SOUL_SAND);
 //        }
-//
-//        // altar
-//        Item altarCrystal = (ExtendedConfig.hardAltarRecipe) ? Items.NETHER_STAR : Items.DIAMOND;
-//        GameRegistry.addShapedRecipe(new ResourceLocation(ModInfo.ID, "altar"), GROUP, new ItemStack(GSBlock.ALTAR),
-//                " h ", "sns", "bbb",
-//                'h', altarCrystal,
-//                's', new ItemStack(Items.SKULL, 1, 0),
-//                'n', new ItemStack(GSBlock.TRAP, 1, 0),
-//                'b', new ItemStack(GSBlock.BONE_BLOCK, 1, 0));
 //    }
 
     public static void smeltingRecipesRegistration() {

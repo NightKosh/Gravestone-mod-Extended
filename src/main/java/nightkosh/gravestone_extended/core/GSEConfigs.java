@@ -207,7 +207,6 @@ public class GSEConfigs {
     public static boolean craftableSpawners;
     public static boolean craftableNightStone;
     public static boolean craftableThunderStone;
-    public static boolean hardAltarRecipe;
 //
 //    private static void recipesConfigs() {
 //        // spawners recipes
@@ -216,7 +215,6 @@ public class GSEConfigs {
 //
 //        craftableNightStone = config.get(CATEGORY_RECIPES, "CraftableNightStone", true).getBoolean();
 //        craftableThunderStone = config.get(CATEGORY_RECIPES, "CraftableThunderStone", true).getBoolean();
-//        hardAltarRecipe = config.get(CATEGORY_RECIPES, "HardAltarRecipe", false).getBoolean();
 //    }
 //
 //
