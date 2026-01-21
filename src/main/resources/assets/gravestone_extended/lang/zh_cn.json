@@ -22,6 +22,9 @@
 
   "item.gravestone_extended.frozen_mirror": "Frozen Mirror",
 
+  "item.gravestone_extended.enchanted_skeleton_skull": "Enchanted Skull",
+  "item.gravestone_extended.enchanted_wither_skull": "Enchanted Wither Skull",
+
   "item.gravestone_extended.pile_of_bones": "骨堆",
   "item.gravestone_extended.pile_of_bones_skull": "颅骨骨堆",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

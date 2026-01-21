@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.gui.container.slot;
 
-import nightkosh.gravestone_extended.item.ItemEnchantedSkull;
-
 /**
  * Gravestone mod - Extended
  *

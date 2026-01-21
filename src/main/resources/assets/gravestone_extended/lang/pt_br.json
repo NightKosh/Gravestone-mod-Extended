@@ -22,6 +22,9 @@
 
   "item.gravestone_extended.frozen_mirror": "Espelho Congelado",
 
+  "item.gravestone_extended.enchanted_skeleton_skull": "Crânio Encantado",
+  "item.gravestone_extended.enchanted_wither_skull": "Crânio de Esqueleto Wither Encantado",
+
   "item.gravestone_extended.pile_of_bones": "Pilha de Ossos",
   "item.gravestone_extended.pile_of_bones_skull": "Pilha de Ossos com Crânio",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Pile of Bones with Skeleton Skull Crawler",

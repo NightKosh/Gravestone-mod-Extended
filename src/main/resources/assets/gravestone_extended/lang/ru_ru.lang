@@ -118,8 +118,6 @@ item.gravestone.raven_feather.name=Перо ворона
 item.gravestone.raven_claws.name=Лапа ворона
 item.gravestone.ooze.name=Тина
 item.gravestone.piece_of_mummy_cloth.name=Бинты мумии
-item.gravestone.enchanted_skull.name=Зачарованный череп
-item.gravestone.enchanted_skull_withered.name=Зачарованный череп иссушителя
 item.gravestone.cemetery_key.player=Ключ от кладбища
 item.gravestone.cemetery_key.server=Ключ от кладбища сервера
 

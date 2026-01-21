@@ -1,12 +1,16 @@
 package nightkosh.gravestone_extended.core;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
 
 /**
  * Gravestone mod - Extended
@@ -20,7 +24,7 @@ public class GSETabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ModInfo.ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
-            GSE_TAB.register("gravestone_extended", () -> CreativeModeTab.builder()
+            GSE_TAB.register("gravestone_extended_items_and_blocks", () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(GSEBlocks.SKULL_CANDLE_WITHER.get()))
                     .title(Component.translatable("itemGroup." + ModInfo.ID))
                     .displayItems((parameters, output) -> {
@@ -85,10 +89,35 @@ public class GSETabs {
                         output.accept(GSEBlocks.WITHERED_BRICKS.get());
 
                         output.accept(GSEBlocks.FROZEN_LAVA.get());
-
-                    })
-                    .build()
+                    }).build()
             );
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ENCHANTED_SKULLS =
+            GSE_TAB.register("gravestone_extended_enchanted_skulls", () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(GSEItems.ENCHANTED_SKELETON_SKULL.get()))
+                    .title(Component.translatable("itemGroup." + ModInfo.ID))
+                    .displayItems((parameters, output) -> {
+                        // skeleton skulls
+                        parameters.holders()
+                                .lookup(Registries.ENCHANTMENT)
+                                .ifPresent(registryLookup ->
+                                        generateEnchantedBooks(output, registryLookup, GSEItems.ENCHANTED_SKELETON_SKULL.get()));
+
+                        // wither skulls
+                        parameters.holders()
+                                .lookup(Registries.ENCHANTMENT)
+                                .ifPresent(registryLookup ->
+                                        generateEnchantedBooks(output, registryLookup, GSEItems.ENCHANTED_WITHER_SKULL.get()));
+                    }).build()
+            );
+
+
+    private static void generateEnchantedBooks(
+            CreativeModeTab.Output output, HolderLookup<Enchantment> enchantments, Item skull) {
+        enchantments.listElements()
+                .map(reference -> GSEEnchantmentHelper.createSkull(reference, skull))
+                .forEach(stack -> output.accept(stack, CreativeModeTab.TabVisibility.PARENT_TAB_ONLY));
+    }
 
 //
 //    public static CreativeTabs memorialsTab;
@@ -119,19 +148,6 @@ public class GSETabs {
 //            @SideOnly(Side.CLIENT)
 //            public ItemStack getTabIconItem() {
 //                return ZombieCorpseHelper.getDefaultCorpse();
-//            }
-//        };
-//
-//        otherItemsTab = new CreativeTabs("tabGSOther") {
-//            @Override
-//            public ItemStack getIconItemStack() {
-//                return new ItemStack(GSItem.ENCHANTED_SKULL, 1, 1);
-//            }
-//
-//            @Override
-//            @SideOnly(Side.CLIENT)
-//            public ItemStack getTabIconItem() {
-//                return new ItemStack(GSItem.ENCHANTED_SKULL, 1, 1);
 //            }
 //        };
 //    }

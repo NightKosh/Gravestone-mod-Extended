@@ -5,6 +5,8 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.item.EnchantedSkeletonSkull;
+import nightkosh.gravestone_extended.item.EnchantedWitherSkull;
 import nightkosh.gravestone_extended.item.FrozenMirror;
 import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingHelmet;
 import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingBoots;
@@ -38,7 +40,9 @@ public class GSEItems {
     public static final DeferredHolder<Item, Item> ENDER_SKULL = ITEMS_REGISTER.register("ender_skull", EnderSkull::new);
     public static final DeferredHolder<Item, Item> FROZEN_MIRROR = ITEMS_REGISTER.register("frozen_mirror", FrozenMirror::new);
 
-//    public static final Item SPAWN_EGG = new ItemGSMonsterPlacer();
+    public static final DeferredHolder<Item, Item> ENCHANTED_SKELETON_SKULL = ITEMS_REGISTER.register("enchanted_skeleton_skull", EnchantedSkeletonSkull::new);
+    public static final DeferredHolder<Item, Item> ENCHANTED_WITHER_SKULL = ITEMS_REGISTER.register("enchanted_wither_skull", EnchantedWitherSkull::new);
+
 //    public static final Item BONE_SWORD = new ItemBoneSword();
 //    public static final Item BONE_SWORD_IRON = new ItemIronBoneSword();
 //    public static final Item BONE_SWORD_GOLDEN = new ItemGoldenBoneSword();
@@ -88,7 +92,6 @@ public class GSEItems {
 //    public static final Item PIECE_OF_MUMMY_CLOTH = new ItemPieceOfMummyCloth();
 //    public static final Item RAVEN_FEATHER = new ItemRavenFeather();
 //    public static final Item RAVEN_CLAWS = new ItemRavenClaws();
-//    public static final Item ENCHANTED_SKULL = new ItemEnchantedSkull();
 
     public static void register(IEventBus eventBus) {
         ITEMS_REGISTER.register(eventBus);

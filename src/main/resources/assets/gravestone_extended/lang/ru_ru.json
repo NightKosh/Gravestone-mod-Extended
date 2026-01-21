@@ -22,6 +22,9 @@
 
   "item.gravestone_extended.frozen_mirror": "Ледяное зеркало",
 
+  "item.gravestone_extended.enchanted_skeleton_skull": "Зачарованный череп",
+  "item.gravestone_extended.enchanted_wither_skull": "Зачарованный череп иссушителя",
+
   "item.gravestone_extended.pile_of_bones": "Куча костей",
   "item.gravestone_extended.pile_of_bones_skull": "Куча костей с черепом",
   "item.gravestone_extended.pile_of_bones_skull_skeleton_crawler": "Кука костей с ползучим черепом скелета",

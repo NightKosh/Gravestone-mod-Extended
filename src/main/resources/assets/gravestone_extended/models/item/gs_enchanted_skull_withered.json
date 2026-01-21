@@ -1,7 +1,0 @@
-{
-    "parent": "gravestone-extended:item/gs_enchanted_skull",
-	"textures": {
-		"0": "gravestone-extended:items/enchanted_skull_withered",
-		"particle": "gravestone-extended:items/enchanted_skull_withered"
-	}
-}

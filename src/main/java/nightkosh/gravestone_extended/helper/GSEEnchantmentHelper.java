@@ -7,10 +7,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BoneMealItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -108,38 +110,11 @@ public class GSEEnchantmentHelper {
         }
     }
 
-//
-//    public static boolean hasEnchantment(NBTBase nbt, Enchantment enchantment) {
-//        return ((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(enchantment);
-//    }
-//
-//    public static short getEnchantmentLevel(ItemStack stack, Enchantment enchantment) {
-//        if (stack != null && stack != ItemStack.EMPTY) {
-//            NBTTagList nbtList = stack.getEnchantmentTagList();
-//            for (NBTBase nbt : nbtList) {
-//                if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(enchantment)) {
-//                    return ((NBTTagCompound) nbt).getShort("lvl");
-//                }
-//            }
-//        }
-//        return 0;
-//    }
-//
-//    public static Map<Enchantment, Integer> getSkullEnchantments(ItemStack skull) {
-//        Map<Enchantment, Integer> map = new HashMap<>();
-//        if (skull.hasTagCompound()) {
-//            addEnchantmentsToMap(map, skull.getTagCompound(), "StoredEnchantments");
-//            addEnchantmentsToMap(map, skull.getTagCompound(), "ench");
-//        }
-//
-//        return map;
-//    }
-//
-//    private static void addEnchantmentsToMap(Map<Enchantment, Integer> map, NBTTagCompound nbt, String tagName) {
-//        NBTTagList list = nbt.getTagList(tagName, 10);
-//        for (int i = 0; i < list.tagCount(); i++) {
-//            NBTTagCompound enchantmentTag = list.getCompoundTagAt(i);
-//            map.put(Enchantment.getEnchantmentByID(enchantmentTag.getShort("id")), (int) enchantmentTag.getShort("lvl"));
-//        }
-//    }
+    public static ItemStack createSkull(Holder.Reference<Enchantment> reference, Item skull) {
+        var itemstack = new ItemStack(skull);
+        var enchantment = new EnchantmentInstance(reference, reference.value().getMaxLevel());
+        itemstack.enchant(enchantment.enchantment(), enchantment.level());
+        return itemstack;
+    }
+
 }

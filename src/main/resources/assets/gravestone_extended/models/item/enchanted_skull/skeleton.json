@@ -2,13 +2,13 @@
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"ambientocclusion": false,
 	"textures": {
-		"0": "gravestone-extended:items/enchanted_skull",
-		"particle": "gravestone-extended:items/enchanted_skull"
+		"0": "gravestone_extended:item/enchanted_skull/skeleton",
+		"particle": "gravestone_extended:item/enchanted_skull/skeleton"
 	},
 	"elements": [
 		{
 			"name": "cube",
-			"from": [4, -1.6500000000000004, 4],
+			"from": [4, -1.65, 4],
 			"to": [12, 4.35, 12],
 			"faces": {
 				"north": {"uv": [4, 4, 8, 7], "texture": "#0"},
@@ -19,7 +19,7 @@
 				"down": {"uv": [8, 0, 12, 4], "texture": "#0"}
 			},
 			"rotation": {
-				"origin": [8, -1.6500000000000004, 12],
+				"origin": [8, -1.65, 12],
 				"axis": "x",
 				"angle": 22.5
 			},
@@ -27,7 +27,7 @@
 		},
 		{
 			"name": "cube",
-			"from": [6, -0.3999999999999999, 4],
+			"from": [6, -0.4, 4],
 			"to": [10, 1.1, 5],
 			"faces": {
 				"north": {"uv": [0, 7, 4, 8.5], "texture": "#0"},
@@ -38,7 +38,7 @@
 				"down": {"uv": [0, 7, 4, 8], "texture": "#0"}
 			},
 			"rotation": {
-				"origin": [8, -0.3999999999999999, 5],
+				"origin": [8, -0.4, 5],
 				"axis": "x",
 				"angle": 22.5
 			},
