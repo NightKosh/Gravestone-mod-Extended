@@ -1,11 +1,9 @@
 package nightkosh.gravestone_extended.item;
 
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.enchantment.ItemEnchantments;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
@@ -27,8 +25,6 @@ public class EnchantedWitherSkull extends Item {
                 .rarity(Rarity.EPIC)
                 .fireResistant()
                 .enchantable(1)
-//                .component(DataComponents.STORED_ENCHANTMENTS, ItemEnchantments.EMPTY)
-//                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
                 .setId(RK));
     }
 
