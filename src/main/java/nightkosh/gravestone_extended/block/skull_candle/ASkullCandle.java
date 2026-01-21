@@ -9,6 +9,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -79,6 +81,18 @@ public abstract class ASkullCandle extends Block {
 
         level.addParticle(ParticleTypes.SMOKE, xPos, yPos, zPos, 0, 0, 0);
         level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xPos, yPos, zPos, 0, 0, 0);
+    }
+
+    @Nonnull
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Nonnull
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
 }
