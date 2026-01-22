@@ -56,7 +56,7 @@ public class GSELootInjector {
                         Registries.LOOT_TABLE,
                         fromNamespaceAndPath(ModInfo.ID, "inject/fishing_nether_enchanted_skull"));
                 var newEntry = NestedLootTable.lootTableReference(ref)
-                        .setWeight(1)//TODO change to 10
+                        .setWeight(10)
                         .build();
 
                 var entries = new ArrayList<>(targetPool.entries);
