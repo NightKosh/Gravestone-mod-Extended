@@ -160,5 +160,14 @@
   "item.minecraft.potion.effect.wither": "Poción de marchitamiento",
   "item.minecraft.splash_potion.effect.wither": "Poción de área de marchitamiento",
   "item.minecraft.lingering_potion.effect.wither": "Poción persistente de marchitamiento",
-  "item.minecraft.tipped_arrow.effect.wither": "Flecha de marchitamiento"
+  "item.minecraft.tipped_arrow.effect.wither": "Flecha de marchitamiento",
+
+  "gui.gravestone_extended.altar.resurrect": "Resucitar",
+  "gui.gravestone_extended.altar.enchant": "Encantar",
+  "gui.gravestone_extended.altar.disenchant": "Desencantar",
+  "gui.gravestone_extended.altar.requirements": "%d levels",
+  "gui.gravestone_extended.altar.tab.resurrection": "Resurrección",
+  "gui.gravestone_extended.altar.tab.enchanting": "Encantamiento",
+  "gui.gravestone_extended.altar.tab.disenchanting": "Desencantamiento",
+  "gui.gravestone_extended.altar.tooltip.destroy_item": "Item will be destroyed"
 }

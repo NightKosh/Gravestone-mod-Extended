@@ -193,20 +193,6 @@ mobtype.stray=Зимогор
 mobtype.wither=Скелет-иссушитель
 mobtype.pigman=Свинозомби
 
-
-# GUI
-gui.edit_grave.title=Введите надпись
-gui.edit_grave.close=Готово
-gui.edit_grave.randomText=Ввести случайный текст
-gui.altar.resurrect=Воскресить
-gui.altar.enchant=Зачаровать
-gui.altar.disenchant=Снять чары
-gui.altar.requirements=Требуется %d уровней
-gui.altar.tab.resurrection=Воскрешение
-gui.altar.tab.enchanting=Перенос чар
-gui.altar.tab.disenchanting=Снятие чар
-
-
 # Entity
 entity.GSRaven.name=Ворон
 entity.GSSkeleton.name=Скелет

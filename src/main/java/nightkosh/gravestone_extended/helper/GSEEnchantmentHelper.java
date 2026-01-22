@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.helper;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -19,6 +20,11 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEEnchantments;
+import nightkosh.gravestone_extended.core.GSEItems;
+import org.apache.commons.lang3.tuple.Pair;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
@@ -29,6 +35,10 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class GSEEnchantmentHelper {
+
+    public static boolean isCurse(Holder<Enchantment> holder) {
+        return holder.is(EnchantmentTags.CURSE);
+    }
 
     public static int getLevel(Level level, ResourceKey<Enchantment> key, ItemStack item) {
         try {
@@ -115,6 +125,46 @@ public class GSEEnchantmentHelper {
         var enchantment = new EnchantmentInstance(reference, reference.value().getMaxLevel());
         itemstack.enchant(enchantment.enchantment(), enchantment.level());
         return itemstack;
+    }
+
+    public static List<Pair<Holder<Enchantment>, Integer>> getEnchantmentsWithLevel(ItemStack item) {
+        List<Pair<Holder<Enchantment>, Integer>> enchList = new ArrayList<>();
+        var enchants = EnchantmentHelper.getEnchantmentsForCrafting(item);
+        enchants.keySet().forEach((enchantment) ->
+                enchList.add(Pair.of(enchantment, enchants.getLevel(enchantment))));
+        return enchList;
+    }
+
+    public static int getLevelsToDisenchant(List<Pair<Holder<Enchantment>, Integer>> enchList) {
+        int requiredLevels = 0;
+        if (!enchList.isEmpty()) {
+            for (var enchantment : enchList) {
+                requiredLevels += 1 + enchantment.getValue();
+            }
+        }
+        return requiredLevels * 5;
+    }
+
+    public static int getLevelsToEnchant(List<Pair<Holder<Enchantment>, Integer>> enchList) {
+        int requiredLevels = 0;
+        if (!enchList.isEmpty()) {
+            for (var enchantment : enchList) {
+                requiredLevels += enchantment.getValue();
+            }
+        }
+        return requiredLevels * 5;
+    }
+
+    public static ItemStack transferEnchantmentToSkull(ItemStack skull, Pair<Holder<Enchantment>, Integer> enchantment) {
+        var enchantedSkull = skull.is(Items.SKELETON_SKULL) ?
+                new ItemStack(GSEItems.ENCHANTED_SKELETON_SKULL) :
+                new ItemStack(GSEItems.ENCHANTED_WITHER_SKULL);
+        enchantedSkull.enchant(enchantment.getKey(), enchantment.getValue());
+        return enchantedSkull;
+    }
+
+    public static void transferEnchantmentToItem(ItemStack item, Pair<Holder<Enchantment>, Integer> enchantment) {
+        item.enchant(enchantment.getKey(), enchantment.getValue());//TODO chack compatibility
     }
 
 }

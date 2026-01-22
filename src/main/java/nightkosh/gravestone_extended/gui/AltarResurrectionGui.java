@@ -6,9 +6,9 @@ package nightkosh.gravestone_extended.gui;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarResurrectionGui extends AltarGui {
+public class AltarResurrectionGui {//extends AAltarGui {
 
-//    private final String resurrectionButtonStr = ModGravestoneExtended.proxy.getLocalizedString("gui.altar.resurrect");
+//    private final MutableComponent resurrectionButtonStr = Component.translatable("gui.gravestone_extended.altar.resurrect");
 //
 //    public AltarResurrectionGui(InventoryPlayer inventoryPlayer, TileEntityAltar tileEntity) {
 //        super(inventoryPlayer,  tileEntity, new AltarResurrectionContainer(inventoryPlayer, tileEntity.getCorpseInventory()));
@@ -26,7 +26,7 @@ public class AltarResurrectionGui extends AltarGui {
 //    }
 //
 //    @Override
-//    protected String getButtonStr() {
+//    protected MutableComponent getButtonStr() {
 //        return resurrectionButtonStr;
 //    }
 //

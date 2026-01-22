@@ -193,20 +193,6 @@ mobtype.stray=Stray Skeleton
 mobtype.wither=Wither Skeleton
 mobtype.pigman=Zombie Pigmen
 
-
-# GUI
-gui.edit_grave.title=Set grave text
-gui.edit_grave.close=Done
-gui.edit_grave.randomText=Set random text
-gui.altar.resurrect=Resurrect
-gui.altar.enchant=Enchant
-gui.altar.disenchant=Disenchant
-gui.altar.requirements=%d levels required
-gui.altar.tab.resurrection=Resurrection
-gui.altar.tab.enchanting=Enchanting
-gui.altar.tab.disenchanting=Disenchanting
-
-
 # Entity
 entity.GSRaven.name=Raven
 entity.GSSkeleton.name=Skeleton

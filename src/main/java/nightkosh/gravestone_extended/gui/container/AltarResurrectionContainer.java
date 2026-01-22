@@ -1,8 +1,6 @@
 package nightkosh.gravestone_extended.gui.container;
 
-import nightkosh.gravestone_extended.gui.container.slot.AltarCorpseSlot;
-import nightkosh.gravestone_extended.inventory.AltarCorpseInventory;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
+import nightkosh.gravestone_extended.block_entity.inventory.CorpseInventory;
 
 /**
  * Gravestone mod - Extended
@@ -10,9 +8,9 @@ import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarResurrectionContainer {//TODO extends AltarContainer {
+public class AltarResurrectionContainer {//TODO extends AAltarContainer {
 
-    protected AltarCorpseInventory inventory;
+    protected CorpseInventory inventory;
     public static final int PLAYER_INVENTORY_ROWS_COUNT = 3;
     public static final int COLUMNS_COUNT = 9;
     public static final int SLOT_WIDTH = 18;

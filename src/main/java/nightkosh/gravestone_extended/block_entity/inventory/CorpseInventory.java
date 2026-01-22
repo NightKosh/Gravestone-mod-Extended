@@ -1,8 +1,6 @@
-package nightkosh.gravestone_extended.inventory;
+package nightkosh.gravestone_extended.block_entity.inventory;
 
-import nightkosh.gravestone_extended.tileentity.TileEntityAltar;
-
-import java.util.Arrays;
+import nightkosh.gravestone_extended.block_entity.AltarBlockEntity;
 
 /**
  * Gravestone mod - Extended
@@ -10,59 +8,27 @@ import java.util.Arrays;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class AltarDisenchantmentInventory {//TODO implements IInventory {
+public class CorpseInventory {//TODO implements IInventory {
 
-    private TileEntityAltar te;
-    private static final int SKULL_LIST_SIZE = 5;
-
-//    private ItemStack enchItem = ItemStack.EMPTY;
-//    protected ItemStack[] skulls = new ItemStack[SKULL_LIST_SIZE];
+    private AltarBlockEntity altar;
+//    private ItemStack corpse = ItemStack.EMPTY;
 //
+    public CorpseInventory(AltarBlockEntity altar) {
+        this.altar = altar;
+    }
 //
-//    public AltarDisenchantmentInventory(TileEntityAltar te) {
-//        this.te = te;
-//        Arrays.fill(skulls, ItemStack.EMPTY);
-//    }
 //
 //    public void readItems(NBTTagCompound nbtTag) {
-//        if (nbtTag.hasKey("DisenchantedItem")) {
-//            enchItem = new ItemStack(nbtTag.getCompoundTag("DisenchantedItem"));
-//        }
-//
-//        NBTTagList ntbItemsList = nbtTag.getTagList("Skulls", 10);
-//
-//        for (int i = 0; i < ntbItemsList.tagCount(); i++) {
-//            skulls[i] = new ItemStack(ntbItemsList.getCompoundTagAt(i));
+//        if (nbtTag.hasKey("Corpse")) {
+//            corpse = new ItemStack(nbtTag.getCompoundTag("Corpse"));
 //        }
 //    }
 //
 //    public void saveItems(NBTTagCompound nbtTag) {
-//        if (!enchItem.isEmpty()) {
-//            nbtTag.setTag("DisenchantedItem", enchItem.writeToNBT(new NBTTagCompound()));
+//        if (!corpse.isEmpty()) {
+//            nbtTag.setTag("Corpse", corpse.writeToNBT(new NBTTagCompound()));
 //        }
-//
-//        NBTTagList ntbList = new NBTTagList();
-//
-//        for (ItemStack stack : skulls) {
-//            if (stack != null) {
-//                NBTTagCompound nbt = new NBTTagCompound();
-//                stack.writeToNBT(nbt);
-//                ntbList.appendTag(nbt);
-//            }
-//        }
-//
-//        nbtTag.setTag("Skulls", ntbList);
 //    }
-//
-//
-//    public ItemStack getEnchItem() {
-//        return enchItem;
-//    }
-//
-//    public void setEnchItem(ItemStack enchItem) {
-//        this.enchItem = enchItem;
-//    }
-//
 //
 //    @Override
 //    public void openInventory(EntityPlayer player) {
@@ -116,30 +82,22 @@ public class AltarDisenchantmentInventory {//TODO implements IInventory {
 //
 //    @Override
 //    public int getSizeInventory() {
-//        return SKULL_LIST_SIZE + 1;
+//        return 1;
 //    }
 //
 //    @Override
 //    public boolean isEmpty() {
-//        return enchItem.isEmpty();
+//        return corpse.isEmpty();
 //    }
 //
 //    @Override
 //    public ItemStack getStackInSlot(int slot) {
-//        if (slot == 0) {
-//            return this.getEnchItem();
-//        } else {
-//            return skulls[slot - 1];
-//        }
+//        return this.corpse;
 //    }
 //
 //    @Override
 //    public void setInventorySlotContents(int slot, ItemStack stack) {
-//        if (slot == 0) {
-//            this.setEnchItem(stack);
-//        } else {
-//            skulls[slot - 1] = stack;
-//        }
+//        this.corpse = stack;
 //    }
 //
 //    @Override

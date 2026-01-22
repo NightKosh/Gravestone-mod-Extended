@@ -187,18 +187,6 @@ mobtype.stray=Stray Skeleton
 mobtype.wither=Esqueleto Wither
 mobtype.pigman=Hombrecerdo zombi
 
-# GUI
-gui.edit_grave.title=Ponga nombre a la lapida
-gui.edit_grave.close=Hecho
-gui.edit_grave.randomText=Poner nombre aleatorio
-gui.altar.resurrect=Resucitar
-gui.altar.enchant=Encantar
-gui.altar.disenchant=Desencantar
-gui.altar.requirements=%d niveles requeridos
-gui.altar.tab.resurrection=Resurrección
-gui.altar.tab.enchanting=Encantamiento
-gui.altar.tab.disenchanting=Desencantamiento
-
 
 # Entity
 entity.GSRaven.name=Cuervo

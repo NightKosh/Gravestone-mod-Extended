@@ -36,9 +36,11 @@ public class ModGravestoneExtended {
 //        GSESounds.register(eventBus);
         GSEBlocks.register(eventBus);
         GSEItems.register(eventBus);
+        GSEBlockEntities.register(eventBus);
         GSETabs.register(eventBus);
         GSEMobEffects.register(eventBus);
         GSEPotions.register(eventBus);
+        GSEMenus.register(eventBus);
     }
 
 //    @Mod.EventHandler
@@ -46,8 +48,6 @@ public class ModGravestoneExtended {
 //        GSStructures.preInit();
 //
 ////        MessageHandler.init();
-//
-//        GSTileEntity.registration();
 //
 ////        CapabilityManager.INSTANCE.register(ICemetery.class, new CemeteryStorage(), Cemetery.class);
 //

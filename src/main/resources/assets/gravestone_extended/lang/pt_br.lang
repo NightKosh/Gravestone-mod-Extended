@@ -193,22 +193,6 @@ mobtype.stray=Esqueleto Vagante
 mobtype.wither=Esqueleto Wither
 mobtype.pigman=Homem-Porco Zumbi
 
-##Backpacks
-item.backpack.undertaker.t1=Mochila do Agente Funerário
-item.backpack.undertaker.t2=Mochila Tecida do Agente Funerário
-
-# GUI
-gui.edit_grave.title=Defina o texto do túmulo
-gui.edit_grave.close=Concluído
-gui.edit_grave.randomText=Definir texto aleatório
-gui.altar.resurrect=Ressuscitar
-gui.altar.enchant=Encantar
-gui.altar.disenchant=Desencantar
-gui.altar.requirements=Níveis requeridos %d
-gui.altar.tab.resurrection=Ressurreição
-gui.altar.tab.enchanting=Encantador
-gui.altar.tab.disenchanting=Desencantado
-
 
 # Entity
 entity.GSRaven.name=Corvo

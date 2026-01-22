@@ -160,5 +160,14 @@
   "item.minecraft.potion.effect.wither": "Potion of Withering",
   "item.minecraft.splash_potion.effect.wither": "Splash Potion of Withering",
   "item.minecraft.lingering_potion.effect.wither": "Lingering Potion of Withering",
-  "item.minecraft.tipped_arrow.effect.wither": "Arrow of Withering"
+  "item.minecraft.tipped_arrow.effect.wither": "Arrow of Withering",
+
+  "gui.gravestone_extended.altar.resurrect": "Воскресити",
+  "gui.gravestone_extended.altar.enchant": "Enchant",
+  "gui.gravestone_extended.altar.disenchant": "Disenchant",
+  "gui.gravestone_extended.altar.requirements": "%d рівнів",
+  "gui.gravestone_extended.altar.tab.resurrection": "Resurrection",
+  "gui.gravestone_extended.altar.tab.enchanting": "Enchanting",
+  "gui.gravestone_extended.altar.tab.disenchanting": "Disenchanting",
+  "gui.gravestone_extended.altar.tooltip.destroy_item": "Item will be destroyed"
 }

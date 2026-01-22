@@ -101,8 +101,8 @@ item.corpse.cat_type.unknown=Neznámá
 gui.edit_grave.title=Nastav text náhrobku
 gui.edit_grave.close=Hotovo
 gui.edit_grave.randomText=Nastav náhodný text
-gui.altar.resurrect=Vzkřísit
-gui.altar.requirements=%d levelů je potřeba
+gui.altar.resurrect=
+gui.altar.requirements=
 
 # Entity
 entity.GSRaven.name=Havran

@@ -26,11 +26,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     public static final Identifier PENTAGRAM = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pentagram.png");
     public static final Identifier SPIDER_SPAWNER = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "spiderspawner.png");
 
-    // gui
-    public static final Identifier ALTAR_RESURRECTION_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/resurrection.png");
-    public static final Identifier ALTAR_ENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/enchanting.png");
-    public static final Identifier ALTAR_DISENCHANTMENT_GUI = fromNamespaceAndPath(ModInfo.ID, GUI_LOCATION + "altar/disenchanting.png");
-
     // entities
     public static final Identifier EMPTY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/empty.png");
     public static final Identifier STEVE = fromNamespaceAndPath(ModInfo.ID, "textures/entity/steve.png");

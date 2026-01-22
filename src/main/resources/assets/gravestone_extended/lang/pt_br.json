@@ -160,5 +160,14 @@
   "item.minecraft.potion.effect.wither": "Poção de Wither",
   "item.minecraft.splash_potion.effect.wither": "Poção Arremessável de Wither",
   "item.minecraft.lingering_potion.effect.wither": "Poção Prolongada de Wither",
-  "item.minecraft.tipped_arrow.effect.wither": "Flecha de Wither"
+  "item.minecraft.tipped_arrow.effect.wither": "Flecha de Wither",
+
+  "gui.gravestone_extended.altar.resurrect": "Ressuscitar",
+  "gui.gravestone_extended.altar.enchant": "Encantar",
+  "gui.gravestone_extended.altar.disenchant": "Desencantar",
+  "gui.gravestone_extended.altar.requirements": "%d levels",
+  "gui.gravestone_extended.altar.tab.resurrection": "Ressurreição",
+  "gui.gravestone_extended.altar.tab.enchanting": "Encantador",
+  "gui.gravestone_extended.altar.tab.disenchanting": "Desencantado",
+  "gui.gravestone_extended.altar.tooltip.destroy_item": "Item will be destroyed"
 }

@@ -2,14 +2,27 @@ package nightkosh.gravestone_extended.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import nightkosh.gravestone_extended.block_entity.AltarBlockEntity;
 import nightkosh.gravestone_extended.core.GSEBlocks;
-import org.jspecify.annotations.Nullable;
+
+import javax.annotation.Nonnull;
 
 /**
  * Gravestone mod - Extended
@@ -18,6 +31,8 @@ import org.jspecify.annotations.Nullable;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class Altar extends BaseEntityBlock {
+
+    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 12, 16);
 
     public static final MapCodec<Altar> CODEC = simpleCodec(Altar::new);
 
@@ -38,58 +53,52 @@ public class Altar extends BaseEntityBlock {
         return CODEC;
     }
 
+    @Nonnull
     @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return null;
+    public BlockEntity newBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state) {
+        return new AltarBlockEntity(pos, state);
     }
-//
-//    /**
-//     * Called upon block activation (right click on the block.)
-//     */
-//    @Override
-//    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-//        if (world.getTileEntity(pos) != null && !player.isSneaking()) {
-//            player.openGui(ModGravestoneExtended.instance, GuiHandler.ALTAR_RESURRECTION_GUI_ID, world, pos.getX(), pos.getY(), pos.getZ());
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isOpaqueCube(IBlockState state) {
-//        return false;
-//    }
-//
-//    @Override
-//    public BlockFaceShape getBlockFaceShape(IBlockAccess access, IBlockState state, BlockPos pos, EnumFacing facing) {
-//        return BlockFaceShape.UNDEFINED;
-//    }
-//
-//    @Override
-//    public EnumBlockRenderType getRenderType(IBlockState state) {
-//        return EnumBlockRenderType.MODEL;
-//    }
-//
-//    private static final AxisAlignedBB BB = new AxisAlignedBB(0, 0, 0, 1, 0.75F, 1);
-//
-//    @Override
-//    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess access, BlockPos pos) {
-//        return BB;
-//    }
-//
-//    @Override
-//    public TileEntity createNewTileEntity(World world, int meta) {
-//        return new TileEntityAltar();
-//    }
-//
-//    @Override
-//    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-//        TileEntityAltar tileEntity = (TileEntityAltar) world.getTileEntity(pos);
-//
-//        if (tileEntity != null) {
-//            tileEntity.dropItems();
-//        }
-//
-//        super.breakBlock(world, pos, state);
-//    }
+
+    @Override
+    public void animateTick(
+            @Nonnull BlockState state, @Nonnull Level level,
+            @Nonnull BlockPos pos, @Nonnull RandomSource random) {
+        super.animateTick(state, level, pos, random);
+
+        level.addParticle(
+                ParticleTypes.SOUL,
+                pos.getX() + random.nextFloat(),
+                pos.getY() + 1,
+                pos.getZ() + random.nextFloat(),
+                0,
+                0.01F,
+                0);
+    }
+
+    @Nonnull
+    @Override
+    protected InteractionResult useWithoutItem(
+            @Nonnull BlockState state, Level level, @Nonnull BlockPos pos,
+            @Nonnull Player player, @Nonnull BlockHitResult blockHitResult) {
+        if (!level.isClientSide() && !player.isShiftKeyDown() &&
+                level.getBlockEntity(pos) instanceof AltarBlockEntity altar) {
+            player.openMenu(altar, pos);
+        }
+
+        return InteractionResult.SUCCESS;
+    }
+
+    @Nonnull
+    @Override
+    protected VoxelShape getShape(
+            @Nonnull BlockState state, @Nonnull BlockGetter getter,
+            @Nonnull BlockPos pos, @Nonnull CollisionContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    protected boolean isPathfindable(@Nonnull BlockState state, @Nonnull PathComputationType pathComputationType) {
+        return false;
+    }
+
 }

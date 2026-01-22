@@ -160,5 +160,14 @@
   "item.minecraft.potion.effect.wither": "Зелье иссушения",
   "item.minecraft.splash_potion.effect.wither": "Взрывное зелье иссушения",
   "item.minecraft.lingering_potion.effect.wither": "Туманное зелье иссушения",
-  "item.minecraft.tipped_arrow.effect.wither": "Иссушающая стрела"
+  "item.minecraft.tipped_arrow.effect.wither": "Иссушающая стрела",
+
+  "gui.gravestone_extended.altar.resurrect": "Воскресить",
+  "gui.gravestone_extended.altar.enchant": "Зачаровать",
+  "gui.gravestone_extended.altar.disenchant": "Снять чары",
+  "gui.gravestone_extended.altar.requirements": "%d уровней",
+  "gui.gravestone_extended.altar.tab.resurrection": "Воскрешение",
+  "gui.gravestone_extended.altar.tab.enchanting": "Перенос чар",
+  "gui.gravestone_extended.altar.tab.disenchanting": "Снятие чар",
+  "gui.gravestone_extended.altar.tooltip.destroy_item": "Предмет будет уничтожен"
 }

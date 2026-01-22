@@ -90,14 +90,6 @@ item.corpse.cat_type.siamese=Siamois
 item.corpse.cat_type.unknown=Inconnu
 
 
-# GUI
-gui.edit_grave.title=Changer l'épitaphe
-gui.edit_grave.close=Fait
-gui.edit_grave.randomText=texte aléatoire
-gui.altar.resurrect=Ressusciter
-gui.altar.requirements=%d niveau demandé
-
-
 # Entity
 entity.GSRaven.name=Corbeau
 entity.Villager.gravestone-extended:undertaker=Croque-mort

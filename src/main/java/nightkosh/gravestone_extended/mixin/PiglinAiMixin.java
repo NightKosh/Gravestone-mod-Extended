@@ -1,6 +1,6 @@
 package nightkosh.gravestone_extended.mixin;
 
-import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import nightkosh.gravestone_extended.core.GSEEnchantments;
@@ -22,10 +22,10 @@ public class PiglinAiMixin {
     @Inject(method = "isWearingSafeArmor", at = @At("HEAD"), cancellable = true)
     private static void gravestone_extended$isWearingSafeArmor(
             LivingEntity wearer, CallbackInfoReturnable<Boolean> ci) {
-        for (var equipmentslot : EquipmentSlotGroup.ARMOR) {
-            if (GSEEnchantmentHelper.enchanted(wearer.level(), GSEEnchantments.GILDED_SHEEN, wearer.getItemBySlot(equipmentslot))) {
+        var armor = wearer.getItemBySlot(EquipmentSlot.CHEST);
+        if (!armor.isEmpty()) {
+            if (GSEEnchantmentHelper.enchanted(wearer.level(), GSEEnchantments.GILDED_SHEEN, armor)) {
                 ci.setReturnValue(true);
-                break;
             }
         }
     }

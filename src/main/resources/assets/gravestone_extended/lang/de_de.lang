@@ -126,19 +126,6 @@ mobtype.wither=Witherskelett
 mobtype.pigman=Schweinezombie
 
 
-# GUI
-gui.edit_grave.title=Grabtext festlegen
-gui.edit_grave.close=Fertig
-gui.edit_grave.randomText=Zufälligen Text auswählen
-gui.altar.resurrect=Wiederauferstehen
-gui.altar.enchant=Verzaubern
-gui.altar.disenchant=Entzaubern
-gui.altar.requirements=%d Level benötigt
-gui.altar.tab.resurrection=Wiederbelebung
-gui.altar.tab.enchanting=Verzaubern
-gui.altar.tab.disenchanting=Enzaubern
-
-
 # Entity
 entity.GSRaven.name=Rabe
 entity.GSSkeleton.name=Skellett

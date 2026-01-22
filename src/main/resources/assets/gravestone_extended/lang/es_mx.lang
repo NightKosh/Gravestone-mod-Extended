@@ -25,12 +25,6 @@ block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
 block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
-
-
-# GUI
-gui.edit_grave.title=Ponga nombre a la lapida
-
-
 # Entity
 entity.GSRaven.name=Cuervo
 
