@@ -23,13 +23,16 @@
           "type": "minecraft:add",
           "value": {
             "type": "minecraft:linear",
-            "base": 1,
-            "per_level_above_first": 1
+            "base": 3,
+            "per_level_above_first": 3
           }
         }
       }
     ]
   },
-  "exclusive_set": "minecraft:unbreaking",
+  "exclusive_set": [
+    "minecraft:mending",
+    "minecraft:unbreaking"
+  ],
   "supported_items": "#minecraft:enchantable/durability"
 }
