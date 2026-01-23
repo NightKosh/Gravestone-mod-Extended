@@ -3,8 +3,11 @@ package nightkosh.gravestone_extended.item;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import nightkosh.gravestone_extended.core.ModInfo;
+
+import javax.annotation.Nonnull;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
@@ -25,6 +28,11 @@ public class EnchantedSkeletonSkull extends Item {
                 .rarity(Rarity.RARE)
                 .enchantable(1)
                 .setId(RK));
+    }
+
+    @Override
+    public boolean isFoil(@Nonnull ItemStack stack) {
+        return true;
     }
 
 }
