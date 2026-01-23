@@ -51,7 +51,7 @@ public record EnchantmentMessageToServer(String playerId, int xPos, int yPos, in
                     if (!itemToEnchant.isEmpty()) {
                         var enchList = GSEEnchantmentHelper.getEnchantmentsWithLevel(enchantedSkull);
                         if (!enchList.isEmpty()) {
-                            int requiredLevels = GSEEnchantmentHelper.getLevelsToEnchant(enchList);
+                            int requiredLevels = GSEEnchantmentHelper.getLevelsToEnchant(itemToEnchant, enchList);
                             if (player.isCreative() || player.experienceLevel >= requiredLevels) {
                                 if (GSEConfigs.DEBUG_MODE.get()) {
                                     LOGGER.info("Going to enchant item py player {} at {} for {} levels",

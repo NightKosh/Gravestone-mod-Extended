@@ -106,7 +106,7 @@ public class EnchantmentContainerMenu extends AAltarContainerMenu {
             var skull = inventory.getSkull();
             if (!itemToEnchant.isEmpty() && !skull.isEmpty()) {
                 var enchList = GSEEnchantmentHelper.getEnchantmentsWithLevel(skull);
-                requiredLevels = GSEEnchantmentHelper.getLevelsToEnchant(enchList);
+                requiredLevels = GSEEnchantmentHelper.getLevelsToEnchant(itemToEnchant, enchList);
             }
         }
         return requiredLevels;

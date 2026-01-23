@@ -145,11 +145,13 @@ public class GSEEnchantmentHelper {
         return requiredLevels * 5;
     }
 
-    public static int getLevelsToEnchant(List<Pair<Holder<Enchantment>, Integer>> enchList) {
+    public static int getLevelsToEnchant(ItemStack itemToEnchant, List<Pair<Holder<Enchantment>, Integer>> enchList) {
         int requiredLevels = 0;
         if (!enchList.isEmpty()) {
             for (var enchantment : enchList) {
-                requiredLevels += enchantment.getValue();
+                if (itemToEnchant.supportsEnchantment(enchantment.getKey())) {
+                    requiredLevels += enchantment.getValue();
+                }
             }
         }
         return requiredLevels * 5;
@@ -163,8 +165,10 @@ public class GSEEnchantmentHelper {
         return enchantedSkull;
     }
 
-    public static void transferEnchantmentToItem(ItemStack item, Pair<Holder<Enchantment>, Integer> enchantment) {
-        item.enchant(enchantment.getKey(), enchantment.getValue());//TODO chack compatibility
+    public static void transferEnchantmentToItem(ItemStack itemToEnchant, Pair<Holder<Enchantment>, Integer> enchantment) {
+        if (itemToEnchant.supportsEnchantment(enchantment.getKey())) {
+            itemToEnchant.enchant(enchantment.getKey(), enchantment.getValue());
+        }
     }
 
 }
