@@ -40,6 +40,11 @@ public class DisenchantmentScreen extends AAltarScreen {
     }
 
     @Override
+    protected Component getTooltipStr() {
+        return Component.translatable("gui.gravestone_extended.altar.tooltip.destroy_item");
+    }
+
+    @Override
     protected MutableComponent getButtonStr() {
         return disenchantButtonStr;
     }

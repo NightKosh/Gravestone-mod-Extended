@@ -119,7 +119,7 @@ public abstract class AAltarScreen extends AbstractContainerScreen<AAltarContain
     }
 
     protected Component getTooltipStr() {
-        return Component.translatable("gui.gravestone_extended.altar.tooltip.destroy_item");
+        return Component.empty();
     }
 
     protected abstract void sendMessage();
