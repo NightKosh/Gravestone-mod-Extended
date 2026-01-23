@@ -14,7 +14,6 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
 
     protected static final String BLOCK_LOCATION = ":textures/blocks/";
     protected static final String FLUID_LOCATION = ":blocks/fluids/";
-    protected static final String GUI_LOCATION = ":textures/gui/";
     protected static final String PARTICLES_LOCATION = ":textures/particles/";
     protected static final String ENTITY_LOCATION = ":textures/entity/";
     protected static final String PROJECTILE_LOCATION = "projectile/";
