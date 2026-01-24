@@ -19,6 +19,8 @@
   "item.gravestone_extended.slime_chunk": "Slime Chunk",
   "item.gravestone_extended.imp_skull": "Imp Skull",
   "item.gravestone_extended.ender_skull": "Ender Skull",
+  "item.gravestone_extended.compass_tooltip.direction": "Follow the skull’s direction",
+  "item.gravestone_extended.compass_tooltip.not_found": "Structure not found",
 
   "item.gravestone_extended.frozen_mirror": "Frozen Mirror",
 

@@ -19,6 +19,8 @@
   "item.gravestone_extended.slime_chunk": "Pedaço de Gosma",
   "item.gravestone_extended.imp_skull": "Crânio de Diabrete",
   "item.gravestone_extended.ender_skull": "Cranio do Ender",
+  "item.gravestone_extended.compass_tooltip.direction": "Follow the skull’s direction",
+  "item.gravestone_extended.compass_tooltip.not_found": "Structure not found",
 
   "item.gravestone_extended.frozen_mirror": "Espelho Congelado",
 

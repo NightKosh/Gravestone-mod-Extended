@@ -19,6 +19,8 @@
   "item.gravestone_extended.slime_chunk": "Pedazo de slime",
   "item.gravestone_extended.imp_skull": "Cráneo de Imp",
   "item.gravestone_extended.ender_skull": "Cráneo de Ender",
+  "item.gravestone_extended.compass_tooltip.direction": "Follow the skull’s direction",
+  "item.gravestone_extended.compass_tooltip.not_found": "Structure not found",
 
   "item.gravestone_extended.frozen_mirror": "Espejo congelado",
 

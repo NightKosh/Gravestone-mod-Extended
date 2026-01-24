@@ -36,7 +36,7 @@ public class GSEItems {
     public static final DeferredHolder<Item, Item> DIVING_BOOTS = ITEMS_REGISTER.register("diving_boots", DivingBoots::new);
 
     public static final DeferredHolder<Item, Item> SLIME_CHUNK = ITEMS_REGISTER.register("slime_chunk", SlimeChunk::new);
-    public static final DeferredHolder<Item, Item> IMP_SKULL = ITEMS_REGISTER.register("imp_skull", ImpSkull::new);
+    public static final DeferredHolder<Item, Item> IMP_SKULL = ITEMS_REGISTER.register("imp_skull", () -> new ImpSkull());
     public static final DeferredHolder<Item, Item> ENDER_SKULL = ITEMS_REGISTER.register("ender_skull", EnderSkull::new);
     public static final DeferredHolder<Item, Item> FROZEN_MIRROR = ITEMS_REGISTER.register("frozen_mirror", FrozenMirror::new);
 

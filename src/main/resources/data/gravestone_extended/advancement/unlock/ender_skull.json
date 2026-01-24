@@ -10,7 +10,8 @@
               "minecraft:ender_eye",
               "minecraft:end_crystal",
               "minecraft:skeleton_skull",
-              "minecraft:glowstone_dust"
+              "minecraft:glowstone_dust",
+              "minecraft:wither_skeleton_skull"
             ]
           }
         ]

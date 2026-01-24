@@ -1,13 +1,33 @@
 package nightkosh.gravestone_extended.item.compass;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.GlobalPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.LodestoneTracker;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.level.Level;
+import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.helper.VanillaStructuresPositionHelper;
+import org.jspecify.annotations.Nullable;
+
+import javax.annotation.Nonnull;
+import java.util.Optional;
+import java.util.function.Consumer;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+import static net.minecraft.resources.Identifier.withDefaultNamespace;
 
 /**
  * Gravestone mod - Extended
@@ -17,8 +37,16 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  */
 public class ImpSkull extends Item {
 
+    protected static final ResourceKey<Level> UNEXISTED_DIMENSION =
+            ResourceKey.create(Registries.DIMENSION, withDefaultNamespace("unexisted_dimension"));
+    protected static final BlockPos UNEXISTED_POS = new BlockPos(0, 300, 0);
+
     private static final ResourceKey<Item> RK = ResourceKey.create(
             Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "imp_skull"));
+
+    public ImpSkull(Item.Properties properties) {
+        super(properties);
+    }
 
     public ImpSkull() {
         super(new Item.Properties()
@@ -28,65 +56,92 @@ public class ImpSkull extends Item {
                 .setId(RK));
     }
 
-    protected String getPropertyName() {
-        return "angle";
+    @Override
+    public void inventoryTick(
+            @Nonnull ItemStack compass, ServerLevel level,
+            @Nonnull Entity entity, @Nullable EquipmentSlot slot) {
+        if (!level.isClientSide()) {
+            if (entity instanceof Player player &&
+                    ((slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND))) {
+                if (isCorrectDimension(level)) {
+                    if (player.tickCount % 20 == 0) {
+                        var pos = getPos(player);
+                        if (pos != null) {
+                            boolean shouldUpdate = true;
+                            var oldTracker = compass.get(DataComponents.LODESTONE_TRACKER);
+                            if (oldTracker != null) {
+                                var oldTarget = oldTracker.target();
+                                if (oldTarget.isPresent() && oldTarget.get().pos().equals(pos)) {
+                                    shouldUpdate = false;
+                                }
+                            }
+                            if (shouldUpdate) {
+                                var target = GlobalPos.of(getLevelKey(), pos);
+                                compass.set(
+                                        DataComponents.LODESTONE_TRACKER,
+                                        new LodestoneTracker(Optional.of(target), false));
+                            }
+                        } else {
+                            setUnexistedLocation(compass);
+                        }
+                    }
+                } else {
+                    setUnexistedLocation(compass);
+                }
+            }
+        }
     }
 
-//    protected IItemPropertyGetter getPropertyGetter() {
-//        return new IItemPropertyGetter() {
-//            double rotation;
-//            double rota;
-//            long lastUpdateTick;
-//
-//            @SideOnly(Side.CLIENT)
-//            public float apply(ItemStack stack, @Nullable World world, @Nullable EntityLivingBase entity) {
-//                if (entity == null || !(entity instanceof EntityPlayer) || stack.isOnItemFrame()) {
-//                    return 0;
-//                } else {
-//                    if (world == null) {
-//                        world = entity.world;
-//                    }
-//
-//                    double d0;
-//
-//                    if (isCorrectDimension(world)) {
-//                        double rotationYaw = MathHelper.positiveModulo(entity.rotationYaw / 360D, 1);
-//                        double d2 = this.getPosToAngle((EntityPlayer) entity) / (Math.PI * 2);
-//                        d0 = 0.5 - (rotationYaw - 0.25 - d2);
-//                    } else {
-//                        d0 = Math.random();
-//                    }
-//
-//                    return MathHelper.positiveModulo((float) this.wobble(world, d0), 1);
-//                }
-//            }
-//
-//            @SideOnly(Side.CLIENT)
-//            private double wobble(World world, double d0) {
-//                if (world.getTotalWorldTime() != this.lastUpdateTick) {
-//                    this.lastUpdateTick = world.getTotalWorldTime();
-//                    d0 = MathHelper.positiveModulo(d0 - this.rotation + 0.5, 1) - 0.5;
-//                    this.rota += d0 * 0.1;
-//                    this.rota *= 0.8;
-//                    this.rotation = MathHelper.positiveModulo(this.rotation + this.rota, 1);
-//                }
-//
-//                return this.rotation;
-//            }
-//
-//            @SideOnly(Side.CLIENT)
-//            private double getPosToAngle(EntityPlayer player) {
-//                BlockPos pos = getPos(player);
-//                return Math.atan2(pos.getZ() - player.posZ, pos.getX() - player.posX);
-//            }
-//        };
-//    }
-//
-//    protected boolean isCorrectDimension(World world) {
-//        return world.provider.isNether();
-//    }
-//
-//    protected BlockPos getPos(EntityPlayer player) {
-//        return VanillaStructuresPosition.getNetherFortress(player);
-//    }
+    @Override
+    public void appendHoverText(
+            @Nonnull ItemStack stack, @Nonnull Item.TooltipContext context,
+            @Nonnull TooltipDisplay tooltipDisplay, @Nonnull Consumer<Component> consumer,
+            @Nonnull TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltipDisplay, consumer, flag);
+
+        var tracker = stack.get(DataComponents.LODESTONE_TRACKER);
+        if (tracker != null) {
+            var targetOpt = tracker.target();
+            if (targetOpt.isPresent()) {
+                if (!targetOpt.get().dimension().equals(UNEXISTED_DIMENSION)) {
+                    consumer.accept(Component.translatable("item.gravestone_extended.compass_tooltip.direction"));
+                    if (GSEConfigs.DEBUG_MODE.get()) {
+                        consumer.accept(Component.literal(targetOpt.get().pos().toShortString()));
+                    }
+                    return;
+                }
+            }
+        }
+        consumer.accept(Component.translatable("item.gravestone_extended.compass_tooltip.not_found"));
+    }
+
+    protected void setUnexistedLocation(ItemStack compass) {
+        var tracker = compass.get(DataComponents.LODESTONE_TRACKER);
+        if (tracker != null) {
+            var targetOpt = tracker.target();
+            if (targetOpt.isPresent()) {
+                if (targetOpt.get().dimension().equals(UNEXISTED_DIMENSION)) {
+                    return;
+                }
+            }
+        }
+
+        var target = GlobalPos.of(UNEXISTED_DIMENSION, UNEXISTED_POS);
+        compass.set(
+                DataComponents.LODESTONE_TRACKER,
+                new LodestoneTracker(Optional.of(target), true));
+    }
+
+    protected boolean isCorrectDimension(Level level) {
+        return level.dimension() == Level.NETHER;
+    }
+
+    protected ResourceKey<Level> getLevelKey() {
+        return Level.NETHER;
+    }
+
+    protected BlockPos getPos(Player player) {
+        return VanillaStructuresPositionHelper.getNetherFortress(player);
+    }
+
 }

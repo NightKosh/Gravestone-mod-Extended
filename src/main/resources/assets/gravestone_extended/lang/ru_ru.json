@@ -19,6 +19,8 @@
   "item.gravestone_extended.slime_chunk": "Кусок слизи",
   "item.gravestone_extended.imp_skull": "Череп беса",
   "item.gravestone_extended.ender_skull": "Череп края",
+  "item.gravestone_extended.compass_tooltip.direction": "Следуйте по направлению черепа",
+  "item.gravestone_extended.compass_tooltip.not_found": "Объект не найден",
 
   "item.gravestone_extended.frozen_mirror": "Ледяное зеркало",
 
