@@ -25,7 +25,7 @@ public class GSETabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRAVESTONE_EXTENDED =
             GSE_TAB.register("gravestone_extended_items_and_blocks", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(GSEBlocks.SKULL_CANDLE_WITHER.get()))
+                    .icon(() -> new ItemStack(GSEItems.IMP_SKULL.get()))
                     .title(Component.translatable("itemGroup." + ModInfo.ID))
                     .displayItems((parameters, output) -> {
 
