@@ -125,7 +125,7 @@ public class GSEBrewingRecipes {
                     PotionContents.createItemStack(Items.POTION, GSEPotions.RUST_POTION));
 
             event.getBuilder().addRecipe(
-                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, GSEPotions.RUST_POTION))
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(BONE_FISH),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.BONE_SKIN_POTION));
