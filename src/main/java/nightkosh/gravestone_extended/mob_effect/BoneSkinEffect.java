@@ -4,7 +4,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
-import nightkosh.gravestone_extended.core.GSEMobEffects;
+import nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility;
 
 import javax.annotation.Nonnull;
 
@@ -23,8 +23,11 @@ public class BoneSkinEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
         if (!level.isClientSide()) {
-            if (entity.hasEffect(GSEMobEffects.RUST)) {
-                entity.removeEffect(GSEMobEffects.RUST);
+            if (WitheredLandsCompatibility.loaded()) {
+                var rustEffect = WitheredLandsCompatibility.getRustEffect();
+                if (rustEffect != null && entity.hasEffect(rustEffect)) {
+                    entity.removeEffect(rustEffect);
+                }
             }
         }
 

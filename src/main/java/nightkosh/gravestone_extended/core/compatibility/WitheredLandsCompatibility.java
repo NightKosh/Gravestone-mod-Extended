@@ -1,11 +1,14 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
 /**
  * Gravestone mod - Extended
@@ -33,6 +36,7 @@ public class WitheredLandsCompatibility extends ACompatibility {
     // effects
     public static final Identifier BLEEDING_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "bleeding");
     public static final Identifier CALL_OF_THE_ABYSS_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "call_of_the_abyss");
+    public static final Identifier RUST_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "rust");
 
     // items
     public static final Item SLIME_GEL = getItem("slime_gel");
@@ -43,6 +47,15 @@ public class WitheredLandsCompatibility extends ACompatibility {
         return holder.isPresent() ?
                 holder.get().value() :
                 Items.NETHER_STAR;
+    }
+
+    public static Holder.Reference<MobEffect> getRustEffect() {
+        var effect = BuiltInRegistries.MOB_EFFECT.get(RUST_EFFECT);
+        if (!effect.isPresent()) {
+            LOGGER.info("Missing effect: " + RUST_EFFECT);
+            return null;
+        }
+        return effect.get();
     }
 
     public static boolean loaded() {

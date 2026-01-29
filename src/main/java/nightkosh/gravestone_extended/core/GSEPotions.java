@@ -10,8 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.helper.TimeHelper;
 
-import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.BLEEDING_EFFECT;
-import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.CALL_OF_THE_ABYSS_EFFECT;
+import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.*;
 
 /**
  * Gravestone mod - Extended
@@ -91,8 +90,13 @@ public class GSEPotions {
                     new Potion("blizzard", new MobEffectInstance(GSEMobEffects.BLIZZARD, TimeHelper.SECONDS_90, 0)));
 
     public static final DeferredHolder<Potion, Potion> RUST_POTION =
-            POTIONS.register("rust", () ->
-                    new Potion("rust", new MobEffectInstance(GSEMobEffects.RUST, TimeHelper.SECONDS_30, 0)));
+            POTIONS.register("rust", () -> {
+                var effect = BuiltInRegistries.MOB_EFFECT.get(RUST_EFFECT);
+                if (!effect.isPresent()) {
+                    throw new IllegalStateException("Missing effect: " + RUST_EFFECT);
+                }
+                return new Potion("rust", new MobEffectInstance(effect.get(), TimeHelper.SECONDS_30, 0));
+            });
 
     public static final DeferredHolder<Potion, Potion> BONE_SKIN_POTION =
             POTIONS.register("bone_skin", () ->

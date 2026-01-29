@@ -36,9 +36,6 @@ public class GSEMobEffects {
     public static final DeferredHolder<MobEffect, MobEffect> BLIZZARD =
             EFFECTS.register("blizzard", BlizzardEffect::new);
 
-    public static final DeferredHolder<MobEffect, MobEffect> RUST =
-            EFFECTS.register("rust", RustEffect::new);
-
     public static final DeferredHolder<MobEffect, MobEffect> BONE_SKIN =
             EFFECTS.register("bone_skin", BoneSkinEffect::new);
 
