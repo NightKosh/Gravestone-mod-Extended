@@ -195,7 +195,6 @@ mobtype.pigman=Свинозомби
 
 # Entity
 entity.GSRaven.name=Ворон
-entity.GSSkeleton.name=Скелет
 entity.Villager.gravestone-extended:undertaker=Гробовщик
 
 # Fluids

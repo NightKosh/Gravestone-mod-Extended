@@ -190,7 +190,6 @@ mobtype.pigman=Hombrecerdo zombi
 
 # Entity
 entity.GSRaven.name=Cuervo
-entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Enterrador
 
 # Fluids

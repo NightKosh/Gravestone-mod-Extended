@@ -196,7 +196,6 @@ mobtype.pigman=Homem-Porco Zumbi
 
 # Entity
 entity.GSRaven.name=Corvo
-entity.GSSkeleton.name=Esqueleto
 entity.Villager.gravestone-extended:undertaker=Agente Funerário
 
 # Fluids

@@ -195,7 +195,6 @@ mobtype.pigman=Zombie Pigmen
 
 # Entity
 entity.GSRaven.name=Raven
-entity.GSSkeleton.name=Skeleton
 entity.Villager.gravestone-extended:undertaker=Undertaker
 
 # Fluids
