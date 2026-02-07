@@ -100,7 +100,7 @@ public abstract class AAltarScreen extends AbstractContainerScreen<AAltarContain
         guiGraphics.drawString(this.font,
                 String.format(requirementsStr.getString(), getLevel()),
                 100, 69,
-                -12566464,
+                0xFF404040,
                 false);
     }
 
