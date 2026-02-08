@@ -1,6 +1,7 @@
 {
 	"format_version": "1.21.11",
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"render_type": "translucent",
 	"ambientocclusion": false,
 	"textures": {
 		"candle": "block/candle_lit",
