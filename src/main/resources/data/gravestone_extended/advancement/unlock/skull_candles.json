@@ -27,9 +27,21 @@
       "gravestone_extended:skull_candle/skeleton",
       "gravestone_extended:skull_candle/zombie",
       "gravestone_extended:skull_candle/wither",
+      "gravestone_extended:skull_candle/bogged",
+      "gravestone_extended:skull_candle/drowned",
+      "gravestone_extended:skull_candle/husk",
+      "gravestone_extended:skull_candle/parched",
+      "gravestone_extended:skull_candle/piglin",
+      "gravestone_extended:skull_candle/stray",
       "gravestone_extended:skull_candle/to_skeleton_skull",
       "gravestone_extended:skull_candle/to_wither_skull",
-      "gravestone_extended:skull_candle/to_zombie_skull"
+      "gravestone_extended:skull_candle/to_zombie_skull",
+      "gravestone_extended:skull_candle/to_bogged_skull",
+      "gravestone_extended:skull_candle/to_drowned_skull",
+      "gravestone_extended:skull_candle/to_husk_skull",
+      "gravestone_extended:skull_candle/to_parched_skull",
+      "gravestone_extended:skull_candle/to_piglin_skull",
+      "gravestone_extended:skull_candle/to_stray_skull"
     ]
   }
 }
