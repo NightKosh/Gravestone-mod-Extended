@@ -6,6 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block_entity.AltarBlockEntity;
+import nightkosh.gravestone_extended.block_entity.GSESpawnerBlockEntity;
 
 /**
  * Gravestone mod - Extended
@@ -17,6 +18,14 @@ public class GSEBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES_REGISTER =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, ModInfo.ID);
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GSESpawnerBlockEntity>> SPAWNER =
+            BLOCK_ENTITIES_REGISTER.register(
+                    "spawner_block_entity",
+                    () -> new BlockEntityType<>(
+                            GSESpawnerBlockEntity::new,
+                            GSEBlocks.SPAWNER_SKELETON.get()
+                    ));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AltarBlockEntity>> ALTAR =
             BLOCK_ENTITIES_REGISTER.register(

@@ -25,11 +25,6 @@ block.trap.night.name=午夜石
 block.trap.thunder.name=雷电石
 block.trap.curse=暗夜正在降临！
 
-## Spawners
-block.spawner.wither.name=凋灵刷怪笼
-block.spawner.skeleton.name=骷髅刷怪笼
-block.spawner.zombie.name=僵尸刷怪笼
-
 ## Chests
 block.haunted_chest.bats_chest.name=带着蝙蝠的箱子
 block.haunted_chest.skeleton_chest.name=带着骷髅的箱子

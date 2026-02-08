@@ -1,5 +1,7 @@
 package nightkosh.gravestone_extended.block_entity;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 import nightkosh.gravestone_extended.block.enums.EnumSpawner;
 
 /**
@@ -8,7 +10,7 @@ import nightkosh.gravestone_extended.block.enums.EnumSpawner;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class MobSpawner extends Spawner {
+public class MobSpawner extends GSESpawnerBlockEntity {
 
     private static final int BASE_DELAY = 60;
     private static final int MIN_DELAY = 600;
@@ -18,6 +20,10 @@ public class MobSpawner extends Spawner {
     private static final int SPAWN_EFFECTS_DELAY = 20;
     private static final float MAX_LIGHT_VALUE = 0.46F;
     private EnumSpawner spawnerType = null;
+
+    public MobSpawner(BlockPos pos, BlockState blockState) {
+        super(pos, blockState);
+    }
 //
 //    public MobSpawner(ISpawnerEntity tileEntity) {
 //        super(tileEntity, BASE_DELAY);

@@ -27,12 +27,6 @@ block.trap.night.name=Камень тьмы
 block.trap.thunder.name=Грозовой камень
 block.trap.curse=Тьма приближается!
 
-## Spawners
-block.spawner.wither.name=Спаунер иссушителей
-block.spawner.skeleton.name=Спаунер скелетов
-block.spawner.zombie.name=Спаунер зомби
-block.spawner.spider.name=Спаунер пауков
-
 ## Chests
 block.haunted_chest.bats_chest.name=Сундук с летучими мышами
 block.haunted_chest.skeleton_chest.name=Сундук со скелетом

@@ -11,6 +11,17 @@
   "item.gravestone_extended.skull_candle_parched": "Parched Skull Candle",
   "item.gravestone_extended.skull_candle_piglin": "Zombified Piglin Skull Candle",
 
+  "item.gravestone_extended.spawner_skeleton": "Gerador de Esqueleto",
+  "item.gravestone_extended.spawner_stray": "Stray Spawner",
+  "item.gravestone_extended.spawner_bogged": "Bogged Spawner",
+  "item.gravestone_extended.spawner_parched": "Parched Spawner",
+  "item.gravestone_extended.spawner_wither": "Gerador de Wither",
+  "item.gravestone_extended.spawner_zombie": "Gerador de Zumbi",
+  "item.gravestone_extended.spawner_husk": "Husk Spawner",
+  "item.gravestone_extended.spawner_drowned": "Drowned Spawner",
+  "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
+  "item.gravestone_extended.spawner_spider": "Gerador de Aranha",
+
   "item.gravestone_extended.bone_shield": "Escudo de Osso",
 
   "item.gravestone_extended.diving_helmet": "Capacete de Mergulho",

@@ -11,6 +11,17 @@
   "item.gravestone_extended.skull_candle_parched": "Череп пустынника со свечой",
   "item.gravestone_extended.skull_candle_piglin": "Череп свинозомби со свечой",
 
+  "item.gravestone_extended.spawner_skeleton": "Спаунер скелетов",
+  "item.gravestone_extended.spawner_stray": "Спаунер зимогоров",
+  "item.gravestone_extended.spawner_bogged": "Спаунер болотников",
+  "item.gravestone_extended.spawner_parched": "Спаунер пустынников",
+  "item.gravestone_extended.spawner_wither": "Спаунер иссушителя",
+  "item.gravestone_extended.spawner_zombie": "Спаунер зомби",
+  "item.gravestone_extended.spawner_husk": "Спаунер кадавров",
+  "item.gravestone_extended.spawner_drowned": "Спаунер утопленников",
+  "item.gravestone_extended.spawner_piglin": "Спаунер свинозомби",
+  "item.gravestone_extended.spawner_spider": "Спаунер пауков",
+
   "item.gravestone_extended.bone_shield": "Костяной щит",
 
   "item.gravestone_extended.diving_helmet": "Водолазный шлем",

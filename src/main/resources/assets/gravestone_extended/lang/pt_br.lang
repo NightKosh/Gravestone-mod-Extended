@@ -27,12 +27,6 @@ block.trap.night.name=Pedra da Noite
 block.trap.thunder.name=Pedra do Trovão
 block.trap.curse=A escuridão está vindo!
 
-## Spawners
-block.spawner.wither.name=Gerador de Wither
-block.spawner.skeleton.name=Gerador de Esqueleto
-block.spawner.zombie.name=Gerador de Zumbi
-block.spawner.spider.name=Gerador de Aranha
-
 ## Chests
 block.haunted_chest.bats_chest.name=Baú com Morcegos
 block.haunted_chest.skeleton_chest.name=Baú com Esqueleto

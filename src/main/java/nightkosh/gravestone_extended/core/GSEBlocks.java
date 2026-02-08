@@ -82,6 +82,106 @@ public class GSEBlocks {
     public static final DeferredHolder<Block, Block> SKULL_CANDLE_STRAY = registerBlock("skull_candle_stray",
             () -> new SkullCandle(SKULL_CANDLE_STRAY_RK));
 
+    // spawners
+    public static final ResourceKey SPAWNER_SKELETON_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_skeleton"));
+    public static final DeferredHolder<Block, Block> SPAWNER_SKELETON = registerBlock("spawner_skeleton",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_SKELETON.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_SKELETON_RK)));
+
+    public static final ResourceKey SPAWNER_STRAY_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_stray"));
+    public static final DeferredHolder<Block, Block> SPAWNER_STRAY = registerBlock("spawner_stray",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_STRAY.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_STRAY_RK)));
+
+    public static final ResourceKey SPAWNER_BOGGED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_bogged"));
+    public static final DeferredHolder<Block, Block> SPAWNER_BOGGED = registerBlock("spawner_bogged",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_BOGGED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_BOGGED_RK)));
+
+    public static final ResourceKey SPAWNER_PARCHED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_parched"));
+    public static final DeferredHolder<Block, Block> SPAWNER_PARCHED = registerBlock("spawner_parched",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_PARCHED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_PARCHED_RK)));
+
+    public static final ResourceKey SPAWNER_WITHER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_wither"));
+    public static final DeferredHolder<Block, Block> SPAWNER_WITHER = registerBlock("spawner_wither",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_WITHER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_WITHER_RK)));
+
+    public static final ResourceKey SPAWNER_ZOMBIE_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_zombie"));
+    public static final DeferredHolder<Block, Block> SPAWNER_ZOMBIE = registerBlock("spawner_zombie",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_ZOMBIE.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_ZOMBIE_RK)));
+
+    public static final ResourceKey SPAWNER_HUSK_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_husk"));
+    public static final DeferredHolder<Block, Block> SPAWNER_HUSK = registerBlock("spawner_husk",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_HUSK.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_HUSK_RK)));
+
+    public static final ResourceKey SPAWNER_DROWNED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_drowned"));
+    public static final DeferredHolder<Block, Block> SPAWNER_DROWNED = registerBlock("spawner_drowned",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_DROWNED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_DROWNED_RK)));
+
+    public static final ResourceKey SPAWNER_PIGLIN_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_piglin"));
+    public static final DeferredHolder<Block, Block> SPAWNER_PIGLIN = registerBlock("spawner_piglin",
+            GSESpawner::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_PIGLIN.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_PIGLIN_RK)));
+
     // pile of bones
     public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
             Registries.BLOCK,

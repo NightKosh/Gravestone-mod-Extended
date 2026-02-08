@@ -27,12 +27,6 @@ block.trap.night.name=Камінь темряви
 block.trap.thunder.name=Грозовий камінь
 block.trap.curse=Темрява наближається!
 
-## Spawners
-block.spawner.wither.name=Спавнер висушувачів
-block.spawner.skeleton.name=Спавнер скелетів
-block.spawner.zombie.name=Спавнер зомбі
-block.spawner.spider.name=Спавнер павуків
-
 ## Chests
 block.haunted_chest.bats_chest.name=Скриня з кажанами
 block.haunted_chest.skeleton_chest.name=Скриня зі скелетом

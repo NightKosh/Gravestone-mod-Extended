@@ -27,12 +27,6 @@ block.trap.night.name=Nachtstein
 block.trap.thunder.name=Donnerstein
 block.trap.curse=Die Dunkelheit bricht ein!
 
-## Spawners
-block.spawner.wither.name=Witherspawner
-block.spawner.skeleton.name=Skelettspawner
-block.spawner.zombie.name=Zombiespawner
-block.spawner.spider.name=Spinnenspawner
-
 ## Chests
 block.haunted_chest.bats_chest.name=Fledermauskiste
 block.haunted_chest.skeleton_chest.name=Skelettkiste

@@ -27,11 +27,6 @@ block.trap.night.name=Noční kámen
 block.trap.thunder.name=Bleskový kámen
 block.trap.curse=Temnota přichází!
 
-## Spawners
-block.spawner.wither.name=Spawner na withera
-block.spawner.skeleton.name=Spawner na kostlivce
-block.spawner.zombie.name=Spawner na zombie
-
 ## Chests
 block.haunted_chest.bats_chest.name=Bedna s netopýry
 block.haunted_chest.skeleton_chest.name=Bedna s kostlivcem

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gravestone_extended:block/spawner/zombie"
+    }
+  }
+}

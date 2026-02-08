@@ -18,11 +18,6 @@ block.trap.night.name=Pierre nocturne
 block.trap.thunder.name=Pierre de tonnerre
 block.trap.curse=Les ténèbres approchent !
 
-## Spawners
-block.spawner.wither.name=Spawner à sorcière
-block.spawner.skeleton.name=Spawner à squelette
-block.spawner.zombie.name=Spawner à zombie
-
 ## Chests
 block.haunted_chest.bats_chest.name=Coffre à chauve-souris
 block.haunted_chest.skeleton_chest.name=Coffre à squelette

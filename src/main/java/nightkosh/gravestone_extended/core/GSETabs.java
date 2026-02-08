@@ -53,6 +53,17 @@ public class GSETabs {
                         output.accept(GSEItems.SKULL_CANDLE_DROWNED.get());
                         output.accept(GSEItems.SKULL_CANDLE_PIGLIN.get());
 
+                        // spawners
+                        output.accept(GSEBlocks.SPAWNER_SKELETON.get());
+                        output.accept(GSEBlocks.SPAWNER_STRAY.get());
+                        output.accept(GSEBlocks.SPAWNER_BOGGED.get());
+                        output.accept(GSEBlocks.SPAWNER_PARCHED.get());
+                        output.accept(GSEBlocks.SPAWNER_WITHER.get());
+                        output.accept(GSEBlocks.SPAWNER_ZOMBIE.get());
+                        output.accept(GSEBlocks.SPAWNER_HUSK.get());
+                        output.accept(GSEBlocks.SPAWNER_DROWNED.get());
+                        output.accept(GSEBlocks.SPAWNER_PIGLIN.get());
+
                         output.accept(GSEBlocks.WITHERED_GLASS.get());
                         output.accept(GSEBlocks.WITHERED_BRICKS.get());
 

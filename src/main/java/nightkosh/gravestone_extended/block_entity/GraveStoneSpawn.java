@@ -1,12 +1,19 @@
 package nightkosh.gravestone_extended.block_entity;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
+
 /**
  * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GraveStoneSpawn extends Spawner {
+public class GraveStoneSpawn extends GSESpawnerBlockEntity {
+
+    public GraveStoneSpawn(BlockPos pos, BlockState blockState) {
+        super(pos, blockState);
+    }
 //
 //    private TileEntityGraveStone tileEntity;
 //    private static final int BASE_DELAY = 600;
