@@ -2,6 +2,7 @@ package nightkosh.gravestone_extended.core;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
@@ -10,12 +11,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.bone_block.*;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
-import nightkosh.gravestone_extended.item.itemblock.BIWitheredBricks;
-import nightkosh.gravestone_extended.item.itemblock.BIFrozenLava;
-import nightkosh.gravestone_extended.item.itemblock.BIAltar;
-import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
-import nightkosh.gravestone_extended.item.itemblock.BIWitheredGlass;
-import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
 
 import java.util.function.Supplier;
 
@@ -28,7 +23,7 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class GSEBlocks {
-    
+
     public static final DeferredRegister<Block> BLOCKS_REGISTER =
             DeferredRegister.create(Registries.BLOCK, ModInfo.ID);
 
@@ -93,77 +88,121 @@ public class GSEBlocks {
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES = registerBlock("pile_of_bones",
             PileOfBones::new,
-            BIPileOfBones::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL = registerBlock("pile_of_bones_skull",
             PileOfBonesSkull::new,
-            BIPileOfBonesSkull::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_SKELETON_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_skeleton_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_SKELETON = registerBlock("pile_of_bones_skull_skeleton_crawler",
             PileOfBonesSkeleton::new,
-            BIPileOfBonesSkeleton::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_SKELETON.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_SKELETON_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_STRAY_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_stray_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_STRAY = registerBlock("pile_of_bones_skull_stray_crawler",
             PileOfBonesStray::new,
-            BIPileOfBonesStray::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_STRAY.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_STRAY_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_BOGGED_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_bogged_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_BOGGED = registerBlock("pile_of_bones_skull_bogged_crawler",
             PileOfBonesBogged::new,
-            BIPileOfBonesBogged::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_BOGGED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_BOGGED_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_PARCHED_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_parched_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_PARCHED = registerBlock("pile_of_bones_skull_parched_crawler",
             PileOfBonesParched::new,
-            BIPileOfBonesParched::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_PARCHED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_PARCHED_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_WITHER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_wither_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_WITHER = registerBlock("pile_of_bones_skull_wither_crawler",
             PileOfBonesWither::new,
-            BIPileOfBonesWither::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_WITHER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_WITHER_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_ZOMBIE_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_zombie_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_ZOMBIE = registerBlock("pile_of_bones_skull_zombie_crawler",
             PileOfBonesZombie::new,
-            BIPileOfBonesZombie::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_HUSK_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_husk_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_HUSK = registerBlock("pile_of_bones_skull_husk_crawler",
             PileOfBonesHusk::new,
-            BIPileOfBonesHusk::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_HUSK.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_HUSK_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_DROWNED_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_drowned_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_DROWNED = registerBlock("pile_of_bones_skull_drowned_crawler",
             PileOfBonesDrowned::new,
-            BIPileOfBonesDrowned::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_DROWNED.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_DROWNED_RK)));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_PIGLIN_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "pile_of_bones_skull_piglin_crawler"));
     public static final DeferredHolder<Block, Block> PILE_OF_BONES_SKULL_PIGLIN = registerBlock("pile_of_bones_skull_piglin_crawler",
             PileOfBonesPiglin::new,
-            BIPileOfBonesPiglin::new);
+            () -> new BlockItem(
+                    GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN_RK)));
 
     // bone blocks
     public static final ResourceKey BONE_BLOCK_RK = ResourceKey.create(
@@ -171,154 +210,242 @@ public class GSEBlocks {
             fromNamespaceAndPath(ModInfo.ID, "bone_block"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK = registerBlock("bone_block",
             BoneBlock::new,
-            BIBoneBlock::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL = registerBlock("bone_block_skull",
             BoneBlockSkull::new,
-            BIBoneBlockSkull::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_RK)));
 
     public static final ResourceKey BONE_SLAB_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_slab"));
     public static final DeferredHolder<Block, Block> BONE_SLAB = registerBlock("bone_slab",
             BoneSlab::new,
-            BIBoneSlab::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_SLAB.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_SLAB_RK)));
 
     public static final ResourceKey BONE_STAIRS_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_stairs"));
     public static final DeferredHolder<Block, Block> BONE_STAIRS = registerBlock("bone_stairs",
             BoneStairs::new,
-            BIBoneStairs::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_STAIRS.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_STAIRS_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skeleton_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKELETON_CRAWLER = registerBlock("bone_block_skeleton_crawler",
             BoneBlockSkeletonCrawler::new,
-            BIBoneBlockSkeletonCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_skeleton_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_SKELETON_CRAWLER = registerBlock("bone_block_skull_skeleton_crawler",
             BoneBlockSkullSkeletonCrawler::new,
-            BIBoneBlockSkullSkeletonCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_STRAY_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_stray_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_STRAY_CRAWLER = registerBlock("bone_block_stray_crawler",
             BoneBlockStrayCrawler::new,
-            BIBoneBlockStrayCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_STRAY_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_STRAY_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_STRAY_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_stray_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_STRAY_CRAWLER = registerBlock("bone_block_skull_stray_crawler",
             BoneBlockSkullStrayCrawler::new,
-            BIBoneBlockSkullStrayCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_BOGGED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_bogged_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_BOGGED_CRAWLER = registerBlock("bone_block_bogged_crawler",
             BoneBlockBoggedCrawler::new,
-            BIBoneBlockBoggedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_bogged_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_BOGGED_CRAWLER = registerBlock("bone_block_skull_bogged_crawler",
             BoneBlockSkullBoggedCrawler::new,
-            BIBoneBlockSkullBoggedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_PARCHED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_parched_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_PARCHED_CRAWLER = registerBlock("bone_block_parched_crawler",
             BoneBlockParchedCrawler::new,
-            BIBoneBlockParchedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_parched_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_PARCHED_CRAWLER = registerBlock("bone_block_skull_parched_crawler",
             BoneBlockSkullParchedCrawler::new,
-            BIBoneBlockSkullParchedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_WITHER_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_wither_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_WITHER_CRAWLER = registerBlock("bone_block_wither_crawler",
             BoneBlockWitherCrawler::new,
-            BIBoneBlockWitherCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_WITHER_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_WITHER_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_WITHER_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_wither_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_WITHER_CRAWLER = registerBlock("bone_block_skull_wither_crawler",
             BoneBlockSkullWitherCrawler::new,
-            BIBoneBlockSkullWitherCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_ZOMBIE_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_zombie_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_ZOMBIE_CRAWLER = registerBlock("bone_block_zombie_crawler",
             BoneBlockZombieCrawler::new,
-            BIBoneBlockZombieCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_zombie_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_ZOMBIE_CRAWLER = registerBlock("bone_block_skull_zombie_crawler",
             BoneBlockSkullZombieCrawler::new,
-            BIBoneBlockSkullZombieCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_HUSK_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_husk_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_HUSK_CRAWLER = registerBlock("bone_block_husk_crawler",
             BoneBlockHuskCrawler::new,
-            BIBoneBlockHuskCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_HUSK_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_HUSK_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_HUSK_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_husk_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_HUSK_CRAWLER = registerBlock("bone_block_skull_husk_crawler",
             BoneBlockSkullHuskCrawler::new,
-            BIBoneBlockSkullHuskCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_DROWNED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_drowned_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_DROWNED_CRAWLER = registerBlock("bone_block_drowned_crawler",
             BoneBlockDrownedCrawler::new,
-            BIBoneBlockDrownedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_drowned_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_DROWNED_CRAWLER = registerBlock("bone_block_skull_drowned_crawler",
             BoneBlockSkullDrownedCrawler::new,
-            BIBoneBlockSkullDrownedCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_PIGLIN_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_piglin_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_PIGLIN_CRAWLER = registerBlock("bone_block_piglin_crawler",
             BoneBlockPiglinCrawler::new,
-            BIBoneBlockPiglinCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER_RK)));
 
     public static final ResourceKey BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "bone_block_skull_piglin_crawler"));
     public static final DeferredHolder<Block, Block> BONE_BLOCK_SKULL_PIGLIN_CRAWLER = registerBlock("bone_block_skull_piglin_crawler",
             BoneBlockSkullPiglinCrawler::new,
-            BIBoneBlockSkullPiglinCrawler::new);
+            () -> new BlockItem(
+                    GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK)));
 
     // withered blocks
     public static final ResourceKey WITHERED_GLASS_RK = ResourceKey.create(
@@ -326,14 +453,22 @@ public class GSEBlocks {
             fromNamespaceAndPath(ModInfo.ID, "withered_glass"));
     public static final DeferredHolder<Block, Block> WITHERED_GLASS = registerBlock("withered_glass",
             WitheredGlass::new,
-            BIWitheredGlass::new);
+            () -> new BlockItem(
+                    GSEBlocks.WITHERED_GLASS.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.WITHERED_GLASS_RK)));
 
     public static final ResourceKey WITHERED_BRICKS_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "withered_bricks"));
     public static final DeferredHolder<Block, Block> WITHERED_BRICKS = registerBlock("withered_bricks",
             WitheredBricks::new,
-            BIWitheredBricks::new);
+            () -> new BlockItem(
+                    GSEBlocks.WITHERED_BRICKS.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.WITHERED_BRICKS_RK)));
 
     // altar
     public static final ResourceKey ALTAR_RK = ResourceKey.create(
@@ -341,7 +476,11 @@ public class GSEBlocks {
             fromNamespaceAndPath(ModInfo.ID, "altar"));
     public static final DeferredHolder<Block, Block> ALTAR = registerBlock("altar",
             Altar::new,
-            BIAltar::new);
+            () -> new BlockItem(
+                    GSEBlocks.ALTAR.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.ALTAR_RK)));
 
     // other
     public static final ResourceKey FROZEN_LAVA_RK = ResourceKey.create(
@@ -349,7 +488,11 @@ public class GSEBlocks {
             fromNamespaceAndPath(ModInfo.ID, "frozen_lava"));
     public static final DeferredHolder<Block, Block> FROZEN_LAVA = registerBlock("frozen_lava",
             FrozenLava::new,
-            BIFrozenLava::new);
+            () -> new BlockItem(
+                    GSEBlocks.FROZEN_LAVA.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.FROZEN_LAVA_RK)));
 
     private static <T extends Block> DeferredHolder<Block, T> registerBlock(
             String name, Supplier<T> block, Supplier<Item> itemBlock) {

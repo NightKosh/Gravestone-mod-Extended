@@ -42,9 +42,6 @@ public class GSETabs {
                         output.accept(GSEItems.ENDER_SKULL.get());
                         output.accept(GSEItems.FROZEN_MIRROR.get());
 
-                        // altar
-                        output.accept(GSEBlocks.ALTAR.get());
-
                         // skull candles
                         output.accept(GSEItems.SKULL_CANDLE_SKELETON.get());
                         output.accept(GSEItems.SKULL_CANDLE_STRAY.get());
@@ -55,6 +52,14 @@ public class GSETabs {
                         output.accept(GSEItems.SKULL_HUSK.get());
                         output.accept(GSEItems.SKULL_CANDLE_DROWNED.get());
                         output.accept(GSEItems.SKULL_CANDLE_PIGLIN.get());
+
+                        output.accept(GSEBlocks.WITHERED_GLASS.get());
+                        output.accept(GSEBlocks.WITHERED_BRICKS.get());
+
+                        output.accept(GSEBlocks.FROZEN_LAVA.get());
+
+                        // altar
+                        output.accept(GSEBlocks.ALTAR.get());
 
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());
@@ -93,11 +98,6 @@ public class GSETabs {
                         output.accept(GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER.get());
                         output.accept(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER.get());
                         output.accept(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER.get());
-
-                        output.accept(GSEBlocks.WITHERED_GLASS.get());
-                        output.accept(GSEBlocks.WITHERED_BRICKS.get());
-
-                        output.accept(GSEBlocks.FROZEN_LAVA.get());
                     }).build()
             );
 
