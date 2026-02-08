@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"bones": "gravestone_extended:block/pile_of_bones/pile_of_bones",
-		"particle": "gravestone_extended:block/pile_of_bones/pile_of_bones"
+		"bones": "gravestone_extended:block/pile_of_bones/pile_of_bones_skeleton",
+		"particle": "gravestone_extended:block/pile_of_bones/pile_of_bones_skeleton"
 	},
 	"elements": [
 		{

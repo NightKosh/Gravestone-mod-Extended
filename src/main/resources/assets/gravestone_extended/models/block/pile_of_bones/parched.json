@@ -1,0 +1,8 @@
+{
+  "parent": "gravestone_extended:block/pile_of_bones/skull",
+  "textures": {
+    "bones": "gravestone_extended:block/pile_of_bones/pile_of_bones_parched",
+    "skull": "gravestone_extended:block/pile_of_bones/parched",
+    "particle": "gravestone_extended:block/pile_of_bones/pile_of_bones_parched"
+  }
+}

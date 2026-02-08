@@ -1,18 +1,18 @@
 {
      "variants": {
          "facing=north": {
-             "model": "gravestone_extended:block/pile_of_bones/skull"
+             "model": "gravestone_extended:block/pile_of_bones/bogged"
          },
          "facing=east": {
-            "model": "gravestone_extended:block/pile_of_bones/skull",
+            "model": "gravestone_extended:block/pile_of_bones/bogged",
             "y": 90
          },
          "facing=south": {
-             "model": "gravestone_extended:block/pile_of_bones/skull",
+             "model": "gravestone_extended:block/pile_of_bones/bogged",
              "y": 180
          },
          "facing=west": {
-             "model": "gravestone_extended:block/pile_of_bones/skull",
+             "model": "gravestone_extended:block/pile_of_bones/bogged",
              "y": 270
          }
      }

@@ -1,8 +1,8 @@
 {
-    "parent": "gravestone_extended:block/pile_of_bones/skull",
-	"textures": {
-		"bones": "gravestone_extended:block/pile_of_bones/pile_of_bones_wither",
-		"skull": "gravestone_extended:block/pile_of_bones/wither",
-		"particle": "gravestone_extended:block/pile_of_bones/pile_of_bones_wither"
-	}
+  "parent": "gravestone_extended:block/pile_of_bones/skull",
+  "textures": {
+    "bones": "gravestone_extended:block/pile_of_bones/pile_of_bones_wither",
+    "skull": "gravestone_extended:block/pile_of_bones/wither",
+    "particle": "gravestone_extended:block/pile_of_bones/pile_of_bones_wither"
+  }
 }

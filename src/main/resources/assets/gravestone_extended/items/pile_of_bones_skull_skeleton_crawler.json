@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "gravestone_extended:block/pile_of_bones/skull"
+    "model": "gravestone_extended:block/pile_of_bones/skeleton"
   }
 }
