@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "rotation=0": {
+      "model": "gravestone_extended:block/skull_candle/parched"
+    },
+    "rotation=1": {
+      "model": "gravestone_extended:block/skull_candle/parched_225"
+    },
+    "rotation=2": {
+      "model": "gravestone_extended:block/skull_candle/parched_45"
+    },
+    "rotation=3": {
+      "model": "gravestone_extended:block/skull_candle/parched_675"
+    },
+    "rotation=4": {
+      "model": "gravestone_extended:block/skull_candle/parched",
+      "y": 90
+    },
+    "rotation=5": {
+      "model": "gravestone_extended:block/skull_candle/parched_225",
+      "y": 90
+    },
+    "rotation=6": {
+      "model": "gravestone_extended:block/skull_candle/parched_45",
+      "y": 90
+    },
+    "rotation=7": {
+      "model": "gravestone_extended:block/skull_candle/parched_675",
+      "y": 90
+    },
+    "rotation=8": {
+      "model": "gravestone_extended:block/skull_candle/parched",
+      "y": 180
+    },
+    "rotation=9": {
+      "model": "gravestone_extended:block/skull_candle/parched_225",
+      "y": 180
+    },
+    "rotation=10": {
+      "model": "gravestone_extended:block/skull_candle/parched_45",
+      "y": 180
+    },
+    "rotation=11": {
+      "model": "gravestone_extended:block/skull_candle/parched_675",
+      "y": 180
+    },
+    "rotation=12": {
+      "model": "gravestone_extended:block/skull_candle/parched",
+      "y": 270
+    },
+    "rotation=13": {
+      "model": "gravestone_extended:block/skull_candle/parched_225",
+      "y": 270
+    },
+    "rotation=14": {
+      "model": "gravestone_extended:block/skull_candle/parched_45",
+      "y": 270
+    },
+    "rotation=15": {
+      "model": "gravestone_extended:block/skull_candle/parched_675",
+      "y": 270
+    }
+  }
+}

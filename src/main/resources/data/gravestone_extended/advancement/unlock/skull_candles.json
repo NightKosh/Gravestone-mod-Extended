@@ -9,7 +9,13 @@
               "minecraft:candle",
               "minecraft:zombie_head",
               "minecraft:skeleton_skull",
-              "minecraft:wither_skeleton_skull"
+              "minecraft:wither_skeleton_skull",
+              "withered_lands:skull_husk",
+              "withered_lands:skull_drowned",
+              "withered_lands:skull_stray",
+              "withered_lands:skull_bogged",
+              "withered_lands:skull_parched",
+              "withered_lands:skull_piglin"
             ]
           }
         ]

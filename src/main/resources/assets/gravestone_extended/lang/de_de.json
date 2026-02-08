@@ -2,8 +2,14 @@
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
   "item.gravestone_extended.skull_candle_skeleton": "Totenkopfkerze",
-  "item.gravestone_extended.skull_candle_zombie": "Wither-Totenkopfkerze",
-  "item.gravestone_extended.skull_candle_wither": "Zombie-Totenkopfkerze",
+  "item.gravestone_extended.skull_candle_zombie": "Zombie-Totenkopfkerze",
+  "item.gravestone_extended.skull_candle_wither": "Wither-Totenkopfkerze",
+  "item.gravestone_extended.skull_candle_husk": "Husk Skull Candle",
+  "item.gravestone_extended.skull_candle_drowned": "Drowned Skull Candle",
+  "item.gravestone_extended.skull_candle_stray": "Stray Skull Candle",
+  "item.gravestone_extended.skull_candle_bogged": "Bogged Skull Candle",
+  "item.gravestone_extended.skull_candle_parched": "Parched Skull Candle",
+  "item.gravestone_extended.skull_candle_piglin": "Zombified Piglin Skull Candle",
 
   "item.gravestone_extended.bone_shield": "Bone Shield",
 

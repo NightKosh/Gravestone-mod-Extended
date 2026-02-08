@@ -46,9 +46,15 @@ public class GSETabs {
                         output.accept(GSEBlocks.ALTAR.get());
 
                         // skull candles
-                        output.accept(GSEBlocks.SKULL_CANDLE_SKELETON.get());
-                        output.accept(GSEBlocks.SKULL_CANDLE_ZOMBIE.get());
-                        output.accept(GSEBlocks.SKULL_CANDLE_WITHER.get());
+                        output.accept(GSEItems.SKULL_CANDLE_SKELETON.get());
+                        output.accept(GSEItems.SKULL_CANDLE_STRAY.get());
+                        output.accept(GSEItems.SKULL_CANDLE_BOGGED.get());
+                        output.accept(GSEItems.SKULL_CANDLE_PARCHED.get());
+                        output.accept(GSEItems.SKULL_CANDLE_WITHER.get());
+                        output.accept(GSEItems.SKULL_CANDLE_ZOMBIE.get());
+                        output.accept(GSEItems.SKULL_HUSK.get());
+                        output.accept(GSEItems.SKULL_CANDLE_DROWNED.get());
+                        output.accept(GSEItems.SKULL_CANDLE_PIGLIN.get());
 
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());

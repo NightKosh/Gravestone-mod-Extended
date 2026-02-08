@@ -7,24 +7,15 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import nightkosh.gravestone_extended.block.Altar;
-import nightkosh.gravestone_extended.block.FrozenLava;
-import nightkosh.gravestone_extended.block.WitheredBricks;
+import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.bone_block.*;
-import nightkosh.gravestone_extended.block.WitheredGlass;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
-import nightkosh.gravestone_extended.block.skull_candle.SkullCandleSkeleton;
-import nightkosh.gravestone_extended.block.skull_candle.SkullCandleWither;
-import nightkosh.gravestone_extended.block.skull_candle.SkullCandleZombie;
 import nightkosh.gravestone_extended.item.itemblock.BIWitheredBricks;
 import nightkosh.gravestone_extended.item.itemblock.BIFrozenLava;
 import nightkosh.gravestone_extended.item.itemblock.BIAltar;
 import nightkosh.gravestone_extended.item.itemblock.bone_block.*;
 import nightkosh.gravestone_extended.item.itemblock.BIWitheredGlass;
 import nightkosh.gravestone_extended.item.itemblock.pile_of_bones.*;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleSkeleton;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleWither;
-import nightkosh.gravestone_extended.item.itemblock.skull_candle.BISkullCandleZombie;
 
 import java.util.function.Supplier;
 
@@ -46,22 +37,55 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "skull_candle_skeleton"));
     public static final DeferredHolder<Block, Block> SKULL_CANDLE_SKELETON = registerBlock("skull_candle_skeleton",
-            SkullCandleSkeleton::new,
-            BISkullCandleSkeleton::new);
+            () -> new SkullCandle(SKULL_CANDLE_SKELETON_RK));
 
     public static final ResourceKey SKULL_CANDLE_ZOMBIE_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "skull_candle_zombie"));
     public static final DeferredHolder<Block, Block> SKULL_CANDLE_ZOMBIE = registerBlock("skull_candle_zombie",
-            SkullCandleZombie::new,
-            BISkullCandleZombie::new);
+            () -> new SkullCandle(SKULL_CANDLE_ZOMBIE_RK));
 
     public static final ResourceKey SKULL_CANDLE_WITHER_RK = ResourceKey.create(
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "skull_candle_wither"));
     public static final DeferredHolder<Block, Block> SKULL_CANDLE_WITHER = registerBlock("skull_candle_wither",
-            SkullCandleWither::new,
-            BISkullCandleWither::new);
+            () -> new SkullCandle(SKULL_CANDLE_WITHER_RK));
+
+    public static final ResourceKey SKULL_CANDLE_DROWNED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_drowned"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_DROWNED = registerBlock("skull_candle_drowned",
+            () -> new SkullCandle(SKULL_CANDLE_DROWNED_RK));
+
+    public static final ResourceKey SKULL_CANDLE_HUSK_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_husk"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_HUSK = registerBlock("skull_candle_husk",
+            () -> new SkullCandle(SKULL_CANDLE_HUSK_RK));
+
+    public static final ResourceKey SKULL_CANDLE_PARCHED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_parched"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_PARCHED = registerBlock("skull_candle_parched",
+            () -> new SkullCandle(SKULL_CANDLE_PARCHED_RK));
+
+    public static final ResourceKey SKULL_CANDLE_BOGGED_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_bogged"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_BOGGED = registerBlock("skull_candle_bogged",
+            () -> new SkullCandle(SKULL_CANDLE_BOGGED_RK));
+
+    public static final ResourceKey SKULL_CANDLE_PIGLIN_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_piglin"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_PIGLIN = registerBlock("skull_candle_piglin",
+            () -> new SkullCandle(SKULL_CANDLE_PIGLIN_RK));
+
+    public static final ResourceKey SKULL_CANDLE_STRAY_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "skull_candle_stray"));
+    public static final DeferredHolder<Block, Block> SKULL_CANDLE_STRAY = registerBlock("skull_candle_stray",
+            () -> new SkullCandle(SKULL_CANDLE_STRAY_RK));
 
     // pile of bones
     public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
@@ -330,6 +354,11 @@ public class GSEBlocks {
     private static <T extends Block> DeferredHolder<Block, T> registerBlock(
             String name, Supplier<T> block, Supplier<Item> itemBlock) {
         GSEItems.ITEMS_REGISTER.register(name, itemBlock);
+        return registerBlock(name, block);
+    }
+
+    private static <T extends Block> DeferredHolder<Block, T> registerBlock(
+            String name, Supplier<T> block) {
         return BLOCKS_REGISTER.register(name, block);
     }
 //

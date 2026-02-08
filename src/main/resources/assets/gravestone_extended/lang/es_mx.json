@@ -2,8 +2,14 @@
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
   "item.gravestone_extended.skull_candle_skeleton": "Vela en Cráneo",
-  "item.gravestone_extended.skull_candle_zombie": "Vela en Cráneo de Wither",
-  "item.gravestone_extended.skull_candle_wither": "Vela en Cabeza de Zombi",
+  "item.gravestone_extended.skull_candle_zombie": "Vela en Cráneo de Zombi",
+  "item.gravestone_extended.skull_candle_wither": "Vela en Cabeza de Wither",
+  "item.gravestone_extended.skull_candle_husk": "Husk Skull Candle",
+  "item.gravestone_extended.skull_candle_drowned": "Drowned Skull Candle",
+  "item.gravestone_extended.skull_candle_stray": "Stray Skull Candle",
+  "item.gravestone_extended.skull_candle_bogged": "Bogged Skull Candle",
+  "item.gravestone_extended.skull_candle_parched": "Parched Skull Candle",
+  "item.gravestone_extended.skull_candle_piglin": "Zombified Piglin Skull Candle",
 
   "item.gravestone_extended.bone_shield": "Escudo de hueso",
 

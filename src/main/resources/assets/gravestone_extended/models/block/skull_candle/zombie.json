@@ -1,8 +1,8 @@
 {
-    "parent": "gravestone_extended:block/skull_candle/skeleton",
-	"textures": {
-		"texture_skull": "gravestone_extended:block/skull_candle/zombie",
-		"particle": "gravestone_extended:block/skull_candle/zombie",
-		"texture_candle": "gravestone_extended:block/skull_candle/candle"
-	}
+  "parent": "gravestone_extended:block/skull_candle/default",
+  "textures": {
+    "candle": "minecraft:block/candle_lit",
+    "texture_skull": "gravestone_extended:block/skull_candle/zombie",
+    "particle": "gravestone_extended:block/skull_candle/zombie"
+  }
 }

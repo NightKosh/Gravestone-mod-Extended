@@ -1,0 +1,8 @@
+{
+  "parent": "gravestone_extended:block/skull_candle/default",
+  "textures": {
+    "candle": "minecraft:block/candle_lit",
+    "texture_skull": "gravestone_extended:block/skull_candle/husk",
+    "particle": "gravestone_extended:block/skull_candle/husk"
+  }
+}

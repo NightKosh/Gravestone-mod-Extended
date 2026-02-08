@@ -2,8 +2,14 @@
   "itemGroup.gravestone_extended": "Gravestone mod - Extended",
 
   "item.gravestone_extended.skull_candle_skeleton": "Череп скелета со свечой",
-  "item.gravestone_extended.skull_candle_zombie": "Череп иссушителя со свечой",
-  "item.gravestone_extended.skull_candle_wither": "Череп зомби со свечой",
+  "item.gravestone_extended.skull_candle_zombie": "Череп зомби со свечой",
+  "item.gravestone_extended.skull_candle_wither": "Череп иссушителя со свечой",
+  "item.gravestone_extended.skull_candle_husk": "Череп кадавра со свечой",
+  "item.gravestone_extended.skull_candle_drowned": "Череп утопленника со свечой",
+  "item.gravestone_extended.skull_candle_stray": "Череп зимогора со свечой",
+  "item.gravestone_extended.skull_candle_bogged": "Череп болотника со свечой",
+  "item.gravestone_extended.skull_candle_parched": "Череп пустынника со свечой",
+  "item.gravestone_extended.skull_candle_piglin": "Череп свинозомби со свечой",
 
   "item.gravestone_extended.bone_shield": "Костяной щит",
 

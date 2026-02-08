@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:candle",
+    "withered_lands:skull_bogged"
+  ],
+  "result": {
+    "id": "gravestone_extended:skull_candle_bogged"
+  }
+}
