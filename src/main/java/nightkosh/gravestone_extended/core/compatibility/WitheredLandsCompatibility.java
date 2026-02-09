@@ -22,7 +22,7 @@ public class WitheredLandsCompatibility extends ACompatibility {
 
     public static final String PHANTOM_DIVER_LOOT_TABLE = "withered_lands:entities/phantom_diver";
 
-    // mobs
+    // mobs - crawlers
     public static final Identifier SKELETON_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_skull_crawler");
     public static final Identifier STRAY_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "stray_skull_crawler");
     public static final Identifier BOGGED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "bogged_skull_crawler");
@@ -32,6 +32,20 @@ public class WitheredLandsCompatibility extends ACompatibility {
     public static final Identifier HUSK_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "husk_skull_crawler");
     public static final Identifier DROWNED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "drowned_skull_crawler");
     public static final Identifier PIGLIN_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "piglin_skull_crawler");
+    // mobs - dogs
+    public static final Identifier SKELETON_DOG = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_dog");
+    public static final Identifier ZOMBIE_DOG = fromNamespaceAndPath(WITHERED_LANDS_ID, "zombie_dog");
+    // mobs - cats
+    public static final Identifier SKELETON_CAT = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_cat");
+    public static final Identifier ZOMBIE_CAT = fromNamespaceAndPath(WITHERED_LANDS_ID, "zombie_cat");
+    // mobs - horses
+    public static final Identifier SKELETON_HORSE = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_horse");
+    public static final Identifier ZOMBIE_HORSE = fromNamespaceAndPath(WITHERED_LANDS_ID, "zombie_horse");
+    // mobs - other
+    public static final Identifier SHIELD_SKELETON = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton");
+    public static final Identifier MUMMY = fromNamespaceAndPath(WITHERED_LANDS_ID, "mummy");
+    public static final Identifier DROWNED_SAILOR = fromNamespaceAndPath(WITHERED_LANDS_ID, "drowned_sailor");
+    public static final Identifier PHANTOM_DIVER = fromNamespaceAndPath(WITHERED_LANDS_ID, "phantom_diver");
 
     // effects
     public static final Identifier BLEEDING_EFFECT = fromNamespaceAndPath(WITHERED_LANDS_ID, "bleeding");

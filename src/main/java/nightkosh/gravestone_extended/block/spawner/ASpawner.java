@@ -1,7 +1,8 @@
-package nightkosh.gravestone_extended.block;
+package nightkosh.gravestone_extended.block.spawner;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -16,7 +17,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import nightkosh.gravestone_extended.block_entity.GSESpawnerBlockEntity;
+import nightkosh.gravestone_extended.block_entity.spawner.ASpawnerBlockEntity;
+import nightkosh.gravestone_extended.block_entity.spawner.SkeletonSpawnerBlockEntity;
 import nightkosh.gravestone_extended.core.GSEBlockEntities;
 import nightkosh.gravestone_extended.core.GSEBlocks;
 import org.jspecify.annotations.Nullable;
@@ -29,40 +31,40 @@ import javax.annotation.Nonnull;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GSESpawner extends SpawnerBlock {
+public abstract class ASpawner extends SpawnerBlock {
 
     private static final VoxelShape SHAPE = Block.box(-8, 0, -8, 24, 6, 24);
 
-    public GSESpawner(Properties properties) {
+    public ASpawner(Properties properties) {
         super(properties);
     }
 
-    public GSESpawner() {
+    public ASpawner(ResourceKey id) {
         this(BlockBehaviour.Properties.of()
                 .instrument(NoteBlockInstrument.SKELETON)
-                .requiresCorrectToolForDrops()
                 .sound(SoundType.SPAWNER)
+                .lightLevel(state -> 4)
                 .strength(2)
                 .noOcclusion()
                 .noCollision()
-                .setId(GSEBlocks.SPAWNER_SKELETON_RK));
+                .setId(id));
     }
+
+    protected abstract BlockEntityType<ASpawnerBlockEntity> getBlockEntityType();
 
     @Nonnull
     @Override
-    public BlockEntity newBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state) {
-        return new GSESpawnerBlockEntity(pos, state);
-    }
+    public abstract BlockEntity newBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state);
 
-    //TODO wtf?
     @Override
     public <T extends BlockEntity> @Nullable BlockEntityTicker<T> getTicker(
             Level level, @Nonnull BlockState state, @Nonnull BlockEntityType<T> entityType) {
         return createTickerHelper(
-                entityType, GSEBlockEntities.SPAWNER.get(),
+                entityType,
+                getBlockEntityType(),
                 level.isClientSide() ?
-                        GSESpawnerBlockEntity::clientTick :
-                        GSESpawnerBlockEntity::serverTick
+                        ASpawnerBlockEntity::clientTick :
+                        ASpawnerBlockEntity::serverTick
         );
     }
 
@@ -86,7 +88,6 @@ public class GSESpawner extends SpawnerBlock {
         }
 
     }
-
 
     @Nonnull
     @Override

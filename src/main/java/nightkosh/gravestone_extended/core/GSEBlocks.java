@@ -11,6 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.bone_block.*;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
+import nightkosh.gravestone_extended.block.spawner.*;
 
 import java.util.function.Supplier;
 
@@ -87,7 +88,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_skeleton"));
     public static final DeferredHolder<Block, Block> SPAWNER_SKELETON = registerBlock("spawner_skeleton",
-            GSESpawner::new,
+            SpawnerSkeleton::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_SKELETON.get(),
                     new Item.Properties()
@@ -98,7 +99,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_stray"));
     public static final DeferredHolder<Block, Block> SPAWNER_STRAY = registerBlock("spawner_stray",
-            GSESpawner::new,
+            SpawnerStray::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_STRAY.get(),
                     new Item.Properties()
@@ -109,7 +110,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_bogged"));
     public static final DeferredHolder<Block, Block> SPAWNER_BOGGED = registerBlock("spawner_bogged",
-            GSESpawner::new,
+            SpawnerBogged::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_BOGGED.get(),
                     new Item.Properties()
@@ -120,7 +121,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_parched"));
     public static final DeferredHolder<Block, Block> SPAWNER_PARCHED = registerBlock("spawner_parched",
-            GSESpawner::new,
+            SpawnerParched::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_PARCHED.get(),
                     new Item.Properties()
@@ -131,7 +132,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_wither"));
     public static final DeferredHolder<Block, Block> SPAWNER_WITHER = registerBlock("spawner_wither",
-            GSESpawner::new,
+            SpawnerWither::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_WITHER.get(),
                     new Item.Properties()
@@ -142,7 +143,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_zombie"));
     public static final DeferredHolder<Block, Block> SPAWNER_ZOMBIE = registerBlock("spawner_zombie",
-            GSESpawner::new,
+            SpawnerZombie::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_ZOMBIE.get(),
                     new Item.Properties()
@@ -153,7 +154,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_husk"));
     public static final DeferredHolder<Block, Block> SPAWNER_HUSK = registerBlock("spawner_husk",
-            GSESpawner::new,
+            SpawnerHusk::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_HUSK.get(),
                     new Item.Properties()
@@ -164,7 +165,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_drowned"));
     public static final DeferredHolder<Block, Block> SPAWNER_DROWNED = registerBlock("spawner_drowned",
-            GSESpawner::new,
+            SpawnerDrowned::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_DROWNED.get(),
                     new Item.Properties()
@@ -175,7 +176,7 @@ public class GSEBlocks {
             Registries.BLOCK,
             fromNamespaceAndPath(ModInfo.ID, "spawner_piglin"));
     public static final DeferredHolder<Block, Block> SPAWNER_PIGLIN = registerBlock("spawner_piglin",
-            GSESpawner::new,
+            SpawnerPiglin::new,
             () -> new BlockItem(
                     GSEBlocks.SPAWNER_PIGLIN.get(),
                     new Item.Properties()
