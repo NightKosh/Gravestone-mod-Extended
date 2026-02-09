@@ -1,0 +1,91 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"render_type": "translucent",
+	"textures": {
+      "particle": "gravestone_extended:block/spawner/cobweb_side",
+      "top": "gravestone_extended:block/spawner/cobweb_top",
+      "side": "gravestone_extended:block/spawner/cobweb_side",
+      "threads": "gravestone_extended:block/spawner/cobweb_threads"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#top"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#top"}
+			}
+		},
+		{
+			"from": [0, 0, -6],
+			"to": [16, 10, -6],
+			"rotation": {"angle": 45, "axis": "x", "origin": [0, 0, -6]},
+			"faces": {
+				"north": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"east": {"uv": [2, 0, 2, 10], "texture": "#missing"},
+				"south": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"west": {"uv": [0, 0, 0, 10], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 2, 16, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [0, 0, 22],
+			"to": [16, 10, 22],
+			"rotation": {"angle": -45, "axis": "x", "origin": [0, 0, 22]},
+			"faces": {
+				"north": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"east": {"uv": [2, 0, 2, 10], "texture": "#missing"},
+				"south": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"west": {"uv": [0, 0, 0, 10], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 2, 16, 2], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [-6, 0, 0],
+			"to": [-6, 10, 16],
+			"rotation": {"angle": -45, "axis": "z", "origin": [-6, 0, 0]},
+			"faces": {
+				"north": {"uv": [2, 0, 2, 10], "texture": "#missing"},
+				"east": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"south": {"uv": [0, 0, 0, 10], "texture": "#missing"},
+				"west": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [22, 0, 0],
+			"to": [22, 10, 16],
+			"rotation": {"angle": 45, "axis": "z", "origin": [22, 0, 0]},
+			"faces": {
+				"north": {"uv": [2, 0, 2, 10], "texture": "#missing"},
+				"east": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"south": {"uv": [0, 0, 0, 10], "texture": "#missing"},
+				"west": {"uv": [0, 6, 16, 16], "texture": "#threads"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		}
+	]
+}

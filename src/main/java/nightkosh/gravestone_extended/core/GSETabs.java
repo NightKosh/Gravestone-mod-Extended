@@ -63,6 +63,7 @@ public class GSETabs {
                         output.accept(GSEBlocks.SPAWNER_HUSK.get());
                         output.accept(GSEBlocks.SPAWNER_DROWNED.get());
                         output.accept(GSEBlocks.SPAWNER_PIGLIN.get());
+                        output.accept(GSEBlocks.SPAWNER_SPIDER.get());
 
                         output.accept(GSEBlocks.WITHERED_GLASS.get());
                         output.accept(GSEBlocks.WITHERED_BRICKS.get());

@@ -18,9 +18,6 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import nightkosh.gravestone_extended.block_entity.spawner.ASpawnerBlockEntity;
-import nightkosh.gravestone_extended.block_entity.spawner.SkeletonSpawnerBlockEntity;
-import nightkosh.gravestone_extended.core.GSEBlockEntities;
-import nightkosh.gravestone_extended.core.GSEBlocks;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;

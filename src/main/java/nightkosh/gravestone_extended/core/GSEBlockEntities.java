@@ -82,6 +82,14 @@ public class GSEBlockEntities {
                             PiglinSpawnerBlockEntity::new,
                             GSEBlocks.SPAWNER_PIGLIN.get()));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ASpawnerBlockEntity>> SPAWNER_SPIDER =
+            BLOCK_ENTITIES_REGISTER.register(
+                    "spawner_spider_block_entity",
+                    () -> new BlockEntityType<>(
+                            SpiderSpawnerBlockEntity::new,
+                            GSEBlocks.SPAWNER_SPIDER.get()));
+
+    // altar
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AltarBlockEntity>> ALTAR =
             BLOCK_ENTITIES_REGISTER.register(
                     "altar_block_entity",

@@ -183,6 +183,17 @@ public class GSEBlocks {
                             .stacksTo(64)
                             .setId(GSEBlocks.SPAWNER_PIGLIN_RK)));
 
+    public static final ResourceKey SPAWNER_SPIDER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "spawner_spider"));
+    public static final DeferredHolder<Block, Block> SPAWNER_SPIDER = registerBlock("spawner_spider",
+            SpawnerSpider::new,
+            () -> new BlockItem(
+                    GSEBlocks.SPAWNER_SPIDER.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.SPAWNER_SPIDER_RK)));
+
     // pile of bones
     public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
             Registries.BLOCK,
