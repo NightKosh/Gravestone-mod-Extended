@@ -2,6 +2,7 @@ package nightkosh.gravestone_extended.helper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.ProblemReporter;
@@ -25,7 +26,9 @@ import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.level.storage.ValueInput;
 import nightkosh.gravestone_extended.core.GSEItems;
 import nightkosh.gravestone_extended.core.GSEMobEffects;
+import nightkosh.gravestone_extended.core.compatibility.SophisticatedWolvesCompatibility;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
@@ -40,6 +43,7 @@ public abstract class CorpseHelper {
 
     public static final String CUSTOM_NAME = "CUSTOM_NAME";
     public static final String WOLF_TYPE = "variant";
+    public static final String WOLF_SOPHISTICATED = "SOPHISTICATED_WOLF";
     public static final String CAT_TYPE = "variant";
     public static final String MOB_DATA = "MOB_DATA";
     public static final String VILLAGER_DATA = "VillagerData";
@@ -55,37 +59,47 @@ public abstract class CorpseHelper {
     public static ItemStack addVillagerCorpse(Villager villager) {
         return getCorpse(
                 villager,
-                (o) -> villager.addAdditionalSaveData(o),
+                (tag, o) -> villager.addAdditionalSaveData(o),
                 GSEItems.CORPSE_VILLAGER.get());
     }
 
     public static ItemStack addDogCorpse(Wolf wolf) {
         return getCorpse(
                 wolf,
-                (o) -> wolf.addAdditionalSaveData(o),
+                (tag, o) -> {
+                    wolf.addAdditionalSaveData(o);
+
+                    if (SophisticatedWolvesCompatibility.loaded()) {
+                        var type = BuiltInRegistries.ENTITY_TYPE.get(SophisticatedWolvesCompatibility.SOPHISTICATED_WOLF);
+                        if (type.isPresent() && type.get().value() != null &&
+                                wolf.getType().equals(type.get().value())) {
+                            tag.putBoolean(WOLF_SOPHISTICATED, true);
+                        }
+                    }
+                },
                 GSEItems.CORPSE_DOG.get());
     }
 
     public static ItemStack getCatCorpse(Cat cat) {
         return getCorpse(
                 cat,
-                (o) -> cat.addAdditionalSaveData(o),
+                (tag, o) -> cat.addAdditionalSaveData(o),
                 GSEItems.CORPSE_CAT.get());
     }
 
     public static ItemStack getHorseCorpse(Horse horse) {
         return getCorpse(
                 horse,
-                (o) -> horse.addAdditionalSaveData(o),
+                (tag, o) -> horse.addAdditionalSaveData(o),
                 GSEItems.CORPSE_HORSE.get());
     }
 
-    private static ItemStack getCorpse(LivingEntity mob, Consumer<TagValueOutput> consumer, Item corpseItem) {
+    private static ItemStack getCorpse(LivingEntity mob, BiConsumer<CompoundTag, TagValueOutput> consumer, Item corpseItem) {
         var tag = new CompoundTag();
         var output = TagValueOutput.createWithContext(
                 ProblemReporter.DISCARDING,
                 mob.level().registryAccess());
-        consumer.accept(output);
+        consumer.accept(tag, output);
 
         var corpseData = output.buildResult();
         tag.put(MOB_DATA, corpseData);
@@ -114,6 +128,19 @@ public abstract class CorpseHelper {
                 entityType = EntityType.VILLAGER;
             } else if (corpse.is(GSEItems.CORPSE_DOG)) {
                 entityType = EntityType.WOLF;
+
+                // Sophisticated Wolves
+                if (SophisticatedWolvesCompatibility.loaded()) {
+                    var data = corpse.get(DataComponents.CUSTOM_DATA);
+                    if (data != null) {
+                        var tag = data.copyTag();
+                        var type = BuiltInRegistries.ENTITY_TYPE.get(SophisticatedWolvesCompatibility.SOPHISTICATED_WOLF);
+                        if (type.isPresent() && type.get().value() != null && tag.contains(WOLF_SOPHISTICATED)) {
+                            entityType = type.get().value();
+                        }
+                    }
+                }
+
             } else if (corpse.is(GSEItems.CORPSE_CAT)) {
                 entityType = EntityType.CAT;
             } else if (corpse.is(GSEItems.CORPSE_HORSE)) {

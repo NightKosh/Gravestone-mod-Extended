@@ -26,11 +26,15 @@ public class GSEConfigs {
     public static ModConfigSpec.ConfigValue<Boolean> INFERNO_DEALS_DAMAGE_TO_PLAYERS;
     public static ModConfigSpec.ConfigValue<Boolean> BLIZZARD_DEALS_DAMAGE_TO_PLAYERS;
 
+    // compatibility
+    public static ModConfigSpec.ConfigValue<Boolean> SOPHISTICATED_WOLVES_COMPATIBILITY;
+
     public static ModConfigSpec.ConfigValue<Boolean> DEBUG_MODE;
 
     static {
         BUILDER.push("Configs for Gravestone mod - Extended");
 
+        // corpses
         CREATE_VILLAGERS_CORPSES = BUILDER.comment("Generate villager corpse item at villager death")
                 .define("CREATE_VILLAGERS_CORPSES", true);
         CREATE_DOGS_CORPSES = BUILDER.comment("Generate dog corpse item at tamed dog death")
@@ -40,16 +44,22 @@ public class GSEConfigs {
         CREATE_HORSES_CORPSES = BUILDER.comment("Generate horse corpse item at tamed horse death")
                 .define("CREATE_HORSES_CORPSES", true);
 
+        // mobs
         SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at bone block destruction")
                 .define("SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION", true);
         SPAWN_CRAWLERS_AT_PILES_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at pile of bones destruction")
                 .define("SPAWN_CRAWLERS_AT_PILES_DESTRUCTION", true);
 
+        // potions
         INFERNO_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Inferno potion ignite other players")
                 .define("INFERNO_DEALS_DAMAGE_TO_PLAYERS", true);
 
         BLIZZARD_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Blizzard potion freeze other players")
                 .define("BLIZZARD_DEALS_DAMAGE_TO_PLAYERS", true);
+
+        // compatibility
+        SOPHISTICATED_WOLVES_COMPATIBILITY = BUILDER.comment("Enable sophisticated wolves mod compatibility")
+                .define("SOPHISTICATED_WOLVES_COMPATIBILITY", true);
 
         DEBUG_MODE = BUILDER.comment("Enable additional dev logs")
                 .define("Debug Mode", false);
