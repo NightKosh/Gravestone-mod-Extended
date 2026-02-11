@@ -72,7 +72,6 @@ public abstract class AAltarScreen extends AbstractContainerScreen<AAltarContain
                 .build());
 
         button.active = false;
-        guiResurrectionButton.active = false;//TODO remove
     }
 
     @Override

@@ -13,16 +13,17 @@ import javax.annotation.Nonnull;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class EnchantedSkullSlot extends Slot {
+public class CorpseSlot extends Slot {
 
-    public EnchantedSkullSlot(Container container, int slotNum, int xPos, int yPos) {
+    public CorpseSlot(Container container, int slotNum, int xPos, int yPos) {
         super(container, slotNum, xPos, yPos);
     }
 
     @Override
     public boolean mayPlace(@Nonnull ItemStack stack) {
-        return stack.is(GSEItems.ENCHANTED_SKELETON_SKULL.get()) ||
-                stack.is(GSEItems.ENCHANTED_WITHER_SKULL.get());
+        return stack.is(GSEItems.CORPSE_VILLAGER) ||
+                stack.is(GSEItems.CORPSE_DOG) || stack.is(GSEItems.CORPSE_CAT) ||
+                stack.is(GSEItems.CORPSE_HORSE);
     }
 
     @Override

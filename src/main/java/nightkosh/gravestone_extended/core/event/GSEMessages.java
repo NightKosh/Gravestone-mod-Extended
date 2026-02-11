@@ -8,6 +8,7 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.packets.ResurrectionMessageToServer;
 import nightkosh.gravestone_extended.packets.AltarSwitchScreenMessageToServer;
 import nightkosh.gravestone_extended.packets.DisenchantmentMessageToServer;
 import nightkosh.gravestone_extended.packets.EnchantmentMessageToServer;
@@ -26,6 +27,11 @@ public class GSEMessages {
     @SubscribeEvent
     public static void register(final RegisterPayloadHandlersEvent event) {
         final var registrar = event.registrar(NETWORK_VERSION);
+
+        registrar.playToServer(
+                ResurrectionMessageToServer.TYPE,
+                ResurrectionMessageToServer.STREAM_CODEC,
+                ResurrectionMessageToServer::handle);
 
         registrar.playToServer(
                 DisenchantmentMessageToServer.TYPE,

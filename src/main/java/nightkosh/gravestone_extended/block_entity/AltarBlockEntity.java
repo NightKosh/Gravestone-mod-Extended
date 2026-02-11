@@ -78,6 +78,7 @@ public class AltarBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public void loadAdditional(@Nonnull ValueInput in) {
         super.loadAdditional(in);
+        corpseInventory.loadAdditional(in);
         enchantmentInventory.loadAdditional(in);
         disenchantmentInventory.loadAdditional(in);
     }
@@ -85,6 +86,7 @@ public class AltarBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public void saveAdditional(@Nonnull ValueOutput out) {
         super.saveAdditional(out);
+        corpseInventory.saveAdditional(out);
         enchantmentInventory.saveAdditional(out);
         disenchantmentInventory.saveAdditional(out);
     }
@@ -92,7 +94,7 @@ public class AltarBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public void preRemoveSideEffects(@Nonnull BlockPos pos, @Nonnull BlockState state) {
         super.preRemoveSideEffects(pos, state);
-//        dropItems(corpseInventory);
+        dropItems(corpseInventory);
         dropItems(enchantmentInventory);
         dropItems(disenchantmentInventory);
     }

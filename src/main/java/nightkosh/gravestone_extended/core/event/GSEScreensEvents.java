@@ -6,6 +6,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import nightkosh.gravestone_extended.core.GSEMenus;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.gui.ResurrectionScreen;
 import nightkosh.gravestone_extended.gui.DisenchantmentScreen;
 import nightkosh.gravestone_extended.gui.EnchantmentScreen;
 
@@ -20,6 +21,7 @@ public class GSEScreensEvents {
 
     @SubscribeEvent
     public static void clientSetup(RegisterMenuScreensEvent event) {
+        event.register(GSEMenus.ALTAR_RESURRECTION.get(), ResurrectionScreen::new);
         event.register(GSEMenus.ALTAR_DISENCHANTMENT.get(), DisenchantmentScreen::new);
         event.register(GSEMenus.ALTAR_ENCHANTMENT.get(), EnchantmentScreen::new);
     }

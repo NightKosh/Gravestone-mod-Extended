@@ -1,5 +1,29 @@
 package nightkosh.gravestone_extended.item.corpse;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.ProblemReporter;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.equine.Horse;
+import net.minecraft.world.entity.animal.feline.Cat;
+import net.minecraft.world.entity.animal.wolf.Wolf;
+import net.minecraft.world.entity.npc.villager.Villager;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.TagValueInput;
+import net.minecraft.world.level.storage.TagValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
+import nightkosh.gravestone_extended.core.GSEItems;
+import nightkosh.gravestone_extended.helper.TimeHelper;
+
+import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
+
 /**
  * Gravestone mod - Extended
  *
@@ -7,15 +31,7 @@ package nightkosh.gravestone_extended.item.corpse;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public abstract class CorpseHelper {
-//
-//    public static EnumUndeadMobType getMobType(NBTTagCompound nbtTag) {
-//        if (nbtTag == null) {
-//            return EnumUndeadMobType.OTHER;
-//        } else {
-//            return EnumUndeadMobType.getById(nbtTag.getByte("MobType"));
-//        }
-//    }
-//
+
 //    public static void addMobTypeInfo(List list, NBTTagCompound nbtTag) {
 //        if (nbtTag.hasKey("MobType")) {
 //            EnumUndeadMobType mobType = getMobType(nbtTag);
@@ -35,12 +51,6 @@ public abstract class CorpseHelper {
 //        if (entity.hasCustomName()) {
 //            nbtTag.setString("Name", entity.getCustomNameTag());
 //        }
-//    }
-//
-//    protected static void spawnMob(EntityLiving entity, World world, int x, int y, int z) {
-//        entity.setPosition(x + 0.5, y + 1, z + 0.5);
-//        world.spawnEntity(entity);
-//        entity.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 300));
 //    }
 //
 //    protected static void addNameInfo(List list, NBTTagCompound nbtTag) {
@@ -73,48 +83,6 @@ public abstract class CorpseHelper {
 //        }
 //    }
 //
-//    public static ItemStack getDefaultCorpse(Random random, Block block, EnumCorpse corpseType) {
-//        switch (corpseType) {
-//            case VILLAGER:
-//                return VillagerCorpseHelper.getRandomCorpse(random);
-//            case DOG:
-//                return DogCorpseHelper.getRandomCorpse(random);
-//            case CAT:
-//                return CatCorpseHelper.getRandomCorpse(random);
-//            case HORSE:
-//                return HorseCorpseHelper.getRandomCorpse(random);
-//            default:
-//                return new ItemStack(block, 1, corpseType.ordinal());
-//        }
-//    }
-//
-//    public static ItemStack getDefaultPlayerCorpse(GameProfile profile) {
-//        return GameProfileHelper.getBlock(profile, GSBlock.CORPSE, EnumCorpse.STEVE.ordinal());
-//    }
-//
-//    public static List<ItemStack> getDefaultCorpse(int corpseType) {
-//        switch (EnumCorpse.values()[corpseType]) {
-//            case ZOMBIE:
-//                return ZombieCorpseHelper.getDefaultCorpses();
-//            case SKELETON:
-//                return SkeletonCorpseHelper.getDefaultCorpses();
-//            case VILLAGER:
-//                return VillagerCorpseHelper.getDefaultCorpses();
-//            case ZOMBIE_VILLAGER:
-//                return ZombieVillagerCorpseHelper.getDefaultCorpses();
-//            case DOG:
-//                return DogCorpseHelper.getDefaultCorpses();
-//            case CAT:
-//                return CatCorpseHelper.getDefaultCorpses();
-//            case HORSE:
-//                return HorseCorpseHelper.getDefaultCorpses();
-//            default:
-//                List<ItemStack> list = new ArrayList<>();
-//                list.add(new ItemStack(GSBlock.CORPSE, 1, corpseType));
-//                return list;
-//        }
-//    }
-//
 //    public static List<ItemStack> getCorpse(Entity entity, EnumCorpse type) {
 //        NBTTagCompound nbtTag = new NBTTagCompound();
 //        switch (type) {
@@ -139,62 +107,87 @@ public abstract class CorpseHelper {
 //        return corpse;
 //    }
 //
-//    public static void spawnMob(int type, World world, int x, int y, int z, NBTTagCompound nbtTag, EntityPlayer player) {
-//        if (!world.isRemote) {
-//            switch (EnumCorpse.values()[type]) {
-//                case VILLAGER:
-//                    VillagerCorpseHelper.spawnVillager(world, x, y, z, nbtTag);
-//                    break;
-//                case HORSE:
-//                    HorseCorpseHelper.spawnHorse(world, x, y, z, nbtTag, player);
-//                    break;
-//                case DOG:
-//                    DogCorpseHelper.spawnDog(world, x, y, z, nbtTag, player);
-//                    break;
-//                case CAT:
-//                    CatCorpseHelper.spawnCat(world, x, y, z, nbtTag, player);
-//                    break;
-//            }
-//        }
-//    }
-//
-//    public static boolean canSpawnMob(EntityPlayer player, ItemStack corpse) {
-//        return EnumCorpse.getById((byte) corpse.getItemDamage()).canBeResurrected() &&
-//                getMobType(corpse.getTagCompound()) == EnumUndeadMobType.OTHER && //TODO
-//                player.getEntityWorld().getWorldInfo().getGameType().equals(GameType.CREATIVE) || player.experienceLevel >= getRequiredLevel(corpse.getItemDamage());
-//    }
-//
-//    public static void getExperience(EntityPlayer player, int damage) {
-//        player.addExperienceLevel(-getRequiredLevel(damage));
-//    }
-//
-//    public static int getRequiredLevel(int damage) {
-//        switch (EnumCorpse.getById((byte) damage)) {
-//            case VILLAGER:
-//                return 20;
-//            case DOG:
-//            case CAT:
-//                return 7;
-//            case HORSE:
-//                return 15;
-//            default:
-//                return 0;
-//        }
-//    }
-//
-//    public static int getRequiredLevel(ItemStack itemStack) {
-//        if (itemStack != null) {
-//            return getRequiredLevel(itemStack.getItemDamage());
-//        } else {
-//            return 0;
-//        }
-//    }
-//
-//    public static EnumCorpse getTypeByCorpse(ItemStack corpse) {
-//        if (corpse == null) {
-//            return null;
-//        } else {
-//            return EnumCorpse.getById((byte) corpse.getItemDamage());
-//        }
-//    }
+    public static CompoundTag addData(Wolf pet) {
+        var output = TagValueOutput.createWithContext(
+                ProblemReporter.DISCARDING,
+                pet.level().registryAccess());
+        pet.addAdditionalSaveData(output);
+        return output.buildResult();
+    }
+
+    private static ValueInput readData(Level level, CompoundTag tag) {
+        return TagValueInput.create(
+                ProblemReporter.DISCARDING,
+                level.registryAccess(),
+                tag);
+    }
+
+    private static final String MOB_INFO = "MOB_INFO";
+    public static void spawnMob(ItemStack corpse, Level level, BlockPos pos, Player player) {
+        try {
+            EntityType entityType = null;
+            if (corpse.is(GSEItems.CORPSE_VILLAGER)) {
+                entityType = EntityType.VILLAGER;
+            } else if (corpse.is(GSEItems.CORPSE_DOG)) {
+                entityType = EntityType.WOLF;
+            } else if (corpse.is(GSEItems.CORPSE_CAT)) {
+                entityType = EntityType.CAT;
+            } else if (corpse.is(GSEItems.CORPSE_HORSE)) {
+                entityType = EntityType.HORSE;
+            }
+
+            if (entityType != null) {
+                var mob = (LivingEntity) entityType.create(level, EntitySpawnReason.EVENT);
+                var data = corpse.get(DataComponents.CUSTOM_DATA);
+                if (data != null) {
+                    var tag = data.copyTag();
+                    if (tag.contains(MOB_INFO)) {
+                        if (mob instanceof Villager villager) {
+                            villager.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                        } else if (mob instanceof Wolf wolf) {
+                            wolf.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                        } else if (mob instanceof Cat cat) {
+                            cat.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                        } else if (mob instanceof Horse horse) {//TODO AbstractHorse
+                            horse.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                        }
+                    }
+                }
+                // for creative items and any cases without data
+                if (mob instanceof Wolf wolf) {
+                    wolf.tame(player);
+                } else if (mob instanceof Cat cat) {
+                    cat.tame(player);
+                } else if (mob instanceof Horse horse) {
+                    horse.setTamed(true);
+                }
+
+                mob.snapTo(pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 0);
+                mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, TimeHelper.SECONDS_15, 0));
+
+                level.addFreshEntity(mob);
+            }
+        } catch (Exception e) {
+            LOGGER.error("Something went wrong at resurrection process", e);
+        }
+    }
+
+    public static boolean canSpawnMob(Player player, ItemStack corpse) {
+        return (corpse.is(GSEItems.CORPSE_VILLAGER) ||
+                corpse.is(GSEItems.CORPSE_DOG) || corpse.is(GSEItems.CORPSE_CAT) ||
+                corpse.is(GSEItems.CORPSE_HORSE)) &&
+                (player.isCreative() || player.experienceLevel >= getRequiredLevel(corpse));
+    }
+
+    public static int getRequiredLevel(ItemStack stack) {
+        if (stack.is(GSEItems.CORPSE_VILLAGER)) {
+            return 20;
+        } else if (stack.is(GSEItems.CORPSE_DOG) || stack.is(GSEItems.CORPSE_CAT)) {
+            return 7;
+        } else if (stack.is(GSEItems.CORPSE_HORSE)) {
+            return 15;
+        }
+        return 0;
+    }
+
 }

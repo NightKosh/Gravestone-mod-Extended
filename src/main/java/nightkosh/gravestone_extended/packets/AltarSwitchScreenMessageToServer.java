@@ -14,6 +14,7 @@ import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.gui.container.DisenchantmentContainerMenu;
 import nightkosh.gravestone_extended.gui.container.EnchantmentContainerMenu;
+import nightkosh.gravestone_extended.gui.container.ResurrectionContainerMenu;
 
 import javax.annotation.Nonnull;
 
@@ -51,10 +52,10 @@ public record AltarSwitchScreenMessageToServer(String playerId, int guiId, int x
             var level = player.level();
             if (level.getBlockEntity(pos) instanceof AltarBlockEntity altar) {
                 var provider = switch (msg.guiId()) {
-//                    case 1 -> new SimpleMenuProvider(
-//                            (containerId, inv, p) -> new ResurrectionContainerMenu(containerId, inv, altar),
-//                              Component.empty()
-//                    );
+                    case 1 -> new SimpleMenuProvider(
+                            (containerId, inv, p) -> new ResurrectionContainerMenu(containerId, inv, altar),
+                              Component.empty()
+                    );
                     case 2 -> new SimpleMenuProvider(
                             (containerId, inv, p) -> new EnchantmentContainerMenu(containerId, inv, altar),
                             Component.empty()

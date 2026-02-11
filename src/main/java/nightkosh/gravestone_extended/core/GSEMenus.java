@@ -8,6 +8,7 @@ import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.gui.container.ResurrectionContainerMenu;
 import nightkosh.gravestone_extended.gui.container.DisenchantmentContainerMenu;
 import nightkosh.gravestone_extended.gui.container.EnchantmentContainerMenu;
 
@@ -21,6 +22,9 @@ public class GSEMenus {
 
     public static final DeferredRegister<MenuType<?>> MENUS_REGISTER =
             DeferredRegister.create(Registries.MENU, ModInfo.ID);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<ResurrectionContainerMenu>> ALTAR_RESURRECTION =
+            registerMenuType(ResurrectionContainerMenu::new, "altar_resurrection");
 
     public static final DeferredHolder<MenuType<?>, MenuType<DisenchantmentContainerMenu>> ALTAR_DISENCHANTMENT =
             registerMenuType(DisenchantmentContainerMenu::new, "altar_disenchantment");

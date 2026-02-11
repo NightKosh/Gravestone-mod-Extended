@@ -82,9 +82,6 @@ public class DogCorpseHelper extends CorpseHelper {
 //
 //    public static void addInfo(List list, NBTTagCompound nbtTag) {
 //        addNameInfo(list, nbtTag);
-//        if (hasCollar(nbtTag)) {
-//            list.add(getCollarStr(nbtTag));
-//        }
 //        if (Compatibility.sophisticatedWolvesInstalled && CompatibilitySophisticatedWolves.isSophisticated(nbtTag)) {
 //            list.add(CompatibilitySophisticatedWolves.getSpeciesStr(nbtTag.getInteger(CompatibilitySophisticatedWolves.NBT_NAME)));
 //        }
@@ -94,48 +91,5 @@ public class DogCorpseHelper extends CorpseHelper {
 //    private static boolean hasCollar(NBTTagCompound nbtTag) {
 //        return nbtTag.hasKey("Collar");
 //    }
-//
-//    private static String getCollarStr(NBTTagCompound nbtTag) {
-//        return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.collar") + " " +
-//                ModGravestoneExtended.proxy.getLocalizedString(getCollar(nbtTag.getByte("Collar")));
-//    }
 
-    private static String getCollar(int type) {
-        switch (type) {
-            case 0:
-                return "item.corpse.collar.white";
-            case 1:
-                return "item.corpse.collar.orange";
-            case 2:
-                return "item.corpse.collar.purple";
-            case 3:
-                return "item.corpse.collar.azure";
-            case 4:
-                return "item.corpse.collar.yellow";
-            case 5:
-                return "item.corpse.collar.lime";
-            case 6:
-                return "item.corpse.collar.pink";
-            case 7:
-                return "item.corpse.collar.grey";
-            case 8:
-                return "item.corpse.collar.light_grey";
-            case 9:
-                return "item.corpse.collar.turquoise";//бирюзовый
-            case 10:
-                return "item.corpse.collar.violet";
-            case 11:
-                return "item.corpse.collar.blue";
-            case 12:
-                return "item.corpse.collar.brown";
-            case 13:
-                return "item.corpse.collar.green";
-            case 14:
-                return "item.corpse.collar.red";
-            case 15:
-                return "item.corpse.collar.black";
-            default:
-                return "item.corpse.collar.unknown";
-        }
-    }
 }
