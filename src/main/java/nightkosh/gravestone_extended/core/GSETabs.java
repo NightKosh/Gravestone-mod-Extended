@@ -42,6 +42,12 @@ public class GSETabs {
                         output.accept(GSEItems.ENDER_SKULL.get());
                         output.accept(GSEItems.FROZEN_MIRROR.get());
 
+                        // corpses
+                        output.accept(GSEItems.CORPSE_VILLAGER.get());
+                        output.accept(GSEItems.CORPSE_DOG.get());
+                        output.accept(GSEItems.CORPSE_CAT.get());
+                        output.accept(GSEItems.CORPSE_HORSE.get());
+
                         // skull candles
                         output.accept(GSEItems.SKULL_CANDLE_SKELETON.get());
                         output.accept(GSEItems.SKULL_CANDLE_STRAY.get());

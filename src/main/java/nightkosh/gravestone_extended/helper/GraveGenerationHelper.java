@@ -1,6 +1,10 @@
 package nightkosh.gravestone_extended.helper;
 
+import nightkosh.gravestone_extended.core.GSEConfigs;
+
 import java.util.Random;
+
+import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
 /**
  * Gravestone mod - Extended
@@ -33,8 +37,11 @@ public class GraveGenerationHelper {//TODO extends nightkosh.gravestone.helper.G
 //            return EnumGraveTypeByEntity.CATS_GRAVES;//40%
 //        }
 //    }
-//
-//    public static void addMobsItemsHandlers() {
+
+    public static void addMobsItemsHandlers() {
+        if (GSEConfigs.DEBUG_MODE.get()) {
+            LOGGER.info("Going to inject mobs items handlers");
+        }
 //        GraveStoneAPI.graveGenerationAtDeath.addVillagerItemsHandler((villager, source) -> {
 //            if (ExtendedConfig.createCorpsesForModdedNotVanillaVillagers || villager.getClass().equals(EntityVillager.class)) {
 //                return CorpseHelper.getCorpse(villager, EnumCorpse.VILLAGER);
@@ -70,5 +77,6 @@ public class GraveGenerationHelper {//TODO extends nightkosh.gravestone.helper.G
 //                return new ArrayList<>(0);
 //            }
 //        });
-//    }
+    }
+
 }

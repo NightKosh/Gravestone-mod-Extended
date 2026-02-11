@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Спавнер павуків",
 
+  "item.gravestone_extended.corpse_villager": "Труп жителя",
+  "item.gravestone_extended.corpse_dog": "Труп собаки",
+  "item.gravestone_extended.corpse_cat": "Труп кішки",
+  "item.gravestone_extended.corpse_horse": "Труп коня",
+
   "item.gravestone_extended.bone_shield": "Кістяний щит",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",

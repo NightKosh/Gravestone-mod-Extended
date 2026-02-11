@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Spider Spawner",
 
+  "item.gravestone_extended.corpse_villager": "Mrtvola vesničana",
+  "item.gravestone_extended.corpse_dog": "Mrtvola psa",
+  "item.gravestone_extended.corpse_cat": "Mrtvola kočky",
+  "item.gravestone_extended.corpse_horse": "Mrtvola koně",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",

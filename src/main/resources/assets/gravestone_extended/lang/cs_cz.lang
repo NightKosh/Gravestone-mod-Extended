@@ -16,8 +16,6 @@ block.memorial.creeper_statue.name=Socha Syčáka
 block.memorial.celtic_cross.name=Keltský kříž
 
 ## Executions
-## TODO !!!!!!
-block.execution.gallows.name=Gallows
 block.execution.gibbet.name=Šibenice
 block.execution.stocks.name=Pranýř
 block.execution.burning_stake.name=Upalovací hranice
@@ -34,10 +32,6 @@ block.haunted_chest.raven_chest.name=Bedna s havrany
 block.haunted_chest.ghost_chest.name=Bedna s duchem
 
 ## Corpses
-item.corpse.villager=Mrtvola vesničana
-item.corpse.horse=Mrtvola koně
-item.corpse.dog=Mrtvola psa
-item.corpse.cat=Mrtvola kočky
 item.corpse.entity_name=Jméno
 item.corpse.villager_type=Profese
 item.corpse.villager_type.farmer=Farmář
@@ -65,24 +59,6 @@ item.corpse.horse_variant=Typy koní
 item.corpse.health=Maximum života
 item.corpse.speed=Rychlost
 item.corpse.jump_strength=Síla skoku
-item.corpse.collar=Obojek
-item.corpse.collar.white=Bílý
-item.corpse.collar.orange=Oranžový
-item.corpse.collar.purple=Purpurový
-item.corpse.collar.azure=Azurový
-item.corpse.collar.yellow=Žlutý
-item.corpse.collar.lime=Limetkový
-item.corpse.collar.pink=Růžový
-item.corpse.collar.grey=Šedý
-item.corpse.collar.light_grey=Světle šedý
-item.corpse.collar.turquoise=Tyrkysový
-item.corpse.collar.violet=Fialový
-item.corpse.collar.blue=Modrý
-item.corpse.collar.brown=Hnědý
-item.corpse.collar.green=Zelený
-item.corpse.collar.red=Červený
-item.corpse.collar.black=Černý
-item.corpse.collar.unknown=Neznámý
 item.corpse.dog_type=Typ psa
 item.corpse.cat_type=Typ kočky
 item.corpse.cat_type.ocelot=Ocelot
@@ -91,16 +67,7 @@ item.corpse.cat_type.red=Červená
 item.corpse.cat_type.siamese=Siamská
 item.corpse.cat_type.unknown=Neznámá
 
-
-# GUI
-gui.edit_grave.title=Nastav text náhrobku
-gui.edit_grave.close=Hotovo
-gui.edit_grave.randomText=Nastav náhodný text
-gui.altar.resurrect=
-gui.altar.requirements=
-
 # Entity
-entity.GSRaven.name=Havran
 entity.Villager.gravestone-extended:undertaker=Hrobař
 
 

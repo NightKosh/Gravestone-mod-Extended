@@ -623,9 +623,6 @@ public class GSEBlocks {
 //    public static final BlockExecution EXECUTION = new BlockExecution();
 //    public static final ItemBlock EXECUTION_IB = new IBExecution(EXECUTION);
 //
-//    public static final BlockSpawner SPAWNER = new BlockSpawner();
-//    public static final ItemBlock SPAWNER_IB = new IBSpawner(SPAWNER);
-//
 //    public static final BlockTrap TRAP = new BlockTrap();
 //    public static final ItemBlock TRAP_IB = new IBTrap(TRAP);
 //
@@ -633,9 +630,6 @@ public class GSEBlocks {
 //    public static final ItemBlock HAUNTED_CHEST_IB = new IBHauntedChest(HAUNTED_CHEST);
 //
 //    public static final BlockInvisibleWall INVISIBLE_WALL = new BlockInvisibleWall();
-//
-//    public static final BlockCorpse CORPSE = new BlockCorpse();
-//    public static final ItemBlock CORPSE_IB = new IBCorpse(CORPSE);
 //
 //    public static final Block CATACOMBS_PORTAL = new BlockCatacombsPortal();
 //    public static final ItemBlock CATACOMBS_PORTAL_IB = new IBCatacombsPortal(CATACOMBS_PORTAL);
@@ -651,15 +645,15 @@ public class GSEBlocks {
 //        @SubscribeEvent
 //        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 //            final IForgeRegistry<Block> registry = event.getRegistry();
-//            registry.registerAll(MEMORIAL, EXECUTION, SPAWNER, TRAP,
-//                    HAUNTED_CHEST, INVISIBLE_WALL, CORPSE, TOXIC_WATER, CATACOMBS_PORTAL, CURSED_FLAME);
+//            registry.registerAll(MEMORIAL, EXECUTION, TRAP,
+//                    HAUNTED_CHEST, INVISIBLE_WALL, TOXIC_WATER, CATACOMBS_PORTAL, CURSED_FLAME);
 //        }
 //
 //        @SubscribeEvent
 //        public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
 //            final IForgeRegistry<Item> registry = event.getRegistry();
-//            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, SPAWNER_IB, TRAP_IB,
-//                    HAUNTED_CHEST_IB, CORPSE_IB, CATACOMBS_PORTAL_IB, CURSED_FLAME_IB);
+//            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, TRAP_IB,
+//                    HAUNTED_CHEST_IB, CATACOMBS_PORTAL_IB, CURSED_FLAME_IB);
 //        }
 //    }
 

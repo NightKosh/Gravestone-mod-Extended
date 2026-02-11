@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Spider Spawner",
 
+  "item.gravestone_extended.corpse_villager": "Carcasse de villageois",
+  "item.gravestone_extended.corpse_dog": "Carcasse de chien",
+  "item.gravestone_extended.corpse_cat": "Carcasse de chat",
+  "item.gravestone_extended.corpse_horse": "Carcasse de cheval",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",

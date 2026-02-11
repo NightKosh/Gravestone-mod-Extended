@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.core;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,7 +18,10 @@ import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingLeggings;
 import nightkosh.gravestone_extended.item.compass.EnderSkull;
 import nightkosh.gravestone_extended.item.compass.ImpSkull;
 import nightkosh.gravestone_extended.item.compass.SlimeChunk;
+import nightkosh.gravestone_extended.item.corpse.Corpse;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
+
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
 /**
  * Gravestone mod - Extended
@@ -44,6 +48,27 @@ public class GSEItems {
 
     public static final DeferredHolder<Item, Item> ENCHANTED_SKELETON_SKULL = ITEMS_REGISTER.register("enchanted_skeleton_skull", EnchantedSkeletonSkull::new);
     public static final DeferredHolder<Item, Item> ENCHANTED_WITHER_SKULL = ITEMS_REGISTER.register("enchanted_wither_skull", EnchantedWitherSkull::new);
+
+    // corpse
+    private static final ResourceKey<Item> CORPSE_VILLAGER_RK = ResourceKey.create(
+            Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "corpse_villager"));
+    public static final DeferredHolder<Item, Item> CORPSE_VILLAGER = ITEMS_REGISTER.register(
+            "corpse_villager", () -> new Corpse(CORPSE_VILLAGER_RK));
+
+    private static final ResourceKey<Item> CORPSE_DOG_RK = ResourceKey.create(
+            Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "corpse_dog"));
+    public static final DeferredHolder<Item, Item> CORPSE_DOG = ITEMS_REGISTER.register(
+            "corpse_dog", () -> new Corpse(CORPSE_DOG_RK));
+
+    private static final ResourceKey<Item> CORPSE_CAT_RK = ResourceKey.create(
+            Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "corpse_cat"));
+    public static final DeferredHolder<Item, Item> CORPSE_CAT = ITEMS_REGISTER.register(
+            "corpse_cat", () -> new Corpse(CORPSE_CAT_RK));
+
+    private static final ResourceKey<Item> CORPSE_HORSE_RK = ResourceKey.create(
+            Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "corpse_horse"));
+    public static final DeferredHolder<Item, Item> CORPSE_HORSE = ITEMS_REGISTER.register(
+            "corpse_horse", () -> new Corpse(CORPSE_HORSE_RK));
 
     // skull candles
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_SKELETON = ITEMS_REGISTER.register(

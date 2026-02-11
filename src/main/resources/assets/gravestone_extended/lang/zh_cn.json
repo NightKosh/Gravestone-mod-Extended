@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Spider Spawner",
 
+  "item.gravestone_extended.corpse_villager": "村民的尸体",
+  "item.gravestone_extended.corpse_dog": "狗的尸体",
+  "item.gravestone_extended.corpse_cat": "猫的尸体",
+  "item.gravestone_extended.corpse_horse": "马的尸体",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",

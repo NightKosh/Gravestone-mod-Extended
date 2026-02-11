@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Spinnenspawner",
 
+  "item.gravestone_extended.corpse_villager": "Dorfbewohner-Leiche",
+  "item.gravestone_extended.corpse_dog": "Hundeleiche",
+  "item.gravestone_extended.corpse_cat": "Katzenleiche",
+  "item.gravestone_extended.corpse_horse": "Pferdeleiche",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",

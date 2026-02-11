@@ -27,10 +27,6 @@ block.haunted_chest.ghost_chest.name=Coffre à fantômes
 
 
 ## Corpses
-item.corpse.villager=Carcasse de villageois
-item.corpse.horse=Carcasse de cheval
-item.corpse.dog=Carcasse de chien
-item.corpse.cat=Carcasse de chat
 item.corpse.entity_name=Nom
 item.corpse.villager_type=Profession
 item.corpse.villager_type.farmer=Fermier
@@ -58,24 +54,6 @@ item.corpse.horse_variant=Variante de cheval
 item.corpse.health=Vie max
 item.corpse.speed=Vitesse
 item.corpse.jump_strength=Force de saut
-item.corpse.collar=Collier
-item.corpse.collar.white=Blanc
-item.corpse.collar.orange=Orange
-item.corpse.collar.purple=Violet
-item.corpse.collar.azure=Azure
-item.corpse.collar.yellow=Jaune
-item.corpse.collar.lime=Citron
-item.corpse.collar.pink=Rose
-item.corpse.collar.grey=Gris
-item.corpse.collar.light_grey=Gris clair
-item.corpse.collar.turquoise=Turquoise
-item.corpse.collar.violet=Pourpre
-item.corpse.collar.blue=Bleu
-item.corpse.collar.brown=Marron
-item.corpse.collar.green=Vert
-item.corpse.collar.red=Rouge
-item.corpse.collar.black=Noir
-item.corpse.collar.unknown=Inconnu
 item.corpse.dog_type=Type de chien
 item.corpse.cat_type=Type de chat
 item.corpse.cat_type.ocelot=Ocelot

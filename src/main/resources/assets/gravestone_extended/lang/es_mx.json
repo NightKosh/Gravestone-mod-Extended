@@ -22,6 +22,11 @@
   "item.gravestone_extended.spawner_piglin": "Piglin Spawner",
   "item.gravestone_extended.spawner_spider": "Spider Spawner",
 
+  "item.gravestone_extended.corpse_villager": "Cadáver Aldeano",
+  "item.gravestone_extended.corpse_dog": "Cadáver Perro",
+  "item.gravestone_extended.corpse_cat": "Cadáver Gato",
+  "item.gravestone_extended.corpse_horse": "Cadáver Caballo",
+
   "item.gravestone_extended.bone_shield": "Escudo de hueso",
 
   "item.gravestone_extended.diving_helmet": "Escafandra",

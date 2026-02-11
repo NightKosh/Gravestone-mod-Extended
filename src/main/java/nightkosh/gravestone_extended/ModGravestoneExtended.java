@@ -55,53 +55,20 @@ public class ModGravestoneExtended {
 ////
 ////        GSDimensions.registration();
 ////
-////        GSEntity.registration();
-////
 ////        GSMaterials.registration();
 //    }
 
     //TODO
 //    @Mod.EventHandler
 //    public void load(FMLInitializationEvent event) {
-//        // register death event
-//        MinecraftForge.EVENT_BUS.register(new GSEventsHandler());
-//        MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
-//        FMLCommonHandler.instance().bus().register(new TickEventHandler());
-//        proxy.registerHandlers();
-//
-//        // reciepes registration
-//        GSRecipes.registration();
-//        GSRecipes.smeltingRecipesRegistration();
-//
 //        // register structures
 //        GSStructures.registration();
 //
 //        GSParticles.registration();
 //
-//        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-//
-//        proxy.registerMobsRenderers();
-//
 //        VillagersHandler.registerVillagers();
 //
 //        proxy.registerEggs();
 //    }
-//
-//    @Mod.EventHandler
-//    public void postInit(FMLPostInitializationEvent event) {
-//        Compatibility.INSTANCE.checkMods();
-//
-//        CemeteryHelper.addGravePositionHandlers();
-//
-//        GraveGenerationHelper.addMobsItemsHandlers();
-//
-//        GraveSpawnerHelper.setGraveSpawnerHelper();
-//
-//        TileEntityGraveStone.fogHandler = new FogHandler();
-//    }
-//
-//    @Mod.EventHandler
-//    public void serverStarting(FMLServerStartingEvent event) {
-//        ExtendedCommands.getInstance(event);
-//    }
+
 }
