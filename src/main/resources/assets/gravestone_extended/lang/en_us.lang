@@ -120,21 +120,6 @@ item.corpse.zombie_villager=Zombie Villager Corpse
 item.corpse.skeleton=Skeleton Corpse
 item.corpse.witch=Witch Corpse
 item.corpse.entity_name=Name
-item.corpse.villager_type=Profession
-item.corpse.villager_type.farmer=Farmer
-item.corpse.villager_type.librarian=Librarian
-item.corpse.villager_type.priest=Priest
-item.corpse.villager_type.smith=Smith
-item.corpse.villager_type.butcher=Butcher
-item.corpse.villager_type.undertaker=Undertaker
-item.corpse.villager_type.brewer=Brewer
-item.corpse.villager_type.thaumaturge=Thaumaturge
-item.corpse.villager_type.beekeeper=Beekeeper
-item.corpse.villager_type.lumberjack=Lumberjack
-item.corpse.villager_type.unknown=Unknown
-
-item.corpse.villager_career=Career
-item.corpse.villager_career.unknown=Unknown
 
 item.corpse.horse_type=Horse Type
 item.corpse.horse_type.horse=Horse
@@ -147,26 +132,8 @@ item.corpse.horse_variant=Horse Variant
 item.corpse.health=Max Health
 item.corpse.speed=Speed
 item.corpse.jump_strength=Jump Strength
-item.corpse.dog_type=Dog type
-item.corpse.cat_type=Cat type
-item.corpse.cat_type.ocelot=Ocelot
-item.corpse.cat_type.black=Black
-item.corpse.cat_type.red=Red
-item.corpse.cat_type.siamese=Siamese
-item.corpse.cat_type.unknown=Unknown
-
-## mobs type
-mobtype.title=Mob type
-mobtype.zombie=Zombie
-mobtype.skeleton=Skeleton
-mobtype.ghost=Ghost
-mobtype.husk=Husk Zombie
-mobtype.stray=Stray Skeleton
-mobtype.wither=Wither Skeleton
-mobtype.pigman=Zombie Pigmen
 
 # Entity
-entity.GSRaven.name=Raven
 entity.Villager.gravestone-extended:undertaker=Undertaker
 
 # Fluids

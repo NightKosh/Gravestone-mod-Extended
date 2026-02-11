@@ -33,20 +33,6 @@ block.haunted_chest.ghost_chest.name=Bedna s duchem
 
 ## Corpses
 item.corpse.entity_name=Jméno
-item.corpse.villager_type=Profese
-item.corpse.villager_type.farmer=Farmář
-item.corpse.villager_type.librarian=Knihovník
-item.corpse.villager_type.priest=Kněz
-item.corpse.villager_type.smith=Kovář
-item.corpse.villager_type.butcher=Pekař
-item.corpse.villager_type.undertaker=Hrobař
-item.corpse.villager_type.brewer=Sládek
-item.corpse.villager_type.thaumaturge=Divotvůrce
-item.corpse.villager_type.beekeeper=Včelař
-item.corpse.villager_type.lumberjack=Dřevorubec
-item.corpse.villager_type.unknown=neznámý
-
-item.corpse.villager_career.unknown=neznámý
 
 item.corpse.horse_type=Typ koně
 item.corpse.horse_type.horse=Kůň
@@ -59,13 +45,6 @@ item.corpse.horse_variant=Typy koní
 item.corpse.health=Maximum života
 item.corpse.speed=Rychlost
 item.corpse.jump_strength=Síla skoku
-item.corpse.dog_type=Typ psa
-item.corpse.cat_type=Typ kočky
-item.corpse.cat_type.ocelot=Ocelot
-item.corpse.cat_type.black=Černá
-item.corpse.cat_type.red=Červená
-item.corpse.cat_type.siamese=Siamská
-item.corpse.cat_type.unknown=Neznámá
 
 # Entity
 entity.Villager.gravestone-extended:undertaker=Hrobař

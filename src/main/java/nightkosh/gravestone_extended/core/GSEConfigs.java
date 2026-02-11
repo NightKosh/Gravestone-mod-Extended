@@ -15,6 +15,11 @@ public class GSEConfigs {
     public static final ModConfigSpec SPEC;
     public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
+    public static ModConfigSpec.ConfigValue<Boolean> CREATE_VILLAGERS_CORPSES;
+    public static ModConfigSpec.ConfigValue<Boolean> CREATE_DOGS_CORPSES;
+    public static ModConfigSpec.ConfigValue<Boolean> CREATE_CATS_CORPSES;
+    public static ModConfigSpec.ConfigValue<Boolean> CREATE_HORSES_CORPSES;
+
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION;
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_CRAWLERS_AT_PILES_DESTRUCTION;
 
@@ -25,6 +30,15 @@ public class GSEConfigs {
 
     static {
         BUILDER.push("Configs for Gravestone mod - Extended");
+
+        CREATE_VILLAGERS_CORPSES = BUILDER.comment("Generate villager corpse item at villager death")
+                .define("CREATE_VILLAGERS_CORPSES", true);
+        CREATE_DOGS_CORPSES = BUILDER.comment("Generate dog corpse item at tamed dog death")
+                .define("CREATE_DOGS_CORPSES", true);
+        CREATE_CATS_CORPSES = BUILDER.comment("Generate cat corpse item at tamed cat death")
+                .define("CREATE_CATS_CORPSES", true);
+        CREATE_HORSES_CORPSES = BUILDER.comment("Generate horse corpse item at tamed horse death")
+                .define("CREATE_HORSES_CORPSES", true);
 
         SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION = BUILDER.comment("Spawn skull crawlers at bone block destruction")
                 .define("SPAWN_CRAWLERS_AT_BLOCK_DESTRUCTION", true);
@@ -177,10 +191,6 @@ public class GSEConfigs {
     public static boolean showNightStoneMessage;
     // haunted chest
     public static boolean replaceHauntedChest;
-    public static boolean createCorpsesForModdedNotVanillaVillagers;
-    public static boolean createCorpsesForModdedNotVanillaDogs;
-    public static boolean createCorpsesForModdedNotVanillaCats;
-    public static boolean createCorpsesForModdedNotVanillaHorses;
     public static boolean spreadToxicWater;
     public static boolean removeToxicWater;
 //
@@ -193,26 +203,16 @@ public class GSEConfigs {
 //        // haunted chest
 //        replaceHauntedChest = config.get(Configuration.CATEGORY_GENERAL, "ReplaceHauntedChest", false).getBoolean();
 //
-//        createCorpsesForModdedNotVanillaVillagers = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaVillagers", false).getBoolean();
-//        createCorpsesForModdedNotVanillaDogs = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaDogs", true).getBoolean();
-//        createCorpsesForModdedNotVanillaCats = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaCats", true).getBoolean();
-//        createCorpsesForModdedNotVanillaHorses = config.get(Configuration.CATEGORY_GENERAL, "CreateCorpsesForModdedNotVanillaHorses", true).getBoolean();
 //
 //        spreadToxicWater = config.get(Configuration.CATEGORY_GENERAL, "SpreadToxicWater", true).getBoolean();
 //        removeToxicWater = config.get(Configuration.CATEGORY_GENERAL, "RemoveToxicWater", false).getBoolean();
 //    }
 //
     // recipes
-    public static boolean craftableWitherSpawner;
-    public static boolean craftableSpawners;
     public static boolean craftableNightStone;
     public static boolean craftableThunderStone;
 //
 //    private static void recipesConfigs() {
-//        // spawners recipes
-//        craftableWitherSpawner = config.get(CATEGORY_RECIPES, "CraftableWitherSpawner", true).getBoolean();
-//        craftableSpawners = config.get(CATEGORY_RECIPES, "CraftableSpawners", true).getBoolean();
-//
 //        craftableNightStone = config.get(CATEGORY_RECIPES, "CraftableNightStone", true).getBoolean();
 //        craftableThunderStone = config.get(CATEGORY_RECIPES, "CraftableThunderStone", true).getBoolean();
 //    }
@@ -233,14 +233,9 @@ public class GSEConfigs {
 //
     // COMPATIBILITY
     public static boolean enableAntiqueAtlasDeathMarkers;//TODO ????
-    public static boolean disableInfernalMobs;
 //
 //    private static void compatibilityConfigs() {
-//        spawnMoCreaturesMobs = config.get(Config.CATEGORY_COMPATIBILITY, "SpawnMoCreaturesMobs", true).getBoolean();
-//
 //        enableAntiqueAtlasDeathMarkers = config.get(Config.CATEGORY_COMPATIBILITY, "EnableAntiqueAtlasDeathMarkers", true).getBoolean();
-//
-//        disableInfernalMobs = config.get(Config.CATEGORY_COMPATIBILITY, "DisableInfernalMobs", true).getBoolean();
 //    }
 //
 
@@ -258,12 +253,5 @@ public class GSEConfigs {
 //        particleToxicWaterSplashId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterSplashId", GSParticles.TOXIC_WATER_SPLASH_DEFAULT_ID).getInt();
 //        particleToxicWaterBubbleId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterBubbleId", GSParticles.TOXIC_WATER_BUBBLE_DEFAULT_ID).getInt();
 //        particleToxicWaterWakeId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterWakeId", GSParticles.TOXIC_WATER_WAKE_DEFAULT_ID).getInt();
-//    }
-//
-//
-//    public static boolean debugMode;
-//
-//    private static void debugConfigs() {
-//        debugMode = config.get(CATEGORY_DEBUG, "DebugMode", false).getBoolean();
 //    }
 }

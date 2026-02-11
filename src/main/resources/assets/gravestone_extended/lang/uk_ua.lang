@@ -82,21 +82,6 @@ item.corpse.zombie_villager=Труп зомбі-жителя
 item.corpse.skeleton=Труп скелета
 item.corpse.witch=Труп відьми
 item.corpse.entity_name=Ім'я
-item.corpse.villager_type=Професія
-item.corpse.villager_type.farmer=Фермер
-item.corpse.villager_type.librarian=Бібліотекар
-item.corpse.villager_type.priest=Священик
-item.corpse.villager_type.smith=Коваль
-item.corpse.villager_type.butcher=М'ясник
-item.corpse.villager_type.undertaker=Трунар
-item.corpse.villager_type.brewer=Пивовар
-item.corpse.villager_type.thaumaturge=Тауматург
-item.corpse.villager_type.beekeeper=Бджоляр
-item.corpse.villager_type.lumberjack=Дроворуб
-item.corpse.villager_type.unknown=Невідома
-
-item.corpse.villager_career=Кар'єра
-item.corpse.villager_career.unknown=Невідома
 
 item.corpse.horse_type=Тип коня
 item.corpse.horse_type.horse=Кінь
@@ -109,27 +94,9 @@ item.corpse.horse_variant=Різновид
 item.corpse.health=Максимальне здоров'я
 item.corpse.speed=Швидкість
 item.corpse.jump_strength=Стрибучість
-item.corpse.dog_type=Тип собаки
-item.corpse.cat_type=Тип кішки
-item.corpse.cat_type.ocelot=Оцелот
-item.corpse.cat_type.black=Чорна
-item.corpse.cat_type.red=Руда
-item.corpse.cat_type.siamese=Сіамська
-item.corpse.cat_type.unknown=Невідомий
-
-## mobs type
-mobtype.title=Тип моба
-mobtype.zombie=Зомбі
-mobtype.skeleton=Скелет
-mobtype.ghost=Привид
-mobtype.husk=Кадавр
-mobtype.stray=Зимогор
-mobtype.wither=Скелет-висушувач
-mobtype.pigman=Свинозомбі
 
 
 # Entity
-entity.GSRaven.name=Ворон
 entity.Villager.gravestone-extended:undertaker=Трунар
 
 # Fluids

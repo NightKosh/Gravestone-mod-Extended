@@ -10,8 +10,8 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 import nightkosh.gravestone_extended.block_entity.AltarBlockEntity;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
-import nightkosh.gravestone_extended.item.corpse.Corpse;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
+import nightkosh.gravestone_extended.item.Corpse;
+import nightkosh.gravestone_extended.helper.CorpseHelper;
 
 import javax.annotation.Nonnull;
 

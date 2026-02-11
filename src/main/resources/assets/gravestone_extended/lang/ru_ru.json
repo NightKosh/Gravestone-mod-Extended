@@ -27,6 +27,28 @@
   "item.gravestone_extended.corpse_cat": "Труп кошки",
   "item.gravestone_extended.corpse_horse": "Труп лошади",
 
+  "item.gravestone_extended.corpse_dog.pale" : "Бледный",
+  "item.gravestone_extended.corpse_dog.spotted" : "Пятнистый",
+  "item.gravestone_extended.corpse_dog.snowy" : "Снежный",
+  "item.gravestone_extended.corpse_dog.black" : "Чёрный",
+  "item.gravestone_extended.corpse_dog.ashen" : "Пепельный",
+  "item.gravestone_extended.corpse_dog.rusty" : "Ржавый",
+  "item.gravestone_extended.corpse_dog.woods" : "Лесной",
+  "item.gravestone_extended.corpse_dog.chestnut" : "Каштановый",
+  "item.gravestone_extended.corpse_dog.striped" : "Полосатый",
+
+  "item.gravestone_extended.corpse_cat.tabby" : "Табби",
+  "item.gravestone_extended.corpse_cat.black" : "Чёрно-белая",
+  "item.gravestone_extended.corpse_cat.red" : "Рыжая",
+  "item.gravestone_extended.corpse_cat.siamese" : "Сиамская",
+  "item.gravestone_extended.corpse_cat.british_shorthair" : "Британская короткошёрстная",
+  "item.gravestone_extended.corpse_cat.calico" : "Трёхцветная",
+  "item.gravestone_extended.corpse_cat.persian" : "Персидская",
+  "item.gravestone_extended.corpse_cat.ragdoll" : "Рэгдолл",
+  "item.gravestone_extended.corpse_cat.white" : "Белая",
+  "item.gravestone_extended.corpse_cat.jellie" : "Джелли",
+  "item.gravestone_extended.corpse_cat.all_black" : "Чёрная",
+
   "item.gravestone_extended.bone_shield": "Костяной щит",
 
   "item.gravestone_extended.diving_helmet": "Водолазный шлем",

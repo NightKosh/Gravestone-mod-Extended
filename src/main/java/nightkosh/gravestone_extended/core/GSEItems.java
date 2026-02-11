@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.core;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -18,7 +17,7 @@ import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingLeggings;
 import nightkosh.gravestone_extended.item.compass.EnderSkull;
 import nightkosh.gravestone_extended.item.compass.ImpSkull;
 import nightkosh.gravestone_extended.item.compass.SlimeChunk;
-import nightkosh.gravestone_extended.item.corpse.Corpse;
+import nightkosh.gravestone_extended.item.Corpse;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;

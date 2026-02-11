@@ -1,8 +1,3 @@
-# Tabs
-itemGroup.tabGSMemorials=纪念碑
-itemGroup.tabGSOther=墓碑模组的物品
-
-
 # Blocks
 ## Memorials
 block.memorial.cross.name=十字纪念碑
@@ -33,20 +28,6 @@ block.haunted_chest.ghost_chest.name=带着鬼魂的箱子
 
 ## Corpses
 item.corpse.entity_name=名称
-item.corpse.villager_type=职业
-item.corpse.villager_type.farmer=农民
-item.corpse.villager_type.librarian=图书管理员
-item.corpse.villager_type.priest=牧师
-item.corpse.villager_type.smith=铁匠
-item.corpse.villager_type.butcher=屠夫
-item.corpse.villager_type.undertaker=送葬者
-item.corpse.villager_type.brewer=酿造师
-item.corpse.villager_type.thaumaturge=魔术师
-item.corpse.villager_type.beekeeper=养蜂人
-item.corpse.villager_type.lumberjack=伐木工
-item.corpse.villager_type.unknown=不明
-
-item.corpse.villager_career.unknown=不明
 
 item.corpse.horse_type=马种
 item.corpse.horse_type.horse=普通马
@@ -59,17 +40,9 @@ item.corpse.horse_variant=变种马
 item.corpse.health=最大生命
 item.corpse.speed=速度
 item.corpse.jump_strength=跳跃高度
-item.corpse.dog_type=狗种
-item.corpse.cat_type=猫种
-item.corpse.cat_type.ocelot=豹猫
-item.corpse.cat_type.black=黑色
-item.corpse.cat_type.red=红色
-item.corpse.cat_type.siamese=暹罗
-item.corpse.cat_type.unknown=不明
 
 
 # Entity
-entity.GSRaven.name=乌鸦
 entity.Villager.gravestone-extended:undertaker=送葬者
 
 

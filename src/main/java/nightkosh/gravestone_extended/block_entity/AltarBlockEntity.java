@@ -19,6 +19,7 @@ import nightkosh.gravestone_extended.block_entity.inventory.DisenchantmentInvent
 import nightkosh.gravestone_extended.block_entity.inventory.EnchantmentInventory;
 import nightkosh.gravestone_extended.core.GSEBlockEntities;
 import nightkosh.gravestone_extended.gui.container.DisenchantmentContainerMenu;
+import nightkosh.gravestone_extended.gui.container.ResurrectionContainerMenu;
 
 import javax.annotation.Nonnull;
 
@@ -67,7 +68,7 @@ public class AltarBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public AbstractContainerMenu createMenu(
             int containerId, @Nonnull Inventory playerInventory, @Nonnull Player player) {
-        return new DisenchantmentContainerMenu(containerId, playerInventory, this);
+        return new ResurrectionContainerMenu(containerId, playerInventory, this);
     }
 
     @Override

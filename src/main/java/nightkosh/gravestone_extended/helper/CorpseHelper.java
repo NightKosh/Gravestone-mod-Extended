@@ -1,26 +1,32 @@
-package nightkosh.gravestone_extended.item.corpse;
+package nightkosh.gravestone_extended.helper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.village.ReputationEventType;
 import net.minecraft.world.entity.animal.equine.Horse;
 import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.entity.animal.wolf.Wolf;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.level.storage.ValueInput;
 import nightkosh.gravestone_extended.core.GSEItems;
-import nightkosh.gravestone_extended.helper.TimeHelper;
+import nightkosh.gravestone_extended.core.GSEMobEffects;
+
+import java.util.function.Consumer;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
@@ -32,87 +38,66 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
  */
 public abstract class CorpseHelper {
 
-//    public static void addMobTypeInfo(List list, NBTTagCompound nbtTag) {
-//        if (nbtTag.hasKey("MobType")) {
-//            EnumUndeadMobType mobType = getMobType(nbtTag);
-//            if (mobType != EnumUndeadMobType.OTHER) {
-//                list.add(ModGravestoneExtended.proxy.getLocalizedString("mobtype.title") + " - " + mobType.getLocalizedName());
-//            }
-//        }
-//    }
-//
-//    protected static void setMobName(EntityLiving entity, NBTTagCompound nbtTag) {
-//        if (nbtTag.hasKey("Name") && nbtTag.getString("Name").length() != 0) {
-//            entity.setCustomNameTag(nbtTag.getString("Name"));
-//        }
-//    }
-//
-//    protected static void setName(EntityLiving entity, NBTTagCompound nbtTag) {
-//        if (entity.hasCustomName()) {
-//            nbtTag.setString("Name", entity.getCustomNameTag());
-//        }
-//    }
-//
-//    protected static void addNameInfo(List list, NBTTagCompound nbtTag) {
-//        if (nbtTag.hasKey("Name") && nbtTag.getString("Name").length() != 0) {
-//            list.add(ModGravestoneExtended.proxy.getLocalizedString("item.corpse.entity_name") + " " + nbtTag.getString("Name"));
-//        }
-//    }
-//
-//    public static void addInfo(int corpseType, List list, NBTTagCompound nbtTag) {
-//        switch (EnumCorpse.values()[corpseType]) {
-//            case VILLAGER:
-//                VillagerCorpseHelper.addInfo(list, nbtTag);
-//                break;
-//            case ZOMBIE_VILLAGER:
-//                VillagerCorpseHelper.addInfo(list, nbtTag);
-//                break;
-//            case HORSE:
-//                HorseCorpseHelper.addInfo(list, nbtTag);
-//                break;
-//            case DOG:
-//                DogCorpseHelper.addInfo(list, nbtTag);
-//                break;
-//            case CAT:
-//                CatCorpseHelper.addInfo(list, nbtTag);
-//                break;
-//            case ZOMBIE:
-//            case SKELETON:
-//                addMobTypeInfo(list, nbtTag);
-//                break;
-//        }
-//    }
-//
-//    public static List<ItemStack> getCorpse(Entity entity, EnumCorpse type) {
-//        NBTTagCompound nbtTag = new NBTTagCompound();
-//        switch (type) {
-//            case VILLAGER:
-//                VillagerCorpseHelper.setNbt((EntityVillager) entity, nbtTag);
-//                break;
-//            case HORSE:
-//                HorseCorpseHelper.setNbt((AbstractHorse) entity, nbtTag);
-//                break;
-//            case DOG:
-//                DogCorpseHelper.setNbt((EntityWolf) entity, nbtTag);
-//                break;
-//            case CAT:
-//                CatCorpseHelper.setNbt((EntityOcelot) entity, nbtTag);
-//                break;
-//        }
-//
-//        List<ItemStack> corpse = new ArrayList<>();
-//        ItemStack stack = new ItemStack(GSBlock.CORPSE, 1, type.ordinal());
-//        stack.setTagCompound(nbtTag);
-//        corpse.add(stack);
-//        return corpse;
-//    }
-//
-    public static CompoundTag addData(Wolf pet) {
+    public static final String CUSTOM_NAME = "CUSTOM_NAME";
+    public static final String WOLF_TYPE = "variant";
+    public static final String CAT_TYPE = "variant";
+    public static final String MOB_DATA = "MOB_DATA";
+    public static final String VILLAGER_DATA = "VillagerData";
+    public static final String VILLAGER_PROFESSION = "profession";
+    public static final String VILLAGER_LEVEL = "level";
+    public static final String VILLAGER_OFFERS = "Offers";
+    public static final String VILLAGER_OFFERS_RECIPES = "Recipes";
+    public static final String VILLAGER_OFFERS_SELL = "sell";
+    public static final String VILLAGER_OFFERS_ITEM_ID = "id";
+    public static final String VILLAGER_OFFERS_ITEM_COMPONENTS = "components";
+    public static final String VILLAGER_OFFERS_ITEM_ENCHANTMENTS = "minecraft:stored_enchantments";
+
+    public static ItemStack addVillagerCorpse(Villager villager) {
+        return getCorpse(
+                villager,
+                (o) -> villager.addAdditionalSaveData(o),
+                GSEItems.CORPSE_VILLAGER.get());
+    }
+
+    public static ItemStack addDogCorpse(Wolf wolf) {
+        return getCorpse(
+                wolf,
+                (o) -> wolf.addAdditionalSaveData(o),
+                GSEItems.CORPSE_DOG.get());
+    }
+
+    public static ItemStack getCatCorpse(Cat cat) {
+        return getCorpse(
+                cat,
+                (o) -> cat.addAdditionalSaveData(o),
+                GSEItems.CORPSE_CAT.get());
+    }
+
+    public static ItemStack getHorseCorpse(Horse horse) {
+        return getCorpse(
+                horse,
+                (o) -> horse.addAdditionalSaveData(o),
+                GSEItems.CORPSE_HORSE.get());
+    }
+
+    private static ItemStack getCorpse(LivingEntity mob, Consumer<TagValueOutput> consumer, Item corpseItem) {
+        var tag = new CompoundTag();
         var output = TagValueOutput.createWithContext(
                 ProblemReporter.DISCARDING,
-                pet.level().registryAccess());
-        pet.addAdditionalSaveData(output);
-        return output.buildResult();
+                mob.level().registryAccess());
+        consumer.accept(output);
+
+        var corpseData = output.buildResult();
+        tag.put(MOB_DATA, corpseData);
+
+        if (mob.hasCustomName()) {
+            tag.putString(CUSTOM_NAME, mob.getCustomName().getString());
+        }
+
+        var corpse = new ItemStack(corpseItem);
+        corpse.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
+
+        return corpse;
     }
 
     private static ValueInput readData(Level level, CompoundTag tag) {
@@ -122,7 +107,6 @@ public abstract class CorpseHelper {
                 tag);
     }
 
-    private static final String MOB_INFO = "MOB_INFO";
     public static void spawnMob(ItemStack corpse, Level level, BlockPos pos, Player player) {
         try {
             EntityType entityType = null;
@@ -141,20 +125,27 @@ public abstract class CorpseHelper {
                 var data = corpse.get(DataComponents.CUSTOM_DATA);
                 if (data != null) {
                     var tag = data.copyTag();
-                    if (tag.contains(MOB_INFO)) {
+                    if (tag.contains(MOB_DATA)) {
                         if (mob instanceof Villager villager) {
-                            villager.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                            villager.readAdditionalSaveData(readData(level, tag.getCompound(MOB_DATA).get()));
                         } else if (mob instanceof Wolf wolf) {
-                            wolf.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                            wolf.readAdditionalSaveData(readData(level, tag.getCompound(MOB_DATA).get()));
                         } else if (mob instanceof Cat cat) {
-                            cat.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                            cat.readAdditionalSaveData(readData(level, tag.getCompound(MOB_DATA).get()));
                         } else if (mob instanceof Horse horse) {//TODO AbstractHorse
-                            horse.readAdditionalSaveData(readData(level, tag.getCompound(MOB_INFO).get()));
+                            horse.readAdditionalSaveData(readData(level, tag.getCompound(MOB_DATA).get()));
                         }
+                    }
+
+                    if (tag.contains(CUSTOM_NAME)) {
+                        mob.setCustomName(Component.literal(tag.getStringOr(CUSTOM_NAME, "")));
                     }
                 }
                 // for creative items and any cases without data
-                if (mob instanceof Wolf wolf) {
+                if (mob instanceof Villager villager) {
+                    // increase reputation
+                    villager.onReputationEventFrom(ReputationEventType.ZOMBIE_VILLAGER_CURED, player);
+                } else if (mob instanceof Wolf wolf) {
                     wolf.tame(player);
                 } else if (mob instanceof Cat cat) {
                     cat.tame(player);
@@ -162,8 +153,10 @@ public abstract class CorpseHelper {
                     horse.setTamed(true);
                 }
 
+                mob.setHealth(mob.getMaxHealth());
                 mob.snapTo(pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 0);
                 mob.addEffect(new MobEffectInstance(MobEffects.REGENERATION, TimeHelper.SECONDS_15, 0));
+                mob.addEffect(new MobEffectInstance(GSEMobEffects.PURIFICATION, TimeHelper.SECONDS_1, 0));
 
                 level.addFreshEntity(mob);
             }

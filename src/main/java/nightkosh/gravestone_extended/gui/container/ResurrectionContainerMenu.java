@@ -10,7 +10,7 @@ import nightkosh.gravestone_extended.block_entity.inventory.CorpseInventory;
 import nightkosh.gravestone_extended.core.GSEItems;
 import nightkosh.gravestone_extended.core.GSEMenus;
 import nightkosh.gravestone_extended.gui.container.slot.CorpseSlot;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
+import nightkosh.gravestone_extended.helper.CorpseHelper;
 
 import javax.annotation.Nonnull;
 

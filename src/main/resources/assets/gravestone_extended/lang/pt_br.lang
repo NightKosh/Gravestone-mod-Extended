@@ -120,21 +120,6 @@ item.corpse.skeleton=Cadáver de Esqueleto
 ##item.corpse.wither_skeleton=Cadáver de Esqueleto Wither
 item.corpse.witch=Cadáver de Bruxa
 item.corpse.entity_name=Nome
-item.corpse.villager_type=Profissão
-item.corpse.villager_type.farmer=Fazendeiro
-item.corpse.villager_type.librarian=Bibliotecário
-item.corpse.villager_type.priest=Padre
-item.corpse.villager_type.smith=Ferreiro
-item.corpse.villager_type.butcher=Açougueiro
-item.corpse.villager_type.undertaker=Agente Funerário
-item.corpse.villager_type.brewer=Cervejeiro
-item.corpse.villager_type.thaumaturge=Taumaturgo
-item.corpse.villager_type.beekeeper=Apicultor
-item.corpse.villager_type.lumberjack=Lenhador
-item.corpse.villager_type.unknown=Desconhecido
-
-item.corpse.villager_career=Carreira
-item.corpse.villager_career.unknown=Desconhecida
 
 item.corpse.horse_type=Tipo de Cavalo
 item.corpse.horse_type.horse=Cavalo
@@ -147,27 +132,9 @@ item.corpse.horse_variant=Variante de Cavalo
 item.corpse.health=Saúde Máxima
 item.corpse.speed=Velocidade
 item.corpse.jump_strength=Força do Pulo
-item.corpse.dog_type=Tipo de Cachorro
-item.corpse.cat_type=Tipo de Gato
-item.corpse.cat_type.ocelot=Ocelot
-item.corpse.cat_type.black=Preto
-item.corpse.cat_type.red=Vermelho
-item.corpse.cat_type.siamese=Siamês
-item.corpse.cat_type.unknown=Desconhecido
-
-## mobs type
-mobtype.title=Tipo de mob
-mobtype.zombie=Zumbi
-mobtype.skeleton=Esqueleto
-mobtype.ghost=Fantasma
-mobtype.husk=Zumbi-Múmia
-mobtype.stray=Esqueleto Vagante
-mobtype.wither=Esqueleto Wither
-mobtype.pigman=Homem-Porco Zumbi
 
 
 # Entity
-entity.GSRaven.name=Corvo
 entity.Villager.gravestone-extended:undertaker=Agente Funerário
 
 # Fluids

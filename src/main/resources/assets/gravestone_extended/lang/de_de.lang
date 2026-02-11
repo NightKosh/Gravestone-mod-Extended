@@ -52,21 +52,6 @@ item.corpse.zombie_villager=Dorfbewohnerzombie-Leiche
 item.corpse.skeleton=Skelettleiche
 item.corpse.witch=Hexenleiche
 item.corpse.entity_name=Name
-item.corpse.villager_type=Beruf
-item.corpse.villager_type.farmer=Landwirt
-item.corpse.villager_type.librarian=Bibliothekar
-item.corpse.villager_type.priest=Priester
-item.corpse.villager_type.smith=Schmied
-item.corpse.villager_type.butcher=Metzger
-item.corpse.villager_type.undertaker=Totengräber
-item.corpse.villager_type.brewer=Brauer
-item.corpse.villager_type.thaumaturge=Wunderheiler
-item.corpse.villager_type.beekeeper=Imker
-item.corpse.villager_type.lumberjack=Holzfäller
-item.corpse.villager_type.unknown=Unbekannt
-
-item.corpse.villager_career=Karriere
-item.corpse.villager_career.unknown=Unbekannt
 
 item.corpse.horse_type=Pferdeart
 item.corpse.horse_type.horse=Pferd
@@ -79,23 +64,6 @@ item.corpse.horse_variant=Pferdegattung
 item.corpse.health=Max. Gesundheit
 item.corpse.speed=Geschwindigkeit
 item.corpse.jump_strength=Sprungkraft
-item.corpse.dog_type=Hundeart
-item.corpse.cat_type=Katzenart
-item.corpse.cat_type.ocelot=Ozelot
-item.corpse.cat_type.black=Schwarz
-item.corpse.cat_type.red=Rot
-item.corpse.cat_type.siamese=Siamkatze
-item.corpse.cat_type.unknown=Unbekannt
-
-## mobs type
-mobtype.title=Monstertyp
-mobtype.zombie=Zombie
-mobtype.skeleton=Skeleton
-mobtype.ghost=Geist
-mobtype.husk=Wüstenzombie
-mobtype.stray=Eiswanderer
-mobtype.wither=Witherskelett
-mobtype.pigman=Schweinezombie
 
 
 # Entity

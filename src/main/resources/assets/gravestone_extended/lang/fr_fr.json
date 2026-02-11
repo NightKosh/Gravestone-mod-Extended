@@ -27,6 +27,28 @@
   "item.gravestone_extended.corpse_cat": "Carcasse de chat",
   "item.gravestone_extended.corpse_horse": "Carcasse de cheval",
 
+  "item.gravestone_extended.corpse_dog.pale" : "Pale",
+  "item.gravestone_extended.corpse_dog.spotted" : "Spotted",
+  "item.gravestone_extended.corpse_dog.snowy" : "Snowy",
+  "item.gravestone_extended.corpse_dog.black" : "Black",
+  "item.gravestone_extended.corpse_dog.ashen" : "Ashen",
+  "item.gravestone_extended.corpse_dog.rusty" : "Rusty",
+  "item.gravestone_extended.corpse_dog.woods" : "Woods",
+  "item.gravestone_extended.corpse_dog.chestnut" : "Chestnut",
+  "item.gravestone_extended.corpse_dog.striped" : "Striped",
+
+  "item.gravestone_extended.corpse_cat.tabby" : "Tabby",
+  "item.gravestone_extended.corpse_cat.black" : "Tuxedo",
+  "item.gravestone_extended.corpse_cat.red" : "Red",
+  "item.gravestone_extended.corpse_cat.siamese" : "Siamese",
+  "item.gravestone_extended.corpse_cat.british_shorthair" : "British Shorthair",
+  "item.gravestone_extended.corpse_cat.calico" : "Calico",
+  "item.gravestone_extended.corpse_cat.persian" : "Persian",
+  "item.gravestone_extended.corpse_cat.ragdoll" : "Ragdoll",
+  "item.gravestone_extended.corpse_cat.white" : "White",
+  "item.gravestone_extended.corpse_cat.jellie" : "Jellie",
+  "item.gravestone_extended.corpse_cat.all_black" : "Black",
+
   "item.gravestone_extended.bone_shield": "Bone Shield",
 
   "item.gravestone_extended.diving_helmet": "Diving Helmet",
