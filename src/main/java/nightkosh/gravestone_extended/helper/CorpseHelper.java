@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.helper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.ProblemReporter;
@@ -29,7 +28,6 @@ import nightkosh.gravestone_extended.core.GSEMobEffects;
 import nightkosh.gravestone_extended.core.compatibility.SophisticatedWolvesCompatibility;
 
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
@@ -70,9 +68,8 @@ public abstract class CorpseHelper {
                     wolf.addAdditionalSaveData(o);
 
                     if (SophisticatedWolvesCompatibility.loaded()) {
-                        var type = BuiltInRegistries.ENTITY_TYPE.get(SophisticatedWolvesCompatibility.SOPHISTICATED_WOLF);
-                        if (type.isPresent() && type.get().value() != null &&
-                                wolf.getType().equals(type.get().value())) {
+                        var type = SophisticatedWolvesCompatibility.getEntityType();
+                        if (wolf.getType().equals(type)) {
                             tag.putBoolean(WOLF_SOPHISTICATED, true);
                         }
                     }
@@ -134,9 +131,9 @@ public abstract class CorpseHelper {
                     var data = corpse.get(DataComponents.CUSTOM_DATA);
                     if (data != null) {
                         var tag = data.copyTag();
-                        var type = BuiltInRegistries.ENTITY_TYPE.get(SophisticatedWolvesCompatibility.SOPHISTICATED_WOLF);
-                        if (type.isPresent() && type.get().value() != null && tag.contains(WOLF_SOPHISTICATED)) {
-                            entityType = type.get().value();
+                        var type = SophisticatedWolvesCompatibility.getEntityType();
+                        if (type != null && tag.contains(WOLF_SOPHISTICATED)) {
+                            entityType = type;
                         }
                     }
                 }

@@ -1,9 +1,9 @@
 package nightkosh.gravestone_extended.core.compatibility;
 
-import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.EntityType;
 import nightkosh.gravestone_extended.core.GSEConfigs;
-
-import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+import sophisticated_wolves.api.ModInfo;
+import sophisticated_wolves.api.SophisticatedWolvesAPI;
 
 /**
  * Gravestone mod - Extended
@@ -13,12 +13,12 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  */
 public class SophisticatedWolvesCompatibility extends ACompatibility {
 
-    public static final String SOPHISTICATED_WOLVES_ID = "sophisticated_wolves";
-
-    public static final Identifier SOPHISTICATED_WOLF = fromNamespaceAndPath(SOPHISTICATED_WOLVES_ID, "sophisticated_wolf");
+    public static EntityType getEntityType() {
+        return SophisticatedWolvesAPI.SOPHISTICATED_WOLF_TYPE;
+    }
 
     public static boolean loaded() {
-        return GSEConfigs.SOPHISTICATED_WOLVES_COMPATIBILITY.get() && loaded(SOPHISTICATED_WOLVES_ID);
+        return GSEConfigs.SOPHISTICATED_WOLVES_COMPATIBILITY.get() && loaded(ModInfo.ID);
     }
 
 }
