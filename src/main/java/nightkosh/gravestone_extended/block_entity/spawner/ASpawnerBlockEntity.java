@@ -6,6 +6,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.BaseSpawner;
 import net.minecraft.world.level.Level;
@@ -18,7 +19,6 @@ import net.minecraft.world.level.storage.ValueOutput;
 import nightkosh.gravestone_extended.block_entity.MobSpawner;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 
 /**
  * Gravestone mod - Extended
@@ -39,7 +39,7 @@ public abstract class ASpawnerBlockEntity extends BlockEntity implements Spawner
         return new MobSpawner(this, getMobs());
     }
 
-    protected abstract List<EntityType> getMobs();
+    protected abstract WeightedList<EntityType<?>> getMobs();
 
     @Override
     protected void loadAdditional(@Nonnull ValueInput input) {

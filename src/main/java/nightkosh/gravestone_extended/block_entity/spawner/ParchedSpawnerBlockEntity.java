@@ -2,11 +2,10 @@ package nightkosh.gravestone_extended.block_entity.spawner;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import nightkosh.gravestone_extended.core.GSEBlockEntities;
-
-import java.util.List;
 
 import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.*;
 
@@ -18,36 +17,21 @@ import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsComp
  */
 public class ParchedSpawnerBlockEntity extends ASpawnerBlockEntity {
 
-    private static final List<EntityType> MOBS = List.of(
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            EntityType.PARCHED, EntityType.PARCHED, EntityType.PARCHED,
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_DOG).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_DOG).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_DOG).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_CAT).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_CAT).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_CAT).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_HORSE).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(SKELETON_HORSE).get().value(),
-            BuiltInRegistries.ENTITY_TYPE.get(PARCHED_CRAWLER).get().value());
+    private static final WeightedList<EntityType<?>> MOBS = WeightedList.<EntityType<?>>builder()
+            .add(EntityType.PARCHED, 21)
+            .add(BuiltInRegistries.ENTITY_TYPE.get(SHIELD_SKELETON).get().value(), 6)
+            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_DOG).get().value(), 3)
+            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_CAT).get().value(), 3)
+            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_HORSE).get().value(), 2)
+            .add(BuiltInRegistries.ENTITY_TYPE.get(PARCHED_CRAWLER).get().value(), 1)
+            .build();
 
     public ParchedSpawnerBlockEntity(BlockPos pos, BlockState blockState) {
         super(GSEBlockEntities.SPAWNER_PARCHED.get(), pos, blockState);
     }
 
     @Override
-    protected List<EntityType> getMobs() {
+    protected WeightedList<EntityType<?>> getMobs() {
         return MOBS;
     }
 

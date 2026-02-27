@@ -4,6 +4,7 @@ import com.mojang.datafixers.util.Either;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.ProblemReporter;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.level.BaseSpawner;
@@ -22,7 +23,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 
 /**
  * Gravestone mod - Extended
@@ -39,10 +39,10 @@ public class MobSpawner extends BaseSpawner {
     protected static final int MAX_NEARBY_ENTITIES = 10;
     protected static final int SPAWN_EFFECTS_DELAY = 20;
 
-    protected final List<EntityType> mobList;
+    protected final WeightedList<EntityType<?>> mobList;
     protected final ASpawnerBlockEntity blockEntity;
 
-    public MobSpawner(ASpawnerBlockEntity blockEntity, List<EntityType> mobList) {
+    public MobSpawner(ASpawnerBlockEntity blockEntity, WeightedList<EntityType<?>> mobList) {
         super();
         this.mobList = mobList;
         this.blockEntity = blockEntity;
@@ -74,7 +74,7 @@ public class MobSpawner extends BaseSpawner {
             } else {
                 // custom
                 this.setEntityId(
-                        mobList.get(serverLevel.random.nextInt(mobList.size())),
+                        mobList.getRandom(serverLevel.random).get(),
                         serverLevel, serverLevel.random, pos);
 
                 boolean flag = false;

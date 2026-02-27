@@ -2,6 +2,7 @@ package nightkosh.gravestone_extended.block_entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
@@ -11,7 +12,6 @@ import nightkosh.gravestone_extended.helper.TimeHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * Gravestone mod - Extended
@@ -25,7 +25,7 @@ public class PiglinMobSpawner extends MobSpawner {
 
     protected static final int PLAYER_RANGE = 8;
 
-    public PiglinMobSpawner(ASpawnerBlockEntity blockEntity, List<EntityType> mobList) {
+    public PiglinMobSpawner(ASpawnerBlockEntity blockEntity, WeightedList<EntityType<?>> mobList) {
         super(blockEntity, mobList);
         this.requiredPlayerRange = PLAYER_RANGE;
     }

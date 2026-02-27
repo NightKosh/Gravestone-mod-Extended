@@ -1,13 +1,12 @@
 package nightkosh.gravestone_extended.block_entity.spawner;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.BaseSpawner;
 import net.minecraft.world.level.block.state.BlockState;
 import nightkosh.gravestone_extended.block_entity.WitherMobSpawner;
 import nightkosh.gravestone_extended.core.GSEBlockEntities;
-
-import java.util.List;
 
 /**
  * Gravestone mod - Extended
@@ -27,8 +26,10 @@ public class WitherSpawnerBlockEntity extends ASpawnerBlockEntity {
     }
 
     @Override
-    protected List<EntityType> getMobs() {
-        return List.of(EntityType.WITHER);
+    protected WeightedList<EntityType<?>> getMobs() {
+        return WeightedList.<EntityType<?>>builder()
+                .add(EntityType.WITHER)
+                .build();
     }
 
 }
