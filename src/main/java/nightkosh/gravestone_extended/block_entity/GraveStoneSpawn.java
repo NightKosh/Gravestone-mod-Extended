@@ -69,7 +69,7 @@ public class GraveStoneSpawn extends MobSpawner {
 
     @Override
     public void serverTick(@NotNull ServerLevel serverLevel, @NotNull BlockPos pos) {
-        if (this.grave != null && !this.grave.isSpawner()) {
+        if (this.grave != null && this.grave.isSpawner()) {
             //TODO
 //            if (spawnerEntity.haveSpawnerHelper()) {
 //                if (((EntityGroupOfGravesMobSpawnerHelper) spawnerEntity.getSpawnerHelper()).canMobsBeSpawned()) {
