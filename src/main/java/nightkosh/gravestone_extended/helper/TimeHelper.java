@@ -1,5 +1,8 @@
 package nightkosh.gravestone_extended.helper;
 
+
+import net.minecraft.world.level.Level;
+
 /**
  * Gravestone mod - Extended
  *
@@ -41,28 +44,25 @@ public class TimeHelper {
 
     private static boolean isGraveSpawnTime;
 
+    public static long getDayTime(Level level) {
+        return level.getDayTime() % 24000;
+    }
+
 //TODO
-//    public static long getDayTime(World world) {
-//        return world.getWorldTime() % 24000;
-//    }
-//
 //    public static long getDayTime(long time) {
 //        return time % 24000;
 //    }
-//
-//    public static boolean isGraveSpawnTime() {
-//        return isGraveSpawnTime;
-//    }
-//
-//    public static void setIsGraveSpawnTime(boolean isValidTime) {
-//        isGraveSpawnTime = isValidTime;
-//    }
-//
-//    public static void updateIsGraveSpawnTime(World world) {
-//        long time = TimeHelper.getDayTime(world);
-//
-//        setIsGraveSpawnTime(time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME || world.isThundering());
-//    }
+
+    public static boolean isGraveSpawnTime() {
+        return isGraveSpawnTime;
+    }
+
+    public static void updateIsGraveSpawnTime(Level level) {
+        long time = TimeHelper.getDayTime(level);
+
+        isGraveSpawnTime = level.isThundering() ||
+                (time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME);
+    }
 //
 //    public static boolean isFogTime(World world) {
 //        if (world.isRaining()) {

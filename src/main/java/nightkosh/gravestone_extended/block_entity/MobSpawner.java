@@ -18,7 +18,6 @@ import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.EventHooks;
-import nightkosh.gravestone_extended.block_entity.spawner.ASpawnerBlockEntity;
 import org.jetbrains.annotations.NotNull;
 import org.jspecify.annotations.Nullable;
 
@@ -40,17 +39,37 @@ public class MobSpawner extends BaseSpawner {
     protected static final int SPAWN_EFFECTS_DELAY = 20;
 
     protected final WeightedList<EntityType<?>> mobList;
-    protected final ASpawnerBlockEntity blockEntity;
+    protected final BlockEntity blockEntity;
 
-    public MobSpawner(ASpawnerBlockEntity blockEntity, WeightedList<EntityType<?>> mobList) {
+    public MobSpawner(BlockEntity blockEntity, WeightedList<EntityType<?>> mobList) {
         super();
         this.mobList = mobList;
         this.blockEntity = blockEntity;
-        this.spawnDelay = BASE_DELAY;
-        this.minSpawnDelay = MIN_DELAY;
-        this.maxSpawnDelay = MAX_DELAY;
-        this.maxNearbyEntities = MAX_NEARBY_ENTITIES;
-        this.requiredPlayerRange = PLAYER_RANGE;
+        this.spawnDelay = getBaseDelay();
+        this.minSpawnDelay = getMinDelay();
+        this.maxSpawnDelay = getMaxDelay();
+        this.maxNearbyEntities = getMaxNearbyEntities();
+        this.requiredPlayerRange = getPlayerRange();
+    }
+
+    protected int getBaseDelay() {
+        return BASE_DELAY;
+    }
+
+    protected int getMinDelay() {
+        return MIN_DELAY;
+    }
+
+    protected int getMaxDelay() {
+        return MAX_DELAY;
+    }
+
+    protected int getPlayerRange() {
+        return PLAYER_RANGE;
+    }
+
+    protected int getMaxNearbyEntities() {
+        return MAX_NEARBY_ENTITIES;
     }
 
     protected void doBeforeSpawn(@Nonnull ServerLevel level, @Nonnull BlockPos pos, @NotNull Entity entity) {
@@ -59,6 +78,10 @@ public class MobSpawner extends BaseSpawner {
 
     protected void doAfterSpawn(@Nonnull ServerLevel level, @Nonnull BlockPos pos) {
 
+    }
+
+    protected EntityType<?> getMobTypeToSpawn(@Nonnull Level level) {
+         return mobList.getRandom(level.random).get();
     }
 
     @Override
@@ -73,9 +96,7 @@ public class MobSpawner extends BaseSpawner {
                 this.spawnDelay--;
             } else {
                 // custom
-                this.setEntityId(
-                        mobList.getRandom(serverLevel.random).get(),
-                        serverLevel, serverLevel.random, pos);
+                this.setEntityId(getMobTypeToSpawn(serverLevel), serverLevel, serverLevel.random, pos);
 
                 boolean flag = false;
                 var random = serverLevel.getRandom();
@@ -92,9 +113,9 @@ public class MobSpawner extends BaseSpawner {
 
                         var vec3 = input.read("Pos", Vec3.CODEC)
                                 .orElseGet(() -> new Vec3(
-                                        pos.getX() + (random.nextDouble() - random.nextDouble()) * this.spawnRange + 0.5,
+                                        pos.getX() + (random.nextDouble() - random.nextDouble()) * getSpawnRange() + 0.5,
                                         pos.getY() + random.nextInt(3) - 1,
-                                        pos.getZ() + (random.nextDouble() - random.nextDouble()) * this.spawnRange + 0.5));
+                                        pos.getZ() + (random.nextDouble() - random.nextDouble()) * getSpawnRange() + 0.5));
                         if (serverLevel.noCollision(optional.get().getSpawnAABB(vec3.x, vec3.y, vec3.z))) {
                             var blockPos = BlockPos.containing(vec3);
                             if (spawndata.getCustomSpawnRules().isPresent()) {
@@ -146,7 +167,9 @@ public class MobSpawner extends BaseSpawner {
 
                                 boolean flag1 = spawndata.getEntityToSpawn().size() == 1 &&
                                         spawndata.getEntityToSpawn().getString("id").isPresent();
-                                EventHooks.finalizeMobSpawnSpawner(mob, serverLevel, serverLevel.getCurrentDifficultyAt(entity.blockPosition()), EntitySpawnReason.SPAWNER, null, this, flag1);
+                                EventHooks.finalizeMobSpawnSpawner(mob, serverLevel,
+                                        serverLevel.getCurrentDifficultyAt(entity.blockPosition()),
+                                        EntitySpawnReason.SPAWNER, null, this, flag1);
 
                                 spawndata.getEquipment().ifPresent(mob::equip);
                             }
@@ -178,6 +201,10 @@ public class MobSpawner extends BaseSpawner {
                 }
             }
         }
+    }
+
+    protected int getSpawnRange() {
+        return this.spawnRange;
     }
 
     @Override

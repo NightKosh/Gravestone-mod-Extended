@@ -61,6 +61,7 @@ public abstract class ASpawnerBlockEntity extends BlockEntity implements Spawner
         blockEntity.spawner.serverTick((ServerLevel) level, pos);
     }
 
+    @Override
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
     }

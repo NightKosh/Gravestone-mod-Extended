@@ -6,6 +6,7 @@ import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.GraveGenerationHelper;
+import nightkosh.gravestone_extended.helper.GraveSpawnerHelper;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
@@ -27,8 +28,8 @@ public class GSEEventsCompatibility {
 //        CemeteryHelper.addGravePositionHandlers();
 //
         GraveGenerationHelper.addMobsItemsHandlers();
-//
-//        GraveSpawnerHelper.setGraveSpawnerHelper();
+
+        GraveSpawnerHelper.setGraveSpawnerHelper();
 //
 //        TileEntityGraveStone.fogHandler = new FogHandler();
     }

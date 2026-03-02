@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.core;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
+import nightkosh.gravestone_extended.block_entity.GraveStoneSpawn;
 
 import java.util.List;
 
@@ -25,6 +26,11 @@ public class GSEConfigs {
 
     public static ModConfigSpec.ConfigValue<Boolean> INFERNO_DEALS_DAMAGE_TO_PLAYERS;
     public static ModConfigSpec.ConfigValue<Boolean> BLIZZARD_DEALS_DAMAGE_TO_PLAYERS;
+
+    // graves
+    public static ModConfigSpec.ConfigValue<Boolean> SPAWN_MOBS_BY_GRAVES;
+    public static ModConfigSpec.ConfigValue<Integer> GRAVE_MAX_SPAWN_DELAY;
+    public static ModConfigSpec.ConfigValue<Boolean> SPAWN_MOB_AT_GRAVE_DESTRUCTION;
 
     // compatibility
     public static ModConfigSpec.ConfigValue<Boolean> SOPHISTICATED_WOLVES_COMPATIBILITY;
@@ -56,6 +62,11 @@ public class GSEConfigs {
 
         BLIZZARD_DEALS_DAMAGE_TO_PLAYERS = BUILDER.comment("Should Blizzard potion freeze other players")
                 .define("BLIZZARD_DEALS_DAMAGE_TO_PLAYERS", true);
+
+        // graves
+        SPAWN_MOBS_BY_GRAVES = BUILDER.define("GRAVES_SPAWN_MOBS", true);
+        GRAVE_MAX_SPAWN_DELAY = BUILDER.defineInRange("GRAVE_MAX_SPAWN_DELAY", GraveStoneSpawn.MAX_DELAY, 600, 10000);
+        SPAWN_MOB_AT_GRAVE_DESTRUCTION = BUILDER.define("SPAWN_MOB_AT_GRAVE_DESTRUCTION", true);
 
         // compatibility
         SOPHISTICATED_WOLVES_COMPATIBILITY = BUILDER.comment("Enable sophisticated wolves mod compatibility")
@@ -171,25 +182,9 @@ public class GSEConfigs {
 //    }
 //
     // graves for entities
-    public static int graveSpawnRate;
-    public static boolean spawnMobsByGraves;
-    public static boolean spawnMobAtGraveDestruction;
     public static boolean isFogEnabled;
-    public static int spawnChance;
 //
 //    private static void gravesConfig() {
-//        // spawn rate
-//        Property graveSpawnRateProperty = config.get(Config.CATEGORY_GRAVES, "GravesMobsSpawnRate", 1000);
-//        graveSpawnRateProperty.setComment("This value must be bigger than 600!");
-//        graveSpawnRate = graveSpawnRateProperty.getInt();
-//
-//        if (graveSpawnRate < 600) {
-//            graveSpawnRate = 600;
-//        }
-//
-//        spawnMobsByGraves = config.get(Config.CATEGORY_GRAVES, "SpawnMobsByGraves", true).getBoolean();
-//        spawnMobAtGraveDestruction = config.get(Config.CATEGORY_GRAVES, "SpawnMobAtGraveDestruction", true).getBoolean();
-//        spawnChance = config.get(Config.CATEGORY_GRAVES, "GravesMobsSpawnChance", 80).getInt();
 //
 //        isFogEnabled = config.get(Config.CATEGORY_GRAVES, "CemeteryFogEnabled", true).getBoolean();
 //    }

@@ -1,12 +1,20 @@
 package nightkosh.gravestone_extended.helper;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import nightkosh.gravestone.block_entity.GraveStoneBlockEntity;
+import nightkosh.gravestone_extended.block_entity.GraveStoneSpawn;
+import nightkosh.gravestone_extended.core.GSEConfigs;
+
 /**
  * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class GraveStoneHelper {//TODO extends nightkosh.gravestone.helper.GraveStoneHelper {
+public class GraveStoneHelper extends nightkosh.gravestone.helper.GraveStoneHelper {
 //
 //    public static final Item[] GENERATED_SWORD_GRAVES = {
 //            Items.WOODEN_SWORD,
@@ -77,21 +85,6 @@ public class GraveStoneHelper {//TODO extends nightkosh.gravestone.helper.GraveS
 //    public static boolean isPetGrave(int graveType) {
 //        return EnumGraves.getById(graveType).getGraveType() == EnumGraveType.DOG_STATUE ||
 //                EnumGraves.getById(graveType).getGraveType() == EnumGraveType.CAT_STATUE;
-//    }
-//
-//    //TODO
-//    public static void spawnMob(World world, BlockPos pos) {
-//        if (ExtendedConfig.spawnMobAtGraveDestruction && world.rand.nextInt(10) == 0) {
-//            TileEntityGraveStone tileEntity = (TileEntityGraveStone) world.getTileEntity(pos);
-//
-//            if (tileEntity != null) {
-//                Entity mob = MobSpawn.getMobEntity(world, tileEntity.getGraveType(), pos.getX(), pos.getY(), pos.getZ());
-//
-//                if (mob != null) {
-//                    MobSpawn.spawnMob(world, mob, pos.getX(), pos.getY(), pos.getZ(), false);
-//                }
-//            }
-//        }
 //    }
 //
 //    public static Item getRandomSwordForGeneration(int graveType, Random random) {
