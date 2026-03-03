@@ -94,9 +94,9 @@ public class GraveStoneSpawn extends MobSpawner {
         var mobs = switch (grave.getGraveType()) {
             case GRAVE_STONE, GRAVE_PLATE, CROSS, OBELISK, CELTIC_CROSS, VILLAGER_GRAVE_STONE, SWORD ->
                     HUMAN_GRAVE_MOBS;
-//            case PET_GRAVE_STONE -> DOG_GRAVE_MOBS;
-//            case PET_GRAVE_STONE -> CAT_GRAVE_MOBS;
-//            case PET_GRAVE_STONE -> HORSE_GRAVE_MOBS;
+            case DOG_GRAVE_STONE -> DOG_GRAVE_MOBS;
+            case CAT_GRAVE_STONE -> CAT_GRAVE_MOBS;
+            case HORSE_GRAVE_STONE -> HORSE_GRAVE_MOBS;
             case PET_GRAVE_STONE -> PETS_GRAVE_MOBS;
             default -> HUMAN_GRAVE_MOBS;
         };
