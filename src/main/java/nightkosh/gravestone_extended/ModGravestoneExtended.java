@@ -14,8 +14,6 @@ import org.apache.logging.log4j.Logger;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-//@Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION,
-//        dependencies = "required-after:" + nightkosh.gravestone.api.ModInfo.ID + "@[1.3.1,);after:" + nightkosh.advanced_fishing.api.ModInfo.ID + "@[1.3.2,);")
 @Mod(ModInfo.ID)
 public class ModGravestoneExtended {
 
