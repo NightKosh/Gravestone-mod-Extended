@@ -1,14 +1,7 @@
 package nightkosh.gravestone_extended.structures.catacombs.components;
 
-import nightkosh.gravestone_extended.core.GSStructures;
 import nightkosh.gravestone_extended.structures.ComponentGraveStone;
-import nightkosh.gravestone_extended.structures.ObjectsGenerationHelper;
-import nightkosh.gravestone_extended.structures.catacombs.CatacombsLevel;
 import nightkosh.gravestone_extended.structures.catacombs.CatacombsPileOfBonesSelector;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 /**
  * Gravestone mod - Extended

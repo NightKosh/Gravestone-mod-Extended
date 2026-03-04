@@ -32,6 +32,9 @@ public class GSEConfigs {
     public static ModConfigSpec.ConfigValue<Integer> GRAVE_MAX_SPAWN_DELAY;
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_MOB_AT_GRAVE_DESTRUCTION;
 
+    // village
+    public static ModConfigSpec.ConfigValue<Boolean> GENERATE_UNDERTAKER_HOUSE;
+
     // compatibility
     public static ModConfigSpec.ConfigValue<Boolean> SOPHISTICATED_WOLVES_COMPATIBILITY;
 
@@ -67,6 +70,9 @@ public class GSEConfigs {
         SPAWN_MOBS_BY_GRAVES = BUILDER.define("GRAVES_SPAWN_MOBS", true);
         GRAVE_MAX_SPAWN_DELAY = BUILDER.defineInRange("GRAVE_MAX_SPAWN_DELAY", GraveStoneSpawn.MAX_DELAY, 600, 10000);
         SPAWN_MOB_AT_GRAVE_DESTRUCTION = BUILDER.define("SPAWN_MOB_AT_GRAVE_DESTRUCTION", true);
+
+        // village
+        GENERATE_UNDERTAKER_HOUSE = BUILDER.define("GENERATE_UNDERTAKER_HOUSE", true);
 
         // compatibility
         SOPHISTICATED_WOLVES_COMPATIBILITY = BUILDER.comment("Enable sophisticated wolves mod compatibility")
@@ -141,7 +147,6 @@ public class GSEConfigs {
     // village
     public static boolean generateCemeteries;
     public static boolean generateVillageMemorials;
-    public static boolean generateUndertaker;
 //
 //    private static void structures() {
 //        // catacombs
@@ -178,7 +183,6 @@ public class GSEConfigs {
 //        // village
 //        generateCemeteries = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateCemeteries", false).getBoolean();
 //        generateVillageMemorials = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateVillageMemorials", true).getBoolean();
-//        generateUndertaker = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateUndertaker", true).getBoolean();
 //    }
 //
     // graves for entities

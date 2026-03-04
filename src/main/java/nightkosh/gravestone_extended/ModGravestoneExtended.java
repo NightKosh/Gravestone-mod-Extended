@@ -46,8 +46,6 @@ public class ModGravestoneExtended {
 
 //    @Mod.EventHandler
 //    public void preInit(FMLPreInitializationEvent event) {
-//        GSStructures.preInit();
-//
 ////        MessageHandler.init();
 //
 ////        CapabilityManager.INSTANCE.register(ICemetery.class, new CemeteryStorage(), Cemetery.class);

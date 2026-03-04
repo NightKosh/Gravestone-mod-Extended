@@ -29,27 +29,12 @@ public class GSStructures {
                 e.printStackTrace();
             }
         }
-
-        // register Undertaker
-        if (GSEConfigs.generateUndertaker) {
-            try {
-//                MapGenStructureIO.registerStructureComponent(ComponentVillageUndertaker.class, "GSUndertakerHouse");
-            } catch (Throwable e) {
-                GSLogger.logError("Can not register ComponentGSVillageUndertaker");
-                e.printStackTrace();
-            }
-        }
     }
 
     public static void registration() {
         // register memorials
         if (GSEConfigs.generateVillageMemorials) {
 //            VillagerRegistry.instance().registerVillageCreationHandler(villageMemorialHandler);
-        }
-
-        // register Undertaker
-        if (GSEConfigs.generateUndertaker) {
-//            VillagerRegistry.instance().registerVillageCreationHandler(villageUndertakerHandler);
         }
 
         // structure generator
