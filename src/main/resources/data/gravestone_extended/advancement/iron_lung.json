@@ -4,7 +4,7 @@
     "icon": { "id": "gravestone_extended:diving_helmet" },
     "title": { "translate": "advancement.gravestone_extended.iron_lung" },
     "description": { "translate": "advancement.gravestone_extended.iron_lung.desc" },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
