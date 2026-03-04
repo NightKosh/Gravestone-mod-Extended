@@ -41,6 +41,7 @@ public class ModGravestoneExtended {
         GSEMobEffects.register(eventBus);
         GSEPotions.register(eventBus);
         GSEMenus.register(eventBus);
+        GSEVillagers.register(eventBus);
     }
 
 //    @Mod.EventHandler
@@ -65,10 +66,6 @@ public class ModGravestoneExtended {
 //        GSStructures.registration();
 //
 //        GSParticles.registration();
-//
-//        VillagersHandler.registerVillagers();
-//
-//        proxy.registerEggs();
 //    }
 
 }

@@ -1,4 +1,4 @@
-package nightkosh.gravestone_extended.structures.village.undertaker;
+package nightkosh.gravestone_extended.structures.village;
 
 /**
  * Gravestone mod - Extended

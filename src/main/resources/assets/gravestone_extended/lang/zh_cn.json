@@ -214,5 +214,7 @@
   "gui.gravestone_extended.altar.tab.resurrection": "Resurrection",
   "gui.gravestone_extended.altar.tab.enchanting": "Enchanting",
   "gui.gravestone_extended.altar.tab.disenchanting": "Disenchanting",
-  "gui.gravestone_extended.altar.tooltip.destroy_item": "Item will be destroyed"
+  "gui.gravestone_extended.altar.tooltip.destroy_item": "Item will be destroyed",
+
+  "entity.gravestone_extended.villager.undertaker": "送葬者"
 }

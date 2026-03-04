@@ -1,8 +1,6 @@
 package nightkosh.gravestone_extended.core;
 
 import nightkosh.gravestone_extended.core.logger.GSLogger;
-import nightkosh.gravestone_extended.structures.village.memorial.VillageHandlerMemorial;
-import nightkosh.gravestone_extended.structures.village.undertaker.VillageHandlerGSUndertaker;
 
 /**
  * Gravestone mod - Extended
@@ -46,13 +44,11 @@ public class GSStructures {
     public static void registration() {
         // register memorials
         if (GSEConfigs.generateVillageMemorials) {
-            VillageHandlerMemorial villageMemorialHandler = new VillageHandlerMemorial();
 //            VillagerRegistry.instance().registerVillageCreationHandler(villageMemorialHandler);
         }
 
         // register Undertaker
         if (GSEConfigs.generateUndertaker) {
-            VillageHandlerGSUndertaker villageUndertakerHandler = new VillageHandlerGSUndertaker();
 //            VillagerRegistry.instance().registerVillageCreationHandler(villageUndertakerHandler);
         }
 

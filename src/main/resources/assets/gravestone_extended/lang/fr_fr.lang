@@ -41,7 +41,3 @@ item.corpse.health=Vie max
 item.corpse.speed=Vitesse
 item.corpse.jump_strength=Force de saut
 
-
-# Entity
-entity.Villager.gravestone-extended:undertaker=Croque-mort
-

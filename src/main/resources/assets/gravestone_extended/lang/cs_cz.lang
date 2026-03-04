@@ -46,9 +46,6 @@ item.corpse.health=Maximum života
 item.corpse.speed=Rychlost
 item.corpse.jump_strength=Síla skoku
 
-# Entity
-entity.Villager.gravestone-extended:undertaker=Hrobař
-
 
 ## Console commands
 commands.direction_error=Chyba umístění!

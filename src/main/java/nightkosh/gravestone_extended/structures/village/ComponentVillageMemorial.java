@@ -1,11 +1,4 @@
-package nightkosh.gravestone_extended.structures.village.memorial;
-
-import nightkosh.gravestone_extended.helper.StateHelper;
-import nightkosh.gravestone_extended.structures.IComponentGraveStone;
-import nightkosh.gravestone_extended.structures.MemorialGenerationHelper;
-
-import java.util.List;
-import java.util.Random;
+package nightkosh.gravestone_extended.structures.village;
 
 /**
  * Gravestone mod - Extended

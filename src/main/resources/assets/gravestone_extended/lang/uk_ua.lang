@@ -95,10 +95,6 @@ item.corpse.health=Максимальне здоров'я
 item.corpse.speed=Швидкість
 item.corpse.jump_strength=Стрибучість
 
-
-# Entity
-entity.Villager.gravestone-extended:undertaker=Трунар
-
 # Fluids
 tile.gs_toxic_water.name=Токсична вода
 fluid.gs_toxic_water=Токсична вода

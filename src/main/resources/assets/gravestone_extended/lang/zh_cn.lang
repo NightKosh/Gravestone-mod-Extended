@@ -42,10 +42,6 @@ item.corpse.speed=速度
 item.corpse.jump_strength=跳跃高度
 
 
-# Entity
-entity.Villager.gravestone-extended:undertaker=送葬者
-
-
 ## Console commands
 commands.direction_error=方位错误!
 commands.generate.unknown_structure=未明建筑!

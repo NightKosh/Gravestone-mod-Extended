@@ -55,6 +55,12 @@ public class WitheredLandsCompatibility extends ACompatibility {
     // items
     public static final Item SLIME_GEL = getItem("slime_gel");
     public static final Item BAT_WING = getItem("bat_wing");
+    public static final Item SKULL_HUSK = getItem("skull_husk");
+    public static final Item SKULL_DROWNED = getItem("skull_drowned");
+    public static final Item SKULL_STRAY = getItem("skull_stray");
+    public static final Item SKULL_BOGGED = getItem("skull_bogged");
+    public static final Item SKULL_PARCHED = getItem("skull_parched");
+    public static final Item SKULL_PIGLIN = getItem("skull_piglin");
 
     private static Item getItem(String id) {
         var holder = BuiltInRegistries.ITEM.get(fromNamespaceAndPath(WITHERED_LANDS_ID, id));

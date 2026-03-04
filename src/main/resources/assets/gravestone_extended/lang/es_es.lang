@@ -128,10 +128,6 @@ item.corpse.health=Salud máxima
 item.corpse.speed=Velocidad
 item.corpse.jump_strength=Fuerza del salto
 
-
-# Entity
-entity.Villager.gravestone-extended:undertaker=Enterrador
-
 # Fluids
 tile.gs_toxic_water.name=Agua tóxica
 fluid.gs_toxic_water=Agua tóxica
