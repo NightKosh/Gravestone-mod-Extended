@@ -16,13 +16,8 @@ public class ClientProxy {//TODO extends CommonProxy {
 //        // register Execution renderers
 //        ClientRegistry.registerTileEntity(TileEntityExecution.class, "GSExecution", new TileEntityExecutionRenderer());
 //
-//        // spawner renderer
-//        ClientRegistry.registerTileEntity(TileEntitySpawner.class, "GSSpawner", new TileEntitySpawnerRenderer());
-//
 //        // register HauntedChest renderer
 //        ClientRegistry.registerTileEntity(TileEntityHauntedChest.class, "GSHauntedChest", new TileEntityHauntedChestRenderer());
-//
-//        ClientRegistry.registerTileEntity(TileEntityAltar.class, "GSAltar", new TileEntityRenderAltar());
 //    }
 //
 //    @Override
@@ -32,28 +27,6 @@ public class ClientProxy {//TODO extends CommonProxy {
 //                return modelResourceLocation;
 //            }
 //        });
-//    }
-//
-//    @Override
-//    public void registerMobsRenderers() {
-//        RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
-//        RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
-//
-//        // Skeleton
-//        RenderingRegistry.registerEntityRenderingHandler(EntityGSSkeleton.class, new RenderGSSkeleton(renderManager));
-//
-//        // raven
-//        RenderingRegistry.registerEntityRenderingHandler(EntityRaven.class, new RenderRaven(renderManager));
-//
-//        // Damned Warrior
-//        RenderingRegistry.registerEntityRenderingHandler(EntityDamnedWarrior.class, new RenderDamnedWarrior(renderManager, new ModelDamnedWarrior()));
-//
-//        // Spawner Helper
-//        RenderingRegistry.registerEntityRenderingHandler(EntityGroupOfGravesMobSpawnerHelper.class, new RenderSpawnerHelper(renderManager));
-//
-//        if (Compatibility.isModLoaded(Compatibility.ADVANCED_FISHING_ID)) {
-//            RenderingRegistry.registerEntityRenderingHandler(EntityBoneFishHook.class, new RendererBoneFishHook(renderManager));
-//        }
 //    }
 //
 //    @Override
