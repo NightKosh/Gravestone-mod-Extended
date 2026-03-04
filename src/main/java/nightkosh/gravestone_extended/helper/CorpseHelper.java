@@ -23,6 +23,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.storage.TagValueOutput;
 import net.minecraft.world.level.storage.ValueInput;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEItems;
 import nightkosh.gravestone_extended.core.GSEMobEffects;
 import nightkosh.gravestone_extended.core.compatibility.SophisticatedWolvesCompatibility;
@@ -169,12 +171,16 @@ public abstract class CorpseHelper {
                 if (mob instanceof Villager villager) {
                     // increase reputation
                     villager.onReputationEventFrom(ReputationEventType.ZOMBIE_VILLAGER_CURED, player);
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.A_DEAL_WITH_THE_DEAD);
                 } else if (mob instanceof Wolf wolf) {
                     wolf.tame(player);
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.NOT_TODAY_FRIEND);
                 } else if (mob instanceof Cat cat) {
                     cat.tame(player);
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.NOT_TODAY_FRIEND);
                 } else if (mob instanceof Horse horse) {
                     horse.setTamed(true);
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.NOT_TODAY_FRIEND);
                 }
 
                 mob.setHealth(mob.getMaxHealth());

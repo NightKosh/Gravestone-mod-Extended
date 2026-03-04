@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": { "id": "minecraft:bone_meal" },
+    "title": { "translate": "advancement.gravestone_extended.bone_rain" },
+    "description": { "translate": "advancement.gravestone_extended.bone_rain.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

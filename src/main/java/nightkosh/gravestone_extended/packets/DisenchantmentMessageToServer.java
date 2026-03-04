@@ -9,7 +9,10 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
+import nightkosh.gravestone.core.GSAdvancements;
+import nightkosh.gravestone.helper.AdvancementsHelper;
 import nightkosh.gravestone_extended.block_entity.AltarBlockEntity;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
@@ -76,6 +79,8 @@ public record DisenchantmentMessageToServer(String playerId, int xPos, int yPos,
                                 if (!player.isCreative()) {
                                     player.giveExperienceLevels(-requiredLevels);
                                 }
+
+                                AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.ARCANE_EXTRACTION);
                                 altar.setChanged();
                             } else if (GSEConfigs.DEBUG_MODE.get()) {
                                 LOGGER.info("Can't disenchant item py player {} at {} - not enough levels",

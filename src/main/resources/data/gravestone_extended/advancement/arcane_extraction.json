@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:dark_rituals",
+  "display": {
+    "icon": { "id": "gravestone_extended:enchanted_skeleton_skull" },
+    "title": { "translate": "advancement.gravestone_extended.arcane_extraction" },
+    "description": { "translate": "advancement.gravestone_extended.arcane_extraction.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

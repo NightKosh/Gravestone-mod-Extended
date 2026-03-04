@@ -5,6 +5,8 @@ import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.helper.TeleportationHelper;
 
@@ -31,6 +33,7 @@ public class RecallEffect extends InstantenousMobEffect {
                 LOGGER.info("Going to teleport player {} back to home by RecallEffect", player.getScoreboardName());
             }
             TeleportationHelper.teleportToSpawn(level, player);
+            AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.RECALL);
         }
 
         return true;

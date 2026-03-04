@@ -15,6 +15,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.ModInfo;
 import org.jspecify.annotations.Nullable;
 
@@ -49,6 +51,7 @@ public class DivingHelmet extends Item {
                 player.getItemBySlot(EquipmentSlot.HEAD).equals(stack)) {
             if (!level.isClientSide()) {
                 player.setAirSupply(player.getMaxAirSupply());
+                AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.IRON_LUNG);
             } else if (player.isUnderWater()) {
                 for (int i = 0; i < 2; i++) {
                     level.addParticle(ParticleTypes.BUBBLE,

@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.TeleportationHelper;
@@ -47,6 +49,7 @@ public class FrozenMirror extends Item {
                 LOGGER.info("Going to teleport player {} back to home by FrozenMirror", player.getScoreboardName());
             }
             TeleportationHelper.teleportToSpawn(server, player);
+            AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.THROUGH_THE_LOOKING_GLASS);
         }
         return InteractionResult.SUCCESS;
     }

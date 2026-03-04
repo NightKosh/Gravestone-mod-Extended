@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:recall",
+  "display": {
+    "icon": { "id": "gravestone_extended:frozen_mirror" },
+    "title": { "translate": "advancement.gravestone_extended.through_the_looking_glass" },
+    "description": { "translate": "advancement.gravestone_extended.through_the_looking_glass.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

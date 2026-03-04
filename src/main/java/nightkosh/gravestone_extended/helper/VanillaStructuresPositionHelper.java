@@ -8,6 +8,8 @@ import net.minecraft.tags.StructureTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.structure.BuiltinStructures;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 
 import java.util.HashMap;
@@ -58,6 +60,7 @@ public class VanillaStructuresPositionHelper {
                             setNetherFortress(
                                     player.getUUID(),
                                     new BlockPos(pos.getX(), pos.getY(), pos.getZ()));
+                            AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.IMP_SKULL);
                         }
                     }
                 } catch (Exception e) {
@@ -89,6 +92,7 @@ public class VanillaStructuresPositionHelper {
                     setStronghold(
                             player.getUUID(),
                             new BlockPos(pos.getX(), pos.getY(), pos.getZ()));
+                    AdvancementsHelper.giveAdvancement(player, player.level(), GSEAdvancements.ENDER_SKULL);
                 }
             }
         }

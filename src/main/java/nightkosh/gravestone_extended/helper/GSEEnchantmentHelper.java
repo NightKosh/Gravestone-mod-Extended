@@ -18,6 +18,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEEnchantments;
 import nightkosh.gravestone_extended.core.GSEItems;
@@ -77,6 +79,10 @@ public class GSEEnchantmentHelper {
                 stack.setDamageValue(stack.getDamageValue() + 1);
                 level.levelEvent(1505, pos, 15);
                 BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), level, pos, event.getEntity());
+
+                if (event.getEntity() instanceof Player player) {
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.BONE_RAIN);
+                }
             }
         }
     }

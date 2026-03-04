@@ -1,0 +1,28 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": { "id": "minecraft:golden_chestplate" },
+    "title": { "translate": "advancement.gravestone_extended.gilded_sheen" },
+    "description": { "translate": "advancement.gravestone_extended.gilded_sheen.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "enchantments": [
+              {
+                "enchantment": "gravestone_extended:gilded_sheen"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

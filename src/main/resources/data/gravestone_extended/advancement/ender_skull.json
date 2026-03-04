@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:imp_skull",
+  "display": {
+    "icon": { "id": "gravestone_extended:ender_skull" },
+    "title": { "translate": "advancement.gravestone_extended.ender_skull" },
+    "description": { "translate": "advancement.gravestone_extended.ender_skull.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

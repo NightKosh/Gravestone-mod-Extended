@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:arcane_extraction",
+  "display": {
+    "icon": { "id": "gravestone_extended:enchanted_wither_skull" },
+    "title": { "translate": "advancement.gravestone_extended.arcane_transfer" },
+    "description": { "translate": "advancement.gravestone_extended.arcane_transfer.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

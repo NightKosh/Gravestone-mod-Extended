@@ -7,6 +7,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.AABB;
+import nightkosh.gravestone.helper.AdvancementsHelper;
+import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 
 import javax.annotation.Nonnull;
@@ -37,6 +39,10 @@ public class BlizzardEffect extends MobEffect {
                                         (!GSEConfigs.BLIZZARD_DEALS_DAMAGE_TO_PLAYERS.get() || !level.isPvpAllowed())))) {
                     mob.setTicksFrozen(entity.getTicksFrozen() + 200);
                 }
+            }
+
+            if (entity instanceof Player player) {
+                AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.BLIZZARD);
             }
         }
 

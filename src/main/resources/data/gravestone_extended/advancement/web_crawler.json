@@ -1,0 +1,28 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": { "id": "minecraft:cobweb" },
+    "title": { "translate": "advancement.gravestone_extended.web_crawler" },
+    "description": { "translate": "advancement.gravestone_extended.web_crawler.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "enchantments": [
+              {
+                "enchantment": "gravestone_extended:web_crawler"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
