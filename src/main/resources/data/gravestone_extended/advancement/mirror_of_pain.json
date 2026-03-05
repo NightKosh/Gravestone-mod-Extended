@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:root",
+  "parent": "gravestone_extended:arcane_extraction",
   "display": {
     "icon": { "id": "gravestone_extended:bone_shield" },
     "title": { "translate": "advancement.gravestone_extended.mirror_of_pain" },

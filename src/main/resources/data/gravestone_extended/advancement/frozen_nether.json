@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:root",
+  "parent": "gravestone_extended:arcane_extraction",
   "display": {
     "icon": { "id": "minecraft:magma_block" },
     "title": { "translate": "advancement.gravestone_extended.frozen_nether" },

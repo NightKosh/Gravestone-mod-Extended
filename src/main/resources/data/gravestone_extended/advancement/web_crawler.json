@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:root",
+  "parent": "gravestone_extended:arcane_extraction",
   "display": {
     "icon": { "id": "minecraft:cobweb" },
     "title": { "translate": "advancement.gravestone_extended.web_crawler" },

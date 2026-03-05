@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:root",
+  "parent": "gravestone_extended:arcane_extraction",
   "display": {
     "icon": { "id": "minecraft:golden_chestplate" },
     "title": { "translate": "advancement.gravestone_extended.gilded_sheen" },
