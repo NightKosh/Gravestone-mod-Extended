@@ -40,7 +40,7 @@ public class DivingLeggings extends Item {
         super(new Item.Properties()
                 .setId(RK)
                 .rarity(Rarity.EPIC)
-                .humanoidArmor(ArmorMaterials.IRON, ArmorType.LEGGINGS));
+                .humanoidArmor(ArmorMaterials.LEATHER, ArmorType.LEGGINGS));
     }
 
     @Override

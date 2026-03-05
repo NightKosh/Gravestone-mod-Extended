@@ -40,7 +40,7 @@ public class DivingBoots extends Item {
         super(new Item.Properties()
                 .setId(RK)
                 .rarity(Rarity.EPIC)
-                .humanoidArmor(ArmorMaterials.IRON, ArmorType.BOOTS));
+                .humanoidArmor(ArmorMaterials.LEATHER, ArmorType.BOOTS));
     }
 
     @Override

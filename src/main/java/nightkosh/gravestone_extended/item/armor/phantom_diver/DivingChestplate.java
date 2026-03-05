@@ -41,7 +41,7 @@ public class DivingChestplate extends Item {
         super(new Item.Properties()
                 .setId(RK)
                 .rarity(Rarity.EPIC)
-                .humanoidArmor(ArmorMaterials.IRON, ArmorType.CHESTPLATE));
+                .humanoidArmor(ArmorMaterials.LEATHER, ArmorType.CHESTPLATE));
     }
 
     @Override
