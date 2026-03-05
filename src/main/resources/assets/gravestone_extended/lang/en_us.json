@@ -263,5 +263,7 @@
   "advancement.gravestone_extended.web_crawler": "Web Crawler",
   "advancement.gravestone_extended.web_crawler.desc": "No web can hold you.",
   "advancement.gravestone_extended.gilded_sheen": "Gilded Sheen",
-  "advancement.gravestone_extended.gilded_sheen.desc": "Even piglins believe the shine of gold."
+  "advancement.gravestone_extended.gilded_sheen.desc": "Even piglins believe the shine of gold.",
+  "advancement.gravestone_extended.vampiric_touch": "Vampiric Touch",
+  "advancement.gravestone_extended.vampiric_touch.desc": "Drain the life force of your foes."
 }

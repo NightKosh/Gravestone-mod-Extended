@@ -38,4 +38,6 @@ public class GSEAdvancements {
     public static final Identifier WEB_CRAWLER = fromNamespaceAndPath(ModInfo.ID, "web_crawler");
     public static final Identifier GILDED_SHEEN = fromNamespaceAndPath(ModInfo.ID, "gilded_sheen");
 
+    public static final Identifier VAMPIRIC_TOUCH = fromNamespaceAndPath(ModInfo.ID, "vampiric_touch");
+
 }

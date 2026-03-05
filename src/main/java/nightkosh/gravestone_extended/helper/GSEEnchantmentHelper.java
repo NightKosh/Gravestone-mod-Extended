@@ -108,6 +108,7 @@ public class GSEEnchantmentHelper {
                 LOGGER.info("Going to heal {} health player {} by VAMPIRIC_TOUCH", healed, player.getScoreboardName());
             }
             player.heal(healed);
+            AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.VAMPIRIC_TOUCH);
         }
     }
 

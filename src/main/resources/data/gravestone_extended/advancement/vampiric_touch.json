@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:arcane_extraction",
+  "display": {
+    "icon": { "id": "withered_lands:bat_wing" },
+    "title": { "translate": "advancement.gravestone_extended.vampiric_touch" },
+    "description": { "translate": "advancement.gravestone_extended.vampiric_touch.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -263,5 +263,7 @@
   "advancement.gravestone_extended.web_crawler": "Паучий шаг",
   "advancement.gravestone_extended.web_crawler.desc": "Ни одна паутина вас не удержит.",
   "advancement.gravestone_extended.gilded_sheen": "Позолоченный лоск",
-  "advancement.gravestone_extended.gilded_sheen.desc": "Даже пиглины верят блеску золота."
+  "advancement.gravestone_extended.gilded_sheen.desc": "Даже пиглины верят блеску золота.",
+  "advancement.gravestone_extended.vampiric_touch": "Прикосновение вампира",
+  "advancement.gravestone_extended.vampiric_touch.desc": "Поглотите жизненную силу врагов."
 }
