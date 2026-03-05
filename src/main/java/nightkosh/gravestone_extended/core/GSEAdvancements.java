@@ -33,6 +33,7 @@ public class GSEAdvancements {
     public static final Identifier THROUGH_THE_LOOKING_GLASS = fromNamespaceAndPath(ModInfo.ID, "through_the_looking_glass");
 
     public static final Identifier BONE_RAIN = fromNamespaceAndPath(ModInfo.ID, "bone_rain");
+    public static final Identifier MIRROR_OF_PAIN = fromNamespaceAndPath(ModInfo.ID, "mirror_of_pain");
     public static final Identifier FROZEN_NETHER = fromNamespaceAndPath(ModInfo.ID, "frozen_nether");
     public static final Identifier WEB_CRAWLER = fromNamespaceAndPath(ModInfo.ID, "web_crawler");
     public static final Identifier GILDED_SHEEN = fromNamespaceAndPath(ModInfo.ID, "gilded_sheen");

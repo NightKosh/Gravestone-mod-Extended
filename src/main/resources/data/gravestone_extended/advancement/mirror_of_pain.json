@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": { "id": "gravestone_extended:bone_shield" },
+    "title": { "translate": "advancement.gravestone_extended.mirror_of_pain" },
+    "description": { "translate": "advancement.gravestone_extended.mirror_of_pain.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

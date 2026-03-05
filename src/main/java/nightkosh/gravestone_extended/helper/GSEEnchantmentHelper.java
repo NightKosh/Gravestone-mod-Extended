@@ -116,11 +116,13 @@ public class GSEEnchantmentHelper {
             var stack = player.getActiveItem();
             if (!stack.isEmpty()) {
                 var lvl = getLevel(level, GSEEnchantments.MIRROR_OF_PAIN, stack);
-                if (damage > 0 && level.random.nextInt(10) < lvl) {
+                if (damage > 0 && level.random.nextInt(5) < lvl) {
                     if (GSEConfigs.DEBUG_MODE.get()) {
                         LOGGER.info("Going to reflect {} damage to {} entity", damage, player.getScoreboardName());
                     }
                     attackerEntity.hurt(level.damageSources().magic(), damage);
+
+                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.MIRROR_OF_PAIN);
                 }
             }
         }
