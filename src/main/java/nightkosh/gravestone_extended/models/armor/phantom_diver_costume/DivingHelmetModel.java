@@ -23,6 +23,13 @@ public class DivingHelmetModel<T extends LivingEntity> extends HumanoidModel<Hum
 
     public DivingHelmetModel(ModelPart root) {
         super(root);
+
+        this.hat.visible = false;
+        this.body.visible = false;
+        this.rightArm.visible = false;
+        this.leftArm.visible = false;
+        this.rightLeg.visible = false;
+        this.leftLeg.visible = false;
     }
 
     public static LayerDefinition createLayerDefinition() {
@@ -45,12 +52,12 @@ public class DivingHelmetModel<T extends LivingEntity> extends HumanoidModel<Hum
         );
 
         head.clearChild("hat");
-        root.clearChild("head");
         root.clearChild("body");
         root.clearChild("right_arm");
         root.clearChild("left_arm");
         root.clearChild("right_leg");
         root.clearChild("left_leg");
+        root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.ZERO);
 
         return LayerDefinition.create(mesh, 64, 32);
     }

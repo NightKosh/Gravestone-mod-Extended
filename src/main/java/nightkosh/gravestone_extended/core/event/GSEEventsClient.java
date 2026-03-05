@@ -20,6 +20,8 @@ import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.models.armor.phantom_diver_costume.DivingHelmetModel;
 import org.jspecify.annotations.Nullable;
 
+import javax.annotation.Nonnull;
+
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
 /**
@@ -46,14 +48,17 @@ public class GSEEventsClient {
             private DivingHelmetModel<?> cached;
 
             @Override
-            public @Nullable Identifier getArmorTexture(
-                    ItemStack stack, EquipmentClientInfo.LayerType type,
-                    EquipmentClientInfo.Layer layer, Identifier _default) {
+            public Identifier getArmorTexture(
+                    @Nonnull ItemStack stack, @Nonnull EquipmentClientInfo.LayerType type,
+                    @Nonnull EquipmentClientInfo.Layer layer, @Nonnull Identifier identifier) {
                 return GSETextures.DIVING_HELMET;
             }
 
+            @Nonnull
             @Override
-            public Model getHumanoidArmorModel(ItemStack itemStack, EquipmentClientInfo.LayerType layerType, Model original) {
+            public Model getHumanoidArmorModel(
+                    @Nonnull ItemStack itemStack, @Nonnull EquipmentClientInfo.LayerType layerType,
+                    @Nonnull Model original) {
                 if (original instanceof HumanoidModel<?> humanoidModel) {
                     if (cached == null) {
                         cached = new DivingHelmetModel<>(
@@ -73,8 +78,8 @@ public class GSEEventsClient {
 
             @Override
             public @Nullable Identifier getArmorTexture(
-                    ItemStack stack, EquipmentClientInfo.LayerType type,
-                    EquipmentClientInfo.Layer layer, Identifier _default) {
+                    @Nonnull ItemStack stack, @Nonnull EquipmentClientInfo.LayerType type,
+                    @Nonnull EquipmentClientInfo.Layer layer, @Nonnull Identifier identifier) {
                 return GSETextures.DIVING_CHESTPLATE;
             }
 
@@ -84,8 +89,8 @@ public class GSEEventsClient {
 
             @Override
             public @Nullable Identifier getArmorTexture(
-                    ItemStack stack, EquipmentClientInfo.LayerType type,
-                    EquipmentClientInfo.Layer layer, Identifier _default) {
+                    @Nonnull ItemStack stack, @Nonnull EquipmentClientInfo.LayerType type,
+                    @Nonnull EquipmentClientInfo.Layer layer, @Nonnull Identifier identifier) {
                 return GSETextures.DIVING_LEGGINGS;
             }
 
@@ -95,8 +100,8 @@ public class GSEEventsClient {
 
             @Override
             public @Nullable Identifier getArmorTexture(
-                    ItemStack stack, EquipmentClientInfo.LayerType type,
-                    EquipmentClientInfo.Layer layer, Identifier _default) {
+                    @Nonnull ItemStack stack, @Nonnull EquipmentClientInfo.LayerType type,
+                    @Nonnull EquipmentClientInfo.Layer layer, @Nonnull Identifier identifier) {
                 return GSETextures.DIVING_BOOTS;
             }
 
