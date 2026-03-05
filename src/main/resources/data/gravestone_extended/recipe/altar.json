@@ -4,11 +4,12 @@
   "pattern": [
     " c ",
     "sts",
-    "bbb"
+    "beb"
   ],
   "key": {
     "c": "minecraft:nether_star",
     "s": "minecraft:skeleton_skull",
+    "e": "minecraft:sculk_catalyst",
     "t": "minecraft:enchanting_table",
     "b": "gravestone_extended:bone_block"
   },
