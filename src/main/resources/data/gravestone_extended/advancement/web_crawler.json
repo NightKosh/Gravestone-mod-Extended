@@ -15,11 +15,13 @@
       "conditions": {
         "items": [
           {
-            "enchantments": [
-              {
-                "enchantment": "gravestone_extended:web_crawler"
-              }
-            ]
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:web_crawler"
+                }
+              ]
+            }
           }
         ]
       }

@@ -15,11 +15,13 @@
       "conditions": {
         "items": [
           {
-            "enchantments": [
-              {
-                "enchantment": "gravestone_extended:gilded_sheen"
-              }
-            ]
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:gilded_sheen"
+                }
+              ]
+            }
           }
         ]
       }
