@@ -5,8 +5,8 @@
     "description": { "translate": "advancement.gravestone_extended.root.desc" },
     "background": "minecraft:block/soul_sand",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
+    "show_toast": true,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
