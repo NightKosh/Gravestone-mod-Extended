@@ -1,0 +1,30 @@
+{
+  "parent": "gravestone_extended:bone_rain",
+  "display": {
+    "icon": { "id": "minecraft:oak_log" },
+    "title": { "translate": "advancement.gravestone_extended.crimson_copy" },
+    "description": { "translate": "advancement.gravestone_extended.crimson_copy.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:crimson_copy"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

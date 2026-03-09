@@ -17,6 +17,9 @@ public class GSEEnchantments {
     public static final ResourceKey<Enchantment> BONE_RAIN =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "bone_rain"));
 
+    public static final ResourceKey<Enchantment> CRIMSON_COPY =
+            ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "crimson_copy"));
+
     public static final ResourceKey<Enchantment> VAMPIRIC_TOUCH =
             ResourceKey.create(Registries.ENCHANTMENT, fromNamespaceAndPath(ModInfo.ID, "vampiric_touch"));
 

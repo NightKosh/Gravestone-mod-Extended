@@ -37,11 +37,6 @@ block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 ## Portal
 tile.catacombs_portal.name=Portal de catacumbas
 
-# Enchantments
-enchantment.bloody_replication=Replicación sangrienta
-enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
-
-
 # Items
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Caña de pescar de hueso

@@ -97,6 +97,10 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:bone_rain 1
     ```
+2. Crimson Copy
+    ```
+        /enchant @s gravestone_extended:crimson_copy 3
+    ```
 
 ### Armor enchantments:
 1. Gilded Sheen

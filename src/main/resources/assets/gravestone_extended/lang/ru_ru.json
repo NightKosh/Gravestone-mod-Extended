@@ -114,6 +114,7 @@
   "item.gravestone_extended.frozen_lava": "Застывшая лава",
 
   "enchantment.gravestone_extended.bone_rain": "Костяной дождь",
+  "enchantment.gravestone_extended.crimson_copy": "Кровавая копия",
   "enchantment.gravestone_extended.vampiric_touch": "Прикосновение вампира",
   "enchantment.gravestone_extended.poisoned_blade": "Отравленное Лезвие",
   "enchantment.gravestone_extended.withered_blade": "Иссушающее Лезвие",
@@ -261,6 +262,8 @@
   "advancement.gravestone_extended.iron_lung.desc": "Заполучите проклятый шлем фантомного дайвера.",
   "advancement.gravestone_extended.bone_rain": "Костяной дождь",
   "advancement.gravestone_extended.bone_rain.desc": "Призовите костяной дождь, чтобы пробудить землю.",
+  "advancement.gravestone_extended.crimson_copy": "Кровавая копия",
+  "advancement.gravestone_extended.crimson_copy.desc": "LПусть кровь приумножит дары леса.",
   "advancement.gravestone_extended.mirror_of_pain": "Зеркало боли",
   "advancement.gravestone_extended.mirror_of_pain.desc": "Пусть враг ощутит собственный удар.",
   "advancement.gravestone_extended.frozen_nether": "Ледяной ад",

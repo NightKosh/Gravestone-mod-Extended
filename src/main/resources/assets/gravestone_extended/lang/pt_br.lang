@@ -37,11 +37,6 @@ block.haunted_chest.ghost_chest.name=Baú com Fantasma
 ## Portal
 tile.catacombs_portal.name=Portal das Catacumbas
 
-
-# Enchantments
-enchantment.bloody_replication=Replicação Sangrenta
-enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
-
 # Items
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso

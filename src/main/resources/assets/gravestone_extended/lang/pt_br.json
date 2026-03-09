@@ -114,6 +114,7 @@
   "item.gravestone_extended.frozen_lava": "Frozen Lava",
 
   "enchantment.gravestone_extended.bone_rain": "Chuva de Osso",
+  "enchantment.gravestone_extended.crimson_copy": "Crimson Copy",
   "enchantment.gravestone_extended.vampiric_touch": "Toque Vampírico",
   "enchantment.gravestone_extended.poisoned_blade": "Lâmina Envenenada",
   "enchantment.gravestone_extended.withered_blade": "Lâmina Decomposta",
@@ -261,6 +262,8 @@
   "advancement.gravestone_extended.iron_lung.desc": "Claim the cursed helmet of a phantom diver.",
   "advancement.gravestone_extended.bone_rain": "Bone Rain",
   "advancement.gravestone_extended.bone_rain.desc": "Call forth a rain of bones to awaken the earth.",
+  "advancement.gravestone_extended.crimson_copy": "Crimson Copy",
+  "advancement.gravestone_extended.crimson_copy.desc": "Let blood shape the forest’s bounty.",
   "advancement.gravestone_extended.mirror_of_pain": "Mirror of Pain",
   "advancement.gravestone_extended.mirror_of_pain.desc": "Let your enemy taste their own strike.",
   "advancement.gravestone_extended.frozen_nether": "Frozen Nether",

@@ -58,10 +58,6 @@ item.corpse.health=Max. Gesundheit
 item.corpse.speed=Geschwindigkeit
 item.corpse.jump_strength=Sprungkraft
 
-
-# Entity
-entity.GSRaven.name=Rabe
-
 # Fluids
 tile.gs_toxic_water.name=Giftiges Wasser
 fluid.gs_toxic_water=Giftiges Wasser
