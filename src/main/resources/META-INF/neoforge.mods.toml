@@ -85,7 +85,7 @@ side="BOTH"
 modId="gravestone"
 type="required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[1.4.7,)"
+versionRange="[1.4.8,)"
 ordering="AFTER"
 side="BOTH"
 
@@ -94,7 +94,7 @@ side="BOTH"
 modId="withered_lands"
 type="required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[1.6.3,)"
+versionRange="[1.6.4,)"
 ordering="AFTER"
 side="BOTH"
 
@@ -112,7 +112,7 @@ side="BOTH"
 modId="sophisticated_wolves"
 type="optional"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[4.1.8,)"
+versionRange="[4.1.11,)"
 ordering="AFTER"
 side="BOTH"
 

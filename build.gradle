@@ -125,7 +125,7 @@ dependencies {
 
     // Example mod dependency using a file as dependency
     // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
-     implementation files("libs/Gravestone-Mod-Graves-1.21.11-1.4.7.jar")
+     implementation files("libs/Gravestone-Mod-Graves-1.21.11-1.4.8.jar")
 
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
