@@ -3,6 +3,7 @@ package nightkosh.gravestone_extended.mob_effect;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility;
 
@@ -23,6 +24,9 @@ public class BoneSkinEffect extends MobEffect {
     @Override
     public boolean applyEffectTick(@Nonnull ServerLevel level, @Nonnull LivingEntity entity, int amplifier) {
         if (!level.isClientSide()) {
+            if (entity.hasEffect(MobEffects.WITHER)) {
+                entity.removeEffect(MobEffects.WITHER);
+            }
             if (WitheredLandsCompatibility.loaded()) {
                 var rustEffect = WitheredLandsCompatibility.getRustEffect();
                 if (rustEffect != null && entity.hasEffect(rustEffect)) {
