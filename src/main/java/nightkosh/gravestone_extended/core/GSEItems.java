@@ -186,7 +186,6 @@ public class GSEItems {
 //
 //    public static final Item CEMETERY_KEY = new ItemCemeteryKey();
 //
-//    public static final Item TOXIC_SLIME = new ItemToxicSlime();
 //    public static final Item OOZE = new ItemOoze();
 //    public static final Item PIECE_OF_MUMMY_CLOTH = new ItemPieceOfMummyCloth();
 //    public static final Item RAVEN_FEATHER = new ItemRavenFeather();
