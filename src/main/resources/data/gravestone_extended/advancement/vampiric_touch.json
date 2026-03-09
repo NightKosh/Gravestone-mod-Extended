@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:arcane_transfer",
+  "parent": "gravestone_extended:mirror_of_pain",
   "display": {
     "icon": { "id": "withered_lands:bat_wing" },
     "title": { "translate": "advancement.gravestone_extended.vampiric_touch" },

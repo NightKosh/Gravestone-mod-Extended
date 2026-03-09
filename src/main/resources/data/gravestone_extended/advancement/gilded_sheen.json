@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:arcane_transfer",
+  "parent": "gravestone_extended:frozen_nether",
   "display": {
     "icon": { "id": "minecraft:golden_chestplate" },
     "title": { "translate": "advancement.gravestone_extended.gilded_sheen" },
