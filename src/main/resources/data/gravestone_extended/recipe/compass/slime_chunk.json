@@ -8,7 +8,7 @@
   ],
   "key": {
     "b": "minecraft:bone",
-    "s": "withered_lands:slime_gel",
+    "s": "withered_lands:slime_gel_chunk",
     "c": "minecraft:compass"
   },
   "result": {

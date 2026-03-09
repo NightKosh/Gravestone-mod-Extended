@@ -54,6 +54,7 @@ public class WitheredLandsCompatibility extends ACompatibility {
 
     // items
     public static final Item SLIME_GEL = getItem("slime_gel");
+    public static final Item SLIME_GEL_CHUNK = getItem("slime_gel_chunk");
     public static final Item BAT_WING = getItem("bat_wing");
     public static final Item SKULL_HUSK = getItem("skull_husk");
     public static final Item SKULL_DROWNED = getItem("skull_drowned");
