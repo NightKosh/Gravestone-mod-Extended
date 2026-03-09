@@ -196,11 +196,6 @@ public class GSEItems {
 //    public static final Item MUMMY_BOOTS = new ItemMummyBoots();
 //
 //    public static final Item CEMETERY_KEY = new ItemCemeteryKey();
-//
-//    public static final Item OOZE = new ItemOoze();
-//    public static final Item PIECE_OF_MUMMY_CLOTH = new ItemPieceOfMummyCloth();
-//    public static final Item RAVEN_FEATHER = new ItemRavenFeather();
-//    public static final Item RAVEN_CLAWS = new ItemRavenClaws();
 
     public static void register(IEventBus eventBus) {
         ITEMS_REGISTER.register(eventBus);

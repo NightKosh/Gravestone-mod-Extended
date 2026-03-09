@@ -101,12 +101,6 @@ item.gravestone.mummy_chestplate.name=Camiseta de momia
 item.gravestone.mummy_leggings.name=Pantalones de momia
 item.gravestone.mummy_boots.name=Botas de momia
 
-## Other Items
-item.gravestone.raven_feather.name=Raven Feather
-item.gravestone.raven_claws.name=Garras de cuervo
-item.gravestone.ooze.name=Pringue
-item.gravestone.piece_of_mummy_cloth.name=Trozo de tela de momia
-
 ## Corpses
 item.corpse.steve=Cadáver Steve
 item.corpse.player=Cadáver Jugador

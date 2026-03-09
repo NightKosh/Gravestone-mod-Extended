@@ -37,12 +37,6 @@ block.haunted_chest.ghost_chest.name=Geisterkiste
 ## Portal
 tile.catacombs_portal.name=Portal in die Katakomben
 
-
-## Other Items
-item.gravestone.raven_feather.name=Rabenfeder
-item.gravestone.raven_claws.name=Rabenklauen
-item.gravestone.piece_of_mummy_cloth.name=Fetzen Mumienstoff
-
 ## Corpses
 item.corpse.steve=Steveleiche
 item.corpse.player=Spielerleiche
