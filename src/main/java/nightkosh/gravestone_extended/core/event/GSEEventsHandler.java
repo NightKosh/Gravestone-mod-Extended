@@ -88,10 +88,4 @@ public class GSEEventsHandler {
 //        }
 //    }
 
-//    @SubscribeEvent
-//    public void lootLoad(LootTableLoadEvent event) {
-//        //TODO
-////        GSLootTables.inject(event);
-//    }
-
 }

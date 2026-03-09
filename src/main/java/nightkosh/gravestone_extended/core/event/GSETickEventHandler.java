@@ -23,7 +23,7 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 @EventBusSubscriber(modid = ModInfo.ID)
-public class TickEventHandler {
+public class GSETickEventHandler {
 
     private static short ticCount = 0;
 
