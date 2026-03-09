@@ -1,11 +1,20 @@
 package nightkosh.gravestone_extended.core.event;
 
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import nightkosh.gravestone_extended.core.GSEConfigs;
+import nightkosh.gravestone_extended.core.GSEEnchantments;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
 import nightkosh.gravestone_extended.helper.TimeHelper;
+
+import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
 /**
  * Gravestone mod - Extended
@@ -34,6 +43,29 @@ public class TickEventHandler {
                 TimeHelper.updateIsGraveSpawnTime(level);
                 ticCount = 0;
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onLivingTick(EntityTickEvent.Post event) {
+        if (event.getEntity() instanceof Player player &&
+                !player.level().isClientSide() &&
+                (player.tickCount % 40) == 0) {
+                if (GSEConfigs.DEBUG_MODE.get()) {
+                    LOGGER.info("EntityTickEvent.Post event triggered. Going to spawn player gilded_sheen.");
+                }
+            var chestplate = player.getItemBySlot(EquipmentSlot.CHEST);
+
+            if (!chestplate.isEmpty() && GSEEnchantmentHelper.enchanted(player.level(), GSEEnchantments.GILDED_SHEEN, chestplate)) {
+                ((ServerLevel) player.level()).sendParticles(
+                        ParticleTypes.GLOW,
+                        player.getX(), player.getY() + 1, player.getZ(),
+                        6,
+                        0.3, 0.5, 0.3,
+                        0
+                );
+            }
+
         }
     }
 
