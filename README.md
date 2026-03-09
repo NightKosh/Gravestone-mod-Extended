@@ -77,7 +77,11 @@ For more information, look at "minecraft NeoForge" README.txt file (it's not inc
     ```
         /enchant @s gravestone_extended:withered_blade 2
     ```
-4. True Strike
+4. Shadow of Death
+    ```
+        /enchant @s gravestone_extended:shadow_of_death 5
+    ```
+5. True Strike
     ```
         /enchant @s gravestone_extended:true_strike 2
     ```

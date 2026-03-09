@@ -51,8 +51,8 @@
 
   "item.gravestone_extended.bone_shield": "Кістяний щит",
 
-  "item.gravestone_extended.diving_helmet": "Diving Helmet",
-  "item.gravestone_extended.diving_helmet.tooltip": "Provides unlimited breath under the water",
+  "item.gravestone_extended.diving_helmet": "Водолазний шолом",
+  "item.gravestone_extended.diving_helmet.tooltip": "Дозволяє дихати під водою",
   "item.gravestone_extended.diving_chestplate": "Diving Chestplate",
   "item.gravestone_extended.diving_chestplate.tooltip": "Grants Resistance while in water",
   "item.gravestone_extended.diving_leggings": "Diving Leggings",
@@ -117,6 +117,7 @@
   "enchantment.gravestone_extended.vampiric_touch": "Дотик Вампіра",
   "enchantment.gravestone_extended.poisoned_blade": "Отруєне Лезо",
   "enchantment.gravestone_extended.withered_blade": "Висушуюче Лезо",
+  "enchantment.gravestone_extended.shadow_of_death": "Тінь смерті",
   "enchantment.gravestone_extended.true_strike": "True Strike",
   "enchantment.gravestone_extended.web_crawler": "Web Crawler",
   "enchantment.gravestone_extended.frozen_nether": "Frozen Nether",

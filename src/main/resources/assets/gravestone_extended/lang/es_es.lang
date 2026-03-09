@@ -38,23 +38,8 @@ block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 tile.catacombs_portal.name=Portal de catacumbas
 
 # Enchantments
-enchantment.shadow_of_death=Sombra de la muerte
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Infligne 2.5 extra de daño por nivel a aquellos mobs excepto arañas y nomuertos
 enchantment.bloody_replication=Replicación sangrienta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Itercambia 0.25 - 1.5 puntos de salud (depende del nivel de encantamiento) en copiar el bloque de tronco de árbol en vez de destruirlo
-
-
-# Potions
-potion.cursed_inferno.title=Infierno maldito
-potion.effect.gs_cursed_inferno_type=Poción de infierno maldito
-splash_potion.effect.gs_cursed_inferno_type=Poción de área de infierno maldito
-lingering_potion.effect.gs_cursed_inferno_type=Poción persistente de infierno maldito
-tipped_arrow.effect.gs_cursed_inferno_type=Flecha de infierno maldito
-potion.cursed_flame.title=Llama maldita
-potion.effect.gs_cursed_flame_type=Poción de llama maldita
-splash_potion.effect.gs_cursed_flame_type=Poción de área de llama maldita
-lingering_potion.effect.gs_cursed_flame_type=Poción persistente de llama maldita
-tipped_arrow.effect.gs_cursed_flame_type=Flecha de llama maldita
 
 
 # Items

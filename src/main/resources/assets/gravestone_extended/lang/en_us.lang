@@ -37,23 +37,9 @@ block.haunted_chest.ghost_chest.name=Chest with Ghost
 tile.catacombs_portal.name=Catacombs Portal
 
 # Enchantments
-enchantment.shadow_of_death=Shadow of Death
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Deals extra 2.5 damage per level to non spider and non undead mobs
 enchantment.bloody_replication=Bloody Replication
 enchantment.gravestone-extended.gs_bloody_replication.desc=Exchange 0.25 - 1.5 health points(depends on enchantment level) to copy of the wood log block instead of its destruction
 
-
-# Potions
-potion.cursed_inferno.title=Cursed Inferno
-potion.effect.gs_cursed_inferno_type=Potion of Cursed Inferno
-splash_potion.effect.gs_cursed_inferno_type=Splash Potion of Cursed Inferno
-lingering_potion.effect.gs_cursed_inferno_type=Lingering Potion of Cursed Inferno
-tipped_arrow.effect.gs_cursed_inferno_type=Arrow of Cursed Inferno
-potion.cursed_flame.title=Cursed Flame
-potion.effect.gs_cursed_flame_type=Potion of Cursed Flame
-splash_potion.effect.gs_cursed_flame_type=Splash Potion of Cursed Flame
-lingering_potion.effect.gs_cursed_flame_type=Lingering Potion of Cursed Flame
-tipped_arrow.effect.gs_cursed_flame_type=Arrow of Cursed Flame
 
 # Items
 ## Fishing Pole

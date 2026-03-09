@@ -39,24 +39,8 @@ tile.catacombs_portal.name=Portal das Catacumbas
 
 
 # Enchantments
-enchantment.shadow_of_death=Sombra da Morte
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Causa 2,5 de dano extra por nível para mobs não aranha e não morto-vivo
 enchantment.bloody_replication=Replicação Sangrenta
 enchantment.gravestone-extended.gs_bloody_replication.desc=Troca de 0,25 - 1,5 de pontos de saúde (depende do nível do encantamento) para copiar o bloco de madeira em vez de destruir
-
-
-# Potions
-potion.cursed_inferno.title=Inferno Maldito
-potion.effect.gs_cursed_inferno_type=Poção de Inferno Maldito
-splash_potion.effect.gs_cursed_inferno_type=Poção Arremessável de Inferno Maldito
-lingering_potion.effect.gs_cursed_inferno_type=Poção Prolongada de Inferno Maldito
-tipped_arrow.effect.gs_cursed_inferno_type=Flecha de Inferno Maldito
-potion.cursed_flame.title=Chama Amaldiçoada
-potion.effect.gs_cursed_flame_type=Poção de Chama Amaldiçoada
-splash_potion.effect.gs_cursed_flame_type=Poção Arremessável de Chama Amaldiçoada
-lingering_potion.effect.gs_cursed_flame_type=Poção Prolongada de Chama Amaldiçoada
-tipped_arrow.effect.gs_cursed_flame_type=Flecha de Chama Amaldiçoada
-
 
 # Items
 ## Fishing Pole

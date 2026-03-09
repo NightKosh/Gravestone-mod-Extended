@@ -1,9 +1,3 @@
-# Tabs
-itemGroup.tabGSMemorials=Меморіали
-itemGroup.tabGSCorpse=Трупи
-itemGroup.tabGSOther=Gravestone mod: Предмети
-
-
 # Blocks
 ## Memorials
 block.memorial.cross.name=Меморіальний хрест
@@ -33,22 +27,6 @@ block.haunted_chest.skeleton_chest.name=Скриня зі скелетом
 block.haunted_chest.raven_chest.name=Скриня з воронами
 block.haunted_chest.ghost_chest.name=Скриня з привидами
 
-# Enchantments
-enchantment.shadow_of_death=Тінь смерті
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Завдає додаткових 2.5 шкоди за рівень істотам, які не є павуками або нежиттю
-
-# Potions
-potion.cursed_inferno.title=Прокляте інферно
-potion.effect.gs_cursed_inferno_type=Зілля проклятого інферно
-splash_potion.effect.gs_cursed_inferno_type=Вибухове зілля проклятого інферно
-lingering_potion.effect.gs_cursed_inferno_type=Туманне зілля проклятого інферно
-tipped_arrow.effect.gs_cursed_inferno_type=Стріла проклятого інферно
-potion.cursed_flame.title=Прокляте полум'я
-potion.effect.gs_cursed_flame_type=Зілля проклятого полум'я
-splash_potion.effect.gs_cursed_flame_type=Вибухове зілля проклятого полум'я
-lingering_potion.effect.gs_cursed_flame_type=Туманне зілля проклятого полум'я
-tipped_arrow.effect.gs_cursed_flame_type=Стріла проклятого полум'я
-
 
 # Items
 ## Fishing Pole
@@ -66,10 +44,6 @@ item.gravestone.bone_sword.name=Кістяний меч
 item.gravestone.bone_sword_iron.name=Залізний Кістяний меч
 item.gravestone.bone_sword_golden.name=Золотий Кістяний меч
 item.gravestone.bone_sword_diamond.name=Алмазний Кістяний меч
-
-## Armor
-item.gravestone.diving_helmet.name=Водолазний шолом
-item.gravestone.diving_helmet.tooltip=Дозволяє дихати під водою
 
 ## Corpses
 item.corpse.steve=Труп Стіва

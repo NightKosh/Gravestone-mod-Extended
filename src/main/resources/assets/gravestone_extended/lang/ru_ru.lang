@@ -37,22 +37,8 @@ block.haunted_chest.ghost_chest.name=Сундук с привидениями
 tile.catacombs_portal.name=Портал в катакомбы
 
 # Enchantments
-enchantment.shadow_of_death=Тень Смерти
-enchantment.gravestone-extended.gs_shadow_of_death.desc=Наносит дополнительные 2.5 урона за уровень существам, не являющимся пауками или нежитью
 enchantment.bloody_replication=Кровавая копия
 enchantment.gravestone-extended.gs_bloody_replication.desc=Обменивает 0.25 - 1.5 очков здоровья(в зависимости от уровня зачарования) на копию блока дерева вместо его уничтожения
-
-# Potions
-potion.cursed_inferno.title=Проклятое инферно
-potion.effect.gs_cursed_inferno_type=Зелье проклятого инферно
-splash_potion.effect.gs_cursed_inferno_type=Взрывное зелье проклятого инферно
-lingering_potion.effect.gs_cursed_inferno_type=Туманное зелье проклятого инферно
-tipped_arrow.effect.gs_cursed_inferno_type=Стрела проклятого инферно
-potion.cursed_flame.title=Проклятое пламя
-potion.effect.gs_cursed_flame_type=Зелье проклятого пламени
-splash_potion.effect.gs_cursed_flame_type=Взрывное зелье проклятого пламени
-lingering_potion.effect.gs_cursed_flame_type=Туманное зелье проклятого пламени
-tipped_arrow.effect.gs_cursed_flame_type=Стрела проклятого пламени
 
 
 # Items
