@@ -4,7 +4,7 @@
     "icon": { "id": "gravestone_extended:altar" },
     "title": { "translate": "advancement.gravestone_extended.dark_rituals" },
     "description": { "translate": "advancement.gravestone_extended.dark_rituals.desc" },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

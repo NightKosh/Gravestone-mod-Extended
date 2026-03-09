@@ -1,10 +1,10 @@
 {
-  "parent": "gravestone_extended:arcane_extraction",
+  "parent": "gravestone_extended:arcane_transfer",
   "display": {
     "icon": { "id": "minecraft:golden_chestplate" },
     "title": { "translate": "advancement.gravestone_extended.gilded_sheen" },
     "description": { "translate": "advancement.gravestone_extended.gilded_sheen.desc" },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

@@ -18,8 +18,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import nightkosh.gravestone.helper.AdvancementsHelper;
-import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEEnchantments;
 import nightkosh.gravestone_extended.core.GSEItems;
@@ -79,10 +77,6 @@ public class GSEEnchantmentHelper {
                 stack.setDamageValue(stack.getDamageValue() + 1);
                 level.levelEvent(1505, pos, 15);
                 BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), level, pos, event.getEntity());
-
-                if (event.getEntity() instanceof Player player) {
-                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.BONE_RAIN);
-                }
             }
         }
     }
@@ -108,7 +102,6 @@ public class GSEEnchantmentHelper {
                 LOGGER.info("Going to heal {} health player {} by VAMPIRIC_TOUCH", healed, player.getScoreboardName());
             }
             player.heal(healed);
-            AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.VAMPIRIC_TOUCH);
         }
     }
 
@@ -122,8 +115,6 @@ public class GSEEnchantmentHelper {
                         LOGGER.info("Going to reflect {} damage to {} entity", damage, player.getScoreboardName());
                     }
                     attackerEntity.hurt(level.damageSources().magic(), damage);
-
-                    AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.MIRROR_OF_PAIN);
                 }
             }
         }

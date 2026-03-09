@@ -1,17 +1,30 @@
 {
-  "parent": "gravestone_extended:arcane_extraction",
+  "parent": "gravestone_extended:arcane_transfer",
   "display": {
     "icon": { "id": "gravestone_extended:bone_shield" },
     "title": { "translate": "advancement.gravestone_extended.mirror_of_pain" },
     "description": { "translate": "advancement.gravestone_extended.mirror_of_pain.desc" },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "triggered": {
-      "trigger": "minecraft:impossible"
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:mirror_of_pain"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   }
 }
