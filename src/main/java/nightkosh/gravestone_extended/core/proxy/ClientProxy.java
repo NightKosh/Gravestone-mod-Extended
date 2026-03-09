@@ -30,11 +30,6 @@ public class ClientProxy {//TODO extends CommonProxy {
 //    }
 //
 //    @Override
-//    public void registerHandlers() {
-//        MinecraftForge.EVENT_BUS.register(new RenderEventHandler());
-//    }
-//
-//    @Override
 //    public void registerParticles() {
 //        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.GREEN_FLAME.getParticleID(), new ParticleGreenFlameFX.Factory());
 //        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.CATACOMBS_PORTAL.getParticleID(), new ParticleCatacombsPortal.Factory());

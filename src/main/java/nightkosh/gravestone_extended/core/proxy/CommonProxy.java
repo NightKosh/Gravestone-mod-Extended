@@ -12,9 +12,6 @@ public class CommonProxy {
 //    public void openGraveTextGui(TileEntityGrave tileEntity) {
 //    }
 //
-//    public void registerHandlers() {
-//    }
-//
 //    public void registerFluidRenderers(Block block, ModelResourceLocation modelResourceLocation) {
 //
 //    }

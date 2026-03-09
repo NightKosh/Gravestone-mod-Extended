@@ -28,6 +28,7 @@ public class GSEConfigs {
     public static ModConfigSpec.ConfigValue<Boolean> BLIZZARD_DEALS_DAMAGE_TO_PLAYERS;
 
     // graves
+    public static ModConfigSpec.ConfigValue<Boolean> GRAVES_FOG_ENABLED;
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_MOBS_BY_GRAVES;
     public static ModConfigSpec.ConfigValue<Integer> GRAVE_MAX_SPAWN_DELAY;
     public static ModConfigSpec.ConfigValue<Boolean> SPAWN_MOB_AT_GRAVE_DESTRUCTION;
@@ -67,6 +68,7 @@ public class GSEConfigs {
                 .define("BLIZZARD_DEALS_DAMAGE_TO_PLAYERS", true);
 
         // graves
+        GRAVES_FOG_ENABLED =  BUILDER.define("GRAVES_FOG_ENABLED", true);
         SPAWN_MOBS_BY_GRAVES = BUILDER.define("GRAVES_SPAWN_MOBS", true);
         GRAVE_MAX_SPAWN_DELAY = BUILDER.defineInRange("GRAVE_MAX_SPAWN_DELAY", GraveStoneSpawn.MAX_DELAY, 600, 10000);
         SPAWN_MOB_AT_GRAVE_DESTRUCTION = BUILDER.define("SPAWN_MOB_AT_GRAVE_DESTRUCTION", true);
@@ -184,16 +186,7 @@ public class GSEConfigs {
 //        generateCemeteries = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateCemeteries", false).getBoolean();
 //        generateVillageMemorials = config.get(CATEGORY_STRUCTURES_VILLAGE, "GenerateVillageMemorials", true).getBoolean();
 //    }
-//
-    // graves for entities
-    public static boolean isFogEnabled;
-//
-//    private static void gravesConfig() {
-//
-//        isFogEnabled = config.get(Config.CATEGORY_GRAVES, "CemeteryFogEnabled", true).getBoolean();
-//    }
-//
-//
+
     // disable/enable time changing by night stone
     public static boolean enableNightStone;
     public static boolean enableThunderStone;

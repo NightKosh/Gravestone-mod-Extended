@@ -5,18 +5,21 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.resources.Identifier;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
-import nightkosh.gravestone_extended.core.GSETextures;
 import nightkosh.gravestone_extended.core.GSEItems;
+import nightkosh.gravestone_extended.core.GSETextures;
 import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.helper.FogHandler;
 import nightkosh.gravestone_extended.models.armor.phantom_diver_costume.DivingHelmetModel;
 import org.jspecify.annotations.Nullable;
 
@@ -32,6 +35,18 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
  */
 @EventBusSubscriber(modid = ModInfo.ID, value = Dist.CLIENT)
 public class GSEEventsClient {
+
+
+    @SubscribeEvent
+    public static void onRenderFog(ViewportEvent.RenderFog event) {
+        if (GSEConfigs.GRAVES_FOG_ENABLED.get() && FogHandler.currentFog > 0) {
+            float far = Mth.lerp(FogHandler.currentFog, FogHandler.MAX_FOG_DISTANCE, FogHandler.MIN_FOG_DISTANCE);
+
+            event.setNearPlaneDistance(Math.max(0, far * 0.25F));
+            event.setFarPlaneDistance(Math.min(far, event.getFarPlaneDistance()));
+        }
+    }
+
 
     @SubscribeEvent
     public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {

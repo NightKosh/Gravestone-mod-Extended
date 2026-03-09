@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 public class TimeHelper {
 
     public static final int SECONDS_1 = 20;
+    public static final int SECONDS_3 = 60;
     public static final int SECONDS_5 = 100;
     public static final int SECONDS_8 = 160;
     public static final int SECONDS_10 = 200;
@@ -63,13 +64,13 @@ public class TimeHelper {
         isGraveSpawnTime = level.isThundering() ||
                 (time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME);
     }
-//
-//    public static boolean isFogTime(World world) {
-//        if (world.isRaining()) {
-//            return false;
-//        } else {
-//            long dayTime = getDayTime(world);
-//            return dayTime > FOG_START_TIME && dayTime < FOG_END_TIME;
-//        }
-//    }
+
+    public static boolean isFogTime(Level level) {
+        if (level.isRaining() || level.isThundering()) {
+            return false;
+        } else {
+            long dayTime = getDayTime(level);
+            return dayTime > FOG_START_TIME && dayTime < FOG_END_TIME;
+        }
+    }
 }

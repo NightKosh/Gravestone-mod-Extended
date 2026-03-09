@@ -30,8 +30,6 @@ public class GSEEventsCompatibility {
         GraveGenerationHelper.addMobsItemsHandlers();
 
         GraveSpawnerHelper.setGraveSpawnerHelper();
-//
-//        TileEntityGraveStone.fogHandler = new FogHandler();
     }
 
 }
