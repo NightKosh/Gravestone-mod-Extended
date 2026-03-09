@@ -142,6 +142,17 @@ public class GSEItems {
                             .stacksTo(64)
                             .setId(GSEBlocks.SKULL_CANDLE_PIGLIN_RK)));
 
+    // technical items for advancements
+    public static final DeferredHolder<Item, Item> INFERNO = ITEMS_REGISTER.register(
+            "inferno",
+            () -> new Item(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "inferno")))));
+
+    public static final DeferredHolder<Item, Item> BLIZZARD = ITEMS_REGISTER.register(
+            "blizzard",
+            () -> new Item(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "blizzard")))));
+
 //    public static final Item BONE_SWORD = new ItemBoneSword();
 //    public static final Item BONE_SWORD_IRON = new ItemIronBoneSword();
 //    public static final Item BONE_SWORD_GOLDEN = new ItemGoldenBoneSword();

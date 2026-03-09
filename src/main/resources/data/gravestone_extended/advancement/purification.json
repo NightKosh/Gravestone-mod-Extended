@@ -18,8 +18,11 @@
     "hidden": false
   },
   "criteria": {
-    "triggered": {
-      "trigger": "minecraft:impossible"
+    "brew_purification_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:purification"
+      }
     }
   }
 }

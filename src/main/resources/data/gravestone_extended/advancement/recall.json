@@ -1,15 +1,7 @@
 {
-  "parent": "gravestone_extended:purification",
+  "parent": "gravestone_extended:like_a_rock",
   "display": {
-    "icon": {
-      "id": "minecraft:potion",
-      "neoforge:ingredient_type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "gravestone_extended:recall"
-        }
-      }
-    },
+    "icon": { "id": "advanced_fishing:specular_snapper" },
     "title": { "translate": "advancement.gravestone_extended.recall" },
     "description": { "translate": "advancement.gravestone_extended.recall.desc" },
     "frame": "task",
@@ -18,8 +10,11 @@
     "hidden": false
   },
   "criteria": {
-    "triggered": {
-      "trigger": "minecraft:impossible"
+    "brew_recall_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:recall"
+      }
     }
   }
 }

@@ -1,25 +1,20 @@
 {
-  "parent": "gravestone_extended:purification",
+  "parent": "gravestone_extended:blizzard",
   "display": {
-    "icon": {
-      "id": "minecraft:potion",
-      "neoforge:ingredient_type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "gravestone_extended:inferno"
-        }
-      }
-    },
+    "icon": { "id": "gravestone_extended:inferno" },
     "title": { "translate": "advancement.gravestone_extended.inferno" },
     "description": { "translate": "advancement.gravestone_extended.inferno.desc" },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "triggered": {
-      "trigger": "minecraft:impossible"
+    "brew_inferno_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:inferno"
+      }
     }
   }
 }

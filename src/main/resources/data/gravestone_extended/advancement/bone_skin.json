@@ -1,0 +1,20 @@
+{
+  "parent": "gravestone_extended:like_a_rock",
+  "display": {
+    "icon": { "id": "advanced_fishing:bone_fish" },
+    "title": { "translate": "advancement.gravestone_extended.bone_skin" },
+    "description": { "translate": "advancement.gravestone_extended.bone_skin.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_bone_skin_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:bone_skin"
+      }
+    }
+  }
+}

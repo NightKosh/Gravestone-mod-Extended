@@ -1,15 +1,7 @@
 {
   "parent": "gravestone_extended:purification",
   "display": {
-    "icon": {
-      "id": "minecraft:potion",
-      "neoforge:ingredient_type": "neoforge:components",
-      "components": {
-        "minecraft:potion_contents": {
-          "potion": "gravestone_extended:blizzard"
-        }
-      }
-    },
+    "icon": { "id": "gravestone_extended:blizzard" },
     "title": { "translate": "advancement.gravestone_extended.blizzard" },
     "description": { "translate": "advancement.gravestone_extended.blizzard.desc" },
     "frame": "task",
@@ -18,8 +10,11 @@
     "hidden": false
   },
   "criteria": {
-    "triggered": {
-      "trigger": "minecraft:impossible"
+    "brew_blizzard_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:blizzard"
+      }
     }
   }
 }

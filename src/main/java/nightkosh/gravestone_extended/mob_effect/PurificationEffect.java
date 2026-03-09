@@ -6,9 +6,6 @@ import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import nightkosh.gravestone.helper.AdvancementsHelper;
-import nightkosh.gravestone_extended.core.GSEAdvancements;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 
 import javax.annotation.Nonnull;
@@ -47,10 +44,6 @@ public class PurificationEffect extends InstantenousMobEffect {
             }
             entity.extinguishFire();
             entity.clearFreeze();
-
-            if (entity instanceof Player player) {
-                AdvancementsHelper.giveAdvancement(player, level, GSEAdvancements.PURIFICATION);
-            }
         }
 
         return true;
