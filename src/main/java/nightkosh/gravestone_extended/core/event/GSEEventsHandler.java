@@ -1,13 +1,10 @@
 package nightkosh.gravestone_extended.core.event;
 
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
-import net.neoforged.neoforge.event.level.BlockEvent;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
@@ -23,6 +20,7 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 @EventBusSubscriber(modid = ModInfo.ID)
 public class GSEEventsHandler {
 
+//        //TODO
 //    @SubscribeEvent(priority = EventPriority.HIGHEST)
 //    public void onPlayerClone(PlayerEvent.Clone event) {
 //        if (event.isWasDeath()) {
@@ -33,20 +31,11 @@ public class GSEEventsHandler {
 //    // Hopefully ensure we capture items before other things do (set to high so other mods can run before if they have more specialness
 //    @SubscribeEvent(priority = EventPriority.LOWEST)
 //    public void onEntityLivingDeath(LivingDeathEvent event) {
-//        //TODO
 ////        if (FMLCommonHandler.instance().getEffectiveSide().isServer()) {
 ////            if (event.getEntity() instanceof Creeper creeper && creeper.isPowered()) {
 ////                // drop creeper statue if entity is a charged creeper
 ////                GSBlock.MEMORIAL.dropCreeperMemorial(creeper.level(), creeper.blockPosition());
 ////            }
-////        }
-//    }
-//
-//    @SubscribeEvent(priority = EventPriority.HIGHEST)
-//    public void breakBlockEvent(BlockEvent.BreakEvent event) {
-//        //TODO
-////        if (EnchantmentBloodyReplication.applyEffect(event.getPlayer(), event.getState(), event.getPos())) {
-////            event.setCanceled(true);
 ////        }
 //    }
 
@@ -84,21 +73,6 @@ public class GSEEventsHandler {
         }
     }
 
-//    @SubscribeEvent(priority = EventPriority.HIGH)
-//    public void onEntityLivingDamage(LivingDamageEvent event) {
-//        if (event) {
-//            Entity entity = event.getSource().getTrueSource();
-//            if (entity instanceof LivingEntity attacker && event.getEntity() instanceof LivingEntity targert) {
-//                ItemStack itemMainHand = attacker.getHeldItemMainhand();
-//                ItemStack itemOffHand = attacker.getHeldItemOffhand();
-//                if (itemMainHand.getItem() instanceof IBoneSword) {
-//                    applyEntityLivingDamageEnchantments(attacker, targert, itemMainHand, event.getAmount());
-//                } else if (itemOffHand.getItem() instanceof IBoneSword) {
-//                    applyEntityLivingDamageEnchantments(attacker, targert, itemOffHand, event.getAmount());
-//                }
-//            }
-//        }
-//    }
 //TODO
 //    @SubscribeEvent(priority = EventPriority.HIGH)
 //    public void onProjectileImpact(ProjectileImpactEvent.Throwable event) {
