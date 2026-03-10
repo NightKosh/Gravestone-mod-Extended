@@ -7,6 +7,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
@@ -14,9 +15,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.event.level.BlockEvent;
-import nightkosh.gravestone_extended.core.GSEConfigs;
-import nightkosh.gravestone_extended.core.GSEEnchantments;
-import nightkosh.gravestone_extended.core.ModInfo;
+import net.neoforged.neoforge.fluids.RegisterCauldronFluidContentEvent;
+import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
@@ -87,6 +87,15 @@ public class GSEBlockEvents {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onRegisterCauldronFluidContentEvent(RegisterCauldronFluidContentEvent event) {
+        event.register(
+                GSEBlocks.BLIGHTWATER_CAULDRON.get(),
+                GSEFluids.BLIGHTWATER.get(),
+                1000,
+                LayeredCauldronBlock.LEVEL);
     }
 
 }

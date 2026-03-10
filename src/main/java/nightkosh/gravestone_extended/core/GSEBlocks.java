@@ -4,7 +4,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LayeredCauldronBlock;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -594,6 +600,35 @@ public class GSEBlocks {
                             .stacksTo(64)
                             .setId(GSEBlocks.ALTAR_RK)));
 
+    // fluids
+    public static final ResourceKey BLIGHTWATER_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "blightwater"));
+    public static final Supplier<LiquidBlock> BLIGHTWATER = registerBlock(
+            "blightwater",
+            () -> new LiquidBlock(
+                    GSEFluids.BLIGHTWATER.get(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)
+                            .noLootTable()
+                            .replaceable()
+                            .strength(100)
+                            .noCollision()
+                            .setId(BLIGHTWATER_RK)));
+
+    public static final ResourceKey BLIGHTWATER_CAULDRON_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "blightwater_cauldron"));
+    public static final DeferredHolder<Block, Block> BLIGHTWATER_CAULDRON = registerBlock(
+            "blightwater_cauldron",
+            () -> new LayeredCauldronBlock(
+                    Biome.Precipitation.NONE,
+                    GSECauldronInteractions.BLIGHTWATER,
+                    BlockBehaviour.Properties.of()
+                            .strength(1)
+                            .noOcclusion()
+                            .mapColor(MapColor.STONE)
+                            .setId(BLIGHTWATER_CAULDRON_RK)));
+
     // other
     public static final ResourceKey FROZEN_LAVA_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -637,8 +672,6 @@ public class GSEBlocks {
 //    public static final Block CURSED_FLAME = new BlockCursedFlame();
 //    public static final ItemBlock CURSED_FLAME_IB = new IBCursedFlame(CURSED_FLAME);
 //
-//    public static final BlockFluidToxicWater TOXIC_WATER = new BlockFluidToxicWater();
-//
 //    @Mod.EventBusSubscriber(modid = ModInfo.ID)
 //    public static class RegistrationHandler {
 //
@@ -646,7 +679,7 @@ public class GSEBlocks {
 //        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
 //            final IForgeRegistry<Block> registry = event.getRegistry();
 //            registry.registerAll(MEMORIAL, EXECUTION, TRAP,
-//                    HAUNTED_CHEST, INVISIBLE_WALL, TOXIC_WATER, CATACOMBS_PORTAL, CURSED_FLAME);
+//                    HAUNTED_CHEST, INVISIBLE_WALL, CATACOMBS_PORTAL, CURSED_FLAME);
 //        }
 //
 //        @SubscribeEvent

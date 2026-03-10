@@ -4,6 +4,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import nightkosh.gravestone_extended.core.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,12 +32,20 @@ public class ModGravestoneExtended {
         GSEBlocks.register(eventBus);
         GSEItems.register(eventBus);
         GSEBlockEntities.register(eventBus);
+        GSEFluids.register(eventBus);
+        GSEFluidTypes.register(eventBus);
         GSETabs.register(eventBus);
         GSEMobEffects.register(eventBus);
         GSEPotions.register(eventBus);
         GSEMenus.register(eventBus);
         GSEVillagers.register(eventBus);
         GSEParticles.register(eventBus);
+
+        eventBus.addListener(this::commonSetup);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(GSECauldronInteractions::register);
     }
 
 //    @Mod.EventHandler
