@@ -1,10 +1,10 @@
 package nightkosh.gravestone_extended.core.event;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
@@ -18,6 +18,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.client.event.RegisterRenderBuffersEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
@@ -56,7 +57,8 @@ public class GSEEventsClient {
     @SubscribeEvent
     public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_BUBBLE.get(), BlightwaterBubbleParticle.Provider::new);
-//        event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
+        event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
+        event.registerSpriteSet(GSEParticles.BLIGHTWATER_FALL.get(), BlightwaterDripParticle.FallProvider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_WAKE.get(), BlightwaterWakeParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.GREEN_FLAME.get(), GreenFlameParticle.Provider::new);
@@ -64,15 +66,15 @@ public class GSEEventsClient {
     }
 
     @SubscribeEvent
+    public static void onRegisterRenderBuffers(RegisterRenderBuffersEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER_FLOWING.get(), ChunkSectionLayer.TRANSLUCENT);
+    }
+
+    @SubscribeEvent
     public static void onRegisterClientExtensions(RegisterClientExtensionsEvent event) {
         event.registerFluidType(new IClientFluidTypeExtensions() {
-            //TODO
             private static final Identifier UNDERWATER_LOCATION = fromNamespaceAndPath(ModInfo.ID, "textures/block/fluid/blightwater/underwater.png");
-//            private static final Identifier WATER_STILL = fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/still");
-//            private static final Identifier WATER_FLOW = fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/flow");
-//            private static final Identifier WATER_OVERLAY = Identifier.withDefaultNamespace("block/fluid/blightwater/overlay");
-
-//            private static final Identifier UNDERWATER_LOCATION = Identifier.withDefaultNamespace("textures/misc/underwater.png");
             private static final Identifier WATER_STILL = Identifier.withDefaultNamespace("block/water_still");
             private static final Identifier WATER_FLOW = Identifier.withDefaultNamespace("block/water_flow");
             private static final Identifier WATER_OVERLAY = Identifier.withDefaultNamespace("block/water_overlay");

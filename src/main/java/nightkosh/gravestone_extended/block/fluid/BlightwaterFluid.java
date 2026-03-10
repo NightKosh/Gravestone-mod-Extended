@@ -228,36 +228,34 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
                 level.addParticle(ParticleTypes.LARGE_SMOKE, x, y, z, 0, 0, 0);
                 level.playLocalSound(x, y, z, SoundEvents.LAVA_EXTINGUISH, SoundSource.AMBIENT,
                         0.2F + random.nextFloat() * 0.2F, 0.9F + random.nextFloat() * 0.15F, false);
-            }
-
-            if (random.nextInt(100) == 0) {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), GSESounds.BLIGHTWATER_BUBBLING.get(), SoundSource.AMBIENT,
-                        0.2F + random.nextFloat() * 0.2F, 0.9F + random.nextFloat() * 0.15F, false);
-            }
-        }
-
-        if (random.nextInt(50) == 0 &&
-                level.getBlockState(pos.below()).isSolidRender()) {
-            var st = level.getBlockState(pos.below(2));
-            if (st.isEmpty() || !st.isSolidRender()) {
+            } else if (random.nextInt(100) == 0) {
                 double x = pos.getX() + random.nextFloat();
-                double y = pos.getY() - 1.05;
                 double z = pos.getZ() + random.nextFloat();
-
-                //TODO
-//            level.addParticle(GSEParticles.BLIGHTWATER_DRIP.get(), x, y, z, 0, 0, 0);
-                level.playLocalSound(x, y, z, GSESounds.BLIGHTWATER_DROP_OF_ACID.get(), SoundSource.AMBIENT,
-                        0.2F + random.nextFloat() * 0.2F, 0.9F + random.nextFloat() * 0.15F, false);
+                if (random.nextInt(5) == 0) {
+                    double y = pos.getY() + 0.7;
+                    level.playLocalSound(x, y, z,
+                            GSESounds.BLIGHTWATER_BUBBLING.get(), SoundSource.AMBIENT,
+                            0.2F + random.nextFloat() * 0.2F, 0.9F + random.nextFloat() * 0.15F, false);
+                    for (int i = 0; i < 10; i++) {
+                        level.addParticle(GSEParticles.BLIGHTWATER_BUBBLE.get(),
+                                x, y, z, 0, 0, 0);
+                        x = pos.getX() + random.nextFloat();
+                        z = pos.getZ() + random.nextFloat();
+                    }
+                } else {
+                    double y = pos.getY() + 1;
+                    level.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 0, 0);
+                    level.playLocalSound(x, y, z,
+                            GSESounds.BLIGHTWATER_DROP_OF_ACID.get(), SoundSource.AMBIENT,
+                            0.2F + random.nextFloat() * 0.2F, 0.9F + random.nextFloat() * 0.15F, false);
+                }
             }
         }
     }
 
-
     @Override
     public @Nullable ParticleOptions getDripParticle() {
-        //TODO
-//        return GSEParticles.BLIGHTWATER_DRIP.get();
-        return ParticleTypes.DRIPPING_WATER;
+        return GSEParticles.BLIGHTWATER_DRIP.get();
     }
 
     public static class Flowing extends BlightwaterFluid {

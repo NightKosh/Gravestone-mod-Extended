@@ -23,6 +23,10 @@ public class GSEParticles {
             "blightwater_drip",
             () -> new SimpleParticleType(false));
 
+    public static final Supplier<SimpleParticleType> BLIGHTWATER_FALL = PARTICLES.register(
+            "blightwater_fall",
+            () -> new SimpleParticleType(false));
+
     public static final Supplier<SimpleParticleType> BLIGHTWATER_SPLASH = PARTICLES.register(
             "blightwater_splash",
             () -> new SimpleParticleType(false));
