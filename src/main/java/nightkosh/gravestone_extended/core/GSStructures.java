@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.core;
 
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 
 /**
  * Gravestone mod - Extended
@@ -25,7 +24,7 @@ public class GSStructures {
             try {
 //                MapGenStructureIO.registerStructureComponent(ComponentVillageMemorial.class, "GSVillageMemorial");
             } catch (Throwable e) {
-                GSLogger.logError("Can not register ComponentGSVillageMemorial");
+//                GSLogger.logError("Can not register ComponentGSVillageMemorial");
                 e.printStackTrace();
             }
         }

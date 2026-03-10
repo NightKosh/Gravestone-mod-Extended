@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.core.commands;
 
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.catacombs.components.*;
 
 import java.lang.reflect.Constructor;

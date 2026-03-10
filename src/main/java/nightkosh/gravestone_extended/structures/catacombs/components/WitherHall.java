@@ -1,6 +1,5 @@
 package nightkosh.gravestone_extended.structures.catacombs.components;
 
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.helper.StateHelper;
 import nightkosh.gravestone_extended.structures.BoundingBoxHelper;
 import nightkosh.gravestone_extended.structures.MobSpawnHelper;

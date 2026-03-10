@@ -6,7 +6,7 @@ package nightkosh.gravestone_extended.core.proxy;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ClientProxy {//TODO extends CommonProxy {
+public class ClientProxy {
 //
 //    @Override
 //    public void registerTERenderers() {
@@ -18,25 +18,6 @@ public class ClientProxy {//TODO extends CommonProxy {
 //
 //        // register HauntedChest renderer
 //        ClientRegistry.registerTileEntity(TileEntityHauntedChest.class, "GSHauntedChest", new TileEntityHauntedChestRenderer());
-//    }
-//
-//    @Override
-//    public void registerFluidRenderers(Block block, ModelResourceLocation modelResourceLocation) {
-//        ModelLoader.setCustomStateMapper(block, new StateMapperBase() {
-//            protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-//                return modelResourceLocation;
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public void registerParticles() {
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.GREEN_FLAME.getParticleID(), new ParticleGreenFlameFX.Factory());
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.CATACOMBS_PORTAL.getParticleID(), new ParticleCatacombsPortal.Factory());
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_DRIP.getParticleID(), new ParticleToxicWaterDrip.Factory());
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_SPLASH.getParticleID(), new ParticleToxicWaterSplash.Factory());
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_BUBBLE.getParticleID(), new ParticleToxicWaterBubble.Factory());
-//        Minecraft.getMinecraft().effectRenderer.registerParticle(GSParticles.TOXIC_WATER_WAKE.getParticleID(), new ParticleToxicWaterWake.Factory());
 //    }
 //
 //    @Override

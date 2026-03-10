@@ -1,13 +1,10 @@
 package nightkosh.gravestone_extended.core.commands;
 
-import nightkosh.gravestone_extended.core.logger.GSLogger;
 import nightkosh.gravestone_extended.structures.GSStructureGenerator;
 import nightkosh.gravestone_extended.structures.catacombs.CatacombsGenerator;
 import nightkosh.gravestone_extended.structures.graves.OpenedGraveGenerator;
 import nightkosh.gravestone_extended.structures.graves.SingleGraveGenerator;
 import nightkosh.gravestone_extended.structures.memorials.MemorialGenerator;
-import nightkosh.gravestone_extended.structures.village.undertaker.VillageCemeteryGenerator;
-import nightkosh.gravestone_extended.structures.village.undertaker.VillageUndertakerGenerator;
 
 /**
  * Gravestone mod - Extended

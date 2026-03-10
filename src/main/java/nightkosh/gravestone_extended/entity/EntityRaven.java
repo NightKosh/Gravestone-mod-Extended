@@ -1,10 +1,5 @@
 package nightkosh.gravestone_extended.entity;
 
-import nightkosh.gravestone_extended.core.GSLootTables;
-import nightkosh.gravestone_extended.core.GSSound;
-
-import javax.annotation.Nullable;
-
 /**
  * Gravestone mod - Extended
  *
