@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "advanced_fishing:green_jellyfish",
+    "minecraft:bucket"
+  ],
+  "result": {
+    "id": "gravestone_extended:blightwater_bucket"
+  }
+}

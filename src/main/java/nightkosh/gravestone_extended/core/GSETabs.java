@@ -42,6 +42,12 @@ public class GSETabs {
                         output.accept(GSEItems.ENDER_SKULL.get());
                         output.accept(GSEItems.FROZEN_MIRROR.get());
 
+                        // liquid
+                        output.accept(GSEItems.BLIGHTWATER_BUCKET.get());
+
+                        // altar
+                        output.accept(GSEBlocks.ALTAR.get());
+
                         // corpses
                         output.accept(GSEItems.CORPSE_VILLAGER.get());
                         output.accept(GSEItems.CORPSE_DOG.get());
@@ -75,9 +81,6 @@ public class GSETabs {
                         output.accept(GSEBlocks.WITHERED_BRICKS.get());
 
                         output.accept(GSEBlocks.FROZEN_LAVA.get());
-
-                        // altar
-                        output.accept(GSEBlocks.ALTAR.get());
 
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());

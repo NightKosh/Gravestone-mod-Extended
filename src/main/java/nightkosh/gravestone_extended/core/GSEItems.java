@@ -3,21 +3,23 @@ package nightkosh.gravestone_extended.core;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import nightkosh.gravestone_extended.item.Corpse;
 import nightkosh.gravestone_extended.item.EnchantedSkeletonSkull;
 import nightkosh.gravestone_extended.item.EnchantedWitherSkull;
 import nightkosh.gravestone_extended.item.FrozenMirror;
-import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingHelmet;
 import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingBoots;
 import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingChestplate;
+import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingHelmet;
 import nightkosh.gravestone_extended.item.armor.phantom_diver.DivingLeggings;
 import nightkosh.gravestone_extended.item.compass.EnderSkull;
 import nightkosh.gravestone_extended.item.compass.ImpSkull;
 import nightkosh.gravestone_extended.item.compass.SlimeChunk;
-import nightkosh.gravestone_extended.item.Corpse;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
@@ -68,6 +70,18 @@ public class GSEItems {
             Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "corpse_horse"));
     public static final DeferredHolder<Item, Item> CORPSE_HORSE = ITEMS_REGISTER.register(
             "corpse_horse", () -> new Corpse(CORPSE_HORSE_RK));
+
+    // fluids
+    private static final ResourceKey<Item> BLIGHTWATER_BUCKET_RK = ResourceKey.create(
+            Registries.ITEM, fromNamespaceAndPath(ModInfo.ID, "blightwater_bucket"));
+    public static final DeferredHolder<Item, Item> BLIGHTWATER_BUCKET = ITEMS_REGISTER.register(
+            "blightwater_bucket",
+            () -> new BucketItem(
+                    GSEFluids.BLIGHTWATER.get(),
+                    new Item.Properties()
+                            .craftRemainder(Items.BUCKET)
+                            .stacksTo(1)
+                            .setId(BLIGHTWATER_BUCKET_RK)));
 
     // skull candles
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_SKELETON = ITEMS_REGISTER.register(

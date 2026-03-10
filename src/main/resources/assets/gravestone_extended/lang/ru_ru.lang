@@ -109,10 +109,6 @@ item.corpse.health=Максимальное здоровье
 item.corpse.speed=Скорость
 item.corpse.jump_strength=Прыгучесть
 
-# Fluids
-tile.gs_toxic_water.name=Токсичная вода
-fluid.gs_toxic_water=Токсичная вода
-
 
 # Console messages
 message.cemetery_key.activated=Ключ был активирован игроком

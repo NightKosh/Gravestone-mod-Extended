@@ -66,10 +66,6 @@ item.corpse.health=Максимальне здоров'я
 item.corpse.speed=Швидкість
 item.corpse.jump_strength=Стрибучість
 
-# Fluids
-tile.gs_toxic_water.name=Токсична вода
-fluid.gs_toxic_water=Токсична вода
-
 
 ## Console commands
 commands.direction_error=Напрямок введено не коректно!

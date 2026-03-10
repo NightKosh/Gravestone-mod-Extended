@@ -109,10 +109,6 @@ item.corpse.health=Max Health
 item.corpse.speed=Speed
 item.corpse.jump_strength=Jump Strength
 
-# Fluids
-tile.gs_toxic_water.name=Toxic Water
-fluid.gs_toxic_water=Toxic Water
-
 
 # Console messages
 message.cemetery_key.activated=This key was activated by
