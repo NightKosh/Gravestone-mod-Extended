@@ -33,10 +33,6 @@ block.haunted_chest.skeleton_chest.name=Baú com Esqueleto
 block.haunted_chest.raven_chest.name=Baú com Corvos
 block.haunted_chest.ghost_chest.name=Baú com Fantasma
 
-
-## Portal
-tile.catacombs_portal.name=Portal das Catacumbas
-
 # Items
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso

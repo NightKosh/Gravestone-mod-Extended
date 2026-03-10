@@ -33,9 +33,6 @@ block.haunted_chest.skeleton_chest.name=Chest with Skeleton
 block.haunted_chest.raven_chest.name=Chest with Ravens
 block.haunted_chest.ghost_chest.name=Chest with Ghost
 
-## Portal
-tile.catacombs_portal.name=Catacombs Portal
-
 # Items
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Bone Fishing Pole

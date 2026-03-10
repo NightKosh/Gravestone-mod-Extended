@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -618,6 +617,18 @@ public class GSEBlocks {
                             .mapColor(MapColor.STONE)
                             .setId(BLIGHTWATER_CAULDRON_RK)));
 
+    // portal
+    public static final ResourceKey PORTAL_CATACOMBS_RK = ResourceKey.create(
+            Registries.BLOCK,
+            fromNamespaceAndPath(ModInfo.ID, "portal_catacombs"));
+    public static final DeferredHolder<Block, Block> PORTAL_CATACOMBS = registerBlock("portal_catacombs",
+            PortalCatacombsBlock::new,
+            () -> new BlockItem(
+                    GSEBlocks.PORTAL_CATACOMBS.get(),
+                    new Item.Properties()
+                            .stacksTo(64)
+                            .setId(GSEBlocks.PORTAL_CATACOMBS_RK)));
+
     // other
     public static final ResourceKey FROZEN_LAVA_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -640,7 +651,7 @@ public class GSEBlocks {
             String name, Supplier<T> block) {
         return BLOCKS_REGISTER.register(name, block);
     }
-//
+
 //    public static final BlockMemorial MEMORIAL = new BlockMemorial();
 //    public static final ItemBlock MEMORIAL_IB = new IBMemorial(MEMORIAL);
 //
@@ -655,29 +666,8 @@ public class GSEBlocks {
 //
 //    public static final BlockInvisibleWall INVISIBLE_WALL = new BlockInvisibleWall();
 //
-//    public static final Block CATACOMBS_PORTAL = new BlockCatacombsPortal();
-//    public static final ItemBlock CATACOMBS_PORTAL_IB = new IBCatacombsPortal(CATACOMBS_PORTAL);
-//
 //    public static final Block CURSED_FLAME = new BlockCursedFlame();
 //    public static final ItemBlock CURSED_FLAME_IB = new IBCursedFlame(CURSED_FLAME);
-//
-//    @Mod.EventBusSubscriber(modid = ModInfo.ID)
-//    public static class RegistrationHandler {
-//
-//        @SubscribeEvent
-//        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-//            final IForgeRegistry<Block> registry = event.getRegistry();
-//            registry.registerAll(MEMORIAL, EXECUTION, TRAP,
-//                    HAUNTED_CHEST, INVISIBLE_WALL, CATACOMBS_PORTAL, CURSED_FLAME);
-//        }
-//
-//        @SubscribeEvent
-//        public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
-//            final IForgeRegistry<Item> registry = event.getRegistry();
-//            registry.registerAll(MEMORIAL_IB, EXECUTION_IB, TRAP_IB,
-//                    HAUNTED_CHEST_IB, CATACOMBS_PORTAL_IB, CURSED_FLAME_IB);
-//        }
-//    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS_REGISTER.register(eventBus);

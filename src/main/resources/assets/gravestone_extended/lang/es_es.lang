@@ -33,10 +33,6 @@ block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
 block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
-
-## Portal
-tile.catacombs_portal.name=Portal de catacumbas
-
 # Items
 ## Fishing Pole
 item.gravestone.bone_fishing_pole.name=Caña de pescar de hueso

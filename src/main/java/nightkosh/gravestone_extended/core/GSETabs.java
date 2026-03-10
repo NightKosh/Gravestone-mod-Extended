@@ -82,6 +82,8 @@ public class GSETabs {
 
                         output.accept(GSEBlocks.FROZEN_LAVA.get());
 
+                        output.accept(GSEBlocks.PORTAL_CATACOMBS.get());
+
                         // pile of bones
                         output.accept(GSEBlocks.PILE_OF_BONES.get());
                         output.accept(GSEBlocks.PILE_OF_BONES_SKULL.get());

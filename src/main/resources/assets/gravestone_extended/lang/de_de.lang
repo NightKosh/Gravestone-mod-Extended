@@ -33,10 +33,6 @@ block.haunted_chest.skeleton_chest.name=Skelettkiste
 block.haunted_chest.raven_chest.name=Rabenkiste
 block.haunted_chest.ghost_chest.name=Geisterkiste
 
-
-## Portal
-tile.catacombs_portal.name=Portal in die Katakomben
-
 ## Corpses
 item.corpse.steve=Steveleiche
 item.corpse.player=Spielerleiche
