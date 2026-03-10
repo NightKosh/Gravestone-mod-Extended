@@ -1,41 +1,17 @@
 {
-    "blocks.fluid.bubbling" : {
+    "blightwater.bubbling" : {
         "category": "blocks",
         "subtitle": "blocks.fluid.bubbling",
         "sounds" : [{
-            "name" : "gravestone-extended:blocks/fluid/bubbling",
+            "name" : "gravestone_extended:block/fluid/bubbling",
             "stream" : true
         }]
     },
-    "blocks.fluid.drop_of_acid" : {
+    "blightwater.drop_of_acid" : {
         "category": "blocks",
         "subtitle": "blocks.fluid.drop_of_acid",
         "sounds" : [{
-            "name" : "gravestone-extended:blocks/fluid/drop_of_acid",
-            "stream" : true
-        }]
-    },
-    "entity.raven.ambient" : {
-        "category": "entity",
-        "subtitle": "entity.raven.ambient",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/raven/ambient_1",
-            "stream" : true
-        },
-        {
-            "name" : "gravestone-extended:entity/raven/ambient_2",
-            "stream" : true
-        },
-        {
-            "name" : "gravestone-extended:entity/raven/ambient_3",
-            "stream" : true
-        }]
-    },
-    "entity.raven.hurt" : {
-        "category": "entity",
-        "subtitle": "entity.raven.hurt",
-        "sounds" : [{
-            "name" : "gravestone-extended:entity/raven/hurt",
+            "name" : "gravestone_extended:block/fluid/drop_of_acid",
             "stream" : true
         }]
     }
