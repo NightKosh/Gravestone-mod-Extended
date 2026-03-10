@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import nightkosh.gravestone_extended.core.GSEParticles;
 
 import javax.annotation.Nonnull;
 
@@ -90,7 +91,7 @@ public class SkullCandle extends Block {
         double zPos = pos.getZ() + 0.5 + dz;
 
         level.addParticle(ParticleTypes.SMOKE, xPos, yPos, zPos, 0, 0, 0);
-        level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xPos, yPos, zPos, 0, 0, 0);
+        level.addParticle(GSEParticles.GREEN_FLAME.get(), xPos, yPos, zPos, 0, 0, 0);
     }
 
     @Nonnull

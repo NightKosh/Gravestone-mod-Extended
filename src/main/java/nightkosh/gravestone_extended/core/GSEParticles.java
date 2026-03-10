@@ -35,11 +35,13 @@ public class GSEParticles {
             "blightwater_wake",
             () -> new SimpleParticleType(false));
 
+    public static final Supplier<SimpleParticleType> GREEN_FLAME = PARTICLES.register(
+            "green_flame",
+            () -> new SimpleParticleType(false));
+
     public static final Supplier<SimpleParticleType> CATACOMBS_PORTAL = PARTICLES.register(
             "catacombs_portal",
             () -> new SimpleParticleType(false));
-
-//    public static EnumParticleTypes GREEN_FLAME;
 
     public static void register(IEventBus eventBus) {
         PARTICLES.register(eventBus);

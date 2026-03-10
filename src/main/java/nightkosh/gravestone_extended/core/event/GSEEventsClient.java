@@ -59,6 +59,7 @@ public class GSEEventsClient {
 //        event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_WAKE.get(), BlightwaterWakeParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
+        event.registerSpriteSet(GSEParticles.GREEN_FLAME.get(), GreenFlameParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.CATACOMBS_PORTAL.get(), CatacombsPortalParticle.Provider::new);
     }
 

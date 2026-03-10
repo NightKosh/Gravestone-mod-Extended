@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import nightkosh.gravestone_extended.block_entity.spawner.ASpawnerBlockEntity;
+import nightkosh.gravestone_extended.core.GSEParticles;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -80,7 +81,7 @@ public abstract class ASpawner extends SpawnerBlock {
             dx = -Math.sin(rotation) * d;
             dz = Math.cos(rotation) * d;
             level.addParticle(ParticleTypes.SMOKE, xPos + dx, yPos, zPos + dz, 0, 0, 0);
-            level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, xPos + dx, yPos, zPos + dz, 0, 0, 0);
+            level.addParticle(GSEParticles.GREEN_FLAME.get(), xPos + dx, yPos, zPos + dz, 0, 0, 0);
             rotation += dRotation;
         }
 
