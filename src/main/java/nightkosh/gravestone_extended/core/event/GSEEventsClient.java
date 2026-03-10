@@ -61,6 +61,51 @@ public class GSEEventsClient {
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.CATACOMBS_PORTAL.get(), CatacombsPortalParticle.Provider::new);
     }
+
+    @SubscribeEvent
+    public static void onRegisterClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerFluidType(new IClientFluidTypeExtensions() {
+            //TODO
+            private static final Identifier UNDERWATER_LOCATION = fromNamespaceAndPath(ModInfo.ID, "textures/block/fluid/blightwater/underwater.png");
+//            private static final Identifier WATER_STILL = fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/still");
+//            private static final Identifier WATER_FLOW = fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/flow");
+//            private static final Identifier WATER_OVERLAY = Identifier.withDefaultNamespace("block/fluid/blightwater/overlay");
+
+//            private static final Identifier UNDERWATER_LOCATION = Identifier.withDefaultNamespace("textures/misc/underwater.png");
+            private static final Identifier WATER_STILL = Identifier.withDefaultNamespace("block/water_still");
+            private static final Identifier WATER_FLOW = Identifier.withDefaultNamespace("block/water_flow");
+            private static final Identifier WATER_OVERLAY = Identifier.withDefaultNamespace("block/water_overlay");
+
+            @Nonnull
+            public Identifier getStillTexture() {
+                return WATER_STILL;
+            }
+
+            @Nonnull
+            public Identifier getFlowingTexture() {
+                return WATER_FLOW;
+            }
+
+            public Identifier getOverlayTexture() {
+                return WATER_OVERLAY;
+            }
+
+            public Identifier getRenderOverlayTexture(@Nonnull Minecraft mc) {
+                return UNDERWATER_LOCATION;
+            }
+
+            public int getTintColor() {
+                return 0xB842F230;
+            }
+
+            public int getTintColor(@Nonnull FluidState state, @Nonnull BlockAndTintGetter getter, @Nonnull BlockPos pos) {
+                return 0xB842F230;
+            }
+
+        }, GSEFluidTypes.BLIGHTWATER.value());
+
+    }
+
     @SubscribeEvent
     public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         if (GSEConfigs.DEBUG_MODE.get()) {
