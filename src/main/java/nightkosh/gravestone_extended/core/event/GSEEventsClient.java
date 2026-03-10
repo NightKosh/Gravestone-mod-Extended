@@ -4,27 +4,34 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockAndTintGetter;
+import net.minecraft.world.level.material.FluidState;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
-import nightkosh.gravestone_extended.core.GSEConfigs;
-import nightkosh.gravestone_extended.core.GSEItems;
-import nightkosh.gravestone_extended.core.GSETextures;
-import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.FogHandler;
 import nightkosh.gravestone_extended.models.armor.phantom_diver_costume.DivingHelmetModel;
+import nightkosh.gravestone_extended.particle.BlightwaterBubbleParticle;
+import nightkosh.gravestone_extended.particle.BlightwaterDripParticle;
+import nightkosh.gravestone_extended.particle.BlightwaterSplashParticle;
+import nightkosh.gravestone_extended.particle.BlightwaterWakeParticle;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 
 /**
@@ -47,6 +54,13 @@ public class GSEEventsClient {
         }
     }
 
+    @SubscribeEvent
+    public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(GSEParticles.BLIGHTWATER_BUBBLE.get(), BlightwaterBubbleParticle.Provider::new);
+//        event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
+        event.registerSpriteSet(GSEParticles.BLIGHTWATER_WAKE.get(), BlightwaterWakeParticle.Provider::new);
+        event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
+    }
 
     @SubscribeEvent
     public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {

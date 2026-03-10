@@ -21,17 +21,13 @@ public class ModGravestoneExtended {
 
     public static final Logger LOGGER = LogManager.getLogger(ModInfo.ID);
 
-//    static {
-//        FluidRegistry.enableUniversalBucket();
-//    }
-
     public ModGravestoneExtended(IEventBus eventBus, ModContainer container) {
         INSTANCE = this;
 
         container.registerConfig(ModConfig.Type.COMMON, GSEConfigs.SPEC, ModInfo.ID + ".toml");
 
 //        GSEEntities.register(eventBus);
-//        GSESounds.register(eventBus);
+        GSESounds.register(eventBus);
         GSEBlocks.register(eventBus);
         GSEItems.register(eventBus);
         GSEBlockEntities.register(eventBus);
@@ -40,6 +36,7 @@ public class ModGravestoneExtended {
         GSEPotions.register(eventBus);
         GSEMenus.register(eventBus);
         GSEVillagers.register(eventBus);
+        GSEParticles.register(eventBus);
     }
 
 //    @Mod.EventHandler
