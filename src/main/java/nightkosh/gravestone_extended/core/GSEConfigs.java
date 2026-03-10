@@ -36,6 +36,11 @@ public class GSEConfigs {
     // village
     public static ModConfigSpec.ConfigValue<Boolean> GENERATE_UNDERTAKER_HOUSE;
 
+    // fluid
+    public static ModConfigSpec.ConfigValue<Boolean> BLIGHTWATER_CONVERT_BLOCKS;
+    public static ModConfigSpec.ConfigValue<Boolean> BLIGHTWATER_SPREAD;
+    public static ModConfigSpec.ConfigValue<Boolean> BLIGHTWATER_AUTO_REMOVE;
+
     // compatibility
     public static ModConfigSpec.ConfigValue<Boolean> SOPHISTICATED_WOLVES_COMPATIBILITY;
 
@@ -68,13 +73,19 @@ public class GSEConfigs {
                 .define("BLIZZARD_DEALS_DAMAGE_TO_PLAYERS", true);
 
         // graves
-        GRAVES_FOG_ENABLED =  BUILDER.define("GRAVES_FOG_ENABLED", true);
+        GRAVES_FOG_ENABLED = BUILDER.define("GRAVES_FOG_ENABLED", true);
         SPAWN_MOBS_BY_GRAVES = BUILDER.define("GRAVES_SPAWN_MOBS", true);
         GRAVE_MAX_SPAWN_DELAY = BUILDER.defineInRange("GRAVE_MAX_SPAWN_DELAY", GraveStoneSpawn.MAX_DELAY, 600, 10000);
         SPAWN_MOB_AT_GRAVE_DESTRUCTION = BUILDER.define("SPAWN_MOB_AT_GRAVE_DESTRUCTION", true);
 
         // village
         GENERATE_UNDERTAKER_HOUSE = BUILDER.define("GENERATE_UNDERTAKER_HOUSE", true);
+
+        // fluid
+        BLIGHTWATER_CONVERT_BLOCKS = BUILDER.define("BLIGHTWATER_CONVERT_BLOCKS", true);
+        BLIGHTWATER_SPREAD = BUILDER.define("BLIGHTWATER_SPREAD", true);
+        BLIGHTWATER_AUTO_REMOVE = BUILDER.comment("This option can be used to replace blightwater by water.")
+                .define("BLIGHTWATER_AUTO_REMOVE", false);
 
         // compatibility
         SOPHISTICATED_WOLVES_COMPATIBILITY = BUILDER.comment("Enable sophisticated wolves mod compatibility")
@@ -87,43 +98,7 @@ public class GSEConfigs {
         SPEC = BUILDER.build();
     }
 
-    // CATEGORIES
-    public static final String CATEGORY_STRUCTURES_CATACOMBS = "structures_catacombs";
-    public static final String CATEGORY_STRUCTURES_VILLAGE = "structures_village";
-    public static final String CATEGORY_STRUCTURES_OTHER = "structures_other";
-    public static final String CATEGORY_POTIONS = "potions";
-    public static final String CATEGORY_RECIPES = "recipes";
-    public static final String CATEGORY_MOBS = "mobs";
-    public static final String CATEGORY_PARTICLES = "particles";
-    public static final String CATEGORY_DEBUG = "debug"; //TODO move to graves module
-//
-//    private ExtendedConfig(String path, File configFile) {
-//        this.config = new Configuration(configFile);
-//        getConfigs();
-//    }
-//
-//    public static ExtendedConfig getInstance(String path, String configFile) {
-//        if (instance == null) {
-//            return new ExtendedConfig(path, new File(path + configFile));
-//        } else {
-//            return instance;
-//        }
-//    }
-//
-//    public final void getConfigs() {
-//        config.load();
-//        structures();
-//        gravesConfig();
-//        potionsConfigs();
-//        otherConfigs();
-//        recipesConfigs();
-//        entityConfig();
-//        compatibilityConfigs();
-//        particlesConfigs();
-//        debugConfigs();
-//        config.save();
-//    }
-//
+    //TODO
     // catacombs
     public static List<Integer> structuresDimensionIds;
     public static boolean generateCatacombs;
@@ -193,9 +168,7 @@ public class GSEConfigs {
     public static boolean showNightStoneMessage;
     // haunted chest
     public static boolean replaceHauntedChest;
-    public static boolean spreadToxicWater;
-    public static boolean removeToxicWater;
-//
+    //
 //    private static void otherConfigs() {
 //        // trap blocks
 //        enableNightStone = config.get(Configuration.CATEGORY_GENERAL, "EnableNightStone", true).getBoolean();
@@ -204,33 +177,15 @@ public class GSEConfigs {
 //
 //        // haunted chest
 //        replaceHauntedChest = config.get(Configuration.CATEGORY_GENERAL, "ReplaceHauntedChest", false).getBoolean();
-//
-//
-//        spreadToxicWater = config.get(Configuration.CATEGORY_GENERAL, "SpreadToxicWater", true).getBoolean();
-//        removeToxicWater = config.get(Configuration.CATEGORY_GENERAL, "RemoveToxicWater", false).getBoolean();
 //    }
 //
     // recipes
     public static boolean craftableNightStone;
     public static boolean craftableThunderStone;
-//
+    //
 //    private static void recipesConfigs() {
 //        craftableNightStone = config.get(CATEGORY_RECIPES, "CraftableNightStone", true).getBoolean();
 //        craftableThunderStone = config.get(CATEGORY_RECIPES, "CraftableThunderStone", true).getBoolean();
-//    }
-//
-//
-//    public static boolean toxicSludgeAndWaterChangeBlocks;
-//    public static List<Integer> mobsDimensionWhiteList;
-//
-//    private static void entityConfig() {
-//        //mob spawn
-//        mobsDimensionWhiteList = ConfigsHelper.getDimensionList(config, CATEGORY_MOBS, "MobsDimensionWhiteList", 0,
-//                "List of dimension id in which mobs spawn is allowed. \"dimension_id_1;dimension_id_2;.....\".");
-//
-//
-//        // toxic sludge and water
-//        toxicSludgeAndWaterChangeBlocks = config.get(CATEGORY_MOBS, "ToxicSludgeAndWaterChangeBlocks", true).getBoolean();
 //    }
 //
     // COMPATIBILITY
@@ -241,19 +196,4 @@ public class GSEConfigs {
 //    }
 //
 
-    public static int particleGreenFlameId;
-    public static int particleCatacombsPortalId;
-    public static int particleToxicWaterDripId;
-    public static int particleToxicWaterSplashId;
-    public static int particleToxicWaterBubbleId;
-    public static int particleToxicWaterWakeId;
-//
-//    private static void particlesConfigs() {
-//        particleGreenFlameId = config.get(CATEGORY_PARTICLES, "ParticleGreenFlameId", GSParticles.GREEN_FLAME_DEFAULT_ID).getInt();
-//        particleCatacombsPortalId = config.get(CATEGORY_PARTICLES, "ParticleCatacombsPortalId", GSParticles.CATACOMBS_PORTAL_DEFAULT_ID).getInt();
-//        particleToxicWaterDripId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterDripId", GSParticles.TOXIC_WATER_DRIP_DEFAULT_ID).getInt();
-//        particleToxicWaterSplashId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterSplashId", GSParticles.TOXIC_WATER_SPLASH_DEFAULT_ID).getInt();
-//        particleToxicWaterBubbleId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterBubbleId", GSParticles.TOXIC_WATER_BUBBLE_DEFAULT_ID).getInt();
-//        particleToxicWaterWakeId = config.get(CATEGORY_PARTICLES, "ParticleToxicWaterWakeId", GSParticles.TOXIC_WATER_WAKE_DEFAULT_ID).getInt();
-//    }
 }
