@@ -1,8 +1,10 @@
 package nightkosh.gravestone_extended.core.event;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
@@ -23,10 +25,7 @@ import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsE
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.FogHandler;
 import nightkosh.gravestone_extended.models.armor.phantom_diver_costume.DivingHelmetModel;
-import nightkosh.gravestone_extended.particle.BlightwaterBubbleParticle;
-import nightkosh.gravestone_extended.particle.BlightwaterDripParticle;
-import nightkosh.gravestone_extended.particle.BlightwaterSplashParticle;
-import nightkosh.gravestone_extended.particle.BlightwaterWakeParticle;
+import nightkosh.gravestone_extended.particle.*;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -60,8 +59,8 @@ public class GSEEventsClient {
 //        event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_WAKE.get(), BlightwaterWakeParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
+        event.registerSpriteSet(GSEParticles.CATACOMBS_PORTAL.get(), CatacombsPortalParticle.Provider::new);
     }
-
     @SubscribeEvent
     public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         if (GSEConfigs.DEBUG_MODE.get()) {
