@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/template_cauldron_level1",
+  "render_type": "translucent",
   "textures": {
     "content": "gravestone_extended:block/fluid/blightwater/still",
     "bottom": "minecraft:block/cauldron_bottom",
