@@ -8,10 +8,6 @@ package nightkosh.gravestone_extended.helper;
  */
 public class MobsHelper {
 //TODO
-//    public static boolean isDimensionAllowedForSpawn(World world) {
-//        return GSDimensions.CATACOMBS.getId() == world.provider.getDimension() || ExtendedConfig.mobsDimensionWhiteList.contains(world.provider.getDimension());
-//    }
-//
 //    public static boolean isChunkPopulated(EntityLiving mob) {
 //        return mob.world.getEntitiesWithinAABB(mob.getClass(), mob.getEntityBoundingBox().grow(16, 128, 16)).size() <= mob.getMaxSpawnedInChunk();
 //    }
