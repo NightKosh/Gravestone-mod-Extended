@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility;
@@ -64,8 +65,7 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
             if (state.isSource()) {
                 if (GSEConfigs.BLIGHTWATER_AUTO_REMOVE.get()) {
                     level.setBlockAndUpdate(pos, Blocks.WATER.defaultBlockState());
-                } else if (GSEConfigs.BLIGHTWATER_SPREAD.get() &&
-                        random.nextInt(10) == 0) {
+                } else if (GSEConfigs.BLIGHTWATER_SPREAD.get() && pos.getY() <= 20) {
                     var replacePos = new ArrayList<BlockPos>();
                     if (isWaterBlock(level, pos.above())) {
                         replacePos.add(pos.above());
@@ -97,7 +97,8 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
     }
 
     private static boolean isWaterBlock(Level level, BlockPos pos) {
-        return level.getFluidState(pos).isSource();
+        var fluid = level.getFluidState(pos);
+        return fluid.is(Tags.Fluids.WATER) && fluid.isSource();
     }
 
     @Override
