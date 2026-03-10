@@ -12,18 +12,12 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  */
 public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
 
-    protected static final String BLOCK_LOCATION = ":textures/blocks/";
-    protected static final String FLUID_LOCATION = ":blocks/fluids/";
-    protected static final String PARTICLES_LOCATION = ":textures/particles/";
     protected static final String ENTITY_LOCATION = ":textures/entity/";
     protected static final String PROJECTILE_LOCATION = "projectile/";
     protected static final String MEMORIALS_LOCATION = ":textures/blocks/memorials/";
     protected static final String EXECUTIONS_LOCATION = ":textures/blocks/execution/";
     protected static final String ARMOR_LOCATION = ":textures/blocks/memorials/armor/";
     protected static final String PEDESTALS_LOCATION = ":textures/blocks/memorials/pedestal/";
-    // blocks
-    public static final Identifier PENTAGRAM = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "pentagram.png");
-    public static final Identifier SPIDER_SPAWNER = fromNamespaceAndPath(ModInfo.ID, BLOCK_LOCATION + "spiderspawner.png");
 
     // entities
     public static final Identifier EMPTY = fromNamespaceAndPath(ModInfo.ID, "textures/entity/empty.png");
@@ -178,9 +172,5 @@ public class Resources {//TODO extends nightkosh.gravestone.core.Resources{
     // bone hook
     public static final Identifier BONE_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "bone_hook.png");
     public static final Identifier WITHERED_HOOK = fromNamespaceAndPath(ModInfo.ID, PROJECTILE_LOCATION + "wither_hook.png");
-
-    // TOXIC WATER
-    public static final Identifier TOXIC_WATER_STILL =  fromNamespaceAndPath(ModInfo.ID, FLUID_LOCATION + "toxic_water_still");
-    public static final Identifier TOXIC_WATER_FLOW = fromNamespaceAndPath(ModInfo.ID, FLUID_LOCATION + "toxic_water_flow");
 
 }
