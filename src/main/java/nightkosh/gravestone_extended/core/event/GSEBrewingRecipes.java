@@ -15,7 +15,6 @@ import nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibi
 
 import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 import static nightkosh.gravestone_extended.core.compatibility.AdvancedFishingCompatibility.*;
-import static nightkosh.gravestone_extended.core.compatibility.WitheredLandsCompatibility.SLIME_GEL_CHUNK;
 
 /**
  * Gravestone mod - Extended
@@ -121,7 +120,7 @@ public class GSEBrewingRecipes {
             event.getBuilder().addRecipe(
                     DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
                             .getCustomIngredient().toVanilla(),
-                    Ingredient.of(SLIME_GEL_CHUNK),
+                    Ingredient.of(GREEN_JELLYFISH),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.RUST_POTION));
 
             event.getBuilder().addRecipe(

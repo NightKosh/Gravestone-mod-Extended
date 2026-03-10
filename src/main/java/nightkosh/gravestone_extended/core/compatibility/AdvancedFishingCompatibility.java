@@ -21,6 +21,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
 
     public static final Item BLUE_JELLYFISH = getFish("blue_jellyfish");
     public static final Item MAGMA_JELLYFISH = getFish("magma_jellyfish");
+    public static final Item GREEN_JELLYFISH = getFish("green_jellyfish");
     public static final Item PIRANHA = getFish("piranha");
     public static final Item ANGLER_FISH = getFish("angler_fish");
     public static final Item CAVE_TROUT = getFish("cave_trout");
