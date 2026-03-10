@@ -59,14 +59,8 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
         super.randomTick(level, pos, state, random);
 
         if (!level.isClientSide()) {
-            if (GSEConfigs.BLIGHTWATER_CONVERT_BLOCKS.get()) {
-                melt(level, pos.above());
-                melt(level, pos.below());
-                melt(level, pos.east());
-                melt(level, pos.west());
-                melt(level, pos.south());
-                melt(level, pos.north());
-            }
+            meltAllAround(level, pos);
+
             if (state.isSource()) {
                 if (GSEConfigs.BLIGHTWATER_AUTO_REMOVE.get()) {
                     level.setBlockAndUpdate(pos, Blocks.WATER.defaultBlockState());
@@ -166,7 +160,18 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
         return !stack.isEmpty() && stack.isDamageableItem() && stack.getItem() instanceof IBoneArmor;
     }
 
-    public void melt(Level level, BlockPos pos) {
+    public static void meltAllAround(Level level, BlockPos pos) {
+        if (GSEConfigs.BLIGHTWATER_CONVERT_BLOCKS.get()) {
+            melt(level, pos.above());
+            melt(level, pos.below());
+            melt(level, pos.east());
+            melt(level, pos.west());
+            melt(level, pos.south());
+            melt(level, pos.north());
+        }
+    }
+
+    public static void melt(Level level, BlockPos pos) {
         if (tryToReplaceBlock(level, pos, level.getBlockState(pos))) {
             meltEffect(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         }

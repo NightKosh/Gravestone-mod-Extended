@@ -16,6 +16,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import nightkosh.gravestone_extended.block.*;
 import nightkosh.gravestone_extended.block.bone_block.*;
+import nightkosh.gravestone_extended.block.fluid.BlightwaterBlock;
 import nightkosh.gravestone_extended.block.pile_of_bones.*;
 import nightkosh.gravestone_extended.block.spawner.*;
 
@@ -601,19 +602,7 @@ public class GSEBlocks {
                             .setId(GSEBlocks.ALTAR_RK)));
 
     // fluids
-    public static final ResourceKey BLIGHTWATER_RK = ResourceKey.create(
-            Registries.BLOCK,
-            fromNamespaceAndPath(ModInfo.ID, "blightwater"));
-    public static final Supplier<LiquidBlock> BLIGHTWATER = registerBlock(
-            "blightwater",
-            () -> new LiquidBlock(
-                    GSEFluids.BLIGHTWATER.get(),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)
-                            .noLootTable()
-                            .replaceable()
-                            .strength(100)
-                            .noCollision()
-                            .setId(BLIGHTWATER_RK)));
+    public static final Supplier<LiquidBlock> BLIGHTWATER = registerBlock("blightwater", BlightwaterBlock::new);
 
     public static final ResourceKey BLIGHTWATER_CAULDRON_RK = ResourceKey.create(
             Registries.BLOCK,
