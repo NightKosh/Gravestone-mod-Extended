@@ -34,9 +34,6 @@ block.haunted_chest.raven_chest.name=Сундук с воронами
 block.haunted_chest.ghost_chest.name=Сундук с привидениями
 
 # Items
-## Fishing Pole
-item.gravestone.bone_fishing_pole.name=Костяная удочка
-
 ## Shovel
 item.gravestone.bone_shovel.name=Костяная лопата
 item.gravestone.bone_shovel_iron.name=Железная костяная лопата

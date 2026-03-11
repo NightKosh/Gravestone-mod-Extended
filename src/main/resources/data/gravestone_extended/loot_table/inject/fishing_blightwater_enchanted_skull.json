@@ -1,0 +1,21 @@
+{
+  "pools": [
+    {
+      "name": "fishing_blightwater_enchanted_skull",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gravestone_extended:enchanted_skeleton_skull",
+          "functions": [
+            {
+              "levels": 20,
+              "function": "minecraft:enchant_with_levels",
+              "options": "#minecraft:on_random_loot"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

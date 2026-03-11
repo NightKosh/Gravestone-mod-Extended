@@ -1,20 +1,6 @@
 package nightkosh.gravestone_extended.core;
 
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.event.LootTableLoadEvent;
-//import nightkosh.gravestone.api.grave.EnumGraveMaterial;
-//import nightkosh.gravestone.helper.GraveGenerationHelper;
-import nightkosh.gravestone_extended.helper.GraveInventoryHelper;
-import nightkosh.gravestone_extended.loot.LootContextGrave;
-import nightkosh.gravestone_extended.loot.condition.LootConditionCorpseContentType;
-import nightkosh.gravestone_extended.loot.condition.LootConditionGraveContentType;
-import nightkosh.gravestone_extended.loot.condition.LootConditionGraveMaterial;
-import nightkosh.gravestone_extended.loot.condition.LootConditionGraveTypeByEntity;
-import nightkosh.gravestone_extended.loot.function.LootFunctionCorpse;
-
-import java.util.List;
-import java.util.Random;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
 
@@ -25,10 +11,6 @@ import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class GSLootTables {
-
-    //fishing
-    public static final Identifier FISHING_TOXIC_WATER = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water");
-    public static final Identifier FISHING_TOXIC_WATER_TREASURE = fromNamespaceAndPath(ModInfo.ID, "gameplay/fishing_toxic_water/treasure");
 
     //graves
     public static final Identifier GRAVE = fromNamespaceAndPath(ModInfo.ID, "graves/grave");
@@ -166,5 +148,5 @@ public class GSLootTables {
 //                        .withGraveMaterial(graveMaterial)
 //                        .build());
 //    }
-    
+
 }

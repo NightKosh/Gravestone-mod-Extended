@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"0": "gravestone-extended:items/tools/bone_fishing_pole",
-		"particle": "gravestone-extended:items/tools/bone_fishing_pole"
+		"0": "gravestone_extended:item/tools/bone_fishing_pole",
+		"particle": "gravestone_extended:item/tools/bone_fishing_pole"
 	},
 	"elements": [
 		{
@@ -294,7 +294,7 @@
 		},
 		{
 			"name": "thread1",
-			"from": [7.950000000000001, 9.399999999999999, 7.4],
+			"from": [7.95, 9.4, 7.4],
 			"to": [8.05, 16.9, 7.5],
 			"faces": {
 				"north": {
@@ -312,8 +312,8 @@
 			},
 			"rotation": {
 				"origin": [
-					7.950000000000001,
-					9.399999999999999,
+					7.95,
+					9.4,
 					7.4
 				],
 				"axis": "x",
@@ -323,7 +323,7 @@
 		},
 		{
 			"name": "thread2",
-			"from": [7.950000000000001, 16.3, 10.3],
+			"from": [7.95, 16.3, 10.3],
 			"to": [8.05, 23.8, 10.4],
 			"faces": {
 				"north": {
@@ -340,7 +340,7 @@
 				"down": {"uv": [11, 0, 11.1, 7.5], "texture": "#0"}
 			},
 			"rotation": {
-				"origin": [7.950000000000001, 16.3, 10.3],
+				"origin": [7.95, 16.3, 10.3],
 				"axis": "x",
 				"angle": 0
 			},
@@ -348,7 +348,7 @@
 		},
 		{
 			"name": "thread3",
-			"from": [7.950000000000001, 23.7, 10.3],
+			"from": [7.95, 23.7, 10.3],
 			"to": [8.05, 31.2, 10.4],
 			"faces": {
 				"north": {
@@ -365,7 +365,7 @@
 				"down": {"uv": [11, 0, 11.1, 7.5], "texture": "#0"}
 			},
 			"rotation": {
-				"origin": [7.950000000000001, 23.7, 10.3],
+				"origin": [7.95, 23.7, 10.3],
 				"axis": "x",
 				"angle": -22.5
 			},
@@ -387,7 +387,7 @@
 		},
 		{
 			"name": "cube",
-			"from": [7.75, 31, 7.199999999999999],
+			"from": [7.75, 31, 7.2],
 			"to": [8.25, 31.2, 8.7],
 			"faces": {
 				"north": {"uv": [3, 2, 3.5, 3.5], "texture": "#0"},

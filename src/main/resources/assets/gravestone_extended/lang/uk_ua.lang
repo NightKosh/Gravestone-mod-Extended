@@ -29,10 +29,6 @@ block.haunted_chest.ghost_chest.name=Скриня з привидами
 
 
 # Items
-## Fishing Pole
-item.gravestone.bone_fishing_pole.name=Кістяна вудка
-
-
 ## Hoe
 item.gravestone.bone_hoe.name=Кістяна мотика
 item.gravestone.bone_hoe_iron.name=Кістяна залізна мотика

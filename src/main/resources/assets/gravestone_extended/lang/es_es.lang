@@ -34,9 +34,6 @@ block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
 # Items
-## Fishing Pole
-item.gravestone.bone_fishing_pole.name=Caña de pescar de hueso
-
 ## Shovel
 item.gravestone.bone_shovel.name=Pala de hueso
 item.gravestone.bone_shovel_iron.name=Pala de hueso de hierro

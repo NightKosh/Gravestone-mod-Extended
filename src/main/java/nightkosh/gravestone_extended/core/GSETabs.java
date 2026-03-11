@@ -31,6 +31,7 @@ public class GSETabs {
 
                         // tools and armor
                         output.accept(GSEItems.BONE_SHIELD.get());
+                        output.accept(GSEItems.BONE_FISHING_POLE.get());
 
                         output.accept(GSEItems.DIVING_HELMET.get());
                         output.accept(GSEItems.DIVING_CHESTPLATE.get());

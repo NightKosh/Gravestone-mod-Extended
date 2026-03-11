@@ -34,9 +34,6 @@ block.haunted_chest.raven_chest.name=Chest with Ravens
 block.haunted_chest.ghost_chest.name=Chest with Ghost
 
 # Items
-## Fishing Pole
-item.gravestone.bone_fishing_pole.name=Bone Fishing Pole
-
 ## Shovel
 item.gravestone.bone_shovel.name=Bone Shovel
 item.gravestone.bone_shovel_iron.name=Iron Bone Shovel

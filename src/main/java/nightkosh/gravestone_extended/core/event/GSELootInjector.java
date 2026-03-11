@@ -44,17 +44,31 @@ public class GSELootInjector {
                             .build());
         }
 
-        if (event.getName().toString().equals(AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_LOOT_TABLE)) {
+        if (AdvancedFishingCompatibility.loaded()) {
+            if (!injectFishingLoot(event,
+                    AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_LOOT_TABLE,
+                    AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_POOL_NAME,
+                    "inject/fishing_nether_enchanted_skull")) {
+                injectFishingLoot(event,
+                        AdvancedFishingCompatibility.FISHING_DEAD_TREASURE_LOOT_TABLE,
+                        AdvancedFishingCompatibility.FISHING_DEAD_TREASURE_POOL_NAME,
+                        "inject/fishing_blightwater_enchanted_skull");
+            }
+        }
+    }
+
+    private static boolean injectFishingLoot(LootTableLoadEvent event, String lootTable, String poolName, String inject) {
+        if (event.getName().toString().equals(lootTable)) {
             if (GSEConfigs.DEBUG_MODE.get()) {
-                LOGGER.info("LootTableLoadEvent event triggered. Going to inject enchanted skulls as nether fishing treasure loot.");
+                LOGGER.info("LootTableLoadEvent event triggered. Going to inject enchanted skulls as fishing treasure loot.");
             }
 
             var table = event.getTable();
-            var targetPool = table.getPool(AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_POOL_NAME);
+            var targetPool = table.getPool(poolName);
             if (targetPool != null) {
                 var ref = ResourceKey.create(
                         Registries.LOOT_TABLE,
-                        fromNamespaceAndPath(ModInfo.ID, "inject/fishing_nether_enchanted_skull"));
+                        fromNamespaceAndPath(ModInfo.ID, inject));
                 var newEntry = NestedLootTable.lootTableReference(ref)
                         .setWeight(10)
                         .build();
@@ -62,13 +76,14 @@ public class GSELootInjector {
                 var entries = new ArrayList<>(targetPool.entries);
                 entries.add(newEntry);
                 targetPool.entries = entries;
+                return true;
             } else {
                 if (GSEConfigs.DEBUG_MODE.get()) {
-                    LOGGER.info("Can't find loot pool {}", AdvancedFishingCompatibility.NETHER_FISHING_TREASURE_POOL_NAME);
+                    LOGGER.info("Can't find loot pool {}", poolName);
                 }
             }
-
         }
+        return false;
     }
 
 }

@@ -27,6 +27,8 @@ import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.FogHandler;
 import nightkosh.gravestone_extended.models.armor.phantom_diver_costume.DivingHelmetModel;
 import nightkosh.gravestone_extended.particle.*;
+import nightkosh.gravestone_extended.renderer.entity.projectile.BoneFishHookRenderer;
+import nightkosh.gravestone_extended.renderer.entity.projectile.WitheredFishHookRenderer;
 import org.jspecify.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -52,6 +54,12 @@ public class GSEEventsClient {
             event.setNearPlaneDistance(Math.max(0, far * 0.25F));
             event.setFarPlaneDistance(Math.min(far, event.getFarPlaneDistance()));
         }
+    }
+
+    @SubscribeEvent
+    public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(GSEEntities.BONE_FISH_HOOK.get(), BoneFishHookRenderer::new);
+        event.registerEntityRenderer(GSEEntities.WITHERED_FISH_HOOK.get(), WitheredFishHookRenderer::new);
     }
 
     @SubscribeEvent

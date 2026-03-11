@@ -1,39 +1,55 @@
 package nightkosh.gravestone_extended.item.tools;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import nightkosh.advanced_fishing.core.AFEnchantments;
+import nightkosh.advanced_fishing.entity.projectile.AFishHook;
+import nightkosh.advanced_fishing.item.AbstractFishingRod;
+import nightkosh.gravestone_extended.core.ModInfo;
+import nightkosh.gravestone_extended.entity.projectile.BoneFishHook;
+import nightkosh.gravestone_extended.entity.projectile.WitheredFishHook;
+import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
+
+import javax.annotation.Nonnull;
+
+import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
+
 /**
  * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class ItemBoneFishingPole {//TODO extends AbstractFishingPole implements IBoneFishingPole {
-//
-//    public ItemBoneFishingPole() {
-//        this.setMaxDamage(250);
-//        this.setCreativeTab(GSTabs.otherItemsTab);
-//        this.setUnlocalizedName("gravestone.bone_fishing_pole");
-//        this.setRegistryName(ModInfo.ID, "gs_bone_fishing_pole");
-//    }
-//
-//    @Override
-//    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-//        return super.getIsRepairable(toRepair, repair) || repair.getItem() == Item.getItemFromBlock(GSBlock.BONE_BLOCK);
-//    }
-//
-//    @Override
-//    protected EntityBoneFishHook getHook(World world, EntityPlayer player, ItemStack stack) {
-//        boolean hellishAngling = false; //TODO replaced by "Infernal line"
-//        NBTTagList nbtList = stack.getEnchantmentTagList();
-//        for (NBTBase nbt : nbtList) {
-//            if (((NBTTagCompound) nbt).getInteger("id") == Enchantment.getEnchantmentID(GSEnchantment.HELLISH_ANGLING)) {
-//                hellishAngling = true;
-//                break;
-//            }
-//        }
-//        if (hellishAngling) {
-//            return new EntityObsidianFishHook(world, player);
-//        } else {
-//            return new EntityBoneFishHook(world, player);
-//        }
-//    }
+public class ItemBoneFishingPole extends AbstractFishingRod implements IBoneFishingPole {
+
+    private static final ResourceKey RK = ResourceKey.create(
+            Registries.ITEM,
+            fromNamespaceAndPath(ModInfo.ID, "fishing_pole_bone"));
+
+    public ItemBoneFishingPole() {
+        super(new Item.Properties()
+                .fireResistant()
+                .rarity(Rarity.EPIC)
+                .durability(250)
+                //TODO bone
+//                .repairable(Items.BLAZE_ROD)
+                .enchantable(25)
+                .setId(RK));
+    }
+
+    @Nonnull
+    @Override
+    protected AFishHook getHook(Player player, ServerLevel level, ItemStack fishingPole) {
+        if (GSEEnchantmentHelper.enchanted(level, AFEnchantments.INFERNAL_LINE, fishingPole)) {
+            return new WitheredFishHook(player, level, 0, 0, fishingPole);
+        } else {
+            return new BoneFishHook(player, level, 0, 0, fishingPole);
+        }
+    }
+
 }

@@ -34,9 +34,6 @@ block.haunted_chest.raven_chest.name=Baú com Corvos
 block.haunted_chest.ghost_chest.name=Baú com Fantasma
 
 # Items
-## Fishing Pole
-item.gravestone.bone_fishing_pole.name=Vara de Pescar de Osso
-
 ## Shovel
 item.gravestone.bone_shovel.name=Pá de Osso
 item.gravestone.bone_shovel_iron.name=Pá de Osso de Ferro

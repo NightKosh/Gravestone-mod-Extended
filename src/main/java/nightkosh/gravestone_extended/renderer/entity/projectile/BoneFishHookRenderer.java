@@ -1,13 +1,8 @@
 package nightkosh.gravestone_extended.renderer.entity.projectile;
 
-import net.minecraft.client.Minecraft;
-import nightkosh.gravestone_extended.core.Resources;
-import nightkosh.gravestone_extended.entity.projectile.EntityBoneFishHook;
-import nightkosh.gravestone_extended.entity.projectile.EntityObsidianFishHook;
-import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import nightkosh.advanced_fishing.renderer.AFFishingHookRenderer;
 import nightkosh.gravestone_extended.models.projectile.ModelBoneFishHook;
-
-import javax.annotation.Nullable;
 
 /**
  * Gravestone mod - Extended
@@ -15,10 +10,14 @@ import javax.annotation.Nullable;
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public class RendererBoneFishHook {//TODO extends Render<EntityBoneFishHook> {
+public class BoneFishHookRenderer extends AFFishingHookRenderer {
 
     private ModelBoneFishHook hookModel;
-//
+
+    public BoneFishHookRenderer(EntityRendererProvider.Context context) {
+        super(context);
+    }
+//TODO
 //    public RendererBoneFishHook(RenderManager renderManager) {
 //        super(renderManager);
 //        hookModel = new ModelBoneFishHook();
@@ -108,9 +107,9 @@ public class RendererBoneFishHook {//TODO extends Render<EntityBoneFishHook> {
 //    @Override
 //    protected ResourceLocation getEntityTexture(EntityBoneFishHook entity) {
 //        if (entity instanceof EntityObsidianFishHook) {
-//            return Resources.WITHERED_HOOK;
+//            return GSEResources.WITHERED_HOOK;
 //        } else {
-//            return Resources.BONE_HOOK;
+//            return GSEResources.BONE_HOOK;
 //        }
 //    }
 }
