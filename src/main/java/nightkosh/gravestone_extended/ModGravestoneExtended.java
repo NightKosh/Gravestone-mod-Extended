@@ -27,7 +27,7 @@ public class ModGravestoneExtended {
 
         container.registerConfig(ModConfig.Type.COMMON, GSEConfigs.SPEC, ModInfo.ID + ".toml");
 
-//        GSEEntities.register(eventBus);
+        GSEEntities.register(eventBus);
         GSESounds.register(eventBus);
         GSEBlocks.register(eventBus);
         GSEItems.register(eventBus);
@@ -66,8 +66,6 @@ public class ModGravestoneExtended {
 //    public void load(FMLInitializationEvent event) {
 //        // register structures
 //        GSStructures.registration();
-//
-//        GSParticles.registration();
 //    }
 
 }
