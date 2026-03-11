@@ -34,6 +34,7 @@ public class PortalCatacombsBlock extends NetherPortalBlock {
                 .noCollision()
                 .randomTicks()
                 .strength(-1)
+                .noLootTable()
                 .sound(SoundType.GLASS)
                 .lightLevel(state -> 11)
                 .pushReaction(PushReaction.BLOCK)
