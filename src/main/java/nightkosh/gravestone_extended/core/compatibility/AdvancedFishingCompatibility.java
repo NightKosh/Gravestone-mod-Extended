@@ -15,7 +15,6 @@ import nightkosh.advanced_fishing.core.LootTables;
 import nightkosh.gravestone_extended.core.GSEBlocks;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEParticles;
-import nightkosh.gravestone_extended.core.GSLootTables;
 
 import java.util.List;
 
@@ -64,15 +63,6 @@ public class AdvancedFishingCompatibility extends ACompatibility {
     public static boolean loaded() {
         return loaded(ADVANCED_FISHING_ID);
     }
-
-//TODO
-//    public static Item getBoneFishingPole() {
-//        return new ItemBoneFishingPole();
-//    }
-//    public static boolean isBoneHook(Entity entity) {
-//        return entity instanceof EntityBoneFishHook;
-//    }
-
 
     protected static List<ItemStack> getBlightwaterCatch(LootParams.Builder lootBuilder, Level level, BlockPos pos, float luck) {
         var biomeHolder = level.getBiome(pos);
