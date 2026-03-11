@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "b  ",
+    "tb ",
+    "s b"
+  ],
+  "key": {
+    "b": "gravestone_extended:bone_block",
+    "s": "minecraft:skeleton_skull",
+    "t": "minecraft:string"
+  },
+  "result": {
+    "id": "gravestone_extended:fishing_pole_bone"
+  }
+}
