@@ -11,10 +11,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.FishingHook;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -106,47 +104,33 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
                                 @Nonnull Entity entity, @Nonnull InsideBlockEffectApplier effectApplier) {
         super.entityInside(level, pos, entity, effectApplier);
 
-        if (!level.isClientSide()) {
-            boolean dealDamage = false;
-            if (entity instanceof LivingEntity living) {
-                if (living.getType().is(EntityTypeTags.UNDEAD)) {
-                    living.addEffect(new MobEffectInstance(MobEffects.POISON, TimeHelper.SECONDS_5, 0));
-                    return;
-                } else if (entity instanceof Player || entity instanceof TamableAnimal) {
-                    for (var mobEffectInstance : living.getActiveEffects()) {
-                        if (mobEffectInstance.is(GSEMobEffects.BONE_SKIN)) {
-                            return;
-                        }
+        if (!level.isClientSide() && entity instanceof LivingEntity living) {
+            if (living.getType().is(EntityTypeTags.UNDEAD)) {
+                living.addEffect(new MobEffectInstance(MobEffects.POISON, TimeHelper.SECONDS_5, 0));
+                return;
+            } else if (entity instanceof Player || entity instanceof TamableAnimal) {
+                for (var mobEffectInstance : living.getActiveEffects()) {
+                    if (mobEffectInstance.is(GSEMobEffects.BONE_SKIN)) {
+                        return;
                     }
-                    if (entity instanceof Player player) {
-                        if (isBoneArmor(player, EquipmentSlot.HEAD) &&
-                                isBoneArmor(player, EquipmentSlot.CHEST) &&
-                                isBoneArmor(player, EquipmentSlot.LEGS) &&
-                                isBoneArmor(player, EquipmentSlot.FEET)) {
-                            return;
-                        }
-                    }
-                } else if (living instanceof Slime) {
-                    living.addEffect(new MobEffectInstance(MobEffects.STRENGTH, TimeHelper.SECONDS_5, 0));
-                    return;
                 }
-                dealDamage = true;
-            } else if (!(entity instanceof ItemEntity)) { //&&
-                //TODO
-//                !(AdvancedFishingCompatibility.loaded() && AdvancedFishingCompatibility.isBoneHook(entity))) {
-                dealDamage = true;
-                if (entity instanceof FishingHook) {
-                    meltEffect(level, entity.getX(), entity.getY(), entity.getZ());
-                    if (entity.tickCount > 20) {
-                        entity.discard();
+                if (entity instanceof Player player) {
+                    if (isBoneArmor(player, EquipmentSlot.HEAD) &&
+                            isBoneArmor(player, EquipmentSlot.CHEST) &&
+                            isBoneArmor(player, EquipmentSlot.LEGS) &&
+                            isBoneArmor(player, EquipmentSlot.FEET)) {
+                        return;
                     }
-                    return;
                 }
+            } else if (living instanceof Slime) {
+                living.addEffect(new MobEffectInstance(MobEffects.STRENGTH, TimeHelper.SECONDS_5, 0));
+                return;
             }
-            if (dealDamage && level.random.nextInt(20) == 0 && level instanceof ServerLevel serverlevel) {
+
+            if (level instanceof ServerLevel serverlevel && level.random.nextInt(20) == 0) {
                 entity.hurtServer(serverlevel, level.damageSources().magic(), 1);
                 meltEffect(level, entity.getX(), entity.getY(), entity.getZ());
-                if (entity instanceof LivingEntity living && WitheredLandsCompatibility.loaded()) {
+                if (WitheredLandsCompatibility.loaded()) {
                     var rustEffect = WitheredLandsCompatibility.getRustEffect();
                     if (rustEffect != null) {
                         living.addEffect(new MobEffectInstance(rustEffect, TimeHelper.SECONDS_5, 0));
