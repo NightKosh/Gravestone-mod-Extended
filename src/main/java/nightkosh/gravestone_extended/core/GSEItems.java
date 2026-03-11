@@ -21,6 +21,7 @@ import nightkosh.gravestone_extended.item.compass.EnderSkull;
 import nightkosh.gravestone_extended.item.compass.ImpSkull;
 import nightkosh.gravestone_extended.item.compass.SlimeChunk;
 import nightkosh.gravestone_extended.item.tools.ItemBoneFishingPole;
+import nightkosh.gravestone_extended.item.tools.ItemWitheredFishingPole;
 import nightkosh.gravestone_extended.item.weapon.BoneShield;
 
 import static net.minecraft.resources.Identifier.fromNamespaceAndPath;
@@ -39,6 +40,7 @@ public class GSEItems {
     public static final DeferredHolder<Item, Item> BONE_SHIELD = ITEMS_REGISTER.register("bone_shield", BoneShield::new);
 
     public static final DeferredHolder<Item, Item> BONE_FISHING_POLE = ITEMS_REGISTER.register("fishing_pole_bone", ItemBoneFishingPole::new);
+    public static final DeferredHolder<Item, Item> WITHERED_FISHING_POLE = ITEMS_REGISTER.register("fishing_pole_withered", ItemWitheredFishingPole::new);
 
     public static final DeferredHolder<Item, Item> DIVING_HELMET = ITEMS_REGISTER.register("diving_helmet", DivingHelmet::new);
     public static final DeferredHolder<Item, Item> DIVING_CHESTPLATE = ITEMS_REGISTER.register("diving_chestplate", DivingChestplate::new);

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"textures": {
-		"0": "gravestone_extended:item/tools/bone_fishing_pole",
-		"particle": "gravestone_extended:item/tools/bone_fishing_pole"
+		"0": "gravestone_extended:item/tools/fishing_pole_bone",
+		"particle": "gravestone_extended:item/tools/fishing_pole_bone"
 	},
 	"elements": [
 		{

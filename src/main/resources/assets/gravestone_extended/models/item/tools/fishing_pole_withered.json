@@ -1,0 +1,7 @@
+{
+  "parent": "gravestone_extended:item/tools/fishing_pole_bone",
+  "textures": {
+    "0": "gravestone_extended:item/tools/fishing_pole_withered",
+    "particle": "gravestone_extended:item/tools/fishing_pole_withered"
+  }
+}
