@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.models.block.execution;
 
-import net.minecraft.client.Minecraft;
-import nightkosh.gravestone_extended.core.Resources;
-
 /**
  * Gravestone mod - Extended
  *

@@ -1,7 +1,5 @@
 package nightkosh.gravestone_extended.block.enums;
 
-import nightkosh.gravestone_extended.core.Resources;
-
 /**
  * Gravestone mod - Extended
  *

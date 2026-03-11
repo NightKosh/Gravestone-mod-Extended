@@ -1,16 +1,5 @@
 package nightkosh.gravestone_extended.helper;
 
-import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.ProfileLookupCallback;
-import com.mojang.authlib.minecraft.MinecraftProfileTexture;
-import net.minecraft.client.Minecraft;
-import net.minecraft.server.MinecraftServer;
-import nightkosh.gravestone_extended.core.Resources;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Gravestone mod - Extended
  *
