@@ -7,9 +7,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.item.component.BlocksAttacks;
-import nightkosh.gravestone_extended.core.GSEBlocks;
+import nightkosh.gravestone_extended.core.GSETags;
 import nightkosh.gravestone_extended.core.ModInfo;
 
 import java.util.List;
@@ -33,9 +34,8 @@ public class BoneShield extends ShieldItem implements IBoneShiled {
                 .stacksTo(1)
                 .durability(750)
                 .enchantable(1)
-//                .repairable(GSEBlocks.BONE_BLOCK.get().asItem())//TODO
+                .repairable(GSETags.MATERIAL_BONE)
                 .equippableUnswappable(EquipmentSlot.OFFHAND)
-                .setId(BONE_SHIELD_RK)
                 .component(
                         DataComponents.BLOCKS_ATTACKS,
                         new BlocksAttacks(
@@ -48,7 +48,9 @@ public class BoneShield extends ShieldItem implements IBoneShiled {
                                 Optional.of(SoundEvents.SHIELD_BREAK)
                         )
                 )
-                .component(DataComponents.BREAK_SOUND, SoundEvents.SHIELD_BREAK));
+                .component(DataComponents.BREAK_SOUND, SoundEvents.SHIELD_BREAK)
+                .rarity(Rarity.UNCOMMON)
+                .setId(BONE_SHIELD_RK));
     }
 
 }

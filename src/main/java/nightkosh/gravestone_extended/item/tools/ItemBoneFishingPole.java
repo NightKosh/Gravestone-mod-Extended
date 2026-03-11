@@ -10,6 +10,7 @@ import net.minecraft.world.item.Rarity;
 import nightkosh.advanced_fishing.core.AFEnchantments;
 import nightkosh.advanced_fishing.entity.projectile.AFishHook;
 import nightkosh.advanced_fishing.item.AbstractFishingRod;
+import nightkosh.gravestone_extended.core.GSETags;
 import nightkosh.gravestone_extended.core.ModInfo;
 import nightkosh.gravestone_extended.entity.projectile.BoneFishHook;
 import nightkosh.gravestone_extended.entity.projectile.WitheredFishHook;
@@ -34,10 +35,9 @@ public class ItemBoneFishingPole extends AbstractFishingRod implements IBoneFish
     public ItemBoneFishingPole() {
         super(new Item.Properties()
                 .fireResistant()
-                .rarity(Rarity.EPIC)
+                .rarity(Rarity.UNCOMMON)
                 .durability(250)
-                //TODO bone
-//                .repairable(Items.BLAZE_ROD)
+                .repairable(GSETags.MATERIAL_BONE)
                 .enchantable(25)
                 .setId(RK));
     }

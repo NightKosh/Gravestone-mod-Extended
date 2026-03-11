@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import nightkosh.advanced_fishing.entity.projectile.LavaFishHook;
 import nightkosh.gravestone_extended.core.GSEEntities;
-import nightkosh.gravestone_extended.core.GSEFluids;
+import nightkosh.gravestone_extended.core.GSETags;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class WitheredFishHook extends LavaFishHook {
 
-    private static final List<TagKey<Fluid>> SUPPORTED_LIQUID_TYPE = List.of(FluidTags.WATER, FluidTags.LAVA, GSEFluids.BLIGHTWATER_TAG);
+    private static final List<TagKey<Fluid>> SUPPORTED_LIQUID_TYPE = List.of(FluidTags.WATER, FluidTags.LAVA, GSETags.BLIGHTWATER);
 
     public WitheredFishHook(EntityType<? extends WitheredFishHook> entityType, Level level) {
         super(entityType, level);

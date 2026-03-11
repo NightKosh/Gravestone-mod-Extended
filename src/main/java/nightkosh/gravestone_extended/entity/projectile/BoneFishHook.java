@@ -11,7 +11,7 @@ import net.minecraft.world.level.material.Fluid;
 import nightkosh.advanced_fishing.entity.projectile.AFishHook;
 import nightkosh.advanced_fishing.entity.projectile.AdvancedFishHook;
 import nightkosh.gravestone_extended.core.GSEEntities;
-import nightkosh.gravestone_extended.core.GSEFluids;
+import nightkosh.gravestone_extended.core.GSETags;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class BoneFishHook extends AdvancedFishHook {
 
-    private static final List<TagKey<Fluid>> SUPPORTED_LIQUID_TYPE = List.of(FluidTags.WATER, GSEFluids.BLIGHTWATER_TAG);
+    private static final List<TagKey<Fluid>> SUPPORTED_LIQUID_TYPE = List.of(FluidTags.WATER, GSETags.BLIGHTWATER);
 
     public BoneFishHook(EntityType<? extends BoneFishHook> entityType, Level level) {
         super(entityType, level);
