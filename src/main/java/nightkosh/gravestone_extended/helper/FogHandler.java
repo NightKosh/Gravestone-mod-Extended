@@ -38,12 +38,16 @@ public class FogHandler {
             if (fogTicCount % TimeHelper.SECONDS_3 == 0) {
                 fogTicCount = 0;
                 //TODO world.provider.getDimension() == GSDimensions.CATACOMBS.getId()
-                if (player.equals(Minecraft.getInstance().player) && TimeHelper.isFogTime(player.level())) {
-                    targetFog = Mth.clamp(
-                            countNearbyGraves(player.level(), player.blockPosition()) * FOG_DENSITY_PER_GRAVE,
-                            0,
-                            MAX_DENSITY
-                    );
+                if (player.equals(Minecraft.getInstance().player)) {
+                    if (TimeHelper.isFogTime(player.level())) {
+                        targetFog = Mth.clamp(
+                                countNearbyGraves(player.level(), player.blockPosition()) * FOG_DENSITY_PER_GRAVE,
+                                0,
+                                MAX_DENSITY
+                        );
+                    } else {
+                        targetFog = 0;
+                    }
                 }
             }
 
