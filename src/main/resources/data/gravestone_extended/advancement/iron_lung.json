@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:root",
+  "parent": "withered_lands:call_of_the_abyss",
   "display": {
     "icon": { "id": "gravestone_extended:diving_helmet" },
     "title": { "translate": "advancement.gravestone_extended.iron_lung" },
