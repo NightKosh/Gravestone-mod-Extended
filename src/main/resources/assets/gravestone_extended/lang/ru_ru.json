@@ -145,6 +145,12 @@
   "item.minecraft.lingering_potion.effect.recall": "Туманное зелье возвращения",
   "item.minecraft.tipped_arrow.effect.recall": "Стрела возвращения",
 
+  "effect.gravestone_extended.graveyard_recall": "Возвращает вас к вашей могиле",
+  "item.minecraft.potion.effect.graveyard_recall": "Кладбищенское зелье",
+  "item.minecraft.splash_potion.effect.graveyard_recall": "Взрывное кладбищенское зелье",
+  "item.minecraft.lingering_potion.effect.graveyard_recall": "Туманное кладбищенское зелье",
+  "item.minecraft.tipped_arrow.effect.graveyard_recall": "Стрела кладбищенского зелья",
+
   "effect.gravestone_extended.flames": "Поджигает цель",
   "item.minecraft.potion.effect.flames": "Пылающее зелье",
   "item.minecraft.splash_potion.effect.flames": "Взрывное пылающее зелье",
@@ -256,6 +262,8 @@
   "advancement.gravestone_extended.blizzard.desc": "Приготовьте зелье Метели, что бы заморозить ваших врагов.",
   "advancement.gravestone_extended.recall": "Воспоминания",
   "advancement.gravestone_extended.recall.desc": "Приготовьте зелье возврата из зеркального люциана.",
+  "advancement.gravestone_extended.graveyard_recall": "Туда, где ты пал",
+  "advancement.gravestone_extended.graveyard_recall.desc": "Приготовьте кладбищенское зелье из золотого надгробного камня.",
   "advancement.gravestone_extended.through_the_looking_glass": "Сквозь зеркало",
   "advancement.gravestone_extended.through_the_looking_glass.desc": "Телепортируйтесь с помощью ледяного зеркала.",
   "advancement.gravestone_extended.chunky_business": "Охота на слизней",

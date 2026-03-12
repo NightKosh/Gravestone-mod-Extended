@@ -8,6 +8,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import nightkosh.gravestone.api.grave.EnumGraveMaterial;
+import nightkosh.gravestone.api.grave.EnumGraveType;
+import nightkosh.gravestone.core.GSBlocks;
 import nightkosh.gravestone_extended.core.GSEConfigs;
 import nightkosh.gravestone_extended.core.GSEPotions;
 import nightkosh.gravestone_extended.core.ModInfo;
@@ -92,6 +95,14 @@ public class GSEBrewingRecipes {
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(SPECULAR_SNAPPER),
                     PotionContents.createItemStack(Items.POTION, GSEPotions.RECALL_POTION));
+
+            for (var graveType : EnumGraveType.values()) {
+                event.getBuilder().addRecipe(
+                        DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, GSEPotions.RECALL_POTION))
+                                .getCustomIngredient().toVanilla(),
+                        Ingredient.of(GSBlocks.getGraveBlock(graveType, EnumGraveMaterial.GOLD)),
+                        PotionContents.createItemStack(Items.POTION, GSEPotions.GRAVEYARD_RECALL_POTION));
+            }
 
             event.getBuilder().addRecipe(
                     DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))

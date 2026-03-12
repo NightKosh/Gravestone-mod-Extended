@@ -24,6 +24,9 @@ public class GSEMobEffects {
     public static final DeferredHolder<MobEffect, MobEffect> RECALL =
             EFFECTS.register("recall", RecallEffect::new);
 
+    public static final DeferredHolder<MobEffect, MobEffect> GRAVEYARD_RECALL =
+            EFFECTS.register("graveyard_recall", GraveyardRecallEffect::new);
+
     public static final DeferredHolder<MobEffect, MobEffect> FLAMES =
             EFFECTS.register("flames", FlamesEffect::new);
 

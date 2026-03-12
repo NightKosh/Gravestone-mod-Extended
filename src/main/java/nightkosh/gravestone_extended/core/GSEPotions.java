@@ -73,6 +73,10 @@ public class GSEPotions {
             POTIONS.register("recall", () ->
                     new Potion("recall", new MobEffectInstance(GSEMobEffects.RECALL, TimeHelper.SECONDS_10, 0)));
 
+    public static final DeferredHolder<Potion, Potion> GRAVEYARD_RECALL_POTION =
+            POTIONS.register("graveyard_recall", () ->
+                    new Potion("graveyard_recall", new MobEffectInstance(GSEMobEffects.GRAVEYARD_RECALL, TimeHelper.SECONDS_10, 0)));
+
     public static final DeferredHolder<Potion, Potion> FLAMES_POTION =
             POTIONS.register("flames", () ->
                     new Potion("flames", new MobEffectInstance(GSEMobEffects.FLAMES, TimeHelper.SECONDS_30, 0)));

@@ -145,6 +145,12 @@
   "item.minecraft.lingering_potion.effect.recall": "Lingering Potion of Recall",
   "item.minecraft.tipped_arrow.effect.recall": "Arrow of Recall",
 
+  "effect.gravestone_extended.graveyard_recall": "Return back to your grave",
+  "item.minecraft.potion.effect.graveyard_recall": "Graveyard Potion",
+  "item.minecraft.splash_potion.effect.graveyard_recall": "Splash Graveyard Potion",
+  "item.minecraft.lingering_potion.effect.graveyard_recall": "Lingering Graveyard Potion",
+  "item.minecraft.tipped_arrow.effect.graveyard_recall": "Arrow of Graveyard",
+
   "effect.gravestone_extended.flames": "Sets Target on Fire",
   "item.minecraft.potion.effect.flames": "Potion of Flames",
   "item.minecraft.splash_potion.effect.flames": "Splash Potion of Flames",
@@ -256,6 +262,8 @@
   "advancement.gravestone_extended.blizzard.desc": "Brew a potion of Blizzard to unleash winter from a bottle.",
   "advancement.gravestone_extended.recall": "Recall",
   "advancement.gravestone_extended.recall.desc": "Brew a potion of Recall using specular snapper.",
+  "advancement.gravestone_extended.graveyard_recall": "Back Where You Fell",
+  "advancement.gravestone_extended.graveyard_recall.desc": "Brew a Graveyard potion using golden gravestone.",
   "advancement.gravestone_extended.through_the_looking_glass": "Through the Looking Glass",
   "advancement.gravestone_extended.through_the_looking_glass.desc": "Teleport back to home using a frozen mirror.",
   "advancement.gravestone_extended.chunky_business": "Chunky Business",
