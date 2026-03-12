@@ -15,6 +15,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
@@ -74,9 +75,11 @@ public class GSEEventsClient {
     }
 
     @SubscribeEvent
-    public static void onRegisterRenderBuffers(RegisterRenderBuffersEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER.get(), ChunkSectionLayer.TRANSLUCENT);
-        ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER_FLOWING.get(), ChunkSectionLayer.TRANSLUCENT);
+    public static void onRegisterRenderBuffers(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER.get(), ChunkSectionLayer.TRANSLUCENT);
+            ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER_FLOWING.get(), ChunkSectionLayer.TRANSLUCENT);
+        });
     }
 
     @SubscribeEvent
