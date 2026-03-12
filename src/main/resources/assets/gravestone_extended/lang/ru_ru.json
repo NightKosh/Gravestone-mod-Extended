@@ -201,6 +201,12 @@
   "item.minecraft.lingering_potion.effect.hunger": "Туманное зелье голода",
   "item.minecraft.tipped_arrow.effect.hunger": "Стрела голода",
 
+  "effect.gravestone_extended.endurance": "Выносливость - голод не опускается ниже 17",
+  "item.minecraft.potion.effect.endurance": "Зелье выносливости",
+  "item.minecraft.splash_potion.effect.endurance": "Взрывное зелье выносливости",
+  "item.minecraft.lingering_potion.effect.endurance": "Туманное зелье выносливости",
+  "item.minecraft.tipped_arrow.effect.endurance": "Стрела выносливости",
+
   "item.minecraft.potion.effect.blindness": "Зелье слепоты",
   "item.minecraft.splash_potion.effect.blindness": "Взрывное зелье слепоты",
   "item.minecraft.lingering_potion.effect.blindness": "Туманное зелье слепоты",
@@ -256,6 +262,8 @@
   "advancement.gravestone_extended.bone_skin.desc": "Приготовьте зелье костяной кожи. Пусть кости защитят тебя от разложения",
   "advancement.gravestone_extended.like_a_rock": "Словно камень",
   "advancement.gravestone_extended.like_a_rock.desc": "Приготовьте зелье сопротивления из пещерной форели.",
+  "advancement.gravestone_extended.second_wind": "Второе дыхание",
+  "advancement.gravestone_extended.second_wind.desc": "Приготовьте зелье выносливости из медовых сот.",
   "advancement.gravestone_extended.inferno": "Инферно",
   "advancement.gravestone_extended.inferno.desc": "Приготовьте зелье Инферно, что бы сжечь ваших врагов.",
   "advancement.gravestone_extended.blizzard": "Метель",

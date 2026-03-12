@@ -91,6 +91,12 @@ public class GSEBrewingRecipes {
                     PotionContents.createItemStack(Items.POTION, GSEPotions.PURIFICATION_POTION));
 
             event.getBuilder().addRecipe(
+                    DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, GSEPotions.HUNGER_POTION))
+                            .getCustomIngredient().toVanilla(),
+                    Ingredient.of(Items.HONEYCOMB),
+                    PotionContents.createItemStack(Items.POTION, GSEPotions.ENDURANCE_POTION));
+
+            event.getBuilder().addRecipe(
                     DataComponentIngredient.of(false, PotionContents.createItemStack(Items.POTION, Potions.AWKWARD))
                             .getCustomIngredient().toVanilla(),
                     Ingredient.of(SPECULAR_SNAPPER),

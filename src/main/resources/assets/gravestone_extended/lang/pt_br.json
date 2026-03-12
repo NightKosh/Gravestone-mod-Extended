@@ -201,6 +201,12 @@
   "item.minecraft.lingering_potion.effect.hunger": "Poção Prolongada de Fome",
   "item.minecraft.tipped_arrow.effect.hunger": "Flecha de Fome",
 
+  "effect.gravestone_extended.endurance": "Endurance - Prevents hunger from dropping below 17",
+  "item.minecraft.potion.effect.endurance": "Potion of Endurance",
+  "item.minecraft.splash_potion.effect.endurance": "Splash Potion of Endurance",
+  "item.minecraft.lingering_potion.effect.endurance": "Lingering Potion of Endurance",
+  "item.minecraft.tipped_arrow.effect.endurance": "Arrow of Endurance",
+
   "item.minecraft.potion.effect.blindness": "Poção de Cegueira",
   "item.minecraft.splash_potion.effect.blindness": "Poção Arremessável de Cegueira",
   "item.minecraft.lingering_potion.effect.blindness": "Poção Prolongada de Cegueira",
@@ -256,6 +262,8 @@
   "advancement.gravestone_extended.bone_skin.desc": "Brew a potion of Bone Skin. Let bone shield you from decay.",
   "advancement.gravestone_extended.like_a_rock": "Like a Rock",
   "advancement.gravestone_extended.like_a_rock.desc": "Brew a potion of Resistance using cave trout.",
+  "advancement.gravestone_extended.second_wind": "Second Wind",
+  "advancement.gravestone_extended.second_wind.desc": "Brew a potion of Endurance using honeycomb.",
   "advancement.gravestone_extended.inferno": "Inferno",
   "advancement.gravestone_extended.inferno.desc": "Brew a potion of Inferno to unleash fire from a bottle.",
   "advancement.gravestone_extended.blizzard": "Blizzard",

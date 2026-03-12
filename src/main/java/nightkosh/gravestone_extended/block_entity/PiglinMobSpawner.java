@@ -21,7 +21,7 @@ import java.util.Comparator;
  */
 public class PiglinMobSpawner extends MobSpawner {
 
-    private static final int ANGER_TIME = TimeHelper.SECONDS_600;
+    private static final int ANGER_TIME = TimeHelper.MINUTES_10;
 
     protected static final int PLAYER_RANGE = 8;
 

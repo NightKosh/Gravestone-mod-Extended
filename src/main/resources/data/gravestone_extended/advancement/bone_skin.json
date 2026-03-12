@@ -1,5 +1,5 @@
 {
-  "parent": "gravestone_extended:like_a_rock",
+  "parent": "gravestone_extended:second_wind",
   "display": {
     "icon": { "id": "advanced_fishing:bone_fish" },
     "title": { "translate": "advancement.gravestone_extended.bone_skin" },

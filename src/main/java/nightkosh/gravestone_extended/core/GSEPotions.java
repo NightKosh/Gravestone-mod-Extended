@@ -69,6 +69,10 @@ public class GSEPotions {
             POTIONS.register("purification", () ->
                     new Potion("purification", new MobEffectInstance(GSEMobEffects.PURIFICATION, TimeHelper.SECONDS_10, 0)));
 
+    public static final DeferredHolder<Potion, Potion> ENDURANCE_POTION =
+            POTIONS.register("endurance", () ->
+                    new Potion("endurance", new MobEffectInstance(GSEMobEffects.ENDURANCE, TimeHelper.MINUTES_10, 0)));
+
     public static final DeferredHolder<Potion, Potion> RECALL_POTION =
             POTIONS.register("recall", () ->
                     new Potion("recall", new MobEffectInstance(GSEMobEffects.RECALL, TimeHelper.SECONDS_10, 0)));
@@ -104,7 +108,7 @@ public class GSEPotions {
 
     public static final DeferredHolder<Potion, Potion> BONE_SKIN_POTION =
             POTIONS.register("bone_skin", () ->
-                    new Potion("bone_skin", new MobEffectInstance(GSEMobEffects.BONE_SKIN, TimeHelper.SECONDS_600, 0)));
+                    new Potion("bone_skin", new MobEffectInstance(GSEMobEffects.BONE_SKIN, TimeHelper.MINUTES_10, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

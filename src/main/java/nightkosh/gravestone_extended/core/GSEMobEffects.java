@@ -21,6 +21,9 @@ public class GSEMobEffects {
     public static final DeferredHolder<MobEffect, MobEffect> PURIFICATION =
             EFFECTS.register("purification", PurificationEffect::new);
 
+    public static final DeferredHolder<MobEffect, MobEffect> ENDURANCE =
+            EFFECTS.register("endurance", EnduranceEffect::new);
+
     public static final DeferredHolder<MobEffect, MobEffect> RECALL =
             EFFECTS.register("recall", RecallEffect::new);
 

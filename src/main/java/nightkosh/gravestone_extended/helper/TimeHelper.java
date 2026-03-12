@@ -28,7 +28,8 @@ public class TimeHelper {
     public static final int SECONDS_60 = 1200;
     public static final int SECONDS_90 = 1800;
     public static final int SECONDS_180 = 3600;
-    public static final int SECONDS_600 = 12000;
+
+    public static final int MINUTES_10 = 12000;
 
     public static final int PRE_NIGHT = 12000;
     public static final int NIGHT = 14000;

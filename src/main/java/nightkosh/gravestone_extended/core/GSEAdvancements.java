@@ -28,10 +28,12 @@ public class GSEAdvancements {
 
     public static final Identifier PURIFICATION = fromNamespaceAndPath(ModInfo.ID, "purification");
     public static final Identifier LIKE_A_ROCK = fromNamespaceAndPath(ModInfo.ID, "like_a_rock");
+    public static final Identifier SECOND_WIND = fromNamespaceAndPath(ModInfo.ID, "second_wind");
     public static final Identifier BONE_SKIN = fromNamespaceAndPath(ModInfo.ID, "bone_skin");
     public static final Identifier INFERNO = fromNamespaceAndPath(ModInfo.ID, "inferno");
     public static final Identifier BLIZZARD = fromNamespaceAndPath(ModInfo.ID, "blizzard");
     public static final Identifier RECALL = fromNamespaceAndPath(ModInfo.ID, "recall");
+    public static final Identifier GRAVEYARD_RECALL = fromNamespaceAndPath(ModInfo.ID, "graveyard_recall");
     public static final Identifier THROUGH_THE_LOOKING_GLASS = fromNamespaceAndPath(ModInfo.ID, "through_the_looking_glass");
 
     public static final Identifier BONE_RAIN = fromNamespaceAndPath(ModInfo.ID, "bone_rain");
