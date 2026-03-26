@@ -1,0 +1,20 @@
+{
+  "parent": "gravestone_extended:recall",
+  "display": {
+    "icon": { "id": "gravestone:grave_plate_gold" },
+    "title": { "translate": "advancement.gravestone_extended.graveyard_recall" },
+    "description": { "translate": "advancement.gravestone_extended.graveyard_recall.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_graveyard_recall_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:graveyard_recall"
+      }
+    }
+  }
+}

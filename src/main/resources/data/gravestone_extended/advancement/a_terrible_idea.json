@@ -1,0 +1,26 @@
+{
+  "parent": "gravestone_extended:unholy_engineering",
+  "display": {
+    "icon": { "id": "gravestone_extended:spawner_wither" },
+    "title": { "translate": "advancement.gravestone_extended.a_terrible_idea" },
+    "description": { "translate": "advancement.gravestone_extended.a_terrible_idea.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gravestone_extended:spawner_wither"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

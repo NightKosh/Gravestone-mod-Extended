@@ -1,0 +1,20 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": {
+      "type": "minecraft:uniform",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "additional_wants": {
+    "id": "minecraft:stone"
+  },
+  "gives": {
+    "id": "gravestone:dog_grave_stone_stone",
+    "count": 8
+  },
+  "xp": 5,
+  "max_uses": 10,
+  "reputation_discount": 0.05
+}

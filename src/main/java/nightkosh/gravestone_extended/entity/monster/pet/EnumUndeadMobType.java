@@ -3,7 +3,7 @@ package nightkosh.gravestone_extended.entity.monster.pet;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -33,10 +33,6 @@ public enum EnumUndeadMobType {
 
     public String getName() {
         return this.name;
-    }
-
-    public String getLocalizedName() {
-        return ModGravestoneExtended.proxy.getLocalizedString(this.name);
     }
 
     public boolean sunLightProtected() {

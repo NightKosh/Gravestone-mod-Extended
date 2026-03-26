@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gravestone_extended:block/spawner/parched"
+  }
+}

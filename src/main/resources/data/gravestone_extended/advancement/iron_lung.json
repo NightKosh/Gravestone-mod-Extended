@@ -1,0 +1,17 @@
+{
+  "parent": "withered_lands:call_of_the_abyss",
+  "display": {
+    "icon": { "id": "gravestone_extended:diving_helmet" },
+    "title": { "translate": "advancement.gravestone_extended.iron_lung" },
+    "description": { "translate": "advancement.gravestone_extended.iron_lung.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

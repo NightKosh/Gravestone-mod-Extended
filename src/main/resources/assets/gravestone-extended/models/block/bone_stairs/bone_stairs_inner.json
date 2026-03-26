@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "gravestone-extended:blocks/bone_block",
-        "top": "gravestone-extended:blocks/bone_block",
-        "side": "gravestone-extended:blocks/bone_block"
-    }
-}

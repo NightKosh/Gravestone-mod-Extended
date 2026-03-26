@@ -1,0 +1,109 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"ambientocclusion": false,
+	"textures": {
+		"candle": "minecraft:block/candle_lit",
+		"particle": "gravestone_extended:block/skull_candle/skeleton",
+		"texture_skull": "gravestone_extended:block/skull_candle/skeleton"
+	},
+	"elements": [
+		{
+			"name": "skull",
+			"from": [4, -0.3, 4],
+			"to": [12, 5.7, 12],
+			"rotation": {"angle": 20, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [4, 4, 8, 7], "texture": "#texture_skull"},
+				"east": {"uv": [0, 4, 4, 7], "texture": "#texture_skull"},
+				"south": {"uv": [12, 4, 16, 7], "texture": "#texture_skull"},
+				"west": {"uv": [8, 4, 12, 7], "texture": "#texture_skull"},
+				"up": {"uv": [4, 0, 8, 4], "texture": "#texture_skull"},
+				"down": {"uv": [8, 0, 12, 4], "texture": "#texture_skull"}
+			}
+		},
+		{
+			"name": "teeth",
+			"from": [6, -1.3, 4],
+			"to": [10, -0.3, 5],
+			"rotation": {"angle": 20, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0.5, 7, 2.5, 7.5], "texture": "#texture_skull"},
+				"east": {"uv": [0, 7.5, 0.5, 8], "texture": "#texture_skull"},
+				"south": {"uv": [2.5, 7, 4.5, 7.5], "texture": "#texture_skull"},
+				"west": {"uv": [2.5, 7.5, 3, 8], "texture": "#texture_skull"},
+				"up": {"uv": [0, 0, 4, 1], "texture": "#missing"},
+				"down": {"uv": [0.5, 7.5, 2.5, 8], "texture": "#texture_skull"}
+			}
+		},
+		{
+			"name": "candle",
+			"from": [6.5, 5, 7.5],
+			"to": [8.5, 10, 9.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 13], "texture": "#candle"},
+				"east": {"uv": [0, 8, 2, 13], "texture": "#candle"},
+				"south": {"uv": [0, 14, 2, 16], "texture": "#candle"},
+				"west": {"uv": [0, 14, 2, 16], "texture": "#candle"},
+				"up": {"uv": [0, 6, 2, 8], "texture": "#candle"},
+				"down": {"uv": [4, 0, 6, 2], "texture": "#candle"}
+			}
+		},
+		{
+			"name": "thread",
+			"from": [7.75, 10, 8.5],
+			"to": [8.25, 11, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"east": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"south": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"west": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"up": {"uv": [0, 5, 1, 6], "texture": "#candle"},
+				"down": {"uv": [14, 0, 15, 1], "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [50, 28, 0],
+			"translation": [-1.5, 2, 1.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [50, 28, 0],
+			"translation": [-1.5, 2, 1.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 50, 0],
+			"translation": [3, 4.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 50, 0],
+			"translation": [3, 4.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 3.5, 0]
+		},
+		"gui": {
+			"rotation": [25, 140, 0],
+			"translation": [0, 3.5, 0]
+		},
+		"fixed": {
+			"rotation": [-16, -25, 0],
+			"translation": [0, 2, -1.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "skull",
+			"origin": [0.45, 5, 0.75],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

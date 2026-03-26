@@ -1,0 +1,43 @@
+{
+  "weight": 2,
+  "max_level": 2,
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.gravestone_extended.true_strike"
+  },
+  "exclusive_set": [],
+  "slots": [
+    "any"
+  ],
+  "max_cost": {
+    "base": 75,
+    "per_level_above_first": 20
+  },
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 20
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:magic",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 1.5,
+            "per_level_above_first": 1.5
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 1.5,
+            "per_level_above_first": 1.5
+          }
+        }
+      }
+    ]
+  },
+  "supported_items": "#minecraft:enchantable/melee_weapon"
+}

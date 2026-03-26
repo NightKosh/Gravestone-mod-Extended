@@ -1,0 +1,30 @@
+{
+  "parent": "gravestone_extended:arcane_transfer",
+  "display": {
+    "icon": { "id": "minecraft:bone_meal" },
+    "title": { "translate": "advancement.gravestone_extended.bone_rain" },
+    "description": { "translate": "advancement.gravestone_extended.bone_rain.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:bone_rain"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

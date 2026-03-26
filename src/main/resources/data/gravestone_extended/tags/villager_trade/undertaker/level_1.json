@@ -1,0 +1,52 @@
+{
+  "values": [
+    "gravestone_extended:undertaker/1/grave_stone_stone",
+    "gravestone_extended:undertaker/1/grave_stone_diorite",
+    "gravestone_extended:undertaker/1/grave_stone_granite",
+    "gravestone_extended:undertaker/1/grave_stone_sandstone",
+    "gravestone_extended:undertaker/1/grave_stone_mossy",
+    "gravestone_extended:undertaker/1/grave_stone_ice",
+
+    "gravestone_extended:undertaker/1/grave_plate_stone",
+    "gravestone_extended:undertaker/1/grave_plate_diorite",
+    "gravestone_extended:undertaker/1/grave_plate_granite",
+    "gravestone_extended:undertaker/1/grave_plate_sandstone",
+    "gravestone_extended:undertaker/1/grave_plate_mossy",
+    "gravestone_extended:undertaker/1/grave_plate_ice",
+
+    "gravestone_extended:undertaker/1/cross_stone",
+    "gravestone_extended:undertaker/1/cross_diorite",
+    "gravestone_extended:undertaker/1/cross_granite",
+    "gravestone_extended:undertaker/1/cross_sandstone",
+    "gravestone_extended:undertaker/1/cross_mossy",
+    "gravestone_extended:undertaker/1/cross_ice",
+
+    "gravestone_extended:undertaker/1/celtic_cross_stone",
+    "gravestone_extended:undertaker/1/celtic_cross_diorite",
+    "gravestone_extended:undertaker/1/celtic_cross_granite",
+    "gravestone_extended:undertaker/1/celtic_cross_sandstone",
+    "gravestone_extended:undertaker/1/celtic_cross_mossy",
+    "gravestone_extended:undertaker/1/celtic_cross_ice",
+
+    "gravestone_extended:undertaker/1/obelisk_stone",
+    "gravestone_extended:undertaker/1/obelisk_diorite",
+    "gravestone_extended:undertaker/1/obelisk_granite",
+    "gravestone_extended:undertaker/1/obelisk_sandstone",
+    "gravestone_extended:undertaker/1/obelisk_mossy",
+    "gravestone_extended:undertaker/1/obelisk_ice",
+
+    "gravestone_extended:undertaker/1/dog_grave_stone_stone",
+    "gravestone_extended:undertaker/1/dog_grave_stone_diorite",
+    "gravestone_extended:undertaker/1/dog_grave_stone_granite",
+    "gravestone_extended:undertaker/1/dog_grave_stone_sandstone",
+    "gravestone_extended:undertaker/1/dog_grave_stone_mossy",
+    "gravestone_extended:undertaker/1/dog_grave_stone_ice",
+
+    "gravestone_extended:undertaker/1/cat_grave_stone_stone",
+    "gravestone_extended:undertaker/1/cat_grave_stone_diorite",
+    "gravestone_extended:undertaker/1/cat_grave_stone_granite",
+    "gravestone_extended:undertaker/1/cat_grave_stone_sandstone",
+    "gravestone_extended:undertaker/1/cat_grave_stone_mossy",
+    "gravestone_extended:undertaker/1/cat_grave_stone_ice"
+  ]
+}

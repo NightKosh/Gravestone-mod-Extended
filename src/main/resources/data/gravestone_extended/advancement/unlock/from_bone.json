@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "has_my_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gravestone_extended:bone_block/bone_block",
+      "gravestone_extended:bone_block/bone_block_from_slabs",
+      "gravestone_extended:bone_block/bone_block_from_stairs",
+      "gravestone_extended:bone_block/bone_block_with_skull",
+      "gravestone_extended:bone_block/bone_slabs",
+      "gravestone_extended:bone_block/bone_stairs",
+      "gravestone_extended:pile_of_bones/pile_of_bones",
+      "gravestone_extended:pile_of_bones/piles_to_bones",
+      "gravestone_extended:pile_of_bones/pile_of_bones_from_block",
+      "gravestone_extended:pile_of_bones/pile_of_bones_with_skull",
+      "gravestone_extended:weapon/bone_shield"
+    ]
+  }
+}

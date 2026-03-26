@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group" : "bone_block",
+  "category": "building",
+  "pattern": [
+    "bbb",
+    "bsb",
+    "bbb"
+  ],
+  "key": {
+    "b": "gravestone_extended:bone_block",
+    "s": "gravestone_extended:pile_of_bones_skull"
+  },
+  "result": {
+    "id": "gravestone_extended:bone_block_skull",
+    "count": 9
+  }
+}

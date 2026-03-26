@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "gravestone_extended:block/portal/catacombs/ns"
+    },
+    "axis=z": {
+      "model": "gravestone_extended:block/portal/catacombs/ew"
+    }
+  }
+}

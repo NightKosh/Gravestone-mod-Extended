@@ -1,0 +1,30 @@
+{
+  "parent": "gravestone_extended:arcane_transfer",
+  "display": {
+    "icon": { "id": "minecraft:cobweb" },
+    "title": { "translate": "advancement.gravestone_extended.web_crawler" },
+    "description": { "translate": "advancement.gravestone_extended.web_crawler.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:web_crawler"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

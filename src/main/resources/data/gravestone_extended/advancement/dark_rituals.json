@@ -1,0 +1,26 @@
+{
+  "parent": "gravestone_extended:light_of_the_dead",
+  "display": {
+    "icon": { "id": "gravestone_extended:altar" },
+    "title": { "translate": "advancement.gravestone_extended.dark_rituals" },
+    "description": { "translate": "advancement.gravestone_extended.dark_rituals.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gravestone_extended:altar"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

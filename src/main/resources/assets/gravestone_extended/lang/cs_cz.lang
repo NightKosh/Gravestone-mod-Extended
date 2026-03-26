@@ -1,0 +1,55 @@
+# Tabs
+itemGroup.tabGSMemorials=Památníky
+itemGroup.tabGSOther=Předměty módu Gravestone
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Křížový památník
+block.memorial.obelisk.name=Obelisk
+block.memorial.steve_statue.name=Socha Steva
+block.memorial.villager_statue.name=Socha vesničana
+block.memorial.angel_statue.name=Socha anděla
+block.memorial.dog_statue.name=Socha psa
+block.memorial.cat_statue.name=Socha kočky
+block.memorial.creeper_statue.name=Socha Syčáka
+block.memorial.celtic_cross.name=Keltský kříž
+
+## Executions
+block.execution.gibbet.name=Šibenice
+block.execution.stocks.name=Pranýř
+block.execution.burning_stake.name=Upalovací hranice
+
+## Traps
+block.trap.night.name=Noční kámen
+block.trap.thunder.name=Bleskový kámen
+block.trap.curse=Temnota přichází!
+
+## Chests
+block.haunted_chest.bats_chest.name=Bedna s netopýry
+block.haunted_chest.skeleton_chest.name=Bedna s kostlivcem
+block.haunted_chest.raven_chest.name=Bedna s havrany
+block.haunted_chest.ghost_chest.name=Bedna s duchem
+
+## Corpses
+item.corpse.entity_name=Jméno
+
+item.corpse.horse_type=Typ koně
+item.corpse.horse_type.horse=Kůň
+item.corpse.horse_type.donkey=Osel
+item.corpse.horse_type.mule=Mula
+item.corpse.horse_type.zombie=Zombie kůň
+item.corpse.horse_type.skeleton=Kostlivý kůň
+item.corpse.horse_type.unknown=Neznámý
+item.corpse.horse_variant=Typy koní
+item.corpse.health=Maximum života
+item.corpse.speed=Rychlost
+item.corpse.jump_strength=Síla skoku
+
+
+## Console commands
+commands.direction_error=Chyba umístění!
+commands.generate.unknown_structure=Neznámá struktura!
+
+# Parent Language: en_US
+# corrections and additions missing translations by DeRigeurEx

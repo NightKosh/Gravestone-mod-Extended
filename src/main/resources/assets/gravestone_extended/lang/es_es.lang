@@ -1,0 +1,100 @@
+# Tabs
+itemGroup.tabGSMemorials=Memoriales
+itemGroup.tabGSCorpse=Cadáveres
+itemGroup.tabGSOther=Items de Gravestone mod
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Memorial Cruz
+block.memorial.obelisk.name=Obelisco
+block.memorial.steve_statue.name=Estatua de Steve
+block.memorial.villager_statue.name=Estatua de aldeano
+block.memorial.angel_statue.name=Estatua de angel
+block.memorial.dog_statue.name=Estatua de perro
+block.memorial.cat_statue.name=Estatua de gato
+block.memorial.creeper_statue.name=Estatua de creeper
+block.memorial.celtic_cross.name=Cruz céltica
+
+## Executions
+block.execution.gallows.name=Horca
+block.execution.gibbet.name=Gibbet
+block.execution.stocks.name=Picota
+block.execution.burning_stake.name=Hoguera
+
+## Traps
+block.trap.night.name=Piedra nocturna
+block.trap.thunder.name=Piedra del trueno
+block.trap.curse=¡La oscuridad de aproxima!
+
+## Chests
+block.haunted_chest.bats_chest.name=Cofre con Murciélagos
+block.haunted_chest.skeleton_chest.name=Cofre con Esqueletos
+block.haunted_chest.raven_chest.name=Cofre con Cuervos
+block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
+
+# Items
+## Shovel
+item.gravestone.bone_shovel.name=Pala de hueso
+item.gravestone.bone_shovel_iron.name=Pala de hueso de hierro
+item.gravestone.bone_shovel_golden.name=Pala de hueso de oro
+item.gravestone.bone_shovel_diamond.name=Pala de hueso de diamante
+
+## Pickaxe
+item.gravestone.bone_pickaxe.name=Pico de hueso
+item.gravestone.bone_pickaxe_iron.name=Pico de hueso de hierro
+item.gravestone.bone_pickaxe_golden.name=Pico de hueso de oro
+item.gravestone.bone_pickaxe_diamond.name=Pico de hueso de diamante
+
+## Axe
+item.gravestone.bone_axe.name=Hacha de hueso
+item.gravestone.bone_axe_iron.name=Hacha de hueso de hierro
+item.gravestone.bone_axe_golden.name=Hacha de hueso de oro
+item.gravestone.bone_axe_diamond.name=Hacha de hueso de diamante
+
+## Hoe
+item.gravestone.bone_hoe.name=Azada de hueso
+item.gravestone.bone_hoe_iron.name=Azada de hueso de hierro
+item.gravestone.bone_hoe_golden.name=Azada de hueso de oro
+item.gravestone.bone_hoe_diamond.name=Azada de hueso de diamante
+
+## Swords
+item.gravestone.bone_sword.name=Espada de hueso
+item.gravestone.bone_sword_iron.name=Espada de hueso de hierro
+item.gravestone.bone_sword_golden.name=Espada de hueso de oro
+item.gravestone.bone_sword_diamond.name=Espada de hueso de diamante
+
+## Armor
+item.gravestone.swamp_thing_helmet.name=Máscara de la cosa del pantano
+item.gravestone.swamp_thing_chestplate.name=Camisa de la cosa del pantano
+item.gravestone.swamp_thing_leggings.name=Pantalones de la cosa del pantano
+item.gravestone.swamp_thing_boots.name=Botas de la cosa del pantano
+item.gravestone.mummy_helmet.name=Máscara de momia
+item.gravestone.mummy_chestplate.name=Camiseta de momia
+item.gravestone.mummy_leggings.name=Pantalones de momia
+item.gravestone.mummy_boots.name=Botas de momia
+
+## Corpses
+item.corpse.steve=Cadáver Steve
+item.corpse.player=Cadáver Jugador
+item.corpse.zombie=Cadáver Zombi
+item.corpse.zombie_villager=Cadáver Aldeano Zombi
+item.corpse.skeleton=Cadáver Esqueleto
+item.corpse.witch=Cadáver Bruja
+item.corpse.entity_name=Name
+item.corpse.horse_type=Tipo de caballo
+item.corpse.horse_type.horse=Caballo
+item.corpse.horse_type.donkey=Burro
+item.corpse.horse_type.mule=Mula
+item.corpse.horse_type.zombie=Caballo zombie
+item.corpse.horse_type.skeleton=Caballo esqueleto
+item.corpse.horse_type.unknown=Desconocido
+item.corpse.horse_variant=Variante de caballo
+item.corpse.health=Salud máxima
+item.corpse.speed=Velocidad
+item.corpse.jump_strength=Fuerza del salto
+
+
+## Console commands
+commands.direction_error=Error de dirección!
+commands.generate.unknown_structure=Estructura desconocida!

@@ -1,0 +1,18 @@
+{
+    "blightwater.bubbling" : {
+        "category": "blocks",
+        "subtitle": "blocks.fluid.bubbling",
+        "sounds" : [{
+            "name" : "gravestone_extended:block/fluid/bubbling",
+            "stream" : true
+        }]
+    },
+    "blightwater.drop_of_acid" : {
+        "category": "blocks",
+        "subtitle": "blocks.fluid.drop_of_acid",
+        "sounds" : [{
+            "name" : "gravestone_extended:block/fluid/drop_of_acid",
+            "stream" : true
+        }]
+    }
+}

@@ -1,17 +1,17 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.entity.passive.*;
+import net.minecraft.world.entity.animal.equine.Horse;
 import nightkosh.gravestone.api.GraveStoneAPI;
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.config.ExtendedConfig;
-import nightkosh.gravestone_extended.entity.monster.horse.EntityUndeadHorse;
-import nightkosh.gravestone_extended.item.corpse.CorpseHelper;
+import nightkosh.gravestone_extended.core.GSEConfigs;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
+import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
+
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -19,64 +19,61 @@ import java.util.Random;
 public class GraveGenerationHelper extends nightkosh.gravestone.helper.GraveGenerationHelper {
 
     protected static final Random rand = new Random();
-
-    public static EnumGraveTypeByEntity getRandomGraveType(Random random) {
-        if (random.nextInt(5) < 4) {
-            return getRandomHumanGraveType(random);//20%
-        } else {
-            return getRandomPetGraveType(random);//80%
-        }
-    }
-
-    public static EnumGraveTypeByEntity getRandomHumanGraveType(Random random) {
-        return random.nextBoolean() ? EnumGraveTypeByEntity.PLAYER_GRAVES : EnumGraveTypeByEntity.VILLAGERS_GRAVES;
-    }
-
-    public static EnumGraveTypeByEntity getRandomPetGraveType(Random random) {
-        if (random.nextInt(5) == 0) {
-            return EnumGraveTypeByEntity.HORSE_GRAVES;//20%
-        } else if (random.nextBoolean()) {
-            return EnumGraveTypeByEntity.DOGS_GRAVES;//40%
-        } else {
-            return EnumGraveTypeByEntity.CATS_GRAVES;//40%
-        }
-    }
+//TODO
+//    public static EnumGraveTypeByEntity getRandomGraveType(Random random) {
+//        if (random.nextInt(5) < 4) {
+//            return getRandomHumanGraveType(random);//20%
+//        } else {
+//            return getRandomPetGraveType(random);//80%
+//        }
+//    }
+//
+//    public static EnumGraveTypeByEntity getRandomHumanGraveType(Random random) {
+//        return random.nextBoolean() ? EnumGraveTypeByEntity.PLAYER_GRAVES : EnumGraveTypeByEntity.VILLAGERS_GRAVES;
+//    }
+//
+//    public static EnumGraveTypeByEntity getRandomPetGraveType(Random random) {
+//        if (random.nextInt(5) == 0) {
+//            return EnumGraveTypeByEntity.HORSE_GRAVES;//20%
+//        } else if (random.nextBoolean()) {
+//            return EnumGraveTypeByEntity.DOGS_GRAVES;//40%
+//        } else {
+//            return EnumGraveTypeByEntity.CATS_GRAVES;//40%
+//        }
+//    }
 
     public static void addMobsItemsHandlers() {
+        if (GSEConfigs.DEBUG_MODE.get()) {
+            LOGGER.info("Going to inject mobs items handlers");
+        }
         GraveStoneAPI.graveGenerationAtDeath.addVillagerItemsHandler((villager, source) -> {
-            if (ExtendedConfig.createCorpsesForModdedNotVanillaVillagers || villager.getClass().equals(EntityVillager.class)) {
-                return CorpseHelper.getCorpse(villager, EnumCorpse.VILLAGER);
+            if (GSEConfigs.CREATE_VILLAGERS_CORPSES.get()) {
+                return List.of(CorpseHelper.addVillagerCorpse(villager));
             } else {
-                return new ArrayList<>(0);
+                return Collections.EMPTY_LIST;
             }
         });
         GraveStoneAPI.graveGenerationAtDeath.addDogItemsHandler((dog, source) -> {
-            if (ExtendedConfig.createCorpsesForModdedNotVanillaDogs || dog.getClass().equals(EntityOcelot.class)) {
-                return CorpseHelper.getCorpse(dog, EnumCorpse.DOG);
+            if (GSEConfigs.CREATE_DOGS_CORPSES.get()) {
+                return List.of(CorpseHelper.addDogCorpse(dog));
             } else {
-                return new ArrayList<>(0);
+                return Collections.EMPTY_LIST;
             }
         });
         GraveStoneAPI.graveGenerationAtDeath.addCatItemsHandler((cat, source) -> {
-            if (ExtendedConfig.createCorpsesForModdedNotVanillaCats || cat.getClass().equals(EntityWolf.class)) {
-                return CorpseHelper.getCorpse(cat, EnumCorpse.CAT);
+            if (GSEConfigs.CREATE_CATS_CORPSES.get()) {
+                return List.of(CorpseHelper.getCatCorpse(cat));
             } else {
-                return new ArrayList<>(0);
+                return Collections.EMPTY_LIST;
             }
         });
         GraveStoneAPI.graveGenerationAtDeath.addHorseItemsHandler((horse, source) -> {
-            if (ExtendedConfig.createCorpsesForModdedNotVanillaHorses ||
-                    horse.getClass().equals(EntityHorse.class) ||
-                    horse.getClass().equals(EntityMule.class) ||
-                    horse.getClass().equals(EntityDonkey.class) ||
-                    horse.getClass().equals(EntityLlama.class) ||
-                    horse.getClass().equals(EntityZombieHorse.class) ||
-                    horse.getClass().equals(EntitySkeletonHorse.class) ||
-                    horse instanceof EntityUndeadHorse) {
-                return CorpseHelper.getCorpse(horse, EnumCorpse.HORSE);
+            if (GSEConfigs.CREATE_HORSES_CORPSES.get() && horse instanceof Horse horse1) {
+                return List.of(CorpseHelper.getHorseCorpse(horse1));
             } else {
-                return new ArrayList<>(0);
+                return Collections.EMPTY_LIST;
             }
         });
     }
+
 }

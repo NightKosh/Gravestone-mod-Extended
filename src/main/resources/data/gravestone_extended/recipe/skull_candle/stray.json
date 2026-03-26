@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "skull_candle",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:candle",
+    "withered_lands:skull_stray"
+  ],
+  "result": {
+    "id": "gravestone_extended:skull_candle_stray"
+  }
+}

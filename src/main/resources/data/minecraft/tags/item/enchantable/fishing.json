@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "gravestone_extended:fishing_pole_bone",
+    "gravestone_extended:fishing_pole_withered",
+    "gravestone_extended:enchanted_skeleton_skull",
+    "gravestone_extended:enchanted_wither_skull"
+  ]
+}

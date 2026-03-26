@@ -1,0 +1,43 @@
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Croix mémoriale
+block.memorial.obelisk.name=Obélisque
+block.memorial.steve_statue.name=Statue de Steve
+block.memorial.villager_statue.name=Statue de villageois
+block.memorial.angel_statue.name=Statue d'ange
+block.memorial.dog_statue.name=Statue de chien
+block.memorial.cat_statue.name=Statue de chat
+block.memorial.creeper_statue.name=Statue de creeper
+block.memorial.celtic_cross.name=Croix celtique
+
+
+## Traps
+block.trap.night.name=Pierre nocturne
+block.trap.thunder.name=Pierre de tonnerre
+block.trap.curse=Les ténèbres approchent !
+
+## Chests
+block.haunted_chest.bats_chest.name=Coffre à chauve-souris
+block.haunted_chest.skeleton_chest.name=Coffre à squelette
+block.haunted_chest.raven_chest.name=Coffre à corbeau
+block.haunted_chest.ghost_chest.name=Coffre à fantômes
+
+
+
+## Corpses
+item.corpse.entity_name=Nom
+
+item.corpse.horse_type=Type de cheval
+item.corpse.horse_type.horse=Cheval
+item.corpse.horse_type.donkey=Âne
+item.corpse.horse_type.mule=Mûle
+item.corpse.horse_type.zombie=Cheval zombie
+item.corpse.horse_type.skeleton=Cheval squelette
+item.corpse.horse_type.unknown=Inconu
+item.corpse.horse_variant=Variante de cheval
+item.corpse.health=Vie max
+item.corpse.speed=Vitesse
+item.corpse.jump_strength=Force de saut
+

@@ -1,0 +1,35 @@
+{
+  "parent": "gravestone_extended:light_of_the_dead",
+  "display": {
+    "icon": { "id": "gravestone_extended:spawner_skeleton" },
+    "title": { "translate": "advancement.gravestone_extended.unholy_engineering" },
+    "description": { "translate": "advancement.gravestone_extended.unholy_engineering.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gravestone_extended:spawner_skeleton",
+              "gravestone_extended:spawner_stray",
+              "gravestone_extended:spawner_bogged",
+              "gravestone_extended:spawner_parched",
+              "gravestone_extended:spawner_wither",
+              "gravestone_extended:spawner_zombie",
+              "gravestone_extended:spawner_husk",
+              "gravestone_extended:spawner_drowned",
+              "gravestone_extended:spawner_piglin",
+              "gravestone_extended:spawner_spider"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

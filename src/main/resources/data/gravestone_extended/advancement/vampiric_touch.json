@@ -1,0 +1,30 @@
+{
+  "parent": "gravestone_extended:mirror_of_pain",
+  "display": {
+    "icon": { "id": "withered_lands:bat_wing" },
+    "title": { "translate": "advancement.gravestone_extended.vampiric_touch" },
+    "description": { "translate": "advancement.gravestone_extended.vampiric_touch.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wear_or_have": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gravestone_extended:vampiric_touch"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

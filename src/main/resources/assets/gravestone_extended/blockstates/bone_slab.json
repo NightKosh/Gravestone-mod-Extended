@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "gravestone_extended:block/bone_block/slab" },
+        "type=top":    { "model": "gravestone_extended:block/bone_block/slab_top" },
+        "type=double":    { "model": "gravestone_extended:block/bone_block/block" }
+    }
+}

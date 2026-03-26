@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:not_today_friend",
+  "display": {
+    "icon": { "id": "minecraft:emerald" },
+    "title": { "translate": "advancement.gravestone_extended.a_deal_with_the_dead" },
+    "description": { "translate": "advancement.gravestone_extended.a_deal_with_the_dead.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

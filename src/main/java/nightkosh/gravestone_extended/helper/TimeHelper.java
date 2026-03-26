@@ -1,14 +1,35 @@
 package nightkosh.gravestone_extended.helper;
 
-import net.minecraft.world.World;
+
+import net.minecraft.world.level.Level;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
 public class TimeHelper {
+
+    public static final int SECONDS_1 = 20;
+    public static final int SECONDS_3 = 60;
+    public static final int SECONDS_5 = 100;
+    public static final int SECONDS_8 = 160;
+    public static final int SECONDS_10 = 200;
+    public static final int SECONDS_15 = 300;
+    public static final int SECONDS_20 = 400;
+    public static final int SECONDS_25 = 500;
+    public static final int SECONDS_30 = 600;
+    public static final int SECONDS_35 = 700;
+    public static final int SECONDS_40 = 800;
+    public static final int SECONDS_45 = 900;
+    public static final int SECONDS_50 = 1000;
+    public static final int SECONDS_55 = 1100;
+    public static final int SECONDS_60 = 1200;
+    public static final int SECONDS_90 = 1800;
+    public static final int SECONDS_180 = 3600;
+
+    public static final int MINUTES_10 = 12000;
 
     public static final int PRE_NIGHT = 12000;
     public static final int NIGHT = 14000;
@@ -25,34 +46,31 @@ public class TimeHelper {
 
     private static boolean isGraveSpawnTime;
 
-
-    public static long getDayTime(World world) {
-        return world.getWorldTime() % 24000;
+    public static long getDayTime(Level level) {
+        return level.getOverworldClockTime() % 24000;
     }
 
-    public static long getDayTime(long time) {
-        return time % 24000;
-    }
+//TODO
+//    public static long getDayTime(long time) {
+//        return time % 24000;
+//    }
 
     public static boolean isGraveSpawnTime() {
         return isGraveSpawnTime;
     }
 
-    public static void setIsGraveSpawnTime(boolean isValidTime) {
-        isGraveSpawnTime = isValidTime;
+    public static void updateIsGraveSpawnTime(Level level) {
+        long time = TimeHelper.getDayTime(level);
+
+        isGraveSpawnTime = level.isThundering() ||
+                (time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME);
     }
 
-    public static void updateIsGraveSpawnTime(World world) {
-        long time = TimeHelper.getDayTime(world);
-
-        setIsGraveSpawnTime(time > GRAVE_SPAWN_START_TIME && time < GRAVE_SPAWN_END_TIME || world.isThundering());
-    }
-
-    public static boolean isFogTime(World world) {
-        if (world.isRaining()) {
+    public static boolean isFogTime(Level level) {
+        if (level.isRaining() || level.isThundering()) {
             return false;
         } else {
-            long dayTime = getDayTime(world);
+            long dayTime = getDayTime(level);
             return dayTime > FOG_START_TIME && dayTime < FOG_END_TIME;
         }
     }

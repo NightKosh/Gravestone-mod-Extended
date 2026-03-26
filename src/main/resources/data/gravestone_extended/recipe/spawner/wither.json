@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "spawner",
+  "category": "misc",
+  "pattern": [
+    "bsb",
+    "ses",
+    "sbs"
+  ],
+  "key": {
+    "e": "minecraft:end_crystal",
+    "b": "minecraft:bone_meal",
+    "s": "gravestone_extended:skull_candle_wither"
+  },
+  "result": {
+    "id": "gravestone_extended:spawner_wither"
+  }
+}

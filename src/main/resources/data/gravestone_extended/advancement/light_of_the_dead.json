@@ -1,0 +1,34 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": { "id": "gravestone_extended:skull_candle_skeleton" },
+    "title": { "translate": "advancement.gravestone_extended.light_of_the_dead" },
+    "description": { "translate": "advancement.gravestone_extended.light_of_the_dead.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gravestone_extended:skull_candle_skeleton",
+              "gravestone_extended:skull_candle_zombie",
+              "gravestone_extended:skull_candle_wither",
+              "gravestone_extended:skull_candle_husk",
+              "gravestone_extended:skull_candle_drowned",
+              "gravestone_extended:skull_candle_stray",
+              "gravestone_extended:skull_candle_bogged",
+              "gravestone_extended:skull_candle_parched",
+              "gravestone_extended:skull_candle_piglin"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "gravestone_extended:item/tools/fishing_pole_withered"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "gravestone_extended:item/tools/fishing_pole_withered"
+    },
+    "property": "minecraft:fishing_rod/cast"
+  }
+}

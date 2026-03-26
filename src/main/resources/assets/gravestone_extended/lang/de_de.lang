@@ -1,0 +1,59 @@
+# Tabs
+itemGroup.tabGSMemorials=Gedenkstätten
+itemGroup.tabGSCorpse=Leichen
+itemGroup.tabGSOther=Gravestone Mod-Gegenstände
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Kreuz
+block.memorial.obelisk.name=Obelisk
+block.memorial.steve_statue.name=Stevestatue
+block.memorial.villager_statue.name=Dorfbewohner-Statue
+block.memorial.angel_statue.name=Engelstatue
+block.memorial.dog_statue.name=Hundestatue
+block.memorial.cat_statue.name=Katzenstatue
+block.memorial.creeper_statue.name=Creeperstatue
+block.memorial.celtic_cross.name=Keltenkreuz
+
+## Executions
+block.execution.gallows.name=Galgen
+block.execution.gibbet.name=Käfig
+block.execution.stocks.name=Pranger
+block.execution.burning_stake.name=Scheiterhaufen
+
+## Traps
+block.trap.night.name=Nachtstein
+block.trap.thunder.name=Donnerstein
+block.trap.curse=Die Dunkelheit bricht ein!
+
+## Chests
+block.haunted_chest.bats_chest.name=Fledermauskiste
+block.haunted_chest.skeleton_chest.name=Skelettkiste
+block.haunted_chest.raven_chest.name=Rabenkiste
+block.haunted_chest.ghost_chest.name=Geisterkiste
+
+## Corpses
+item.corpse.steve=Steveleiche
+item.corpse.player=Spielerleiche
+item.corpse.zombie=Zombieleiche
+item.corpse.zombie_villager=Dorfbewohnerzombie-Leiche
+item.corpse.skeleton=Skelettleiche
+item.corpse.witch=Hexenleiche
+item.corpse.entity_name=Name
+
+item.corpse.horse_type=Pferdeart
+item.corpse.horse_type.horse=Pferd
+item.corpse.horse_type.donkey=Esel
+item.corpse.horse_type.mule=Maultier
+item.corpse.horse_type.zombie=Zombiepferd
+item.corpse.horse_type.skeleton=Skelettpferd
+item.corpse.horse_type.unknown=Unbekannt
+item.corpse.horse_variant=Pferdegattung
+item.corpse.health=Max. Gesundheit
+item.corpse.speed=Geschwindigkeit
+item.corpse.jump_strength=Sprungkraft
+
+## Console commands
+commands.direction_error=Richtungsfehler!
+commands.generate.unknown_structure=Unbekannte Struktur!

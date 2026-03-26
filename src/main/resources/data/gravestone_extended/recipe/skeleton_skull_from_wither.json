@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "skull",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:wither_skeleton_skull"
+  ],
+  "result": {
+    "id": "minecraft:skeleton_skull"
+  }
+}

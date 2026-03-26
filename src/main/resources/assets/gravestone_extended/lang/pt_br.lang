@@ -1,0 +1,104 @@
+# Tabs
+itemGroup.tabGSMemorials=Memoriais
+itemGroup.tabGSCorpse=Cadáveres
+itemGroup.tabGSOther=Itens do mod Gravestone
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Cruz Memorial
+block.memorial.obelisk.name=Obelisco
+block.memorial.steve_statue.name=Estátua de Steve
+block.memorial.villager_statue.name=Estátua de Aldeão
+block.memorial.angel_statue.name=Estátua de Anjo
+block.memorial.dog_statue.name=Estátua de Cachorro
+block.memorial.cat_statue.name=Estátua de Gato
+block.memorial.creeper_statue.name=Estátua de Creeper
+block.memorial.celtic_cross.name=Cruz Celta
+
+## Executions
+block.execution.gallows.name=Forca
+block.execution.gibbet.name=Candafalso
+block.execution.stocks.name=Berlinda
+block.execution.burning_stake.name=Fogueira
+
+## Traps
+block.trap.night.name=Pedra da Noite
+block.trap.thunder.name=Pedra do Trovão
+block.trap.curse=A escuridão está vindo!
+
+## Chests
+block.haunted_chest.bats_chest.name=Baú com Morcegos
+block.haunted_chest.skeleton_chest.name=Baú com Esqueleto
+block.haunted_chest.raven_chest.name=Baú com Corvos
+block.haunted_chest.ghost_chest.name=Baú com Fantasma
+
+# Items
+## Shovel
+item.gravestone.bone_shovel.name=Pá de Osso
+item.gravestone.bone_shovel_iron.name=Pá de Osso de Ferro
+item.gravestone.bone_shovel_golden.name=Pá de Osso de Ouro
+item.gravestone.bone_shovel_diamond.name=Pá de Osso de Diamante
+
+## Pickaxe
+item.gravestone.bone_pickaxe.name=Picareta de Osso
+item.gravestone.bone_pickaxe_iron.name=Picareta de Osso de Ferro
+item.gravestone.bone_pickaxe_golden.name=Picareta de Osso de Ouro
+item.gravestone.bone_pickaxe_diamond.name=Picareta de Osso de Diamante
+
+## Axe
+item.gravestone.bone_axe.name=Machado de Osso
+item.gravestone.bone_axe_iron.name=Machado de Osso de Ferro
+item.gravestone.bone_axe_golden.name=Machado de Osso de Ouro
+item.gravestone.bone_axe_diamond.name=Machado de Osso de Diamante
+
+## Hoe
+item.gravestone.bone_hoe.name=Enxada de Osso
+item.gravestone.bone_hoe_iron.name=Enxada de Osso de Ferro
+item.gravestone.bone_hoe_golden.name=Enxada de Osso de Ouro
+item.gravestone.bone_hoe_diamond.name=Enxada de Osso de Diamante
+
+## Swords
+item.gravestone.bone_sword.name=Espada de Osso
+item.gravestone.bone_sword_iron.name=Espada de Osso de Ferro
+item.gravestone.bone_sword_golden.name=Espada de Osso de Ouro
+item.gravestone.bone_sword_diamond.name=Espada de Osso de Diamante
+
+## Armor
+item.gravestone.swamp_thing_helmet.name=Máscara de Coisa do Pântano
+item.gravestone.swamp_thing_chestplate.name=Camisa de Coisa do Pântano
+item.gravestone.swamp_thing_leggings.name=Calças de Coisa do Pântano
+item.gravestone.swamp_thing_boots.name=Botas de Coisa do Pântano
+item.gravestone.mummy_helmet.name=Máscara de Múmia
+item.gravestone.mummy_chestplate.name=Camisa de Múmia
+item.gravestone.mummy_leggings.name=Calças de Múmia
+item.gravestone.mummy_boots.name=Bota de Múmia
+
+
+## Corpses
+item.corpse.steve=Cadáver de Steve
+item.corpse.player=Cadáver de Jogador
+item.corpse.zombie=Cadáver de Zumbi
+item.corpse.zombie_villager=Cadáver de Aldeão Zumbi
+##item.corpse.zombie_pigmen=Cadáver de Homem-Porco Zumbi
+item.corpse.skeleton=Cadáver de Esqueleto
+##item.corpse.wither_skeleton=Cadáver de Esqueleto Wither
+item.corpse.witch=Cadáver de Bruxa
+item.corpse.entity_name=Nome
+
+item.corpse.horse_type=Tipo de Cavalo
+item.corpse.horse_type.horse=Cavalo
+item.corpse.horse_type.donkey=Jumento
+item.corpse.horse_type.mule=Mula
+item.corpse.horse_type.zombie=Cavalo Zumbi
+item.corpse.horse_type.skeleton=Cavalo Esqueleto
+item.corpse.horse_type.unknown=Desconhecido
+item.corpse.horse_variant=Variante de Cavalo
+item.corpse.health=Saúde Máxima
+item.corpse.speed=Velocidade
+item.corpse.jump_strength=Força do Pulo
+
+
+## Console commands
+commands.direction_error=Erro de direção!
+commands.generate.unknown_structure=Estrutura desconhecida!

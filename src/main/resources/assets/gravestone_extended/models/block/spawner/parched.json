@@ -1,0 +1,9 @@
+{
+  "parent": "gravestone_extended:block/spawner/default",
+  "textures": {
+    "candle": "minecraft:block/candle_lit",
+    "particle": "gravestone_extended:block/spawner/parched",
+    "pentagram": "gravestone_extended:block/spawner/pentagram",
+    "texture_skull": "gravestone_extended:block/spawner/parched"
+  }
+}

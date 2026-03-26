@@ -1,0 +1,19 @@
+{
+     "variants": {
+         "facing=north": {
+             "model": "gravestone_extended:block/pile_of_bones/wither"
+         },
+         "facing=east": {
+            "model": "gravestone_extended:block/pile_of_bones/wither",
+            "y": 90
+         },
+         "facing=south": {
+             "model": "gravestone_extended:block/pile_of_bones/wither",
+             "y": 180
+         },
+         "facing=west": {
+             "model": "gravestone_extended:block/pile_of_bones/wither",
+             "y": 270
+         }
+     }
+}

@@ -1,15 +1,12 @@
 package nightkosh.gravestone_extended.block.enums;
 
-import net.minecraft.util.IStringSerializable;
-import nightkosh.gravestone.block.enums.IBlockEnum;
-
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public enum EnumHauntedChest implements IBlockEnum, IStringSerializable {
+public enum EnumHauntedChest {//TODO implements IBlockEnum, IStringSerializable {
 
     BATS_CHEST("block.haunted_chest.bats_chest", "chest_with_bats"),
     SKELETON_CHEST("block.haunted_chest.skeleton_chest", "chest_with_skeleton");
@@ -22,15 +19,15 @@ public enum EnumHauntedChest implements IBlockEnum, IStringSerializable {
         this.blockModelName = blockModelName;
     }
 
-    @Override
-    public String getUnLocalizedName() {
-        return this.name;
-    }
-
-    @Override
-    public String getName() {
-        return blockModelName;
-    }
+//    @Override
+//    public String getUnLocalizedName() {
+//        return this.name;
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return blockModelName;
+//    }
 
     public static EnumHauntedChest getById(int id) {
         if (id < values().length) {

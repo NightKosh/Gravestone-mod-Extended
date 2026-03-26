@@ -1,0 +1,7 @@
+{
+    "parent": "gravestone_extended:item/enchanted_skull/skeleton",
+	"textures": {
+		"0": "gravestone_extended:item/enchanted_skull/wither",
+		"particle": "gravestone_extended:item/enchanted_skull/wither"
+	}
+}

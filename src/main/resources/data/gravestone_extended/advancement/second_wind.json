@@ -1,0 +1,20 @@
+{
+  "parent": "gravestone_extended:like_a_rock",
+  "display": {
+    "icon": { "id": "minecraft:honeycomb" },
+    "title": { "translate": "advancement.gravestone_extended.second_wind" },
+    "description": { "translate": "advancement.gravestone_extended.second_wind.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_endurance_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:endurance"
+      }
+    }
+  }
+}

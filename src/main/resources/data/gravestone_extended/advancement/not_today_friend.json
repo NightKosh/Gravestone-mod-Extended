@@ -1,0 +1,17 @@
+{
+  "parent": "gravestone_extended:dark_rituals",
+  "display": {
+    "icon": { "id": "minecraft:totem_of_undying" },
+    "title": { "translate": "advancement.gravestone_extended.not_today_friend" },
+    "description": { "translate": "advancement.gravestone_extended.not_today_friend.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+# Blocks
+## Memorials
+block.memorial.cross.name=Меморіальний хрест
+block.memorial.obelisk.name=Обеліск
+block.memorial.steve_statue.name=Статуя Стіва
+block.memorial.villager_statue.name=Cтатуя жителя
+block.memorial.angel_statue.name=Cтатуя ангела
+block.memorial.dog_statue.name=Статуя собаки
+block.memorial.cat_statue.name=Cтатуя кішки
+block.memorial.creeper_statue.name=Cтатуя кріпера
+block.memorial.celtic_cross.name=Кельтський хрест
+
+## Executions
+block.execution.gallows.name=Шибениця
+block.execution.gibbet.name=Шибениця
+block.execution.stocks.name=Колодки
+block.execution.burning_stake.name=Багаття інквізиції
+
+## Traps
+block.trap.night.name=Камінь темряви
+block.trap.thunder.name=Грозовий камінь
+block.trap.curse=Темрява наближається!
+
+## Chests
+block.haunted_chest.bats_chest.name=Скриня з кажанами
+block.haunted_chest.skeleton_chest.name=Скриня зі скелетом
+block.haunted_chest.raven_chest.name=Скриня з воронами
+block.haunted_chest.ghost_chest.name=Скриня з привидами
+
+
+# Items
+## Hoe
+item.gravestone.bone_hoe.name=Кістяна мотика
+item.gravestone.bone_hoe_iron.name=Кістяна залізна мотика
+item.gravestone.bone_hoe_golden.name=Кістяна золота мотика
+item.gravestone.bone_hoe_diamond.name=Кістяна алмазна мотика
+
+## Swords
+item.gravestone.bone_sword.name=Кістяний меч
+item.gravestone.bone_sword_iron.name=Залізний Кістяний меч
+item.gravestone.bone_sword_golden.name=Золотий Кістяний меч
+item.gravestone.bone_sword_diamond.name=Алмазний Кістяний меч
+
+## Corpses
+item.corpse.steve=Труп Стіва
+item.corpse.player=Труп гравця
+item.corpse.zombie=Труп зомбі
+item.corpse.zombie_villager=Труп зомбі-жителя
+item.corpse.skeleton=Труп скелета
+item.corpse.witch=Труп відьми
+item.corpse.entity_name=Ім'я
+
+item.corpse.horse_type=Тип коня
+item.corpse.horse_type.horse=Кінь
+item.corpse.horse_type.donkey=Віслюк
+item.corpse.horse_type.mule=Мул
+item.corpse.horse_type.zombie=Кінь-зомбі
+item.corpse.horse_type.skeleton=Кінь-скелет
+item.corpse.horse_type.unknown=Невідомий
+item.corpse.horse_variant=Різновид
+item.corpse.health=Максимальне здоров'я
+item.corpse.speed=Швидкість
+item.corpse.jump_strength=Стрибучість
+
+
+## Console commands
+commands.direction_error=Напрямок введено не коректно!
+commands.generate.unknown_structure=Введено невідомий тип будови!

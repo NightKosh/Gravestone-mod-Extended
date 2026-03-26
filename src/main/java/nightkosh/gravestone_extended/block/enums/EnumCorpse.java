@@ -1,16 +1,14 @@
 package nightkosh.gravestone_extended.block.enums;
 
-import net.minecraft.util.IStringSerializable;
-import nightkosh.gravestone.block.enums.IBlockEnum;
 import nightkosh.gravestone_extended.ModGravestoneExtended;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  */
-public enum EnumCorpse implements IBlockEnum, IStringSerializable {
+public enum EnumCorpse {//TODO implements IBlockEnum, IStringSerializable {
     STEVE("item.corpse.steve", "corpse_steve", false),
     VILLAGER("item.corpse.villager", "corpse_villager"),
     DOG("item.corpse.dog", "corpse_dog", true, false),
@@ -41,19 +39,19 @@ public enum EnumCorpse implements IBlockEnum, IStringSerializable {
         this.canBeHanged = canBeHanged;
     }
 
-    @Override
-    public String getUnLocalizedName() {
-        return ModGravestoneExtended.proxy.getLocalizedString(this.name);
-    }
-
-    public static String getPlayerUnLocalizedName() {
-        return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.player");
-    }
-
-    @Override
-    public String getName() {
-        return blockModelName;
-    }
+//    @Override
+//    public String getUnLocalizedName() {
+//        return ModGravestoneExtended.proxy.getLocalizedString(this.name);
+//    }
+//
+//    public static String getPlayerUnLocalizedName() {
+//        return ModGravestoneExtended.proxy.getLocalizedString("item.corpse.player");
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return blockModelName;
+//    }
 
     public boolean canBeHanged() {
         return this.canBeHanged;

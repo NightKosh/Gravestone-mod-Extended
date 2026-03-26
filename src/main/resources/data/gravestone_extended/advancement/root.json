@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": { "id": "minecraft:skeleton_skull" },
+    "title": { "translate": "advancement.gravestone_extended.root" },
+    "description": { "translate": "advancement.gravestone_extended.root.desc" },
+    "background": "minecraft:block/soul_sand",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:skeleton_skull",
+              "minecraft:zombie_head",
+              "minecraft:piglin_head",
+              "minecraft:wither_skeleton_skull",
+              "withered_lands:skull_stray",
+              "withered_lands:skull_parched",
+              "withered_lands:skull_bogged",
+              "withered_lands:skull_husk",
+              "withered_lands:skull_drowned",
+              "withered_lands:skull_piglin"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

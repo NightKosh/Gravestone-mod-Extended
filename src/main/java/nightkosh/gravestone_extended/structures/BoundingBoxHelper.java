@@ -1,13 +1,9 @@
 package nightkosh.gravestone_extended.structures;
 
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.structure.StructureBoundingBox;
 import nightkosh.gravestone_extended.structures.catacombs.components.CatacombsBaseComponent;
 
 /**
- * GraveStone mod
+ * Gravestone mod - Extended
  *
  * @author NightKosh
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -28,71 +24,71 @@ public class BoundingBoxHelper {
      * @param height    Component height
      * @param zLength   Component z axis length
      */
-    public static StructureBoundingBox getCorrectBox(EnumFacing direction, int x, int y, int z, int xLength, int height, int zLength) {
-        return getCorrectBox(direction, x, y, z, xLength, height, zLength, null);
-    }
-
-    public static StructureBoundingBox getCorrectBox(EnumFacing direction, int x, int y, int z, int xLength, int height, int zLength, CatacombsBaseComponent.Passage entrance) {
-        int xShift = (entrance == null) ? 0 : entrance.getX();
-        int yShift = (entrance == null) ? 0 : entrance.getY();
-        int minX = 0;
-        int maxX = 0;
-        int minY = y + yShift;
-        int maxY = y + height + yShift;
-        int minZ = 0;
-        int maxZ = 0;
-
-        switch (direction) {
-            case SOUTH:
-                minX = x - xShift;
-                maxX = x + xLength - xShift;
-                minZ = z;
-                maxZ = z + zLength;
-                break;
-            case NORTH:
-                minX = x - xShift;
-                maxX = x + xLength - xShift;
-                minZ = z - zLength;
-                maxZ = z;
-                break;
-            case EAST:
-                minX = x;
-                maxX = x + zLength;
-                minZ = z - xShift;
-                maxZ = z + xLength - xShift;
-                break;
-            case WEST:
-                minX = x - zLength;
-                maxX = x;
-                minZ = z - xShift;
-                maxZ = z + xLength - xShift;
-                break;
-        }
-
-        return new StructureBoundingBox(minX, minY, minZ, maxX, maxY, maxZ);
-    }
-
-    /**
-     * Discover the y coordinate that will serve as the ground level of the
-     * supplied BoundingBox. (A median of all the levels in the BB's horizontal
-     * rectangle).
-     */
-    public static int getAverageGroundLevel(World world, StructureBoundingBox boundingBox) {
-        int height = 0;
-        int count = 0;
-
-        for (int z = boundingBox.minZ; z <= boundingBox.maxZ; ++z) {
-            for (int x = boundingBox.minX; x <= boundingBox.maxX; ++x) {
-                BlockPos pos = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z));
-                height += Math.max(world.getTopSolidOrLiquidBlock(pos).getY(), world.provider.getAverageGroundLevel());
-                count++;
-            }
-        }
-
-        if (count == 0) {
-            return -1;
-        } else {
-            return height / count;
-        }
-    }
+//    public static StructureBoundingBox getCorrectBox(EnumFacing direction, int x, int y, int z, int xLength, int height, int zLength) {
+//        return getCorrectBox(direction, x, y, z, xLength, height, zLength, null);
+//    }
+//
+//    public static StructureBoundingBox getCorrectBox(EnumFacing direction, int x, int y, int z, int xLength, int height, int zLength, CatacombsBaseComponent.Passage entrance) {
+//        int xShift = (entrance == null) ? 0 : entrance.getX();
+//        int yShift = (entrance == null) ? 0 : entrance.getY();
+//        int minX = 0;
+//        int maxX = 0;
+//        int minY = y + yShift;
+//        int maxY = y + height + yShift;
+//        int minZ = 0;
+//        int maxZ = 0;
+//
+//        switch (direction) {
+//            case SOUTH:
+//                minX = x - xShift;
+//                maxX = x + xLength - xShift;
+//                minZ = z;
+//                maxZ = z + zLength;
+//                break;
+//            case NORTH:
+//                minX = x - xShift;
+//                maxX = x + xLength - xShift;
+//                minZ = z - zLength;
+//                maxZ = z;
+//                break;
+//            case EAST:
+//                minX = x;
+//                maxX = x + zLength;
+//                minZ = z - xShift;
+//                maxZ = z + xLength - xShift;
+//                break;
+//            case WEST:
+//                minX = x - zLength;
+//                maxX = x;
+//                minZ = z - xShift;
+//                maxZ = z + xLength - xShift;
+//                break;
+//        }
+//
+//        return new StructureBoundingBox(minX, minY, minZ, maxX, maxY, maxZ);
+//    }
+//
+//    /**
+//     * Discover the y coordinate that will serve as the ground level of the
+//     * supplied BoundingBox. (A median of all the levels in the BB's horizontal
+//     * rectangle).
+//     */
+//    public static int getAverageGroundLevel(World world, StructureBoundingBox boundingBox) {
+//        int height = 0;
+//        int count = 0;
+//
+//        for (int z = boundingBox.minZ; z <= boundingBox.maxZ; ++z) {
+//            for (int x = boundingBox.minX; x <= boundingBox.maxX; ++x) {
+//                BlockPos pos = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z));
+//                height += Math.max(world.getTopSolidOrLiquidBlock(pos).getY(), world.provider.getAverageGroundLevel());
+//                count++;
+//            }
+//        }
+//
+//        if (count == 0) {
+//            return -1;
+//        } else {
+//            return height / count;
+//        }
+//    }
 }

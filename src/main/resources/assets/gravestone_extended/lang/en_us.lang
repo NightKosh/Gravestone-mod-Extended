@@ -1,0 +1,117 @@
+# Tabs
+itemGroup.tabGSMemorials=Memorials
+itemGroup.tabGSCorpse=Corpses
+itemGroup.tabGSOther=Gravestone mod Items
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Cross Memorial
+block.memorial.obelisk.name=Obelisk
+block.memorial.steve_statue.name=Steve Statue
+block.memorial.villager_statue.name=Villager Statue
+block.memorial.angel_statue.name=Angel Statue
+block.memorial.dog_statue.name=Dog Statue
+block.memorial.cat_statue.name=Cat Statue
+block.memorial.creeper_statue.name=Creeper Statue
+block.memorial.celtic_cross.name=Celtic Cross
+
+## Executions
+block.execution.gallows.name=Gallows
+block.execution.gibbet.name=Gibbet
+block.execution.stocks.name=Stocks
+block.execution.burning_stake.name=Burning Stake
+
+## Traps
+block.trap.night.name=Night Stone
+block.trap.thunder.name=Thunder Stone
+block.trap.curse=Darkness is coming!
+
+## Chests
+block.haunted_chest.bats_chest.name=Chest with Bats
+block.haunted_chest.skeleton_chest.name=Chest with Skeleton
+block.haunted_chest.raven_chest.name=Chest with Ravens
+block.haunted_chest.ghost_chest.name=Chest with Ghost
+
+# Items
+## Shovel
+item.gravestone.bone_shovel.name=Bone Shovel
+item.gravestone.bone_shovel_iron.name=Iron Bone Shovel
+item.gravestone.bone_shovel_golden.name=Golden Bone Shovel
+item.gravestone.bone_shovel_diamond.name=Diamond Bone Shovel
+
+## Pickaxe
+item.gravestone.bone_pickaxe.name=Bone Pickaxe
+item.gravestone.bone_pickaxe_iron.name=Iron Bone Pickaxe
+item.gravestone.bone_pickaxe_golden.name=Golden Bone Pickaxe
+item.gravestone.bone_pickaxe_diamond.name=Diamond Bone Pickaxe
+
+## Axe
+item.gravestone.bone_axe.name=Bone Axe
+item.gravestone.bone_axe_iron.name=Iron Bone Axe
+item.gravestone.bone_axe_golden.name=Golden Bone Axe
+item.gravestone.bone_axe_diamond.name=Diamond Bone Axe
+
+## Hoe
+item.gravestone.bone_hoe.name=Bone Hoe
+item.gravestone.bone_hoe_iron.name=Iron Bone Hoe
+item.gravestone.bone_hoe_golden.name=Golden Bone Hoe
+item.gravestone.bone_hoe_diamond.name=Diamond Bone Hoe
+
+## Swords
+item.gravestone.bone_sword.name=Bone Sword
+item.gravestone.bone_sword_iron.name=Iron Bone Sword
+item.gravestone.bone_sword_golden.name=Golden Bone Sword
+item.gravestone.bone_sword_diamond.name=Diamond Bone Sword
+
+## Armor
+item.gravestone.swamp_thing_helmet.name=Swamp Thing Mask
+item.gravestone.swamp_thing_chestplate.name=Swamp Thing Shirt
+item.gravestone.swamp_thing_leggings.name=Swamp Thing Pants
+item.gravestone.swamp_thing_boots.name=Swamp Thing Boots
+item.gravestone.mummy_helmet.name=Mummy Mask
+item.gravestone.mummy_chestplate.name=Mummy Shirt
+item.gravestone.mummy_leggings.name=Mummy Pants
+item.gravestone.mummy_boots.name=Mummy Boots
+item.gravestone.bone_helmet.name=Bone Helmet
+item.gravestone.bone_chestplate.name=Bone Chestplate
+item.gravestone.bone_leggings.name=Bone Leggings
+item.gravestone.bone_boots.name=Bone Boots
+
+## Other Items
+item.gravestone.cemetery_key.player=Cemetery Key
+item.gravestone.cemetery_key.server=Server Cemetery Key
+
+## Corpses
+item.corpse.steve=Steve Corpse
+item.corpse.player=Player Corpse
+item.corpse.zombie=Zombie Corpse
+item.corpse.zombie_villager=Zombie Villager Corpse
+item.corpse.skeleton=Skeleton Corpse
+item.corpse.witch=Witch Corpse
+item.corpse.entity_name=Name
+
+item.corpse.horse_type=Horse Type
+item.corpse.horse_type.horse=Horse
+item.corpse.horse_type.donkey=Donkey
+item.corpse.horse_type.mule=Mule
+item.corpse.horse_type.zombie=Zombie Horse
+item.corpse.horse_type.skeleton=Skeleton Horse
+item.corpse.horse_type.unknown=Unknown
+item.corpse.horse_variant=Horse Variant
+item.corpse.health=Max Health
+item.corpse.speed=Speed
+item.corpse.jump_strength=Jump Strength
+
+
+# Console messages
+message.cemetery_key.activated=This key was activated by
+message.cemetery_key.cant_use=You can't use this key!
+message.cemetery_key.bounded=Your soul is bounded to this cemetery!
+message.cemetery_key.bounded.pet=Your pet's souls are bounded to this cemetery!
+message.cemetery_key.bounded_server=Souls of all players are bounded to this cemetery!
+message.cemetery_key.bounded_server.pet=Souls of all tamed pets are bounded to this cemetery!
+
+## Console commands
+commands.direction_error=Direction error!
+commands.generate.unknown_structure=Unknown structure!

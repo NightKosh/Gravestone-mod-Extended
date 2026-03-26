@@ -1,0 +1,117 @@
+# Tabs
+itemGroup.tabGSMemorials=Мемориалы
+itemGroup.tabGSCorpse=Трупы
+itemGroup.tabGSOther=Gravestone mod: Предметы
+
+
+# Blocks
+## Memorials
+block.memorial.cross.name=Мемориальный крест
+block.memorial.obelisk.name=Обелиск
+block.memorial.steve_statue.name=Статуя Стива
+block.memorial.villager_statue.name=Статуя жителя
+block.memorial.angel_statue.name=Статуя ангела
+block.memorial.dog_statue.name=Статуя собаки
+block.memorial.cat_statue.name=Статуя кошки
+block.memorial.creeper_statue.name=Статуя крипера
+block.memorial.celtic_cross.name=Кельтский крест
+
+## Executions
+block.execution.gallows.name=Виселица
+block.execution.gibbet.name=Виселица
+block.execution.stocks.name=Колодки
+block.execution.burning_stake.name=Костёр инквизиции
+
+## Traps
+block.trap.night.name=Камень тьмы
+block.trap.thunder.name=Грозовой камень
+block.trap.curse=Тьма приближается!
+
+## Chests
+block.haunted_chest.bats_chest.name=Сундук с летучими мышами
+block.haunted_chest.skeleton_chest.name=Сундук со скелетом
+block.haunted_chest.raven_chest.name=Сундук с воронами
+block.haunted_chest.ghost_chest.name=Сундук с привидениями
+
+# Items
+## Shovel
+item.gravestone.bone_shovel.name=Костяная лопата
+item.gravestone.bone_shovel_iron.name=Железная костяная лопата
+item.gravestone.bone_shovel_golden.name=Золотая костяная лопата
+item.gravestone.bone_shovel_diamond.name=Алмазная костяная лопата
+
+## Pickaxe
+item.gravestone.bone_pickaxe.name=Костяная кирка
+item.gravestone.bone_pickaxe_iron.name=Железная костяная кирка
+item.gravestone.bone_pickaxe_golden.name=Золотая костяная кирка
+item.gravestone.bone_pickaxe_diamond.name=Алмазная костяная кирка
+
+## Axe
+item.gravestone.bone_axe.name=Костяной топор
+item.gravestone.bone_axe_iron.name=Железный костяной топор
+item.gravestone.bone_axe_golden.name=Золотой костяной топор
+item.gravestone.bone_axe_diamond.name=Алмазный костяной топор
+
+## Hoe
+item.gravestone.bone_hoe.name=Костяная мотыга
+item.gravestone.bone_hoe_iron.name=Железная костяная мотыга
+item.gravestone.bone_hoe_golden.name=Золотая костяная мотыга
+item.gravestone.bone_hoe_diamond.name=Алмазная костяная мотыга
+
+## Swords
+item.gravestone.bone_sword.name=Костяной мечь
+item.gravestone.bone_sword_iron.name=Железный Костяной мечь
+item.gravestone.bone_sword_golden.name=Золотой Костяной мечь
+item.gravestone.bone_sword_diamond.name=Алмазный Костяной мечь
+
+## Armor
+item.gravestone.swamp_thing_helmet.name=Маска болотной твари
+item.gravestone.swamp_thing_chestplate.name=Рубашка болотной твари
+item.gravestone.swamp_thing_leggings.name=Штаны болотной твари
+item.gravestone.swamp_thing_boots.name=Ботинки болотной твари
+item.gravestone.mummy_helmet.name=Маска мумии
+item.gravestone.mummy_chestplate.name=Рубашка мумии
+item.gravestone.mummy_leggings.name=Штаны мумии
+item.gravestone.mummy_boots.name=Ботинки мумии
+item.gravestone.bone_helmet.name=Костяной шлем
+item.gravestone.bone_chestplate.name=Костяной нагрудник
+item.gravestone.bone_leggings.name=Костяные поножи
+item.gravestone.bone_boots.name=Костяные ботинки
+
+## Other Items
+item.gravestone.cemetery_key.player=Ключ от кладбища
+item.gravestone.cemetery_key.server=Ключ от кладбища сервера
+
+## Corpses
+item.corpse.steve=Труп Стива
+item.corpse.player=Труп игрока
+item.corpse.zombie=Труп зомби
+item.corpse.zombie_villager=Труп зомби-жителя
+item.corpse.skeleton=Труп скелета
+item.corpse.witch=Труп ведьмы
+item.corpse.entity_name=Имя
+
+item.corpse.horse_type=Тип лошади
+item.corpse.horse_type.horse=Лошадь
+item.corpse.horse_type.donkey=Осёл
+item.corpse.horse_type.mule=Мул
+item.corpse.horse_type.zombie=Лошадь-зомби
+item.corpse.horse_type.skeleton=Лошадь-скелет
+item.corpse.horse_type.unknown=Неизвестный
+item.corpse.horse_variant=Разновидность
+item.corpse.health=Максимальное здоровье
+item.corpse.speed=Скорость
+item.corpse.jump_strength=Прыгучесть
+
+
+# Console messages
+message.cemetery_key.activated=Ключ был активирован игроком
+message.cemetery_key.cant_use=Ты не можешь использовать этот ключ!
+message.cemetery_key.bounded=Твоя душа привязана к этому кладбищу!
+message.cemetery_key.bounded.pet=Души твоих питомцев привязаны к этому кладбищу!
+message.cemetery_key.bounded_server=Души всех игроков на сервере привязаны к этому кладбищу!
+message.cemetery_key.bounded_server.pet=Души всех питомцев на сервере привязаны к этому кладбищу!
+
+## Console commands
+commands.direction_error=Введено не корректное направление!
+commands.generate.unknown_structure=Введён не известный тип строения!

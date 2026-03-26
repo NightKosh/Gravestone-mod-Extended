@@ -1,0 +1,47 @@
+# Blocks
+## Memorials
+block.memorial.cross.name=十字纪念碑
+block.memorial.obelisk.name=方尖碑
+block.memorial.steve_statue.name=玩家纪念碑
+block.memorial.villager_statue.name=村民纪念碑
+block.memorial.angel_statue.name=天使纪念碑
+block.memorial.dog_statue.name=狗纪念碑
+block.memorial.cat_statue.name=猫纪念碑
+block.memorial.creeper_statue.name=爬行者纪念碑
+block.memorial.celtic_cross.name=凯尔特十字架
+
+## Executions
+block.execution.gibbet.name=绞刑架
+block.execution.stocks.name=足枷
+block.execution.burning_stake.name=燃烧的火刑柱
+
+## Traps
+block.trap.night.name=午夜石
+block.trap.thunder.name=雷电石
+block.trap.curse=暗夜正在降临！
+
+## Chests
+block.haunted_chest.bats_chest.name=带着蝙蝠的箱子
+block.haunted_chest.skeleton_chest.name=带着骷髅的箱子
+block.haunted_chest.raven_chest.name=带着乌鸦的箱子
+block.haunted_chest.ghost_chest.name=带着鬼魂的箱子
+
+## Corpses
+item.corpse.entity_name=名称
+
+item.corpse.horse_type=马种
+item.corpse.horse_type.horse=普通马
+item.corpse.horse_type.donkey=驴
+item.corpse.horse_type.mule=骡子
+item.corpse.horse_type.zombie=僵尸马
+item.corpse.horse_type.skeleton=骷髅马
+item.corpse.horse_type.unknown=不明
+item.corpse.horse_variant=变种马
+item.corpse.health=最大生命
+item.corpse.speed=速度
+item.corpse.jump_strength=跳跃高度
+
+
+## Console commands
+commands.direction_error=方位错误!
+commands.generate.unknown_structure=未明建筑!

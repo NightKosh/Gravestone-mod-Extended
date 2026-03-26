@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shield",
+    "gravestone_extended:bone_shield",
+    "gravestone_extended:enchanted_skeleton_skull",
+    "gravestone_extended:enchanted_wither_skull"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_my_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:end_crystal",
+              "minecraft:zombie_head",
+              "minecraft:skeleton_skull",
+              "minecraft:wither_skeleton_skull",
+              "withered_lands:skull_husk",
+              "withered_lands:skull_drowned",
+              "withered_lands:skull_stray",
+              "withered_lands:skull_bogged",
+              "withered_lands:skull_parched",
+              "withered_lands:skull_piglin"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gravestone_extended:spawner/skeleton",
+      "gravestone_extended:spawner/zombie",
+      "gravestone_extended:spawner/wither",
+      "gravestone_extended:spawner/bogged",
+      "gravestone_extended:spawner/drowned",
+      "gravestone_extended:spawner/husk",
+      "gravestone_extended:spawner/parched",
+      "gravestone_extended:spawner/piglin",
+      "gravestone_extended:spawner/stray"
+    ]
+  }
+}

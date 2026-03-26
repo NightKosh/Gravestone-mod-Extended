@@ -1,0 +1,84 @@
+{
+	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "gravestone_extended:item/enchanted_skull/skeleton",
+		"particle": "gravestone_extended:item/enchanted_skull/skeleton"
+	},
+	"elements": [
+		{
+			"name": "cube",
+			"from": [4, -1.65, 4],
+			"to": [12, 4.35, 12],
+			"faces": {
+				"north": {"uv": [4, 4, 8, 7], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 7], "texture": "#0"},
+				"south": {"uv": [12, 4, 16, 7], "texture": "#0"},
+				"west": {"uv": [8, 4, 12, 7], "texture": "#0"},
+				"up": {"uv": [4, 0, 8, 4], "texture": "#0"},
+				"down": {"uv": [8, 0, 12, 4], "texture": "#0"}
+			},
+			"rotation": {
+				"origin": [8, -1.65, 12],
+				"axis": "x",
+				"angle": 22.5
+			},
+			"type": "cube"
+		},
+		{
+			"name": "cube",
+			"from": [6, -0.4, 4],
+			"to": [10, 1.1, 5],
+			"faces": {
+				"north": {"uv": [0, 7, 4, 8.5], "texture": "#0"},
+				"east": {"uv": [0, 7, 1.5, 8.5], "texture": "#0"},
+				"south": {"uv": [0, 7, 4, 8.5], "texture": "#0"},
+				"west": {"uv": [0, 7, 1.5, 8.5], "texture": "#0"},
+				"up": {"uv": [0, 7, 4, 8.5], "texture": "#0"},
+				"down": {"uv": [0, 7, 4, 8], "texture": "#0"}
+			},
+			"rotation": {
+				"origin": [8, -0.4, 5],
+				"axis": "x",
+				"angle": 22.5
+			},
+			"type": "cube"
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"translation": [-1.5, 2, 1.5],
+			"rotation": [50, 28, 0]
+		},
+		"ground": {
+			"scale": [1, 1, 1],
+			"translation": [0, 3.5, 0]
+		},
+		"fixed": {
+			"scale": [1, 1, 1],
+			"rotation": [-16, -25, 0],
+			"translation": [0, 2, -1.5]
+		},
+		"gui": {
+			"scale": [1, 1, 1],
+			"rotation": [25, 140, 0],
+			"translation": [0, 3.5, 0]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"rotation": [0, 50, 0],
+			"translation": [3, 4.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"rotation": [50, 28, 0],
+			"translation": [-1.5, 2, 1.5]
+		},
+		"firstperson_righthand": {
+			"scale": [0.5, 0.5, 0.5],
+			"translation": [3, 4.5, 0],
+			"rotation": [0, 50, 0]
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "yey",
+    "ysy",
+    "gcg"
+  ],
+  "key": {
+    "y": "minecraft:ender_eye",
+    "e": "minecraft:end_crystal",
+    "s": "minecraft:wither_skeleton_skull",
+    "g": "minecraft:glowstone_dust",
+    "c": "minecraft:compass"
+  },
+  "result": {
+    "id": "gravestone_extended:ender_skull"
+  }
+}

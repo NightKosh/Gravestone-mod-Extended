@@ -1,0 +1,28 @@
+{
+  "parent": "gravestone_extended:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:potion",
+      "neoforge:ingredient_type": "neoforge:components",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "gravestone_extended:purification"
+        }
+      }
+    },
+    "title": { "translate": "advancement.gravestone_extended.purification" },
+    "description": { "translate": "advancement.gravestone_extended.purification.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_purification_potion": {
+      "trigger": "minecraft:brewed_potion",
+      "conditions": {
+        "potion": "gravestone_extended:purification"
+      }
+    }
+  }
+}

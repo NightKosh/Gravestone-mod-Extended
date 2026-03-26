@@ -1,0 +1,20 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": {
+      "type": "minecraft:uniform",
+      "min": 5,
+      "max": 10
+    }
+  },
+  "additional_wants": {
+    "id": "minecraft:prismarine_bricks"
+  },
+  "gives": {
+    "id": "gravestone:cat_grave_stone_prizmarine",
+    "count": 8
+  },
+  "xp": 10,
+  "max_uses": 10,
+  "reputation_discount": 0.05
+}
