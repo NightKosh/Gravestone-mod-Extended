@@ -1,6 +1,6 @@
 package nightkosh.gravestone_extended.gui;
 
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -75,18 +75,18 @@ public abstract class AAltarScreen extends AbstractContainerScreen<AAltarContain
     }
 
     @Override
-    public void render(@Nonnull GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
+    public void extractRenderState(@Nonnull GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTick) {
+        super.extractRenderState(guiGraphics, mouseX, mouseY, partialTick);
 
         if (player != null) {
             int requiredLevel = getLevel();
             button.active = requiredLevel > 0 && (isCreative || player.experienceLevel >= requiredLevel);
         }
-        this.renderTooltip(guiGraphics, mouseX, mouseY);
+        this.extractTooltip(guiGraphics, mouseX, mouseY);
     }
 
     @Override
-    protected void renderBg(@Nonnull GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
+    public void extractBackground(@Nonnull GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTick) {
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, getGuiTexture(),
                 this.leftPos, this.topPos,
                 0, 0,
@@ -95,8 +95,8 @@ public abstract class AAltarScreen extends AbstractContainerScreen<AAltarContain
     }
 
     @Override
-    protected void renderLabels(@Nonnull GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        guiGraphics.drawString(this.font,
+    protected void extractLabels(@Nonnull GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+        guiGraphics.text(this.font,
                 String.format(requirementsStr.getString(), getLevel()),
                 100, 69,
                 0xFF404040,

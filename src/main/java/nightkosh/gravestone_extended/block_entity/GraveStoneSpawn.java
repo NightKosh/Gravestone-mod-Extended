@@ -45,15 +45,6 @@ public class GraveStoneSpawn extends MobSpawner {
             .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_HORSE).get().value(), 10)
             .build();
 
-    private static final WeightedList<EntityType<?>> PETS_GRAVE_MOBS = WeightedList.<EntityType<?>>builder()
-            .add(BuiltInRegistries.ENTITY_TYPE.get(ZOMBIE_DOG).get().value(), 10)
-            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_DOG).get().value(), 10)
-            .add(BuiltInRegistries.ENTITY_TYPE.get(ZOMBIE_CAT).get().value(), 10)
-            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_CAT).get().value(), 10)
-            .add(BuiltInRegistries.ENTITY_TYPE.get(ZOMBIE_HORSE).get().value(), 10)
-            .add(BuiltInRegistries.ENTITY_TYPE.get(SKELETON_HORSE).get().value(), 10)
-            .build();
-
     private final GraveStoneBlockEntity grave;
 
     private static final int MIN_DELAY = 500;
@@ -97,10 +88,9 @@ public class GraveStoneSpawn extends MobSpawner {
             case DOG_GRAVE_STONE -> DOG_GRAVE_MOBS;
             case CAT_GRAVE_STONE -> CAT_GRAVE_MOBS;
             case HORSE_GRAVE_STONE -> HORSE_GRAVE_MOBS;
-            case PET_GRAVE_STONE -> PETS_GRAVE_MOBS;
             default -> HUMAN_GRAVE_MOBS;
         };
-        return mobs.getRandom(level.random).get();
+        return mobs.getRandom(level.getRandom()).get();
     }
 
     @Override

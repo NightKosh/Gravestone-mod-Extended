@@ -6,6 +6,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -95,7 +96,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_SKELETON.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_SKELETON_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_SKELETON_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_ZOMBIE = ITEMS_REGISTER.register(
             "skull_candle_zombie",
@@ -103,7 +104,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_ZOMBIE.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_ZOMBIE_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_ZOMBIE_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_WITHER = ITEMS_REGISTER.register(
             "skull_candle_wither",
@@ -111,7 +112,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_WITHER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_WITHER_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_WITHER_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_HUSK = ITEMS_REGISTER.register(
             "skull_candle_husk",
@@ -119,7 +120,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_HUSK.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_HUSK_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_HUSK_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_DROWNED = ITEMS_REGISTER.register(
             "skull_candle_drowned",
@@ -127,7 +128,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_DROWNED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_DROWNED_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_DROWNED_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_STRAY = ITEMS_REGISTER.register(
             "skull_candle_stray",
@@ -135,7 +136,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_STRAY.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_STRAY_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_STRAY_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_BOGGED = ITEMS_REGISTER.register(
             "skull_candle_bogged",
@@ -143,7 +144,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_BOGGED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_BOGGED_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_BOGGED_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_PARCHED = ITEMS_REGISTER.register(
             "skull_candle_parched",
@@ -151,7 +152,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_PARCHED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_PARCHED_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_PARCHED_RK))));
 
     public static final DeferredHolder<Item, Item> SKULL_CANDLE_PIGLIN = ITEMS_REGISTER.register(
             "skull_candle_piglin",
@@ -159,7 +160,7 @@ public class GSEItems {
                     GSEBlocks.SKULL_CANDLE_PIGLIN.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SKULL_CANDLE_PIGLIN_RK)));
+                            .setId(blockIdToItemId(GSEBlocks.SKULL_CANDLE_PIGLIN_RK))));
 
     // technical items for advancements
     public static final DeferredHolder<Item, Item> INFERNO = ITEMS_REGISTER.register(
@@ -218,6 +219,10 @@ public class GSEItems {
 
     public static void register(IEventBus eventBus) {
         ITEMS_REGISTER.register(eventBus);
+    }
+
+    public static ResourceKey<Item> blockIdToItemId(ResourceKey<Block> blockName) {
+        return ResourceKey.create(Registries.ITEM, blockName.identifier());
     }
 
 }

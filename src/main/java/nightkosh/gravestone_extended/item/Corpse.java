@@ -96,7 +96,7 @@ public class Corpse extends Item {
                                     var item = itemHolder.get().value();
                                     if (!Items.EMERALD.equals(item)) {
                                         var result = Component.empty()
-                                                .append(item.getName());
+                                                .append(item.getName(new ItemStack(item)));
 
                                         if (components != null && Items.ENCHANTED_BOOK.equals(item)) {
                                             var enchantment = components.getCompound(CorpseHelper.VILLAGER_OFFERS_ITEM_ENCHANTMENTS)

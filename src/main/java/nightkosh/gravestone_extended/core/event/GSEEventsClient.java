@@ -3,25 +3,20 @@ package nightkosh.gravestone_extended.core.event;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.Model;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.block.FluidModel;
 import net.minecraft.client.resources.model.EquipmentClientInfo;
-import net.minecraft.core.BlockPos;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockAndTintGetter;
-import net.minecraft.world.level.material.FluidState;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterFluidModelsEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.neoforge.client.event.RegisterRenderBuffersEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import nightkosh.gravestone_extended.core.*;
@@ -64,6 +59,16 @@ public class GSEEventsClient {
     }
 
     @SubscribeEvent
+    public static void onRegisterFluidModelsEvent(RegisterFluidModelsEvent event) {
+        var blightwaterModel = new FluidModel.Unbaked(
+                new Material(fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/still"), true),
+                new Material(fromNamespaceAndPath(ModInfo.ID, "block/fluid/blightwater/flow"), true),
+                null, null);
+        event.register(blightwaterModel, GSEFluids.BLIGHTWATER);
+        event.register(blightwaterModel, GSEFluids.BLIGHTWATER_FLOWING);
+    }
+
+    @SubscribeEvent
     public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_BUBBLE.get(), BlightwaterBubbleParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_DRIP.get(), BlightwaterDripParticle.HangProvider::new);
@@ -72,52 +77,6 @@ public class GSEEventsClient {
         event.registerSpriteSet(GSEParticles.BLIGHTWATER_SPLASH.get(), BlightwaterSplashParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.GREEN_FLAME.get(), GreenFlameParticle.Provider::new);
         event.registerSpriteSet(GSEParticles.CATACOMBS_PORTAL.get(), CatacombsPortalParticle.Provider::new);
-    }
-
-    @SubscribeEvent
-    public static void onRegisterRenderBuffers(FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-            ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER.get(), ChunkSectionLayer.TRANSLUCENT);
-            ItemBlockRenderTypes.setRenderLayer(GSEFluids.BLIGHTWATER_FLOWING.get(), ChunkSectionLayer.TRANSLUCENT);
-        });
-    }
-
-    @SubscribeEvent
-    public static void onRegisterClientExtensions(RegisterClientExtensionsEvent event) {
-        event.registerFluidType(new IClientFluidTypeExtensions() {
-            private static final Identifier UNDERWATER_LOCATION = fromNamespaceAndPath(ModInfo.ID, "textures/block/fluid/blightwater/underwater.png");
-            private static final Identifier WATER_STILL = Identifier.withDefaultNamespace("block/water_still");
-            private static final Identifier WATER_FLOW = Identifier.withDefaultNamespace("block/water_flow");
-            private static final Identifier WATER_OVERLAY = Identifier.withDefaultNamespace("block/water_overlay");
-
-            @Nonnull
-            public Identifier getStillTexture() {
-                return WATER_STILL;
-            }
-
-            @Nonnull
-            public Identifier getFlowingTexture() {
-                return WATER_FLOW;
-            }
-
-            public Identifier getOverlayTexture() {
-                return WATER_OVERLAY;
-            }
-
-            public Identifier getRenderOverlayTexture(@Nonnull Minecraft mc) {
-                return UNDERWATER_LOCATION;
-            }
-
-            public int getTintColor() {
-                return 0xB842F230;
-            }
-
-            public int getTintColor(@Nonnull FluidState state, @Nonnull BlockAndTintGetter getter, @Nonnull BlockPos pos) {
-                return 0xB842F230;
-            }
-
-        }, GSEFluidTypes.BLIGHTWATER.value());
-
     }
 
     @SubscribeEvent

@@ -1,0 +1,6 @@
+{
+  "amount": 5,
+  "allow_duplicates": false,
+  "trades": "#gravestone_extended:undertaker/level_1",
+  "random_sequence": "gravestone_extended:trade_set/undertaker/level_1"
+}

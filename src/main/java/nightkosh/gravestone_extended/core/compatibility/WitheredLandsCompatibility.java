@@ -23,15 +23,15 @@ public class WitheredLandsCompatibility extends ACompatibility {
     public static final String PHANTOM_DIVER_LOOT_TABLE = "withered_lands:entities/phantom_diver";
 
     // mobs - crawlers
-    public static final Identifier SKELETON_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_skull_crawler");
-    public static final Identifier STRAY_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "stray_skull_crawler");
-    public static final Identifier BOGGED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "bogged_skull_crawler");
-    public static final Identifier PARCHED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "parched_skull_crawler");
-    public static final Identifier WITHER_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "wither_skull_crawler");
-    public static final Identifier ZOMBIE_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "zombie_skull_crawler");
-    public static final Identifier HUSK_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "husk_skull_crawler");
-    public static final Identifier DROWNED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "drowned_skull_crawler");
-    public static final Identifier PIGLIN_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "piglin_skull_crawler");
+    public static final Identifier SKELETON_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_skeleton");
+    public static final Identifier STRAY_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_stray");
+    public static final Identifier BOGGED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_bogged");
+    public static final Identifier PARCHED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_parched");
+    public static final Identifier WITHER_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_wither");
+    public static final Identifier ZOMBIE_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_zombie");
+    public static final Identifier HUSK_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_husk");
+    public static final Identifier DROWNED_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_drowned");
+    public static final Identifier PIGLIN_CRAWLER = fromNamespaceAndPath(WITHERED_LANDS_ID, "skull_crawler_piglin");
     // mobs - dogs
     public static final Identifier SKELETON_DOG = fromNamespaceAndPath(WITHERED_LANDS_ID, "skeleton_dog");
     public static final Identifier ZOMBIE_DOG = fromNamespaceAndPath(WITHERED_LANDS_ID, "zombie_dog");

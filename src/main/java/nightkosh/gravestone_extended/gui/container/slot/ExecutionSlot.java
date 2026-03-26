@@ -1,8 +1,5 @@
 package nightkosh.gravestone_extended.gui.container.slot;
 
-import nightkosh.gravestone_extended.block.BlockCorpse;
-import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-
 /**
  * Gravestone mod - Extended
  *

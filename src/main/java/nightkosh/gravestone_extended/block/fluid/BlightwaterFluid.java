@@ -105,7 +105,7 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
         super.entityInside(level, pos, entity, effectApplier);
 
         if (!level.isClientSide() && entity instanceof LivingEntity living) {
-            if (living.getType().is(EntityTypeTags.UNDEAD)) {
+            if (living.entityTags().contains(EntityTypeTags.UNDEAD)) {
                 living.addEffect(new MobEffectInstance(MobEffects.POISON, TimeHelper.SECONDS_5, 0));
                 return;
             } else if (entity instanceof Player || entity instanceof TamableAnimal) {
@@ -127,7 +127,7 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
                 return;
             }
 
-            if (level instanceof ServerLevel serverlevel && level.random.nextInt(20) == 0) {
+            if (level instanceof ServerLevel serverlevel && level.getRandom().nextInt(20) == 0) {
                 entity.hurtServer(serverlevel, level.damageSources().magic(), 1);
                 meltEffect(level, entity.getX(), entity.getY(), entity.getZ());
                 if (WitheredLandsCompatibility.loaded()) {
@@ -200,7 +200,7 @@ public abstract class BlightwaterFluid extends BaseFlowingFluid {
                     0.1, 0, 0.1,
                     0);
             serverLevel.playSound(null, x, y + 1, z, SoundEvents.LAVA_EXTINGUISH, SoundSource.AMBIENT,
-                    0.2F + level.random.nextFloat() * 0.2F, 0.9F + level.random.nextFloat() * 0.15F);
+                    0.2F + level.getRandom().nextFloat() * 0.2F, 0.9F + level.getRandom().nextFloat() * 0.15F);
         }
     }
 

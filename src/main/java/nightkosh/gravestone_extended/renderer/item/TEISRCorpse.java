@@ -2,7 +2,6 @@ package nightkosh.gravestone_extended.renderer.item;
 
 import net.minecraft.client.Minecraft;
 import nightkosh.gravestone_extended.block.enums.EnumCorpse;
-import nightkosh.gravestone_extended.renderer.tileentity.CorpseRendererHelper;
 import org.lwjgl.opengl.GL11;
 
 /**

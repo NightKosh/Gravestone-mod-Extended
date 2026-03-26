@@ -47,7 +47,7 @@ public class TimeHelper {
     private static boolean isGraveSpawnTime;
 
     public static long getDayTime(Level level) {
-        return level.getDayTime() % 24000;
+        return level.getOverworldClockTime() % 24000;
     }
 
 //TODO

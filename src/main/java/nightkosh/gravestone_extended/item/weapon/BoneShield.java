@@ -36,14 +36,14 @@ public class BoneShield extends ShieldItem implements IBoneShiled {
                 .enchantable(1)
                 .repairable(GSETags.MATERIAL_BONE)
                 .equippableUnswappable(EquipmentSlot.OFFHAND)
-                .component(
+                .delayedComponent(
                         DataComponents.BLOCKS_ATTACKS,
-                        new BlocksAttacks(
+                        context -> new BlocksAttacks(
                                 0.25F,
                                 1,
                                 List.of(new BlocksAttacks.DamageReduction(90, Optional.empty(), 0, 1)),
                                 new BlocksAttacks.ItemDamageFunction(3, 1, 1),
-                                Optional.of(DamageTypeTags.BYPASSES_SHIELD),
+                                Optional.of(context.getOrThrow(DamageTypeTags.BYPASSES_SHIELD)),
                                 Optional.of(SoundEvents.SHIELD_BLOCK),
                                 Optional.of(SoundEvents.SHIELD_BREAK)
                         )

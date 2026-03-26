@@ -71,7 +71,7 @@ public class AdvancedFishingCompatibility extends ACompatibility {
             LOGGER.info("Get fishing catch from Blightwater, fishing in " + CatchManager.getBiomeRes(biomeHolder));
         }
 
-        int chance = CatchManager.getChance(level.random, luck);
+        int chance = CatchManager.getChance(level.getRandom(), luck);
         if (chance < 10) {
             if (GSEConfigs.DEBUG_MODE.get()) {
                 LOGGER.info("Going to catch junk");

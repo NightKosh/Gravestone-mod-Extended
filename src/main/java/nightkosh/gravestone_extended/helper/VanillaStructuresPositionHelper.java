@@ -40,8 +40,7 @@ public class VanillaStructuresPositionHelper {
             if (player instanceof ServerPlayer sp) {
                 try {
                     var level = sp.level();
-                    if (level.getServer().getWorldData().worldGenOptions().generateStructures()) {
-
+                    if (level.getServer().getWorldGenSettings().options().generateStructures()) {
                         var x = level.registryAccess()
                                 .lookupOrThrow(Registries.STRUCTURE)
                                 .get(BuiltinStructures.FORTRESS);
@@ -108,7 +107,7 @@ public class VanillaStructuresPositionHelper {
     }
 
     private static boolean isChunkChanged(Player player) {
-        var now = new ChunkPos(player.blockPosition());
+        var now = new ChunkPos(player.getBlockX(), player.getBlockZ());
         return !now.equals(LAST_CHUNK.put(player.getUUID(), now));
     }
 

@@ -81,7 +81,7 @@ public class MobSpawner extends BaseSpawner {
     }
 
     protected EntityType<?> getMobTypeToSpawn(@Nonnull Level level) {
-         return mobList.getRandom(level.random).get();
+         return mobList.getRandom(level.getRandom()).get();
     }
 
     @Override
@@ -96,7 +96,7 @@ public class MobSpawner extends BaseSpawner {
                 this.spawnDelay--;
             } else {
                 // custom
-                this.setEntityId(getMobTypeToSpawn(serverLevel), serverLevel, serverLevel.random, pos);
+                this.setEntityId(getMobTypeToSpawn(serverLevel), serverLevel, serverLevel.getRandom(), pos);
 
                 boolean flag = false;
                 var random = serverLevel.getRandom();

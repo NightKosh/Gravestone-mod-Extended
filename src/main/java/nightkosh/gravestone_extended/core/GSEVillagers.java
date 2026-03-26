@@ -1,6 +1,7 @@
 package nightkosh.gravestone_extended.core;
 
 import com.google.common.collect.ImmutableSet;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -51,7 +52,24 @@ public class GSEVillagers {
                     x -> x.getDelegate().is(GOLDEN_GRAVE_STONE),
                     ImmutableSet.of(),
                     ImmutableSet.of(),
-                    SoundEvents.VILLAGER_WORK_FARMER));
+                    SoundEvents.VILLAGER_WORK_FARMER,
+                    Int2ObjectMap.ofEntries(
+                            Int2ObjectMap.entry(
+                                    1, ResourceKey.create(Registries.TRADE_SET,
+                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_1"))),
+                            Int2ObjectMap.entry(
+                                    2, ResourceKey.create(Registries.TRADE_SET,
+                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_2"))),
+                            Int2ObjectMap.entry(
+                                    3, ResourceKey.create(Registries.TRADE_SET,
+                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_3"))),
+                            Int2ObjectMap.entry(
+                                    4, ResourceKey.create(Registries.TRADE_SET,
+                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_4"))),
+                            Int2ObjectMap.entry(
+                                    5, ResourceKey.create(Registries.TRADE_SET,
+                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_5")))
+                    )));
 
     public static void register(IEventBus eventBus) {
         POI_TYPES_REGISTER.register(eventBus);

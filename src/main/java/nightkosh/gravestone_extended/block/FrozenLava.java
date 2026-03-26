@@ -57,7 +57,6 @@ public class FrozenLava extends Block {
                 .instrument(NoteBlockInstrument.BASEDRUM)
                 .lightLevel(p_152684_ -> 3)
                 .strength(0.5F)
-                .hasPostProcess((state, level, pos) -> true)
                 .emissiveRendering((state, level, pos) -> true));
     }
 
@@ -91,7 +90,7 @@ public class FrozenLava extends Block {
             int i = level.dimension() == Level.END ?
                     level.getBrightness(LightLayer.BLOCK, blockPos) :
                     level.getMaxLocalRawBrightness(blockPos);
-            if (i > 11 - state.getValue(AGE) - state.getLightBlock() && this.slightlyMelt(state, level, blockPos)) {
+            if (i > 11 - state.getValue(AGE) - state.getLightDampening() && this.slightlyMelt(state, level, blockPos)) {
                 var pos = new BlockPos.MutableBlockPos();
 
                 for (var direction : Direction.values()) {
@@ -167,85 +166,5 @@ public class FrozenLava extends Block {
     public static BlockState meltsInto() {
         return Blocks.LAVA.defaultBlockState();
     }
-//
-//
-//    @Override
-//    public int getMetaFromState(IBlockState state) {
-//        return state.getValue(AGE);
-//    }
-//
-//    @Override
-//    public IBlockState getStateFromMeta(int meta) {
-//        return this.getDefaultState().withProperty(AGE, MathHelper.clamp(meta, 0, 3));
-//    }
-//
-//    @Override
-//    protected BlockStateContainer createBlockState() {
-//        return new BlockStateContainer(this, new IProperty[]{AGE});
-//    }
-//
-//    @Override
-//    public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
-//        if ((rand.nextInt(3) == 0 || this.countNeighbors(world, pos) < 4) && world.getLightFromNeighbors(pos) > 11 - state.getValue(AGE) - state.getLightOpacity()) {
-//            this.slightlyMelt(world, pos, state, rand, true);
-//        } else {
-//            world.scheduleUpdate(pos, this, MathHelper.getInt(rand, 20, 40));
-//        }
-//    }
-//
-//    @Override
-//    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block, BlockPos fromPos) {
-//        if (block == this) {
-//            int i = this.countNeighbors(world, pos);
-//
-//            if (i < 2) {
-//                this.turnIntoLava(world, pos);
-//            }
-//        }
-//    }
-//
-//    private int countNeighbors(World worldIn, BlockPos pos) {
-//        int i = 0;
-//
-//        for (EnumFacing enumfacing : EnumFacing.values()) {
-//            if (worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == this) {
-//                ++i;
-//
-//                if (i >= 4) {
-//                    return i;
-//                }
-//            }
-//        }
-//
-//        return i;
-//    }
-//
-//    protected void slightlyMelt(World worldIn, BlockPos pos, IBlockState state, Random rand, boolean meltNeighbors) {
-//        int i = state.getValue(AGE);
-//
-//        if (i < 3) {
-//            worldIn.setBlockState(pos, state.withProperty(AGE, i + 1), 2);
-//            worldIn.scheduleUpdate(pos, this, MathHelper.getInt(rand, 20, 40));
-//        } else {
-//            this.turnIntoLava(worldIn, pos);
-//
-//            if (meltNeighbors) {
-//                for (EnumFacing enumfacing : EnumFacing.values()) {
-//                    BlockPos blockpos = pos.offset(enumfacing);
-//                    IBlockState iblockstate = worldIn.getBlockState(blockpos);
-//
-//                    if (iblockstate.getBlock() == this) {
-//                        this.slightlyMelt(worldIn, blockpos, iblockstate, rand, false);
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    protected void turnIntoLava(World worldIn, BlockPos pos) {
-//        this.dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), 0);
-//        worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
-//        worldIn.neighborChanged(pos, Blocks.LAVA, pos);
-//    }
 
 }

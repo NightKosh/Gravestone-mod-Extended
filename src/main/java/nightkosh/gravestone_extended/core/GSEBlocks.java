@@ -99,7 +99,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_SKELETON.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_SKELETON_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_SKELETON_RK))));
 
     public static final ResourceKey SPAWNER_STRAY_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -110,7 +110,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_STRAY.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_STRAY_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_STRAY_RK))));
 
     public static final ResourceKey SPAWNER_BOGGED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -121,7 +121,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_BOGGED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_BOGGED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_BOGGED_RK))));
 
     public static final ResourceKey SPAWNER_PARCHED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -132,7 +132,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_PARCHED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_PARCHED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_PARCHED_RK))));
 
     public static final ResourceKey SPAWNER_WITHER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -143,7 +143,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_WITHER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_WITHER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_WITHER_RK))));
 
     public static final ResourceKey SPAWNER_ZOMBIE_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -154,7 +154,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_ZOMBIE.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_ZOMBIE_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_ZOMBIE_RK))));
 
     public static final ResourceKey SPAWNER_HUSK_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -165,7 +165,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_HUSK.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_HUSK_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_HUSK_RK))));
 
     public static final ResourceKey SPAWNER_DROWNED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -176,7 +176,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_DROWNED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_DROWNED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_DROWNED_RK))));
 
     public static final ResourceKey SPAWNER_PIGLIN_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -187,7 +187,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_PIGLIN.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_PIGLIN_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_PIGLIN_RK))));
 
     public static final ResourceKey SPAWNER_SPIDER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -198,7 +198,7 @@ public class GSEBlocks {
                     GSEBlocks.SPAWNER_SPIDER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.SPAWNER_SPIDER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.SPAWNER_SPIDER_RK))));
 
     // pile of bones
     public static final ResourceKey PILE_OF_BONES_RK = ResourceKey.create(
@@ -210,7 +210,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -221,7 +221,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_SKELETON_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -232,7 +232,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_SKELETON.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_SKELETON_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_SKELETON_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_STRAY_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -243,7 +243,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_STRAY.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_STRAY_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_STRAY_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_BOGGED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -254,7 +254,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_BOGGED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_BOGGED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_BOGGED_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_PARCHED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -265,7 +265,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_PARCHED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_PARCHED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_PARCHED_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_WITHER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -276,7 +276,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_WITHER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_WITHER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_WITHER_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_ZOMBIE_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -287,7 +287,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_ZOMBIE_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_HUSK_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -298,7 +298,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_HUSK.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_HUSK_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_HUSK_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_DROWNED_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -309,7 +309,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_DROWNED.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_DROWNED_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_DROWNED_RK))));
 
     public static final ResourceKey PILE_OF_BONES_SKULL_PIGLIN_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -320,7 +320,7 @@ public class GSEBlocks {
                     GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PILE_OF_BONES_SKULL_PIGLIN_RK))));
 
     // bone blocks
     public static final ResourceKey BONE_BLOCK_RK = ResourceKey.create(
@@ -332,7 +332,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -343,7 +343,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_RK))));
 
     public static final ResourceKey BONE_SLAB_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -354,7 +354,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_SLAB.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_SLAB_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_SLAB_RK))));
 
     public static final ResourceKey BONE_STAIRS_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -365,7 +365,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_STAIRS.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_STAIRS_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_STAIRS_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -376,7 +376,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKELETON_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -387,7 +387,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_SKELETON_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_STRAY_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -398,7 +398,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_STRAY_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_STRAY_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_STRAY_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_STRAY_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -409,7 +409,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_STRAY_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_BOGGED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -420,7 +420,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_BOGGED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -431,7 +431,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_BOGGED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_PARCHED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -442,7 +442,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_PARCHED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -453,7 +453,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_PARCHED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_WITHER_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -464,7 +464,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_WITHER_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_WITHER_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_WITHER_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_WITHER_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -475,7 +475,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_WITHER_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_ZOMBIE_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -486,7 +486,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_ZOMBIE_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -497,7 +497,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_ZOMBIE_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_HUSK_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -508,7 +508,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_HUSK_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_HUSK_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_HUSK_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_HUSK_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -519,7 +519,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_HUSK_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_DROWNED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -530,7 +530,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_DROWNED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -541,7 +541,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_DROWNED_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_PIGLIN_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -552,7 +552,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_PIGLIN_CRAWLER_RK))));
 
     public static final ResourceKey BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -563,7 +563,7 @@ public class GSEBlocks {
                     GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.BONE_BLOCK_SKULL_PIGLIN_CRAWLER_RK))));
 
     // withered blocks
     public static final ResourceKey WITHERED_GLASS_RK = ResourceKey.create(
@@ -575,7 +575,7 @@ public class GSEBlocks {
                     GSEBlocks.WITHERED_GLASS.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.WITHERED_GLASS_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.WITHERED_GLASS_RK))));
 
     public static final ResourceKey WITHERED_BRICKS_RK = ResourceKey.create(
             Registries.BLOCK,
@@ -586,7 +586,7 @@ public class GSEBlocks {
                     GSEBlocks.WITHERED_BRICKS.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.WITHERED_BRICKS_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.WITHERED_BRICKS_RK))));
 
     // altar
     public static final ResourceKey ALTAR_RK = ResourceKey.create(
@@ -598,7 +598,7 @@ public class GSEBlocks {
                     GSEBlocks.ALTAR.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.ALTAR_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.ALTAR_RK))));
 
     // fluids
     public static final Supplier<LiquidBlock> BLIGHTWATER = registerBlock("blightwater", BlightwaterBlock::new);
@@ -627,7 +627,7 @@ public class GSEBlocks {
                     GSEBlocks.PORTAL_CATACOMBS.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.PORTAL_CATACOMBS_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.PORTAL_CATACOMBS_RK))));
 
     // other
     public static final ResourceKey FROZEN_LAVA_RK = ResourceKey.create(
@@ -639,7 +639,7 @@ public class GSEBlocks {
                     GSEBlocks.FROZEN_LAVA.get(),
                     new Item.Properties()
                             .stacksTo(64)
-                            .setId(GSEBlocks.FROZEN_LAVA_RK)));
+                            .setId(GSEItems.blockIdToItemId(GSEBlocks.FROZEN_LAVA_RK))));
 
     private static <T extends Block> DeferredHolder<Block, T> registerBlock(
             String name, Supplier<T> block, Supplier<Item> itemBlock) {
