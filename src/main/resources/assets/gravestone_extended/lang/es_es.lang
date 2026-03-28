@@ -6,11 +6,11 @@ itemGroup.tabGSOther=Items de Gravestone mod
 
 # Blocks
 ## Memorials
-block.memorial.cross.name=Memorial Cruz
+block.memorial.cross.name=Cruz Memorial
 block.memorial.obelisk.name=Obelisco
 block.memorial.steve_statue.name=Estatua de Steve
 block.memorial.villager_statue.name=Estatua de aldeano
-block.memorial.angel_statue.name=Estatua de angel
+block.memorial.angel_statue.name=Estatua de ángel
 block.memorial.dog_statue.name=Estatua de perro
 block.memorial.cat_statue.name=Estatua de gato
 block.memorial.creeper_statue.name=Estatua de creeper
@@ -25,7 +25,7 @@ block.execution.burning_stake.name=Hoguera
 ## Traps
 block.trap.night.name=Piedra nocturna
 block.trap.thunder.name=Piedra del trueno
-block.trap.curse=¡La oscuridad de aproxima!
+block.trap.curse=¡La oscuridad se aproxima!
 
 ## Chests
 block.haunted_chest.bats_chest.name=Cofre con Murciélagos
@@ -34,6 +34,9 @@ block.haunted_chest.raven_chest.name=Cofre con Cuervos
 block.haunted_chest.ghost_chest.name=Cofre con Fantasmas
 
 # Items
+item.gravestone.cemetery_key.player=Llave del cementerio
+item.gravestone.cemetery_key.server=Llave del cementerio del servidor
+
 ## Shovel
 item.gravestone.bone_shovel.name=Pala de hueso
 item.gravestone.bone_shovel_iron.name=Pala de hueso de hierro
@@ -65,6 +68,11 @@ item.gravestone.bone_sword_golden.name=Espada de hueso de oro
 item.gravestone.bone_sword_diamond.name=Espada de hueso de diamante
 
 ## Armor
+item.gravestone.bone_helmet.name=Casco de hueso
+item.gravestone.bone_chestplate.name=Peto de hueso
+item.gravestone.bone_leggings.name=Pantalones de hueso
+item.gravestone.bone_boots.name=Botas de hueso
+
 item.gravestone.swamp_thing_helmet.name=Máscara de la cosa del pantano
 item.gravestone.swamp_thing_chestplate.name=Camisa de la cosa del pantano
 item.gravestone.swamp_thing_leggings.name=Pantalones de la cosa del pantano
@@ -94,7 +102,15 @@ item.corpse.health=Salud máxima
 item.corpse.speed=Velocidad
 item.corpse.jump_strength=Fuerza del salto
 
+# Console messages
+message.cemetery_key.activated=Esta llave ha sido activada por
+message.cemetery_key.cant_use=¡No puedes usar esta llave!
+message.cemetery_key.bounded=¡Tu alma está atada a este cementerio!
+message.cemetery_key.bounded.pet=¡El alma de tu mascota está atada a este cementerio!
+message.cemetery_key.bounded_server=¡Las almas de todos los jugadores están atadas a este cementerio!
+message.cemetery_key.bounded_server.pet=¡Las almas de todas las mascotas domesticadas están atadas a este cementerio!
+
 
 ## Console commands
-commands.direction_error=Error de dirección!
-commands.generate.unknown_structure=Estructura desconocida!
+commands.direction_error=¡Error de dirección!
+commands.generate.unknown_structure=¡Estructura desconocida!
