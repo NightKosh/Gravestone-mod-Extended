@@ -56,19 +56,19 @@ public class GSEVillagers {
                     Int2ObjectMap.ofEntries(
                             Int2ObjectMap.entry(
                                     1, ResourceKey.create(Registries.TRADE_SET,
-                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_1"))),
+                                            fromNamespaceAndPath(ModInfo.ID, UNDERTAKER_ID + "/level_1"))),
                             Int2ObjectMap.entry(
                                     2, ResourceKey.create(Registries.TRADE_SET,
-                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_2"))),
+                                            fromNamespaceAndPath(ModInfo.ID, UNDERTAKER_ID + "/level_2"))),
                             Int2ObjectMap.entry(
                                     3, ResourceKey.create(Registries.TRADE_SET,
-                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_3"))),
+                                            fromNamespaceAndPath(ModInfo.ID, UNDERTAKER_ID + "/level_3"))),
                             Int2ObjectMap.entry(
                                     4, ResourceKey.create(Registries.TRADE_SET,
-                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_4"))),
+                                            fromNamespaceAndPath(ModInfo.ID, UNDERTAKER_ID + "/level_4"))),
                             Int2ObjectMap.entry(
                                     5, ResourceKey.create(Registries.TRADE_SET,
-                                            fromNamespaceAndPath(sophisticated_wolves.api.ModInfo.ID, UNDERTAKER_ID + "/level_5")))
+                                            fromNamespaceAndPath(ModInfo.ID, UNDERTAKER_ID + "/level_5")))
                     )));
 
     public static void register(IEventBus eventBus) {
