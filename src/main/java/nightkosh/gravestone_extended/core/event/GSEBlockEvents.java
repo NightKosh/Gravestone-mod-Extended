@@ -14,7 +14,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.ItemAbilities;
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 import net.neoforged.neoforge.fluids.RegisterCauldronFluidContentEvent;
 import nightkosh.gravestone_extended.core.*;
 import nightkosh.gravestone_extended.helper.GSEEnchantmentHelper;
@@ -31,7 +31,7 @@ import static nightkosh.gravestone_extended.ModGravestoneExtended.LOGGER;
 public class GSEBlockEvents {
 
     @SubscribeEvent
-    public static void onBlockBreakEvent(BlockEvent.BreakEvent event) {
+    public static void onBlockBreakEvent(BreakBlockEvent event) {
         if (!event.getLevel().isClientSide() &&
                 event.getPlayer() instanceof ServerPlayer player &&
                 !player.isCreative() &&
